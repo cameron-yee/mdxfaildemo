@@ -1,0 +1,19 @@
+.tagline {
+  font-family: "Lora", "Adobe Blank";
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+
+
+  &:after {
+    content: 'Transforming science education through research-driven innovation';
+    background: #fff;
+    color: #b5b5b5;
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding: .4rem .8rem;
+    text-align: center;
+    transform: translateY(-1.1rem);
+  }
+}

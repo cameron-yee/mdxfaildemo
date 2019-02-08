@@ -1,0 +1,91 @@
+$primary: rgb(41, 52, 118);
+$secondary: rgb(48, 135, 180);
+$font-family-base: "Open Sans", "Adobe Blank";
+$font-size-base: 1.2rem;
+// $success: ;
+// $info: ;
+// $warning: ;
+// $danger: ;
+// $light: ;
+// $dark: ;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+
+// fontawesome
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+
+
+.indexJumbotronH1 {
+  color: rgb(30, 47, 84);
+}
+
+.indexJumbotronImage {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  .indexJumbotronImageContainer {
+    border-right: 2px solid rgb(30, 47, 84);
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .indexJumbotronImage {
+    width: 280px;
+  }
+}
+
+
+// $blue:    #007bff !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #28a745 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+// $colors: (
+//   blue: $blue,
+//   indigo: $indigo,
+//   purple: $purple,
+//   pink: $pink,
+//   red: $red,
+//   orange: $orange,
+//   yellow: $yellow,
+//   green: $green,
+//   teal: $teal,
+//   cyan: $cyan,
+//   white: $white,
+//   gray: $gray-600,
+//   gray-dark: $gray-800
+// ) !default;
+
+// $theme-colors: (
+//   primary: $blue,
+//   secondary: $gray-600,
+//   success: $green,
+//   info: $cyan,
+//   warning: $yellow,
+//   danger: $red,
+//   light: $gray-100,
+//   dark: $gray-800
+// ) !default;

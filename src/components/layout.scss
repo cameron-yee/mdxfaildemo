@@ -1,0 +1,49 @@
+$primary: rgb(41, 52, 118);
+$secondary: rgb(48, 135, 180);
+$font-family-base: "Open Sans", "Adobe Blank";
+$font-size-base: 1.2rem;
+// $success: ;
+// $info: ;
+// $warning: ;
+// $danger: ;
+// $light: ;
+// $dark: ;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+
+// fontawesome
+$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
+
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+
+
+.heading2 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+@include media-breakpoint-up(md) {
+  .heading2 {
+    font-size: 1.9rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .heading2 {
+    font-size: 2.4rem;
+  }
+}
