@@ -3,10 +3,8 @@ import { Link } from 'gatsby'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-// import NavDropdown from 'react-bootstrap/NavDropdown'
-// import Form from 'react-bootstrap/Form'
-// import FormControl from 'react-bootstrap/FormControl'
-// import Button from 'react-bootstrap/Button'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -19,61 +17,130 @@ import bscsLogo from '../images/bscs_logo.svg'
 
 
 export default class Header extends Component {
-  state = {
-    pages: {
-      page01: { title: `Agenda`, path: `/agenda/`, iconClass: `` },
-      page02: { title: `Keynote`, path: `/keynote/`, iconClass: `` },
-      page03: { title: `Summit Story`, path: `/summit-story/`, iconClass: `` },
-      page04: { title: `Forums`, path: `/forums/`, iconClass: `` }
+  constructor(props, context) {
+    super(props, context)
+
+    this.state = {
+      pages: {
+        page01: {
+          title: `Our Work`,
+          iconClass: ``,
+          children: {
+            child01: {
+              title: `What We Do`,
+              path: `/what-we-do/`,
+              iconClass: ``
+            },
+            child02: {
+              title: `Strategic Initiatives`,
+              path: `/strategic-initiatives/`,
+              iconClass: ``
+            },
+            child03: {
+              title: `R&D Programs`,
+              path: `/rd-programs/`,
+              iconClass: ``
+            },
+            child04: {
+              title: `News`,
+              path: `/news/`,
+              iconClass: ``
+            }
+          }
+        },
+        page02: {
+          title: `Resources`,
+          iconClass: ``,
+          children: {
+            child01: {
+              title: `Educator Resource Center`,
+              path: `/educator-resource-center/`,
+              iconClass: ``
+            },
+            child02: {
+              title: `Research Resource Center`,
+              path: `/research-resource-center/`,
+              iconClass: ``
+            }
+          }
+        },
+        page03: {
+          title: `Upcoming Programs`,
+          iconClass: ``,
+          children: {
+            child01: {
+              title: `Teacher Professional Learning`,
+              path: `/teacher-professional-learning/`,
+              iconClass: ``
+            },
+            child02: {
+              title: `Leadership Development`,
+              path: `/leadership-development/`,
+              iconClass: ``
+            },
+            child03: {
+              title: `Field-Test Opportunities`,
+              path: `/field-test-opportunities/`,
+              iconClass: ``
+            }
+          }
+        },
+        page04: {
+          title: `Connect`,
+          iconClass: ``,
+          children: {
+            child01: {
+              title: `Contact Us`,
+              path: `/contact-us/`,
+              iconClass: ``
+            },
+            child02: {
+              title: `Join E-mail List`,
+              path: `/join-email-list/`,
+              iconClass: ``
+            },
+            child03: {
+              title: `Work with Us`,
+              path: `/partner-with-us/`,
+              iconClass: ``
+            }
+          }
+        },
+        page05: {
+          title: `Sign In`,
+          path: ``,
+          iconClass: `fas fa-sign-in-alt`
+        },
+        page06: {
+          title: ``,
+          path: ``,
+          iconClass: `fas fa-search`
+        }
+      }
     }
   }
+  
   render() {
     return (
       <div>
         <Container fluid>
-          <Row>
-            <Col>
-              <Navbar
-                bg="transparent"
-                expand="lg"
+          <div class="d-flex">
+            <div class="p-2 flex-grow-1">
+              <img
+                className="bscsLogo"
+                src={bscsLogo}
+                alt="BSCS Science Learning logo"
                 style={{
-                  paddingTop: "1.5rem"
+                  width: "300px"
                 }}
-              >
-                <Link to="/">
-                  <Navbar.Brand>
-                    <img
-                      className="bscsLogo"
-                      src={bscsLogo}
-                      alt="BSCS Science Learning logo"
-                      style={{
-                        width: "300px"
-                      }}
-                    />
-                  </Navbar.Brand>
-                </Link>
-                <Navbar.Collapse id="basic-navbar-nav" className="navbarCollapse">
-                  <Nav className="ml-auto">
-                    {
-                      Object.keys(this.state.pages).map((page) => {
-                        return (
-                          <Link
-                            className="nav-link"
-                            to={this.state.pages[page].path}
-                            key={page}
-                          >
-                            {this.state.pages[page].title}
-                          </Link>
-                        )
-                      })
-                    }
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
-            </Col>
-          </Row>
+              />
+            </div>
+            <div class="p-2 align-self-end d-none d-sm-inline-block">
+              <Button variant="outline-primary btn-sm"><i class="fas fa-donate"></i>&nbsp; Donate</Button>
+            </div>
+          </div>
         </Container>
-        <Container fluid className="d-lg-none">
+        <Container fluid>
           <Row>
             <Col>
               <div className="tagline-wrapper">
@@ -82,7 +149,7 @@ export default class Header extends Component {
             </Col>
           </Row>
         </Container>
-        <Container fluid className="d-lg-none">
+        <Container fluid>
           <Row>
             <Col>
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
@@ -91,23 +158,78 @@ export default class Header extends Component {
                 expand="lg"
               >
                 <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav" style={{ border: 0, outline: 'none' }} />
-                {/* <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                    <span> </span>
-                    <span> </span>
-                    <span> </span>
-                </button> */}
                 <Navbar.Collapse id="basic-navbar-nav" className="navbarCollapse">
-                  <Nav className="ml-auto">
+                  <Nav className="m-auto">
                     {
-                      Object.keys(this.state.pages).map((page) => {
+                      Object.keys(this.state.pages).map((page, key) => {
                         return (
-                          <Link
-                            className="nav-link"
-                            to={this.state.pages[page].path}
-                            key={page}
-                          >
-                            {this.state.pages[page].title}
-                          </Link>
+                          <div key={key}>
+                            {
+                              this.state.pages[page].children
+                              ?
+                              <NavDropdown
+                                title={this.state.pages[page].title}
+                                id="basic-nav-dropdown"
+                                className={
+                                  Object.keys(this.state.pages[page].children).map((child, index) => {
+                                    return(
+                                      this.state.pages[page].children[child].path === this.props.location.pathname
+                                      ?
+                                      "active"
+                                      :
+                                      null
+                                    )
+                                  })
+                                }
+                              >
+                                {
+                                  Object.keys(this.state.pages[page].children).map((child, index) => {
+                                    console.log(this.state.pages[page].children[child].iconClass)
+                                    return(
+                                      <Link
+                                        className="dropdown-item"
+                                        to={this.state.pages[page].children[child].path}
+                                        key={index}
+                                      >
+                                        {this.state.pages[page].children[child].title}
+                                        {
+                                          this.state.pages[page].children[child].iconClass
+                                          ?
+                                          <>
+                                            &nbsp; <i class={this.state.pages[page].children[child].iconClass}></i>
+                                          </>
+                                          :
+                                          null
+                                        }
+                                      </Link>
+                                    )
+                                  })
+                                }
+                              </NavDropdown>
+                              :
+                              <Link
+                                className={
+                                  this.state.pages[page].path === this.props.location.pathname
+                                  ?
+                                  "nav-link active"
+                                  :
+                                  "nav-link"
+                                }
+                                to={this.state.pages[page].path}
+                              >
+                                {this.state.pages[page].title}
+                                {
+                                  this.state.pages[page].iconClass
+                                  ?
+                                  <>
+                                    &nbsp; <i class={this.state.pages[page].iconClass}></i>
+                                  </>
+                                  :
+                                  null
+                                }
+                              </Link>
+                            }
+                          </div>
                         )
                       })
                     }
@@ -117,13 +239,7 @@ export default class Header extends Component {
             </Col>
           </Row>
         </Container>
-        <Container className="d-none d-lg-block" fluid>
-          {/* <div style={{ padding: '1rem 0', marginBottom: '2rem' }}> */}
-          <div style={{ margin: '2rem 0' }}>
-            <Tagline />
-          </div>
-        </Container>
-        <Container className="d-lg-none" fluid>
+        <Container fluid>
           <hr style={{ marginTop: '0' }} />
         </Container>
       </div>

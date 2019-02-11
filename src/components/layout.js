@@ -24,9 +24,9 @@ const Layout = ({ children, location }) => {
       `}
       render={data => (
         <>
-          <Header />
+          <Header location={location} />
           {children}
-          <Footer />
+          <Footer location={location} />
         </>
       )}
     />
