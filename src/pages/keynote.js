@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-import pckLogo from '../images/pck_logo.svg'
+// import pckLogo from '../images/pck_logo.svg'
 
 
 const Section = posed.section({
@@ -27,10 +27,10 @@ const P = posed.p({
   exit: { y: 50, opacity: 0, delay: 300 }
 })
 
-const IMG = posed.img({
-  enter: { y: 0, opacity: 1 },
-  exit: { y: 50, opacity: 0, delay: 300 }
-})
+// const IMG = posed.img({
+//   enter: { y: 0, opacity: 1 },
+//   exit: { y: 50, opacity: 0, delay: 300 }
+// })
 
 const IFRAME = posed.iframe({
   enter: { y: 0, opacity: 1 },
@@ -52,11 +52,11 @@ export default function Keynote(props) {
             <Row className="justify-content-center justify-content-lg-start">
               <div className="d-flex flex-row">
                 <div className="p-2 indexJumbotronImageContainer">
-                  <IMG
+                  {/* <IMG
                     src={pckLogo}
                     alt="PCK Summit logo"
                     className="indexJumbotronImage"
-                  />
+                  /> */}
                 </div>
                 <div className="p-2 d-none d-lg-block">
                   <H1 className="indexJumbotronH1">Keynote: Dr. Lee Shulman</H1>

@@ -4,15 +4,15 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import nsfLogo from '../images/nsf_logo.svg'
-import osuLogo from '../images/osu_logo.svg' 
-import spencerLogo from '../images/spencer_logo.png' 
+// import nsfLogo from '../images/nsf_logo.svg'
+// import osuLogo from '../images/osu_logo.svg' 
+// import spencerLogo from '../images/spencer_logo.png' 
 
 
 export default function Footer() {
   return (
     <footer className="bg-light" style={{ paddingTop: "3rem" }}>
-      <Container fluid>
+      {/* <Container fluid>
         <Row>
           <Container>
             <Row>
@@ -34,7 +34,7 @@ export default function Footer() {
                   />
                 </a>
               </Col>
-              {/* <Col xs={12} md={4}>
+              <Col xs={12} md={4}>
                 <a href="https://knowlesteachers.org" target="_blank" rel="noopener noreferrer">
                   <img
                     src={kstfLogo}
@@ -46,11 +46,11 @@ export default function Footer() {
                     }}
                   />
                 </a>
-              </Col> */}
+              </Col>
             </Row>
           </Container>
         </Row>
-      </Container>
+      </Container> */}
       <Container fluid>
         <Row>
           <Container>
@@ -62,7 +62,7 @@ export default function Footer() {
           </Container>
         </Row>
       </Container>
-      <Container fluid>
+      {/* <Container fluid>
         <Row style={{
           marginBottom: "2rem"
         }}>
@@ -101,8 +101,8 @@ export default function Footer() {
             </Row>
           </Container>
         </Row>
-      </Container>
-      <Container fluid>
+      </Container> */}
+      {/* <Container fluid>
         <Row>
           <Container>
             <Row>
@@ -114,7 +114,7 @@ export default function Footer() {
             </Row>
           </Container>
         </Row>
-      </Container>
+      </Container> */}
       <Container fluid>
         <Row>
           <Container>

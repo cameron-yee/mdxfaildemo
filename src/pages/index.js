@@ -11,7 +11,7 @@ import SEO from '../components/seo'
 
 import './index.scss'
 
-import pckLogo from '../images/pck_logo.svg'
+// import pckLogo from '../images/pck_logo.svg'
 
 
 const IndexPage = props => (
@@ -27,11 +27,11 @@ const IndexPage = props => (
         <Row className="justify-content-center">
           <div className="d-flex flex-row">
             <div className="p-2 indexJumbotronImageContainer">
-              <img
+              {/* <img
                 src={pckLogo}
                 alt="PCK Summit logo"
                 className="indexJumbotronImage"
-              />
+              /> */}
             </div>
             <div className="p-2 d-none d-lg-block">
               <h1 className="indexJumbotronH1">Welcome to the PCK Summit Dissemination Site</h1>
