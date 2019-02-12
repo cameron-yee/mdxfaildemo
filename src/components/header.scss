@@ -30,12 +30,12 @@
     margin-bottom: 0;
   }
 
-  .navbarCollapse {
-    margin-top: 2rem;
-  }
+  // .navbarCollapse {
+  //   margin-top: 2rem;
+  // }
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
   .navbarCollapse {
     margin-top: 2rem;
   }
