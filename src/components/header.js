@@ -131,10 +131,10 @@ export default class Header extends Component {
               />
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
+              <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+              <Button variant="outline-primary btn-sm">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
             </div>
           </div>
         </Container>
