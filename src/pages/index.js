@@ -16,7 +16,7 @@ import './index.scss'
 // import pckLogo from '../images/pck_logo.svg'
 
 
-const IndexPage = props => (
+const IndexPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Jumbotron className="indexJumbotron">
