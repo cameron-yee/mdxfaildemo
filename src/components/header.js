@@ -136,7 +136,7 @@ export default class Header extends Component {
               />
             </div>
             <div class="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary btn-sm"><i class="fas fa-donate"></i>&nbsp; Donate</Button>
+              <Button variant="outline-primary"><i class="fas fa-donate"></i>&nbsp; Donate</Button>
             </div>
           </div>
         </Container>
@@ -240,7 +240,7 @@ export default class Header extends Component {
           </Row>
         </Container>
         <Container fluid>
-          <hr className="d-lg-none" style={{ marginTop: '0' }} />
+          <hr className="d-lg-none" style={{ margin: '0' }} />
         </Container>
       </div>
     )

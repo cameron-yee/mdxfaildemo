@@ -1,91 +1,108 @@
-$primary: rgb(41, 52, 118);
-$secondary: rgb(48, 135, 180);
-$font-family-base: "Open Sans", "Adobe Blank";
-$font-size-base: 1.2rem;
-// $success: ;
-// $info: ;
-// $warning: ;
-// $danger: ;
-// $light: ;
-// $dark: ;
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-// Required
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-
-// Optional
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/code";
-@import "../../node_modules/bootstrap/scss/grid";
-
-// fontawesome
-$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
-
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import '../components/utilities/bootstrap-overrides.scss';
+@import '../components/utilities/utilities.scss';
 
 
-.indexJumbotronH1 {
-  color: rgb(30, 47, 84);
+.indexJumbotron {
+  border-radius: 0;
+  color: #f0f8ff;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 0 !important;
+  margin-bottom: 5rem;
 }
 
-.indexJumbotronImage {
-  padding: 0 1rem;
+.indexJumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-@include media-breakpoint-up(lg) {
-  .indexJumbotronImageContainer {
-    border-right: 2px solid rgb(30, 47, 84);
-    padding-right: 1.5rem;
-    margin-right: 1.5rem;
-  }
-  .indexJumbotronImage {
-    width: 280px;
-  }
+  height: 100%;
+  background-image: url(../images/website_banner_2019_01.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  // background-attachment: fixed;
+  filter: brightness(85%);
 }
 
 
-// $blue:    #007bff !default;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #e83e8c !default;
-// $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #28a745 !default;
-// $teal:    #20c997 !default;
-// $cyan:    #17a2b8 !default;
+.indexJumbotron-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+}
 
-// $colors: (
-//   blue: $blue,
-//   indigo: $indigo,
-//   purple: $purple,
-//   pink: $pink,
-//   red: $red,
-//   orange: $orange,
-//   yellow: $yellow,
-//   green: $green,
-//   teal: $teal,
-//   cyan: $cyan,
-//   white: $white,
-//   gray: $gray-600,
-//   gray-dark: $gray-800
-// ) !default;
+.indexJumbotronContent {
+  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 0.3rem;
+  padding: 8rem 3rem;
+  max-width: 550px;
+  height: 500px;
+}
 
-// $theme-colors: (
-//   primary: $blue,
-//   secondary: $gray-600,
-//   success: $green,
-//   info: $cyan,
-//   warning: $yellow,
-//   danger: $red,
-//   light: $gray-100,
-//   dark: $gray-800
-// ) !default;
+.indexJumbotronHeading {
+  font-size: 2.25rem;
+}
+
+// @include media-breakpoint-up(sm) {
+//   .indexJumbotron {
+//     padding: 5rem 5rem 1rem !important;
+//   }
+
+//   .indexJumbotron::before {
+//     filter: brightness(65%);
+//   }
+
+
+//   .indexJumbotronContent {
+//     padding: 1rem;
+//     max-width: 525px;
+//   }
+// }
+
+// @include media-breakpoint-up(md) {
+//   .indexJumbotron {
+//     padding: 10rem 5rem 1rem !important;
+//   }
+
+//   .indexJumbotron::before {
+//     filter: brightness(75%);
+//   }
+
+
+//   .indexJumbotronContent {
+//     padding: 2rem;
+//     max-width: 575px;
+//   }
+// }
+
+// @include media-breakpoint-up(lg) {
+//   .indexJumbotron {
+//     padding: 10rem 5rem 1rem !important;
+//   }
+
+//   .indexJumbotron::before {
+//     background-position: top center;
+//   }
+
+//   .indexJumbotronContent {
+//     padding: 3rem;
+//     max-width: 675px;
+//   }
+
+//   .indexJumbotronHeading {
+//     font-size: 3rem;
+//   }
+// }
+
+// @include media-breakpoint-up(xl) {
+//   .indexJumbotron::before {
+//     background-position: center center;
+//   }
+
+//   .indexJumbotronContent {
+//     max-width: 800px;
+//   }
+// }

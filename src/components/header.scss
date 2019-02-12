@@ -1,6 +1,7 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/utilities";
+@import '../components/utilities/bootstrap-overrides.scss';
+@import '../components/utilities/utilities.scss';
+@import '../components/utilities/font-awesome.scss';
+
 
 .nav-link {
   a {
