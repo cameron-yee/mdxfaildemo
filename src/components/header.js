@@ -106,16 +106,11 @@ export default class Header extends Component {
             }
           }
         },
-        page05: {
-          title: `Sign In`,
-          path: ``,
-          iconClass: `fas fa-sign-in-alt`
-        },
-        page06: {
-          title: ``,
-          path: ``,
-          iconClass: `fas fa-search`
-        }
+        // page05: {
+        //   title: ``,
+        //   path: ``,
+        //   iconClass: `fas fa-search`
+        // }
       }
     }
   }
@@ -124,8 +119,8 @@ export default class Header extends Component {
     return (
       <div>
         <Container fluid>
-          <div class="d-flex">
-            <div class="p-2 flex-grow-1">
+          <div className="d-flex">
+            <div className="p-2 flex-grow-1">
               <img
                 className="bscsLogo"
                 src={bscsLogo}
@@ -135,8 +130,11 @@ export default class Header extends Component {
                 }}
               />
             </div>
-            <div class="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary"><i class="fas fa-donate"></i>&nbsp; Donate</Button>
+            <div className="p-2 align-self-center d-none d-sm-inline-block">
+              <Button variant="outline-primary"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
+            </div>
+            <div className="p-2 align-self-center d-none d-sm-inline-block">
+              <Button variant="outline-primary">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
             </div>
           </div>
         </Container>
@@ -196,7 +194,7 @@ export default class Header extends Component {
                                           this.state.pages[page].children[child].iconClass
                                           ?
                                           <>
-                                            &nbsp; <i class={this.state.pages[page].children[child].iconClass}></i>
+                                            &nbsp; <i className={this.state.pages[page].children[child].iconClass}></i>
                                           </>
                                           :
                                           null
@@ -222,7 +220,7 @@ export default class Header extends Component {
                                   this.state.pages[page].iconClass
                                   ?
                                   <>
-                                    &nbsp; <i class={this.state.pages[page].iconClass}></i>
+                                    &nbsp; <i className={this.state.pages[page].iconClass}></i>
                                   </>
                                   :
                                   null
@@ -240,7 +238,7 @@ export default class Header extends Component {
           </Row>
         </Container>
         <Container fluid>
-          <hr className="d-lg-none" style={{ margin: '0' }} />
+          <hr className="" style={{ margin: '0' }} />
         </Container>
       </div>
     )

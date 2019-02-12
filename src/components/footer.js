@@ -42,7 +42,7 @@ export default class Footer extends Component {
             child02: { title: `Research Resource Center`, path: `/research-resource-center/` }
           }
         },
-        parent04: { title: `Coming Up`,
+        parent04: { title: `Upcoming Programs`,
           children: {
             child01: { title: `Teacher Professional Learning`, path: `/teacher-professional-learning/` },
             child02: { title: `Leadership Development`, path: `/leadership-development/` },
@@ -53,7 +53,8 @@ export default class Footer extends Component {
           children: {
             child01: { title: `Contact Us`, path: `/contact-us/` },
             child02: { title: `Join E-mail List`, path: `/join-email-list/` },
-            child03: { title: `Work with Us`, path: `/work-with-us/` }
+            child03: { title: `Work with Us`, path: `/work-with-us/` },
+            child04: { title: `Employment Opportunities`, path: `/employment-opportunities/` }
           }
         }
       }
@@ -64,35 +65,35 @@ export default class Footer extends Component {
     return (
       <footer className="bg-light" style={{ paddingTop: "3rem" }}>
         <Container fluid>
-          <div class="d-flex">
-            <div class="p-2 flex-grow-1">
+          <div className="d-flex">
+            <div className="p-2 flex-grow-1">
               <Button variant="primary">Join Email List</Button>
             </div>
-            <div class="p-2 align-self-center">
+            <div className="p-2 align-self-center">
               <a
                 href="https://www.facebook.com/BSCSORG/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-facebook-square" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-facebook-square" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
-            <div class="p-2 align-self-center">
+            <div className="p-2 align-self-center">
               <a
                 href="https://twitter.com/BSCSorg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-twitter-square" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-twitter-square" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
-            <div class="p-2 align-self-center">
+            <div className="p-2 align-self-center">
               <a
                 href="https://www.linkedin.com/company/bscs"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="fab fa-linkedin" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-linkedin" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `PCK Summit`,
-    description: `Pedagogical Content Knowledge (PCK) Summit Dissemination Site`,
+    title: `BSCS Science Learning`,
+    description: ``,
     author: `J. S. Nickerson`,
   },
   plugins: [
