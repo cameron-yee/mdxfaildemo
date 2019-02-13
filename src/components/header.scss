@@ -27,17 +27,17 @@
 }
 
 @include media-breakpoint-up(md) {
-  .tagline-wrapper {
-    margin-bottom: 0;
-  }
+  // .tagline-wrapper {
+  //   margin-bottom: 0;
+  // }
 
   // .navbarCollapse {
   //   margin-top: 2rem;
   // }
 }
 
-@include media-breakpoint-up(lg) {
-  .navbarCollapse {
-    margin-top: 2rem;
-  }
-}
+// @include media-breakpoint-up(lg) {
+//   .navbarCollapse {
+//     margin-top: 2rem;
+//   }
+// }

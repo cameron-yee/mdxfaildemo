@@ -21,3 +21,9 @@
     transform: translateY(-1.1rem);
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .tagline {
+    margin-top: 2rem;
+  }
+}
