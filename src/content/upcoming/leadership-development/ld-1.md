@@ -7,7 +7,7 @@ image: /assets/stock/AdobeStock_20808997_Preview.jpeg
 alt: field-1
 template: Image Left
 additionalTags: tag1
-page: coming-up-leadership-development
+page: upcoming-leadership-development
 ---
 
 Field test 1.  The subject appears to have abnormal powers...

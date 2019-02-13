@@ -112,11 +112,11 @@ collections:
     - name: leadership
       label: Leadership
       folder: src/content/leadership
+      identifier_field: fullName
       create: true
       extension: md
       fields:
         - { name: slug, label: Website URL Path, widget: string }
-        - { name: title, label: Title, widget: string }
         - { name: date, label: Date, widget: date }
         - { name: fullName, label: Full Name, widget: string }
         - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
