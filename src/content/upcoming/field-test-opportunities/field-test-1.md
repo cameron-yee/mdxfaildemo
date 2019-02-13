@@ -7,7 +7,7 @@ image: /assets/stock/AdobeStock_60224670_Preview.jpeg
 alt: field-1
 template: Image Left
 additionalTags: tag1
-page: coming-up-field-test-opportunities
+page: upcoming-field-test-opportunities
 ---
 
 Field test 1.  The subject appears to have abnormal powers...
