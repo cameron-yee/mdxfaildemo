@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -121,14 +121,16 @@ export default class Header extends Component {
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
-              <img
-                className="bscsLogo"
-                src={bscsLogo}
-                alt="BSCS Science Learning logo"
-                style={{
-                  width: "300px"
-                }}
-              />
+              <AniLink to="/">
+                <img
+                  className="bscsLogo"
+                  src={bscsLogo}
+                  alt="BSCS Science Learning logo"
+                  style={{
+                    width: "300px"
+                  }}
+                />
+              </AniLink>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
@@ -184,7 +186,7 @@ export default class Header extends Component {
                                   Object.keys(this.state.pages[page].children).map((child, index) => {
                                     console.log(this.state.pages[page].children[child].iconClass)
                                     return(
-                                      <Link
+                                      <AniLink
                                         className="dropdown-item"
                                         to={this.state.pages[page].children[child].path}
                                         key={index}
@@ -199,13 +201,13 @@ export default class Header extends Component {
                                           :
                                           null
                                         }
-                                      </Link>
+                                      </AniLink>
                                     )
                                   })
                                 }
                               </NavDropdown>
                               :
-                              <Link
+                              <AniLink
                                 className={
                                   this.state.pages[page].path === this.props.location.pathname
                                   ?
@@ -225,7 +227,7 @@ export default class Header extends Component {
                                   :
                                   null
                                 }
-                              </Link>
+                              </AniLink>
                             }
                           </div>
                         )

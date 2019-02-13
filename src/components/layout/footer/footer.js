@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -116,13 +116,13 @@ export default class Footer extends Component {
                       {
                         Object.keys(this.state.families[parent].children).map((child, key) => {
                           return (
-                            <Link
+                            <AniLink
                               to={this.state.families[parent].children[child].path}
                               key={key}
                               className="nav-link"
                             >
                               {this.state.families[parent].children[child].title}
-                            </Link>
+                            </AniLink>
                           )
                         })
                       }
