@@ -1,0 +1,177 @@
+backend:
+  name: git-gateway
+  # name: github
+  repo: https://github.com/bscs-dev-team/bmw
+  #repo: bscs-science-learning/bscs-science-learning
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/assets
+public_folder: assets
+
+publish_mode: editorial_workflow
+display_url: https://bmw-bscs.netlify.com
+# logo_url: https://bscs-test.netlify.com/static/bscs_logo-4764abf3ed875294200baf166ee88a47.svg
+
+collections:
+    - name: educator-resource-center
+      label: Educator Resource Center
+      folder: src/data/educator-resource-center
+      create: true
+      extension: md
+      fields:
+          - { name: slug, label: Website URL Path, widget: string }
+          - { name: date, label: Date, widget: date }
+          - { name: title, label: Title, widget: string }
+          - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+          - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+          - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+          - { name: image, label: Image, widget: image }
+          - { name: alt, label: Image Alt Text, widget: string }
+          - { name: price, label: Price (optional), widget: number, valueType: float, min: 0.0, max: 1000, required: false }
+          - { name: courseId, label: Course ID (optional; only for Canvas courses), widget: number, valueType: int, min: 0, max: 10000, required: false }
+          - { name: facilitator, label: Teacher/Facilitator (optional), widget: string, required: false }
+          - { name: gradeLevel, label: Grade Level (optional), widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
+          - { name: discipline, label: Discipline (optional), widget: select, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
+          - { name: programLength, label: Program Length (optional), widget: select, options: ['Full Year', 'Modules'], required: false }
+          - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+          - { name: page, label: Page, widget: hidden, default: educator-resource-center }
+
+    # - name: strategic-initiative
+    #   label: Strategic Initiative
+    #   folder: src/data/strategic-initiatives
+    #   create: true
+    #   extension: md
+    #   fields:
+    #     - { name: slug, label: Website URL Path, widget: string }
+    #     - { name: date, label: Date, widget: date }
+    #     - { name: title, label: Title, widget: string }
+    #     # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+    #     - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+    #     - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+    #     - { name: image, label: Image, widget: image }
+    #     - { name: alt, label: Image Alt Text, widget: string }
+    #     - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+    #     - { name: body, label: Body, widget: markdown }
+    #     - { name: page, label: Page, widget: hidden, default: strategic-initiatives }
+
+    - name: upcoming-field-test-opportunities
+      label: "Upcoming: Field Test Opportunities"
+      folder: src/data/upcoming/field-test-opportunities
+      create: true
+      extension: md
+      fields:
+        - { name: slug, label: Website URL Path, widget: string }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: upcoming-field-test-opportunities }
+
+    - name: upcoming-leadership-development
+      label: "Upcoming: Leadership Development"
+      folder: src/data/upcoming/leadership-development
+      create: true
+      extension: md
+      fields:
+        - { name: slug, label: Website URL Path, widget: string }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: upcoming-leadership-development }
+
+    - name: upcoming-teacher-professional-learning
+      label: "Upcoming: Teacher Professional Learning"
+      folder: src/data/upcoming/teacher-professional-learning
+      create: true
+      extension: md
+      fields:
+        - { name: slug, label: Website URL Path, widget: string }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: upcoming-teacher-professional-learning }
+
+    - name: leadership
+      label: Leadership
+      folder: src/data/leadership
+      create: true
+      extension: md
+      fields:
+        - { name: slug, label: Website URL Path, widget: string }
+        - { name: title, label: Title, widget: string }
+        - { name: date, label: Date, widget: date }
+        - { name: fullName, label: Full Name, widget: string }
+        - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
+        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: leadership }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#     - name: educator-resource-center
+#       label: Educator Resource Center
+#       folder: src/data/educator-resource-center
+#       create: true
+#       extension: json
+#       fields:
+#           - { name: date, label: Date, widget: date }
+#           - { name: title, label: Title }
+#           - { name: slug, label: Website URL Path, widget: string }
+#           - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+#           - { name: description, label: Description, widget: text }
+#           - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
+#           - { name: image, label: Image, widget: image }
+#           - { name: alt, label: Image Alt Text, widget: string }
+#           - { name: price, label: Price, widget: number, default: 0.0, valueType: float, min: 0.0, max: 1000}
+#           - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
+#           - { name: courseId, label: Course ID (optional; only for Canvas courses), widget: number, valueType: int, min: 0, max: 10000, required: false }
+#           - { name: facilitator, label: Teacher/Facilitator (optional), widget: string, required: false }
+#           - { name: gradeLevel, label: Grade Level (optional), widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
+#           - { name: discipline, label: Discipline (optional), widget: select, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
+#           - { name: programLength, label: Program Length (optional), widget: select, options: ['Full Year', 'Modules'], required: false }
+#           - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+#           - { name: externalUrl, label: External URL (optional), widget: string, required: false }
