@@ -15,7 +15,7 @@ display_url: https://bmw-bscs.netlify.com
 collections:
     - name: educator-resource-center
       label: Educator Resource Center
-      folder: src/data/educator-resource-center
+      folder: src/content/educator-resource-center
       create: true
       extension: md
       fields:
@@ -39,7 +39,7 @@ collections:
 
     # - name: strategic-initiative
     #   label: Strategic Initiative
-    #   folder: src/data/strategic-initiatives
+    #   folder: src/content/strategic-initiatives
     #   create: true
     #   extension: md
     #   fields:
@@ -57,7 +57,7 @@ collections:
 
     - name: upcoming-field-test-opportunities
       label: "Upcoming: Field Test Opportunities"
-      folder: src/data/upcoming/field-test-opportunities
+      folder: src/content/upcoming/field-test-opportunities
       create: true
       extension: md
       fields:
@@ -75,7 +75,7 @@ collections:
 
     - name: upcoming-leadership-development
       label: "Upcoming: Leadership Development"
-      folder: src/data/upcoming/leadership-development
+      folder: src/content/upcoming/leadership-development
       create: true
       extension: md
       fields:
@@ -93,7 +93,7 @@ collections:
 
     - name: upcoming-teacher-professional-learning
       label: "Upcoming: Teacher Professional Learning"
-      folder: src/data/upcoming/teacher-professional-learning
+      folder: src/content/upcoming/teacher-professional-learning
       create: true
       extension: md
       fields:
@@ -111,7 +111,7 @@ collections:
 
     - name: leadership
       label: Leadership
-      folder: src/data/leadership
+      folder: src/content/leadership
       create: true
       extension: md
       fields:
@@ -154,7 +154,7 @@ collections:
 
 #     - name: educator-resource-center
 #       label: Educator Resource Center
-#       folder: src/data/educator-resource-center
+#       folder: src/content/educator-resource-center
 #       create: true
 #       extension: json
 #       fields:

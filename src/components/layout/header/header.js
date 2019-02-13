@@ -9,11 +9,11 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import Tagline from './tagline'
+import Tagline from './tagline/tagline'
 
 import './header.scss'
 
-import bscsLogo from '../images/bscs_logo.svg'
+import bscsLogo from '../../../images/bscs_logo.svg'
 
 
 export default class Header extends Component {

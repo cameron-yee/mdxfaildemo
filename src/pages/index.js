@@ -8,10 +8,10 @@ import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Button from 'react-bootstrap/Button'
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 
-import './index.scss'
+import '../global-scss/index.scss'
 
 // import pckLogo from '../images/pck_logo.svg'
 
