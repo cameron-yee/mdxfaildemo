@@ -119,10 +119,9 @@ export default class Footer extends Component {
                             <Link
                               to={this.state.families[parent].children[child].path}
                               key={key}
+                              className="nav-link"
                             >
-                              <Nav.Link>
-                                {this.state.families[parent].children[child].title}
-                              </Nav.Link>
+                              {this.state.families[parent].children[child].title}
                             </Link>
                           )
                         })
