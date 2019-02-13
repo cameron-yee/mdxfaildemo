@@ -9,7 +9,7 @@ media_folder: static/assets
 public_folder: assets
 
 publish_mode: editorial_workflow
-display_url: https://bscsmw.netlify.com
+display_url: https://bmw-bscs.netlify.com
 # logo_url: https://bscs-test.netlify.com/static/bscs_logo-4764abf3ed875294200baf166ee88a47.svg
 
 collections:
