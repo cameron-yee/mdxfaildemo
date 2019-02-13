@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-// import AniLink from 'gatsby-plugin-transition-link'
+import AniLink from 'gatsby-plugin-transition-link'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -17,9 +16,9 @@ import '../global-scss/index.scss'
 // import pckLogo from '../images/pck_logo.svg'
 
 
-const IndexPage = (props) => (
+const TestPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="Home" />
+    <SEO title="Test" />
     <Jumbotron className="indexJumbotron">
       <div className="indexJumbotron-inside">
         <div className="indexJumbotronContent">
@@ -31,11 +30,11 @@ const IndexPage = (props) => (
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col>
-          <Link to="test">Test</Link>
+          <AniLink to="/">home</AniLink>
         </Col>
       </Row>
     </Container>
   </Layout>
 )
 
-export default IndexPage
+export default TestPage
