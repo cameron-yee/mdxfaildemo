@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Category from '../category';
+import Category from './category';
 import Col from 'react-bootstrap/Col'
 
 const ResourceCategories = class extends Component {

@@ -1,0 +1,16 @@
+$primary: rgb(41, 52, 118);
+$secondary: rgb(48, 135, 180);
+
+.is-loading {
+  border: 16px solid $primary; 
+  border-top: 16px solid $secondary; 
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

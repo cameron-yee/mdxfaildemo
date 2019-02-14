@@ -5,7 +5,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
+import JoinEmailList from '../../atoms/join-email-list/join-email-list'
 
 // import nsfLogo from '../images/nsf_logo.svg'
 // import osuLogo from '../images/osu_logo.svg'
@@ -67,7 +68,8 @@ export default class Footer extends Component {
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
-              <Button variant="primary">Join Email List</Button>
+              {/* <Button variant="primary">Join Email List</Button> */}
+              <JoinEmailList />
             </div>
             <div className="p-2 align-self-center">
               <a
