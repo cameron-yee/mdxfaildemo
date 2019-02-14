@@ -29,10 +29,10 @@ const BSCSBreadcrumb = class extends Component {
         <Link to='/' className="breadcrumb-item">Home</Link>
         {this.pathlist.map((path,index) => {
             if(index < this.pathlist.length - this.props.activeDepth) {
-              return(<Link className="breadcrumb-item" to={`/${path}`}>{this.format(path)}</Link>)
+              return(<Link key={`breadcrumb-${index}`} className="breadcrumb-item" to={`/${path}`}>{this.format(path)}</Link>)
             } else {
               return (
-                <div className="breadcrumb-item active">{this.format(path)}</div>
+                <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.format(path)}</div>
               )
             }
         })}
