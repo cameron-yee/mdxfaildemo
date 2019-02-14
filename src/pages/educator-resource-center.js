@@ -1,6 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import SEO from '../components/seo'
+
+import Layout from '../components/layout/layout'
 
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Button from 'react-bootstrap/Button'
@@ -10,7 +12,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../components/atoms/page-title'
-import Layout from '../components/layout/layout'
+import SearchBy from '../components/atoms/search-by/search-by'
+import FilterBy from '../components/atoms/filter-by/filter-by'
 // import ResourceCard from '../components/molecules/resource-card/resource-card'
 import ResourceCategories from '../components/molecules/resource-categories/resource-categories'
 
@@ -36,16 +39,16 @@ const EducatorResourceCenter = (props) => {
         <section className="section" style={{ paddingTop: '.75rem' }}>
           <Container>
             <Breadcrumb>
-              <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
-              <Breadcrumb.Item active>Educator Resource Center</Breadcrumb.Item>
+              <Link to='/' className="breadcrumb-item">Home</Link>
+              <div className="breadcrumb-item active">Educator Resource Center</div>
             </Breadcrumb>
             <Row>
               <Col>
                 <PageTitle title="Educator Resource Center"></PageTitle>
                   <hr />
-                  {/* <div className="columns is-multiline"> */}
-                    {/* <ResourceCategories navigate={false} /> */}
-                  {/* </div> */}
+                  <Row>
+                    <ResourceCategories navigate={false} />
+                  </Row>
               </Col>
             </Row>
           </Container>
@@ -54,19 +57,10 @@ const EducatorResourceCenter = (props) => {
           <Container>
             <Row>
               <Col md={4}>
-                <div className="field has-addons">
-                  <p className="control" style={{ width: '100%' }}>
-                    {/* <SearchBy /> */}
-                  </p>
-                  <p className="control">
-                    <span className="button is-static">
-                      <i className="fas fa-search"></i>
-                    </span>
-                  </p>
-                </div>
+                <SearchBy />
               </Col>
               <Col md={{span: 4, offset: 4}}>
-                {/* <FilterBy items={filter_items}/> */}
+                <FilterBy items={filter_items}/>
               </Col>
             </Row>
           </Container>
@@ -77,16 +71,19 @@ const EducatorResourceCenter = (props) => {
               {
                 courses.map((edge, index) => {
                   return(
-                    <Col md={4} key={edge.node.id}>
-                      <Card style={{height: '100%'}}>
-                        <Card.Img variant="top" src={edge.node.frontmatter.image} />
+                    <Col md={4} key={edge.node.id} style={{marginBottom: '1.5rem'}}>
+                      <Card id={`resource-${index}`} className="card match" style={{height: '100%', position: 'relative', paddingBottom: '10%'}} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={ edge.node.frontmatter.type}>
+                        <div style={{height: '40%', overflow: 'hidden'}}>
+                          <Card.Img variant="top" src={edge.node.frontmatter.image} style={{display: 'block', margin: 'auto 0', minWidth: '100%', minHeight: '100%'}} />
+                        </div>
                         <Card.Body>
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                           <Card.Text>{edge.node.frontmatter.shortDescription}</Card.Text>
-                          <Button variant="primary">Go somewhere</Button>
+                          <Link to={`/educator-resource-center/${edge.node.frontmatter.slug}`} style={{position: 'absolute', bottom: '5%'}}><Button variant="primary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>
+
                     // <Col md={4}><a href={`educator-resource-center/${edge.node.frontmatter.slug}`}>{edge.node.frontmatter.title}</a></Col>
                   )
                 }) 

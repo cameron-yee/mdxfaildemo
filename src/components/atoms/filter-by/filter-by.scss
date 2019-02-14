@@ -1,0 +1,12 @@
+.dropdown-toggle {
+  &::after {
+    transform: rotate(0deg);
+    transition: all .3s ease-in-out;
+  } 
+  &:focus {
+    &::after {
+      transform: rotate(270deg);
+      transition: all .3s ease-in-out;
+    }
+  }
+}
