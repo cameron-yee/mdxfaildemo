@@ -59,7 +59,7 @@ const EducatorResourceCenter = (props) => {
               <Col md={4}>
                 <SearchBy />
               </Col>
-              <Col md={{span: 4, offset: 4}}>
+              <Col md={{span: 3, offset: 5}}>
                 <FilterBy items={filter_items}/>
               </Col>
             </Row>

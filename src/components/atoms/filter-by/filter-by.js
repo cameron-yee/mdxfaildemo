@@ -1,29 +1,5 @@
 import React, { Component } from 'react'
 import Dropdown from 'react-bootstrap/Dropdown'
-import './filter-by.scss'
-// import styled from 'styled-components'
-
-// const Dropdown = styled.div` 
-//   display: block !important;
-// `
-
-// const DropdownMenu = styled.div`
-//     display: block !important;
-//     position: absolute;
-//     transition: all .25s ease-in-out;
-//     width: 100%;
-//     z-index: 1000;
-
-//     > .dropdown-content {
-//       max-height: 0px;
-//       transition: all .25s ease-in-out;
-//       visibility: hidden;
-//     }
-// `
-
-// const DropdownArrow = styled.i`
-//     transition: transform .2s ease-in-out;
-// `
 
 const FilterBy = class extends Component {
   constructor(props) {
@@ -117,22 +93,17 @@ const FilterBy = class extends Component {
         }
       }
     }
-    // document.getElementById('dropdown').focus()
-    document.body.focus()
-    // document.getElementById('dropdown').blur()
+    document.getElementById('dropdown-basic').focus()
+    document.getElementById('dropdown-basic').blur()
     item === 'reset' ? this.setState({selected: 'Filter by...'}) : this.setState({selected: item})
   }
-    
-  
 
   render() {
     if(this.props.items) {
       return (
         <div id="filter">
           <Dropdown id="dropdown" style={{float: 'right'}}>
-            <Dropdown.Toggle variant="outline-primary" id="dropdown-basic">
-              Filter by...
-            </Dropdown.Toggle>
+            <Dropdown.Toggle variant="outline-primary" id="dropdown-basic" style={{width: '100%'}}>{this.state.selected}</Dropdown.Toggle>
 
             <Dropdown.Menu id="dropdown-menu3">
               {this.props.items.map((item, index) => (
