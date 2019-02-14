@@ -34,7 +34,7 @@ const EducatorResourceCenter = (props) => {
       <Layout location={props.location}>
         <section className="section" style={{ paddingTop: '.75rem' }}>
           <Container>
-            <BSCSBreadcrumb pathname={props.location.pathname} />
+            <BSCSBreadcrumb pathname={props.location.pathname} activeDepth="2" />
             <Row>
               <Col>
                 <PageTitle title="Educator Resource Center"></PageTitle>
