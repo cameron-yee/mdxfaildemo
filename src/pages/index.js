@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
-// import AniLink from 'gatsby-plugin-transition-link'
+// import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import TransitionLink from "gatsby-plugin-transition-link"
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -31,7 +32,10 @@ const IndexPage = (props) => (
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col>
-          <Link to="test">Test</Link>
+          <AniLink fade to="page2">Test</AniLink><br /><br />
+          <TransitionLink to="page2" exit={{ length: 0.5 }}>
+            Go to page 2
+          </TransitionLink>
         </Col>
       </Row>
     </Container>
