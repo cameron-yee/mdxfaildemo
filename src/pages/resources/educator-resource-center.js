@@ -35,7 +35,7 @@ const EducatorResourceCenter = (props) => {
       <Layout location={props.location}>
         <section className="section" style={{ paddingTop: '.75rem' }}>
           <Container>
-            <BSCSBreadcrumb pathname={props.location.pathname} activeDepth="2" />
+            <BSCSBreadcrumb pathname={props.location.pathname} />
             <Row>
               <Col>
                 <PageTitle title="Educator Resource Center"></PageTitle>
@@ -75,7 +75,7 @@ const EducatorResourceCenter = (props) => {
                         <Card.Body>
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                           <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                          <Link to={`/educator-resource-center/${edge.node.frontmatter.slug}`} className="read-more"><Button variant="primary">Read More</Button></Link>
+                          <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.slug}`} className="read-more"><Button variant="primary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>

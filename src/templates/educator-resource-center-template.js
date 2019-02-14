@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import PageTitle from '../components/atoms/page-title';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
 import './educator-resource-center-template.scss'
 import '../global-scss/index.scss';
@@ -26,11 +26,7 @@ const EducatorResourceCenterTemplate = class extends Component {
     return (
       <Layout location={this.props.location}>
         <Container>
-          <Breadcrumb>
-            <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
-            <Breadcrumb.Item href='/resources/educator-resource-center'>Educator Resource Center</Breadcrumb.Item>
-            <Breadcrumb.Item active>{this.resource.title}</Breadcrumb.Item>
-          </Breadcrumb>
+          <BSCSBreadcrumb pathname={this.props.location.pathname} />
           <PageTitle title={this.resource.title} />
           <hr />
           <Row>
