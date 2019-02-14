@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -129,4 +130,8 @@ const WorkWithUsPage = (props) => {
   )
 }
 
-export default WorkWithUsPage
+export default props => (
+  <Location>
+    {locationProps => <WorkWithUsPage {...locationProps} {...props} />}
+  </Location>
+)

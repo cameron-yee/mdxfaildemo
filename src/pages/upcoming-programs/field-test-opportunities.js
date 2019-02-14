@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -41,4 +42,8 @@ const FieldTestOpportunitiesPage = (props) => {
   )
 }
 
-export default FieldTestOpportunitiesPage
+export default props => (
+  <Location>
+    {locationProps => <FieldTestOpportunitiesPage {...locationProps} {...props} />}
+  </Location>
+)

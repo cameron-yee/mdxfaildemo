@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -41,4 +42,8 @@ const TeacherProfessionalLearningPage = (props) => {
   )
 }
 
-export default TeacherProfessionalLearningPage
+export default props => (
+  <Location>
+    {locationProps => <TeacherProfessionalLearningPage {...locationProps} {...props} />}
+  </Location>
+)

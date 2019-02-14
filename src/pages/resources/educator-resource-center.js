@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import SEO from '../../components/seo'
+import { Location } from '@reach/router'
 
 import Layout from '../../components/layout/layout'
 
@@ -89,7 +90,11 @@ const EducatorResourceCenter = (props) => {
   )
 }
 
-export default EducatorResourceCenter
+export default props => (
+  <Location>
+    {locationProps => <EducatorResourceCenter {...locationProps} {...props} />}
+  </Location>
+)
 
 export const educatorResourceQuery = graphql`
   query educatorResourceQuery {
