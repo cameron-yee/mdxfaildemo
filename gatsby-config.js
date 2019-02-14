@@ -73,5 +73,6 @@ module.exports = {
     // 'gatsby-plugin-offline',
     `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-transition-link`,
   ],
 }

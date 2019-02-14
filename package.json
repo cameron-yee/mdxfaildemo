@@ -1,33 +1,35 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.6.3",
-    "bootstrap": "^4.2.1",
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "bootstrap": "^4.3.0",
     "gatsby": "^2.0.119",
-    "gatsby-image": "^2.0.20",
+    "gatsby-cli": "^2.4.10",
+    "gatsby-image": "^2.0.29",
     "gatsby-plugin-google-analytics": "^2.0.13",
     "gatsby-plugin-google-fonts": "0.0.4",
-    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-netlify-cms": "^3.0.12",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sass": "^2.0.7",
-    "gatsby-plugin-sharp": "^2.0.14",
-    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sass": "^2.0.10",
+    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-plugin-transition-link": "^1.4.7",
+    "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.5",
-    "gatsby-transformer-sharp": "^2.1.8",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "gsap": "^2.0.2",
     "netlify-cms": "^2.4.2",
     "node-sass": "^4.11.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "prop-types": "^15.7.1",
+    "react": "^16.8.1",
     "react-bootstrap": "^1.0.0-beta.5",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-pose": "^4.0.6"
+    "react-dom": "^16.8.1",
+    "react-helmet": "^5.2.0"
   },
   "keywords": [
     "gatsby"
@@ -41,7 +43,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "prettier": "^1.15.2"
+    "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",

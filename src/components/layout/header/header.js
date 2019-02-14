@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -28,22 +28,22 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `What We Do`,
-              path: `/what-we-do/`,
+              path: `/our-work/what-we-do/`,
               iconClass: ``
             },
             child02: {
               title: `Strategic Initiatives`,
-              path: `/strategic-initiatives/`,
+              path: `/our-work/strategic-initiatives/`,
               iconClass: ``
             },
             child03: {
               title: `R&D Programs`,
-              path: `/rd-programs/`,
+              path: `/our-work/rd-programs/`,
               iconClass: ``
             },
             child04: {
               title: `News`,
-              path: `/news/`,
+              path: `/our-work/news/`,
               iconClass: ``
             }
           }
@@ -54,12 +54,12 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Educator Resource Center`,
-              path: `/educator-resource-center/`,
+              path: `/resources/educator-resource-center/`,
               iconClass: ``
             },
             child02: {
               title: `Research Resource Center`,
-              path: `/research-resource-center/`,
+              path: `/resources/research-resource-center/`,
               iconClass: ``
             }
           }
@@ -70,17 +70,17 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Teacher Professional Learning`,
-              path: `/teacher-professional-learning/`,
+              path: `/upcoming-programs/teacher-professional-learning/`,
               iconClass: ``
             },
             child02: {
               title: `Leadership Development`,
-              path: `/leadership-development/`,
+              path: `/upcoming-programs/leadership-development/`,
               iconClass: ``
             },
             child03: {
               title: `Field-Test Opportunities`,
-              path: `/field-test-opportunities/`,
+              path: `/upcoming-programs/field-test-opportunities/`,
               iconClass: ``
             }
           }
@@ -91,17 +91,22 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Contact Us`,
-              path: `/contact-us/`,
+              path: `/connect/contact-us/`,
               iconClass: ``
             },
             child02: {
               title: `Join E-mail List`,
-              path: `/join-email-list/`,
+              path: `/connect/join-email-list/`,
               iconClass: ``
             },
             child03: {
               title: `Work with Us`,
-              path: `/partner-with-us/`,
+              path: `/connect/work-with-us/`,
+              iconClass: ``
+            },
+            child04: {
+              title: `Employment Opportunities`,
+              path: `/connect/employment-opportunities/`,
               iconClass: ``
             }
           }
@@ -121,14 +126,16 @@ export default class Header extends Component {
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
-              <img
-                className="bscsLogo"
-                src={bscsLogo}
-                alt="BSCS Science Learning logo"
-                style={{
-                  width: "300px"
-                }}
-              />
+              <AniLink to="/">
+                <img
+                  className="bscsLogo"
+                  src={bscsLogo}
+                  alt="BSCS Science Learning logo"
+                  style={{
+                    width: "300px"
+                  }}
+                />
+              </AniLink>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
@@ -184,7 +191,7 @@ export default class Header extends Component {
                                   Object.keys(this.state.pages[page].children).map((child, index) => {
                                     console.log(this.state.pages[page].children[child].iconClass)
                                     return(
-                                      <Link
+                                      <AniLink
                                         className="dropdown-item"
                                         to={this.state.pages[page].children[child].path}
                                         key={index}
@@ -199,13 +206,13 @@ export default class Header extends Component {
                                           :
                                           null
                                         }
-                                      </Link>
+                                      </AniLink>
                                     )
                                   })
                                 }
                               </NavDropdown>
                               :
-                              <Link
+                              <AniLink
                                 className={
                                   this.state.pages[page].path === this.props.location.pathname
                                   ?
@@ -225,7 +232,7 @@ export default class Header extends Component {
                                   :
                                   null
                                 }
-                              </Link>
+                              </AniLink>
                             }
                           </div>
                         )
