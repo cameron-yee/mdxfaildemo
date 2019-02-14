@@ -9,8 +9,8 @@ import '../global-scss/index.scss';
 const LeadershipDevelopmentTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = data.markdownRemark.html
-    this.resource = data.markdownRemark.frontmatter
+    this.html = this.props.data.markdownRemark.html
+    this.resource = this.props.data.markdownRemark.frontmatter
   }
 
   render() {
