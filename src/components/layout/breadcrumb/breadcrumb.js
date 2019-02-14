@@ -6,7 +6,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 const BSCSBreadcrumb = class extends Component {
   constructor(props) {
     super(props)
-    this.pathlist = this.props.pathname.split('/').slice(1) 
+    this.pathlist = this.props.pathname.split('/').slice(1, -1) 
   }
 
   format = (string) => {
