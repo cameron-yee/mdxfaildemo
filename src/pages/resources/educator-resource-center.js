@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import SEO from '../components/seo'
+import SEO from '../../components/seo'
 
-import Layout from '../components/layout/layout'
+import Layout from '../../components/layout/layout'
 
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Button from 'react-bootstrap/Button'
@@ -11,15 +11,15 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
-import PageTitle from '../components/atoms/page-title'
-import SearchBy from '../components/atoms/search-by/search-by'
-import FilterBy from '../components/atoms/filter-by/filter-by'
+import PageTitle from '../../components/atoms/page-title'
+import SearchBy from '../../components/atoms/search-by/search-by'
+import FilterBy from '../../components/atoms/filter-by/filter-by'
 // import ResourceCard from '../components/molecules/resource-card/resource-card'
-import ResourceCategories from '../components/molecules/resource-categories/resource-categories'
+import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import './educator-resource-center.scss';
 // import '../global-scss/bulma-divider.scss';
-import '../global-scss/index.scss';
+import '../../global-scss/index.scss';
 // import '../global-scss/helpers.scss';
 
 

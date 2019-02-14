@@ -20,41 +20,41 @@ export default class Footer extends Component {
       families: {
         parent01: { title: `About`,
           children: {
-            child01: { title: `Our Story`, path: `/our-story/` },
-            // child02: { title: `Staff`, path: `/staff/` },
-            // child03: { title: `Board Members`, path: `/board-members/` },
-            child02: { title: `Leadership`, path: `/leadership/` },
-            child03: { title: `Financials`, path: `/financials/` },
-            child04: { title: `Brand Materials`, path: `/brand-materials/` }
+            child01: { title: `Our Story`, path: `/about/our-story/` },
+            // child02: { title: `Staff`, path: `/about/staff/` },
+            // child03: { title: `Board Members`, path: `/about/board-members/` },
+            child02: { title: `Leadership`, path: `/about/leadership/` },
+            child03: { title: `Financials`, path: `/about/financials/` },
+            child04: { title: `Brand Materials`, path: `/about/brand-materials/` }
           }
         },
         parent02: { title: `Our Work`,
           children: {
-            child01: { title: `What We Do`, path: `/what-we-do/` },
-            child02: { title: `Strategic Initiatives`, path: `/strategic-initiatives/` },
-            child03: { title: `R&D Programs`, path: `/rd-programs/` },
-            child04: { title: `News`, path: `/news/` }
+            child01: { title: `What We Do`, path: `/our-work/what-we-do/` },
+            child02: { title: `Strategic Initiatives`, path: `/our-work/strategic-initiatives/` },
+            child03: { title: `R&D Programs`, path: `/our-work/rd-programs/` },
+            child04: { title: `News`, path: `/our-work/news/` }
           }
         },
         parent03: { title: `Resources`,
           children: {
-            child01: { title: `Educator Resource Center`, path: `/educator-resource-center/` },
-            child02: { title: `Research Resource Center`, path: `/research-resource-center/` }
+            child01: { title: `Educator Resource Center`, path: `/resources/educator-resource-center/` },
+            child02: { title: `Research Resource Center`, path: `/resources/research-resource-center/` }
           }
         },
         parent04: { title: `Upcoming Programs`,
           children: {
-            child01: { title: `Teacher Professional Learning`, path: `/teacher-professional-learning/` },
-            child02: { title: `Leadership Development`, path: `/leadership-development/` },
-            child03: { title: `Field-Test Opportunities`, path: `/field-test-opportunities/` }
+            child01: { title: `Teacher Professional Learning`, path: `/upcoming-programs/teacher-professional-learning/` },
+            child02: { title: `Leadership Development`, path: `/upcoming-programs/leadership-development/` },
+            child03: { title: `Field-Test Opportunities`, path: `/upcoming-programs/field-test-opportunities/` }
           }
         },
         parent05: { title: `Connect`,
           children: {
-            child01: { title: `Contact Us`, path: `/contact-us/` },
-            child02: { title: `Join E-mail List`, path: `/join-email-list/` },
-            child03: { title: `Work with Us`, path: `/work-with-us/` },
-            child04: { title: `Employment Opportunities`, path: `/employment-opportunities/` }
+            child01: { title: `Contact Us`, path: `/connect/contact-us/` },
+            child02: { title: `Join E-mail List`, path: `/connect/join-email-list/` },
+            child03: { title: `Work with Us`, path: `/connect/work-with-us/` },
+            child04: { title: `Employment Opportunities`, path: `/connect/employment-opportunities/` }
           }
         }
       }

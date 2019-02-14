@@ -28,22 +28,22 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `What We Do`,
-              path: `/what-we-do/`,
+              path: `/our-work/what-we-do/`,
               iconClass: ``
             },
             child02: {
               title: `Strategic Initiatives`,
-              path: `/strategic-initiatives/`,
+              path: `/our-work/strategic-initiatives/`,
               iconClass: ``
             },
             child03: {
               title: `R&D Programs`,
-              path: `/rd-programs/`,
+              path: `/our-work/rd-programs/`,
               iconClass: ``
             },
             child04: {
               title: `News`,
-              path: `/news/`,
+              path: `/our-work/news/`,
               iconClass: ``
             }
           }
@@ -54,12 +54,12 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Educator Resource Center`,
-              path: `/educator-resource-center/`,
+              path: `/resources/educator-resource-center/`,
               iconClass: ``
             },
             child02: {
               title: `Research Resource Center`,
-              path: `/research-resource-center/`,
+              path: `/resources/research-resource-center/`,
               iconClass: ``
             }
           }
@@ -70,17 +70,17 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Teacher Professional Learning`,
-              path: `/teacher-professional-learning/`,
+              path: `/upcoming-programs/teacher-professional-learning/`,
               iconClass: ``
             },
             child02: {
               title: `Leadership Development`,
-              path: `/leadership-development/`,
+              path: `/upcoming-programs/leadership-development/`,
               iconClass: ``
             },
             child03: {
               title: `Field-Test Opportunities`,
-              path: `/field-test-opportunities/`,
+              path: `/upcoming-programs/field-test-opportunities/`,
               iconClass: ``
             }
           }
@@ -91,17 +91,22 @@ export default class Header extends Component {
           children: {
             child01: {
               title: `Contact Us`,
-              path: `/contact-us/`,
+              path: `/connect/contact-us/`,
               iconClass: ``
             },
             child02: {
               title: `Join E-mail List`,
-              path: `/join-email-list/`,
+              path: `/connect/join-email-list/`,
               iconClass: ``
             },
             child03: {
               title: `Work with Us`,
-              path: `/partner-with-us/`,
+              path: `/connect/work-with-us/`,
+              iconClass: ``
+            },
+            child04: {
+              title: `Employment Opportunities`,
+              path: `/connect/employment-opportunities/`,
               iconClass: ``
             }
           }

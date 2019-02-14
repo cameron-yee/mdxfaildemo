@@ -5,8 +5,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-import Layout from '../components/layout/layout'
-import SEO from '../components/seo'
+import Layout from '../../components/layout/layout'
+import SEO from '../../components/seo'
 
 const FieldTestOpportunitiesPage = (props) => {
   return (
