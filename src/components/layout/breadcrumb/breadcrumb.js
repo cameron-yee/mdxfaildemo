@@ -10,14 +10,13 @@ const BSCSBreadcrumb = class extends Component {
   }
 
   format = (string) => {
-    let words = string.replace(/-/g, ' ')
-    let formatted = words.charAt(0).toUpperCase()
-    for(let i = 1; i < words.length; i++) {
-      if(words[i] === ' ') {
-        formatted = formatted + words[i] + words[i+1].toUpperCase()
+    let formatted = string.charAt(0).toUpperCase()
+    for(let i = 1; i < string.length; i++) {
+      if(string[i] === '-') {
+        formatted = formatted + ' ' + string[i+1].toUpperCase()
         i++
       } else {
-        formatted = formatted + words[i]
+        formatted = formatted + string[i]
       }
     }
 
