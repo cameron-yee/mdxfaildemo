@@ -1,46 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { graphql } from 'gatsby';
-// import styled from 'styled-components';
-// import Hero from '../components/canvas/hero'
+import { Location } from '@reach/router' 
 
 import Layout from '../components/layout/layout';
-// import PageTitle from '../components/ui/typography/page-title/page-title';
-// import Container from '../components/layout/container/container';
-// import Breadcrumb from '../components/ui/breadcrumb/breadcrumb';
-// import Divider from '../components/ui/divider/divider';
-// import './educator-resource-center-template.scss';
 
 import '../global-scss/index.scss';
 
+const LeadershipDevelopmentTemplate = class extends Component {
+  constructor(props) {
+    super(props)
+    this.html = data.markdownRemark.html
+    this.resource = data.markdownRemark.frontmatter
+  }
 
-// const MarkdownDiv = styled.div`
-//   p {
-//     margin: 12px 0;
-//   }
-
-//   h1 {
-//     font-size: 2rem;
-//   }
-
-//   img {
-//     border-radius: 5px;
-//     display: block;
-//     max-width: 500px;
-//     margin: 0 auto;
-//   }
-// `
-
-export default ({ data }) => {
-  const html = data.markdownRemark.html
-  const resource = data.markdownRemark.frontmatter;
-  const paths = [["/coming-up/leadership-development/", "Coming Up Leadership Development"], [`/${resource.slug}`, `${resource.title}`, "is-active"]];
-
-  return (
-    <Layout>
-      <p>PLACEHOLDER</p>
-    </Layout>
-  )
+  render() {
+    return (
+      <Layout>
+        <p>PLACEHOLDER</p>
+      </Layout>
+    )
+  }
 }
+
+export default props => (
+  <Location>
+    {locationProps => <LeadershipDevelopmentTemplate {...locationProps} {...props} />}
+  </Location>
+)
 
 export const query = graphql`
   query($slug: String!) {
