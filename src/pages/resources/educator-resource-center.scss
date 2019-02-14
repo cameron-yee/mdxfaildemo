@@ -136,3 +136,35 @@
   display: block;
   padding: 1.25rem;
 }
+
+.card-col {
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  height: 100%;
+  position: relative;
+  padding-bottom: 10%;
+  
+}
+
+.card-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-img {
+  display: block;
+  margin: auto 0;
+  min-width: 100%;
+  min-height: 100%; 
+}
+
+.excerpt {
+  padding-bottom: 1.5rem;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 4%;
+}

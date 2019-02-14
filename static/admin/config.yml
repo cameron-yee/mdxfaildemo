@@ -23,7 +23,6 @@ collections:
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: string }
           - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-          - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
           - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
@@ -65,7 +64,6 @@ collections:
         - { name: date, label: Date, widget: date }
         - { name: title, label: Title, widget: string }
         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
@@ -83,7 +81,6 @@ collections:
         - { name: date, label: Date, widget: date }
         - { name: title, label: Title, widget: string }
         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
@@ -101,7 +98,6 @@ collections:
         - { name: date, label: Date, widget: date }
         - { name: title, label: Title, widget: string }
         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
@@ -120,7 +116,6 @@ collections:
         - { name: date, label: Date, widget: date }
         - { name: fullName, label: Full Name, widget: string }
         - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
-        - { name: shortDescription, label: Short Description (optional), widget: string, required: false }
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }

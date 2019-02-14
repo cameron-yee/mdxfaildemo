@@ -46,12 +46,12 @@ export const query = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       html
+      excerpt(pruneLength: 200)
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
         alt,
         image,
-        shortDescription,
         slug,
         template,
         title

@@ -2,7 +2,6 @@
 slug: daniel-c-edelson-executive-director
 date: 2018-12-18T23:03:06.180Z
 fullName: Daniel C. Edelson
-shortDescription: Daniel Edelson joined BSCS as Executive Director and President in January 2015. He brings significant experience as a curriculum and...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/management/daniel_edelson.jpg
 alt: Daniel C. Edelson headshot.

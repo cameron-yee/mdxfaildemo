@@ -2,7 +2,6 @@
 slug: nicole-gillespie
 date: 2018-12-18T23:03:06.180Z
 fullName: Nicole Gillespie
-shortDescription: Nicole Gillespie, Ph.D., is the Executive Director of the Knowles Science Teaching Foundation (KSTF) in Moorestown, New Jersey. Prior to... 
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_nicole_g_5x7.jpg
 alt: Nicole Gillespie headshot.

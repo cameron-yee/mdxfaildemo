@@ -2,7 +2,6 @@
 slug: richard-j-shavelson
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard J. Shavelson, Chair
-shortDescription: Richard J. Shavelson, Ph.D., is the Margaret Jacks Professor of Education and Professor of Psychology (Emeritus) at Stanford University...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_richard_s_5x7.jpg
 alt: Richard J. Shavelson, headshot.

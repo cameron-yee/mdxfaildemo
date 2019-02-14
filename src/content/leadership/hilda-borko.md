@@ -2,7 +2,6 @@
 slug: hilda-borko
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
-shortDescription: Hilda Borko, Ph.D., is a professor at Stanford University’s Graduate School of Education. Her research explores teacher cognition and the...
 template: Image Right
 image: https://media.bscs.org/bscs-science-learning/bod/bod_2016_hilda_5x7_04.jpg
 alt: Hilda Borko headshot.

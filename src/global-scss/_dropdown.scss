@@ -1,0 +1,23 @@
+.dropdown-toggle {
+  &::after {
+    transform: rotate(0deg);
+    transition: all .3s ease-in-out;
+  } 
+  &:focus {
+    &::after {
+      transform: rotate(270deg);
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.nav-link,
+.dropdown-item {
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    animation: pulse;
+    animation-duration: 0.2s;
+  }
+}

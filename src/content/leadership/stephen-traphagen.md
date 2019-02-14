@@ -2,7 +2,6 @@
 slug: stephen-traphagen
 date: 2018-12-18T23:03:06.180Z
 fullName: Stephen Traphagen
-shortDescription: Stephen Traphagen, M.Ed., is a biology and AP biology teacher at Rolling Meadows High School in Rolling Meadows, Illinois, and a Teaching...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_stephen_t_5x7.jpg
 alt: Stephen Traphagen headshot.

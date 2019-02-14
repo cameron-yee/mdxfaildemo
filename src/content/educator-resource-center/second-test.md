@@ -3,7 +3,6 @@ slug: second-test
 date: 2018-12-18T23:03:06.180Z
 title: Second Test
 type: Professional Learning
-shortDescription: This is also a test...
 template: Image in content
 price: 12
 image: /assets/canvas.jpg

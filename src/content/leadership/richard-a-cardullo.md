@@ -2,7 +2,6 @@
 slug: richard-a-cardullo
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard A. Cardullo, Vice Chair
-shortDescription: Richard A. Cardullo, Ph.D., is currently the Interim Vice Provost of Undergraduate Education, the Howard H Hays Chair of University Honors...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_richard_c_5x7.jpg
 alt: Richard A. Cardullo headshot.

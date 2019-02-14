@@ -24,6 +24,8 @@ import mstile150 from '../images/favicon/mstile-70x70.png'
 import mstile310x150 from '../images/favicon/mstile-70x70.png'
 import mstile310 from '../images/favicon/mstile-70x70.png'
 
+import 'animate.css'
+
 
 function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd }) {
   return (

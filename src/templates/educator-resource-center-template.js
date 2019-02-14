@@ -28,7 +28,7 @@ const EducatorResourceCenterTemplate = class extends Component {
         <Container>
           <Breadcrumb>
             <Breadcrumb.Item href='/'>Home</Breadcrumb.Item>
-            <Breadcrumb.Item href='/educator-resource-center'>Educator Resource Center</Breadcrumb.Item>
+            <Breadcrumb.Item href='/resources/educator-resource-center'>Educator Resource Center</Breadcrumb.Item>
             <Breadcrumb.Item active>{this.resource.title}</Breadcrumb.Item>
           </Breadcrumb>
           <PageTitle title={this.resource.title} />
@@ -103,7 +103,6 @@ export const query = graphql`
         image,
         price,
         programLength,
-        shortDescription,
         slug,
         facilitator,
         template,

@@ -4,7 +4,7 @@ import SEO from '../../components/seo'
 
 import Layout from '../../components/layout/layout'
 
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -26,22 +26,15 @@ import '../../global-scss/index.scss';
 // const EducatorResourceCenter = (props, {data: { allMarkdownRemark: { edges },},}) => {
 const EducatorResourceCenter = (props) => {
   const courses = props.data.allMarkdownRemark.edges;
-
-  // const paths = [["/educator-resource-center", "Educator Resource Center", "is-active"]];
-
   const filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"];
 
   return (
     <>
-      {/* {/* <MatchHeight /> */}
       <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
       <Layout location={props.location}>
         <section className="section" style={{ paddingTop: '.75rem' }}>
           <Container>
-            <Breadcrumb>
-              <Link to='/' className="breadcrumb-item">Home</Link>
-              <div className="breadcrumb-item active">Educator Resource Center</div>
-            </Breadcrumb>
+            <BSCSBreadcrumb pathname={props.location.pathname} />
             <Row>
               <Col>
                 <PageTitle title="Educator Resource Center"></PageTitle>
@@ -49,6 +42,7 @@ const EducatorResourceCenter = (props) => {
                   <Row>
                     <ResourceCategories navigate={false} />
                   </Row>
+                  <hr />
               </Col>
             </Row>
           </Container>
@@ -63,6 +57,7 @@ const EducatorResourceCenter = (props) => {
                 <FilterBy items={filter_items}/>
               </Col>
             </Row>
+            <hr />
           </Container>
         </section>
         <section className="section">
@@ -71,20 +66,18 @@ const EducatorResourceCenter = (props) => {
               {
                 courses.map((edge, index) => {
                   return(
-                    <Col md={4} key={edge.node.id} style={{marginBottom: '1.5rem'}}>
-                      <Card id={`resource-${index}`} className="card match" style={{height: '100%', position: 'relative', paddingBottom: '10%'}} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={ edge.node.frontmatter.type}>
-                        <div style={{height: '40%', overflow: 'hidden'}}>
-                          <Card.Img variant="top" src={edge.node.frontmatter.image} style={{display: 'block', margin: 'auto 0', minWidth: '100%', minHeight: '100%'}} />
+                    <Col md={4} key={edge.node.id} className="card-col">
+                      <Card id={`resource-${index}`} className="card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                        <div className="card-img-wrapper">
+                          <Card.Img variant="top" className="card-img" src={edge.node.frontmatter.image}/>
                         </div>
                         <Card.Body>
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                          <Card.Text>{edge.node.frontmatter.shortDescription}</Card.Text>
-                          <Link to={`/educator-resource-center/${edge.node.frontmatter.slug}`} style={{position: 'absolute', bottom: '5%'}}><Button variant="primary">Read More</Button></Link>
+                          <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
+                          <Link to={`/educator-resource-center/${edge.node.frontmatter.slug}`} className="read-more"><Button variant="primary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>
-
-                    // <Col md={4}><a href={`educator-resource-center/${edge.node.frontmatter.slug}`}>{edge.node.frontmatter.title}</a></Col>
                   )
                 }) 
               }
@@ -104,6 +97,7 @@ export const educatorResourceQuery = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 200)
           frontmatter {
             additionalTags,
             alt,
@@ -115,7 +109,6 @@ export const educatorResourceQuery = graphql`
             slug,
             price,
             programLength,
-            shortDescription,
             facilitator,
             title,
             type,

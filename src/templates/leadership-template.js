@@ -56,7 +56,6 @@ export const query = graphql`
         additionalTags,
         alt,
         image,
-        shortDescription,
         slug,
         template,
         fullName,

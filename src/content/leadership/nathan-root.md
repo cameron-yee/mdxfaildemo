@@ -2,7 +2,6 @@
 slug: nate-root
 date: 2018-12-18T23:03:06.180Z
 fullName: Nathan Root
-shortDescription: Nate Root started his career as a property & casualty actuary in Chicago and achieved his designation of Fellow of the Casualty...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_2018_nate_r.jpg
 alt: Nathan Root headshot.

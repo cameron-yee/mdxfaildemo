@@ -2,7 +2,6 @@
 slug: dennis-schatz
 date: 2018-12-18T23:03:06.180Z
 fullName: Dennis Schatz
-shortDescription: Dennis Schatz is the Senior Vice President for Strategic Programs at Pacific Science Center, Seattle, Washington, where he has played a...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_dennis_s_5x7.jpg
 alt: Dennis Schatz headshot.

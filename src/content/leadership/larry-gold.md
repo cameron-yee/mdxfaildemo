@@ -2,7 +2,6 @@
 slug: larry-gold
 date: 2018-12-18T23:03:06.180Z
 fullName: Larry Gold
-shortDescription: Larry Gold, Ph.D., is Professor of Molecular, Cellular, and Developmental Biology at the University of Colorado, Boulder, and the Founder...
 template: Image Left
 image: https://media.bscs.org/bscs-science-learning/bod/bod_larry_g_5x7_v3.jpg
 alt: Larry Gold headshot.
