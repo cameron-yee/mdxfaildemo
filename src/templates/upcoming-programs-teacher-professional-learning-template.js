@@ -6,7 +6,7 @@ import Layout from '../components/layout/layout';
 
 import '../global-scss/index.scss';
 
-const TestOpportunitiesTemplate = class extends Component {
+const TeacherProfessionalLearningTemplate = class extends Component {
   constructor(props) {
     super(props)
     this.html = this.props.data.markdownRemark.html
@@ -15,7 +15,7 @@ const TestOpportunitiesTemplate = class extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout location={this.props.location}>
         <p>PLACEHOLDER</p>
       </Layout>
     )
@@ -24,7 +24,7 @@ const TestOpportunitiesTemplate = class extends Component {
 
 export default props => (
   <Location>
-    {locationProps => <TestOpportunitiesTemplate {...locationProps} {...props} />}
+    {locationProps => <TeacherProfessionalLearningTemplate {...locationProps} {...props} />}
   </Location>
 )
 

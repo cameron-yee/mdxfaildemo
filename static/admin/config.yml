@@ -54,8 +54,8 @@ collections:
     #     - { name: body, label: Body, widget: markdown }
     #     - { name: page, label: Page, widget: hidden, default: strategic-initiatives }
 
-    - name: upcoming-field-test-opportunities
-      label: "Upcoming: Field Test Opportunities"
+    - name: upcoming-programs-field-test-opportunities
+      label: "Upcoming Programs: Field Test Opportunities"
       folder: src/content/upcoming/field-test-opportunities
       create: true
       extension: md
@@ -69,10 +69,10 @@ collections:
         - { name: alt, label: Image Alt Text, widget: string }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-field-test-opportunities }
+        - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }
 
-    - name: upcoming-leadership-development
-      label: "Upcoming: Leadership Development"
+    - name: upcoming-programs-leadership-development
+      label: "Upcoming Programs: Leadership Development"
       folder: src/content/upcoming/leadership-development
       create: true
       extension: md
@@ -86,10 +86,10 @@ collections:
         - { name: alt, label: Image Alt Text, widget: string }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-leadership-development }
+        - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
 
     - name: upcoming-teacher-professional-learning
-      label: "Upcoming: Teacher Professional Learning"
+      label: "Upcoming Programs: Teacher Professional Learning"
       folder: src/content/upcoming/teacher-professional-learning
       create: true
       extension: md
@@ -103,7 +103,7 @@ collections:
         - { name: alt, label: Image Alt Text, widget: string }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-teacher-professional-learning }
+        - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
 
     - name: leadership
       label: Leadership
