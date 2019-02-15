@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').toLowerCase()
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/^a-zA-Z-/g, '').toLowerCase()
           const nodeId = node.id
           createPage({
             path: `/resources/educator-resource-center/${slug}/`,
