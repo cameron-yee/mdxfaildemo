@@ -26,7 +26,7 @@ const EducatorResourceCenterTemplate = class extends Component {
     return (
       <Layout location={this.props.location}>
         <Container>
-          <BSCSBreadcrumb pathname={this.props.location.pathname} />
+          <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
           <PageTitle title={this.resource.title} />
           <hr />
           <Row>

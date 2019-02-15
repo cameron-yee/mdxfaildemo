@@ -21,4 +21,4 @@ A new online learning environment includes all information from the print editio
 
 This program can be ordered directly from the Kendall Hunt Publishing Company.  
 
-<a href="https://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition" target="_blank" class="btn btn-primary">
+<a href="https://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition" target="_blank" class="btn btn-primary">Access Resource Here</a>

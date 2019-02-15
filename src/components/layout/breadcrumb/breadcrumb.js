@@ -32,9 +32,15 @@ const BSCSBreadcrumb = class extends Component {
         {this.pathlist.map((path,index) => {
           if(this.pathlist[this.pathlist.length - 1] === path || null_paths.indexOf(path) > -1) {
             current_path = `/${current_path}/${path}`
-            return (
-              <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.format(path)}</div>
-            )
+            if(path === this.props.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()) {
+              return (
+                <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.props.title}</div>
+              )
+            } else {
+              return (
+                <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.format(path)}</div>
+              )
+            }
           } else {
             current_path = `/${current_path}/${path}`
             return(<Link key={`breadcrumb-${index}`} className="breadcrumb-item" to={`${current_path}`}>{this.format(path)}</Link>)
