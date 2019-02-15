@@ -168,3 +168,22 @@
   position: absolute;
   bottom: 4%;
 }
+
+$bscs-red: rgb(174,37,38);
+$bscs-orange: rgb(250,173,109);
+
+.gradient {
+  background: rgba(255,255,255,1);
+  background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
+}
+
+// .breadcrumb-item {
+//   color: white;
+//   &.active {
+//     color: lightgray;
+//   }
+// }
+
+// h1 {
+//   color: white;
+// }

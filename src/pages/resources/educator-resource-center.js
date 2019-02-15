@@ -33,7 +33,8 @@ const EducatorResourceCenter = (props) => {
     <>
       <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
       <Layout location={props.location}>
-        <section className="section" style={{ paddingTop: '.75rem' }}>
+        <section className="section">
+          {/* <Container fluid="true" className="gradient"> */}
           <Container>
             <BSCSBreadcrumb pathname={props.location.pathname} />
             <Row>
