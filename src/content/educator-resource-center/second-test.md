@@ -8,7 +8,7 @@ price: 12
 image: /assets/canvas.jpg
 alt: Canvas painting of two people walking on a path.
 courseId: 999
-gradeLevel: Middle
+gradeLevel: [ 'Middle' ]
 discipline: Earth Sciences
 programLength: Full Year
 additionalTags: Testing
