@@ -77,7 +77,7 @@ const EducatorResourceCenter = (props) => {
                         <Card.Body>
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                           <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                          <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.slug}`} className="read-more"><Button variant="primary">Read More</Button></Link>
+                          <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>
