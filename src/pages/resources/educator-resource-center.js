@@ -31,6 +31,7 @@ const EducatorResourceCenter = (props) => {
 
   return (
     <>
+      <h2>{props.location.pathname}</h2>
       <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
       <Layout location={props.location}>
         <section className="section">

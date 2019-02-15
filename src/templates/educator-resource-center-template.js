@@ -86,8 +86,8 @@ export default props => (
 )
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+  query($nodeId: String!) {
+    markdownRemark(id: {eq: $nodeId}) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
@@ -99,7 +99,6 @@ export const query = graphql`
         image,
         price,
         programLength,
-        slug,
         facilitator,
         template,
         title,

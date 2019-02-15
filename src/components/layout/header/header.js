@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import SpinDropdown from '../../atoms/spin-dropdown/spin-dropdown'
 import Tagline from './tagline/tagline'
 
 import './header.scss'
@@ -21,8 +22,6 @@ export default class Header extends Component {
     super(props, context)
 
     this.state = {
-      focus_element: undefined,
-      focus_counter: 0,
       pages: {
         page01: {
           title: `Our Work`,
@@ -122,33 +121,6 @@ export default class Header extends Component {
     }
   }
   
-  componentDidMount() {
-    this.setState({focus_element: document.activeElement})
-    const nav_link_list = document.getElementsByClassName('dropdown-toggle');
-    if(nav_link_list.length > 0) {
-      for(let i = 0; i < nav_link_list.length; i++) {
-        nav_link_list[i].addEventListener('click', e => {
-          e.preventDefault();
-          if(e.target === this.state.focus_element && this.state.focus_counter % 2 === 1) {
-            console.log(false)
-            e.target.blur()
-            let new_count = this.state.focus_counter + 1
-            this.setState({focus_element: e.target, focus_counter: new_count})
-          } else {
-            console.log(true)
-            e.target.focus()
-            if(e.target === this.state.focus_element) {
-              let new_count = this.state.focus_counter + 1
-              this.setState({focus_element: e.target, focus_counter: new_count})
-            } else {
-              this.setState({focus_element: e.target, focus_counter: 1})
-            }
-          }
-        })
-      }
-    }
-  }
-
   render() {
     return (
       <div>
@@ -187,89 +159,91 @@ export default class Header extends Component {
           <Row>
             <Col>
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
-              <Navbar
-                bg="transparent"
-                expand="lg"
-              >
-                <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav" style={{ border: 0, outline: 'none' }} />
-                <Navbar.Collapse id="basic-navbar-nav" className="navbarCollapse">
-                  <Nav className="m-auto">
-                    {
-                      Object.keys(this.state.pages).map((page, key) => {
-                        return (
-                          <div key={key}>
-                            {
-                              this.state.pages[page].children
-                              ?
-                              <NavDropdown
-                                title={this.state.pages[page].title}
-                                id="basic-nav-dropdown"
-                                className={
-                                  Object.keys(this.state.pages[page].children).map((child, index) => {
-                                    return(
-                                      this.state.pages[page].children[child].path === this.props.location.pathname
-                                      ?
-                                      "active"
-                                      :
-                                      null
-                                    )
-                                  })
-                                }
-                              >
-                                {
-                                  Object.keys(this.state.pages[page].children).map((child, index) => {
-                                    console.log(this.state.pages[page].children[child].iconClass)
-                                    return(
-                                      <AniLink
-                                        className="dropdown-item"
-                                        to={this.state.pages[page].children[child].path}
-                                        key={index}
-                                      >
-                                        {this.state.pages[page].children[child].title}
-                                        {
-                                          this.state.pages[page].children[child].iconClass
-                                          ?
-                                          <>
-                                            &nbsp; <i className={this.state.pages[page].children[child].iconClass}></i>
-                                          </>
-                                          :
-                                          null
-                                        }
-                                      </AniLink>
-                                    )
-                                  })
-                                }
-                              </NavDropdown>
-                              :
-                              <AniLink
-                                className={
-                                  this.state.pages[page].path === this.props.location.pathname
-                                  ?
-                                  "nav-link active"
-                                  :
-                                  "nav-link"
-                                }
-                                to={this.state.pages[page].path}
-                              >
-                                {this.state.pages[page].title}
-                                {
-                                  this.state.pages[page].iconClass
-                                  ?
-                                  <>
-                                    &nbsp; <i className={this.state.pages[page].iconClass}></i>
-                                  </>
-                                  :
-                                  null
-                                }
-                              </AniLink>
-                            }
-                          </div>
-                        )
-                      })
-                    }
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
+              <SpinDropdown>
+                <Navbar
+                  bg="transparent"
+                  expand="lg"
+                >
+                  <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav" style={{ border: 0, outline: 'none' }} />
+                  <Navbar.Collapse id="basic-navbar-nav" className="navbarCollapse">
+                    <Nav className="m-auto">
+                      {
+                        Object.keys(this.state.pages).map((page, key) => {
+                          return (
+                            <div key={key}>
+                              {
+                                this.state.pages[page].children
+                                ?
+                                <NavDropdown
+                                  title={this.state.pages[page].title}
+                                  id="basic-nav-dropdown"
+                                  className={
+                                    Object.keys(this.state.pages[page].children).map((child, index) => {
+                                      return(
+                                        this.props.location.pathname.includes(this.state.pages[page].children[child].path)
+                                        ?
+                                        "active"
+                                        :
+                                        null
+                                      )
+                                    })
+                                  }
+                                >
+                                  {
+                                    Object.keys(this.state.pages[page].children).map((child, index) => {
+                                      console.log(this.state.pages[page].children[child].iconClass)
+                                      return(
+                                        <AniLink
+                                          className="dropdown-item"
+                                          to={this.state.pages[page].children[child].path}
+                                          key={index}
+                                        >
+                                          {this.state.pages[page].children[child].title}
+                                          {
+                                            this.state.pages[page].children[child].iconClass
+                                            ?
+                                            <>
+                                              &nbsp; <i className={this.state.pages[page].children[child].iconClass}></i>
+                                            </>
+                                            :
+                                            null
+                                          }
+                                        </AniLink>
+                                      )
+                                    })
+                                  }
+                                </NavDropdown>
+                                :
+                                <AniLink
+                                  className={
+                                    this.props.location.pathname.includes(this.state.pages[page].path)
+                                    ?
+                                    "nav-link active"
+                                    :
+                                    "nav-link"
+                                  }
+                                  to={this.state.pages[page].path}
+                                >
+                                  {this.state.pages[page].title}
+                                  {
+                                    this.state.pages[page].iconClass
+                                    ?
+                                    <>
+                                      &nbsp; <i className={this.state.pages[page].iconClass}></i>
+                                    </>
+                                    :
+                                    null
+                                  }
+                                </AniLink>
+                              }
+                            </div>
+                          )
+                        })
+                      }
+                    </Nav>
+                  </Navbar.Collapse>
+                </Navbar>
+              </SpinDropdown>
             </Col>
           </Row>
         </Container>
