@@ -15,7 +15,7 @@ const LeadershipTemplate = class extends Component {
 
   render() {
     return (
-      <Layout>
+      <Layout location={this.props.location}>
         <p>PLACEHOLDER</p>
       </Layout>
     )
