@@ -10,6 +10,7 @@ alt: Canvas painting of two people walking on a path.
 courseId: 999
 gradeLevel: [ 'Middle' ]
 discipline: Earth Sciences
+facilitator: placeholder
 programLength: Full Year
 additionalTags: Testing
 page: educator-resource-center
