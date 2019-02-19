@@ -20,8 +20,26 @@ const FilterBy = class extends Component {
         let new_array = [id, search_values];
         this.search_items.push(new_array);
       }
-
       // document.addEventListener('click', this.handleClick);
+    }
+
+    if(this.props.filterHash !== "") {
+      console.log('hit')
+      console.log(this.props.filterHash)
+      let item = this.props.filterHash.charAt(1).toUpperCase() + this.props.filterHash.slice(2)
+      this.handleFilter(item)
+    }
+  }
+
+  componentDidUpdate = (prevProps) => {
+    if(this.props !== prevProps) {
+      if(this.props.filterHash !== "") {
+        console.log(this.props.filterHash)
+        let item = this.props.filterHash.charAt(1).toUpperCase() + this.props.filterHash.slice(2)
+        console.log(this.props.filterHash.slice(2))
+        console.log(item)
+        this.handleFilter(item)
+      }
     }
   }
 
