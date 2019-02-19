@@ -1,6 +1,11 @@
 .breadcrumb {
   background: transparent;
-  margin-bottom: 0;
-  padding-left: 0;
+  background-color: transparent !important;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.fluid {
+  padding-left: 1rem;
 }
 

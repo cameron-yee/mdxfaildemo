@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 // import Button from 'react-bootstrap/Button'
 import JoinEmailList from '../../atoms/join-email-list/join-email-list'
+import './footer.scss'
 
 // import nsfLogo from '../images/nsf_logo.svg'
 // import osuLogo from '../images/osu_logo.svg'

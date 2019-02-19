@@ -1,0 +1,78 @@
+@import './utilities/bootstrap-overrides.scss';
+
+// .btn{
+// 	// margin: 20px auto;
+// 	border: none;
+// 	padding: 10px 44px;
+// 	// font-size: 36px;
+// 	position: relative;
+// 	&::before{
+// 		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+// 		content: '';
+// 		width: 50%;
+// 		height: 100%;
+// 		// background: black;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 	}
+
+// 	& .btn-text{
+// 		color: $white;
+// 		// check out mdn docs for different types of blend modes. 
+// 		mix-blend-mode: difference;
+// 	}
+// 	&:hover{
+// 		&::before{
+// 			background: $primary;
+// 			width: 100%;
+// 		}
+// 	}
+// }
+
+/* --------------------------------------------------------------------------------------------------- */
+
+/* Sweep To Right */
+// .hvr-sweep-to-right {
+.btn-outline-primary {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+// .hvr-sweep-to-right:before {
+.btn-outline-primary:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $primary;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+// .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  color: white;
+}
+// .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+.btn-outline-primary:hover:before, .btn-outline-primary:focus:before, .btn-outline-primary:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}

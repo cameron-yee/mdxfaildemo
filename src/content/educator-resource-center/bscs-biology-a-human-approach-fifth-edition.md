@@ -2,7 +2,7 @@
 date: 2019-02-15T20:02:08.538Z
 title: 'BSCS Biology: A Human Approach, Fifth Edition'
 type: Classroom
-template: Image Right
+template: Jumbotron
 image: /assets/snow-leopard.jpg
 alt: PLACEHOLDER
 gradeLevel:

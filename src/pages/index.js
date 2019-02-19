@@ -21,11 +21,11 @@ import '../global-scss/index.scss'
 const IndexPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Home" />
-    <Jumbotron className="indexJumbotron">
-      <div className="indexJumbotron-inside">
-        <div className="indexJumbotronContent">
-          <h1 className="indexJumbotronHeading">BSCS MISSION:</h1>
-          <h1 className="indexJumbotronHeading">To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
+    <Jumbotron className="jumbotron jumbotron-index">
+      <div className="jumbotron-inside">
+        <div className="jumbotronContent">
+          <h1 className="jumbotronHeading">BSCS MISSION:</h1>
+          <h1 className="jumbotronHeading">To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
         </div>
       </div>
     </Jumbotron>

@@ -6,7 +6,12 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 const BSCSBreadcrumb = class extends Component {
   constructor(props) {
     super(props)
-    this.pathlist = this.props.pathname.split('/').slice(1) 
+    if(this.props.pathname[this.props.pathname.length - 1] === '/') {
+      this.pathlist = this.props.pathname.split('/').slice(1, -1) 
+    } else {
+      this.pathlist = this.props.pathname.split('/').slice(1) 
+    }
+    this.format = this.format.bind(this)
   }
 
   format = (string) => {
@@ -27,26 +32,26 @@ const BSCSBreadcrumb = class extends Component {
     let current_path = ''
     const null_paths = ['resources', 'upcoming-programs', 'connect']
     return (
-      <Breadcrumb>
-        <Link to='/' className="breadcrumb-item">Home</Link>
-        {this.pathlist.map((path,index) => {
-          if(this.pathlist[this.pathlist.length - 1] === path || null_paths.indexOf(path) > -1) {
-            current_path = `/${current_path}/${path}`
-            if(this.props.title && path === this.props.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()) {
-              return (
-                <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.props.title}</div>
-              )
+        <Breadcrumb className={this.props.className}>
+          <Link to='/' className="breadcrumb-item">Home</Link>
+          {this.pathlist.map((path,index) => {
+            if(this.pathlist[this.pathlist.length - 1] === path || null_paths.indexOf(path) > -1) {
+              current_path = `/${current_path}/${path}`
+              if(this.props.title && path === this.props.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()) {
+                return (
+                  <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.props.title}</div>
+                )
+              } else {
+                return (
+                  <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.format(path)}</div>
+                )
+              }
             } else {
-              return (
-                <div key={`breadcrumb-${index}`} className="breadcrumb-item active">{this.format(path)}</div>
-              )
+              current_path = `/${current_path}/${path}`
+              return(<Link key={`breadcrumb-${index}`} className="breadcrumb-item" to={`${current_path}`}>{this.format(path)}</Link>)
             }
-          } else {
-            current_path = `/${current_path}/${path}`
-            return(<Link key={`breadcrumb-${index}`} className="breadcrumb-item" to={`${current_path}`}>{this.format(path)}</Link>)
-          }
-        })}
-      </Breadcrumb>
+          })}
+        </Breadcrumb>
     )
   }
 }

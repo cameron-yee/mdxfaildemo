@@ -14,7 +14,7 @@ import './educator-resource-center-template.scss'
 import '../global-scss/index.scss';
 
 // export default ({ data, props }) => {
-const EducatorResourceCenterTemplate = class extends Component {
+const ResearchResourceCenterTemplate = class extends Component {
   constructor(props) {
     super(props)
     this.html = this.props.data.markdownRemark.html
@@ -114,7 +114,7 @@ const EducatorResourceCenterTemplate = class extends Component {
 
 export default props => (
   <Location>
-    {locationProps => <EducatorResourceCenterTemplate {...locationProps} {...props} />}
+    {locationProps => <ResearchResourceCenterTemplate {...locationProps} {...props} />}
   </Location>
 )
 

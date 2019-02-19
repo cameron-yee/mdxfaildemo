@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
+import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb'
 import Layout from '../../components/layout/layout'
 import SEO from '../../components/seo'
 
@@ -13,13 +14,14 @@ const TeacherProfessionalLearningPage = (props) => {
   return (
     <Layout location={props.location}>
       <SEO title="Teacher Professional Learning" />
-      <Jumbotron className="tplJumbotron">
-        <div className="tplJumbotron-inside">
-          <div className="tplJumbotronContent">
+      <BSCSBreadcrumb pathname={props.location.pathname} className="fluid" />
+      <Jumbotron className="jumbotron jumbotron-tpl">
+        <div className="jumbotron-inside">
+          <div className="jumbotronContent dark center">
           <Container>
             <Row>
               <Col>
-                <h1 className="tplJumbotronHeading">Teacher Professional Learning</h1>
+                <h1 className="jumbotronHeading">Teacher Professional Learning</h1>
               </Col>
             </Row>
           </Container>

@@ -52,7 +52,29 @@ const ResourceCategories = class extends Component {
         if(courses[i].getAttribute('data-type').toLowerCase() !== title) {
           courses[i].style.display = 'none';
           courses[i].parentElement.style.display = 'none';
+          // courses[i].style.width = '0px';
+          // courses[i].style.height = '0px';
+          // courses[i].style.border = 'none';
+          // courses[i].style.transition = 'all .3s';
+          // for(let x = 0; x < courses[i].children.length; x++) {
+          //   courses[i].children[x].style.display = 'none';
+          // }
+          // courses[i].parentElement.classList.remove('col-md-4')
+          // courses[i].parentElement.style.width = '0px';
+          // courses[i].parentElement.style.height = '0px';
+          // courses[i].parentElement.style.transition = 'all .3s';
         } else {
+          // courses[i].parentElement.classList.add('col-md-4')
+          // courses[i].style.width = '';
+          // courses[i].style.height = '';
+          // courses[i].style.border = '1px solid rgba(0,0,0,0.125)';
+          // courses[i].style.transition = 'all .3s';
+          // for(let x = 0; x < courses[i].children.length; x++) {
+          //   courses[i].children[x].style.display = '';
+          // }
+          // courses[i].parentElement.style.width = '';
+          // courses[i].parentElement.style.height = '';
+          // courses[i].parentElement.style.transition = 'all .3s';
           courses[i].style.display = '';
           courses[i].parentElement.style.display = '';
         }

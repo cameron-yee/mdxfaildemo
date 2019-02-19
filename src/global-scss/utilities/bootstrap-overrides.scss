@@ -77,6 +77,22 @@ ol {
   color: #7c8c8e;
 }
 
+.btn {
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+    transition: all .3s ease-in-out;
+  }
+}
+
+.btn.btn-outline-primary {
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    transition: all .3s ease-in-out;
+  }
+}
+
 // $blue:    #007bff !default;
 // $indigo:  #6610f2 !default;
 // $purple:  #6f42c1 !default;
