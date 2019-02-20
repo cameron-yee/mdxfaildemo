@@ -33,7 +33,6 @@ const FilterBy = class extends Component {
           item = item + this.props.filterHash[i]
         }
       }
-      console.log(item)
       this.handleFilter(item)
     }
   }
@@ -41,7 +40,6 @@ const FilterBy = class extends Component {
   componentDidUpdate = (prevProps) => {
     if(this.props !== prevProps) {
       if(this.props.filterHash !== "") {
-        console.log(this.props.filterHash)
         let item = this.props.filterHash.charAt(1).toUpperCase()
         for(let i = 2; i < this.props.filterHash.length; i++) {
           if(this.props.filterHash[i] === '-') {
@@ -51,7 +49,6 @@ const FilterBy = class extends Component {
             item = item + this.props.filterHash[i]
           }
         }
-        console.log(item)
         this.handleFilter(item)
       }
     }
