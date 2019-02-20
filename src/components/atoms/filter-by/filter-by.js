@@ -24,9 +24,16 @@ const FilterBy = class extends Component {
     }
 
     if(this.props.filterHash !== "") {
-      console.log('hit')
-      console.log(this.props.filterHash)
-      let item = this.props.filterHash.charAt(1).toUpperCase() + this.props.filterHash.slice(2)
+      let item = this.props.filterHash.charAt(1).toUpperCase()
+      for(let i = 2; i < this.props.filterHash.length; i++) {
+        if(this.props.filterHash[i] === '-') {
+          item = item + ' ' + this.props.filterHash[i + 1].toUpperCase()
+          i++
+        } else {
+          item = item + this.props.filterHash[i]
+        }
+      }
+      console.log(item)
       this.handleFilter(item)
     }
   }
@@ -35,8 +42,15 @@ const FilterBy = class extends Component {
     if(this.props !== prevProps) {
       if(this.props.filterHash !== "") {
         console.log(this.props.filterHash)
-        let item = this.props.filterHash.charAt(1).toUpperCase() + this.props.filterHash.slice(2)
-        console.log(this.props.filterHash.slice(2))
+        let item = this.props.filterHash.charAt(1).toUpperCase()
+        for(let i = 2; i < this.props.filterHash.length; i++) {
+          if(this.props.filterHash[i] === '-') {
+            item = item + ' ' + this.props.filterHash[i + 1].toUpperCase()
+            i++
+          } else {
+            item = item + this.props.filterHash[i]
+          }
+        }
         console.log(item)
         this.handleFilter(item)
       }
@@ -48,44 +62,24 @@ const FilterBy = class extends Component {
     e.preventDefault()
     const dropdownIsActive = this.state.dropdownIsActive
     const dropdown = document.getElementById('dropdown')
-    // const dropdownmenu = document.getElementById('dropdown-menu3')
-    // const dropdownarrow = document.getElementById('dropdown-arrow')
     if(dropdownIsActive) {
       this.setState({ dropdownIsActive: false })
       if(dropdown.classList.contains('is-active')) {
         dropdown.classList.remove('is-active')
       }
-      // dropdownarrow.style.transform = 'rotate(0deg)' 
-      // dropdownmenu.childNodes[0].style.maxHeight = '0px'
-      // dropdownmenu.childNodes[0].style.visibility = 'hidden'
-      // dropdownmenu.style.opacity = 0
-      // dropdownmenu.style.visibility = 'hidden'
     } else {
       this.setState({ dropdownIsActive: true });
       if(dropdown.classList.contains('is-active') === false) {
         dropdown.classList.add('is-active');
       }
-      // dropdownarrow.style.transform = 'rotate(270deg)' 
-      // dropdownmenu.childNodes[0].style.maxHeight = '500px'
-      // dropdownmenu.childNodes[0].style.visibility = 'visible'
-      // dropdownmenu.style.opacity = 1
-      // dropdownmenu.style.visibility = 'visible'
     }
   }
 
   handleBlur = (e) => {
     let dropdown = document.getElementById('dropdown')
-    // const dropdownmenu = document.getElementById('dropdown-menu3')
-    // const dropdownarrow = document.getElementById('dropdown-arrow')
     if(dropdown.classList.contains('is-active')) {
       dropdown.classList.remove('is-active');
     }
-    // dropdownmenu.childNodes[0].style.maxHeight = '0px'
-    // dropdownmenu.childNodes[0].style.visibility = 'hidden'
-    // dropdownmenu.style.maxHeight = '0px'
-    // dropdownmenu.style.opacity = 0
-    // dropdownmenu.style.visibility = 'hidden'
-    // dropdownarrow.style.transform = 'rotate(0deg)' 
     this.setState({ dropdownIsActive: false });
   }
 
