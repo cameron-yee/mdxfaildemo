@@ -28,15 +28,17 @@ export default class Header extends Component {
   render() {
     const navigation =
       (<StaticQuery query={graphql`
-        query navigationQuery {
+        query headerNavigationQuery {
           allNavigationJson {
             edges {
               node {
                 title
                 footerOnly
+                iconClass
                 # path
                 items {
                   itemTitle
+                  iconClass
                   path
                 }
               }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {graphql, StaticQuery } from 'gatsby'
 import AniLink from 'gatsby-plugin-transition-link'
 
 import Container from 'react-bootstrap/Container'
@@ -17,53 +18,55 @@ import './footer.scss'
 export default class Footer extends Component {
   constructor(props, context) {
     super(props, context)
-
-    this.state = {
-      families: {
-        parent01: { title: `About`,
-          children: {
-            child01: { title: `Our Story`, path: `/about/our-story/` },
-            // child02: { title: `Staff`, path: `/about/staff/` },
-            // child03: { title: `Board Members`, path: `/about/board-members/` },
-            child02: { title: `Leadership`, path: `/about/leadership/` },
-            child03: { title: `Financials`, path: `/about/financials/` },
-            child04: { title: `Brand Materials`, path: `/about/brand-materials/` }
-          }
-        },
-        parent02: { title: `Our Work`,
-          children: {
-            child01: { title: `What We Do`, path: `/our-work/what-we-do/` },
-            child02: { title: `Strategic Initiatives`, path: `/our-work/strategic-initiatives/` },
-            child03: { title: `R&D Programs`, path: `/our-work/rd-programs/` },
-            child04: { title: `News`, path: `/our-work/news/` }
-          }
-        },
-        parent03: { title: `Resources`,
-          children: {
-            child01: { title: `Educator Resource Center`, path: `/resources/educator-resource-center/` },
-            child02: { title: `Research Resource Center`, path: `/resources/research-resource-center/` }
-          }
-        },
-        parent04: { title: `Upcoming Programs`,
-          children: {
-            child01: { title: `Teacher Professional Learning`, path: `/upcoming-programs/teacher-professional-learning/` },
-            child02: { title: `Leadership Development`, path: `/upcoming-programs/leadership-development/` },
-            child03: { title: `Field-Test Opportunities`, path: `/upcoming-programs/field-test-opportunities/` }
-          }
-        },
-        parent05: { title: `Connect`,
-          children: {
-            child01: { title: `Contact Us`, path: `/connect/contact-us/` },
-            child02: { title: `Join E-mail List`, path: `/connect/join-email-list/` },
-            child03: { title: `Work with Us`, path: `/connect/work-with-us/` },
-            child04: { title: `Employment Opportunities`, path: `/connect/employment-opportunities/` }
-          }
-        }
-      }
-    }
   }
 
   render() {
+    const navigation =
+      (<StaticQuery query={graphql`
+        query footerNavigationQuery {
+          allNavigationJson {
+            edges {
+              node {
+                title
+                footerOnly
+                iconClass
+                # path
+                items {
+                  itemTitle
+                  iconClass
+                  path
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+          data.allNavigationJson.edges.map((edge, index) => {
+            return (
+              <Col key={`menu-${index}`}>
+                <h4>{edge.node.title}</h4>
+                <Nav className="flex-column">
+                  {
+                    edge.node.items.map((item, index) => {
+                      return (
+                        <AniLink
+                          to={item.path}
+                          key={`item-${index}`}
+                          className="nav-link"
+                        >
+                          {item.itemTitle}
+                        </AniLink>
+                      )
+                    })
+                  }
+                </Nav>
+              </Col>
+            )
+          })
+      )}
+      />)
+
     return (
       <footer className="bg-light" style={{ paddingTop: "3rem" }}>
         <Container fluid>
@@ -110,30 +113,7 @@ export default class Footer extends Component {
         </Container>
         <Container >
           <Row className="justify-content-center">
-            {
-              Object.keys(this.state.families).map((parent, index) => {
-                return (
-                  <Col key={index}>
-                    <h4>{this.state.families[parent].title}</h4>
-                    <Nav className="flex-column">
-                      {
-                        Object.keys(this.state.families[parent].children).map((child, key) => {
-                          return (
-                            <AniLink
-                              to={this.state.families[parent].children[child].path}
-                              key={key}
-                              className="nav-link"
-                            >
-                              {this.state.families[parent].children[child].title}
-                            </AniLink>
-                          )
-                        })
-                      }
-                    </Nav>
-                  </Col>
-                )
-              })
-            }
+            {navigation}
           </Row>
         </Container>
         <Container fluid>
