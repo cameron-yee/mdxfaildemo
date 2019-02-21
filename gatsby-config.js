@@ -13,11 +13,20 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    //Markdown
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    //JSON
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/content`,
+        path: `${__dirname}/src/data`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -72,6 +81,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
     `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-transition-link`,
   ],
