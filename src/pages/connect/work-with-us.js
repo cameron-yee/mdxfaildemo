@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 
 import Container from 'react-bootstrap/Container'
@@ -8,6 +9,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 
 import Layout from '../../components/layout/layout'
 import SEO from '../../components/seo'
+import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
 
 const WorkWithUsPage = (props) => {
   return (
@@ -33,7 +35,7 @@ const WorkWithUsPage = (props) => {
               BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. We create instructional materials, provide professional learning programs for teachers, spearhead leadership development programs for schools and districts, and conduct research on how to improve science teaching and learning.
             </p>
             <p>
-              What we do (hyperlink) falls within three BSCS divisions: Instructional Materials, Professional Learning, and Research.
+              <Link to="/what-we-do">What we do</Link> falls within three BSCS divisions: Instructional Materials, Professional Learning, and Research.
             </p>
             <p>
               See below to learn more about our capabilities. We invite you to connect with our division directors to explore opportunities to work together!
@@ -58,7 +60,7 @@ const WorkWithUsPage = (props) => {
                 </ul>
               </li>
             </ul>
-            <p>Please contact BSCS Instructional Materials Division Director, Dr. Lindsey Mohan (hyperlink to email), to discuss opportunities to work together.</p>
+            <p>Please contact BSCS Instructional Materials Division Director, <SpecificContactForm sendto="Lindsey Mohan">Dr. Lindsey Mohan</SpecificContactForm>, to discuss opportunities to work together.</p>
 
             <h2>Division of Professional Learning</h2>
             <h3>Our Capabilities</h3>
@@ -84,8 +86,8 @@ const WorkWithUsPage = (props) => {
                 </ul>
               </li>
             </ul>
-            <p>Interested in teacher professional learning or leadership development? Register now for upcoming programs (hyperlink) or check out our Educator Resource Center (hyperlink).</p>
-            <p>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, Jody Bintz (hyperlink to email), to discuss opportunities to work together.</p>
+            <p>Interested in <Link to="/upcoming-programs/teacher-professional-learning">teacher professional learning</Link> or <Link to="/upcoming-programs/leadership-development">leadership development</Link>? Register now for upcoming programs or check out our <Link to="/educator-resource-center">Educator Resource Center</Link>.</p>
+            <p>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, <SpecificContactForm sendto="Jody Bintz">Jody Bintz</SpecificContactForm>, to discuss opportunities to work together.</p>
 
             <h2>Division of Research</h2>
             <h3>Our Capabilities</h3>
@@ -120,7 +122,7 @@ const WorkWithUsPage = (props) => {
                 </ul>
               </li>
             </ul>
-            <p>Please contact BSCS Research Division Directors, Dr. Susan Kowalski and Dr. Chris Wilson (hyperlink to emails), to discuss opportunities to work together.</p>
+            <p>Please contact BSCS Research Division Directors, <SpecificContactForm sendto="Susan Kowalski">Dr. Susan Kowalski</SpecificContactForm> and <SpecificContactForm sendto="Chris Wilson">Dr. Chris Wilson</SpecificContactForm>, to discuss opportunities to work together.</p>
 
             <h2>Our Partners &amp; Collaborators</h2>
           </Col>

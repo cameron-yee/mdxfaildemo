@@ -17,7 +17,7 @@ import Row from 'react-bootstrap/Row'
 // import FilterBy from '../../components/atoms/filter-by/filter-by'
 // import ResourceCard from '../components/molecules/resource-card/resource-card'
 
-import './research-resource-center.scss';
+import './reports.scss';
 // import '../global-scss/bulma-divider.scss';
 import '../../global-scss/index.scss';
 // import '../global-scss/helpers.scss';
@@ -42,7 +42,8 @@ const ResearchResourceCenter = (props) => {
                 <Container>
                   <Row>
                     <Col>
-                      <h1 className="jumbotronHeading">Research Resource Center</h1>
+                      {/* <h1 className="jumbotronHeading">Research Resource Center</h1> */}
+                      <h1 className="jumbotronHeading">Reports</h1>
                     </Col>
                   </Row>
                 </Container>
@@ -87,7 +88,8 @@ const ResearchResourceCenter = (props) => {
                         <Card.Body>
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                           <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                          <Link to={`/resources/research-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link>
+                          {/* <Link to={`/resources/research-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link> */}
+                          <Link to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>

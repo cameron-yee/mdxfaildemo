@@ -61,8 +61,10 @@ export default class Header extends Component {
               iconClass: ``
             },
             child02: {
-              title: `Research Resource Center`,
-              path: `/resources/research-resource-center/`,
+              // title: `Research Resource Center`,
+              // path: `/resources/research-resource-center/`,
+              title: `Reports`,
+              path: `resources/reports`,
               iconClass: ``
             }
           }

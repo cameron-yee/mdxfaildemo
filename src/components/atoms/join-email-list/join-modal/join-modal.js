@@ -34,11 +34,11 @@ const JoinModal= class extends Component {
     this.token = process.env.CONSTANT_CONTACT_TOKEN //import from .env (define in Netlify dashboard) }
     this.api_key = process.env.CONSTANT_CONTACT_API_KEY
     this.checkIfContactExists = this.checkIfContactExists.bind(this)
-    this.setEmail = this.setEmail.bind(this);
-    this.setFirstName = this.setFirstName.bind(this);
-    this.setLastName = this.setLastName.bind(this);
-    this.showNotification = this.showNotification.bind(this);
-    this.hideNotification = this.hideNotification.bind(this);
+    this.setEmail = this.setEmail.bind(this)
+    this.setFirstName = this.setFirstName.bind(this)
+    this.setLastName = this.setLastName.bind(this)
+    this.showNotification = this.showNotification.bind(this)
+    this.hideNotification = this.hideNotification.bind(this)
   }
 
   componentWillUnmount() {
@@ -128,11 +128,7 @@ const JoinModal= class extends Component {
       if(contact_id !== 0) {
         this.addContactToEmailList(contact_id)
       } else {
-        // let submit_button = document.getElementById('submit-button')
-        // if(submit_button.classList.contains('is-loading')) {
-        //   submit_button.classList.remove('is-loading')
           this.setState({signed_up: true, loading: false});
-        // }
       }
     })
     .catch(error => {
@@ -246,7 +242,7 @@ const JoinModal= class extends Component {
             <Button variant="primary" type="submit">Sign up</Button>
           }
           { this.state.loading &&
-            <Button variant="secondary" type="submit" className="is-loading" />
+            <Button variant="secondary" className="is-loading" />
           }
         </Form>
       </Modal.Body>
