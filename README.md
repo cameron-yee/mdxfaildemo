@@ -2,4 +2,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e9dfb2f3-c464-4fd4-bcd7-daad3e9c7dce/deploy-status)](https://app.netlify.com/sites/bmw-bscs/deploys)
 
+<button><a href="https://bmw-bscs.netlify.com" target="_blank">Go to Site</a></button>
+
 This site is built using Gatsby JS and deployed to Netlify.  It uses Netlify CMS for content creation.
