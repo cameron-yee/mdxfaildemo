@@ -10,8 +10,8 @@ import Col from 'react-bootstrap/Col'
 
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
-import './educator-resource-center-template.scss'
 import '../global-scss/index.scss';
+import './educator-resource-center-template.scss'
 
 const EducatorResourceCenterTemplate = class extends Component {
   constructor(props) {
@@ -23,13 +23,13 @@ const EducatorResourceCenterTemplate = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title={this.resource.title} keywords={this.resource.seoKeywords} />
+        <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
         <Layout location={this.props.location}>
           <Container>
             <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
               {this.resource.template === 'Image Right' &&
                 <Row>
-                  <Col md={7} className="jumbotron-title">
+                  <Col md={7} className="erc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
@@ -38,7 +38,7 @@ const EducatorResourceCenterTemplate = class extends Component {
               {this.resource.template === 'Image Left' &&
                 <Row>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                  <Col md={7} className="jumbotron-title">
+                  <Col md={7} className="erc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>
                 </Row>
@@ -79,7 +79,9 @@ export const query = graphql`
         image,
         price,
         programLength,
-        seoKeywords,
+        seoCanonicalUrl,
+        seoDescription,
+        seoLang,
         template,
         title,
         type

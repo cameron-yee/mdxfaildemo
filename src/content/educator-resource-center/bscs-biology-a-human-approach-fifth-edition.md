@@ -10,7 +10,12 @@ gradeLevel:
 discipline: Life Sciences
 programLength: Full Year
 page: educator-resource-center
-seoKeywords: ['Test']
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/bscs-biology-a-human-approach-fifth-edition 
+seoDescription: Test SEO description.
+seoLang: en-us
+additionalTags: ''
+courseId: 0
+price: 0.0
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students. 
 

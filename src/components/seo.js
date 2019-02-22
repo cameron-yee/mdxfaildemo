@@ -27,13 +27,14 @@ import mstile310 from '../images/favicon/mstile-70x70.png'
 import 'animate.css'
 
 
-function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd }) {
+// function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd }) {
+const SEO = ({ description, lang, title, canonical, jsonLd }) => {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.site.siteMetadata.description
+        const language = lang || "en-us" //English US.  Do we want to specify U.S.? Or just English? 
 
         const jsonLdString =
           jsonLd
@@ -68,7 +69,7 @@ function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd
         return (
           <Helmet
             htmlAttributes={{
-              lang,
+              "lang": language
             }}
             title={title}
             // titleTemplate={`%s | ${data.site.siteMetadata.title}`}
@@ -227,15 +228,16 @@ function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd
                 name: `msapplication-square310x310logo`, content: mstile310
               },
             ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : []
-              )
-              .concat(meta)}
+              // .concat(
+              //   keywords.length > 0
+              //     ? {
+              //         name: `keywords`,
+              //         content: keywords.join(`, `),
+              //       }
+              //     : []
+              // )
+              // .concat(meta)}
+            }
           >
             {/* inline script elements */}
             <script type="application/ld+json">{`${jsonLdString}`}</script>
