@@ -45,8 +45,6 @@ const EducatorResourceCenter = class extends Component {
   }
 
   render() {
-    const courses = this.props.data.allMarkdownRemark.edges;
-    const filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"];
     return (
       <React.Fragment>
         <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
@@ -134,7 +132,6 @@ export const educatorResourceQuery = graphql`
             slug,
             price,
             programLength,
-            facilitator,
             title,
             type,
             page

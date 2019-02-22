@@ -2,7 +2,7 @@
 date: 2019-02-15T20:02:08.538Z
 title: 'BSCS Biology: A Human Approach, Fifth Edition'
 type: Classroom
-template: Jumbotron
+template: Image Right
 image: /assets/snow-leopard.jpg
 alt: PLACEHOLDER
 gradeLevel:
@@ -10,6 +10,7 @@ gradeLevel:
 discipline: Life Sciences
 programLength: Full Year
 page: educator-resource-center
+seoKeywords: ['Test']
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students. 
 
