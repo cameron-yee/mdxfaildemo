@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -30,10 +30,6 @@ const IndexPage = (props) => (
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col>
-          <Link fade to="page2">Test</Link><br /><br />
-          <Link to="page2" exit={{ length: 0.5 }}>
-            Go to page 2
-          </Link>
         </Col>
       </Row>
     </Container>

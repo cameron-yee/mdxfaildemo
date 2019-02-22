@@ -1,6 +1,48 @@
-// @import '../../../global-scss/utilities/bootstrap-overrides.scss';
+@import '../../../global-scss/utilities/variables.scss';
 
 .nav-link {
   color: rgba(0,0,0,.75);
   // color: $secondary;
+}
+
+.facebook-social-icon {
+  color: $facebook-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($facebook-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.twitter-social-icon {
+  color: $twitter-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($twitter-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.linkedin-social-icon {
+  color: $linkedin-color;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: darken($linkedin-color, 10%);
+    transition: .2s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }

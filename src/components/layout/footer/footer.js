@@ -71,7 +71,6 @@ export default class Footer extends Component {
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
-              {/* <Button variant="primary">Join Email List</Button> */}
               <JoinEmailList />
             </div>
             <div className="p-2 align-self-center">
@@ -80,7 +79,7 @@ export default class Footer extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-facebook-square" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-facebook-square facebook-social-icon" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
             <div className="p-2 align-self-center">
@@ -89,7 +88,7 @@ export default class Footer extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-twitter-square" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-twitter-square twitter-social-icon" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
             <div className="p-2 align-self-center">
@@ -98,7 +97,7 @@ export default class Footer extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin" style={{ fontSize: '2.6rem' }}></i>
+                <i className="fab fa-linkedin linkedin-social-icon" style={{ fontSize: '2.6rem' }}></i>
               </a>
             </div>
           </div>
