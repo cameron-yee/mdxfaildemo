@@ -5,27 +5,21 @@ import { Location } from '@reach/router'
 
 import Layout from '../../components/layout/layout'
 
-import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
-import PageTitle from '../../components/atoms/page-title'
+import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
 import FilterBy from '../../components/atoms/filter-by/filter-by'
-// import ResourceCard from '../components/molecules/resource-card/resource-card'
 import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import './educator-resource-center.scss';
-// import '../global-scss/bulma-divider.scss';
 import '../../global-scss/index.scss';
-// import '../global-scss/helpers.scss';
 
 
-// const EducatorResourceCenter = (props, {data: { allMarkdownRemark: { edges },},}) => {
-// const EducatorResourceCenter = (props) => {
 const EducatorResourceCenter = class extends Component {
   constructor(props) {
     super(props)
@@ -37,9 +31,7 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.location)
     if(this.props.location.hash) {
-      console.log(this.props.location.hash)
       this.setState({filter_hash: this.props.location.hash})
     }
   }
@@ -50,19 +42,12 @@ const EducatorResourceCenter = class extends Component {
         <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
         <Layout location={this.props.location}>
           <section className="section">
-            {/* <Container fluid="true" className="gradient"> */}
             <Container>
-              <BSCSBreadcrumb pathname={this.props.location.pathname} />
+              <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
-                <Col>
-                  <PageTitle title="Educator Resource Center"></PageTitle>
-                    <hr />
-                    <Row>
-                      <ResourceCategories navigate={false} />
-                    </Row>
-                    <hr />
-                </Col>
+                <ResourceCategories navigate={false} />
               </Row>
+              <hr />
             </Container>
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>

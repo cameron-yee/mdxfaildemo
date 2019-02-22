@@ -1,70 +1,29 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import SEO from '../../components/seo'
 import { Location } from '@reach/router'
+import SEO from '../../components/seo'
 
-import Layout from '../../components/layout/layout'
-
-import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import Layout from '../../components/layout/layout'
 import Row from 'react-bootstrap/Row'
 
-// import SearchBy from '../../components/atoms/search-by/search-by'
-// import FilterBy from '../../components/atoms/filter-by/filter-by'
-// import ResourceCard from '../components/molecules/resource-card/resource-card'
-
-import './reports.scss';
-// import '../global-scss/bulma-divider.scss';
 import '../../global-scss/index.scss';
-// import '../global-scss/helpers.scss';
+import './reports.scss';
+import PageTitle from '../../components/layout/page-title/page-title';
 
-
-// const EducatorResourceCenter = (props, {data: { allMarkdownRemark: { edges },},}) => {
 const ResearchResourceCenter = (props) => {
   const courses = props.data.allMarkdownRemark.edges;
-  // const filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"];
 
   return (
     <>
-      <SEO title="Research Resource Center" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Reports" keywords={[`gatsby`, `application`, `react`]} />
       <Layout location={props.location}>
-        {/* <section className="section">
-          {/* <Container fluid="true" className="gradient"> */}
-          {/* <Container> */}
-            <BSCSBreadcrumb className="fluid" pathname={props.location.pathname} />
-            <Jumbotron className="jumbotron jumbotron-rrc">
-              <div className="jumbotron-inside">
-                <div className="jumbotronContent dark center">
-                <Container>
-                  <Row>
-                    <Col>
-                      {/* <h1 className="jumbotronHeading">Research Resource Center</h1> */}
-                      <h1 className="jumbotronHeading">Reports</h1>
-                    </Col>
-                  </Row>
-                </Container>
-                </div>
-              </div>
-            </Jumbotron>
-          {/* </Container>
-        </section> */}
         <section className="section" style={{ padding: '.75rem 1.5rem' }}>
-          {/* <Container>
-            <Row>
-              <Col md={4}>
-                <SearchBy />
-              </Col>
-              <Col md={{span: 3, offset: 5}}>
-                <FilterBy items={filter_items}/>
-              </Col>
-            </Row>
-            <hr />
-          </Container> */}
           <Container>
+            <PageTitle title="Reports" />
             <Row style={{ marginBottom: '2rem' }}>
               <Col>
                 <p>Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art. Tofu semiotics normcore, polaroid DIY banh mi ugh keytar microdosing plaid roof party disrupt food truck hoodie. Edison bulb hella stumptown, taxidermy sustainable kitsch direct trade. Biodiesel beard art party, irony pabst lo-fi pitchfork plaid adaptogen yuccie tumblr live-edge. Taxidermy chambray cronut, narwhal brunch occupy austin glossier gluten-free prism iPhone ennui. Vegan keffiyeh tilde wolf.</p>

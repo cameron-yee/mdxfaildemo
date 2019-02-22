@@ -1,34 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Location } from '@reach/router'
+import SEO from '../../components/seo'
 
+import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 
 import Layout from '../../components/layout/layout'
-import SEO from '../../components/seo'
+import PageTitle from '../../components/layout/page-title/page-title'
 import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
 
 const WorkWithUsPage = (props) => {
   return (
     <Layout location={props.location}>
-      <SEO title="Home" />
-      <Jumbotron className="tplJumbotron">
-        <div className="tplJumbotron-inside">
-          <div className="tplJumbotronContent">
-          <Container>
-            <Row>
-              <Col>
-                <h1 className="tplJumbotronHeading">Work with Us</h1>
-              </Col>
-            </Row>
-          </Container>
-          </div>
-        </div>
-      </Jumbotron>
+      <SEO title="Work With Us" />
       <Container>
+        <PageTitle title="Work With Us" />
         <Row style={{ marginBottom: '2rem' }}>
           <Col>
             <p>

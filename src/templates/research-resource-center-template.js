@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import PageTitle from '../components/atoms/page-title';
+import PageTitle from '../components/atoms/page-title/page-title';
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
 import './research-resource-center-template.scss'

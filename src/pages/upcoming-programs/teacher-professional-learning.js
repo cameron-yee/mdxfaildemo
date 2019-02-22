@@ -1,34 +1,20 @@
 import React from 'react'
 import { Location } from '@reach/router'
 
+import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 
-import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb'
 import Layout from '../../components/layout/layout'
+import PageTitle from '../../components/layout/page-title/page-title'
 import SEO from '../../components/seo'
 
 const TeacherProfessionalLearningPage = (props) => {
   return (
     <Layout location={props.location}>
       <SEO title="Teacher Professional Learning" />
-      <BSCSBreadcrumb pathname={props.location.pathname} className="fluid" />
-      <Jumbotron className="jumbotron jumbotron-tpl">
-        <div className="jumbotron-inside">
-          <div className="jumbotronContent dark center">
-          <Container>
-            <Row>
-              <Col>
-                <h1 className="jumbotronHeading">Teacher Professional Learning</h1>
-              </Col>
-            </Row>
-          </Container>
-          </div>
-        </div>
-      </Jumbotron>
       <Container>
+        <PageTitle title="Teacher Professional Learning" />
         <Row style={{ marginBottom: '2rem' }}>
           <Col>
             <p>
