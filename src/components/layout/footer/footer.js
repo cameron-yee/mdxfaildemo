@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import {graphql, StaticQuery } from 'gatsby'
-import AniLink from 'gatsby-plugin-transition-link'
+import {graphql, StaticQuery, Link } from 'gatsby'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -46,13 +45,13 @@ export default class Footer extends Component {
                   {
                     edge.node.items.map((item, index) => {
                       return (
-                        <AniLink
+                        <Link
                           to={item.path}
                           key={`item-${index}`}
                           className="nav-link"
                         >
                           {item.itemTitle}
-                        </AniLink>
+                        </Link>
                       )
                     })
                   }
