@@ -8,7 +8,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import PageTitle from '../components/atoms/page-title/page-title';
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
 import './research-resource-center-template.scss'
@@ -33,7 +32,7 @@ const ResearchResourceCenterTemplate = class extends Component {
               {this.resource.template === 'Image Right' &&
                 <Row>
                   <Col md={7} className="jumbotron-title">
-                    <PageTitle title={this.resource.title} />
+                    <h1>{this.resource.title}</h1>
                   </Col>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
                 </Row>
@@ -42,7 +41,7 @@ const ResearchResourceCenterTemplate = class extends Component {
                 <Row>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
                   <Col md={7} className="jumbotron-title">
-                    <PageTitle title={this.resource.title} />
+                    <h1>{this.resource.title}</h1>
                   </Col>
                 </Row>
               }
