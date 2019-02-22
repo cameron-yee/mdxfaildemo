@@ -10,7 +10,7 @@ public_folder: assets
 
 publish_mode: editorial_workflow
 display_url: https://bmw-bscs.netlify.com
-logo_url: https://bmw-bscs.netlify.com/static/bscs_logo.svg
+logo_url: https://bmw-bscs.netlify.com/static/bscs_logo-4764abf3ed875294200baf166ee88a47.svg #Found in browser sources
 
 collections:
     - name: educator-resource-center
@@ -30,10 +30,10 @@ collections:
           - { name: alt, label: Image Alt Text, widget: string }
           - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, default: 0.0, required: false }
           - { name: courseId, label: Course ID, widget: number, valueType: int, min: 0, max: 10000, default: 0, required: false }
-          - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, default: '', options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
-          - { name: discipline, label: Discipline, widget: select, default: '', options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
-          - { name: programLength, label: Program Length, widget: select, default: '', options: ['Full Year', 'Modules'], required: false }
-          - { name: additionalTags, label: Additional Tags, widget: list, default: '', required: false }
+          - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
+          - { name: discipline, label: Discipline, widget: select, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
+          - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
+          - { name: additionalTags, label: Additional Tags, widget: list, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: educator-resource-center }
 
@@ -51,7 +51,7 @@ collections:
           - { name: template, label: template, widget: select, default: 'Image Left', options: ['Image Left', 'Image Right'] }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
-          - { name: additionalTags, label: Additional Tags, widget: string, default: '', required: false }
+          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: research-resource-center }
 
