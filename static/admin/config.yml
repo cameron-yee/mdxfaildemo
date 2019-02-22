@@ -47,7 +47,6 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
-          - { name: seoMetaTags, label: SEO Meta Tags, widget: list }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
           - { name: template, label: template, widget: select, default: 'Image Left', options: ['Image Left', 'Image Right'] }
           - { name: image, label: Image, widget: image }

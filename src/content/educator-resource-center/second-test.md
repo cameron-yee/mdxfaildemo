@@ -1,20 +1,21 @@
 ---
-date: 2018-12-18T23:03:06.180Z
-title: Second Test
-type: Professional Learning
+date: 2019-02-15T20:02:08.538Z
+title: 'Second Test'
+type: Classroom
 template: Image Left
-price: 12
-image: /assets/canvas.jpg
-alt: Canvas painting of two people walking on a path.
-courseId: 999
-gradeLevel: [ 'Middle' ]
-discipline: Earth Sciences
+image: /assets/mountain.jpg
+alt: PLACEHOLDER
+gradeLevel:
+  - Middle
+discipline: Life Sciences
 programLength: Full Year
-additionalTags: Testing
 page: educator-resource-center
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/second-test
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/bscs-biology-a-human-approach-fifth-edition 
 seoDescription: Test SEO description.
 seoLang: en-us
+additionalTags: ''
+courseId: 0
+price: 0.0
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed porttitor arcu. Pellentesque dapibus, leo non ullamcorper auctor, urna mauris fermentum est, sed consectetur odio nibh non est. Morbi vel lectus dolor. Maecenas iaculis vehicula eros, eget pharetra augue aliquam vitae. Nullam mollis neque ligula, vel aliquet neque euismod ac. Donec tempus volutpat lacus vitae laoreet. Phasellus vel nibh ut libero lobortis accumsan. Vivamus convallis mattis mi at mollis. Cras vitae nulla scelerisque, mollis purus sit amet, convallis mi. Sed eget ultricies diam. Integer eu mi id mauris tristique lobortis id vitae lacus. Cras elit metus, viverra id turpis nec, consequat vestibulum quam.
