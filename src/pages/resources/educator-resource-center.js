@@ -23,7 +23,7 @@ import '../../global-scss/index.scss';
 const EducatorResourceCenter = class extends Component {
   constructor(props) {
     super(props)
-    this.courses = props.data.allMarkdownRemark.edges
+    this.resources = props.data.allMarkdownRemark.edges
     this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
     this.state = {
       filter_hash: ""
@@ -67,7 +67,7 @@ const EducatorResourceCenter = class extends Component {
             <Container>
               <Row>
                 {
-                  this.courses.map((edge, index) => {
+                  this.resources.map((edge, index) => {
                     return(
                       <Col md={4} key={edge.node.id} className="card-col">
                         <Card id={`resource-${index}`} className="card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
