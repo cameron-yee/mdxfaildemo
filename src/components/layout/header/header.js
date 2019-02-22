@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import AniLink from 'gatsby-plugin-transition-link'
+import { graphql, StaticQuery, Link } from 'gatsby'
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
@@ -21,9 +20,9 @@ import '../../../global-scss/index.scss'
 
 
 export default class Header extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
+  // constructor(props, context) {
+  //   super(props, context)
+  // }
 
   render() {
     const navigation =
@@ -66,20 +65,20 @@ export default class Header extends Component {
                   {
                     edge.node.items.map((item, index) => {
                       return(
-                        <AniLink className="dropdown-item" to={item.path} key={`item-${index}`} >
+                        <Link className="dropdown-item" to={item.path} key={`item-${index}`} >
                           {item.itemTitle}
                           { item.iconClass
                             ? <React.Fragment>&nbsp; <i className={item.iconClass}></i></React.Fragment>
                             : null
                           }
-                        </AniLink>
+                        </Link>
                       )
                     })
                   }
                 </NavDropdown>
               }
               { !("items" in edge.node) && !edge.node.footerOnly &&
-                <AniLink
+                <Link
                   className={this.props.location.pathname.includes(edge.node.path) ? "nav-link active" : "nav-link"} 
                   to={edge.node.path}
                 >
@@ -87,7 +86,7 @@ export default class Header extends Component {
                   {
                     edge.node.iconClass ? <React.Fragment>&nbsp; <i className={edge.node.iconClass}></i></React.Fragment> : null
                   }
-                </AniLink>
+                </Link>
               }
             </div>
           )
@@ -100,7 +99,7 @@ export default class Header extends Component {
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
-              <AniLink to="/">
+              <Link to="/">
                 <img
                   className="bscsLogo"
                   src={bscsLogo}
@@ -109,7 +108,7 @@ export default class Header extends Component {
                     width: "300px"
                   }}
                 />
-              </AniLink>
+              </Link>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
