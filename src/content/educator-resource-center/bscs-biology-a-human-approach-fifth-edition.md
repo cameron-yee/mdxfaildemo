@@ -13,7 +13,6 @@ page: educator-resource-center
 seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/bscs-biology-a-human-approach-fifth-edition 
 seoDescription: Test SEO description.
 seoLang: en-us
-additionalTags: ''
 courseId: 0
 price: 0.0
 ---
