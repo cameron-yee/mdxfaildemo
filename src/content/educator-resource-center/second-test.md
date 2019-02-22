@@ -12,7 +12,9 @@ discipline: Earth Sciences
 programLength: Full Year
 additionalTags: Testing
 page: educator-resource-center
-seoKeywords: ['Test']
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/second-test
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed porttitor arcu. Pellentesque dapibus, leo non ullamcorper auctor, urna mauris fermentum est, sed consectetur odio nibh non est. Morbi vel lectus dolor. Maecenas iaculis vehicula eros, eget pharetra augue aliquam vitae. Nullam mollis neque ligula, vel aliquet neque euismod ac. Donec tempus volutpat lacus vitae laoreet. Phasellus vel nibh ut libero lobortis accumsan. Vivamus convallis mattis mi at mollis. Cras vitae nulla scelerisque, mollis purus sit amet, convallis mi. Sed eget ultricies diam. Integer eu mi id mauris tristique lobortis id vitae lacus. Cras elit metus, viverra id turpis nec, consequat vestibulum quam.

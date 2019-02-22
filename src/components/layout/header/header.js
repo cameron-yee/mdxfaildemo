@@ -21,10 +21,6 @@ import '../../../global-scss/index.scss'
 
 
 export default class Header extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   render() {
     const navigation =
       (<StaticQuery query={graphql`

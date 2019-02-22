@@ -16,10 +16,6 @@ import './footer.scss'
 
 
 export default class Footer extends Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   render() {
     const navigation =
       (<StaticQuery query={graphql`
