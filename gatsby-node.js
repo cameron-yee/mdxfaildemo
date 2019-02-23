@@ -144,7 +144,7 @@ exports.createPages = ({ graphql, actions }) => {
           const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()
           const nodeId = node.id
           createPage({
-            path: `/our-work//${slug}/`,
+            path: `/our-work/${slug}/`,
             component: markdownTemplate,
             // In your blog post template's graphql query, you can use path
             // as a GraphQL variable to query for data from the markdown file.

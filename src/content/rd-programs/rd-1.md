@@ -1,7 +1,7 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: 'RD-1'
-area:
+areas:
   - Area 1, Area 2
 image: /assets/scifi.jpg
 alt: PLACEHOLDER
