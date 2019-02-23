@@ -129,7 +129,7 @@
       {
         "itemTitle": "Join E-mail List",
         "iconClass": "",
-        "path": "",
+        "path": "/join/",
         "onClick": "this.launch"
       },
       {

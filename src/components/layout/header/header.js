@@ -69,14 +69,13 @@ export default class Header extends Component {
                   className={
                     edge.node.items.map((item, index) => {
                       return(
-                        this.props.location.pathname.includes(item.path) ? "active" : null
+                        this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "active" : null
                       )
                     })
                   }
                 >
                   {
                     edge.node.items.map((item, index) => {
-                      console.log(item)
                       return(
                         <React.Fragment key={`item-${index}`}>   
                           {

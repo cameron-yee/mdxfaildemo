@@ -68,7 +68,7 @@ const RDPrograms = class extends Component {
                 {
                   this.programs.map((edge, index) => {
                     return(
-                      <React.Fragment>
+                      <React.Fragment key={edge.node.id}>
                         <hr style={{borderColor: '#3087b4'}} />
                         <Row className="feed-item">
                           <Col xs={3}>
@@ -77,13 +77,13 @@ const RDPrograms = class extends Component {
                               <img className="image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
                             </div>
                           </Col>
-                          <Col xs={9} key={edge.node.id}>
+                          <Col xs={9}>
                               <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
                                 <h3>{edge.node.frontmatter.title}</h3>
                                 <p>{edge.node.excerpt}</p>
                                 { edge.node.frontmatter.areas.map((area, index) => {
                                     return(
-                                      <React.Fragment>
+                                      <React.Fragment key={index}>
                                         {
                                           (area === "Area 1")
                                           ?

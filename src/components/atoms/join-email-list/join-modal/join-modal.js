@@ -44,7 +44,7 @@ const JoinModal= class extends Component {
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
-      this.getContactId.cancel()
+      // this.getContactId.cancel()
     } catch(error) {
       console.log(error);
     }
