@@ -6,7 +6,7 @@ import { Location } from '@reach/router'
 import Layout from '../../components/layout/layout'
 
 import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
+// import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
@@ -82,15 +82,66 @@ const RDPrograms = class extends Component {
                                 <h3>{edge.node.frontmatter.title}</h3>
                                 <p>{edge.node.excerpt}</p>
                                 { edge.node.frontmatter.areas.map((area, index) => {
-                                    return(<Button className="pill" size="sm" variant="primary">{area}</Button>)
+                                    return(
+                                      <React.Fragment>
+                                        {
+                                          (area === "Area 1")
+                                          ?
+                                          <span
+                                            className="badge badge-pill badge-primary"
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontWeight: '400'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                          :
+                                          (area === "Area 2")
+                                          ?
+                                          <span
+                                            className="badge badge-pill badge-info"
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontWeight: '400'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                          :
+                                          (area === "Area 3")
+                                          ?
+                                          <span
+                                            className="badge badge-pill badge-success"
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontWeight: '400'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                          :
+                                          <span
+                                            className="badge badge-pill badge-danger"
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontWeight: '400'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                        }
+                                      </React.Fragment>
+                                    )
                                   })
                                 }
                                 <div className="button-wrapper">
-                                  {/* <Button className="pill" size="sm" variant="danger">Area1</Button>
-                                  <Button className="pill" size="sm" variant="primary">Area2</Button>
-                                  <Button className="pill" size="sm" variant="dark">Area3</Button>
-                                  <Button className="pill" size="sm" variant="success">Area4</Button> */}
-                                  <Link to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="rd-read-more"><Button variant="secondary">Read More</Button></Link>
+                                  <Link
+                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} 
+                                    className="rd-read-more"
+                                  >
+                                    <Button variant="secondary">Read More</Button>
+                                  </Link>
                                 </div>
                               </div>
                           </Col>
@@ -137,4 +188,3 @@ export const rdProgramsQuery = graphql`
     }
   }
 `
-

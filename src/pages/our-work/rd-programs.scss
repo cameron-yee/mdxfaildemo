@@ -143,7 +143,7 @@
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: all 0.3s ease-in-out;
   }
 }
@@ -154,10 +154,10 @@
   width: 90%;
 }
 
-.pill {
-  border-radius: 50%;
-  margin-right: .5rem; 
-}
+// .pill {
+//   border-radius: 50%;
+//   margin-right: .5rem; 
+// }
 
 .rd-read-more {
   float: right;
