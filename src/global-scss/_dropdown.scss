@@ -48,10 +48,11 @@
   // overflow: hidden;
 
   > .dropdown-menu {
-    display: block !important;
+    // The below line causes problems on the mobile menu. So it has been commented out. We should find a different approach.
+    // display: block !important;
     opacity: 0;
     // max-height: 0;
-    visibility: hidden;
+    // visibility: hidden;
 
     transition: all 0.3s ease-in-out;
 
@@ -60,7 +61,7 @@
       transition: all 0.3s ease-in-out;
       // max-height: 500px;
       opacity: 1;
-      visibility: visible;
+      // visibility: visible;
     }
   }
 }

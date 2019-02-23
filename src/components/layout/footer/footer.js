@@ -130,7 +130,7 @@ export default class Footer extends Component {
         <Container fluid>
           <Row>
             <Col>
-              <hr style={{ margin: '3.5rem 0 2.5rem' }} />
+              <hr style={{ margin: '2rem 0 2.5rem' }} />
             </Col>
           </Row>
         </Container>
