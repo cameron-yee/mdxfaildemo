@@ -30,7 +30,7 @@ const BSCSBreadcrumb = class extends Component {
 
   render() {
     let current_path = ''
-    const null_paths = ['resources', 'upcoming-programs', 'connect']
+    const null_paths = ['resources', 'upcoming-programs', 'connect', 'our-work', 'about']
     return (
         <Breadcrumb className={this.props.className}>
           <Link to='/' className="breadcrumb-item">Home</Link>
