@@ -36,30 +36,43 @@ export default class Footer extends Component {
           }
         }
       `}
-      render={data => (
-          data.allNavigationJson.edges.map((edge, index) => {
-            return (
-              <Col key={`menu-${index}`}>
-                <h4>{edge.node.title}</h4>
-                <Nav className="flex-column">
-                  {
-                    edge.node.items.map((item, index) => {
-                      return (
-                        <Link
-                          to={item.path}
-                          key={`item-${index}`}
-                          className="nav-link"
-                        >
-                          {item.itemTitle}
-                        </Link>
-                      )
-                    })
-                  }
-                </Nav>
-              </Col>
-            )
-          })
-      )}
+      render={data => {
+        return (
+          <Container>
+            <Row className="justify-content-center">
+              { data.allNavigationJson.edges.map((edge, index) => {
+                return (
+                  <Col
+                    xs={12}
+                    className="col-lg text-center text-lg-left"
+                    key={`menu-${index}`}
+                    style={{
+                      marginBottom: '2rem'
+                    }}
+                  >
+                    <h4>{edge.node.title}</h4>
+                    <Nav className="flex-column">
+                      {
+                        edge.node.items.map((item, index) => {
+                          return (
+                            <Link
+                              to={item.path}
+                              key={`item-${index}`}
+                              className="nav-link"
+                            >
+                              {item.itemTitle}
+                            </Link>
+                          )
+                        })
+                      }
+                    </Nav>
+                  </Col>
+                )
+              })}
+            </Row>
+          </Container>
+        )
+      }}
       />)
 
     return (
@@ -113,7 +126,7 @@ export default class Footer extends Component {
         <Container fluid>
           <Row>
             <Col>
-              <hr style={{ margin: '3.5rem 0 2.5rem' }} />
+              <hr style={{ margin: '2rem 0 2.5rem' }} />
             </Col>
           </Row>
         </Container>

@@ -44,12 +44,11 @@ export default class Header extends Component {
       render={data => (
         data.allNavigationJson.edges.map((edge, index) => {
           return (
-            <div key={`menu-${index}`}>
+            <React.Fragment key={`menu-${index}`}>
               { "items" in edge.node && !edge.node.footerOnly &&
-                
+
                 <NavDropdown
                   title={edge.node.title}
-                  id="basic-nav-dropdown"
                   className={
                     edge.node.items.map((item, index) => {
                       return(
@@ -84,14 +83,14 @@ export default class Header extends Component {
                   }
                 </Link>
               }
-            </div>
+            </React.Fragment>
           )
         })
       )}
     />)
 
     return (
-      <div>
+      <React.Fragment>
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
@@ -123,7 +122,27 @@ export default class Header extends Component {
             </Col>
           </Row>
         </Container>
-        <Container fluid>
+        <Container className="d-none d-lg-block" fluid>
+          <Row>
+            <Col>
+              <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
+              <SpinDropdown>
+                <Navbar
+                  bg="transparent"
+                  expand="lg"
+                >
+                  <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav" style={{ border: 0, outline: 'none' }} />
+                  <Navbar.Collapse id="basic-navbar-nav" className="navbarCollapse">
+                    <Nav className="m-auto">
+                      {navigation}
+                    </Nav>
+                  </Navbar.Collapse>
+                </Navbar>
+              </SpinDropdown>
+            </Col>
+          </Row>
+        </Container>
+        <Container className="d-lg-none" fluid>
           <Row>
             <Col>
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
@@ -146,7 +165,7 @@ export default class Header extends Component {
         <Container fluid>
           <hr className="" style={{ margin: '0' }} />
         </Container>
-      </div>
+      </React.Fragment>
     )
   }
 }
