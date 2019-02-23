@@ -140,7 +140,7 @@ const RDPrograms = class extends Component {
                                     to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} 
                                     className="rd-read-more"
                                   >
-                                    <Button variant="secondary">Read More</Button>
+                                    <Button variant="primary">Read More</Button>
                                   </Link>
                                 </div>
                               </div>
