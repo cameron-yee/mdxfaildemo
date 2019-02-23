@@ -1,8 +1,19 @@
 @import '../../../global-scss/utilities/variables.scss';
 
 .nav-link {
-  color: rgba(0,0,0,.75);
+  // color: rgba(0,0,0,.75);
   // color: $secondary;
+
+  color: rgba(0, 0, 0, .5);
+
+  &:hover {
+    color: rgba(0, 0, 0, .7);
+  }
+
+}
+
+a.nav-link.active {
+  color: rgba(0, 0, 0, .9);
 }
 
 .facebook-social-icon {

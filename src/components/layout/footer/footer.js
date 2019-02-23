@@ -79,7 +79,9 @@ export default class Footer extends Component {
                                 ?
                                 <Link
                                   to={item.path}
-                                  className="nav-link"
+                                  className={
+                                    this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "nav-link active" : "nav-link"
+                                  }
                                 >
                                   {item.itemTitle}
                                 </Link>
