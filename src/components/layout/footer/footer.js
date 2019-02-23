@@ -6,7 +6,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 // import Button from 'react-bootstrap/Button'
+import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
 import JoinEmailList from '../../atoms/join-email-list/join-email-list'
+
 import './footer.scss'
 
 // import nsfLogo from '../images/nsf_logo.svg'
@@ -15,6 +17,20 @@ import './footer.scss'
 
 
 export default class Footer extends Component {
+    constructor(props) {
+    super(props)
+
+    this.state = {
+      modalShow: false,
+    }
+
+    this.launch = this.launch.bind(this)
+    this.close = this.close.bind(this)
+  }
+
+  launch = () => { this.setState({modalShow: true}) }
+  close = () => { this.setState({modalShow: false}) }
+
   render() {
     const navigation =
       (<StaticQuery query={graphql`
@@ -26,10 +42,12 @@ export default class Footer extends Component {
                 footerOnly
                 iconClass
                 # path
+                # onClick
                 items {
                   itemTitle
                   iconClass
                   path
+                  onClick
                 }
               }
             }
@@ -55,13 +73,28 @@ export default class Footer extends Component {
                       {
                         edge.node.items.map((item, index) => {
                           return (
-                            <Link
-                              to={item.path}
-                              key={`item-${index}`}
-                              className="nav-link"
-                            >
-                              {item.itemTitle}
-                            </Link>
+                            <React.Fragment key={`item-${index}`}>
+                              {
+                                !item.onClick
+                                ?
+                                <Link
+                                  to={item.path}
+                                  className="nav-link"
+                                >
+                                  {item.itemTitle}
+                                </Link>
+                                :
+                                <div
+                                  className="nav-link"
+                                  onClick={this.launch}
+                                  style={{
+                                    cursor: "pointer"
+                                  }}
+                                >
+                                  {item.itemTitle}
+                                </div>
+                              }
+                            </React.Fragment>
                           )
                         })
                       }
@@ -143,6 +176,7 @@ export default class Footer extends Component {
             </Container>
           </Row>
         </Container>
+        <JoinModal show={this.state.modalShow} onHide={this.close} />
       </footer>
     )
   }
