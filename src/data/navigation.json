@@ -3,27 +3,32 @@
     "title": "About",
     "footerOnly": true,
     "iconClass": "",
-    "path": null,
+    "path": "",
+    "onClick": null,
     "items": [
       {
         "itemTitle": "Our Story",
         "iconClass": "",
-        "path": "/about/our-story/"
+        "path": "/about/our-story/",
+        "onClick": null
       },
       {
         "itemTitle": "Leadership",
         "iconClass": "",
-        "path": "/about/leadership/"
+        "path": "/about/leadership/",
+        "onClick": null
       },
       {
         "itemTitle": "Financials",
         "iconClass": "",
-        "path": "/about/financials/"
+        "path": "/about/financials/",
+        "onClick": null
       },
       {
         "itemTitle": "Brand Materials",
         "iconClass": "",
-        "path": "/about/brand-materials/"
+        "path": "/about/brand-materials/",
+        "onClick": null
       }
     ]
   },
@@ -31,27 +36,32 @@
     "title": "Our Work",
     "footerOnly": false,
     "iconClass": "",
-    "path": null,
+    "path": "",
+    "onClick": null,
     "items": [
       {
         "itemTitle": "What We Do",
         "iconClass": "",
-        "path": "/our-work/what-we-do/"
+        "path": "/our-work/what-we-do/",
+        "onClick": null
       },
       {
         "itemTitle": "Strategic Initiatives",
         "iconClass": "",
-        "path": "/our-work/strategic-initiatives/"
+        "path": "/our-work/strategic-initiatives/",
+        "onClick": null
       },
       {
         "itemTitle": "R&D Programs",
         "iconClass": "",
-        "path": "/our-work/rd-programs/"
+        "path": "/our-work/rd-programs/",
+        "onClick": null
       },
       {
         "itemTitle": "News",
         "iconClass": "",
-        "path": "/our-work/news/"
+        "path": "/our-work/news/",
+        "onClick": null
       }
     ]
   },
@@ -59,17 +69,20 @@
     "title": "Resources",
     "footerOnly": false,
     "iconClass": "",
-    "path": null,
+    "path": "",
+    "onClick": null,
     "items": [
       {
         "itemTitle": "Educator Resource Center",
         "iconClass": "",
-        "path": "/resources/educator-resource-center/"
+        "path": "/resources/educator-resource-center/",
+        "onClick": null
       },
       {
         "itemTitle": "Reports",
         "iconClass": "",
-        "path": "/resources/reports"
+        "path": "/resources/reports",
+        "onClick": null
       }
     ]
   },
@@ -77,22 +90,26 @@
     "title": "Upcoming Programs",
     "footerOnly": false,
     "iconClass": "",
-    "path": null,
+    "path": "",
+    "onClick": null,
     "items": [
       {
         "itemTitle": "Teacher Professional Learning",
         "iconClass": "",
-        "path": "/upcoming-programs/teacher-professional-learning/"
+        "path": "/upcoming-programs/teacher-professional-learning/",
+        "onClick": null
       },
       {
         "itemTitle": "Leadership Development",
         "iconClass": "",
-        "path": "/upcoming-programs/leadership-development/"
+        "path": "/upcoming-programs/leadership-development/",
+        "onClick": null
       },
       {
         "itemTitle": "Field-Test Opportunities",
         "iconClass": "",
-        "path": "/upcoming-programs/field-test-opportunities/"
+        "path": "/upcoming-programs/field-test-opportunities/",
+        "onClick": null
       }
     ]
   },
@@ -100,27 +117,32 @@
     "title": "Connect",
     "footerOnly": false,
     "iconClass": "",
-    "path": null,
+    "path": "",
+    "onClick": null,
     "items": [
       {
         "itemTitle": "Contact Us",
         "iconClass": "",
-        "path": "/connect/contact-us/"
+        "path": "/connect/contact-us/",
+        "onClick": null
       },
       {
         "itemTitle": "Join E-mail List",
         "iconClass": "",
-        "path": "/connect/join-email-list/"
+        "path": "",
+        "onClick": "this.launch"
       },
       {
         "itemTitle": "Work with Us",
         "iconClass": "",
-        "path": "/connect/work-with-us/"
+        "path": "/connect/work-with-us/",
+        "onClick": null
       },
       {
         "itemTitle": "Employment Opportunities",
         "iconClass": "",
-        "path": "/connect/employment-opportunities/"
+        "path": "/connect/employment-opportunities/",
+        "onClick": null
       }
     ]
   }

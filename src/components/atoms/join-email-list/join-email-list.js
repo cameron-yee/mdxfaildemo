@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import JoinModal from './join-modal/join-modal'
 
-// ---------------------------------------------------------------------------------------------------------
 
 const JoinEmailList = class extends Component {
   constructor(props) {

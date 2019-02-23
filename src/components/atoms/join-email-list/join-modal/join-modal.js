@@ -219,35 +219,34 @@ const JoinModal= class extends Component {
             <Col md={6}>
               <Form.Group>
                 <Form.Label>First Name</Form.Label>
-                <Form.Control id="first-name-input" type="text" placeholder="First Name" onKeyUp={this.setFirstName} />
+                <Form.Control id="first-name-input" type="text" placeholder="" onKeyUp={this.setFirstName} />
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group>
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control id="last-name-input" type="text" placeholder="Last Name" onKeyUp={this.setLastName} />
+                <Form.Control id="last-name-input" type="text" placeholder="" onKeyUp={this.setLastName} />
               </Form.Group>
             </Col>
             <Col>
               <Form.Group>
                 <Form.Label>Email</Form.Label>
-                <Form.Control id="email-list-input" type="email" placeholder="Email" onKeyUp={this.setEmail} />
+                <Form.Control id="email-list-input" type="email" placeholder="" onKeyUp={this.setEmail} />
               </Form.Group>
             </Col>
           </Row>
-          { !this.state.loading && this.state.signed_up &&
-            <Button variant="success" disabled>Signed up</Button>
-          }
-          { !this.state.loading && !this.state.signed_up &&
-            <Button variant="primary" type="submit">Sign up</Button>
-          }
-          { this.state.loading &&
-            <Button variant="secondary" className="is-loading" />
-          }
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={this.props.onHide}>Close</Button>
+        { !this.state.loading && this.state.signed_up &&
+          <Button variant="success" disabled>Signed up</Button>
+        }
+        { !this.state.loading && !this.state.signed_up &&
+          <Button variant="primary" type="submit">Sign up</Button>
+        }
+        { this.state.loading &&
+          <Button variant="secondary" className="is-loading" />
+        }
       </Modal.Footer>
     </Modal>
     )

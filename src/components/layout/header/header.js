@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col'
 
 import SpinDropdown from '../../atoms/spin-dropdown/spin-dropdown'
 import Tagline from './tagline/tagline'
+import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
 
 import './header.scss'
 
@@ -20,6 +21,20 @@ import '../../../global-scss/index.scss'
 
 
 export default class Header extends Component {
+    constructor(props) {
+    super(props)
+
+    this.state = {
+      modalShow: false,
+    }
+
+    this.launch = this.launch.bind(this)
+    this.close = this.close.bind(this)
+  }
+
+  launch = () => { this.setState({modalShow: true}) }
+  close = () => { this.setState({modalShow: false}) }
+
   render() {
     const navigation =
       (<StaticQuery query={graphql`
@@ -31,10 +46,12 @@ export default class Header extends Component {
                 footerOnly
                 iconClass
                 # path
+                # onClick
                 items {
                   itemTitle
                   iconClass
                   path
+                  onClick
                 }
               }
             }
@@ -59,14 +76,38 @@ export default class Header extends Component {
                 >
                   {
                     edge.node.items.map((item, index) => {
+                      console.log(item)
                       return(
-                        <Link className="dropdown-item" to={item.path} key={`item-${index}`} >
-                          {item.itemTitle}
-                          { item.iconClass
-                            ? <>&nbsp; <i className={item.iconClass}></i></>
-                            : null
+                        <React.Fragment key={`item-${index}`}>   
+                          {
+                            !item.onClick
+                            ?
+                            <Link
+                              className="dropdown-item"
+                              to={item.path}
+                            >
+                              {item.itemTitle}
+                              { item.iconClass
+                                ? <>&nbsp; <i className={item.iconClass}></i></>
+                                : null
+                              }
+                            </Link>
+                            :
+                            <div
+                              className="dropdown-item"
+                              onClick={this.launch}
+                              style={{
+                                cursor: "pointer"
+                              }}
+                            >
+                              {item.itemTitle}
+                              { item.iconClass
+                                ? <>&nbsp; <i className={item.iconClass}></i></>
+                                : null
+                              }
+                            </div>
                           }
-                        </Link>
+                        </React.Fragment>
                       )
                     })
                   }
@@ -165,6 +206,7 @@ export default class Header extends Component {
         <Container fluid>
           <hr className="" style={{ margin: '0' }} />
         </Container>
+        <JoinModal show={this.state.modalShow} onHide={this.close} />
       </>
     )
   }
