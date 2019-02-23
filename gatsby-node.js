@@ -113,6 +113,50 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 
+  const rdProgramsPages = new Promise((resolve, reject) => {
+    const markdownTemplate = path.resolve(`src/templates/rd-programs-template.js`)
+    // Query for markdown nodes to use in creating pages.
+    resolve(
+      graphql(
+        `query MarkdownPagesQuery {
+          allMarkdownRemark(
+            filter: {frontmatter: { page: {eq: "rd-programs"}}}
+            sort: { order: ASC, fields: [frontmatter___title] }
+          ) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+        `
+      ).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+
+        // Create pages for each markdown file.
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()
+          const nodeId = node.id
+          createPage({
+            path: `/our-work/${slug}/`,
+            component: markdownTemplate,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            context: {
+              nodeId,
+            },
+          })
+        })
+      })
+    )
+  })
+
   // const upcomingProgramsTeacherProfessionalLearningPages = new Promise((resolve, reject) => {
   //   const markdownTemplate = path.resolve(`src/templates/upcoming-programs-teacher-professional-learning-template.js`)
   //   // Query for markdown nodes to use in creating pages.
@@ -281,6 +325,6 @@ exports.createPages = ({ graphql, actions }) => {
   //   )
   // })
 
-  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages]);
+  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages]);
   // return Promise.all([educatorResourceCenterPages, upcomingProgramsTeacherProfessionalLearningPages, upcomingProgramsLeadershipDevelopmentPages, upcomingProgramsFieldTestOpportunitiesPages, leadershipPages]);
 }

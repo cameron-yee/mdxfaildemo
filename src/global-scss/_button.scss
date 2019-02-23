@@ -1,39 +1,6 @@
 @import './utilities/bootstrap-overrides.scss';
 
-// .btn{
-// 	// margin: 20px auto;
-// 	border: none;
-// 	padding: 10px 44px;
-// 	// font-size: 36px;
-// 	position: relative;
-// 	&::before{
-// 		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-// 		content: '';
-// 		width: 50%;
-// 		height: 100%;
-// 		// background: black;
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 	}
-
-// 	& .btn-text{
-// 		color: $white;
-// 		// check out mdn docs for different types of blend modes. 
-// 		mix-blend-mode: difference;
-// 	}
-// 	&:hover{
-// 		&::before{
-// 			background: $primary;
-// 			width: 100%;
-// 		}
-// 	}
-// }
-
-/* --------------------------------------------------------------------------------------------------- */
-
 /* Sweep To Right */
-// .hvr-sweep-to-right {
 .btn-outline-primary {
   display: inline-block;
   vertical-align: middle;
@@ -56,6 +23,7 @@
   right: 0;
   bottom: 0;
   background: $primary;
+  // background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
