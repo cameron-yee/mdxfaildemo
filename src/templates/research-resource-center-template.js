@@ -10,28 +10,26 @@ import Col from 'react-bootstrap/Col'
 
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
-import './research-resource-center-template.scss'
 import '../global-scss/index.scss';
+import './research-resource-center-template.scss'
 
-// export default ({ data, props }) => {
 const ResearchResourceCenterTemplate = class extends Component {
   constructor(props) {
     super(props)
     this.html = this.props.data.markdownRemark.html
     this.resource = this.props.data.markdownRemark.frontmatter
   }
-  // const paths = [["/educator-this.resource-center", "Educator Resource Center"], [`/${this.resource.slug}`, `${this.resource.title}`, "is-active"]];
 
   render() {
     return (
       <React.Fragment>
-        <SEO title={this.resource.title} keywords={this.resource.seoKeywords} />
+        <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
         <Layout location={this.props.location}>
           <Container>
             <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
               {this.resource.template === 'Image Right' &&
                 <Row>
-                  <Col md={7} className="jumbotron-title">
+                  <Col md={7} className="rcc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
@@ -40,7 +38,7 @@ const ResearchResourceCenterTemplate = class extends Component {
               {this.resource.template === 'Image Left' &&
                 <Row>
                   <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                  <Col md={7} className="jumbotron-title">
+                  <Col md={7} className="rcc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>
                 </Row>
@@ -81,6 +79,9 @@ export const query = graphql`
         image,
         price,
         programLength,
+        seoCanonicalUrl,
+        seoDescription,
+        seoLang,
         template,
         title,
         type
