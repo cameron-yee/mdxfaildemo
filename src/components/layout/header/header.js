@@ -63,7 +63,7 @@ export default class Header extends Component {
                         <Link className="dropdown-item" to={item.path} key={`item-${index}`} >
                           {item.itemTitle}
                           { item.iconClass
-                            ? <React.Fragment>&nbsp; <i className={item.iconClass}></i></React.Fragment>
+                            ? <>&nbsp; <i className={item.iconClass}></i></>
                             : null
                           }
                         </Link>
@@ -79,7 +79,7 @@ export default class Header extends Component {
                 >
                   {edge.node.title}
                   {
-                    edge.node.iconClass ? <React.Fragment>&nbsp; <i className={edge.node.iconClass}></i></React.Fragment> : null
+                    edge.node.iconClass ? <>&nbsp; <i className={edge.node.iconClass}></i></> : null
                   }
                 </Link>
               }
@@ -90,7 +90,7 @@ export default class Header extends Component {
     />)
 
     return (
-      <React.Fragment>
+      <>
         <Container fluid>
           <div className="d-flex">
             <div className="p-2 flex-grow-1">
@@ -165,7 +165,7 @@ export default class Header extends Component {
         <Container fluid>
           <hr className="" style={{ margin: '0' }} />
         </Container>
-      </React.Fragment>
+      </>
     )
   }
 }
