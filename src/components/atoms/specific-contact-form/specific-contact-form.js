@@ -17,12 +17,13 @@ const SpecificContactForm = class extends Component {
 
   launch = () => { this.setState({modalShow: true}) }
   close = () => { this.setState({modalShow: false}) }
+
   render() {
     return (
-      <React.Fragment>
+      <>
         <span id="submit-button" variant="outline-primary" onClick={this.launch}>{this.props.children}</span>
         <SpecificContactFormModal show={this.state.modalShow} onHide={this.close} sendto={this.props.sendto} />
-      </React.Fragment>
+      </>
     )
   }
 }

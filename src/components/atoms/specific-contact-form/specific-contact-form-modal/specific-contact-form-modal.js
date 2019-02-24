@@ -115,11 +115,11 @@ const SpecificContactFormModal = class extends Component {
   render() {
     return (
       <Modal
-      {...this.props}
-      size="lg"
-      aria-labelledby="specific-contact-form-modal"
-      centered
-    >
+        {...this.props}
+        size="lg"
+        aria-labelledby="specific-contact-form-modal"
+        centered
+      >
       <Modal.Header closeButton>
         <Modal.Title id="specific-contact-form-modal">
           Contact {this.props.sendto}
@@ -129,52 +129,81 @@ const SpecificContactFormModal = class extends Component {
         <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
           Your message has been sent to {this.props.sendto}.
         </Alert>
-        <Form onSubmit={(e) => this.postSpecificForm(e)}>
+        <form onSubmit={(e) => this.postSpecificForm(e)}>
           <Row>
             <Col xs={12}>
-              <Form.Group>
-                <Form.Label>First Name</Form.Label>
-                <Form.Control id="scfm-first-name-input" type="text" placeholder="First Name" onKeyUp={this.setFirstName} />
-              </Form.Group>
+              <div className="form-group">
+                <div className="form-label">First Name</div>
+                <input
+                  className="form-control"
+                  id="scfm-first-name-input"
+                  type="text"
+                  placeholder=""
+                  onKeyUp={this.setFirstName}
+                />
+              </div>
             </Col>
             <Col xs={12}>
-              <Form.Group>
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control id="scfm-last-name-input" type="text" placeholder="Last Name" onKeyUp={this.setLastName} />
-              </Form.Group>
+              <div className="form-group">
+                <div className="form-label">Last Name</div>
+                <input
+                  className="form-control"
+                  id="scfm-last-name-input"
+                  type="text"
+                  placeholder=""
+                  onKeyUp={this.setLastName}
+                />
+              </div>
             </Col>
             <Col xs={12}>
-              <Form.Group>
-                <Form.Label>Email</Form.Label>
-                <Form.Control id="scfm-email-input" type="email" placeholder="Email" onKeyUp={this.setEmail} />
-              </Form.Group>
+              <div className="form-group">
+                <div className="form-label">Email</div>
+                <input
+                  className="form-control"
+                  id="scfm-email-input"
+                  type="email"
+                  placeholder=""
+                  onKeyUp={this.setEmail}
+                />
+              </div>
             </Col>
             <Col xs={12}>
-              <Form.Group>
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control id="scfm-phone-input" type="text" placeholder="Phone Number" onKeyUp={this.setPhone} />
-              </Form.Group>
+              <div className="form-group">
+                <div className="form-label">Phone Number</div>
+                <input
+                  className="form-control"
+                  id="scfm-phone-input"
+                  type="text"
+                  placeholder=""
+                  onKeyUp={this.setPhone}
+                />
+              </div>
             </Col>
             <Col xs={12}>
-              <Form.Group>
-                <Form.Label>Message</Form.Label>
-                <Form.Control id="scfm-message-input" as="textarea" placeholder="Message" onKeyUp={this.setMessage} />
-              </Form.Group>
+              <div className="form-group">
+                <div className="form-label">Message</div>
+                <textarea
+                  className="form-control"
+                  id="scfm-message-input"
+                  placeholder=""
+                  rows="8"
+                  onKeyUp={this.setMessage}
+                />
+              </div>
             </Col>
           </Row>
-          { !this.state.loading && !this.state.sent && 
-            <Button variant="primary" type="submit">Contact {this.props.sendto}</Button>
-          }
-          { this.state.loading &&
-            <Button variant="secondary" className="is-loading" />
-          }
-          { !this.state.loading && this.state.sent &&
-            <Button variant="primary" disabled>Contact {this.props.sendto}</Button>
-          }
-        </Form>
+        </form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={this.props.onHide}>Close</Button>
+        { !this.state.loading && !this.state.sent && 
+          <Button variant="primary" type="submit">Contact {this.props.sendto}</Button>
+        }
+        { this.state.loading &&
+          <Button variant="secondary" className="is-loading" />
+        }
+        { !this.state.loading && this.state.sent &&
+          <Button variant="primary" disabled>Contact {this.props.sendto}</Button>
+        }
       </Modal.Footer>
     </Modal>
     )
@@ -182,4 +211,3 @@ const SpecificContactFormModal = class extends Component {
 }
 
 export default SpecificContactFormModal
-
