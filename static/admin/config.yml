@@ -82,7 +82,6 @@ collections:
       create: true
       extension: md
       fields:
-        - { name: slug, label: Website URL Path, widget: string }
         - { name: date, label: Date, widget: date }
         - { name: fullName, label: Full Name, widget: string }
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
@@ -95,6 +94,20 @@ collections:
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: leadership }
+
+    - name: staff
+      label: Staff
+      folder: src/content/staff
+      identifier_field: fullName
+      create: true
+      extension: md
+      fields:
+        - { name: date, label: Date, widget: date }
+        - { name: fullName, label: Full Name, widget: string }
+        - { name: position, label: Position, widget: string }
+        - { name: honorific, label: Honorific/Title, widget: string, required: false }
+        - { name: personalUrl, label: Personal Website URL, widget: string, required: false }
+        - { name: page, label: Page, widget: hidden, default: staff-directory }
 
     # - name: strategic-initiative
     #   label: Strategic Initiative
