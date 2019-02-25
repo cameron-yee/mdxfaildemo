@@ -7,8 +7,8 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
 template: Image Right
-image: /assets/sputnik.png
-alt: Sputnik floating in space.
+image: /assets/understanding-ebola.png
+alt: Green string-like objects bundled in a sphere with some blue blobs.
 price: 0
 courseId: 0
 page: educator-resource-center
