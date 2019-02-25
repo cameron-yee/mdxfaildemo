@@ -2,7 +2,7 @@
 date: 2019-02-25T19:28:16.929Z
 title: Five Tools and Processes for Translating the NGSS
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/five-tools-and-processes-for-translating-the-ngss
+  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/five-tools
 seoDescription: Test SEO description.
 seoLang: en-us
 type: District Planning
