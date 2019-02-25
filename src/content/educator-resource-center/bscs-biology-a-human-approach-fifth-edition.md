@@ -8,7 +8,7 @@ seoLang: en-us
 type: Classroom
 template: Image Left
 image: /assets/scifi.jpg
-alt: Futuristic city scape with skyscrapers and spaceships.
+alt: PLACEHOLDER
 price: 0
 courseId: 0
 gradeLevel:
@@ -18,12 +18,10 @@ page: educator-resource-center
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students. 
 
-BSCS Biology: A Human Approach is an activity-driven, full-year program that uses human examples to engage 9th and 10th grade students in fundamental biology concepts. The comprehensive digital curriculum—grounded in the BSCS 5E Instructional Model (hyperlink to new 5E landing page)—has been revised for the fifth edition to address Next Generation Science Standards recommendations. Both the student and teacher editions show where students are engaging in the NGSS Science and Engineering Practices. 
+BSCS Biology: A Human Approach is an activity-driven, full-year program that uses human examples to engage 9th and 10th grade students in fundamental biology concepts. The comprehensive digital curriculum—grounded in the BSCS 5E Instructional Model (hyperlink to new 5E landing page)—has been revised for the fifth edition to address Next Generation Science Standards recommendations. Both the student and teacher editions show where students are engaging in the NGSS Science and Engineering Practices. 
 
-A new online learning environment includes all information from the print edition in addition to videos, simulations, and animations. Multimedia tools are available in both English and Spanish and are designed to reach twenty-first-century students who learn best with dynamic and interactive technology. 
+A new online learning environment includes all information from the print edition in addition to videos, simulations, and animations. Multimedia tools are available in both English and Spanish and are designed to reach twenty-first-century students who learn best with dynamic and interactive technology. 
 
-This program can be ordered directly from the Kendall Hunt Publishing Company.  
+This program can be ordered directly from the Kendall Hunt Publishing Company.  
 
-Access Resource Here (make this a button)
-
-https://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition
+<button class="btn btn-primary"><a href="http://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition/" target="_blank">Access Resource Here</a></button>
