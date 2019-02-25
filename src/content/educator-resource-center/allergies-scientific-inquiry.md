@@ -17,12 +17,10 @@ page: educator-resource-center
 ---
 Allergies affect more than 50 million Americans, and are among the leading causes of chronic disease in the US. One in every 13 children, roughly two students in every classroom, have allergies to food.  
 
-To help middle school teachers more effectively teach about food allergies, BSCS Science Learning has developed an online curriculum supplement called Allergies & Scientific Inquiry. Students using this multimedia resource learn how to distinguish food allergies from other negative food reactions. They explore the role of the immune system in causing allergy symptoms and learn how medical research is contributing to better allergy management. 
+To help middle school teachers more effectively teach about food allergies, BSCS Science Learning has developed an online curriculum supplement called Allergies & Scientific Inquiry. Students using this multimedia resource learn how to distinguish food allergies from other negative food reactions. They explore the role of the immune system in causing allergy symptoms and learn how medical research is contributing to better allergy management. 
 
-Lessons engage students in the practices of scientific inquiry, and are aligned to the Next Generation Science Standards.  
+Lessons engage students in the practices of scientific inquiry, and are aligned to the Next Generation Science Standards.  
 
-Access Resource Here (make this a button)
-
-http://allergies.bscs.org 
+<button class="btn btn-primary"><a href="http://allergies.bscs.org /" target="_blank">Access Resource Here</a></button>
 
 _This resource was supported by a grant (R25 A1098674-01) from the National Institute of Allergy and Infectious Diseases._
