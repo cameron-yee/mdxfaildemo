@@ -24,10 +24,18 @@ const RDProgramsTemplate = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
+        <SEO
+          title={this.resource.title}
+          canonical={this.resource.seoCanonicalUrl}
+          description={this.resource.seoDescription}
+          lang={this.resource.seoLang}
+        />
         <Layout location={this.props.location}>
           <Container>
-            <PageTitle title={this.resource.title} replace={["rd-programs", "R&D Programs"]} />
+            <PageTitle
+              title={this.resource.title}
+              replace={["rd-programs", "R&D Programs"]}
+            />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarUrl || this.resource.sidebarText) &&
                 <Col xs={9}>
@@ -44,8 +52,18 @@ const RDProgramsTemplate = class extends Component {
                   <Card>
                     <Card.Body>
                       {/* <Card.Title>Resource Information</Card.Title> */}
-                      <Card.Text style={{fontSize: '.8rem'}}>{this.resource.sidebarText}</Card.Text>
-                      <Button size="sm" variant="primary"><a href={this.resource.sidebarUrl} target="_blank">Access Resource Here</a></Button>
+                      <Card.Text style={{fontSize: '.8rem'}}>
+                        {this.resource.sidebarText}
+                      </Card.Text>
+                      <Button size="sm" variant="primary">
+                        <a
+                          href={this.resource.sidebarUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Access Resource Here
+                        </a>
+                      </Button>
                     </Card.Body>
                   </Card>
                 </Col>
