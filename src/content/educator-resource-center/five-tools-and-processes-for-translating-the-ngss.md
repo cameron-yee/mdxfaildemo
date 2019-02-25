@@ -19,6 +19,6 @@ BSCS Science Learning and its collaborators designed Five Tools and Processes to
 
 All Five Tools resources are freely available, and BSCS often hosts professional learning institutes to support district planning around NGSS.  
 
-https://www.amnh.org/explore/curriculum-collections/five-tools-and-processes-for-ngss
+<button class="btn btn-primary"><a href="https://www.amnh.org/explore/curriculum-collections/five-tools-and-processes-for-ngss/" target="_blank">Access Resource Here</a></button>
 
 _This resource was developed by the American Museum of Natural History in collaboration with BSCS and the K-12 Alliance at WestEd. Funding was provided by the Carnegie Corporation of New York._
