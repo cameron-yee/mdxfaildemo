@@ -13,6 +13,12 @@
         "onClick": null
       },
       {
+        "itemTitle": "Staff Directory",
+        "iconClass": "",
+        "path": "/about/staff-directory/",
+        "onClick": null
+      },
+      {
         "itemTitle": "Leadership",
         "iconClass": "",
         "path": "/about/leadership/",

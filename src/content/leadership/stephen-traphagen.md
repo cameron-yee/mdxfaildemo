@@ -8,6 +8,9 @@ alt: Stephen Traphagen headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *High School Biology & AP Biology Teacher*

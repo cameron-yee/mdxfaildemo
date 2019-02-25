@@ -8,6 +8,9 @@ alt: Nicole Gillespie headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *Executive Director*
