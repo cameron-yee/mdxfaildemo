@@ -44,3 +44,18 @@
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+button {
+  &.btn-primary {
+    > a {
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      > a {
+        color: $primary;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

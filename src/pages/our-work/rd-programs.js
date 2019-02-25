@@ -24,7 +24,7 @@ const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
     this.programs = props.data.allMarkdownRemark.edges
-    this.filter_items = ["Area1", "Area2","Area3", "Area4"]
+    this.filter_items = ["Area 1", "Area 2","Area 3", "Area 4"]
     this.state = {
       filter_hash: ""
     }
@@ -68,76 +68,31 @@ const RDPrograms = class extends Component {
                 {
                   this.programs.map((edge, index) => {
                     return(
-                      <React.Fragment key={edge.node.id}>
-                        <hr style={{borderColor: '#3087b4'}} />
-                        <Row className="feed-item">
+                      <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                        {/* <hr style={{borderColor: '#3087b4'}} /> */}
+                        <hr />
+                        <Row className="rd-feed-item">
                           <Col xs={3}>
                           {/* <hr style={{borderColor: '#3087b4'}} /> */}
-                            <div className="image-wrapper">
-                              <img className="image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
+                            <div className="rd-image-wrapper">
+                              <img className="rd-image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
                             </div>
                           </Col>
                           <Col xs={9}>
-                              <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                              {/* <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}> */}
+                              <div>
                                 <h3>{edge.node.frontmatter.title}</h3>
                                 <p>{edge.node.excerpt}</p>
                                 { edge.node.frontmatter.areas.map((area, index) => {
+                                    const variants = ['primary','secondary','success','danger']
                                     return(
-                                      <React.Fragment key={index}>
-                                        {
-                                          (area === "Area 1")
-                                          ?
-                                          <span
-                                            className="badge badge-pill badge-primary"
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontWeight: '400'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                          :
-                                          (area === "Area 2")
-                                          ?
-                                          <span
-                                            className="badge badge-pill badge-info"
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontWeight: '400'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                          :
-                                          (area === "Area 3")
-                                          ?
-                                          <span
-                                            className="badge badge-pill badge-success"
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontWeight: '400'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                          :
-                                          <span
-                                            className="badge badge-pill badge-danger"
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontWeight: '400'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                        }
-                                      </React.Fragment>
+                                      <span key={index} className={`rd-pill badge badge-pill badge-${variants[index]}`}>{area}</span>
                                     )
                                   })
                                 }
                                 <div className="button-wrapper">
                                   <Link
-                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} 
+                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
                                     className="rd-read-more"
                                   >
                                     <Button variant="primary">Read More</Button>
@@ -146,7 +101,7 @@ const RDPrograms = class extends Component {
                               </div>
                           </Col>
                         </Row>
-                      </React.Fragment>
+                      </div>
                     )
                   }) 
                 }

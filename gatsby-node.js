@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
           const nodeId = node.id
           createPage({
             // path: `/resources/research-resource-center/${slug}/`,
@@ -97,7 +97,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
           const nodeId = node.id
           createPage({
             path: `/resources/educator-resource-center/${slug}/`,
@@ -141,10 +141,10 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
           const nodeId = node.id
           createPage({
-            path: `/our-work/${slug}/`,
+            path: `/our-work/rd-programs/${slug}/`,
             component: markdownTemplate,
             // In your blog post template's graphql query, you can use path
             // as a GraphQL variable to query for data from the markdown file.
@@ -156,6 +156,8 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+
+  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages]);
 
   // const upcomingProgramsTeacherProfessionalLearningPages = new Promise((resolve, reject) => {
   //   const markdownTemplate = path.resolve(`src/templates/upcoming-programs-teacher-professional-learning-template.js`)
@@ -325,6 +327,5 @@ exports.createPages = ({ graphql, actions }) => {
   //   )
   // })
 
-  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages]);
   // return Promise.all([educatorResourceCenterPages, upcomingProgramsTeacherProfessionalLearningPages, upcomingProgramsLeadershipDevelopmentPages, upcomingProgramsFieldTestOpportunitiesPages, leadershipPages]);
 }

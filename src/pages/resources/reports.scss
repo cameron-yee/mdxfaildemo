@@ -137,34 +137,34 @@
   padding: 1.25rem;
 }
 
-.card-col {
+.rrc-card-col {
   margin-bottom: 1.5rem;
 }
 
-.card {
+.rrc-card {
   height: 100%;
   position: relative;
   padding-bottom: 10%;
   
 }
 
-.card-img-wrapper {
+.rrc-card-img-wrapper {
   height: 250px;
   overflow: hidden;
 }
 
-.card-img {
+.rrc-card-img {
   display: block;
   margin: auto 0;
   min-width: 100%;
   min-height: 100%; 
 }
 
-.excerpt {
+.rrc-excerpt {
   padding-bottom: 1.5rem;
 }
 
-.read-more {
+.rrc-read-more {
   position: absolute;
   bottom: 4%;
 }
@@ -172,7 +172,7 @@
 $bscs-red: rgb(174,37,38);
 $bscs-orange: rgb(250,173,109);
 
-.gradient {
+.rrc-gradient {
   background: rgba(255,255,255,1);
   background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
 }

@@ -10,7 +10,7 @@ const PageTitle = class extends React.Component {
   render() {
     return(
       <React.Fragment>
-        <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.props.title} />
+        <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.props.title} replace={this.props.replace} />
         <Row>
           <Col>
             <h1>{this.props.title}</h1>

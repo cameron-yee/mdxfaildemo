@@ -137,7 +137,7 @@
 //   padding: 1.25rem;
 // }
 
-.feed-item {
+.rd-feed-item {
   position: relative;
   margin: 2rem 0;
   transition: all 0.3s ease-in-out;
@@ -148,7 +148,7 @@
   // }
 }
 
-.button-wrapper {
+.rd-button-wrapper {
   position: absolute;
   bottom: 5%;
   width: 90%;
@@ -163,18 +163,28 @@
   float: right;
 }
 
-.image-wrapper {
+.rd-image-wrapper {
   height: 250px;
   overflow: hidden;
 }
 
-.image {
+.rd-image {
   display: block;
   margin: auto 0;
   min-width: 100%;
   width: 100%;
   min-height: 100%; 
 }
+
+.rd-pill {
+  margin-right: .5rem;
+  font-weight: 400;
+  
+  &:hover {
+    cursor: default;
+  }
+}
+
 // .read-more:hover {
 //    background-color: gray; 
 // }

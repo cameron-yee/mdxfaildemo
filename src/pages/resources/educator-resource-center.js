@@ -69,15 +69,15 @@ const EducatorResourceCenter = class extends Component {
                 {
                   this.resources.map((edge, index) => {
                     return(
-                      <Col md={4} key={edge.node.id} className="card-col">
-                        <Card id={`resource-${index}`} className="card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
-                          <div className="card-img-wrapper">
-                            <Card.Img variant="top" className="card-img" src={edge.node.frontmatter.image}/>
+                      <Col md={4} key={edge.node.id} className="erc-card-col">
+                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                          <div className="erc-card-img-wrapper">
+                            <Card.Img variant="top" className="erc-card-img" src={edge.node.frontmatter.image}/>
                           </div>
                           <Card.Body>
                             <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                             <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link>
+                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="erc-read-more"><Button variant="primary">Read More</Button></Link>
                           </Card.Body>
                         </Card>
                       </Col>
