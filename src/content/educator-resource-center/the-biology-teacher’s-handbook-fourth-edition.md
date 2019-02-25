@@ -2,7 +2,7 @@
 date: 2019-02-25T18:54:37.279Z
 title: 'The Biology Teacher’s Handbook, Fourth Edition'
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/the-biology-teachers-handbook-fourth-edition
+  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/biology-teacher-handbook
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
