@@ -1,8 +1,7 @@
 ---
 date: 2019-02-25T19:00:19.479Z
 title: 'Energy: A Multidisciplinary Approach for Teachers (EMAT)'
-seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/energy-a-new-multidisplinary-approach-for-teachers-emat
+seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/emat'
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
