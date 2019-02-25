@@ -2,7 +2,7 @@
 date: 2019-02-25T19:10:35.334Z
 title: 'BSCS Science Tracks: Connecting Science & Literacy '
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-science-tracks-connnecting-science-&-literacy
+  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-science-tracks
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
