@@ -2,7 +2,7 @@
 date: 2019-02-25T19:05:26.997Z
 title: 'BSCS Biology: A Human Approach, Fifth Edition'
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-biology-a-human-approach-fifth-edition
+  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-biology-human-approach
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
