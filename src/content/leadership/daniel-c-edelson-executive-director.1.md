@@ -8,6 +8,9 @@ alt: Daniel C. Edelson headshot.
 additionalTags: Executive Director
 type: Management
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *Executive Director*

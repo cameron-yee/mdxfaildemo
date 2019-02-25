@@ -75,6 +75,27 @@ collections:
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: rd-programs }
 
+    - name: leadership
+      label: Leadership
+      folder: src/content/leadership
+      identifier_field: fullName
+      create: true
+      extension: md
+      fields:
+        - { name: slug, label: Website URL Path, widget: string }
+        - { name: date, label: Date, widget: date }
+        - { name: fullName, label: Full Name, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: leadership }
+
     # - name: strategic-initiative
     #   label: Strategic Initiative
     #   folder: src/content/strategic-initiatives
@@ -143,21 +164,3 @@ collections:
 #         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
 #         - { name: body, label: Body, widget: markdown }
 #         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
-
-#     - name: leadership
-#       label: Leadership
-#       folder: src/content/leadership
-#       identifier_field: fullName
-#       create: true
-#       extension: md
-#       fields:
-#         - { name: slug, label: Website URL Path, widget: string }
-#         - { name: date, label: Date, widget: date }
-#         - { name: fullName, label: Full Name, widget: string }
-#         - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
-#         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
-#         - { name: image, label: Image, widget: image }
-#         - { name: alt, label: Image Alt Text, widget: string }
-#         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-#         - { name: body, label: Body, widget: markdown }
-#         - { name: page, label: Page, widget: hidden, default: leadership }

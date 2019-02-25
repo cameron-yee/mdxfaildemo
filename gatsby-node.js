@@ -157,7 +157,51 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 
-  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages]);
+  const leadershipPages = new Promise((resolve, reject) => {
+    const markdownTemplate = path.resolve(`src/templates/leadership-template.js`)
+    // Query for markdown nodes to use in creating pages.
+    resolve(
+      graphql(
+        `query MarkdownPagesQuery {
+          allMarkdownRemark(
+            filter: {frontmatter: { page: {eq: "leadership"}}}
+            sort: { order: ASC, fields: [frontmatter___slug] }
+          ) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  fullName
+                }
+              }
+            }
+          }
+        }
+        `
+      ).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
+
+        // Create pages for each markdown file.
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          const slug = node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+          const nodeId = node.id
+          createPage({
+            path: `/about/leadership/${slug}/`,
+            component: markdownTemplate,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            context: {
+              nodeId,
+            },
+          })
+        })
+      })
+    )
+  })
+
+  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages, leadershipPages]);
 
   // const upcomingProgramsTeacherProfessionalLearningPages = new Promise((resolve, reject) => {
   //   const markdownTemplate = path.resolve(`src/templates/upcoming-programs-teacher-professional-learning-template.js`)
@@ -285,47 +329,6 @@ exports.createPages = ({ graphql, actions }) => {
   //   )
   // })
 
-  // const leadershipPages = new Promise((resolve, reject) => {
-  //   const markdownTemplate = path.resolve(`src/templates/leadership-template.js`)
-  //   // Query for markdown nodes to use in creating pages.
-  //   resolve(
-  //     graphql(
-  //       `query MarkdownPagesQuery {
-  //         allMarkdownRemark(
-  //           filter: {frontmatter: { page: {eq: "leadership"}}}
-  //           sort: { order: ASC, fields: [frontmatter___slug] }
-  //         ) {
-  //           edges {
-  //             node {
-  //               frontmatter {
-  //                 slug
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //       `
-  //     ).then(result => {
-  //       if (result.errors) {
-  //         reject(result.errors)
-  //       }
-
-  //       // Create pages for each markdown file.
-  //       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-  //         const slug = node.frontmatter.slug
-  //         createPage({
-  //           path: `/leadership/${slug}/`,
-  //           component: markdownTemplate,
-  //           // In your blog post template's graphql query, you can use path
-  //           // as a GraphQL variable to query for data from the markdown file.
-  //           context: {
-  //             slug,
-  //           },
-  //         })
-  //       })
-  //     })
-  //   )
-  // })
 
   // return Promise.all([educatorResourceCenterPages, upcomingProgramsTeacherProfessionalLearningPages, upcomingProgramsLeadershipDevelopmentPages, upcomingProgramsFieldTestOpportunitiesPages, leadershipPages]);
 }
