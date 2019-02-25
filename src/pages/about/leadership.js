@@ -29,7 +29,7 @@ const LeadershipPage = class extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Contact Us" />
+        <SEO title="Leadership" />
         <Container>
           <PageTitle title="Leadership" />
           <Row style={{ marginBottom: '2rem' }}>

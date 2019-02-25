@@ -1,5 +1,4 @@
 ---
-slug: dennis-schatz
 date: 2018-12-18T23:03:06.180Z
 fullName: Dennis Schatz
 template: Image Left

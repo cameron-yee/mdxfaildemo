@@ -1,5 +1,4 @@
 ---
-slug: nate-root
 date: 2018-12-18T23:03:06.180Z
 fullName: Nathan Root
 template: Image Left

@@ -1,5 +1,4 @@
 ---
-slug: richard-j-shavelson
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard J. Shavelson, Chair
 template: Image Left

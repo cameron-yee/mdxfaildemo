@@ -1,5 +1,4 @@
 ---
-slug: larry-gold
 date: 2018-12-18T23:03:06.180Z
 fullName: Larry Gold
 template: Image Left
