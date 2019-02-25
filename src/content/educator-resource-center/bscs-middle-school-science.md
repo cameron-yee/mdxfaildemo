@@ -8,7 +8,7 @@ seoLang: en-us
 type: Classroom
 template: Image Right
 image: /assets/red-panda.jpg
-alt: 'First rule of panda fight club: be a panda.'
+alt: PLACEHOLDER
 price: 0
 courseId: 0
 gradeLevel:
@@ -18,13 +18,11 @@ page: educator-resource-center
 ---
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students. 
 
-BSCS Middle School Science is a standards- and inquiry-based program comprised of four units: Earth/Space Science, Life Science, Physical Science, and Science and Society. Designed for maximum flexibility, the units are grounded by the BSCS 5E Instructional Model and can be adapted for various teaching styles and classroom settings.  
+BSCS Middle School Science is a standards- and inquiry-based program comprised of four units: Earth/Space Science, Life Science, Physical Science, and Science and Society. Designed for maximum flexibility, the units are grounded by the BSCS 5E Instructional Model and can be adapted for various teaching styles and classroom settings.  
 
-The curriculum is available free online for teachers who agree to provide usability data and complete student pretests and posttests. Click below to register for resource access.
+The curriculum is available free online for teachers who agree to provide usability data and complete student pretests and posttests. Click below to register for resource access.
 
-Access Resource Here (make this a button)
-
-https://bscs.org/mssciencepreview 
+<button class="btn btn-primary"><a href="https://bscs.org/mssciencepreview /" target="_blank">Access Resource Here</a></button>
 
 recreate this link and change the question asking about the “2014-2015 school year” to “for the upcoming school year”
 
