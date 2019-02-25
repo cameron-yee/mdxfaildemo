@@ -2,7 +2,7 @@
 date: 2019-02-25T18:34:04.933Z
 title: ' Allergies & Scientific Inquiry'
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/allergies-&-scientific-inquiry
+  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/allergies
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
