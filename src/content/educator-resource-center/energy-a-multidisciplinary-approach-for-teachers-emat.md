@@ -14,16 +14,16 @@ courseId: 0
 discipline: Earth Sciences
 page: educator-resource-center
 ---
-Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change? These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
+_Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
-That’s why BSCS Science Learning developed EMAT. This online resource helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. 
+That’s why BSCS Science Learning developed EMAT. This online resource helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. 
 
-Teachers can freely access 30 science content animations and 20 interactive learning experiences to enhance student learning in the classroom. 
+Teachers can freely access 30 science content animations and 20 interactive learning experiences to enhance student learning in the classroom. 
 
-Access Resource Here (make this a button)
+Access Resource Here (make this a button)
 
 Hyperlink to a new landing page with the 30 science content animations and 20 interactive learning experiences (samples reference on this page: https://bscs.org/are-your-preservice-science-teachers-prepared-teach-energy-concepts)
 
-This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center.
+_This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._
 
 _This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
