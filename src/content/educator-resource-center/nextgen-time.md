@@ -8,7 +8,7 @@ seoLang: en-us
 type: District Planning
 template: Image Right
 image: /assets/river.jpg
-alt: Your mom is a river.
+alt: PLACEHOLDER
 price: 0
 courseId: 0
 page: educator-resource-center
