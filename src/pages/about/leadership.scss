@@ -11,6 +11,17 @@
   margin: 0;
   overflow: auto;
   padding-bottom: 2rem;
+
+  /* supposed to hide the horizontal scroll bars */
+  // overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+/* supposed hide the horizontal scroll bars */
+.leadership-scrollable::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .leadership-card-image-wrapper {
@@ -25,7 +36,7 @@
   transition: all 0.3s ease-in-out;
   &:hover {
     filter: saturate(1);
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: all 0.3s ease-in-out;
   }
 }
