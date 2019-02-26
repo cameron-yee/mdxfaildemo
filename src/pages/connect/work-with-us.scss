@@ -20,3 +20,14 @@
     text-decoration: none;
   }
 }
+
+.accordionCollapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease;
+
+  &.show {
+    max-height: 2000px;
+    transition: max-height 400ms ease;
+  }
+}

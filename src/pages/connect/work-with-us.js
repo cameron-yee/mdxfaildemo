@@ -15,45 +15,54 @@ import './work-with-us.scss'
 
 
 const WorkWithUsPage = class extends Component {
-  constructor(props) {
-    super(props)
+  // constructor(props) {
+  //   super(props)
 
-    this.state = {
-      accordionPanels: {
-        collapseOne: {
-          expanded: true
-        },
-        collapseTwo: {
-          expanded: false
-        },
-        collapseThree: {
-          expanded: false
-        },
-        collapseFour: {
-          expanded: false
-        }
-      }
-    }
+  //   this.state = {
+  //     accordionPanels: {
+  //       collapseOne: {
+  //         expanded: true
+  //       },
+  //       collapseTwo: {
+  //         expanded: false
+  //       },
+  //       collapseThree: {
+  //         expanded: false
+  //       },
+  //       collapseFour: {
+  //         expanded: false
+  //       }
+  //     }
+  //   }
 
-    // this.handleChangeExpandedState = this.handleChangeExpandedState.bind(this)
+  //   // this.handleChangeExpandedState = this.handleChangeExpandedState.bind(this)
+  // }
+
+  // handleChangeExpandedState = (event) => {
+  //   const key = event.target.id
+  //   this.setState(prevState => ({
+  //     accordionPanels: {
+  //       ...prevState.accordionPanels,
+  //       [key]: {
+  //         expanded: !prevState.accordionPanels[key].expanded
+  //       },
+  //     },
+  //   }), 
+  //   function () {
+  //     console.log(key)
+  //     console.log(this.state.accordionPanels[key].expanded)
+  //     console.log(this.state.accordionPanels)
+  //   })
+  // }
+
+  state={
+    collapseID: "collapseOne"
   }
 
-  handleChangeExpandedState = (event) => {
-    const key = event.target.id
+  toggleCollapse = collapseID => () =>
     this.setState(prevState => ({
-      accordionPanels: {
-        ...prevState.accordionPanels,
-        [key]: {
-          expanded: !prevState.accordionPanels[key].expanded
-        },
-      },
-    }), 
-    function () {
-      console.log(key)
-      console.log(this.state.accordionPanels[key].expanded)
-      console.log(this.state.accordionPanels)
-    })
-  }
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
+    }))
 
   componentDidMount() {
     if(this.props.location.hash) {
@@ -62,6 +71,7 @@ const WorkWithUsPage = class extends Component {
   }
 
   render() {
+    const { collapseID } = this.state
     return (
       <Layout location={this.props.location}>
         <SEO title="Work With Us" />
@@ -93,14 +103,33 @@ const WorkWithUsPage = class extends Component {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                     id="collapseOne"
-                    onClick={this.handleChangeExpandedState}
+                    onClick={this.toggleCollapse("collapseOne")}
                   >
-                    Instructional Materials Division
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        Instructional Materials Division
+                      </div>
+                      <div class="ml-auto">
+                        <i
+                          className={
+                            collapseID === "collapseOne"
+                            ?
+                            "fa fa-angle-up"
+                            :
+                            "fa fa-angle-down" 
+                          }
+                        />
+                      </div>
+                    </div>
                   </button>
                   <div
                     id="collapseOne"
                     className={
-                      this.state.accordionPanels.collapseOne.expanded ? 'collapse show' : 'collapse'
+                      collapseID === "collapseOne"
+                      ? 
+                      'collapse accordionCollapse show' 
+                      : 
+                      'collapse accordionCollapse'
                     }
                     aria-labelledby="headingOne"
                     data-parent="#accordion"
@@ -139,14 +168,33 @@ const WorkWithUsPage = class extends Component {
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                     id="collapseTwo"
-                    onClick={this.handleChangeExpandedState}
+                    onClick={this.toggleCollapse("collapseTwo")}
                   >
-                    Division of Professional Learning
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        Division of Professional Learning
+                      </div>
+                      <div class="ml-auto">
+                        <i
+                          className={
+                            collapseID === "collapseTwo"
+                            ?
+                            "fa fa-angle-up"
+                            :
+                            "fa fa-angle-down" 
+                          }
+                        />
+                      </div>
+                    </div>
                   </button>
                   <div
                     id="collapseTwo"
                     className={
-                      this.state.accordionPanels.collapseTwo.expanded ? 'collapse show' : 'collapse'
+                      collapseID === "collapseTwo" 
+                      ? 
+                      'collapse accordionCollapse show' 
+                      : 
+                      'collapse accordionCollapse'
                     }
                     aria-labelledby="headingTwo"
                     data-parent="#accordion"
@@ -190,14 +238,33 @@ const WorkWithUsPage = class extends Component {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                     id="collapseThree"
-                    onClick={this.handleChangeExpandedState}
+                    onClick={this.toggleCollapse("collapseThree")}
                   >
-                    Division of Research
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        Division of Research
+                      </div>
+                      <div class="ml-auto">
+                        <i
+                          className={
+                            collapseID === "collapseThree"
+                            ?
+                            "fa fa-angle-up"
+                            :
+                            "fa fa-angle-down" 
+                          }
+                        />
+                      </div>
+                    </div>
                   </button>
                   <div
                     id="collapseThree"
                     className={
-                      this.state.accordionPanels.collapseThree.expanded ? 'collapse show' : 'collapse'
+                      collapseID === "collapseThree" 
+                      ? 
+                      'collapse accordionCollapse show' 
+                      : 
+                      'collapse accordionCollapse'
                     }
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
@@ -249,14 +316,33 @@ const WorkWithUsPage = class extends Component {
                     aria-expanded="false"
                     aria-controls="collapseFour"
                     id="collapseFour"
-                    onClick={this.handleChangeExpandedState}
+                    onClick={this.toggleCollapse("collapseFour")}
                   >
-                    Our Partners &amp; Collaborators
+                    <div class="d-flex">
+                      <div class="mr-auto">
+                        Our Partners &amp; Collaborators
+                      </div>
+                      <div class="ml-auto">
+                        <i
+                          className={
+                            collapseID === "collapseThree"
+                            ?
+                            "fa fa-angle-up"
+                            :
+                            "fa fa-angle-down" 
+                          }
+                        />
+                      </div>
+                    </div>
                   </button>
                   <div
                     id="collapseFour"
                     className={
-                      this.state.accordionPanels.collapseFour.expanded ? 'collapse show' : 'collapse'
+                      collapseID === "collapseFour" 
+                      ? 
+                      'collapse accordionCollapse show' 
+                      : 
+                      'collapse accordionCollapse'
                     }
                     aria-labelledby="headingFour"
                     data-parent="#accordion"
@@ -272,6 +358,7 @@ const WorkWithUsPage = class extends Component {
           </Row>
         </Container>
       </Layout>
+
     )
   }
 }
