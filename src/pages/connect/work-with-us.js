@@ -56,7 +56,7 @@ const WorkWithUsPage = class extends Component {
   // }
 
   state={
-    collapseID: "collapseOne"
+    collapseID: ""
   }
 
   toggleCollapse = collapseID => () =>
