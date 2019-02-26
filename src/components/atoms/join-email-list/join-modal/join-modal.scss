@@ -1,5 +1,4 @@
-$primary: rgb(41, 52, 118);
-$secondary: rgb(48, 135, 180);
+@import '../../../../global-scss/utilities/variables.scss';
 
 .is-loading {
   border: 16px solid $primary; 

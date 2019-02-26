@@ -207,14 +207,14 @@ const JoinModal= class extends Component {
     >
       <Modal.Header closeButton>
         <Modal.Title id="join-email-modal">
-          Join Email List
+          Join E-mail List
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-          You are already enrolled in the email list.
-        </Alert>
-        <Form onSubmit={(e) => this.checkIfContactExists(e)}>
+      <Form onSubmit={(e) => this.checkIfContactExists(e)}>
+        <Modal.Body>
+          <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+            You are already enrolled in the email list.
+          </Alert>
           <Row>
             <Col md={6}>
               <Form.Group>
@@ -235,19 +235,19 @@ const JoinModal= class extends Component {
               </Form.Group>
             </Col>
           </Row>
-        </Form>
-      </Modal.Body>
-      <Modal.Footer>
-        { !this.state.loading && this.state.signed_up &&
-          <Button variant="success" disabled>Signed up</Button>
-        }
-        { !this.state.loading && !this.state.signed_up &&
-          <Button variant="primary" type="submit">Sign up</Button>
-        }
-        { this.state.loading &&
-          <Button variant="secondary" className="is-loading" />
-        }
-      </Modal.Footer>
+        </Modal.Body>
+        <Modal.Footer>
+          { !this.state.loading && this.state.signed_up &&
+            <Button variant="outline-success" disabled>Signed up</Button>
+          }
+          { !this.state.loading && !this.state.signed_up &&
+            <Button variant="outline-primary" type="submit">Sign up</Button>
+          }
+          { this.state.loading &&
+            <div variant="outline-success" className="is-loading"></div>
+          }
+        </Modal.Footer>
+      </Form>
     </Modal>
     )
   }

@@ -80,14 +80,14 @@ export default class Footer extends Component {
                                 <Link
                                   to={item.path}
                                   className={
-                                    this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "nav-link active" : "nav-link"
+                                    this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "nav-link footer-nl active" : "nav-link footer-nl"
                                   }
                                 >
                                   {item.itemTitle}
                                 </Link>
                                 :
                                 <div
-                                  className="nav-link"
+                                  className="nav-link footer-nl"
                                   onClick={this.launch}
                                   style={{
                                     cursor: "pointer"

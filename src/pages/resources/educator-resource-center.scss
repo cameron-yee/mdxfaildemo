@@ -1,3 +1,5 @@
+@import '../../global-scss/utilities/variables.scss';
+
 .classroom {
   background:
     linear-gradient(
@@ -167,14 +169,33 @@
 .erc-read-more {
   position: absolute;
   bottom: 4%;
+  right: 10%;
 }
-
-$bscs-red: rgb(174,37,38);
-$bscs-orange: rgb(250,173,109);
 
 .erc-gradient {
   background: rgba(255,255,255,1);
   background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
+}
+
+/* Ripple Out */
+// @-webkit-keyframes hvr-ripple-out {
+@-webkit-keyframes btn-outline-secondary {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes btn-outline-secondary {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
 }
 
 // .breadcrumb-item {
