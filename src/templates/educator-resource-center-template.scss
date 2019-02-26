@@ -17,6 +17,11 @@
 }
 
 .erc-jumbotron-title {
+  @media only screen and (max-width: 768px) {
+    background: white;
+    color: black !important;
+    margin-top: 2rem;
+  }
   background: rgb(41,52,118);
   background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
   color: white !important;

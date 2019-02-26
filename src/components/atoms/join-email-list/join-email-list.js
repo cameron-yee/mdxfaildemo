@@ -23,7 +23,7 @@ const JoinEmailList = class extends Component {
   render() {
     return (
       <ButtonToolbar>
-        <Button id="submit-button" variant="outline-primary" onClick={this.launch}>Join Email List</Button>
+        <Button id="submit-button" variant="outline-primary" onClick={this.launch}>Join E-mail List</Button>
         <JoinModal show={this.state.modalShow} onHide={this.close} />
       </ButtonToolbar>
     )

@@ -1,6 +1,72 @@
 @import './utilities/bootstrap-overrides.scss';
 
-/* Sweep To Right */
+// /* Sweep To Right */
+// .btn-outline-primary {
+//   display: inline-block;
+//   vertical-align: middle;
+//   -webkit-transform: perspective(1px) translateZ(0);
+//   transform: perspective(1px) translateZ(0);
+//   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+//   position: relative;
+//   -webkit-transition-property: color;
+//   transition-property: color;
+//   -webkit-transition-duration: 0.3s;
+//   transition-duration: 0.3s;
+// }
+// // .hvr-sweep-to-right:before {
+// .btn-outline-primary:before {
+//   content: "";
+//   position: absolute;
+//   z-index: -1;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   // background: $primary;
+//   // background: linear-gradient(130deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
+//   background: linear-gradient(130deg, rgba(41,52,118,1) 0%, rgba(48,135,180,1) 100%);
+//   -webkit-transform: scaleX(0);
+//   transform: scaleX(0);
+//   -webkit-transform-origin: 0 50%;
+//   transform-origin: 0 50%;
+//   -webkit-transition-property: transform;
+//   transition-property: transform;
+//   -webkit-transition-duration: 0.3s;
+//   transition-duration: 0.3s;
+//   -webkit-transition-timing-function: ease-out;
+//   transition-timing-function: ease-out;
+// }
+// // .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+// .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+//   color: white;
+// }
+// // .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+// .btn-outline-primary:hover:before, .btn-outline-primary:focus:before, .btn-outline-primary:active:before {
+//   -webkit-transform: scaleX(1);
+//   transform: scaleX(1);
+// }
+
+button {
+  border-radius: 2px !important;
+  // &.btn-outline-secondary {
+  // // background: linear-gradient(160deg, $primary 0%, $secondary 100%);
+  //   > a {
+  //     color: white;
+  //     transition: all 0.3s;
+  //   }
+  //   &:hover {
+  //     color: #5e3c7c;
+  //     border: 1px solid #5e3c7c !important;
+  //     > a {
+  //       // color: white !important;
+  //       transition: all 0.3s; 
+  //     }
+  //   }
+  // }
+}
+
+/* Overline From Left */
+.hvr-overline-from-left,
 .btn-outline-primary {
   display: inline-block;
   vertical-align: middle;
@@ -8,54 +74,91 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  overflow: hidden;
+
+  &:hover {
+    color: $primary !important;
+  }
 }
-// .hvr-sweep-to-right:before {
+.hvr-overline-from-left:before,
 .btn-outline-primary:before {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  right: 100%;
+  // left: 51%; //For center-out
+  // right: 51%; //For center-out
+  top: 0; //For overline
+  // bottom: 0; //For underline
   background: $primary;
-  // background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+  // background: linear-gradient(90deg, rgba(48,135,180,1) 0%, rgba(255,255,255,0.1) 50%, rgba(41,52,118,1) 100%);
+
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  // -webkit-transition-property: left, right; //For center-out
+  // transition-property: left, right; //For center-out
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-// .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
-  color: white;
-}
-// .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+.hvr-overline-from-left:hover:before, .hvr-overline-from-left:focus:before, .hvr-overline-from-left:active:before,
 .btn-outline-primary:hover:before, .btn-outline-primary:focus:before, .btn-outline-primary:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  // left: 0; //Use both for center-out
+  right: 0;
 }
 
-button {
-  &.btn-primary {
-    > a {
-      color: white;
-      transition: all 0.3s ease-in-out;
-    }
-    &:hover {
-      > a {
-        color: $primary;
-        transition: all 0.3s ease-in-out;
-      }
-    }
+/* Ripple Out */
+// @-webkit-keyframes hvr-ripple-out {
+@-webkit-keyframes btn-outline-secondary {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
   }
+}
+@keyframes btn-outline-secondary {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+// .hvr-ripple-out {
+.btn-outline-secondary {
+  // border: 1px solid ;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  &:hover {
+    color: $secondary !important;
+  }
+}
+// .hvr-ripple-out:before {
+.btn-outline-secondary:before {
+  content: '';
+  position: absolute;
+  // border: $secondary solid 1px;
+  border-radius: 2px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+// .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+.btn-outline-secondary:hover:before, .btn-outline-secondary:focus:before, .btn-outline-secondary:active:before {
+  border: $secondary solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
 }

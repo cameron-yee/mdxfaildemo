@@ -48,7 +48,7 @@ const ResearchResourceCenter = (props) => {
                           <Card.Title>{edge.node.frontmatter.title}</Card.Title>
                           <Card.Text className="rrc-excerpt">{edge.node.excerpt}</Card.Text>
                           {/* <Link to={`/resources/research-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link> */}
-                          <Link to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="rrc-read-more"><Button variant="primary">Read More</Button></Link>
+                          <Link to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="rrc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
                         </Card.Body>
                       </Card>
                     </Col>
