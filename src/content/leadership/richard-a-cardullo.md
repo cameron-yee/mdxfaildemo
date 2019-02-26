@@ -1,5 +1,4 @@
 ---
-slug: richard-a-cardullo
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard A. Cardullo, Vice Chair
 template: Image Left
@@ -8,11 +7,14 @@ alt: Richard A. Cardullo headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
-## *Howard H Hays Chair, University Honors
+## *Howard H Hays Chair, University Honors*
 
-##  *Interim Vice Provost, Undergraduate Education
+##  *Interim Vice Provost, Undergraduate Education*
 
 ## Undergraduate Education Professor
 <a href="https://www.ucr.edu/" target="_blank">University of California Riverside</a>

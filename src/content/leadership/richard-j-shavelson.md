@@ -1,5 +1,4 @@
 ---
-slug: richard-j-shavelson
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard J. Shavelson, Chair
 template: Image Left
@@ -10,6 +9,9 @@ jobTitle: Insurance Data Lead
 employer: Capgemini
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 **Richard J. Shavelson**, Ph.D., is the Margaret Jacks Professor of Education and Professor of Psychology (Emeritus) at Stanford University.

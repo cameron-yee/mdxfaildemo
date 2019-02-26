@@ -1,5 +1,4 @@
 ---
-slug: stephen-traphagen
 date: 2018-12-18T23:03:06.180Z
 fullName: Stephen Traphagen
 template: Image Left
@@ -8,6 +7,9 @@ alt: Stephen Traphagen headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *High School Biology & AP Biology Teacher*

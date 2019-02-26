@@ -1,5 +1,4 @@
 ---
-slug: daniel-c-edelson-executive-director
 date: 2018-12-18T23:03:06.180Z
 fullName: Daniel C. Edelson
 template: Image Left
@@ -8,6 +7,9 @@ alt: Daniel C. Edelson headshot.
 additionalTags: Executive Director
 type: Management
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *Executive Director*

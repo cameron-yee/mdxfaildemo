@@ -1,0 +1,63 @@
+.leadership-scrollable-wrapper {
+  height: 36.5em;
+  margin-top: 2.618em;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.leadership-scrollable {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  overflow: auto;
+  padding-bottom: 2rem;
+}
+
+.leadership-card-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.leadership-card-image {
+  display: block;
+  filter: saturate(0.6);
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    filter: saturate(1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.leadership-card {
+  margin: 0 .5em;
+  max-width: 72vw;
+
+  background: #fff;
+  border-radius: 8px;
+  // box-shadow: 0 2px 40px rgba(14,30,37,.16);
+  color: rgba(14,30,37,.8);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-size: .8rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  max-width: 23.224em;
+  position: relative;
+  text-align: left;
+  text-shadow: none;
+  z-index: 10;
+}
+
+.leadership-card-text {
+  padding-bottom: 3rem;
+}
+
+.leadership-read-more {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  // margin-bottom: 0.75rem;
+}

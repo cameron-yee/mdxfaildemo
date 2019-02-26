@@ -1,5 +1,4 @@
 ---
-slug: hilda-borko
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
 template: Image Right
@@ -8,6 +7,9 @@ alt: Hilda Borko headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
+seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoDescription: Test SEO description.
+seoLang: en-us
 ---
 
 ## *Professor*
