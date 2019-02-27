@@ -42,7 +42,7 @@ export default class Header extends Component {
             <div className="p-2 flex-grow-1">
               <Link to="/">
                 <img
-                  className="bscsLogo"
+                  className="bscsLogo img-fluid"
                   src={bscsLogo}
                   alt="BSCS Science Learning logo"
                   style={{
