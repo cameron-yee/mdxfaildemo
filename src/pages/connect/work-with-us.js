@@ -107,16 +107,23 @@ const WorkWithUsPage = class extends Component {
                   >
                     <div class="d-flex">
                       <div class="mr-auto">
-                        Instructional Materials Division
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Instructional Materials Division
+                        </h2>
                       </div>
                       <div class="ml-auto">
                         <i
                           className={
                             collapseID === "collapseOne"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -172,16 +179,23 @@ const WorkWithUsPage = class extends Component {
                   >
                     <div class="d-flex">
                       <div class="mr-auto">
-                        Division of Professional Learning
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Division of Professional Learning
+                        </h2>
                       </div>
                       <div class="ml-auto">
                         <i
                           className={
                             collapseID === "collapseTwo"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -242,16 +256,23 @@ const WorkWithUsPage = class extends Component {
                   >
                     <div class="d-flex">
                       <div class="mr-auto">
-                        Division of Research
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Division of Research
+                        </h2>
                       </div>
                       <div class="ml-auto">
                         <i
                           className={
                             collapseID === "collapseThree"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -320,16 +341,23 @@ const WorkWithUsPage = class extends Component {
                   >
                     <div class="d-flex">
                       <div class="mr-auto">
-                        Our Partners &amp; Collaborators
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Our Partners &amp; Collaborators
+                        </h2>
                       </div>
                       <div class="ml-auto">
                         <i
                           className={
-                            collapseID === "collapseThree"
+                            collapseID === "collapseFour"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero" 
                           }
                         />
                       </div>
