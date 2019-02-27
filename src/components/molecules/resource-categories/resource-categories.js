@@ -15,41 +15,54 @@ const ResourceCategories = class extends Component {
     }
   }
 
+  componentDidUpdate() {
+    if(this.props.filterHash) {
+      this.categoryFilter(undefined, this.props.filterHash)
+    }
+  }
+
   categoryFilter = (e, title) => {
-    e.preventDefault();
-    let id = '';
+    if(e !== undefined) {
+      e.preventDefault();
+    }
     try {
-      if(e.target.getAttribute('href')) {
+      let id;
+      let elem;
+      e !== undefined ? elem = e.target : elem = document.getElementById(title.slice(1)) 
+      // if(elem.getAttribute('href')) {
         if(this.props.navigate) {
-          window.location.href = e.target.getAttribute('href');
+          window.location.href = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
         } else if(window.history.pushState) {
-          window.history.pushState(null, null, e.target.getAttribute('href'));
+          window.history.pushState(null, null, elem.getAttribute('href') || elem.parentElement.getAttribute('href'))
         } else {
-          window.location.hash = e.target.getAttribute('href');
+          window.location.hash = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
         }
-        // window.location.href = e.target.getAttribute('href');
-        id = e.target.getAttribute('id');
-      } else{
-        if(this.props.navigate) {
-          window.location.href = e.target.parentElement.getAttribute('href');
-        } else if(window.history.pushState) {
-          window.history.pushState(null, null, e.target.parentElement.getAttribute('href'));
-        } else {
-          window.location.hash = e.target.parentElement.getAttribute('href');
-        }
-        // window.location.href = e.target.parentElement.getAttribute('href');
-        id = e.target.parentElement.getAttribute('id');
-      }
+        // window.location.href = elem.getAttribute('href');
+        id = elem.getAttribute('id');
+      // } else {
+      //   if(this.props.navigate) {
+      //     window.location.href = elem.parentElement.getAttribute('href');
+      //   } else if(window.history.pushState) {
+      //     window.history.pushState(null, null, elem.parentElement.getAttribute('href'));
+      //   } else {
+      //     window.location.hash = elem.parentElement.getAttribute('href');
+      //   }
+      //   // window.location.href = elem.parentElement.getAttribute('href');
+      //   id = elem.parentElement.getAttribute('id');
+      // }
+
+      document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start"});
+
     } catch(e) {
       console.log(e);
     }
-
-    document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start"});
     
+    console.log(title)
     let courses = document.getElementsByClassName('card');
     for(let i = 0; i < courses.length; i++) {
       if(courses[i].getAttributeNames().includes('data-type')) {
-        if(courses[i].getAttribute('data-type').toLowerCase() !== title) {
+        console.log(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-'), title.replace('#', ''))
+        if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
           courses[i].style.display = 'none';
           courses[i].parentElement.style.display = 'none';
           // courses[i].style.width = '0px';

@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
-import FilterBy from '../../components/atoms/filter-by/filter-by'
+import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import './educator-resource-center.scss';
@@ -24,7 +24,13 @@ const EducatorResourceCenter = class extends Component {
   constructor(props) {
     super(props)
     this.resources = props.data.allMarkdownRemark.edges
-    this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
+    // this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
+    this.filter_items = {
+      //Index 0 for if multiple values are allowed to be selected
+      gradeLevel: ['Grade Level', true, ['Elementary', 'Middle', 'High', 'Postsecondary']],
+      discipline: ['Discipline', true, ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences']],
+      programLength: ['Program Length', false, ['Full Year', 'Modules']]
+    }
     this.state = {
       filter_hash: ""
     }
@@ -45,7 +51,7 @@ const EducatorResourceCenter = class extends Component {
             <Container>
               <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
-                <ResourceCategories navigate={false} />
+                <ResourceCategories navigate={false} filterHash={this.state.filter_hash} />
               </Row>
               <hr />
             </Container>
@@ -57,7 +63,7 @@ const EducatorResourceCenter = class extends Component {
                   <SearchBy />
                 </Col>
                 <Col md={{span: 3, offset: 5}}>
-                  <FilterBy items={this.filter_items} filterHash={this.state.filter_hash} />
+                  <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} />
                 </Col>
               </Row>
               <hr />
