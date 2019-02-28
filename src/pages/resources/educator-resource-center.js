@@ -14,6 +14,7 @@ import Row from 'react-bootstrap/Row'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
 import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
+import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import './educator-resource-center.scss';
@@ -32,7 +33,8 @@ const EducatorResourceCenter = class extends Component {
       programLength: ['Program Length', false, ['Full Year', 'Modules']]
     }
     this.state = {
-      filter_hash: ""
+      filter_hash: "",
+      activeFilters: []
     }
   }
 
@@ -63,9 +65,15 @@ const EducatorResourceCenter = class extends Component {
                   <SearchBy />
                 </Col>
                 <Col md={{span: 3, offset: 5}}>
-                  <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} />
+                  <FilterByDropdown
+                    items={this.filter_items}
+                    filterHash={this.state.filter_hash}
+                    activeFilters={this.state.activeFilters}
+                    setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                  />
                 </Col>
               </Row>
+              <FilterByRow activeFilters={this.state.activeFilters} setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})} />
               <hr />
             </Container>
           </section>

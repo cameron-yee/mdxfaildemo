@@ -13,7 +13,7 @@ const FilterByDropdown = class extends Component {
       dropdownIsActive: false,
       // selected: 'Filter by...'
       filterHash: undefined,
-      activeFilters: []
+      // activeFilters: [] //TODO: Refactor to be a prop
     };
     this.search_items = [];
     // this.setHref = this.setHref.bind(this)
@@ -79,23 +79,27 @@ const FilterByDropdown = class extends Component {
     const getUpdatedFilters = () => {
       let updated_filters;
       if(this.props.items[key][1] === true) {
-        if(this.state.activeFilters.includes(item)) {
-          let index = this.state.activeFilters.indexOf(item)
-          updated_filters = this.state.activeFilters
+        if(this.props.activeFilters.includes(item)) {
+          let index = this.props.activeFilters.indexOf(item)
+          updated_filters = this.props.activeFilters
           updated_filters.splice(index, 1) //Splice indexing starts at 1
+          this.props.setActiveFilters(updated_filters)
           this.setState({activeFilters: updated_filters})
+          return updated_filters
         } else {
-          updated_filters = this.state.activeFilters.concat(item)
+          updated_filters = this.props.activeFilters.concat(item)
+          this.props.setActiveFilters(updated_filters)
           this.setState({activeFilters: updated_filters})
-          return updated_filters;
+          return updated_filters
         }
       } else {
-        updated_filters = this.state.activeFilters.concat(item)
+        updated_filters = this.props.activeFilters.concat(item)
         for(let i = 0; i < updated_filters.length; i++) {
           //Removes any other filters in the same category if multiple is false
-          updated_filters = this.state.activeFilters.filter(item => this.props.items[key][2].indexOf(item) === -1).concat(item)
+          updated_filters = this.props.activeFilters.filter(item => this.props.items[key][2].indexOf(item) === -1).concat(item)
+          this.props.setActiveFilters(updated_filters)
           this.setState({activeFilters: updated_filters})
-          return updated_filters;
+          return updated_filters
         }
       }
 
@@ -208,7 +212,7 @@ const FilterByDropdown = class extends Component {
             <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>Filter by...</Dropdown.Toggle>
             <Dropdown.Menu id="dropdown-menu3">{this.renderFilterMenu(this.props.items)}</Dropdown.Menu>
           </Dropdown>
-          <p>{JSON.stringify(this.state.activeFilters)}</p>
+          <p>{JSON.stringify(this.props.activeFilters)}</p>
         </div>
       )
     } else {
