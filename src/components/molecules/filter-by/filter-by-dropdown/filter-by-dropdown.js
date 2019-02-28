@@ -12,7 +12,7 @@ const FilterByDropdown = class extends Component {
     this.state = {
       dropdownIsActive: false,
       // selected: 'Filter by...'
-      category: undefined,
+      filterHash: undefined,
       activeFilters: []
     };
     this.search_items = [];
@@ -36,10 +36,11 @@ const FilterByDropdown = class extends Component {
 
   componentDidUpdate(prevProps) {
     if(this.props !== prevProps) {
-      this.setState({category: this.props.filterHash.slice(1)})
+      this.setState({filterHash: this.props.filterHash.slice(1)})
     }
   }
 
+  //For arrow spin
   handleToggle = (e) => {
     e.preventDefault()
     const dropdownIsActive = this.state.dropdownIsActive
@@ -68,7 +69,6 @@ const FilterByDropdown = class extends Component {
 
   //Item will be string value that was clicked on
   handleFilter = (e, key, item) => {
-    console.log('hit')
     if(e !== undefined) {
       e.preventDefault()
       // if(item !== 'reset') { 
@@ -76,75 +76,108 @@ const FilterByDropdown = class extends Component {
       // }
     }
 
-    let updated_filters;
-    if(this.props.items[key][1] === true) {
-      if(this.state.activeFilters.includes(item)) {
-        let index = this.state.activeFilters.indexOf(item)
-        updated_filters = this.state.activeFilters
-        updated_filters = updated_filters.splice(index + 1, 1) //Splice indexing starts at 1
-        this.setState({activeFilters: updated_filters})
+    const getUpdatedFilters = () => {
+      let updated_filters;
+      if(this.props.items[key][1] === true) {
+        if(this.state.activeFilters.includes(item)) {
+          let index = this.state.activeFilters.indexOf(item)
+          updated_filters = this.state.activeFilters
+          updated_filters.splice(index, 1) //Splice indexing starts at 1
+          this.setState({activeFilters: updated_filters})
+        } else {
+          updated_filters = this.state.activeFilters.concat(item)
+          this.setState({activeFilters: updated_filters})
+          return updated_filters;
+        }
       } else {
         updated_filters = this.state.activeFilters.concat(item)
-        this.setState({activeFilters: updated_filters})
-      }
-    } else {
-      updated_filters = this.state.activeFilters.concat(item)
-      for(let i = 0; i < updated_filters.length; i++) {
-        //Removes any other filters in the same category if multiple is false
-        updated_filters = this.state.activeFilters.filter(item => this.props.items[key][2].indexOf(item) === -1).concat(item)
-        this.setState({activeFilters: updated_filters})
-      }
-    }
-
-    //Displays all and stops execution if there are no filters
-    if(Array.isArray(updated_filters) && updated_filters.length === 0) {
-      for(let i = 0; i < this.search_items.length; i++) {
-        let elem = document.getElementById(this.search_items[i][0]);
-        elem.style.display = ''
-        elem.parentElement.style.display = ''
-      }
-      return;
-    }
-
-    console.log(updated_filters)
-    for(let i = 0; i < this.search_items.length; i++) {
-      const resource_json = this.search_items[i][1] 
-      let elem = document.getElementById(this.search_items[i][0]);
-      let show = false
-
-      for(var key in resource_json) {
-        if(Array.isArray(resource_json[key]) && resource_json[key].length) {
-          for(let x = 0; x < resource_json[key].length; x++) {
-            if(updated_filters.includes(resource_json[key][x]) && (this.state.filterHash === undefined || this.state.filterHash === resource_json['type'].toLowerCase())) {
-              elem.style.display = '';
-              elem.parentElement.style.display = ''
-              show = true
-              break;
-            }
-          }
-        } else if(typeof(resource_json[key]) === 'string' && updated_filters.includes(resource_json[key]) && (this.state.filterHash === undefined || this.state.filterHash === resource_json['type'].toLowerCase())) {
-          elem.style.display = '';
-          elem.parentElement.style.display = ''
-          show = true
-          break;
+        for(let i = 0; i < updated_filters.length; i++) {
+          //Removes any other filters in the same category if multiple is false
+          updated_filters = this.state.activeFilters.filter(item => this.props.items[key][2].indexOf(item) === -1).concat(item)
+          this.setState({activeFilters: updated_filters})
+          return updated_filters;
         }
       }
 
-      if(!show) {
-        elem.style.display = 'none';
-        elem.parentElement.style.display = 'none';
+    }
+
+    //Displays all and stops execution if there are no filters
+    const checkNoFilters = (updated_filters) => {
+      if(Array.isArray(updated_filters) && updated_filters.length === 0) {
+        if(this.state.filterHash === undefined) {
+          for(let i = 0; i < this.search_items.length; i++) {
+            let elem = document.getElementById(this.search_items[i][0]);
+            elem.style.display = ''
+            elem.parentElement.style.display = ''
+          }
+        } else {
+          for(let i = 0; i < this.search_items.length; i++) {
+            let elem = document.getElementById(this.search_items[i][0]);
+            if(elem.getAttribute('data-type').toLowerCase().replace(' ', '-') === this.state.filterHash) {
+              elem.style.display = ''
+              elem.parentElement.style.display = ''
+            }
+          }
+        }
+        return true;
+      } else {
+        return false
       }
     }
-    // }
+
+    const handleDisplay = (updated_filters) => {
+      for(let i = 0; i < this.search_items.length; i++) {
+        const resource_json = this.search_items[i][1] 
+        let elem = document.getElementById(this.search_items[i][0]);
+        let show = false
+
+        for(var key in resource_json) {
+          if(Array.isArray(resource_json[key]) && resource_json[key].length) {
+            for(let x = 0; x < resource_json[key].length; x++) {
+              if(updated_filters.includes(resource_json[key][x]) && (this.state.filterHash === undefined || this.state.filterHash === resource_json['type'].toLowerCase())) {
+                elem.style.display = '';
+                elem.parentElement.style.display = ''
+                show = true
+                break;
+              }
+            }
+          } else if(typeof(resource_json[key]) === 'string' && updated_filters.includes(resource_json[key]) && (this.state.filterHash === undefined || this.state.filterHash === resource_json['type'].toLowerCase())) {
+            elem.style.display = '';
+            elem.parentElement.style.display = ''
+            show = true
+            break;
+          }
+        }
+        if(!show) {
+          elem.style.display = 'none';
+          elem.parentElement.style.display = 'none';
+        }
+      }
+    }
+
+    const updated_filters = getUpdatedFilters() || []
+    const no_filters = checkNoFilters(updated_filters)
+    if(no_filters) {
+      return;
+    } else {
+      handleDisplay(updated_filters)
+    }
+
     document.getElementById('filter-by-dropdown').focus()
     document.getElementById('filter-by-dropdown').blur()
-    // item === 'reset' ? this.setState({selected: 'Filter by...'}) : this.setState({selected: item})
   }
 
   renderFilterMenu = (items) => {
     let menu = []
     for(let key in items) {
-      let category_title_elem = <Dropdown.Item key={`category-title-${key}`} className="category-title-elem" disabled>{items[key][0]}</Dropdown.Item>
+      let category_title_elem =
+        <Dropdown.Item
+          key={`category-title-${key}`}
+          className="category-title-elem"
+          disabled
+        >
+          {items[key][0]}
+        </Dropdown.Item>
       let category_item_elems = []
       for(let i = 0; i < items[key][2].length; i++) {
         let item =

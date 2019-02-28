@@ -4,7 +4,6 @@ import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
 import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
@@ -12,10 +11,9 @@ import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
-import Canvas from '../../../static/assets/canvas.jpg'
+// import Canvas from '../../../static/assets/canvas.jpg'
 
 import './leadership.scss'
-import { Link } from 'gatsby';
 
 const StaffDirectoryPage = class extends Component {
   constructor(props) {
@@ -50,7 +48,7 @@ const StaffDirectoryPage = class extends Component {
                           <td>{person.node.frontmatter.honorific}</td>
                           <td>{person.node.frontmatter.fullName}</td>
                           <td>{person.node.frontmatter.position}</td>
-                          <td><Button variant="primary" size="sm"><a href={person.node.frontmatter.personalUrl} target="_blank">View Personal Website</a></Button></td>
+                          <td><Button variant="primary" size="sm"><a href={person.node.frontmatter.personalUrl} target="_blank" rel="noopener noreferrer">View Personal Website</a></Button></td>
                         </tr>
                       )
                     })

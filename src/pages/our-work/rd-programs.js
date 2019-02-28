@@ -13,7 +13,7 @@ import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
-import FilterBy from '../../components/atoms/filter-by/filter-by'
+import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 // import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import '../../global-scss/index.scss';
@@ -24,7 +24,7 @@ const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
     this.programs = props.data.allMarkdownRemark.edges
-    this.filter_items = ["Area 1", "Area 2","Area 3", "Area 4"]
+    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Area 1", "Area 2","Area 3", "Area 4"]]}
     this.state = {
       filter_hash: ""
     }
@@ -57,7 +57,7 @@ const RDPrograms = class extends Component {
                   <SearchBy />
                 </Col>
                 <Col md={{span: 3, offset: 5}}>
-                  <FilterBy items={this.filter_items} filterHash={this.state.filter_hash} />
+                  <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} />
                 </Col>
               </Row>
             </Container>

@@ -26,8 +26,7 @@ const ResourceCategories = class extends Component {
       e.preventDefault();
     }
     try {
-      let id;
-      let elem;
+      let id, elem;
       e !== undefined ? elem = e.target : elem = document.getElementById(title.slice(1)) 
       // if(elem.getAttribute('href')) {
         if(this.props.navigate) {
@@ -38,7 +37,7 @@ const ResourceCategories = class extends Component {
           window.location.hash = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
         }
         // window.location.href = elem.getAttribute('href');
-        id = elem.getAttribute('id');
+        id = elem.getAttribute('id') || elem.parentElement.getAttribute('id');
       // } else {
       //   if(this.props.navigate) {
       //     window.location.href = elem.parentElement.getAttribute('href');
@@ -57,11 +56,9 @@ const ResourceCategories = class extends Component {
       console.log(e);
     }
     
-    console.log(title)
     let courses = document.getElementsByClassName('card');
     for(let i = 0; i < courses.length; i++) {
       if(courses[i].getAttributeNames().includes('data-type')) {
-        console.log(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-'), title.replace('#', ''))
         if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
           courses[i].style.display = 'none';
           courses[i].parentElement.style.display = 'none';
