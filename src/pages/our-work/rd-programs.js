@@ -14,6 +14,7 @@ import Row from 'react-bootstrap/Row'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
 import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
+import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 // import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import '../../global-scss/index.scss';
@@ -26,7 +27,8 @@ const RDPrograms = class extends Component {
     this.programs = props.data.allMarkdownRemark.edges
     this.filter_items = {areas_of_work: ["Areas of Work", true, ["Area 1", "Area 2","Area 3", "Area 4"]]}
     this.state = {
-      filter_hash: ""
+      filter_hash: undefined,
+      activeFilters: []
     }
   }
 
@@ -57,9 +59,18 @@ const RDPrograms = class extends Component {
                   <SearchBy />
                 </Col>
                 <Col md={{span: 3, offset: 5}}>
-                  <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} />
+                  {/* <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} /> */}
+                  <FilterByDropdown
+                    items={this.filter_items}
+                    filterHash={this.state.filter_hash}
+                    activeFilters={this.state.activeFilters}
+                    setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                  />
                 </Col>
               </Row>
+              {this.state.activeFilters.length > 0 &&
+              <FilterByRow activeFilters={this.state.activeFilters} setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})} />
+              }
             </Container>
           </section>
           <section className="section">
@@ -95,7 +106,7 @@ const RDPrograms = class extends Component {
                                     to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
                                     className="rd-read-more"
                                   >
-                                    <Button variant="primary">Read More</Button>
+                                    <Button variant="outline-secondary">Read More</Button>
                                   </Link>
                                 </div>
                               </div>

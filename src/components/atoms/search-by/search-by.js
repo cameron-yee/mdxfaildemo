@@ -40,13 +40,20 @@ const SearchBy = class extends React.Component {
       for(let i = 0; i < this.search_items.length; i++) {
         let elem = document.getElementById(this.search_items[i][0]);
         for(var key in this.search_items[i][1]) {
-          if(this.search_items[i][1][key] && item && this.search_items[i][1][key].toString().toLowerCase().includes(item.toLowerCase())) {
-            elem.style.display = '';
-            elem.parentElement.style.display = '';
-            break;
-          } else {
-            elem.style.display = 'none';
-            elem.parentElement.style.display = 'none';
+          if(this.search_items[i][1][key] !== null) {
+          //   console.log((this.search_items[i][1][key]).toString())
+          // }
+            let search_items = this.search_items[i][1][key].toString().toLowerCase().split()
+            let item_as_array = item.toLowerCase().split()
+            // if(this.search_items[i][1][key] && item && this.search_items[i][1][key].toString().toLowerCase().split().sort().toString().includes(item.toLowerCase().split().sort().toString())) {
+            if(this.search_items[i][1][key] && item && [...search_items].sort().toString().toLowerCase().includes([...item_as_array].sort().toString().toLowerCase())) {
+              elem.style.display = '';
+              elem.parentElement.style.display = '';
+              break;
+            } else {
+              elem.style.display = 'none';
+              elem.parentElement.style.display = 'none';
+            }
           }
         }
       }

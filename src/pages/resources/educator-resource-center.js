@@ -33,14 +33,14 @@ const EducatorResourceCenter = class extends Component {
       programLength: ['Program Length', false, ['Full Year', 'Modules']]
     }
     this.state = {
-      filter_hash: "",
+      filterHash: undefined,
       activeFilters: []
     }
   }
 
   componentDidMount() {
     if(this.props.location.hash) {
-      this.setState({filter_hash: this.props.location.hash})
+      this.setState({filterHash: this.props.location.hash})
     }
   }
 
@@ -53,7 +53,11 @@ const EducatorResourceCenter = class extends Component {
             <Container>
               <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
-                <ResourceCategories navigate={false} filterHash={this.state.filter_hash} />
+                <ResourceCategories
+                  navigate={false}
+                  filterHash={this.state.filterHash}
+                  setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
+                />
               </Row>
               <hr />
             </Container>
@@ -67,13 +71,18 @@ const EducatorResourceCenter = class extends Component {
                 <Col md={{span: 3, offset: 5}}>
                   <FilterByDropdown
                     items={this.filter_items}
-                    filterHash={this.state.filter_hash}
+                    filterHash={this.state.filterHash}
                     activeFilters={this.state.activeFilters}
                     setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
                   />
                 </Col>
               </Row>
-              <FilterByRow activeFilters={this.state.activeFilters} setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})} />
+              {this.state.activeFilters.length > 0 &&
+                <FilterByRow
+                  activeFilters={this.state.activeFilters}
+                  setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                />
+              }
               <hr />
             </Container>
           </section>
