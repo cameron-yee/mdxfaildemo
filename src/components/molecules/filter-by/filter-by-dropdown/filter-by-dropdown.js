@@ -72,7 +72,7 @@ const FilterByDropdown = class extends Component {
         if(Array.isArray(current_filter) && current_filter.length) {
           //Loops through each matchable value in a category of matchable values for each DOM element
           for(let x = 0; x < current_filter.length; x++) {
-            if(updated_filters.includes(current_filter[x]) && this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))) {
+            if(updated_filters.includes(current_filter[x]) && (!this.props.filterHash || (this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))))) {
               show = displayElement(elem) // show = true
               break;
             } else if(updated_filters.includes(current_filter[x]) && !this.props.filterHash) {
@@ -80,9 +80,7 @@ const FilterByDropdown = class extends Component {
               break;
             }
           }
-        } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && this.props.filterHash.replace('#', '') === (undefined || filter_category)) {
-          // console.log(this.props.filterHash.replace('#', ''), filter_category)
-          // console.log(updated_filters, current_filter)
+        } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && (!this.props.filterHash || (this.props.filterHash && this.props.filterHash.replace('#', '') === (undefined || filter_category)))) {
           show = displayElement(elem) // show = true
           break;
         }
@@ -200,7 +198,8 @@ const FilterByDropdown = class extends Component {
     if(this.props.items) {
       return (
         <div id="filter">
-          <Dropdown id="dropdown" style={{float: 'right'}}>
+          {/* <Dropdown id="dropdown" style={{float: 'right'}}> */}
+          <Dropdown id="dropdown">
             {/* <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>{this.state.selected}</Dropdown.Toggle> */}
             <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>Filter by...</Dropdown.Toggle>
             <Dropdown.Menu id="dropdown-menu3">{this.renderFilterMenu(this.props.items)}</Dropdown.Menu>

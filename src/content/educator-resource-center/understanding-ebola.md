@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
 template: Image Right
-image: /assets/understanding-ebola.png
+image: /assets/cells.jpeg
 alt: PLACEHOLDER
 price: 0
 courseId: 0

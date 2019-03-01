@@ -23,8 +23,10 @@ const FilterByRow = class extends Component {
     return (
       <React.Fragment>
         <hr />
-        <Row>
-          <Col xs={12} md={10}>
+        {/* <Row>
+          <Col xs={12} md={10}> */}
+        <div className="d-sm-flex">
+          <div className="p-2">
             {
               this.props.activeFilters.map((filter, index) => {
                 return(
@@ -35,11 +37,15 @@ const FilterByRow = class extends Component {
                 )
               })
             }
-          </Col> 
-          <Col xs={12} md={2}>
-            <Button size="sm" variant="outline-primary" onClick={this.reset} style={{float: 'right'}}>Reset Filters</Button>
-          </Col> 
-        </Row>
+          </div>
+          <div className="p-2 ml-auto">
+          {/* </Col> 
+          <Col xs={12} md={2}> */}
+            <Button size="sm" variant="outline-primary" onClick={this.reset}>Clear Filters</Button>
+          </div>
+        </div>
+          {/* </Col>  */}
+        {/* </Row> */}
       </React.Fragment>
     )
   }

@@ -64,19 +64,19 @@ const EducatorResourceCenter = class extends Component {
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>
-              <Row>
-                <Col md={4}>
+              <div className="d-sm-flex">
+                <div className="p-2">
                   <SearchBy />
-                </Col>
-                <Col md={{span: 3, offset: 5}}>
+                </div>
+                <div className="p-2 ml-auto">
                   <FilterByDropdown
                     items={this.filter_items}
                     filterHash={this.state.filterHash}
                     activeFilters={this.state.activeFilters}
                     setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
                   />
-                </Col>
-              </Row>
+                </div>
+              </div>
               {this.state.activeFilters.length > 0 &&
                 <FilterByRow
                   activeFilters={this.state.activeFilters}
@@ -99,8 +99,8 @@ const EducatorResourceCenter = class extends Component {
                           </div>
                           <Card.Body>
                             <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                            <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="erc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
+                            <Card.Text className="erc-excerpt">{edge.node.excerpt}</Card.Text>
+                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="p-2 erc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
                           </Card.Body>
                         </Card>
                       </Col>
