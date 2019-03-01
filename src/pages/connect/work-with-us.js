@@ -56,22 +56,71 @@ const WorkWithUsPage = class extends Component {
   // }
 
   state={
-    collapseID: ""
+    collapseID: "",
+    collapseOneHeight: "",
+    collapseTwoHeight: "",
+    collapseThreeHeight: "",
+    collapseFourHeight: ""
   }
 
-  toggleCollapse = collapseID => () =>
+  toggleCollapse = (collapseID) => {
     this.setState(prevState => ({
       collapseID: prevState.collapseID !== collapseID ? collapseID : ""
     }))
+  }
 
   componentDidMount() {
     if(this.props.location.hash) {
       this.setState({filter_hash: this.props.location.hash})
     }
+
+    window.setTimeout(() => {
+      const el1 = document.getElementById("collapseOne")
+      const collapseOneHeight = el1.scrollHeight
+      
+      const el2 = document.getElementById("collapseTwo")
+      const collapseTwoHeight = el2.scrollHeight
+      
+      const el3 = document.getElementById("collapseThree")
+      const collapseThreeHeight = el3.scrollHeight
+
+      const el4 = document.getElementById("collapseFour")
+      const collapseFourHeight = el4.scrollHeight
+      
+      // console.log(collapseOneHeight)
+      // console.log(collapseTwoHeight)
+      // console.log(collapseThreeHeight)
+      // console.log(collapseFourHeight)
+
+      this.setState({
+				collapseOneHeight,
+				collapseTwoHeight,
+				collapseThreeHeight,
+				collapseFourHeight
+			})
+    }, 333)
   }
 
   render() {
-    const { collapseID } = this.state
+    const {
+      collapseID,
+      collapseOneHeight,
+      collapseTwoHeight,
+      collapseThreeHeight,
+      collapseFourHeight
+    } = this.state
+    const collapseOneHeightStyle = {
+      maxHeight: collapseID === "collapseOne" ? `${collapseOneHeight}px` : '0px'
+    }
+    const collapseTwoHeightStyle = {
+      maxHeight: collapseID === "collapseTwo" ? `${collapseTwoHeight}px` : '0px'
+    }
+    const collapseThreeHeightStyle = {
+      maxHeight: collapseID === "collapseThree" ? `${collapseThreeHeight}px` : '0px'
+    }
+    const collapseFourHeightStyle = {
+      maxHeight: collapseID === "collapseFour" ? `${collapseFourHeight}px` : '0px'
+    }
     return (
       <Layout location={this.props.location}>
         <SEO title="Work With Us" />
@@ -102,21 +151,27 @@ const WorkWithUsPage = class extends Component {
                     data-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
-                    id="collapseOne"
-                    onClick={this.toggleCollapse("collapseOne")}
+                    onClick={() => this.toggleCollapse("collapseOne")}
                   >
-                    <div class="d-flex">
-                      <div class="mr-auto">
-                        Instructional Materials Division
+                    <div className="d-flex">
+                      <div className="mr-auto">
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Instructional Materials Division
+                        </h2>
                       </div>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <i
                           className={
                             collapseID === "collapseOne"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -131,6 +186,7 @@ const WorkWithUsPage = class extends Component {
                       : 
                       'collapse accordionCollapse'
                     }
+                    style={ collapseOneHeightStyle }
                     aria-labelledby="headingOne"
                     data-parent="#accordion"
                   >
@@ -167,21 +223,27 @@ const WorkWithUsPage = class extends Component {
                     data-target="#collapseTwo"
                     aria-expanded="false"
                     aria-controls="collapseTwo"
-                    id="collapseTwo"
-                    onClick={this.toggleCollapse("collapseTwo")}
+                    onClick={() => this.toggleCollapse("collapseTwo")}
                   >
-                    <div class="d-flex">
-                      <div class="mr-auto">
-                        Division of Professional Learning
+                    <div className="d-flex">
+                      <div className="mr-auto">
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Division of Professional Learning
+                        </h2>
                       </div>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <i
                           className={
                             collapseID === "collapseTwo"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -196,14 +258,15 @@ const WorkWithUsPage = class extends Component {
                       : 
                       'collapse accordionCollapse'
                     }
+                    style={ collapseTwoHeightStyle }
                     aria-labelledby="headingTwo"
                     data-parent="#accordion"
                   >
                     <div className="card-body">
                       <h3>Our Capabilities</h3>
                       <ul>
-                        <li>
-                          <ul>Deliver proven-effective STeLLA (hyperlink) teacher professional learning program
+                        <li>Deliver proven-effective STeLLA (hyperlink) teacher professional learning program
+                          <ul>
                             <li>Support teachers in using high-leverage science teaching strategies through video-based lesson analysis</li>
                             <li>Work closely with teachers over the course of one school year</li>
                           </ul>
@@ -237,21 +300,27 @@ const WorkWithUsPage = class extends Component {
                     data-target="#collapseThree"
                     aria-expanded="false"
                     aria-controls="collapseThree"
-                    id="collapseThree"
-                    onClick={this.toggleCollapse("collapseThree")}
+                    onClick={() => this.toggleCollapse("collapseThree")}
                   >
-                    <div class="d-flex">
-                      <div class="mr-auto">
-                        Division of Research
+                    <div className="d-flex">
+                      <div className="mr-auto">
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Division of Research
+                        </h2>
                       </div>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <i
                           className={
                             collapseID === "collapseThree"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero"
                           }
                         />
                       </div>
@@ -266,6 +335,7 @@ const WorkWithUsPage = class extends Component {
                       : 
                       'collapse accordionCollapse'
                     }
+                    style={ collapseThreeHeightStyle }
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
                   >
@@ -315,21 +385,27 @@ const WorkWithUsPage = class extends Component {
                     data-target="#collapseFour"
                     aria-expanded="false"
                     aria-controls="collapseFour"
-                    id="collapseFour"
-                    onClick={this.toggleCollapse("collapseFour")}
+                    onClick={() => this.toggleCollapse("collapseFour")}
                   >
-                    <div class="d-flex">
-                      <div class="mr-auto">
-                        Our Partners &amp; Collaborators
+                    <div className="d-flex">
+                      <div className="mr-auto">
+                        <h2
+                          style={{
+                            marginBottom: '0',
+                            lineHeight: '1.5'
+                          }}
+                        >
+                          Our Partners &amp; Collaborators
+                        </h2>
                       </div>
-                      <div class="ml-auto">
+                      <div className="ml-auto">
                         <i
                           className={
-                            collapseID === "collapseThree"
+                            collapseID === "collapseFour"
                             ?
-                            "fa fa-angle-up"
+                            "fa fa-angle-down counterclockwise-180"
                             :
-                            "fa fa-angle-down" 
+                            "fa fa-angle-down clockwise-to-zero" 
                           }
                         />
                       </div>
@@ -344,6 +420,7 @@ const WorkWithUsPage = class extends Component {
                       : 
                       'collapse accordionCollapse'
                     }
+                    style={ collapseFourHeightStyle }
                     aria-labelledby="headingFour"
                     data-parent="#accordion"
                   >

@@ -57,3 +57,14 @@ a.nav-link.active {
     outline: none;
   }
 }
+
+.footer-nl,
+.dropdown-item {
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    animation: pulse;
+    animation-duration: 0.2s;
+  }
+}
