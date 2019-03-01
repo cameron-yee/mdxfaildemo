@@ -72,8 +72,10 @@ const FilterByDropdown = class extends Component {
         if(Array.isArray(current_filter) && current_filter.length) {
           //Loops through each matchable value in a category of matchable values for each DOM element
           for(let x = 0; x < current_filter.length; x++) {
-            if(updated_filters.includes(current_filter[x]) && (this.props.filterHash.replace('#', '') === (undefined || filter_category))) {
-              // console.log(true)
+            if(updated_filters.includes(current_filter[x]) && this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))) {
+              show = displayElement(elem) // show = true
+              break;
+            } else if(updated_filters.includes(current_filter[x]) && !this.props.filterHash) {
               show = displayElement(elem) // show = true
               break;
             }
