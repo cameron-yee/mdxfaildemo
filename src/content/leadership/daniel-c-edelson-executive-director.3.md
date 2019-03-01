@@ -28,4 +28,4 @@ As a researcher and advocate, Dr. Edelson has written extensively on geoscience,
 
 Dr. Edelson received his Ph.D. in Computer Science from Northwestern University and his B.S. in Engineering Sciences from Yale University. In 2013, he received the President’s Award from the National Council for Geographic Education. 
 
-<a href="#" target="_blank">Read Daniel Edelson's vitae.</a>
+<a href="#" target="_blank" rel="noopener noreferrer">Read Daniel Edelson's vitae.</a>

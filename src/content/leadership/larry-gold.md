@@ -13,11 +13,11 @@ seoLang: en-us
 ---
 
 ## *Professor, Molecular, Cellular, and Developmental Biology*
-<a href="http://www.colorado.edu" target="_blank">University of Colorado Boulder</a>
+<a href="http://www.colorado.edu" target="_blank" rel="noopener noreferrer">University of Colorado Boulder</a>
 
 
 ## *Founder and Chairman*
-<a href="https://somalogic.com/" target="_blank">SomaLogic</a>
+<a href="https://somalogic.com/" target="_blank" rel="noopener noreferrer">SomaLogic</a>
 
 **Larry Gold**, Ph.D., is Professor of Molecular, Cellular, and Developmental Biology at the University of Colorado, Boulder, and the Founder and Chairman of SomaLogic in Boulder.
 

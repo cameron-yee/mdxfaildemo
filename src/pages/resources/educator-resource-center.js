@@ -91,9 +91,11 @@ const EducatorResourceCenter = class extends Component {
               <Row>
                 {
                   this.resources.map((edge, index) => {
+                    let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                    data_filter['excerpt'] = edge.node.excerpt
                     return(
                       <Col md={4} key={edge.node.id} className="erc-card-col">
-                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
                           <div className="erc-card-img-wrapper">
                             <Card.Img variant="top" className="erc-card-img" src={edge.node.frontmatter.image}/>
                           </div>

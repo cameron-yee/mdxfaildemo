@@ -141,6 +141,7 @@
   position: relative;
   margin: 2rem 0;
   transition: all 0.3s ease-in-out;
+  // height: 100%;
 
   // &:hover {
   //   transform: scale(1.02);
@@ -148,11 +149,11 @@
   // }
 }
 
-.rd-button-wrapper {
-  position: absolute;
-  bottom: 5%;
-  width: 90%;
-}
+// .rd-button-wrapper {
+//   position: absolute;
+//   bottom: 5%;
+//   width: 90%;
+// }
 
 // .pill {
 //   border-radius: 50%;
@@ -164,16 +165,18 @@
 }
 
 .rd-image-wrapper {
-  height: 250px;
+  width: 100%;
   overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  // border-top-left-radius: 4px;
+  // border-top-right-radius: 4px;
 }
 
 .rd-image {
-  display: block;
-  margin: auto 0;
-  min-width: 100%;
+  height: auto;
   width: 100%;
-  min-height: 100%; 
+  min-width: 100%;
 }
 
 .rd-pill {

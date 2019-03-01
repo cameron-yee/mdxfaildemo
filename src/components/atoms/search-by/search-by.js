@@ -25,13 +25,9 @@ const SearchBy = class extends React.Component {
     }
   }
 
-  handleFilter = (item) => {
-    if(item === '') {
-      return;
-    }
-    else if(item.toLowerCase() === 'reset') {
+  handleFilter = (search_term) => {
+    if(search_term.toLowerCase() === ('reset' || '' || null || undefined)) {
       for(let i = 0; i < this.search_items.length; i++) {
-        console.log(this.search_items[i]);
         let elem = document.getElementById(this.search_items[i][0]);
         elem.style.display = '';
         elem.parentElement.style.display = '';
@@ -41,12 +37,21 @@ const SearchBy = class extends React.Component {
         let elem = document.getElementById(this.search_items[i][0]);
         for(var key in this.search_items[i][1]) {
           if(this.search_items[i][1][key] !== null) {
-          //   console.log((this.search_items[i][1][key]).toString())
-          // }
-            let search_items = this.search_items[i][1][key].toString().toLowerCase().split()
-            let item_as_array = item.toLowerCase().split()
-            // if(this.search_items[i][1][key] && item && this.search_items[i][1][key].toString().toLowerCase().split().sort().toString().includes(item.toLowerCase().split().sort().toString())) {
-            if(this.search_items[i][1][key] && item && [...search_items].sort().toString().toLowerCase().includes([...item_as_array].sort().toString().toLowerCase())) {
+            // let search_term_sorted = search_term.toString().toLowerCase().split().sort().toString().replace(/,/g, '')
+            // let search_item_raw = this.search_items[i][1][key].toString().toLowerCase().split()
+            // let search_item_array = []
+            // for(let i = 0; i < search_item_raw.length; i++) {
+            //   for(let y = 0; y < search_item_raw[0].length; y++) {
+            //     search_item_array.push(search_item_raw[0][y])
+            //   }
+            // }
+            // let search_item_sorted = search_item_array.sort().toString().replace(/,/g, '')
+            // let search_item_sorted = search_item_array
+
+
+            let search_item_sorted = this.search_items[i][1][key].toString().toLowerCase().replace(/,/g, '')
+            let search_term_sorted = search_term.toLowerCase().replace(/,/g, '')
+            if(search_item_sorted.includes(search_term_sorted)) {
               elem.style.display = '';
               elem.parentElement.style.display = '';
               break;

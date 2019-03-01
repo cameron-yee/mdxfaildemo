@@ -48,7 +48,7 @@ const StaffDirectoryPage = class extends Component {
                           <td>{person.node.frontmatter.honorific}</td>
                           <td>{person.node.frontmatter.fullName}</td>
                           <td>{person.node.frontmatter.position}</td>
-                          <td><Button variant="primary" size="sm"><a href={person.node.frontmatter.personalUrl} target="_blank" rel="noopener noreferrer">View Personal Website</a></Button></td>
+                          <td><Button variant="outline-secondary" size="sm"><a href={person.node.frontmatter.personalUrl} target="_blank" rel="noopener noreferrer">View Personal Website</a></Button></td>
                         </tr>
                       )
                     })

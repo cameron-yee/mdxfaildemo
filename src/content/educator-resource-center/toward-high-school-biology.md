@@ -22,7 +22,7 @@ BSCS Science Learning has developed and field tested a curriculum unit to provid
 
 Toward High School Biology, Student Edition is available for purchase through NSTA Press. It should be used in conjunction with the Teacher Edition, which provides complete lesson plans and instructions for carrying out the activities. Complimentary video demonstrations and tutorials are also available online.   
 
-<button class="btn btn-primary"><a href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681404431/" target="_blank">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681404431/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 _This resource was developed in partnership with the American Association for the Advancement of Science (AAAS) Project 2061. Field-test results were published in CBE-Life Sciences Education._
 

@@ -19,7 +19,7 @@ That’s why BSCS Science Learning developed EMAT. This free online course helps
 
 Preview the assets (hyperlink to the same assets page referenced in the “classroom” version of this resource page) or register for the full course below. 
 
-<button class="btn btn-primary"><a href="http://ematdev.bscs.org//" target="_blank">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="http://ematdev.bscs.org//" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 (change this to Canvas platform link once it is fully transferred over)
 
