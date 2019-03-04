@@ -38,7 +38,7 @@ const RDProgramsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarUrl || this.resource.sidebarText) &&
-                <Col xs={9}>
+                <Col md={9}>
                   <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
                 </Col>
               }
@@ -48,22 +48,16 @@ const RDProgramsTemplate = class extends Component {
                 </Col>
               }
               {(this.resource.sidebarUrl || this.resource.sidebarText) &&
-                <Col xs={3} style={{borderLeft: '1px solid rgba(0,0,0,0.1)'}}>
+                <Col md={3}>
                   <Card>
                     <Card.Body>
                       {/* <Card.Title>Resource Information</Card.Title> */}
                       <Card.Text style={{fontSize: '.8rem'}}>
                         {this.resource.sidebarText}
                       </Card.Text>
-                      <Button size="sm" variant="primary">
-                        <a
-                          href={this.resource.sidebarUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Access Resource Here
-                        </a>
-                      </Button>
+                      <a href={this.resource.sidebarUrl} target="_blank" rel="noopener noreferrer">
+                        <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
+                      </a>
                     </Card.Body>
                   </Card>
                 </Col>

@@ -13,7 +13,8 @@ import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
-import FilterBy from '../../components/atoms/filter-by/filter-by'
+import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
+import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 // import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import '../../global-scss/index.scss';
@@ -24,9 +25,10 @@ const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
     this.programs = props.data.allMarkdownRemark.edges
-    this.filter_items = ["Area 1", "Area 2","Area 3", "Area 4"]
+    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Area 1", "Area 2","Area 3", "Area 4"]]}
     this.state = {
-      filter_hash: ""
+      filter_hash: undefined,
+      activeFilters: []
     }
   }
 
@@ -57,9 +59,18 @@ const RDPrograms = class extends Component {
                   <SearchBy />
                 </Col>
                 <Col md={{span: 3, offset: 5}}>
-                  <FilterBy items={this.filter_items} filterHash={this.state.filter_hash} />
+                  {/* <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} /> */}
+                  <FilterByDropdown
+                    items={this.filter_items}
+                    filterHash={this.state.filter_hash}
+                    activeFilters={this.state.activeFilters}
+                    setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                  />
                 </Col>
               </Row>
+              {this.state.activeFilters.length > 0 &&
+              <FilterByRow activeFilters={this.state.activeFilters} setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})} />
+              }
             </Container>
           </section>
           <section className="section">
@@ -67,40 +78,49 @@ const RDPrograms = class extends Component {
               {/* <Row> */}
                 {
                   this.programs.map((edge, index) => {
+                    let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                    data_filter['excerpt'] = edge.node.excerpt
                     return(
-                      <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
-                        {/* <hr style={{borderColor: '#3087b4'}} /> */}
-                        <hr />
-                        <Row className="rd-feed-item">
-                          <Col xs={3}>
+                      // id="parent" div because of search component
+                      <div id="parent">
+                        <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
                           {/* <hr style={{borderColor: '#3087b4'}} /> */}
-                            <div className="rd-image-wrapper">
-                              <img className="rd-image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
-                            </div>
-                          </Col>
-                          <Col xs={9}>
-                              {/* <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}> */}
-                              <div>
-                                <h3>{edge.node.frontmatter.title}</h3>
-                                <p>{edge.node.excerpt}</p>
-                                { edge.node.frontmatter.areas.map((area, index) => {
-                                    const variants = ['primary','secondary','success','danger']
-                                    return(
-                                      <span key={index} className={`rd-pill badge badge-pill badge-${variants[index]}`}>{area}</span>
-                                    )
-                                  })
-                                }
-                                <div className="button-wrapper">
-                                  <Link
-                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                    className="rd-read-more"
-                                  >
-                                    <Button variant="primary">Read More</Button>
-                                  </Link>
-                                </div>
+                          <hr />
+                          <Row className="rd-feed-item">
+                            <Col xs={3}>
+                            {/* <hr style={{borderColor: '#3087b4'}} /> */}
+                              <div className="rd-image-wrapper">
+                                <img className="rd-image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
                               </div>
-                          </Col>
-                        </Row>
+                            </Col>
+                            <Col xs={9}>
+                                {/* <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}> */}
+                                <div>
+                                  <h3>{edge.node.frontmatter.title}</h3>
+                                  <p>{edge.node.excerpt}</p>
+                                  <div className="d-sm-flex">
+                                    <div className="p-2">
+                                      { edge.node.frontmatter.areas.map((area, index) => {
+                                          const variants = ['primary','secondary','success','danger']
+                                          return(
+                                            <span key={index} className={`rd-pill badge badge-pill badge-${variants[index]}`}>{area}</span>
+                                          )
+                                        })
+                                      }
+                                    </div>
+                                    <div className="p-2 ml-auto button-wrapper">
+                                      <Link
+                                        to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                                        // className="rd-read-more"
+                                      >
+                                        <Button variant="outline-secondary">Read More</Button>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </div>
+                            </Col>
+                          </Row>
+                        </div>
                       </div>
                     )
                   }) 

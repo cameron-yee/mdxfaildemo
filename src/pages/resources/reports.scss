@@ -151,12 +151,14 @@
 
 .rrc-card-img-wrapper {
   height: 250px;
+  // height: 40%;
   overflow: hidden;
+  object-fit: cover;
 }
 
 .rrc-card-img {
-  display: block;
-  margin: auto 0;
+  // display: block;
+  // margin: auto 0;
   min-width: 100%;
   min-height: 100%; 
 }

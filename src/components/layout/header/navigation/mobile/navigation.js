@@ -73,7 +73,7 @@ export default class MobileNavigation extends Component {
                                 className={
                                   edge.node.items.map((item, index) => {
                                     return(
-                                      this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "active" : null
+                                      this.props.location.pathname.includes(item.path) && item.path !== "/join/" ? "active mobile-menu" : "mobile-menu"
                                     )
                                   })
                                 }

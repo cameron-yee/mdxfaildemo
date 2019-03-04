@@ -5,3 +5,9 @@
     }
   }
 }
+
+.mobile-menu {
+  > .dropdown-menu {
+    border: none !important;
+  }
+}

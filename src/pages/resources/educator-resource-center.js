@@ -13,7 +13,8 @@ import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
-import FilterBy from '../../components/atoms/filter-by/filter-by'
+import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
+import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import './educator-resource-center.scss';
@@ -24,15 +25,22 @@ const EducatorResourceCenter = class extends Component {
   constructor(props) {
     super(props)
     this.resources = props.data.allMarkdownRemark.edges
-    this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
+    // this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
+    this.filter_items = {
+      //Index 0 for if multiple values are allowed to be selected
+      gradeLevel: ['Grade Level', true, ['Elementary', 'Middle', 'High', 'Postsecondary']],
+      discipline: ['Discipline', true, ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences']],
+      programLength: ['Program Length', false, ['Full Year', 'Modules']]
+    }
     this.state = {
-      filter_hash: ""
+      filterHash: undefined,
+      activeFilters: []
     }
   }
 
   componentDidMount() {
     if(this.props.location.hash) {
-      this.setState({filter_hash: this.props.location.hash})
+      this.setState({filterHash: this.props.location.hash})
     }
   }
 
@@ -45,21 +53,36 @@ const EducatorResourceCenter = class extends Component {
             <Container>
               <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
-                <ResourceCategories navigate={false} />
+                <ResourceCategories
+                  navigate={false}
+                  filterHash={this.state.filterHash}
+                  setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
+                />
               </Row>
               <hr />
             </Container>
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>
-              <Row>
-                <Col md={4}>
+              <div className="d-sm-flex">
+                <div className="p-2">
                   <SearchBy />
-                </Col>
-                <Col md={{span: 3, offset: 5}}>
-                  <FilterBy items={this.filter_items} filterHash={this.state.filter_hash} />
-                </Col>
-              </Row>
+                </div>
+                <div className="p-2 ml-auto">
+                  <FilterByDropdown
+                    items={this.filter_items}
+                    filterHash={this.state.filterHash}
+                    activeFilters={this.state.activeFilters}
+                    setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                  />
+                </div>
+              </div>
+              {this.state.activeFilters.length > 0 &&
+                <FilterByRow
+                  activeFilters={this.state.activeFilters}
+                  setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                />
+              }
               <hr />
             </Container>
           </section>
@@ -68,16 +91,18 @@ const EducatorResourceCenter = class extends Component {
               <Row>
                 {
                   this.resources.map((edge, index) => {
+                    let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                    data_filter['excerpt'] = edge.node.excerpt
                     return(
                       <Col md={4} key={edge.node.id} className="erc-card-col">
-                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
+                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
                           <div className="erc-card-img-wrapper">
                             <Card.Img variant="top" className="erc-card-img" src={edge.node.frontmatter.image}/>
                           </div>
                           <Card.Body>
                             <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                            <Card.Text className="excerpt">{edge.node.excerpt}</Card.Text>
-                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="erc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
+                            <Card.Text className="erc-excerpt">{edge.node.excerpt}</Card.Text>
+                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="p-2 erc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
                           </Card.Body>
                         </Card>
                       </Col>

@@ -145,30 +145,31 @@
 
 .erc-card {
   height: 100%;
-  position: relative;
-  padding-bottom: 10%;
-  
+  // position: relative;
+  // padding-bottom: 10%;
 }
 
 .erc-card-img-wrapper {
-  height: 250px;
   overflow: hidden;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .erc-card-img {
-  display: block;
-  margin: auto 0;
+  height: auto;
   min-width: 100%;
-  min-height: 100%; 
+  width: 100%;
 }
 
 .erc-excerpt {
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem !important;
+  // margin-bottom: 1.5rem;
 }
 
 .erc-read-more {
+  float: right;
   position: absolute;
-  bottom: 4%;
+  bottom: 2%;
   right: 10%;
 }
 
