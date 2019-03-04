@@ -20,19 +20,15 @@ const StaffDirectoryPage = class extends Component {
     super(props)
     this.state = {
       staff: props.data.allMarkdownRemark.edges,
-      sortedBy: {
-        firstName: {
-          name: false,
-          order: 0
-        },
-        lastName: {
-          name: true,
-          order: 0
-        },
-        title: {
-          name: false,
-          order: 0
-        }
+      order: 0,
+      firstName: {
+        order: 0
+      },
+      lastName: {
+        order: 1
+      },
+      title: {
+        order: 0
       }
     }
   }
@@ -57,28 +53,187 @@ const StaffDirectoryPage = class extends Component {
     return comparison
   }
 
-  sortByFirstName = (a, b) => {
-    const personA = a.node.frontmatter.firstName.toUpperCase()
-    const personB = b.node.frontmatter.firstName.toUpperCase()
-    return this.comparison(personA, personB)
+  sortByFirstName = () => {
+    if (this.state.firstName.order === 1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.firstName.toUpperCase()
+            const personB = b.node.frontmatter.firstName.toUpperCase()
+            return this.reverseComparison(personA, personB)
+          }),
+          firstName: {
+            order: -1
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    } else if (this.state.firstName.order === -1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.firstName.toUpperCase()
+            const personB = b.node.frontmatter.firstName.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 1
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    } else if (this.state.firstName.order === 0) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.firstName.toUpperCase()
+            const personB = b.node.frontmatter.firstName.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 1
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    }
   }
 
-  sortByLastName = (a, b) => {
-    const personA = a.node.frontmatter.lastName.toUpperCase()
-    const personB = b.node.frontmatter.lastName.toUpperCase()
-    return this.comparison(personA, personB)
+  sortByLastName = () => {
+    if (this.state.lastName.order === 1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.lastName.toUpperCase()
+            const personB = b.node.frontmatter.lastName.toUpperCase()
+            return this.reverseComparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: -1
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    } else if (this.state.lastName.order === -1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.lastName.toUpperCase()
+            const personB = b.node.frontmatter.lastName.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: 1
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    } else if (this.state.lastName.order === 0) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.lastName.toUpperCase()
+            const personB = b.node.frontmatter.lastName.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: 1
+          },
+          title: {
+            order: 0
+          }
+        }))
+      )
+    }
   }
 
-  sortByTitle = (a, b) => {
-    const personA = a.node.frontmatter.title.toUpperCase()
-    const personB = b.node.frontmatter.title.toUpperCase()
-    return this.comparison(personA, personB)
-  }
-
-  sortBy = (type) => {
-    this.setState(prevState => ({
-      staff: prevState.staff.sort(type)
-    }))
+  sortByTitle = () => {
+    if (this.state.title.order === 1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.title.toUpperCase()
+            const personB = b.node.frontmatter.title.toUpperCase()
+            return this.reverseComparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: -1
+          }
+        }))
+      )
+    } else if (this.state.title.order === -1) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.title.toUpperCase()
+            const personB = b.node.frontmatter.title.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: 1
+          }
+        }))
+      )
+    } else if (this.state.title.order === 0) {
+      return (
+        this.setState(prevState => ({
+          staff: prevState.staff.sort((a, b) => {
+            const personA = a.node.frontmatter.title.toUpperCase()
+            const personB = b.node.frontmatter.title.toUpperCase()
+            return this.comparison(personA, personB)
+          }),
+          firstName: {
+            order: 0
+          },
+          lastName: {
+            order: 0
+          },
+          title: {
+            order: 1
+          }
+        }))
+      )
+    }
   }
 
   render() {
@@ -97,7 +252,7 @@ const StaffDirectoryPage = class extends Component {
                         cursor: 'pointer',
                         width: '160px'
                       }}
-                      onClick={ () => this.sortBy(this.sortByLastName) }
+                      onClick={ () => this.sortByLastName() }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -105,13 +260,13 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sortedBy === ""
+                            this.state.lastName.order === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sortedBy === ""
+                            this.state.lastName.order === -1
                             ?
-                            <i className="fas fa-sort-up"></i>
+                            <i className="fas fa-sort-down"></i>
                             :
                             <i className="fas fa-sort"></i>
                           }
@@ -123,7 +278,7 @@ const StaffDirectoryPage = class extends Component {
                         cursor: 'pointer',
                         width: '160px'
                       }}
-                      onClick={ () => this.sortBy(this.sortByFirstName) }
+                      onClick={ () => this.sortByFirstName() }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -131,13 +286,13 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sortedBy === ""
+                            this.state.firstName.order === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sortedBy === ""
+                            this.state.firstName.order === -1
                             ?
-                            <i className="fas fa-sort-up"></i>
+                            <i className="fas fa-sort-down"></i>
                             :
                             <i className="fas fa-sort"></i>
                           }
@@ -148,7 +303,7 @@ const StaffDirectoryPage = class extends Component {
                       style={{
                         cursor: 'pointer'
                       }}
-                      onClick={ () => this.sortBy(this.sortByTitle) }
+                      onClick={ () => this.sortByTitle() }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -156,13 +311,13 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sortedBy === ""
+                            this.state.title.order === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sortedBy === ""
+                            this.state.title.order === -1
                             ?
-                            <i className="fas fa-sort-up"></i>
+                            <i className="fas fa-sort-down"></i>
                             :
                             <i className="fas fa-sort"></i>
                           }
