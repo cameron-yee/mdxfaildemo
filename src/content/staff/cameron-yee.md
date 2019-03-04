@@ -1,8 +1,8 @@
 ---
 date: 2018-12-18T23:03:06.180Z
-fullName: Cameron Yee
-position: Software Developer, Educational Technology & Web Applications
-honorific: 
-personalUrl: https://google.com
+firstName: Cameron
+lastName: Yee
+title: Software Developer, Educational Technology & Web Applications
+# personalUrl: https://cyee.bscs.org/
 page: staff-directory
 ---

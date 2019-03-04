@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
-import Canvas from '../../../static/assets/canvas.jpg'
+import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
 
 import './leadership.scss'
 import { Link } from 'gatsby';
@@ -21,10 +21,16 @@ const StaffDirectoryPage = class extends Component {
   constructor(props) {
     super(props)
     this.people = props.data.allMarkdownRemark.edges
-    // this.filter_items = ["Area 1", "Area 2","Area 3", "Area 4"]
-    // this.state = {
-    //   filter_hash: ""
-    // }
+    this.state = {
+      direction: "up"
+    }
+  }
+
+  handleSorting = (direction) => {
+    console.log(this.state.direction)
+    this.setState(prevState => ({
+      direction: prevState.direction !== direction ? direction : ""
+    }))
   }
 
   render() {
@@ -37,20 +43,184 @@ const StaffDirectoryPage = class extends Component {
             <Col>
               <Table responsive hover striped>
                 <thead>
-                  <th>Title</th>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Personal Website Link</th>
+                  <tr>
+                    <th
+                      style={{
+                        width: '160px'
+                      }}
+                    >
+                      <div className="d-flex align-items-center">
+                        <div className="mr-auto">
+                          Last Name
+                        </div>
+                        <div className="ml-auto">
+                          {
+                            this.props.sorted === "up"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("up").bind(this)}
+                            ></i>
+                            :
+                            this.props.sorted === "down"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("down").bind(this)}
+                            ></i>
+                            :
+                            <i
+                              className="fas fa-sort"
+                              onClick={() => this.handleSorting("")}
+                            ></i>
+                          }
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      style={{
+                        width: '160px'
+                      }}
+                    >
+                      <div className="d-flex align-items-center">
+                        <div className="mr-auto">
+                          First Name
+                        </div>
+                        <div className="ml-auto">
+                          {
+                            this.props.sorted === "up"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("up").bind(this)}
+                            ></i>
+                            :
+                            this.props.sorted === "down"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("down").bind(this)}
+                            ></i>
+                            :
+                            <i
+                              className="fas fa-sort"
+                              onClick={() => this.handleSorting("")}
+                            ></i>
+                          }
+                        </div>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="d-flex align-items-center">
+                        <div className="mr-auto">
+                          Title
+                        </div>
+                        <div className="ml-auto">
+                          {
+                            this.props.sorted === "up"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("up").bind(this)}
+                            ></i>
+                            :
+                            this.props.sorted === "down"
+                            ?
+                            <i
+                              className="fas fa-sort-up"
+                              onClick={() => this.handleSorting("down").bind(this)}
+                            ></i>
+                            :
+                            <i
+                              className="fas fa-sort"
+                              onClick={() => this.handleSorting("")}
+                            ></i>
+                          }
+                        </div>
+                      </div>
+                    </th>
+                    <th
+                      style={{
+                        textAlign: 'center'
+                      }}
+                    >
+                      Contact
+                    </th>
+                    <th
+                      style={{
+                        width: '190px'
+                      }}
+                    >
+                      Personal Website
+                    </th>
+                  </tr>
                 </thead>
                 <tbody>
                   {
                     this.people.map((person, index) => {
+                      console.log(person.node.frontmatter.personalUrl)
                       return(
                         <tr key={`person-${index}`}>
-                          <td>{person.node.frontmatter.honorific}</td>
-                          <td>{person.node.frontmatter.fullName}</td>
-                          <td>{person.node.frontmatter.position}</td>
-                          <td><Button variant="primary" size="sm"><a href={person.node.frontmatter.personalUrl} target="_blank">View Personal Website</a></Button></td>
+                          <td
+                            style={{
+                              verticalAlign: 'middle'
+                            }}
+                          >
+                            {person.node.frontmatter.lastName}
+                          </td>
+                          <td
+                            style={{
+                              verticalAlign: 'middle'
+                            }}
+                          >
+                            {person.node.frontmatter.firstName}
+                          </td>
+                          <td
+                            style={{
+                              verticalAlign: 'middle'
+                            }}
+                          >
+                            {person.node.frontmatter.title}
+                          </td>
+                          <td
+                            style={{
+                              textAlign: 'center',
+                              verticalAlign: 'middle'
+                            }}
+                          >
+                            <SpecificContactForm
+                              sendto={person.node.frontmatter.firstName + " " + person.node.frontmatter.lastName}
+                            >
+                              <i className="far fa-envelope"></i>
+                            </SpecificContactForm>
+                          </td>
+                          {
+                            person.node.frontmatter.personalUrl
+                            ?
+                            <td
+                              style={{
+                                verticalAlign: 'middle'
+                              }}
+                            >
+                              <Button variant="outline-primary" size="sm">
+                                <a
+                                  href={person.node.frontmatter.personalUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                >
+                                  View Personal Website
+                                </a>
+                              </Button>
+                            </td>
+                            :
+                            <td
+                              style={{
+                                verticalAlign: 'middle'
+                              }}
+                            >
+                              &nbsp;
+                            </td>
+                          }
                         </tr>
                       )
                     })
@@ -78,9 +248,9 @@ export const leadershipQuery = graphql`
         node {
           id
           frontmatter {
-            fullName,
-            honorific,
-            position,
+            firstName,
+            lastName,
+            title,
             personalUrl,
             page
           }
@@ -89,4 +259,3 @@ export const leadershipQuery = graphql`
     }
   }
 `
-
