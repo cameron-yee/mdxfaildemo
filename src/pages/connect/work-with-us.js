@@ -55,7 +55,7 @@ const WorkWithUsPage = class extends Component {
   //   })
   // }
 
-  state={
+  state = {
     collapseID: "",
     collapseOneHeight: "",
     collapseTwoHeight: "",
