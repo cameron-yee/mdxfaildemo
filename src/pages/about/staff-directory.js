@@ -250,6 +250,7 @@ const StaffDirectoryPage = class extends Component {
                     <th
                       style={{
                         cursor: 'pointer',
+                        userSelect: 'none',
                         width: '160px'
                       }}
                       onClick={ () => this.sortByLastName() }
@@ -276,6 +277,7 @@ const StaffDirectoryPage = class extends Component {
                     <th
                       style={{
                         cursor: 'pointer',
+                        userSelect: 'none',
                         width: '160px'
                       }}
                       onClick={ () => this.sortByFirstName() }
@@ -301,7 +303,8 @@ const StaffDirectoryPage = class extends Component {
                     </th>
                     <th
                       style={{
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        userSelect: 'none'
                       }}
                       onClick={ () => this.sortByTitle() }
                     >
