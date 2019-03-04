@@ -18,16 +18,66 @@ import './leadership.scss'
 const StaffDirectoryPage = class extends Component {
   constructor(props) {
     super(props)
-    this.staff = props.data.allMarkdownRemark.edges
     this.state = {
-      direction: "up"
+      staff: props.data.allMarkdownRemark.edges,
+      sortedBy: {
+        firstName: {
+          name: false,
+          order: 0
+        },
+        lastName: {
+          name: true,
+          order: 0
+        },
+        title: {
+          name: false,
+          order: 0
+        }
+      }
     }
   }
 
-  handleSorting = (direction) => {
-    console.log(this.state.direction)
+  comparison = (personA, personB) => {
+    let comparison = 0
+    if (personA > personB) {
+      comparison = 1
+    } else if (personA < personB) {
+      comparison = -1
+    }
+    return comparison
+  }
+
+  reverseComparison = (personA, personB) => {
+    let comparison = 0
+    if (personA < personB) {
+      comparison = 1
+    } else if (personA > personB) {
+      comparison = -1
+    }
+    return comparison
+  }
+
+  sortByFirstName = (a, b) => {
+    const personA = a.node.frontmatter.firstName.toUpperCase()
+    const personB = b.node.frontmatter.firstName.toUpperCase()
+    return this.comparison(personA, personB)
+  }
+
+  sortByLastName = (a, b) => {
+    const personA = a.node.frontmatter.lastName.toUpperCase()
+    const personB = b.node.frontmatter.lastName.toUpperCase()
+    return this.comparison(personA, personB)
+  }
+
+  sortByTitle = (a, b) => {
+    const personA = a.node.frontmatter.title.toUpperCase()
+    const personB = b.node.frontmatter.title.toUpperCase()
+    return this.comparison(personA, personB)
+  }
+
+  sortBy = (type) => {
     this.setState(prevState => ({
-      direction: prevState.direction !== direction ? direction : ""
+      staff: prevState.staff.sort(type)
     }))
   }
 
@@ -44,8 +94,10 @@ const StaffDirectoryPage = class extends Component {
                   <tr>
                     <th
                       style={{
+                        cursor: 'pointer',
                         width: '160px'
                       }}
+                      onClick={ () => this.sortBy(this.sortByLastName) }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -53,32 +105,25 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sorted === "up"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("up").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sorted === "down"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("down").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            <i
-                              className="fas fa-sort"
-                              onClick={() => this.handleSorting("")}
-                            ></i>
+                            <i className="fas fa-sort"></i>
                           }
                         </div>
                       </div>
                     </th>
                     <th
                       style={{
+                        cursor: 'pointer',
                         width: '160px'
                       }}
+                      onClick={ () => this.sortBy(this.sortByFirstName) }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -86,53 +131,40 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sorted === "up"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("up").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sorted === "down"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("down").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            <i
-                              className="fas fa-sort"
-                              onClick={() => this.handleSorting("")}
-                            ></i>
+                            <i className="fas fa-sort"></i>
                           }
                         </div>
                       </div>
                     </th>
-                    <th>
+                    <th
+                      style={{
+                        cursor: 'pointer'
+                      }}
+                      onClick={ () => this.sortBy(this.sortByTitle) }
+                    >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
                           Title
                         </div>
                         <div className="ml-auto">
                           {
-                            this.props.sorted === "up"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("up").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            this.props.sorted === "down"
+                            this.props.sortedBy === ""
                             ?
-                            <i
-                              className="fas fa-sort-up"
-                              onClick={() => this.handleSorting("down").bind(this)}
-                            ></i>
+                            <i className="fas fa-sort-up"></i>
                             :
-                            <i
-                              className="fas fa-sort"
-                              onClick={() => this.handleSorting("")}
-                            ></i>
+                            <i className="fas fa-sort"></i>
                           }
                         </div>
                       </div>
@@ -155,7 +187,7 @@ const StaffDirectoryPage = class extends Component {
                 </thead>
                 <tbody>
                   {
-                    this.staff.map((person, index) => {
+                    this.state.staff.map((person, index) => {
                       return(
                         <tr key={`person-${index}`}>
                           <td
