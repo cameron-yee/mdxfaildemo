@@ -23,9 +23,9 @@ This program is freely available and features five classroom lessons.
 
 Four of the lessons are centered around a short video. View the segments below:
 
-* Segment 1
-* Segment 2
-* Segment 3
-* Segment 4
+* [Segment 1](https://vimeo.com/315712201)
+* [Segment 2](https://vimeo.com/315712242)
+* [Segment 3](https://vimeo.com/315712075)
+* [Segment 4](https://vimeo.com/315712128)
 
 _This resource was developed with funding from the National Institute on Drug Abuse (NIDA)._
