@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-// import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
 import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
@@ -15,7 +13,7 @@ import PageTitle from '../../components/layout/page-title/page-title'
 import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
 
 import './leadership.scss'
-import { Link } from 'gatsby';
+
 
 const StaffDirectoryPage = class extends Component {
   constructor(props) {
