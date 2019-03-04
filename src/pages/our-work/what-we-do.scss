@@ -1,44 +1,53 @@
-.accordion-card {
+@import '../../global-scss/utilities/variables.scss';
+
+.what-we-do-image-wrapper {
   padding: 0 !important;
 }
 
-.accordion-button {
-  background-color: rgba(0, 0, 0, .03);
-  font-size: 2.4rem;
-  margin: 0;
-  padding: .75rem 1.5rem;
-  text-align: left;
-  text-decoration: none;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, .03);
-    text-decoration: none;
+.what-we-do-image {
+  @media only screen and (max-width: 768px) {
+    background-size: auto 400px;
+    height: 400px;
   }
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 100%;
+}
 
-  &:focus {
-    background-color: rgba(0, 0, 0, .03);
-    text-decoration: none;
+.ld-image {
+  background-image: url(./../../images/hero-banners/support_our_mission.jpg);
+}
+
+.tpl-image {
+  background-image: url(./../../images/hero-banners/we_provide_professional.jpg);
+}
+
+.imd-image {
+  background-image: url(./../../images/hero-banners/we_develop_science.jpg);
+}
+
+.research-image {
+  background-image: url(../../images/hero-banners/we_spearhead_leadership.jpg);
+}
+
+.what-we-do-text-section {
+  padding: 1.5rem;
+}
+
+.colored {
+  background-color: $primary;
+  > h3 {
+    color: white !important;
+  }
+  > p {
+    color: white !important;
   }
 }
 
-.accordionCollapse {
-  display: block !important;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 600ms ease-in-out;
-
-  &.show {
-    // max-height: 200px;
-    transition: max-height 600ms ease-in-out;
+.bscs-transforming-science-education-model-wrapper {
+  width: 100%;
+  > img {
+    width: 100%;
   }
-}
-
-.counterclockwise-180 {
-  transform: rotate(-180deg);
-  transition: all .3s ease-in-out;
-}
-
-.clockwise-to-zero {
-  // transform: rotate(0deg);
-  transition: all .3s ease-in-out;
 }
