@@ -124,9 +124,9 @@ const WhatWeDoPage = class extends Component {
     }
     return (
       <Layout location={this.props.location}>
-        <SEO title="Work With Us" />
+        <SEO title="What We Do" />
         <Container>
-          <PageTitle title="Work With Us" />
+          <PageTitle title="What We Do" />
           <Row style={{ marginBottom: '2rem' }}>
             <Col>
               <p>
