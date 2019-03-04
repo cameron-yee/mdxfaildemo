@@ -19,7 +19,7 @@ With FieldScope, teachers and students can participate in a variety of projects 
 
 FieldScope is freely available to educators, students, and community members who wish to participate in existing projects or launch new ones. 
 
-<button class="btn btn-primary"><a href="http://fieldscope.org/" target="_blank">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="http://fieldscope.org/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 _This material is based upon work supported by the National Science Foundation under Grants Nos. GEO-0627923 and DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society._
 

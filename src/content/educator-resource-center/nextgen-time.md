@@ -19,6 +19,6 @@ Historically, the selection process can be as simple as an individual leafing th
 
 NextGen TIME is a suite of tools and processes designed for professional development of leaders at the state, district, and school levels. Over the course of the NextGen TIME program, teams of educators are guided through the evaluation, selection, and planning for implementation of materials that will help teachers enact the vision of the Next Generation Science Standards (NGSS) in their classrooms. All program tools are freely available.
 
-<button class="btn btn-primary"><a href="http://nextgentime.org/" target="_blank">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="http://nextgentime.org/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 _This resource was developed in collaboration with Achieve and the K-12 Alliance at WestEd. Funding was provided by the Carnegie Corporation of New York._

@@ -8,7 +8,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/developing-skills-in-health-literacy
 seoDescription: TEST SEO DESCRIPTION
 seoLang: en-us
-image: /assets/river.jpg
+image: /assets/ocean.jpg
 alt: PLACEHOLDER
 page: rd-programs
 ---
@@ -22,6 +22,6 @@ Answers about health topics can be complicated. Understanding the science behind
 
 BSCS Science Learning’s Developing Skills in Health Literacy project aims to help middle and high school students develop critical-thinking skills in topics about health that enable them to accurately evaluate the information they get from various sources. This five-year project (going through 2020) works with teachers from across the country to develop and study innovative instructional materials designed to enhance students’ skills and abilities in understanding human health. 
 
-<button class="btn btn-primary"><a href="http://healthliteracyft.bscs.org/" target="_blank">Learn More Here</a></button>
+<a class="btn btn-outline-secondary" href="http://healthliteracyft.bscs.org/" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 *This project was supported by the Office of the Director, National Institutes of Health under Award Number R25OD020208. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.*

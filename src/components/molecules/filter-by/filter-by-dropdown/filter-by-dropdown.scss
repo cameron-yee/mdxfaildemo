@@ -1,0 +1,13 @@
+
+.category-title-elem {
+  color: gray;
+  cursor: default;
+}
+
+.filter-item {
+  margin-left: 2rem;
+
+  &.active {
+    font-weight: bold;
+  }
+}

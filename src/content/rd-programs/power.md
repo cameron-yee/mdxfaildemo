@@ -6,7 +6,7 @@ areas:
   - Area 2
   - Area 3
   - Area 4
-image: /assets/scifi.jpg
+image: /assets/owl.jpg
 alt: PLACEHOLDER
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/rd-1
@@ -24,7 +24,7 @@ The online tool, POWER calculator, uses data from the studies BSCS reviewed to e
 
 When planning a study, researchers can use the POWER calculator to determine how many subjects will be required to obtain a statistically significant result, giving researchers and funders increased confidence that they will obtain such a result without spending money and time unnecessarily on participants that are not needed. Once a study is completed, the tool enables users to interpret the size of their study’s effect in the context of similar studies.
 
-<button class="btn btn-primary"><a href="https://effectsizecalculator.bscs.org" target="_blank">Access the POWER calculator</a></button>
+<a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator</a>
 
 BSCS is continuing its research with a meta-analysis of 161 science education studies of teacher outcomes. New findings and a teacher-specific calculator will be made available soon. 
 

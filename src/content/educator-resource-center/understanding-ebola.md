@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
 template: Image Right
-image: /assets/understanding-ebola.png
+image: /assets/cells.jpeg
 alt: PLACEHOLDER
 price: 0
 courseId: 0
@@ -19,7 +19,7 @@ BSCS Science Learning has developed a free resource to educate the public about 
 
 In alignment with the Next Generation Science Standards, the resource addresses selected disciplinary core ideas, science practices, and crosscutting concepts. 
 
-<button class="btn btn-primary"><a href="http://ebola.bscs.org/ /" target="_blank">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="http://ebola.bscs.org/ /" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 _This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. DRL-1518346. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._ 
 
