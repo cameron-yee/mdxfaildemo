@@ -53,6 +53,8 @@ const LeadershipPage = class extends Component {
                             </Card.Body>
                           </Card>
                         )
+                      } else {
+                        return <React.Fragment></React.Fragment>
                       }
                     })
                   }
@@ -84,6 +86,8 @@ const LeadershipPage = class extends Component {
                             </Card.Body>
                           </Card>
                         )
+                      } else {
+                        return <React.Fragment></React.Fragment>
                       }
                     })
                   }

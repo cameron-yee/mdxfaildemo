@@ -121,7 +121,8 @@ const SpecificContactFormModal = class extends Component {
       >
       <Modal.Header closeButton>
         <Modal.Title id="specific-contact-form-modal">
-          Contact {this.props.sendto}
+          {/* Contact: {this.props.sendto} */}
+          Contact
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -132,7 +133,19 @@ const SpecificContactFormModal = class extends Component {
           <Row>
             <Col xs={12}>
               <div className="form-group">
-                <div className="form-label">First Name</div>
+                <div className="form-label">To</div>
+                <input
+                  className="form-control"
+                  id="scfm-first-name-input"
+                  type="text"
+                  placeholder={this.props.sendto}
+                  disabled
+                />
+              </div>
+            </Col>
+            <Col xs={12}>
+              <div className="form-group">
+                <div className="form-label">First name</div>
                 <input
                   className="form-control"
                   id="scfm-first-name-input"
@@ -144,7 +157,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <div className="form-group">
-                <div className="form-label">Last Name</div>
+                <div className="form-label">Last name</div>
                 <input
                   className="form-control"
                   id="scfm-last-name-input"
@@ -168,7 +181,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <div className="form-group">
-                <div className="form-label">Phone Number</div>
+                <div className="form-label">Phone number</div>
                 <input
                   className="form-control"
                   id="scfm-phone-input"

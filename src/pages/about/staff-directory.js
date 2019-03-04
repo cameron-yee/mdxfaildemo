@@ -3,7 +3,6 @@ import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 import { graphql } from 'gatsby'
 
-import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
@@ -147,8 +146,7 @@ const StaffDirectoryPage = class extends Component {
                     </th>
                     <th
                       style={{
-                        textAlign: 'center',
-                        // width: '190px'
+                        textAlign: 'center'
                       }}
                     >
                       Profile
@@ -158,7 +156,6 @@ const StaffDirectoryPage = class extends Component {
                 <tbody>
                   {
                     this.people.map((person, index) => {
-                      console.log(person.node.frontmatter.personalUrl)
                       return(
                         <tr key={`person-${index}`}>
                           <td
@@ -195,7 +192,7 @@ const StaffDirectoryPage = class extends Component {
                             </SpecificContactForm>
                           </td>
                           {
-                            person.node.frontmatter.personalUrl
+                            person.node.frontmatter.url !== ""
                             ?
                             <td
                               style={{
@@ -204,12 +201,12 @@ const StaffDirectoryPage = class extends Component {
                               }}
                             >
                               <a
-                                href={person.node.frontmatter.personalUrl} 
+                                href={person.node.frontmatter.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
 
                               >
-                                <i class="fas fa-external-link-alt"></i>
+                                <i className="fas fa-external-link-alt"></i>
                               </a>
                             </td>
                             :
@@ -251,7 +248,7 @@ export const leadershipQuery = graphql`
             firstName,
             lastName,
             title,
-            personalUrl,
+            url,
             page
           }
         }
