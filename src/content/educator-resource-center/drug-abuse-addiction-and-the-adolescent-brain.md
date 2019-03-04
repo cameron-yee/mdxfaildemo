@@ -19,9 +19,7 @@ BSCS Science Learning has developed a curriculum supplement to teach middle scho
 
 This program is freely available and features five classroom lessons.
 
-Access Resource Here (make this a button)
-
-https://bscs.org/sites/default/files/_legacy/pdf/NIDA--full.pdf
+<button class="btn btn-primary"><a href="https://bscs.org/sites/default/files/_legacy/pdf/NIDA--full.pdf">Access Resource Here</a></button>
 
 Four of the lessons are centered around a short video. View the segments below:
 
