@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
+import { graphql } from 'gatsby'
 
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
@@ -146,10 +147,11 @@ const StaffDirectoryPage = class extends Component {
                     </th>
                     <th
                       style={{
-                        width: '190px'
+                        textAlign: 'center',
+                        // width: '190px'
                       }}
                     >
-                      Personal Website
+                      Profile
                     </th>
                   </tr>
                 </thead>
@@ -197,18 +199,18 @@ const StaffDirectoryPage = class extends Component {
                             ?
                             <td
                               style={{
+                                textAlign: 'center',
                                 verticalAlign: 'middle'
                               }}
                             >
-                              <Button variant="outline-primary" size="sm">
-                                <a
-                                  href={person.node.frontmatter.personalUrl} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                >
-                                  View Personal Website
-                                </a>
-                              </Button>
+                              <a
+                                href={person.node.frontmatter.personalUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+
+                              >
+                                <i class="fas fa-external-link-alt"></i>
+                              </a>
                             </td>
                             :
                             <td

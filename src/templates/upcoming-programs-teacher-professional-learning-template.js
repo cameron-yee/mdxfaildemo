@@ -28,20 +28,20 @@ export default props => (
   </Location>
 )
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: {slug: {eq: $slug}}) {
-      html
-      excerpt(pruneLength: 200)
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY"),
-        additionalTags,
-        alt,
-        image,
-        slug,
-        template,
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query($slug: String!) {
+//     markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+//       html
+//       excerpt(pruneLength: 200)
+//       frontmatter {
+//         date(formatString: "MMMM DD, YYYY"),
+//         additionalTags,
+//         alt,
+//         image,
+//         slug,
+//         template,
+//         title
+//       }
+//     }
+//   }
+// `

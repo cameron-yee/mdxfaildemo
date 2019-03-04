@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import { graphql } from 'gatsby';
+import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../components/seo'
 
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Layout from '../components/layout/layout';
-import PageTitle from '../components/layout/page-title/page-title';
+import Layout from '../components/layout/layout'
+import PageTitle from '../components/layout/page-title/page-title'
 import Row from 'react-bootstrap/Row'
 
-import '../global-scss/index.scss';
-// import './rd-programs-template.scss'
+import '../global-scss/index.scss'
 
 const LeadershipTemplate = class extends Component {
   constructor(props) {

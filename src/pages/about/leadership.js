@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
@@ -11,7 +11,6 @@ import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
-import Canvas from '../../../static/assets/canvas.jpg'
 
 import './leadership.scss'
 import { Link } from 'gatsby';
@@ -20,10 +19,6 @@ const LeadershipPage = class extends Component {
   constructor(props) {
     super(props)
     this.people = props.data.allMarkdownRemark.edges
-    // this.filter_items = ["Area 1", "Area 2","Area 3", "Area 4"]
-    // this.state = {
-    //   filter_hash: ""
-    // }
   }
 
   render() {
@@ -37,7 +32,6 @@ const LeadershipPage = class extends Component {
               <h2>Management</h2>
               <div className="leadership-scrollable-wrapper">
                 <div className="leadership-scrollable">
-                  {/* <div>{JSON.stringify(this.people)}</div> */}
                   { this.people.map((person, index) => {
                       if(person.node.frontmatter.type === 'Management') {
                         return(
