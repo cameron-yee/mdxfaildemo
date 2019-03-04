@@ -18,7 +18,7 @@ import './leadership.scss'
 const StaffDirectoryPage = class extends Component {
   constructor(props) {
     super(props)
-    this.people = props.data.allMarkdownRemark.edges
+    this.staff = props.data.allMarkdownRemark.edges
     this.state = {
       direction: "up"
     }
@@ -155,7 +155,7 @@ const StaffDirectoryPage = class extends Component {
                 </thead>
                 <tbody>
                   {
-                    this.people.map((person, index) => {
+                    this.staff.map((person, index) => {
                       return(
                         <tr key={`person-${index}`}>
                           <td
@@ -240,7 +240,18 @@ export default props => (
 
 export const leadershipQuery = graphql`
   query staffDirectoryQuery {
-    allMarkdownRemark(filter: {frontmatter: { page: {eq: "staff-directory"}}}) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { 
+          page: {
+            eq: "staff-directory"
+          }
+        }
+      }
+      sort: {
+        fields: [frontmatter___lastName]
+      }
+    ) {
       edges {
         node {
           id
