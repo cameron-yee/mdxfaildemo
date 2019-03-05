@@ -199,10 +199,10 @@ const FilterByDropdown = class extends Component {
       return (
         <div id="filter">
           {/* <Dropdown id="dropdown" style={{float: 'right'}}> */}
-          <Dropdown id="dropdown">
+          <Dropdown id="dropdown" alignRight={true} drop={'down'}>
             {/* <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>{this.state.selected}</Dropdown.Toggle> */}
             <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>Filter by...</Dropdown.Toggle>
-            <Dropdown.Menu id="dropdown-menu3">{this.renderFilterMenu(this.props.items)}</Dropdown.Menu>
+            <Dropdown.Menu id="dropdown-menu3" flip={false}>{this.renderFilterMenu(this.props.items)}</Dropdown.Menu>
           </Dropdown>
         </div>
       )

@@ -54,23 +54,26 @@ const RDPrograms = class extends Component {
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>
-              <Row>
-                <Col md={4}>
+              <div className="d-sm-flex">
+                <div className="p-2">
                   <SearchBy />
-                </Col>
-                <Col md={{span: 3, offset: 5}}>
-                  {/* <FilterByDropdown items={this.filter_items} filterHash={this.state.filter_hash} /> */}
+                </div>
+                <div className="p-2 ml-auto">
                   <FilterByDropdown
                     items={this.filter_items}
-                    filterHash={this.state.filter_hash}
+                    filterHash={this.state.filterHash}
                     activeFilters={this.state.activeFilters}
                     setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
                   />
-                </Col>
-              </Row>
+                </div>
+              </div>
               {this.state.activeFilters.length > 0 &&
-              <FilterByRow activeFilters={this.state.activeFilters} setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})} />
+                <FilterByRow
+                  activeFilters={this.state.activeFilters}
+                  setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+                />
               }
+              <hr />
             </Container>
           </section>
           <section className="section" style={{ marginBottom: '4rem' }}>
