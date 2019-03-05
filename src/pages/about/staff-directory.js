@@ -51,7 +51,7 @@ const StaffDirectoryPage = class extends Component {
 
   //type parameter must be either 'firstName', 'lastName', or 'title'
   sort = (type) => {
-    const negative = this.state.order[`${type}`] === 1
+    const negative = this.state.order[type] === 1
 
     let non_zero_value;
     negative ? non_zero_value = -1 : non_zero_value = 1
@@ -68,8 +68,8 @@ const StaffDirectoryPage = class extends Component {
     return (
       this.setState(prevState => ({
         staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter[`${type}`]
-          const personB = b.node.frontmatter[`${type}`]
+          const personA = a.node.frontmatter[type]
+          const personB = b.node.frontmatter[type]
           if(negative) {
             return this.reverseComparison(personA, personB)
           } else {
