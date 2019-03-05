@@ -29,12 +29,6 @@
         "iconClass": "",
         "path": "/about/financials/",
         "onClick": null
-      },
-      {
-        "itemTitle": "Brand Materials",
-        "iconClass": "",
-        "path": "/about/brand-materials/",
-        "onClick": null
       }
     ]
   },
@@ -61,12 +55,6 @@
         "itemTitle": "R&D Programs",
         "iconClass": "",
         "path": "/our-work/rd-programs/",
-        "onClick": null
-      },
-      {
-        "itemTitle": "News",
-        "iconClass": "",
-        "path": "/our-work/news/",
         "onClick": null
       }
     ]
@@ -130,13 +118,13 @@
         "itemTitle": "Contact Us",
         "iconClass": "",
         "path": "/connect/contact-us/",
-        "onClick": null
+        "onClick": "this.launchContactUs"
       },
       {
         "itemTitle": "Join E-mail List",
         "iconClass": "",
         "path": "/join/",
-        "onClick": "this.launch"
+        "onClick": "this.launchJoinEmailList"
       },
       {
         "itemTitle": "Work with Us",

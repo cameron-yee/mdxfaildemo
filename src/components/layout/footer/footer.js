@@ -5,15 +5,13 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
-// import Button from 'react-bootstrap/Button'
+
 import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
 import JoinEmailList from '../../atoms/join-email-list/join-email-list'
+import ContactUsModal from '../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
+import ContactUsButton from '../../atoms/general-contact-form/general-contact-form-button'
 
 import './footer.scss'
-
-// import nsfLogo from '../images/nsf_logo.svg'
-// import osuLogo from '../images/osu_logo.svg'
-// import spencerLogo from '../images/spencer_logo.png'
 
 
 export default class Footer extends Component {
@@ -21,15 +19,22 @@ export default class Footer extends Component {
     super(props)
 
     this.state = {
-      modalShow: false,
+      joinEmailListModalShow: false,
+      contactUsModalShow: false
     }
 
-    this.launch = this.launch.bind(this)
-    this.close = this.close.bind(this)
+    this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
+    this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
+
+    this.launchContactUs = this.launchContactUs.bind(this)
+    this.closeContactUs = this.closeContactUs.bind(this)
   }
 
-  launch = () => { this.setState({modalShow: true}) }
-  close = () => { this.setState({modalShow: false}) }
+  launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
+  closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
+
+  launchContactUs = () => { this.setState({contactUsModalShow: true}) }
+  closeContactUs = () => { this.setState({contactUsModalShow: false}) }
 
   render() {
     const navigation =
@@ -86,9 +91,21 @@ export default class Footer extends Component {
                                   {item.itemTitle}
                                 </Link>
                                 :
+                                item.onClick === "this.launchJoinEmailList"
+                                ?
                                 <div
                                   className="nav-link footer-nl"
-                                  onClick={this.launch}
+                                  onClick={this.launchJoinEmailList}
+                                  style={{
+                                    cursor: "pointer"
+                                  }}
+                                >
+                                  {item.itemTitle}
+                                </div>
+                                :
+                                <div
+                                  className="nav-link footer-nl"
+                                  onClick={this.launchContactUs}
                                   style={{
                                     cursor: "pointer"
                                   }}
@@ -166,6 +183,29 @@ export default class Footer extends Component {
           </Row>
         </Container>
         <Container fluid>
+          <div className="d-flex">
+            <div className="p-2 mr-auto align-self-center">
+              <ContactUsButton />
+            </div>
+            <div
+              className="p-2 ml-auto align-self-center"
+              style={{
+                textAlign: 'right'
+              }}
+            >
+              5415 Mark Dabling Blvd.<br />
+              Colorado Springs, CO 80918
+            </div>
+          </div>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col>
+              <hr style={{ margin: '2rem 0 2.5rem' }} />
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid>
           <Row>
             <Container>
               <Row>
@@ -178,7 +218,8 @@ export default class Footer extends Component {
             </Container>
           </Row>
         </Container>
-        <JoinModal show={this.state.modalShow} onHide={this.close} />
+        <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
+        <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} />
       </footer>
     )
   }

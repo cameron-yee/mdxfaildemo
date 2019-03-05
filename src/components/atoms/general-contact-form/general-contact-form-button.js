@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 
 import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import JoinModal from './join-modal/join-modal'
+
+import GeneralContactFormModal from './general-contact-form-modal/general-contact-form-modal'
 
 
-const JoinEmailList = class extends Component {
+const ContactUsButton = class extends Component {
   constructor(props) {
     super(props)
 
@@ -28,9 +29,10 @@ const JoinEmailList = class extends Component {
           variant="outline-primary"
           onClick={this.launch}
         >
-          Join E-mail List
+          Contact Us
         </Button>
-        <JoinModal
+        <GeneralContactFormModal
+          sendto={'info@bscs.org'}
           show={this.state.modalShow}
           onHide={this.close}
         />
@@ -39,4 +41,4 @@ const JoinEmailList = class extends Component {
   }
 }
 
-export default JoinEmailList
+export default ContactUsButton
