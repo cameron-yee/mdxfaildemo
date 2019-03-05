@@ -4,6 +4,7 @@ import { graphql, StaticQuery, Link } from 'gatsby'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import Button from 'react-bootstrap/Button'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
 import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
@@ -157,6 +158,14 @@ export default class MobileNavigation extends Component {
                       })
                     }
                   </Nav>
+                  <div className="d-flex">
+                    <div className="p-2 align-self-center ml-auto d-sm-none">
+                      <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
+                    </div>
+                    <div className="p-2 align-self-center d-sm-none">
+                      <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                    </div>
+                  </div>
                 </Navbar.Collapse>
               </Navbar>
               <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
