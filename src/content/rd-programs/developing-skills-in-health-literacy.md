@@ -2,8 +2,8 @@
 date: 2019-02-25T19:12:58.082Z
 title: Developing Skills in Health Literacy
 areas:
-  - Area 1
-  - Area 3
+  - Instructional Materials Development
+  - Leadership Development
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/developing-skills-in-health-literacy
 seoDescription: TEST SEO DESCRIPTION

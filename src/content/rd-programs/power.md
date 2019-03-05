@@ -2,10 +2,10 @@
 date: 2019-02-15T20:02:08.538Z
 title: POWER
 areas:
-  - Area 1
-  - Area 2
-  - Area 3
-  - Area 4
+  - Instructional Materials Development
+  - Teacher Professional Learning
+  - Leadership Development
+  - Research
 image: /assets/owl.jpg
 alt: PLACEHOLDER
 page: rd-programs

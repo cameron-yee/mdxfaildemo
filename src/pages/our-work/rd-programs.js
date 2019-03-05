@@ -25,7 +25,7 @@ const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
     this.programs = props.data.allMarkdownRemark.edges
-    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Area 1", "Area 2","Area 3", "Area 4"]]}
+    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
     this.state = {
       filter_hash: undefined,
       activeFilters: []
@@ -73,60 +73,68 @@ const RDPrograms = class extends Component {
               }
             </Container>
           </section>
-          <section className="section">
+          <section className="section" style={{ marginBottom: '4rem' }}>
             <Container>
-              {/* <Row> */}
-                {
-                  this.programs.map((edge, index) => {
-                    let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
-                    data_filter['excerpt'] = edge.node.excerpt
-                    return(
-                      // id="parent" div because of search component
-                      <div id="parent">
-                        <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
-                          {/* <hr style={{borderColor: '#3087b4'}} /> */}
-                          <hr />
-                          <Row className="rd-feed-item">
-                            <Col xs={3}>
-                            {/* <hr style={{borderColor: '#3087b4'}} /> */}
-                              <div className="rd-image-wrapper">
-                                <img className="rd-image" src={edge.node.frontmatter.image} alt={edge.node.frontmatter.alt} />
+              {
+                this.programs.map((edge, index) => {
+                  let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                  data_filter['excerpt'] = edge.node.excerpt
+                  return(
+                    <div id="parent">
+                      <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
+                        <hr />
+                        <Row style={{ marginBottom: '1rem' }}>
+                          <Col sm={3} lg={2} className="d-none d-md-block">
+                            <img
+                              className="img-fluid"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                              style={{
+                                marginBottom: '1rem'
+                              }}
+                            />
+                          </Col>
+                          <Col>
+                            <h3>{edge.node.frontmatter.title}</h3>
+                            <p>{edge.node.excerpt}</p>
+                            <div className="d-flex">
+                              <div className="ml-auto button-wrapper">
+                                <Link
+                                  to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                >
+                                  <Button variant="outline-secondary" style={{ width: '124px' }}>Read More</Button>
+                                </Link>
                               </div>
-                            </Col>
-                            <Col xs={9}>
-                                {/* <div id={`resource-${index}`} data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}> */}
-                                <div>
-                                  <h3>{edge.node.frontmatter.title}</h3>
-                                  <p>{edge.node.excerpt}</p>
-                                  <div className="d-sm-flex">
-                                    <div className="p-2">
-                                      { edge.node.frontmatter.areas.map((area, index) => {
-                                          const variants = ['primary','secondary','success','danger']
-                                          return(
-                                            <span key={index} className={`rd-pill badge badge-pill badge-${variants[index]}`}>{area}</span>
-                                          )
-                                        })
-                                      }
-                                    </div>
-                                    <div className="p-2 ml-auto button-wrapper">
-                                      <Link
-                                        to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                        // className="rd-read-more"
+                            </div>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col>
+                            <div className="d-flex">
+                              <div className="mr-auto">
+                                { 
+                                  edge.node.frontmatter.areas.map((area, index) => {
+                                    const variants = ['primary','secondary','success','danger']
+                                    return(
+                                      <span
+                                        key={index}
+                                        className={`rd-pill badge badge-pill badge-${variants[index]}`}
+                                        style={{ marginRight: '.5rem' }}
                                       >
-                                        <Button variant="outline-secondary">Read More</Button>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                            </Col>
-                          </Row>
-                        </div>
+                                        {area}
+                                      </span>
+                                    )
+                                  })
+                                }
+                              </div>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
-                    )
-                  }) 
-                }
-                {/* <hr style={{borderColor: '#3087b4'}} /> */}
-              {/* </Row> */}
+                    </div>
+                  )
+                }) 
+              }
             </Container>
           </section>
         </Layout>
@@ -144,7 +152,6 @@ export default props => (
 export const rdProgramsQuery = graphql`
   query rdProgramsQuery {
     allMarkdownRemark(filter: {frontmatter: { page: {eq: "rd-programs"}}}) {
-    # allMarkdownRemark(filter: {frontmatter: { page: {eq: "educator-resource-center"}}}) {
       edges {
         node {
           id
