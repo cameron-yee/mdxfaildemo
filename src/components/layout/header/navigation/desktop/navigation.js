@@ -6,6 +6,8 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
+import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
+import ContactUsModal from '../../../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 
 import '../../header.scss'
 import './navigation.scss'
@@ -17,15 +19,22 @@ export default class DesktopNavigation extends Component {
     super(props)
 
     this.state = {
-      modalShow: false,
+      joinEmailListModalShow: false,
+      contactUsModalShow: false
     }
 
-    this.launch = this.launch.bind(this)
-    this.close = this.close.bind(this)
+    this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
+    this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
+
+    this.launchContactUs = this.launchContactUs.bind(this)
+    this.closeContactUs = this.closeContactUs.bind(this)
   }
 
-  launch = () => { this.setState({modalShow: true}) }
-  close = () => { this.setState({modalShow: false}) }
+  launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
+  closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
+
+  launchContactUs = () => { this.setState({contactUsModalShow: true}) }
+  closeContactUs = () => { this.setState({contactUsModalShow: false}) }
 
   render() {
     return (
@@ -94,9 +103,25 @@ export default class DesktopNavigation extends Component {
                                             }
                                           </Link>
                                           :
+                                          item.onClick === "this.launchJoinEmailList"
+                                          ?
                                           <div
                                             className="dropdown-item"
-                                            onClick={this.props.launch}
+                                            onClick={this.launchJoinEmailList}
+                                            style={{
+                                              cursor: "pointer"
+                                            }}
+                                          >
+                                            {item.itemTitle}
+                                            { item.iconClass
+                                              ? <>&nbsp; <i className={item.iconClass}></i></>
+                                              : null
+                                            }
+                                          </div>
+                                          :
+                                          <div
+                                            className="dropdown-item"
+                                            onClick={this.launchContactUs}
                                             style={{
                                               cursor: "pointer"
                                             }}
@@ -132,6 +157,8 @@ export default class DesktopNavigation extends Component {
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>
+              <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
+              <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} />
             </SpinDropdown>
           )
         }}
