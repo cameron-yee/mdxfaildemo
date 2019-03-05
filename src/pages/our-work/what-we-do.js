@@ -44,11 +44,11 @@ const WhatWeDoPage = class extends Component {
               <div className="what-we-do-image imd-image"></div>
             </Col>
           </Row>
-          <Row className="d-flex flex-wrap-reverse">
+          <Row className="d-flex flex-wrap-reverse" >
             <Col md={6} className="p-2 what-we-do-image-wrapper">
               <div className="what-we-do-image tpl-image"></div>
             </Col>
-            <Col md={6} className="p-2 what-we-do-text-section">
+            <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
               <h3>Teacher Professional Learning</h3>
 
               <p>A thriving science education system depends on high quality professional learning opportunities for teachers. We are recognized for our signature approach to professional development, resulting from our 15-year line of research on how teachers and students learn science.</p>
@@ -72,7 +72,7 @@ const WhatWeDoPage = class extends Component {
             <Col md={6} className="p-2 what-we-do-image-wrapper">
               <div className="what-we-do-image research-image"></div>
             </Col>
-            <Col md={6} className="p-2 what-we-do-text-section">
+            <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
               <h3>Research</h3>
 
               <p>Our work begins and ends with research. We conduct a variety of studies for a deeper understanding of how teachers and students learn science. Our evaluations span from studies of our own interventions across schools and districts to big-picture analyses across the greater science education landscape.</p>
