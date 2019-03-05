@@ -1,19 +1,14 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-// import Card from 'react-bootstrap/Card'
 import Jumbotron from 'react-bootstrap/Jumbotron'
-// import Button from 'react-bootstrap/Button'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 
 import '../global-scss/index.scss'
-
-// import pckLogo from '../images/pck_logo.svg'
 
 
 const IndexPage = (props) => (
