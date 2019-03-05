@@ -20,15 +20,10 @@ const StaffDirectoryPage = class extends Component {
     super(props)
     this.state = {
       staff: props.data.allMarkdownRemark.edges,
-      order: 0,
-      firstName: {
-        order: 0
-      },
-      lastName: {
-        order: 1
-      },
-      title: {
-        order: 0
+      order: {
+        firstName: 0,
+        lastName: 1,
+        title: 0
       }
     }
   }
@@ -53,88 +48,35 @@ const StaffDirectoryPage = class extends Component {
     return comparison
   }
 
-  sortByFirstName = () => {
-    let negative = this.state.firstName.order === 1
-    let first_name_order;
-    negative ? first_name_order = -1 : first_name_order = 1
+  sort = (type) => {
+    const negative = this.state.order[`${type}`] === 1
+
+    let non_zero_value;
+    negative ? non_zero_value = -1 : non_zero_value = 1
+
+    let options = {
+      'firstName': 0,
+      'lastName': 0,
+      'title': 0
+    }
+
+    options[type] = non_zero_value
 
     return (
       this.setState(prevState => ({
         staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter.firstName.toUpperCase()
-          const personB = b.node.frontmatter.firstName.toUpperCase()
+          const personA = a.node.frontmatter[`${type}`].toUpperCase()
+          const personB = b.node.frontmatter[`${type}`].toUpperCase()
           if(negative) {
             return this.reverseComparison(personA, personB)
           } else {
             return this.comparison(personA, personB)
           }
         }),
-        firstName: {
-          order: first_name_order
-        },
-        lastName: {
-          order: 0
-        },
-        title: {
-          order: 0
-        }
-      }))
-    )
-  }
-
-  sortByLastName = () => {
-    let negative = this.state.lastName.order === 1
-    let last_name_order;
-    negative ? last_name_order = -1 : last_name_order = 1
-
-    return (
-      this.setState(prevState => ({
-        staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter.lastName.toUpperCase()
-          const personB = b.node.frontmatter.lastName.toUpperCase()
-          if(negative) {
-            return this.reverseComparison(personA, personB)
-          } else {
-            return this.comparison(personA, personB)
-          }
-        }),
-        firstName: {
-          order: 0
-        },
-        lastName: {
-          order: last_name_order
-        },
-        title: {
-          order: 0
-        }
-      }))
-    )
-  }
-
-  sortByTitle = () => {
-    let negative = this.state.title.order === 1
-    let title_order;
-    negative ? title_order = -1 : title_order = 1
-
-    return (
-      this.setState(prevState => ({
-        staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter.title.toUpperCase()
-          const personB = b.node.frontmatter.title.toUpperCase()
-          if(negative) {
-            return this.reverseComparison(personA, personB)
-          } else {
-            return this.comparison(personA, personB)
-          }
-        }),
-        firstName: {
-          order: 0
-        },
-        lastName: {
-          order: 0
-        },
-        title: {
-          order: title_order
+        order: {
+          firstName: options['firstName'],
+          lastName: options['lastName'],
+          title: options['title']          
         }
       }))
     )
@@ -154,7 +96,7 @@ const StaffDirectoryPage = class extends Component {
                     <th
                       className="no-action"
                       style={{width: '160px'}}
-                      onClick={ () => this.sortByLastName() }
+                      onClick={ () => this.sort('lastName') }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -162,11 +104,11 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.state.lastName.order === 1
+                            this.state.order.lastName === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.state.lastName.order === -1
+                            this.state.order.lastName === -1
                             ?
                             <i className="fas fa-sort-down"></i>
                             :
@@ -178,7 +120,7 @@ const StaffDirectoryPage = class extends Component {
                     <th
                       className="no-action"
                       style={{width: '160px'}}
-                      onClick={ () => this.sortByFirstName() }
+                      onClick={ () => this.sort('firstName') }
                     >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
@@ -186,11 +128,11 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                         <div className="ml-auto">
                           {
-                            this.state.firstName.order === 1
+                            this.state.order.firstName === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.state.firstName.order === -1
+                            this.state.order.firstName === -1
                             ?
                             <i className="fas fa-sort-down"></i>
                             :
@@ -199,18 +141,18 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th className="no-action" onClick={() => this.sortByTitle()}>
+                    <th className="no-action" onClick={() => this.sort('title')}>
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
                           Title
                         </div>
                         <div className="ml-auto">
                           {
-                            this.state.title.order === 1
+                            this.state.order.title === 1
                             ?
                             <i className="fas fa-sort-up"></i>
                             :
-                            this.state.title.order === -1
+                            this.state.order.title === -1
                             ?
                             <i className="fas fa-sort-down"></i>
                             :
