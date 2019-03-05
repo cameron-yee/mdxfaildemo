@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
-import { graphql } from 'gatsby'
 
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
+import Table from 'react-bootstrap/Table'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
@@ -20,6 +20,7 @@ const StaffDirectoryPage = class extends Component {
     super(props)
     this.state = {
       staff: props.data.allMarkdownRemark.edges,
+      //Table columns will be sorted either alphabetically (1), reverse-alphabetically (2), or another column is being filtered (0) 
       order: {
         firstName: 0,
         lastName: 1,
@@ -30,9 +31,9 @@ const StaffDirectoryPage = class extends Component {
 
   comparison = (personA, personB) => {
     let comparison = 0
-    if (personA > personB) {
+    if (personA.toUpperCase() > personB.toUpperCase()) {
       comparison = 1
-    } else if (personA < personB) {
+    } else if (personA.toUpperCase() < personB.toUpperCase()) {
       comparison = -1
     }
     return comparison
@@ -40,14 +41,15 @@ const StaffDirectoryPage = class extends Component {
 
   reverseComparison = (personA, personB) => {
     let comparison = 0
-    if (personA < personB) {
+    if (personA.toUpperCase() < personB.toUpperCase()) {
       comparison = 1
-    } else if (personA > personB) {
+    } else if (personA.toUpperCase() > personB.toUpperCase()) {
       comparison = -1
     }
     return comparison
   }
 
+  //type parameter must be either 'firstName', 'lastName', or 'title'
   sort = (type) => {
     const negative = this.state.order[`${type}`] === 1
 
@@ -60,13 +62,14 @@ const StaffDirectoryPage = class extends Component {
       'title': 0
     }
 
+    //search sort type value will be either 1 or -1, the other fields will always be 0
     options[type] = non_zero_value
 
     return (
       this.setState(prevState => ({
         staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter[`${type}`].toUpperCase()
-          const personB = b.node.frontmatter[`${type}`].toUpperCase()
+          const personA = a.node.frontmatter[`${type}`]
+          const personB = b.node.frontmatter[`${type}`]
           if(negative) {
             return this.reverseComparison(personA, personB)
           } else {
