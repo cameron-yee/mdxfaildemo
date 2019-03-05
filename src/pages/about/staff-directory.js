@@ -12,7 +12,7 @@ import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
 
-import './leadership.scss'
+import './staff-directory.scss'
 
 
 const StaffDirectoryPage = class extends Component {
@@ -54,186 +54,90 @@ const StaffDirectoryPage = class extends Component {
   }
 
   sortByFirstName = () => {
-    if (this.state.firstName.order === 1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.firstName.toUpperCase()
-            const personB = b.node.frontmatter.firstName.toUpperCase()
+    let negative = this.state.firstName.order === 1
+    let first_name_order;
+    negative ? first_name_order = -1 : first_name_order = 1
+
+    return (
+      this.setState(prevState => ({
+        staff: prevState.staff.sort((a, b) => {
+          const personA = a.node.frontmatter.firstName.toUpperCase()
+          const personB = b.node.frontmatter.firstName.toUpperCase()
+          if(negative) {
             return this.reverseComparison(personA, personB)
-          }),
-          firstName: {
-            order: -1
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: 0
-          }
-        }))
-      )
-    } else if (this.state.firstName.order === -1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.firstName.toUpperCase()
-            const personB = b.node.frontmatter.firstName.toUpperCase()
+          } else {
             return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 1
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: 0
           }
-        }))
-      )
-    } else if (this.state.firstName.order === 0) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.firstName.toUpperCase()
-            const personB = b.node.frontmatter.firstName.toUpperCase()
-            return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 1
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: 0
-          }
-        }))
-      )
-    }
+        }),
+        firstName: {
+          order: first_name_order
+        },
+        lastName: {
+          order: 0
+        },
+        title: {
+          order: 0
+        }
+      }))
+    )
   }
 
   sortByLastName = () => {
-    if (this.state.lastName.order === 1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.lastName.toUpperCase()
-            const personB = b.node.frontmatter.lastName.toUpperCase()
+    let negative = this.state.lastName.order === 1
+    let last_name_order;
+    negative ? last_name_order = -1 : last_name_order = 1
+
+    return (
+      this.setState(prevState => ({
+        staff: prevState.staff.sort((a, b) => {
+          const personA = a.node.frontmatter.lastName.toUpperCase()
+          const personB = b.node.frontmatter.lastName.toUpperCase()
+          if(negative) {
             return this.reverseComparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: -1
-          },
-          title: {
-            order: 0
-          }
-        }))
-      )
-    } else if (this.state.lastName.order === -1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.lastName.toUpperCase()
-            const personB = b.node.frontmatter.lastName.toUpperCase()
+          } else {
             return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: 1
-          },
-          title: {
-            order: 0
           }
-        }))
-      )
-    } else if (this.state.lastName.order === 0) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.lastName.toUpperCase()
-            const personB = b.node.frontmatter.lastName.toUpperCase()
-            return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: 1
-          },
-          title: {
-            order: 0
-          }
-        }))
-      )
-    }
+        }),
+        firstName: {
+          order: 0
+        },
+        lastName: {
+          order: last_name_order
+        },
+        title: {
+          order: 0
+        }
+      }))
+    )
   }
 
   sortByTitle = () => {
-    if (this.state.title.order === 1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.title.toUpperCase()
-            const personB = b.node.frontmatter.title.toUpperCase()
+    let negative = this.state.title.order === 1
+    let title_order;
+    negative ? title_order = -1 : title_order = 1
+
+    return (
+      this.setState(prevState => ({
+        staff: prevState.staff.sort((a, b) => {
+          const personA = a.node.frontmatter.title.toUpperCase()
+          const personB = b.node.frontmatter.title.toUpperCase()
+          if(negative) {
             return this.reverseComparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: -1
-          }
-        }))
-      )
-    } else if (this.state.title.order === -1) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.title.toUpperCase()
-            const personB = b.node.frontmatter.title.toUpperCase()
+          } else {
             return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: 1
           }
-        }))
-      )
-    } else if (this.state.title.order === 0) {
-      return (
-        this.setState(prevState => ({
-          staff: prevState.staff.sort((a, b) => {
-            const personA = a.node.frontmatter.title.toUpperCase()
-            const personB = b.node.frontmatter.title.toUpperCase()
-            return this.comparison(personA, personB)
-          }),
-          firstName: {
-            order: 0
-          },
-          lastName: {
-            order: 0
-          },
-          title: {
-            order: 1
-          }
-        }))
-      )
-    }
+        }),
+        firstName: {
+          order: 0
+        },
+        lastName: {
+          order: 0
+        },
+        title: {
+          order: title_order
+        }
+      }))
+    )
   }
 
   render() {
@@ -248,11 +152,8 @@ const StaffDirectoryPage = class extends Component {
                 <thead>
                   <tr>
                     <th
-                      style={{
-                        cursor: 'pointer',
-                        userSelect: 'none',
-                        width: '160px'
-                      }}
+                      className="no-action"
+                      style={{width: '160px'}}
                       onClick={ () => this.sortByLastName() }
                     >
                       <div className="d-flex align-items-center">
@@ -275,11 +176,8 @@ const StaffDirectoryPage = class extends Component {
                       </div>
                     </th>
                     <th
-                      style={{
-                        cursor: 'pointer',
-                        userSelect: 'none',
-                        width: '160px'
-                      }}
+                      className="no-action"
+                      style={{width: '160px'}}
                       onClick={ () => this.sortByFirstName() }
                     >
                       <div className="d-flex align-items-center">
@@ -301,13 +199,7 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th
-                      style={{
-                        cursor: 'pointer',
-                        userSelect: 'none'
-                      }}
-                      onClick={ () => this.sortByTitle() }
-                    >
+                    <th className="no-action" onClick={() => this.sortByTitle()}>
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
                           Title
@@ -327,20 +219,8 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th
-                      style={{
-                        textAlign: 'center'
-                      }}
-                    >
-                      Contact
-                    </th>
-                    <th
-                      style={{
-                        textAlign: 'center'
-                      }}
-                    >
-                      Profile
-                    </th>
+                    <th className="text-align-center">Contact</th>
+                    <th className="text-align-center">Profile</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -348,33 +228,10 @@ const StaffDirectoryPage = class extends Component {
                     this.state.staff.map((person, index) => {
                       return(
                         <tr key={`person-${index}`}>
-                          <td
-                            style={{
-                              verticalAlign: 'middle'
-                            }}
-                          >
-                            {person.node.frontmatter.lastName}
-                          </td>
-                          <td
-                            style={{
-                              verticalAlign: 'middle'
-                            }}
-                          >
-                            {person.node.frontmatter.firstName}
-                          </td>
-                          <td
-                            style={{
-                              verticalAlign: 'middle'
-                            }}
-                          >
-                            {person.node.frontmatter.title}
-                          </td>
-                          <td
-                            style={{
-                              textAlign: 'center',
-                              verticalAlign: 'middle'
-                            }}
-                          >
+                          <td className="vertical-align-middle">{person.node.frontmatter.lastName}</td>
+                          <td className="vertical-align-middle">{person.node.frontmatter.firstName}</td>
+                          <td className="vertical-align-middle">{person.node.frontmatter.title}</td>
+                          <td className="vertical-align-middle text-align-center">
                             <SpecificContactForm
                               sendto={person.node.frontmatter.firstName + " " + person.node.frontmatter.lastName}
                             >
@@ -384,29 +241,17 @@ const StaffDirectoryPage = class extends Component {
                           {
                             person.node.frontmatter.url !== ""
                             ?
-                            <td
-                              style={{
-                                textAlign: 'center',
-                                verticalAlign: 'middle'
-                              }}
-                            >
+                            <td className="vertical-align-middle text-align-center">
                               <a
                                 href={person.node.frontmatter.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-
                               >
                                 <i className="fas fa-external-link-alt"></i>
                               </a>
                             </td>
                             :
-                            <td
-                              style={{
-                                verticalAlign: 'middle'
-                              }}
-                            >
-                              &nbsp;
-                            </td>
+                            <td className="vertical-align-middle">&nbsp;</td>
                           }
                         </tr>
                       )
