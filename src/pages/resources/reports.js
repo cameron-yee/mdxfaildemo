@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
@@ -10,13 +10,11 @@ import Container from 'react-bootstrap/Container'
 import Layout from '../../components/layout/layout'
 import Row from 'react-bootstrap/Row'
 
-import '../../global-scss/index.scss';
-import './reports.scss';
-import PageTitle from '../../components/layout/page-title/page-title';
+import '../../global-scss/index.scss'
+import './reports.scss'
+import PageTitle from '../../components/layout/page-title/page-title'
 
-const ResearchResourceCenter = (props) => {
-  const courses = props.data.allMarkdownRemark.edges;
-
+const Reports = (props) => {
   return (
     <>
       <SEO title="Reports" keywords={[`gatsby`, `application`, `react`]} />
@@ -36,25 +34,27 @@ const ResearchResourceCenter = (props) => {
         <section className="section">
           <Container>
             <Row>
-              {
-                courses.map((edge, index) => {
-                  return(
-                    <Col md={4} key={edge.node.id} className="rrc-card-col">
-                      <Card id={`resource-${index}`} className="rrc-card" data-filter={JSON.stringify(edge.node.frontmatter)} data-type={edge.node.frontmatter.type}>
-                        <div className="rrc-card-img-wrapper">
-                          <Card.Img variant="top" className="rrc-card-img" src={edge.node.frontmatter.image}/>
-                        </div>
-                        <Card.Body>
-                          <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                          <Card.Text className="rrc-excerpt">{edge.node.excerpt}</Card.Text>
-                          {/* <Link to={`/resources/research-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z-]/g, '').toLowerCase()}`} className="read-more"><Button variant="primary">Read More</Button></Link> */}
-                          <Link to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="rrc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  )
-                }) 
-              }
+              <Col 
+                md={4}
+                className="rrc-card-col"
+              >
+                <Card 
+                  className="rrc-card"
+                >
+                  <Card.Body>
+                    <Card.Title>Math/Science Teacher Leadership Synthesis Project</Card.Title>
+                    <Card.Text className="rrc-excerpt">
+                      The <strong>Developing math/science teacher leadership: A consensus approach to evaluating program quality</strong> project is funded by the National Science Foundation (ECR 1534698). The purpose of this synthesis project is to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
+                    </Card.Text>
+                    <Link 
+                      to={`/resources/reports/math-science-teacher-leadership-synthesis-project`} 
+                      className="rrc-read-more"
+                    >
+                      <Button variant="outline-secondary">Read More</Button>
+                    </Link>
+                  </Card.Body>
+                </Card>
+              </Col>
             </Row>
           </Container>
         </section>
@@ -65,28 +65,6 @@ const ResearchResourceCenter = (props) => {
 
 export default props => (
   <Location>
-    {locationProps => <ResearchResourceCenter {...locationProps} {...props} />}
+    {locationProps => <Reports {...locationProps} {...props} />}
   </Location>
 )
-
-export const educatorResourceQuery = graphql`
-  query researchResourceQuery {
-    allMarkdownRemark(filter: {frontmatter: { page: {eq: "research-resource-center"}}}) {
-      edges {
-        node {
-          id
-          excerpt(pruneLength: 200)
-          frontmatter {
-            additionalTags,
-            alt,
-            date,
-            discipline,
-            image,
-            title,
-            page
-          }
-        }
-      }
-    }
-  }
-`
