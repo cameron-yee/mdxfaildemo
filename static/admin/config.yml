@@ -98,7 +98,7 @@ collections:
     - name: staff
       label: Staff
       folder: src/content/staff
-      identifier_field: lastName
+      identifier_field: fullName
       create: true
       extension: md
       fields:

@@ -23,10 +23,14 @@ const StaffDirectoryPage = class extends Component {
       //Table columns will be sorted either alphabetically (1), reverse-alphabetically (2), or another column is being filtered (0) 
       order: {
         firstName: 0,
-        lastName: 1,
+        lastName: 0,
         title: 0
       }
     }
+  }
+
+  componentDidMount() {
+    this.sort('lastName')
   }
 
   comparison = (personA, personB) => {
@@ -233,9 +237,6 @@ export const leadershipQuery = graphql`
             eq: "staff-directory"
           }
         }
-      }
-      sort: {
-        fields: [frontmatter___lastName]
       }
     ) {
       edges {
