@@ -7,7 +7,7 @@ seoLang: en-us
 type: Classroom
 template: Image Right
 image: >-
-  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/cells.jpeg?token=AtPITcR7Wt63uoZCJ3P_xa8ywbfD9Cinks5cfUhRwA%3D%3D
+  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/cells.jpeg?token=AtPITbWbpsGbGazhyArs0LqvSGAfEpijks5cf_MdwA%3D%3D
 alt: PLACEHOLDER
 price: 0
 courseId: 0
