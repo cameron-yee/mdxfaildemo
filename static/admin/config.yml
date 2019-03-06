@@ -98,15 +98,15 @@ collections:
     - name: staff
       label: Staff
       folder: src/content/staff
-      identifier_field: fullName
+      identifier_field: lastName
       create: true
       extension: md
       fields:
         - { name: date, label: Date, widget: date }
-        - { name: fullName, label: Full Name, widget: string }
-        - { name: position, label: Position, widget: string }
-        - { name: honorific, label: Honorific/Title, widget: string, required: false }
-        - { name: personalUrl, label: Personal Website URL, widget: string, required: false }
+        - { name: firstName, label: First Name, widget: string }
+        - { name: lastName, label: Last Name, widget: string }
+        - { name: title, label: Title, widget: string }
+        - { name: url, label: Profile URL, widget: string, required: false }
         - { name: page, label: Page, widget: hidden, default: staff-directory }
 
     # - name: strategic-initiative
