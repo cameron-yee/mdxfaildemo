@@ -68,8 +68,11 @@ const StaffDirectoryPage = class extends Component {
     return (
       this.setState(prevState => ({
         staff: prevState.staff.sort((a, b) => {
-          const personA = a.node.frontmatter[type]
-          const personB = b.node.frontmatter[type]
+          let compare;
+          type === 'firstName' ? compare = 0 : compare = 1
+
+          const personA = a.node.frontmatter[type] || a.node.frontmatter['fullName'].split(' ')[compare] 
+          const personB = b.node.frontmatter[type] || b.node.frontmatter['fullName'].split(' ')[compare] 
           if(negative) {
             return this.reverseComparison(personA, personB)
           } else {
@@ -171,14 +174,17 @@ const StaffDirectoryPage = class extends Component {
                 <tbody>
                   {
                     this.state.staff.map((person, index) => {
+                      const firstName = person.node.frontmatter.fullName.split(' ')[0]
+                      const lastName = person.node.frontmatter.fullName.split(' ')[1]
+
                       return(
                         <tr key={`person-${index}`}>
-                          <td className="vertical-align-middle">{person.node.frontmatter.lastName}</td>
-                          <td className="vertical-align-middle">{person.node.frontmatter.firstName}</td>
+                          <td className="vertical-align-middle">{person.node.frontmatter.lastName || lastName}</td>
+                          <td className="vertical-align-middle">{person.node.frontmatter.firstName || firstName}</td>
                           <td className="vertical-align-middle">{person.node.frontmatter.title}</td>
                           <td className="vertical-align-middle text-align-center">
                             <SpecificContactForm
-                              sendto={person.node.frontmatter.firstName + " " + person.node.frontmatter.lastName}
+                              sendto={person.node.frontmatter.fullName}
                             >
                               <i className="far fa-envelope"></i>
                             </SpecificContactForm>
@@ -238,6 +244,7 @@ export const leadershipQuery = graphql`
           frontmatter {
             firstName,
             lastName,
+            fullName,
             title,
             url,
             page
