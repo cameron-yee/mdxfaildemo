@@ -23,6 +23,9 @@ const JoinModal= class extends Component {
       email: undefined,
       firstname: undefined,
       lastname: undefined,
+      firstname_touched: false,
+      lastname_touched: false,
+      email_touched: false,
       signed_up: false,
       loading: false,
       notificationShow: false
@@ -60,20 +63,53 @@ const JoinModal= class extends Component {
 
   setEmail = (e) => {
     e.preventDefault()
+
+    let touched = true
+    if(this.state.email_touched === false && (e.key === 'Tab' || e.key === 'Shift')) {
+      touched = false
+    }
+
     let input_elem = document.getElementById('email-list-input');
-    /[\w]+[@][\w]+[.][\w]+/.test(input_elem.value) === false ? this.setState({email: undefined}) : this.setState({email: input_elem.value})
+
+    /[\w]+[@][\w]+[.][\w]+/.test(input_elem.value) === false
+    ?
+    this.setState({email: undefined, email_touched: touched})
+    :
+    this.setState({email: input_elem.value, email_touched: touched})
   }
 
   setFirstName = (e) => {
     e.preventDefault()
+
+    let touched = true
+    if(this.state.firstname_touched === false && (e.key === 'Tab' || e.key === 'Shift')) {
+      touched = false
+    }
+
     let input_elem = document.getElementById('first-name-input');
-    input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
+
+    input_elem.value === ''
+    ?
+    this.setState({firstname: undefined, firstname_touched: touched})
+    :
+    this.setState({firstname: input_elem.value, firstname_touched: touched})
   }
 
   setLastName = (e) => {
     e.preventDefault()
+
+    let touched = true
+    if(this.state.lastname_touched === false && (e.key === 'Tab' || e.key === 'Shift')) {
+      touched = false
+    }
+
     let input_elem = document.getElementById('last-name-input');
-    input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
+
+    input_elem.value === ''
+    ?
+    this.setState({lastname: undefined, lastname_touched: touched})
+    :
+    this.setState({lastname: input_elem.value, lastname_touched: touched})
   }
 
   checkIfContactExists = (e) => {
@@ -219,19 +255,46 @@ const JoinModal= class extends Component {
             <Col md={6}>
               <Form.Group>
                 <Form.Label>First Name</Form.Label>
-                <Form.Control id="first-name-input" type="text" placeholder="" onKeyUp={this.setFirstName} />
+                <Form.Control
+                  id="first-name-input"
+                  type="text"
+                  placeholder=""
+                  onKeyUp={this.setFirstName}
+                  isInvalid={this.state.firstname_touched && !this.state.firstname || this.state.lastname === ''}
+                />
+                <Form.Control.Feedback type="invalid" data-touched={false}>
+                  Please provide a first name.
+                </Form.Control.Feedback>
               </Form.Group>
             </Col>
             <Col md={6}>
               <Form.Group>
                 <Form.Label>Last Name</Form.Label>
-                <Form.Control id="last-name-input" type="text" placeholder="" onKeyUp={this.setLastName} />
+                <Form.Control
+                  id="last-name-input"
+                  type="text"
+                  placeholder=""
+                  onKeyUp={this.setLastName}
+                  isInvalid={this.state.lastname_touched && !this.state.lastname || this.state.lastname === ''}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide a last name.
+                </Form.Control.Feedback>
               </Form.Group>
             </Col>
             <Col>
               <Form.Group>
                 <Form.Label>Email</Form.Label>
-                <Form.Control id="email-list-input" type="email" placeholder="" onKeyUp={this.setEmail} />
+                <Form.Control
+                  id="email-list-input"
+                  type="email"
+                  placeholder=""
+                  onKeyUp={this.setEmail}
+                  isInvalid={this.state.email_touched && !this.state.email || this.state.email === ''}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid email address.
+                </Form.Control.Feedback>
               </Form.Group>
             </Col>
           </Row>
@@ -240,7 +303,10 @@ const JoinModal= class extends Component {
           { !this.state.loading && this.state.signed_up &&
             <Button variant="outline-success" disabled>Signed up</Button>
           }
-          { !this.state.loading && !this.state.signed_up &&
+          { (!this.state.firstname || !this.state.lastname || !this.state.email) &&
+            <Button variant="outline-primary" disabled>Sign up</Button>
+          }
+          { !this.state.loading && !this.state.signed_up && this.state.firstname && this.state.lastname && this.state.email &&
             <Button variant="outline-primary" type="submit">Sign up</Button>
           }
           { this.state.loading &&
