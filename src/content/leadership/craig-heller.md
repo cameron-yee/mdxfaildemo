@@ -12,4 +12,6 @@ alt: Craig Heller headshot
 additionalTags: BOD
 page: leadership
 ---
-Dr. Heller
+**Craig Heller**
+
+Dr. Heller joined the BSCS Board of Directors in 2019.
