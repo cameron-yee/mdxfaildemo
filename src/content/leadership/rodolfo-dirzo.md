@@ -12,4 +12,6 @@ alt: Rodolfo Dirzo headshot
 additionalTags: BOD
 page: leadership
 ---
-Lauren is working on this.
+**Rodolfo Dirzo**
+
+Dr. Dirzo joined the BSCS Board of Directors in 2019.
