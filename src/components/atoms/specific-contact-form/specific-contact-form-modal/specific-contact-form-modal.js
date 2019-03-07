@@ -5,6 +5,7 @@ import axios from 'axios'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
 
@@ -15,25 +16,21 @@ const SpecificContactFormModal = class extends Component {
     super(props)
     this.state = {
       email: undefined,
+      email_touched: false,
       firstname: undefined,
+      firstname_touched: false,
       lastname: undefined,
+      lastname_touched: false,
       phone: undefined,
+      phone_touched: false,
       message: undefined,
+      message_touched: false,
       loading: false,
       notificationShow: false,
       sent: false
     }
     
     this.cancelToken = axios.CancelToken.source()
-
-    this.postSpecificForm = this.postSpecificForm.bind(this)
-    this.setEmail = this.setEmail.bind(this)
-    this.setFirstName = this.setFirstName.bind(this)
-    this.setLastName = this.setLastName.bind(this)
-    this.setPhone = this.setPhone.bind(this)
-    this.setMessage = this.setMessage.bind(this)
-    this.showNotification = this.showNotification.bind(this)
-    this.hideNotification = this.hideNotification.bind(this)
   }
 
   componentWillUnmount() {
@@ -54,33 +51,58 @@ const SpecificContactFormModal = class extends Component {
 
   setEmail = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('scfm-email-input');
+    let input_elem = document.getElementById('sc-email-input');
+
     /[\w]+[@][\w]+[.][\w]+/.test(input_elem.value) === false ? this.setState({email: undefined}) : this.setState({email: input_elem.value})
+  }
+
+  blurEmail = (e) => {
+    e.preventDefault()
+    this.setState({email_touched: true})
   }
 
   setFirstName = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('scfm-first-name-input');
+    let input_elem = document.getElementById('sc-first-name-input');
     input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
+  }
+
+  blurFirstName = (e) => {
+    e.preventDefault()
+    this.setState({firstname_touched: true})
   }
 
   setLastName = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('scfm-last-name-input');
+    let input_elem = document.getElementById('sc-last-name-input');
     input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
+  }
+
+  blurLastName = (e) => {
+    e.preventDefault()
+    this.setState({lastname_touched: true})
   }
 
   setPhone = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('scfm-phone-input');
-    console.log(input_elem.value)
+    let input_elem = document.getElementById('sc-phone-input');
     input_elem.value === '' ? this.setState({phone: undefined}) : this.setState({phone: input_elem.value})
+  }
+
+  blurPhone = (e) => {
+    e.preventDefault()
+    this.setState({phone_touched: true})
   }
 
   setMessage = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('scfm-message-input');
+    let input_elem = document.getElementById('sc-message-input');
     input_elem.value === '' ? this.setState({message: undefined}) : this.setState({message: input_elem.value})
+  }
+
+  blurMessage = (e) => {
+    e.preventDefault()
+    this.setState({message_touched: true})
   }
 
   postSpecificForm = (e) => {
@@ -129,92 +151,129 @@ const SpecificContactFormModal = class extends Component {
         <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
           Your message has been sent to {this.props.sendto}.
         </Alert>
-        <form onSubmit={(e) => this.postSpecificForm(e)}>
+        <Form onSubmit={(e) => this.postSpecificForm(e)}>
           <Row>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">To</div>
-                <input
-                  className="form-control"
-                  id="scfm-first-name-input"
+              <Form.Group>
+                <Form.Label>To</Form.Label>
+                <Form.Control
                   type="text"
                   placeholder={this.props.sendto}
                   disabled
                 />
-              </div>
+              </Form.Group>
             </Col>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">First name</div>
-                <input
-                  className="form-control"
-                  id="scfm-first-name-input"
+              <Form.Group>
+                <Form.Label>First name</Form.Label>
+                <Form.Control
+                  id="sc-first-name-input"
                   type="text"
                   placeholder=""
+                  maxLength="50"
                   onKeyUp={this.setFirstName}
+                  onBlur={this.blurFirstName}
+                  isInvalid={this.state.firstname_touched && (!this.state.firstname || this.state.firstname === '')}
                 />
-              </div>
+                <Form.Control.Feedback type="invalid">
+                  Please provide a first name.
+                </Form.Control.Feedback>
+              </Form.Group>
             </Col>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">Last name</div>
-                <input
-                  className="form-control"
-                  id="scfm-last-name-input"
+              <Form.Group>
+                <Form.Label>Last name</Form.Label>
+                <Form.Control
+                  id="sc-last-name-input"
                   type="text"
                   placeholder=""
+                  maxLength="50"
                   onKeyUp={this.setLastName}
+                  onBlur={this.blurLastName}
+                  isInvalid={this.state.lastname_touched && (!this.state.lastname || this.state.lastname === '')}
                 />
-              </div>
+                <Form.Control.Feedback type="invalid">
+                  Please provide a last name.
+                </Form.Control.Feedback>
+              </Form.Group>
             </Col>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">Email</div>
-                <input
-                  className="form-control"
-                  id="scfm-email-input"
+              <Form.Group>
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  id="sc-email-input"
                   type="email"
                   placeholder=""
                   onKeyUp={this.setEmail}
+                  onBlur={this.blurEmail}
+                  isInvalid={this.state.email_touched && (!this.state.email || this.state.email === '')}
                 />
-              </div>
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid email address.
+                </Form.Control.Feedback>
+              </Form.Group>
             </Col>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">Phone number</div>
-                <input
-                  className="form-control"
-                  id="scfm-phone-input"
+              <Form.Group>
+                <Form.Label>Phone number</Form.Label>
+                <Form.Control
+                  id="sc-phone-input"
                   type="text"
                   placeholder=""
+                  maxLength="20"
                   onKeyUp={this.setPhone}
+                  onBlur={this.blurPhone}
+                  isInvalid={this.state.phone_touched && (!this.state.phone || this.state.phone === '')}
                 />
-              </div>
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid phone number.
+                </Form.Control.Feedback>
+              </Form.Group>
             </Col>
             <Col xs={12}>
-              <div className="form-group">
-                <div className="form-label">Message</div>
-                <textarea
-                  className="form-control"
-                  id="scfm-message-input"
+              <Form.Group>
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  id="sc-message-input"
                   placeholder=""
-                  rows="8"
+                  maxLength="2000"
                   onKeyUp={this.setMessage}
+                  onBlur={this.blurMessage}
+                  isInvalid={this.state.message_touched && (!this.state.message || this.state.message === '')}
                 />
-              </div>
+                <Form.Control.Feedback type="invalid">
+                  Please enter a message.
+                </Form.Control.Feedback>
+              </Form.Group>
             </Col>
           </Row>
-        </form>
+        </Form>
       </Modal.Body>
       <Modal.Footer>
-        { !this.state.loading && !this.state.sent && 
-          <Button variant="primary" type="submit">Contact {this.props.sendto}</Button>
+        { !this.state.loading && !this.state.sent
+          && (!this.state.firstname
+          || !this.state.lastname
+          || !this.state.email
+          || !this.state.phone
+          || !this.state.message)
+          &&
+          <Button variant="outline-primary" disabled>Contact {this.props.sendto}</Button>
+        }
+        { !this.state.loading && !this.state.sent
+          && this.state.firstname
+          && this.state.lastname
+          && this.state.email
+          && this.state.phone
+          && this.state.message
+          &&
+          <Button variant="outline-primary" type="submit">Contact {this.props.sendto}</Button>
         }
         { this.state.loading &&
-          <Button variant="secondary" className="is-loading" />
+          <Button variant="outline-secondary" className="is-loading" />
         }
         { !this.state.loading && this.state.sent &&
-          <Button variant="primary" disabled>Contact {this.props.sendto}</Button>
+          <Button variant="outline-success" disabled>Message sent to {this.props.sendto}</Button>
         }
       </Modal.Footer>
     </Modal>
