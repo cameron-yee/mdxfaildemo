@@ -12,4 +12,4 @@ alt: Craig Heller headshot
 additionalTags: BOD
 page: leadership
 ---
-Lauren is working on this.
+Dr. Heller
