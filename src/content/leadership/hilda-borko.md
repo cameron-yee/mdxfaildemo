@@ -2,17 +2,17 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
 template: Image Right
-image: https://media.bscs.org/bscs-science-learning/bod/bod_2016_hilda_5x7_04.jpg
+image: https://media.bscs.org/bscsmw/leadership/bod/bod_2018_hilda_b.jpg
 alt: Hilda Borko headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/hilda-borko
 seoDescription: Test SEO description.
 seoLang: en-us
 ---
 
-## *Professor*
+### *Professor*
 <a href="https://ed.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Graduate School of Education</a>
 
 **Hilda Borko**, Ph.D., is a professor at Stanford University’s Graduate School of Education. Her research explores teacher cognition and the process of learning to teach, with an emphasis on changes in novice and experienced teachers' knowledge and beliefs about teaching, learning, subject matter, and classroom practices.

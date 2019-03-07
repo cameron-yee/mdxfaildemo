@@ -2,12 +2,12 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nathan Root
 template: Image Left
-image: https://media.bscs.org/bscs-science-learning/bod/bod_2018_nate_r.jpg
+image: https://media.bscs.org/bscsmw/leadership/bod/bod_2018_nate_r.jpg
 alt: Nathan Root headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/nathan-root
 seoDescription: Test SEO description.
 seoLang: en-us
 ---

@@ -47,7 +47,7 @@ const LeadershipPage = class extends Component {
                                   to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
                                   className="leadership-read-more"
                                 >
-                                  <Button variant="primary">Read More</Button>
+                                  <Button variant="outline-secondary">Read More</Button>
                                 </Link>
                               </div>
                             </Card.Body>
@@ -80,7 +80,7 @@ const LeadershipPage = class extends Component {
                                   to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
                                   className="leadership-read-more"
                                 >
-                                  <Button variant="primary">Read More</Button>
+                                  <Button variant="outline-secondary">Read More</Button>
                                 </Link>
                               </div>
                             </Card.Body>

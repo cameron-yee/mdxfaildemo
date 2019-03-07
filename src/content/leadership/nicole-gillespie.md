@@ -2,17 +2,17 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nicole Gillespie
 template: Image Left
-image: https://media.bscs.org/bscs-science-learning/bod/bod_nicole_g_5x7.jpg
+image: https://media.bscs.org/bscsmw/leadership/bod/bod_nicole_g_5x7.jpg
 alt: Nicole Gillespie headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/nicole-gillespie
 seoDescription: Test SEO description.
 seoLang: en-us
 ---
 
-## *Executive Director*
+### *Executive Director*
 <a href="https://knowlesteachers.org/" target="_blank" rel="noopener noreferrer">Knowles Science Teaching Foundation</a>
 
 **Nicole Gillespie**, Ph.D., is the Executive Director of the Knowles Science Teaching Foundation (KSTF) in Moorestown, New Jersey. Prior to becoming the executive director in 2013, she directed KSTF's Teaching Fellows Program for nine years, the Foundation’s signature program that supports beginning high school science and mathematics teachers.

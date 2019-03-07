@@ -2,21 +2,21 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Larry Gold
 template: Image Left
-image: https://media.bscs.org/bscs-science-learning/bod/bod_larry_g_5x7_v3.jpg
+image: https://media.bscs.org/bscsmw/leadership/bod/bod_larry_g_5x7_v3.jpg
 alt: Larry Gold headshot.
 additionalTags: BOD
 type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
+seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/larry-gold
 seoDescription: Test SEO description.
 seoLang: en-us
 ---
 
-## *Professor, Molecular, Cellular, and Developmental Biology*
+### *Professor, Molecular, Cellular, and Developmental Biology*
 <a href="http://www.colorado.edu" target="_blank" rel="noopener noreferrer">University of Colorado Boulder</a>
 
 
-## *Founder and Chairman*
+### *Founder and Chairman*
 <a href="https://somalogic.com/" target="_blank" rel="noopener noreferrer">SomaLogic</a>
 
 **Larry Gold**, Ph.D., is Professor of Molecular, Cellular, and Developmental Biology at the University of Colorado, Boulder, and the Founder and Chairman of SomaLogic in Boulder.
