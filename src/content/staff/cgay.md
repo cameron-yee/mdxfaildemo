@@ -5,6 +5,5 @@ firstName: Cynthia J.
 lastName: Gay
 title: Science Educator
 # url: https://cgay.bscs.org/
-url: ""
 page: staff-directory
 ---

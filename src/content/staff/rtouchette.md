@@ -5,6 +5,5 @@ firstName: K. Renée
 lastName: Touchette
 title: HR Generalist & Office Administrator
 # url: https://rtouchette.bscs.org/
-url: ""
 page: staff-directory
 ---

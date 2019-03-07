@@ -194,7 +194,7 @@ const StaffDirectoryPage = class extends Component {
                             </SpecificContactForm>
                           </td>
                           {
-                            person.node.frontmatter.url !== ""
+                            person.node.frontmatter.url !== null
                             ?
                             <td className="vertical-align-middle text-align-center">
                               <a

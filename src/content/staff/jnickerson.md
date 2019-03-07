@@ -5,6 +5,5 @@ firstName: J. S.
 lastName: Nickerson
 title: Lead Developer, Educational Technology & Web Applications
 # url: https://jnickerson.bscs.org/
-url: ""
 page: staff-directory
 ---

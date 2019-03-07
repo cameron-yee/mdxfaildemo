@@ -5,6 +5,5 @@ firstName: Cari F.
 lastName:  Herrmann Abell
 title: Research Scientist
 # url: https://cabell.bscs.org/
-url: ""
 page: staff-directory
 ---

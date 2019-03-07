@@ -5,6 +5,5 @@ firstName: Anne L.
 lastName: Westbrook
 title: Science Educator
 # url: https://awestbrook.bscs.org/
-url: ""
 page: staff-directory
 ---
