@@ -6,12 +6,10 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Right
-image: >-
-  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/cospgs.jpg?token=AtPITSbF80Q3xK1AAXvW49uxuJBpw8NZks5cgXA2wA%3D%3D
+image: /assets/koala.jpg
 alt: Rodolfo Dirzo headshot
 additionalTags: BOD
 page: leadership
 ---
-**Rodolfo Dirzo**
 
-Dr. Dirzo joined the BSCS Board of Directors in 2019.
+**Dr. Dirzo** joined the BSCS Board of Directors in 2019.

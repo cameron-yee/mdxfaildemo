@@ -6,13 +6,12 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Right
-image: >-
-  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/ar-2017.jpg?token=AtPITY5ehz553JjMH9AT9FIU5Tre1dEOks5cgXA2wA%3D%3D
+image: /assets/koala.jpg
 alt: Philip Bell headshot
 additionalTags: BOD
 page: leadership
 ---
-# _Professor_
+### *Professor*
 
 <a href="https://education.uw.edu/">Learning Sciences & Human Development</a>
 

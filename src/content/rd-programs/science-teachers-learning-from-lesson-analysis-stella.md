@@ -11,7 +11,10 @@ seoLang: en-us
 image: /assets/ocean.jpg
 alt: PLACEHOLDER
 sidebarText: Want to know more about STeLLA? Download our STeLLA Info Sheet!
+sidebarButtonText: Download
 sidebarUrl: https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf
+sidebarContactText: Contact Jody Bintz to explore opportunities to work together.
+sidebarContact: Jody Bintz
 page: rd-programs
 ---
 STeLLA is a nationally-recognized program for teacher professional learning—developed from a 16-year line of research at BSCS Science Learning. 
@@ -42,6 +45,6 @@ See our growing line of research at-a-glance.
 
 **Work with Us**
 
-High quality science education is more important than ever. Teachers must prepare students to succeed in a 21st century society, where scientific reasoning and critical thinking skills are essential. To prepare teachers to achieve this goal, BSCS is working to bring the STeLLA approach to teachers nationwide through partnerships with schools, districts, teacher educators, and funders. Contact Jody Bintz (hyperlink to contact form) to explore opportunities to work together.
+High quality science education is more important than ever. Teachers must prepare students to succeed in a 21st century society, where scientific reasoning and critical thinking skills are essential. To prepare teachers to achieve this goal, BSCS is working to bring the STeLLA approach to teachers nationwide through partnerships with schools, districts, teacher educators, and funders. 
 
 This material is based upon work supported by the National Science Foundation under Awards #0310721, #0918277, #0957996, #1118643, #1220635, #1321242, #1503280, #1725389, and #1813127 and by the Minnesota Department of Education under Award #2016-00170. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or of the Minnesota Department of Education.

@@ -9,6 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Layout from '../components/layout/layout';
 import PageTitle from '../components/layout/page-title/page-title';
+import SpecificContactForm from '../components/atoms/specific-contact-form/specific-contact-form'
 import Row from 'react-bootstrap/Row'
 
 import '../global-scss/index.scss';
@@ -62,6 +63,19 @@ const RDProgramsTemplate = class extends Component {
                   </Card>
                 </Col>
               }
+              {this.resource.sidebarContact && this.resource.sidebarContactText &&
+                <Col md={3}>
+                  <Card>
+                    <Card.Body>
+                      {/* <Card.Title>Resource Information</Card.Title> */}
+                      <Card.Text style={{fontSize: '.8rem'}}>
+                        {this.resource.sidebarContactText}
+                      </Card.Text>
+                      <SpecificContactForm sendto={this.resource.sidebarContact} />
+                    </Card.Body>
+                  </Card>
+                </Col>
+              }
             </Row>
           </Container>
         </Layout>
@@ -90,6 +104,9 @@ export const query = graphql`
         seoLang,
         sidebarUrl,
         sidebarText,
+        sidebarButtonText,
+        sidebarContact,
+        sidebarContactText,
         title,
       }
     }

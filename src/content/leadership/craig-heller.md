@@ -6,12 +6,10 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Left
-image: >-
-  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/cells.jpeg?token=AtPITTqJ7Rtg5yl0Y4wnydLbRtkreq8bks5cgXA2wA%3D%3D
+image: /assets/koala.jpg
 alt: Craig Heller headshot
 additionalTags: BOD
 page: leadership
 ---
-**Craig Heller**
 
-Dr. Heller joined the BSCS Board of Directors in 2019.
+**Dr. Heller** joined the BSCS Board of Directors in 2019.
