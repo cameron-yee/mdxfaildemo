@@ -9,7 +9,6 @@ type: Classroom
 template: Image Left
 image: /assets/scifi.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 gradeLevel:
   - High

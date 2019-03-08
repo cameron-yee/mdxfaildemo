@@ -9,7 +9,6 @@ type: Classroom
 template: Image Right
 image: /assets/cells.jpeg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 page: educator-resource-center
 ---

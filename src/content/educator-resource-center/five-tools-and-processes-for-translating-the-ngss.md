@@ -9,7 +9,6 @@ type: District Planning
 template: Image Left
 image: /assets/cospgs.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 page: educator-resource-center
 ---

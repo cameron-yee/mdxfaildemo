@@ -53,6 +53,9 @@ const EducatorResourceCenter = class extends Component {
             <Container>
               <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
+                <Col xs={12}>
+                  <p>Welcome to the Educator Resource Center—where you will discover resources to support classroom instruction, professional learning, district planning, and citizen science efforts.</p>
+                </Col>
                 <ResourceCategories
                   navigate={false}
                   filterHash={this.state.filterHash}

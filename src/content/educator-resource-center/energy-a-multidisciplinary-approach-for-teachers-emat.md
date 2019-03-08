@@ -8,7 +8,6 @@ type: Professional Learning
 template: Image Right
 image: /assets/snow-leopard.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 discipline: Earth Sciences
 page: educator-resource-center

@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Left
-image: /assets/koala.jpg
+image: https://media.bscs.org/bscsmw/leadership/bod/bod_heller.jpg
 alt: Craig Heller headshot
 additionalTags: BOD
 page: leadership

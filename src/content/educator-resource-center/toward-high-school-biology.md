@@ -9,7 +9,6 @@ type: Classroom
 template: Image Right
 image: /assets/red-panda.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 gradeLevel:
   - High

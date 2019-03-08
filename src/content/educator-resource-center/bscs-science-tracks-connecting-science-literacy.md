@@ -9,7 +9,6 @@ type: Classroom
 template: Image Right
 image: /assets/cospgs.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 gradeLevel:
   - Elementary

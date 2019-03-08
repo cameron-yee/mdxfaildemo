@@ -8,7 +8,6 @@ type: Citizen Science
 template: Image Left
 image: /assets/river.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 discipline: Multidisciplinary Sciences
 page: educator-resource-center

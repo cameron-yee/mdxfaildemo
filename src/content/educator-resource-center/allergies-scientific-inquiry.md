@@ -9,8 +9,8 @@ type: Classroom
 template: Image Right
 image: /assets/red-panda.jpg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
+price: null
 gradeLevel:
   - Middle
 page: educator-resource-center
@@ -21,6 +21,6 @@ To help middle school teachers more effectively teach about food allergies, BSCS
 
 Lessons engage students in the practices of scientific inquiry, and are aligned to the Next Generation Science Standards.  
 
-<button class="btn btn-primary"><a href="http://allergies.bscs.org/" target="_blank">Access Resource Here</a></button>
+<a href="http://allergies.bscs.org/" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Access Resource Here</button></a>
 
 _This resource was supported by a grant (R25 A1098674-01) from the National Institute of Allergy and Infectious Diseases._

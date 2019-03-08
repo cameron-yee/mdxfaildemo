@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -126,8 +128,8 @@ const WorkWithUsPage = class extends Component {
         <SEO title="Work With Us" />
         <Container>
           <PageTitle title="Work With Us" />
-          <Row style={{ marginBottom: '2rem' }}>
-            <Col>
+          <Row>
+            <Col style={{marginBottom: '1rem'}}>
               <p>
                 BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. We create instructional materials, provide professional learning programs for teachers, spearhead leadership development programs for schools and districts, and conduct research on how to improve science teaching and learning.
               </p>
@@ -139,8 +141,8 @@ const WorkWithUsPage = class extends Component {
               </p>
             </Col>
           </Row>
-          <Row style={{ marginBottom: '2rem' }}>
-            <Col>
+          <Row className="d-flex flex-wrap-reverse" style={{ marginBottom: '2rem' }}>
+            <Col className="p-2" lg={9}>
               <div className="accordion" id="accordion">
 
                 <div className="card accordion-card">
@@ -431,6 +433,49 @@ const WorkWithUsPage = class extends Component {
                 </div>
               </div>
 
+            </Col>
+            <Col className="p-2" lg={3}>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Contact Division Director</Card.Title>
+                  <Card.Text style={{fontSize: '1rem'}}>
+                    <p>Please contact the appropriate division director to discuss opportunities to work together:</p>
+                    <strong>BSCS Instructional Materials Division Director</strong>
+                  </Card.Text>
+                  <div class="d-flex justify-content-center">
+                    <div className="p-2">
+                      <SpecificContactForm sendto="Lindsey Mohan">
+                        <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Dr. Lindsey Mohan</Button>
+                      </SpecificContactForm>
+                    </div>
+                  </div>
+                  <Card.Text style={{fontSize: '1rem', marginTop: '1rem'}}>
+                    <strong>BSCS Associate Director for Strategic Partnerships &amp; Professional Learning</strong>
+                  </Card.Text>
+                  <div class="d-flex justify-content-center">
+                    <div className="p-2">
+                      <SpecificContactForm sendto="Jody Bintz">
+                        <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Jody Bintz</Button>
+                      </SpecificContactForm>
+                    </div>
+                  </div>
+                  <Card.Text style={{fontSize: '1rem', marginTop: '1rem'}}>
+                    <strong>BSCS Research Division Directors</strong>
+                  </Card.Text>
+                  <div class="d-flex justify-content-center flex-wrap">
+                    <div className="p-2">
+                      <SpecificContactForm sendto="Susan Kowalski">
+                        <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Dr. Susan Kowalski</Button>
+                      </SpecificContactForm>
+                    </div>
+                    <div className="p-2">
+                      <SpecificContactForm sendto="Chris Wilson">
+                        <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Dr. Chris Wilson</Button>
+                      </SpecificContactForm>
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
             </Col>
           </Row>
         </Container>

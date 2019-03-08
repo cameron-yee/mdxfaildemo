@@ -48,32 +48,41 @@ const RDProgramsTemplate = class extends Component {
                   <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
                 </Col>
               }
-              {(this.resource.sidebarUrl || this.resource.sidebarText) &&
+              {(this.resource.sidebarUrl || this.resource.sidebarText
+                || this.resource.sidebarContact || this.resource.sidebarContactText) &&
                 <Col md={3}>
-                  <Card>
-                    <Card.Body>
-                      {/* <Card.Title>Resource Information</Card.Title> */}
-                      <Card.Text style={{fontSize: '.8rem'}}>
-                        {this.resource.sidebarText}
-                      </Card.Text>
-                      <a href={this.resource.sidebarUrl} target="_blank" rel="noopener noreferrer">
-                        <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
-                      </a>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              }
-              {this.resource.sidebarContact && this.resource.sidebarContactText &&
-                <Col md={3}>
-                  <Card>
-                    <Card.Body>
-                      {/* <Card.Title>Resource Information</Card.Title> */}
-                      <Card.Text style={{fontSize: '.8rem'}}>
-                        {this.resource.sidebarContactText}
-                      </Card.Text>
-                      <SpecificContactForm sendto={this.resource.sidebarContact} />
-                    </Card.Body>
-                  </Card>
+                  {(this.resource.sidebarUrl || this.resource.sidebarText) &&
+                    <Card style={{marginBottom: '1rem'}}>
+                      <Card.Body>
+                        {/* <Card.Title>Resource Information</Card.Title> */}
+                        <Card.Text style={{fontSize: '1rem'}}>
+                          {this.resource.sidebarText}
+                        </Card.Text>
+                        <div class="d-flex justify-content-center">
+                          <a className="p-2" href={this.resource.sidebarUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
+                          </a>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  }
+                  {this.resource.sidebarContact && this.resource.sidebarContactText &&
+                      <Card>
+                        <Card.Body>
+                          {/* <Card.Title>Resource Information</Card.Title> */}
+                          <Card.Text style={{fontSize: '1rem'}}>
+                            {this.resource.sidebarContactText}
+                          </Card.Text>
+                          <div class="d-flex justify-content-center">
+                            <div className="p-2">
+                              <SpecificContactForm sendto={this.resource.sidebarContact}>
+                                <Button size="sm" variant="outline-primary">Contact {this.resource.sidebarContact}</Button>
+                              </SpecificContactForm>
+                            </div>
+                          </div>
+                        </Card.Body>
+                      </Card>
+                  }
                 </Col>
               }
             </Row>

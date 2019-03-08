@@ -28,7 +28,7 @@ collections:
           - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
-          - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, default: 0.0, required: false }
+          - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
           - { name: courseId, label: Course ID, widget: number, valueType: int, min: 0, max: 10000, default: 0, required: false }
           - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
           - { name: discipline, label: Discipline, widget: select, multiple: true, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }

@@ -7,9 +7,8 @@ seoLang: en-us
 type: Classroom
 template: Image Right
 image: >-
-  https://raw.githubusercontent.com/bscs-dev-team/bmw/master/static/assets/cells.jpeg?token=AtPITbWbpsGbGazhyArs0LqvSGAfEpijks5cf_MdwA%3D%3D
+  https://github.com/bscs-dev-team/bmw/blob/master/static/assets/cells.jpeg
 alt: PLACEHOLDER
-price: 0
 courseId: 0
 page: educator-resource-center
 ---
@@ -19,7 +18,7 @@ BSCS Science Learning has developed a curriculum supplement to teach middle scho
 
 This program is freely available and features five classroom lessons.
 
-<button class="btn btn-primary"><a href="https://bscs.org/sites/default/files/_legacy/pdf/NIDA--full.pdf">Access Resource Here</a></button>
+<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/educator-resource-center/nida--full.pdf" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 Four of the lessons are centered around a short video. View the segments below:
 

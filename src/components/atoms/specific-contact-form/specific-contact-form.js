@@ -21,7 +21,7 @@ const SpecificContactForm = class extends Component {
   render() {
     return (
       <>
-        <span id="submit-button" variant="outline-primary" onClick={this.launch}>{this.props.children}</span>
+        <span variant="outline-primary" onClick={this.launch}>{this.props.children}</span>
         <SpecificContactFormModal show={this.state.modalShow} onHide={this.close} sendto={this.props.sendto} />
       </>
     )
