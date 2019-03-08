@@ -201,49 +201,52 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 
-  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages, leadershipPages]);
+  const upcomingProgramsTeacherProfessionalLearningPages = new Promise((resolve, reject) => {
+    const markdownTemplate = path.resolve(`src/templates/upcoming-programs-teacher-professional-learning-template.js`)
+    // Query for markdown nodes to use in creating pages.
+    resolve(
+      graphql(
+        `query MarkdownPagesQuery {
+          allMarkdownRemark(
+            filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}
+            sort: { order: ASC, fields: [frontmatter___title] }
+          ) {
+            edges {
+              node {
+                id
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+        `
+      ).then(result => {
+        if (result.errors) {
+          reject(result.errors)
+        }
 
-  // const upcomingProgramsTeacherProfessionalLearningPages = new Promise((resolve, reject) => {
-  //   const markdownTemplate = path.resolve(`src/templates/upcoming-programs-teacher-professional-learning-template.js`)
-  //   // Query for markdown nodes to use in creating pages.
-  //   resolve(
-  //     graphql(
-  //       `query MarkdownPagesQuery {
-  //         allMarkdownRemark(
-  //           filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}
-  //           sort: { order: ASC, fields: [frontmatter___slug] }
-  //         ) {
-  //           edges {
-  //             node {
-  //               frontmatter {
-  //                 slug
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //       `
-  //     ).then(result => {
-  //       if (result.errors) {
-  //         reject(result.errors)
-  //       }
+        // Create pages for each markdown file.
+        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+          const nodeId = node.id
+          createPage({
+            path: `/upcoming-programs/teacher-professional-learning/${slug}/`,
+            component: markdownTemplate,
+            // In your blog post template's graphql query, you can use path
+            // as a GraphQL variable to query for data from the markdown file.
+            context: {
+              nodeId,
+            },
+          })
+        })
+      })
+    )
+  })
 
-  //       // Create pages for each markdown file.
-  //       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-  //         const slug = node.frontmatter.slug
-  //         createPage({
-  //           path: `/upcoming-programs/teacher-professional-learning/${slug}/`,
-  //           component: markdownTemplate,
-  //           // In your blog post template's graphql query, you can use path
-  //           // as a GraphQL variable to query for data from the markdown file.
-  //           context: {
-  //             slug,
-  //           },
-  //         })
-  //       })
-  //     })
-  //   )
-  // })
+  return Promise.all([researchResourceCenterPages, educatorResourceCenterPages, rdProgramsPages, leadershipPages, upcomingProgramsTeacherProfessionalLearningPages]);
+
 
   // const upcomingProgramsLeadershipDevelopmentPages = new Promise((resolve, reject) => {
   //   const markdownTemplate = path.resolve(`src/templates/upcoming-programs-leadership-development-template.js`)
