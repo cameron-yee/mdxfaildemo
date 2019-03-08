@@ -6,8 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
 template: Image Right
-image: >-
-  https://github.com/bscs-dev-team/bmw/blob/master/static/assets/cells.jpeg
+image: /assets/cospgs.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
