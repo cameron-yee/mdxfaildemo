@@ -21,5 +21,3 @@ Where has biology teaching been, and where is it going? How can I create a cultu
 BSCS Science Learning has filled this volume with valuable teaching ideas and guidelines for grades 6-12 and college biology educators. Teachers will learn strategies to enhance their instructional practices, create a culture of inquiry in the classroom, promote scientific discussion, and more. 
 
 This resource is available for purchase through NSTA Press.
-
-<a class="btn btn-outline-secondary "href="http://https://www.nsta.org/store/product_detail.aspx?id=10.2505/9780873552448/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
