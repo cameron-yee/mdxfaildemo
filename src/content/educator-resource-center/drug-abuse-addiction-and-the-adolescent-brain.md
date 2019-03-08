@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom
 template: Image Right
-image: /assets/cospgs.jpg
+image: /assets/shark.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
