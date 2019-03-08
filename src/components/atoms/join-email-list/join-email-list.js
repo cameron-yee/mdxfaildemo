@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import Button from 'react-bootstrap/Button'
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import JoinModal from './join-modal/join-modal'
 
 
@@ -22,7 +21,7 @@ const JoinEmailList = class extends Component {
 
   render() {
     return (
-      <ButtonToolbar>
+      <>
         <Button
           id="submit-button"
           variant="outline-primary"
@@ -34,7 +33,7 @@ const JoinEmailList = class extends Component {
           show={this.state.modalShow}
           onHide={this.close}
         />
-      </ButtonToolbar>
+      </>
     )
   }
 }

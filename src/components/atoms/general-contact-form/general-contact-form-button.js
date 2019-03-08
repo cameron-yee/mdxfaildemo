@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import Button from 'react-bootstrap/Button'
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 import GeneralContactFormModal from './general-contact-form-modal/general-contact-form-modal'
 
@@ -23,7 +22,7 @@ const ContactUsButton = class extends Component {
 
   render() {
     return (
-      <ButtonToolbar>
+      <>
         <Button
           id="submit-button"
           variant="outline-primary"
@@ -36,7 +35,7 @@ const ContactUsButton = class extends Component {
           show={this.state.modalShow}
           onHide={this.close}
         />
-      </ButtonToolbar>
+      </>
     )
   }
 }

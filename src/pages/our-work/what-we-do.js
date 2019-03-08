@@ -6,7 +6,6 @@ import SEO from '../../components/seo'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'

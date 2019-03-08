@@ -130,7 +130,43 @@ export default class Footer extends Component {
     return (
       <footer className="bg-light" style={{ paddingTop: "3rem" }}>
         <Container fluid>
-          <div className="d-flex">
+          <Row className="d-sm-none justify-content-center">
+            <Col xs={12} className="p-2 m-auto text-center">
+              <JoinEmailList />
+            </Col>
+            <Col xs={12} className="p-2 m-auto text-center">
+              <div className="d-flex justify-content-center">
+                <div className="p-2 align-self-center">
+                  <a
+                    href="https://www.facebook.com/BSCSORG/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-facebook-square facebook-social-icon" style={{ fontSize: '2.6rem' }}></i>
+                  </a>
+                </div>
+                <div className="p-2 align-self-center">
+                  <a
+                    href="https://twitter.com/BSCSorg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-twitter-square twitter-social-icon" style={{ fontSize: '2.6rem' }}></i>
+                  </a>
+                </div>
+                <div className="p-2 align-self-center">
+                  <a
+                    href="https://www.linkedin.com/company/bscs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fab fa-linkedin linkedin-social-icon" style={{ fontSize: '2.6rem' }}></i>
+                  </a>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <div className="d-none d-sm-flex">
             <div className="p-2 flex-grow-1">
               <JoinEmailList />
             </div>
@@ -183,7 +219,16 @@ export default class Footer extends Component {
           </Row>
         </Container>
         <Container fluid>
-          <div className="d-flex">
+          <Row className="d-sm-none justify-content-center">
+            <Col xs={12} className="p-2 m-auto text-center">
+              <ContactUsButton />
+            </Col>
+            <Col xs={12} className="p-2 m-auto text-center">
+              5415 Mark Dabling Blvd.<br />
+              Colorado Springs, CO 80918
+            </Col>
+          </Row>
+          <div className="d-none d-sm-flex">
             <div className="p-2 mr-auto align-self-center">
               <ContactUsButton />
             </div>
