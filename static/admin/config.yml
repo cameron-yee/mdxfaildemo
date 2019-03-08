@@ -113,6 +113,31 @@ collections:
         - { name: url, label: Profile URL, widget: string, required: false}
         - { name: page, label: Page, widget: hidden, default: staff-directory }
 
+    - name: upcoming-teacher-professional-learning
+      label: "Upcoming Programs: Teacher Professional Learning"
+      folder: src/content/upcoming/teacher-professional-learning
+      create: true
+      extension: md
+      fields:
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title of Program, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+        - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
+        - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
+        - { name: sidebarContactText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContact, label: Sidebar Contact Person and Info, widget: list,
+          field: { label: Contact, name: contact, widget: string },
+          required: false
+        }
+        - { name: sidebarContactTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactText, label: Contact Text, widget: string, required: false  }
+        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
+
     # - name: strategic-initiative
     #   label: Strategic Initiative
     #   folder: src/content/strategic-initiatives
@@ -130,54 +155,3 @@ collections:
     #     - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
     #     - { name: body, label: Body, widget: markdown }
     #     - { name: page, label: Page, widget: hidden, default: strategic-initiatives }
-
-#     - name: upcoming-programs-field-test-opportunities
-#       label: "Upcoming Programs: Field Test Opportunities"
-#       folder: src/content/upcoming/field-test-opportunities
-#       create: true
-#       extension: md
-#       fields:
-#         - { name: slug, label: Website URL Path, widget: string }
-#         - { name: date, label: Date, widget: date }
-#         - { name: title, label: Title, widget: string }
-#         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-#         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
-#         - { name: image, label: Image, widget: image }
-#         - { name: alt, label: Image Alt Text, widget: string }
-#         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-#         - { name: body, label: Body, widget: markdown }
-#         - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }
-
-#     - name: upcoming-programs-leadership-development
-#       label: "Upcoming Programs: Leadership Development"
-#       folder: src/content/upcoming/leadership-development
-#       create: true
-#       extension: md
-#       fields:
-#         - { name: slug, label: Website URL Path, widget: string }
-#         - { name: date, label: Date, widget: date }
-#         - { name: title, label: Title, widget: string }
-#         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-#         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
-#         - { name: image, label: Image, widget: image }
-#         - { name: alt, label: Image Alt Text, widget: string }
-#         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-#         - { name: body, label: Body, widget: markdown }
-#         - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
-
-#     - name: upcoming-teacher-professional-learning
-#       label: "Upcoming Programs: Teacher Professional Learning"
-#       folder: src/content/upcoming/teacher-professional-learning
-#       create: true
-#       extension: md
-#       fields:
-#         - { name: slug, label: Website URL Path, widget: string }
-#         - { name: date, label: Date, widget: date }
-#         - { name: title, label: Title, widget: string }
-#         # - { name: type, label: Type, widget: select, options: ['Classroom', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-#         - { name: template, label: template, widget: select, options: ['Image Left', 'Image in content', 'Image Right'] }
-#         - { name: image, label: Image, widget: image }
-#         - { name: alt, label: Image Alt Text, widget: string }
-#         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-#         - { name: body, label: Body, widget: markdown }
-#         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
