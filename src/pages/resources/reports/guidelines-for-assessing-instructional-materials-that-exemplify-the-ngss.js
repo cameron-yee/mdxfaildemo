@@ -13,6 +13,8 @@ import Layout from '../../../components/layout/layout'
 import '../../../global-scss/index.scss'
 import PageTitle from '../../../components/layout/page-title/page-title'
 
+import nsfLogo from '../../../images/project-logos/nsf-logo.svg'
+
 
 const GuidelinesReport = (props) => {
   return (
@@ -138,6 +140,34 @@ const GuidelinesReport = (props) => {
                   </Card.Body>
                 </Card>
               </Col>
+            </Row>
+          </Container>
+        </section>
+        <section>
+          <Container fluid>
+            <Row style={{ marginBottom: '3rem' }}>
+              <Container>
+                <Row>
+                  <div className="d-flex justify-content-center">
+                    <div className="p-2 bd-highlight">
+                      <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={nsfLogo}
+                          alt="National Science Foundation logo"
+                          style={{
+                            height: '85px'
+                          }}
+                        />
+                      </a>
+                    </div>
+                    <div className="p-2 bd-highlight">
+                      <p>
+                        This material is based upon work supported by the <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-secondary">National Science Foundation</a> under Grant No. DGE-1445675. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+                      </p>
+                    </div>
+                  </div>
+                </Row>
+              </Container>
             </Row>
           </Container>
         </section>
