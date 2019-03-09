@@ -14,6 +14,10 @@ import '../../../global-scss/index.scss'
 import PageTitle from '../../../components/layout/page-title/page-title'
 
 import tlsynLogo from '../../../images/project-logos/tlsyn_logo.svg'
+import edcLogo from '../../../images/project-logos/edc-logo.svg'
+import kstfLogo from '../../../images/project-logos/logo-kstf.svg'
+import hriLogo from '../../../images/project-logos/hri-logo.svg'
+import nsfLogo from '../../../images/project-logos/nsf-logo.svg'
 
 
 const MstlReport = (props) => {
@@ -91,7 +95,7 @@ const MstlReport = (props) => {
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
+                          variant="outline-secondary" 
                           href="https://media.bscs.org/mstl/bscs_2017-02_mstl_synthesis_report.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
@@ -107,7 +111,7 @@ const MstlReport = (props) => {
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
+                          variant="outline-secondary" 
                           href="https://media.bscs.org/mstl/bscs_2017-03_mstl_research-program_review.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
@@ -123,7 +127,7 @@ const MstlReport = (props) => {
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
+                          variant="outline-secondary" 
                           href="https://media.bscs.org/mstl/bscs_2017-04_mstl_symposium_proceedings.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
@@ -139,6 +143,105 @@ const MstlReport = (props) => {
                   </Card.Body>
                 </Card>
               </Col>
+            </Row>
+          </Container>
+        </section>
+        <section>
+          <Container fluid>
+            <Row>
+              <Container>
+                <Row>
+                  <Col>
+                    <p style={{ fontSize: '1.8rem', marginBottom: '3rem' }}>In partnership with</p>
+                  </Col>
+                </Row>
+                <Row className="justify-content-md-center">
+                  <Col xs={12} md={4}>
+                    <a href="http://www.edc.org" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={edcLogo}
+                        alt="Eucation Development Center logo"
+                        style={{
+                          display: 'block',
+                          height: '75px',
+                          margin: '0 auto'
+                        }}
+                      />
+                    </a>
+                  </Col>
+                  <Col xs={12} md={4}>
+                    <a href="https://knowlesteachers.org" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={kstfLogo}
+                        alt="Knowles Teacher Initiative logo"
+                        style={{
+                          display: 'block',
+                          height: '65px',
+                          margin: '.15rem auto 0 auto'
+                        }}
+                      />
+                    </a>
+                  </Col>
+                </Row>
+                <hr style={{ margin: '2.5rem 0 4.5rem' }} />
+                <Row>
+                  <Col>
+                    <p style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}>Evaluated by</p>
+                  </Col>
+                </Row>
+                <Row className="justify-content-md-center">
+                  <Col>
+                    <a href="http://www.horizon-research.com" target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={hriLogo}
+                        alt="Horizon Research, Inc. logo"
+                        style={{
+                          display: 'block',
+                          height: '112.5px',
+                          margin: '0 auto'
+                        }}
+                      />
+                    </a>
+                  </Col>
+                </Row>
+              </Container>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row>
+              <Container>
+                <Row>
+                  <Col>
+                    <hr style={{ margin: '2.5rem 0 4.5rem' }} />
+                  </Col>
+                </Row>
+              </Container>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row>
+              <Container>
+                <Row>
+                  <div class="d-flex justify-content-center">
+                    <div class="p-2 bd-highlight">
+                      <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={nsfLogo}
+                          alt="National Science Foundation logo"
+                          style={{
+                            height: '85px'
+                          }}
+                        />
+                      </a>
+                    </div>
+                    <div class="p-2 bd-highlight" style={{ marginBottom: '3rem' }}>
+                      <p>
+                        This material is based upon work supported by the <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-secondary">National Science Foundation</a> under Grant No. ECR 1534698. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+                      </p>
+                    </div>
+                  </div>
+                </Row>
+              </Container>
             </Row>
           </Container>
         </section>
