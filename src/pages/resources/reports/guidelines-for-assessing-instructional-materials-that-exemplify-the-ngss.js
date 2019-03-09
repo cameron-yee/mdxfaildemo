@@ -17,7 +17,7 @@ import PageTitle from '../../../components/layout/page-title/page-title'
 const GuidelinesReport = (props) => {
   return (
     <>
-      <SEO title="Developing math/science teacher leadership: A consensus approach to evaluating program quality" />
+      <SEO title="Guidelines for Assessing Instructional Materials that Exemplify the NGSS" />
       <Layout location={props.location}>
         <Container>
           <Row>
@@ -39,7 +39,7 @@ const GuidelinesReport = (props) => {
                 <div className="d-flex flex-row bd-highlight mb-3">
                   <div className="p-2 bd-highlight">
                     <h1 className="jumbotron-heading" style={{ color: '#212529' }}>
-                      Math/Science Teacher Leadership Synthesis Project
+                      Guidelines for Assessing Instructional Materials that Exemplify the NGSS
                     </h1>
                   </div>
                 </div>
@@ -49,26 +49,56 @@ const GuidelinesReport = (props) => {
         </Jumbotron>
         <section className="section" style={{ padding: '.75rem 1.5rem' }}>
           <Container>
-            <Row>
+            <Row style={{ marginBottom: '2rem' }}>
               <Col>
-                <h2 className="heading2">Developing math/science teacher leadership: A consensus approach to evaluating program quality</h2>
+                {/* <h2 className="heading2">Guidelines for Assessing Instructional Materials that Exemplify the NGSS</h2> */}
                 <p style={{ marginBottom: "2rem" }}>
-                  The <strong>Developing math/science teacher leadership: A consensus approach to evaluating program quality</strong> project is funded by the National Science Foundation (ECR 1534698). The purpose of this synthesis project is to build consensus on the key attributes of high-quality math/science teacher leadership development programs. High quality teacher leadership programs are those that prepare and support teachers to positively impact math/science teaching and learning beyond their own classrooms. The three major objectives of the project are to:
+                  The Guidelines Summit took place May 15-19, 2015, at Cheyenne Mountain Resort in Colorado Springs, Colorado. The project was funded by a grant from the National Science Foundation in response to the National Research Council publication, Monitoring Progress to Successful K-12 STEM Education. This document identifies 14 indicators as large-scale national measures of the health of STEM education in U.S. schools. In particular, the Guidelines Summit responded to Indicator 4, which calls for guidelines for developing measures that assess how well widely-used science instructional materials embody the Next Generation Science Standards (NGSS).
                 </p>
+                <h3>The goals of the Summit were to</h3>
                 <Card className="bg-light" style={{ marginBottom: "3rem" }}>
                   <Card.Body>
                     <ol>
-                      <li>Review research on math/science teacher leadership development and descriptions of existing programs;</li>
-                      <li>Bring together a group of knowledgeable practitioners, researchers and policymakers to build consensus on key attributes of quality programs; and</li>
-                      <li>Communicate the consensus attributes along with recommendations for implementation and future work to stakeholders.</li>
+                      <li>engage leading science educators in building consensus on the criteria to include in a process and tools that evaluate the extent to which science instructional materials embody the NGSS, and</li>
+                      <li>produce a set of Guidelines based on this consensus for the development of the process and tools.</li>
                     </ol>
+                  </Card.Body>
+                </Card>
+                <p>Eighteen science educators from across the country participated with BSCS staff in discussions at the Summit. Additional attendees included two facilitators and a project evaluator.</p>
+                <p>The Guidelines for the Evaluation of Instructional Materials in Science found here can be downloaded free of charge by all who are interested.</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <h3 style={{ marginBottom: "1rem" }}>Download the Guidelines</h3>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Card className="bg-light" style={{ marginBottom: "3rem" }}>
+                  <Card.Body>
+                    <Row>
+                      <Col xs={2} lg={1}>
+                        <Button
+                          variant="outline-secondary" 
+                          href="https://media.bscs.org/ngal/bscs_ngal_2017.pdf"
+                          target="_blank"
+                          style={{ marginTop: '.45rem' }}
+                        >
+                          <i className="fas fa-cloud-download-alt"></i>
+                        </Button>
+                      </Col>
+                      <Col>
+                        <p style={{ fontSize: '1.8rem' }}>Guidelines for the Evaluation of Instructional Materials in Science</p>
+                      </Col>
+                    </Row>
                   </Card.Body>
                 </Card>
               </Col>
             </Row>
             <Row>
               <Col>
-                <h3 style={{ marginBottom: "1rem" }}>The reports from this project include:</h3>
+                <h3 style={{ marginBottom: "1rem" }}>Download the Executive Summary</h3>
               </Col>
             </Row>
             <Row style={{ marginBottom: "3rem" }}>
@@ -78,8 +108,8 @@ const GuidelinesReport = (props) => {
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-02_mstl_synthesis_report.pdf"
+                          variant="outline-secondary" 
+                          href="https://media.bscs.org/ngal/executive_summary_ngal.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
                         >
@@ -87,15 +117,14 @@ const GuidelinesReport = (props) => {
                         </Button>
                       </Col>
                       <Col>
-                        <p><strong>A Synthesis of Math/Science Teacher Leadership Development Programs: Consensus Findings and Recommendations</strong></p>
-                        <p>This document captures the synthesis of findings from the research and program review and symposium proceedings, and serves as the primary report from this project.</p>
+                        <p style={{ fontSize: '1.8rem' }}>Executive Summary NGAL</p>
                       </Col>
                     </Row>
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-03_mstl_research-program_review.pdf"
+                          variant="outline-secondary" 
+                          href="https://media.bscs.org/ngal/guidelines_onepager.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
                         >
@@ -103,24 +132,7 @@ const GuidelinesReport = (props) => {
                         </Button>
                       </Col>
                       <Col>
-                        <p><strong>Math/Science Teacher Leadership Development: Findings from Research and Program Reviews</strong></p>
-                        <p>This document describes the review of a selection of teacher leadership development research studies and programs, and serves as a supplemental resource to the synthesis report. The codebook for the review of programs and research is available <a href="https://media.bscs.org/mstl/teacher_leadership_review_codebook_january_2016.pdf" target="_blank" rel="noopener noreferrer" className="text-secondary">here</a>.</p>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={2} lg={1}>
-                        <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-04_mstl_symposium_proceedings.pdf"
-                          target="_blank"
-                          style={{ marginTop: '.45rem' }}
-                        >
-                          <i className="fas fa-cloud-download-alt"></i>
-                        </Button>
-                      </Col>
-                      <Col>
-                        <p><strong>Developing Math/Science Teacher Leadership: Symposium Proceedings</strong></p>
-                        <p>This document captures the discussions and findings from the symposium of experts in math and science teacher leadership development.</p>
+                        <p style={{ fontSize: '1.8rem' }}>Guidelines OnePager</p>
                       </Col>
                     </Row>
                   </Card.Body>

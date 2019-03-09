@@ -170,7 +170,7 @@ const Reports = class extends Component {
                         <div className="d-flex">
                           <div className="ml-auto align-self-end">
                             <Link 
-                              to={`/resources/reports/guidelines`}
+                              to={`/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss`}
                             >
                               <Button
                                 variant="outline-secondary"
