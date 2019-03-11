@@ -77,7 +77,7 @@ collections:
             field: { label: Contact, name: contact, widget: string },
             required: false
           }
-        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+          - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: rd-programs }

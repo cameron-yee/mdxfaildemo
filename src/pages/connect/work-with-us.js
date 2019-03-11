@@ -439,10 +439,10 @@ const WorkWithUsPage = class extends Component {
                 <Card.Body>
                   <Card.Title>Contact Division Director</Card.Title>
                   <Card.Text style={{fontSize: '1rem'}}>
-                    <p>Please contact the appropriate division director to discuss opportunities to work together:</p>
+                    Please contact the appropriate division director to discuss opportunities to work together:
                     <strong>BSCS Instructional Materials Division Director</strong>
                   </Card.Text>
-                  <div class="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center">
                     <div className="p-2">
                       <SpecificContactForm sendto="Lindsey Mohan">
                         <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Dr. Lindsey Mohan</Button>
@@ -452,7 +452,7 @@ const WorkWithUsPage = class extends Component {
                   <Card.Text style={{fontSize: '1rem', marginTop: '1rem'}}>
                     <strong>BSCS Associate Director for Strategic Partnerships &amp; Professional Learning</strong>
                   </Card.Text>
-                  <div class="d-flex justify-content-center">
+                  <div className="d-flex justify-content-center">
                     <div className="p-2">
                       <SpecificContactForm sendto="Jody Bintz">
                         <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Jody Bintz</Button>
@@ -462,7 +462,7 @@ const WorkWithUsPage = class extends Component {
                   <Card.Text style={{fontSize: '1rem', marginTop: '1rem'}}>
                     <strong>BSCS Research Division Directors</strong>
                   </Card.Text>
-                  <div class="d-flex justify-content-center flex-wrap">
+                  <div className="d-flex justify-content-center flex-wrap">
                     <div className="p-2">
                       <SpecificContactForm sendto="Susan Kowalski">
                         <Button size="sm" variant="outline-primary" style={{minHeight: '60px'}}>Contact Dr. Susan Kowalski</Button>
