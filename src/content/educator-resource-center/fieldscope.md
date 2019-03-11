@@ -20,6 +20,6 @@ FieldScope is freely available to educators, students, and community members who
 
 <a class="btn btn-outline-secondary" href="http://fieldscope.org/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
-_This material is based upon work supported by the National Science Foundation under Grants Nos. GEO-0627923 and DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society._
+_This material is based upon work supported by the National Science Foundation under Grants Nos._ [_GEO-0627923_](https://nsf.gov/awardsearch/showAward?AWD_ID=0627923) _and_ [_DRL-1010749_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1010749&HistoricalAwards=false)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society._
 
 \*May need to also credit Moore Foundation…Sean is looking into this.
