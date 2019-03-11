@@ -13,6 +13,7 @@ alt: PLACEHOLDER
 page: rd-programs
 ---
 Health-related information from family, friends, social media, and the internet bombard our lives every day. We make decisions as consumers about questions such as these:
+
 * Why is caffeine powder dangerous when people consume caffeinated drinks every day?
 * Why do people get a flu shot every year? Isn’t once enough?
 * Who should take multivitamins daily?
@@ -24,4 +25,4 @@ BSCS Science Learning’s Developing Skills in Health Literacy project aims to h
 
 <a class="btn btn-outline-secondary" href="http://healthliteracyft.bscs.org/" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
-*This project was supported by the Office of the Director, National Institutes of Health under Award Number R25OD020208. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.*
+_This project was supported by the Office of the Director, National Institutes of Health under Award Number_ [_R25OD020208_](https://nihsepa.org/project/developing-skills-in-health-literacy/)_. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health._
