@@ -26,4 +26,4 @@ Professional learning leaders across schools and districts can request their own
 
 _This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
 
-_This material is based upon work supported by the National Science Foundation under_ [_Grant No. DRL 1118643_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1118643)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
+_This material is based upon work supported by the National Science Foundation under_ _Grant No._ [_DRL 1118643_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1118643)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
