@@ -5,9 +5,10 @@ additionalTags: tag1
 seoCanonicalUrl: https://www.google.com
 seoDescription: TEST DESC
 seoLang: en-us
-sidebarContact: Cameron Yee
-sidebarContactText: Contact this person.
-sidebarContactTitle: Test title
+sidebarContacts:
+  - Cameron Yee
+sidebarContactsText: Contact this person.
+sidebarContactsTitle: Test title
 sidebarRegisterURL: https://www.google.com
 sidebarRegisterText: Click below to register.
 sidebarRegisterTitle: Registration

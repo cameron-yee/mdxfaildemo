@@ -219,7 +219,7 @@ const MstlReport = (props) => {
             </Row>
           </Container>
           <Container fluid>
-            <Row>
+            <Row style={{ marginBottom: '3rem' }}>
               <Container>
                 <Row>
                   <div class="d-flex justify-content-center">
@@ -234,7 +234,7 @@ const MstlReport = (props) => {
                         />
                       </a>
                     </div>
-                    <div class="p-2 bd-highlight" style={{ marginBottom: '3rem' }}>
+                    <div class="p-2 bd-highlight">
                       <p>
                         This material is based upon work supported by the <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-secondary">National Science Foundation</a> under Grant No. ECR 1534698. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
                       </p>

@@ -85,7 +85,17 @@ const GeneralContactFormModal = class extends Component {
   setPhone = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('gc-phone-input');
-    input_elem.value === '' ? this.setState({phone: undefined}) : this.setState({phone: input_elem.value})
+    (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
+    ||
+    (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
+    ||
+    (/^[^-][\d()-+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+    &&
+    (input_elem.value !== (undefined || ''))) //Phone # may be omitted
+    ?
+    this.setState({phone: 'errors'})
+    :
+    this.setState({phone: input_elem.value}) 
   }
 
   blurPhone = (e) => {
@@ -149,7 +159,7 @@ const GeneralContactFormModal = class extends Component {
         <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
           Your message has been receieved!
         </Alert>
-        <Form onSubmit={(e) => this.postGeneralForm(e)}>
+        <Form>
           <Row>
             <Col xs={12}>
               <Form.Group>
@@ -215,7 +225,7 @@ const GeneralContactFormModal = class extends Component {
                   maxLength="20"
                   onKeyUp={this.setPhone}
                   onBlur={this.blurPhone}
-                  isInvalid={this.state.phone_touched && (!this.state.phone || this.state.phone === '')}
+                  isInvalid={this.state.phone_touched && this.state.phone === 'errors'}
                 />
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid phone number.
@@ -247,7 +257,7 @@ const GeneralContactFormModal = class extends Component {
           && (!this.state.firstname
           || !this.state.lastname
           || !this.state.email
-          || !this.state.phone
+          || this.state.phone === 'errors'
           || !this.state.message)
           &&
           <Button variant="outline-primary" disabled>Contact Us</Button>
@@ -256,10 +266,10 @@ const GeneralContactFormModal = class extends Component {
           && this.state.firstname
           && this.state.lastname
           && this.state.email
-          && this.state.phone
+          && this.state.phone !== 'errors'
           && this.state.message
           &&
-          <Button variant="outline-primary" type="submit">Contact Us</Button>
+          <Button variant="outline-primary" onClick={this.postGeneralForm}>Contact Us</Button>
         }
         { this.state.loading &&
           <Button variant="outline-secondary" className="is-loading" />

@@ -63,17 +63,21 @@ collections:
       fields:
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: string }
-          - { name: areas, label: Areas, widget: select, multiple: true, options: ['Area 1', 'Area 2', 'Area 3', 'Area 4'] }
+          - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
-          - { name: sidebarUrl, label: Sidebar URL, widget: string, required: false }
+          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
-          - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
-          - { name: sidebarContact, label: Sidebar BSCS Contact, widget: string, required: false }
-          - { name: sidebarContactText, label: Sidebar Contact Text, widget: string, required: false }
+          - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+          - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
+            field: { label: Contact, name: contact, widget: string },
+            required: false
+          }
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: rd-programs }
@@ -127,13 +131,12 @@ collections:
         - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
         - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
         - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarContactText, label: Sidebar Contact Text, widget: string, required: false  }
-        - { name: sidebarContact, label: Sidebar Contact Person and Info, widget: list,
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
           field: { label: Contact, name: contact, widget: string },
           required: false
         }
-        - { name: sidebarContactTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: sidebarContactText, label: Contact Text, widget: string, required: false  }
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }

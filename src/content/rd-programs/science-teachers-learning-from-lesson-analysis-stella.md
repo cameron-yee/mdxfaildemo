@@ -11,10 +11,12 @@ seoLang: en-us
 image: /assets/ocean.jpg
 alt: PLACEHOLDER
 sidebarText: Want to know more about STeLLA? Download our STeLLA Info Sheet!
+sidebarTitle: ''
 sidebarButtonText: Download
-sidebarUrl: https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf
-sidebarContactText: Contact Jody Bintz to explore opportunities to work together.
-sidebarContact: Jody Bintz
+sidebarURL: https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf
+sidebarContactsText: Contact Jody Bintz to explore opportunities to work together.
+sidebarContacts: 
+  - Jody Bintz
 page: rd-programs
 ---
 STeLLA is a nationally-recognized program for teacher professional learning—developed from a 16-year line of research at BSCS Science Learning. 
