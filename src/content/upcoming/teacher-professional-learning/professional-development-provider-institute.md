@@ -5,12 +5,12 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
 seoDescription: TEST DESCRIPTION
 seoLang: en-us
-sidebarRegisterTitle: Contact People and Info
-sidebarContactText: ''
-sidebarContact:
+# sidebarRegisterTitle: Contact People and Info
+# sidebarContactsText: ''
+sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
-sidebarContactTitle: Contact People and Info
+sidebarContactsTitle: Contact People and Info
 page: upcoming-programs-teacher-professional-learning
 ---
 2–4 Sentence Program Introduction*: Each Professional Development (PD) Provider Institute is a 3 ½ to 4-day experience designed to support you as a PD provider by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards and the recommendations put forth in A Framework for K-12 Science Education: Practices, Crosscutting Concepts, and Core Ideas in Science Teaching. The entire program generally consists of a series of four institutes
