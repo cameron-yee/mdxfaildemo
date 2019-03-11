@@ -10,6 +10,7 @@ page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/educator-resource-center/
 seoDescription: Test SEO description.
 seoLang: en-us
+sortOrder: 1
 ---
 
 ### *Executive Director*

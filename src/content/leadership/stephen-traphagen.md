@@ -10,6 +10,7 @@ page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/stephen-traphagen-vice-chair
 seoDescription: Test SEO description.
 seoLang: en-us
+sortOrder: 2
 ---
 
 ### *High School Biology & AP Biology Teacher*

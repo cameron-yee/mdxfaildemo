@@ -18,7 +18,65 @@ import { Link } from 'gatsby';
 const LeadershipPage = class extends Component {
   constructor(props) {
     super(props)
-    this.people = props.data.allMarkdownRemark.edges
+    this.people = this.props.data.allMarkdownRemark.edges
+    this.bod = this.getGroup(this.people, 'Board Member')
+    this.management = this.getGroup(this.people, 'Management')
+  }
+
+  //type either 'Board Member' or 'Management'
+  getGroup = (people, type) => {
+    //This allows both BOD and Management people to have a sortOrder of 1, 2, etc.
+    const type_people = people.filter(person => person.node.frontmatter.type === type) //Screw performance.  This is so clean and beautiful.
+    return this.sort(type_people)
+  }
+
+  sort = (people) => {
+    let ordered = people.sort((a, b) => {
+      let personAName = a.node.frontmatter.fullName.split(' ')
+      let personBName = b.node.frontmatter.fullName.split(' ')
+
+      //Sort element defaults to last element in person's name array
+      let aLast = personAName[personAName.length - 1]
+      let bLast = personBName[personBName.length - 1]
+
+      //If the person's name includes a title (ex. Daniel C. Edelson, Executive Director), their last name will be the index that includes the comma
+      for(let i = 0; i < personAName.length; i++) {
+        if(personAName[i].includes(',')) {
+          aLast = personAName[i]
+          break
+        }
+      }
+      for(let i = 0; i < personBName.length; i++) {
+        if(personBName[i].includes(',')) {
+          bLast = personBName[i]
+          break
+        }
+      }
+
+      //Sorts string alphabetically using Array.prototype.sort() return values
+      if(aLast.toLowerCase() > bLast.toLowerCase()) {
+        return 1
+      } else if(aLast.toLowerCase() < bLast.toLowerCase()) {
+        return -1
+      } else {
+        return 0
+      }
+
+    })
+
+    //Copying array so doing splice operations doesn't cause infinite loop by changing length
+    let ordered_copy = ordered.slice()
+
+    for(let x = 0; x < people.length; x++) {
+      if(people[x].node.frontmatter.sortOrder !== null) {
+        ordered_copy.splice(x, 1) //Removes the person
+        ordered_copy.splice(people[x].node.frontmatter.sortOrder - 1, 0, people[x]) //Adds the person back in the correct order 
+      }
+    }
+
+    //Returns the sorted list of people to render
+    return ordered_copy
+
   }
 
   render() {
@@ -32,30 +90,26 @@ const LeadershipPage = class extends Component {
               <h2>Management</h2>
               <div className="leadership-scrollable-wrapper">
                 <div className="leadership-scrollable">
-                  { this.people.map((person, index) => {
-                      if(person.node.frontmatter.type === 'Management') {
-                        return(
-                          <Card key={`mgmt-${index}`} className="leadership-card">
-                            <div className="leadership-card-image-wrapper">
-                              <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
+                  { this.management.map((person, index) => {
+                      return(
+                        <Card key={`mgmt-${index}`} className="leadership-card">
+                          <div className="leadership-card-image-wrapper">
+                            <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
+                          </div>
+                          <Card.Body>
+                            <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
+                            <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
+                            <div className="button-wrapper">
+                              <Link
+                                to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                                className="leadership-read-more"
+                              >
+                                <Button variant="outline-secondary">Read More</Button>
+                              </Link>
                             </div>
-                            <Card.Body>
-                              <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
-                              <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
-                              <div className="button-wrapper">
-                                <Link
-                                  to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                  className="leadership-read-more"
-                                >
-                                  <Button variant="outline-secondary">Read More</Button>
-                                </Link>
-                              </div>
-                            </Card.Body>
-                          </Card>
-                        )
-                      } else {
-                        return <React.Fragment></React.Fragment>
-                      }
+                          </Card.Body>
+                        </Card>
+                      )
                     })
                   }
                 </div>
@@ -65,30 +119,26 @@ const LeadershipPage = class extends Component {
               <h2>Board of Directors</h2>
               <div className="leadership-scrollable-wrapper">
                 <div className="leadership-scrollable">
-                  { this.people.map((person, index) => {
-                      if(person.node.frontmatter.type === 'Board Member') {
-                        return(
-                          <Card key={`mgmt-${index}`} className="leadership-card">
-                            <div className="leadership-card-image-wrapper">
-                              <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
+                  { this.bod.map((person, index) => {
+                      return(
+                        <Card key={`mgmt-${index}`} className="leadership-card">
+                          <div className="leadership-card-image-wrapper">
+                            <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
+                          </div>
+                          <Card.Body>
+                            <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
+                            <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
+                            <div className="button-wrapper">
+                              <Link
+                                to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                                className="leadership-read-more"
+                              >
+                                <Button variant="outline-secondary">Read More</Button>
+                              </Link>
                             </div>
-                            <Card.Body>
-                              <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
-                              <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
-                              <div className="button-wrapper">
-                                <Link
-                                  to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                  className="leadership-read-more"
-                                >
-                                  <Button variant="outline-secondary">Read More</Button>
-                                </Link>
-                              </div>
-                            </Card.Body>
-                          </Card>
-                        )
-                      } else {
-                        return <React.Fragment></React.Fragment>
-                      }
+                          </Card.Body>
+                        </Card>
+                      )
                     })
                   }
                 </div>
@@ -121,7 +171,8 @@ export const leadershipQuery = graphql`
             alt,
             image,
             title,
-            page
+            page,
+            sortOrder
           }
         }
       }

@@ -98,6 +98,7 @@ collections:
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: leadership }

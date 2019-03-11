@@ -10,6 +10,7 @@ page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/richard-a-cardullo-vice-chair
 seoDescription: Test SEO description.
 seoLang: en-us
+sortOrder: 1
 ---
 
 ### *Howard H Hays Chair, University Honors*
