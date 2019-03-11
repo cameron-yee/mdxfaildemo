@@ -20,6 +20,6 @@ In alignment with the Next Generation Science Standards, the resource addresses 
 
 <a class="btn btn-outline-secondary" href="http://ebola.bscs.org/ /" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
-_This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. DRL-1518346. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._ 
+_This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under_ [_Grant No. DRL-1518346_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1518346)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._ 
 
 \*We will repurpose Mark’s interview on this page (https://bscs.org/ebola) as a newsletter feature and save it on the news page.
