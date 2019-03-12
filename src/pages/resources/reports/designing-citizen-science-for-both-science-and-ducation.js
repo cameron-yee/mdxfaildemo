@@ -100,6 +100,75 @@ const CitizenScienceReport = (props) => {
             </Row>
           </Container>
         </section>
+        <section>
+          <Container fluid>
+            <Row>
+              <Container>
+                <Row>
+                  <Col>
+                    <p style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}>In partnership with</p>
+                  </Col>
+                </Row>
+                <div className="d-flex justify-content-center">
+                  <div className="m-auto">
+                    <a
+                      href="http://www.inquirium.net/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none' }}
+                    >
+                      <h1
+                        style={{
+                          fontFamily: 'futura-pt-condensed, sans-serif', 
+                          fontStyle: 'normal',
+                          fontWeight: '400',
+                          fontSize: '5rem',
+                          color: '#55B7DD'
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontFamily: 'futura-pt-condensed, sans-serif',
+                            fontStyle: 'normal',
+                            fontWeight: '400',
+                            color: '#0D0DA5'
+                          }}
+                        >
+                          inq
+                        </span>
+                        uirium
+                      </h1>
+                    </a>
+                  </div>
+                </div>
+              </Container>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row>
+              <Container>
+                <Row>
+                  <Col>
+                    <hr style={{ margin: '2.5rem 0 4.5rem' }} />
+                  </Col>
+                </Row>
+              </Container>
+            </Row>
+          </Container>
+          <Container fluid>
+            <Row style={{ marginBottom: '3rem' }}>
+              <Container>
+                <div className="d-flex">
+                  <div className="justify-content-center">
+                    <p className="text-center">
+                      This work was supported by a grant from the Pisces Foundation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the Pisces Foundation.
+                    </p>
+                  </div>
+                </div>
+              </Container>
+            </Row>
+          </Container>
+        </section>
       </Layout>
     </>
   )
