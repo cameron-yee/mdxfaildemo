@@ -105,7 +105,7 @@ const StaffDirectoryPage = class extends Component {
                   <tr>
                     <th
                       className="no-action"
-                      style={{width: '160px'}}
+                      style={{width: '160px', borderTop: 'none'}}
                       onClick={ () => this.sort('lastName') }
                     >
                       <div className="d-flex align-items-center">
@@ -129,7 +129,7 @@ const StaffDirectoryPage = class extends Component {
                     </th>
                     <th
                       className="no-action"
-                      style={{width: '160px'}}
+                      style={{width: '160px', borderTop: 'none'}}
                       onClick={ () => this.sort('firstName') }
                     >
                       <div className="d-flex align-items-center">
@@ -151,7 +151,11 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th className="no-action" onClick={() => this.sort('title')}>
+                    <th 
+                      className="no-action" 
+                      style={{ borderTop: 'none' }} 
+                      onClick={() => this.sort('title')}
+                    >
                       <div className="d-flex align-items-center">
                         <div className="mr-auto">
                           Title
@@ -171,8 +175,18 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th className="text-align-center">Contact</th>
-                    <th className="text-align-center">Profile</th>
+                    <th 
+                      className="text-align-center" 
+                      style={{ borderTop: 'none' }}
+                    >
+                      Contact
+                    </th>
+                    <th
+                      className="text-align-center"
+                      style={{ borderTop: 'none' }}
+                    >
+                      Profile
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

@@ -67,8 +67,16 @@ const FinancialsPage = class extends Component {
                 <img src="/assets/ar-2017.jpg" alt="BSCS Science Learning Annual Report 2017" style={{width:"100%", marginBottom: '1rem'}} />
               </Col>
               <Col xs={12} lg={6}>
-                <p>In 2017, we continued advancing our research, teacher professional learning, leadership development, and instructional materials work. Included in this annual report, you will find a small sample of the 40+ projects BSCS started, furthered, or completed in 2017.</p>
-                <a href="https://media.bscs.org/bscsmw/financials/annual-reports/bscs_2017_annual_report.pdf" target="_blank" rel="noopener noreferrer"><Button variant="outline-primary">Download 2017 Annual Report PDF</Button></a>
+                <p>
+                  In 2017, we continued advancing our research, teacher professional learning, leadership development, and instructional materials work. Included in this annual report, you will find a small sample of the 40+ projects BSCS started, furthered, or completed in 2017.
+                </p>
+                <a
+                  href="https://media.bscs.org/bscsmw/financials/annual-reports/bscs_2017_annual_report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline-secondary">Download 2017 Annual Report PDF</Button>
+                </a>
               </Col>
             </Row>
             <Row>
@@ -114,7 +122,13 @@ const FinancialsPage = class extends Component {
                     </Dropdown.Menu>
                   </Dropdown>
 
-                  <div id="download-pdf" className="p-2" onClick={this.openPDF}><Button variant="outline-primary">Download PDF</Button></div>
+                  <div
+                    id="download-pdf"
+                    className="p-2"
+                    onClick={this.openPDF}
+                  >
+                    <Button variant="outline-secondary">Download PDF</Button>
+                  </div>
                 </div>
               </Col>
             </Row>

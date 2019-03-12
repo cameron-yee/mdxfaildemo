@@ -10,11 +10,15 @@ const PageTitle = class extends React.Component {
   render() {
     return(
       <React.Fragment>
-        <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.props.title} replace={this.props.replace} />
+        <BSCSBreadcrumb
+          pathname={this.props.location.pathname} 
+          title={this.props.title} 
+          replace={this.props.replace}
+        />
         <Row>
           <Col>
-            <h1>{this.props.title}</h1>
-            <hr />
+            <h1 style={{ marginTop: '.5rem' }}>{this.props.title}</h1>
+            <hr style={{ marginBottom: '2.5rem' }} />
           </Col>
         </Row>
       </React.Fragment>
