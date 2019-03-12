@@ -5,6 +5,10 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
 seoDescription: TEST DESCRIPTION
 seoLang: en-us
+sidebarRegisterText: >-
+  Date(s) of Event: October 1-4, 2019Location for Event: BSCS Science
+  LearningCost of Event: The cost to register is $1,000Registration Deadline:
+  September 1, 2019 
 sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
@@ -18,13 +22,7 @@ Join BSCS Science Learning for a Professional Development (PD) Provider Institut
 * Take part in an in-depth analysis of Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 * Increase your ability to support teachers in modifying their current curriculum materials to support student development of Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 
-Date(s) of Event: October 1-4, 2019
 
-Location for Event: BSCS Science Learning
-
-Cost of Event: The cost to register is $1,000
-
-Registration Deadline: September 1, 2019 
 
 Participation Requirements:
 
