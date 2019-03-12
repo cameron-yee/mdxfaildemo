@@ -7,8 +7,9 @@ seoDescription: Test SEO description.
 seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
-sidebarRegisterText: Click here
-sidebarRegisterTitle: Registration now open
+sidebarRegisterText: ''
+sidebarRegisterTitle: ''
+sidebarContactsText: Questions?
 sidebarContacts:
   - Ashley Whitaker
 page: upcoming-programs-teacher-professional-learning
