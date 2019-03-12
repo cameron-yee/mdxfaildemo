@@ -12,9 +12,9 @@ import SEO from '../../components/seo'
 const StrategicInitiativesPage = (props) => {
   return (
     <Layout location={props.location}>
-      <SEO title="Field Test Opportunities" />
+      <SEO title="Strategic Initiatives" />
       <Container>
-        <PageTitle title="Field Test Opportunities" />
+        <PageTitle title="Strategic Initiatives" />
         <Row style={{ marginBottom: '2rem' }}>
           <Col>
             <p>Following a strategic planning process in 2016, BSCS Science Learning is pursuing three long-term, strategic initiatives.</p>

@@ -49,7 +49,7 @@ const RDProgramsTemplate = class extends Component {
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
-                || this.resource.sidebarContact || this.resource.sidebarContactText) &&
+                || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
                 <Col md={3}>
                   {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}}>
@@ -83,7 +83,7 @@ const RDProgramsTemplate = class extends Component {
                       <Card>
                         <Card.Body>
                           {this.resource.sidebarContactsTitle &&
-                            <Card.Title>Resource Information</Card.Title>
+                            <Card.Title>{this.resource.sidebarContactsTitle}</Card.Title>
                           }
                           {this.resource.sidebarContactsText &&
                             <Card.Text style={{fontSize: '1rem'}}>
