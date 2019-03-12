@@ -28,13 +28,21 @@ const IndexPage = (props) => (
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col>
-          <Card>
+          <Card className="h-100">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
                 We develop science instructional materials for students.
               </Card.Text>
+            </Card.Body>
+            <Card.Footer
+              style={{
+                background: 'white',
+                borderTop: 'none',
+                marginBottom: '.5rem'
+              }}
+            >
               <div className="d-flex">
                 <div className="ml-auto">
                   <Link to="/what-we-do/">
@@ -42,17 +50,25 @@ const IndexPage = (props) => (
                   </Link>
                 </div>
               </div>
-            </Card.Body>
+            </Card.Footer>
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="h-100">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
                 We provide professional learning programs for science teachers.
               </Card.Text>
+            </Card.Body>
+            <Card.Footer
+              style={{
+                background: 'white',
+                borderTop: 'none',
+                marginBottom: '.5rem'
+              }}
+            >
               <div className="d-flex">
                 <div className="ml-auto">
                   <Link to="/what-we-do/">
@@ -60,17 +76,25 @@ const IndexPage = (props) => (
                   </Link>
                 </div>
               </div>
-            </Card.Body>
+            </Card.Footer>
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="h-100">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
                 We spearhead leadership development programs for schools and districts.
               </Card.Text>
+            </Card.Body>
+            <Card.Footer
+              style={{
+                background: 'white',
+                borderTop: 'none',
+                marginBottom: '.5rem'
+              }}
+            >
               <div className="d-flex">
                 <div className="ml-auto">
                   <Link to="/what-we-do/">
@@ -78,17 +102,25 @@ const IndexPage = (props) => (
                   </Link>
                 </div>
               </div>
-            </Card.Body>
+            </Card.Footer>
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="h-100">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
                 We conduct research on science teaching and learning.
               </Card.Text>
+            </Card.Body>
+            <Card.Footer
+              style={{
+                background: 'white',
+                borderTop: 'none',
+                marginBottom: '.5rem'
+              }}
+            >
               <div className="d-flex">
                 <div className="ml-auto">
                   <Link to="/what-we-do/">
@@ -96,7 +128,7 @@ const IndexPage = (props) => (
                   </Link>
                 </div>
               </div>
-            </Card.Body>
+            </Card.Footer>
           </Card>
         </Col>
       </Row>

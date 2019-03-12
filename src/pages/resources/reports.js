@@ -78,14 +78,7 @@ const Reports = class extends Component {
                             <Link 
                               to={`/resources/reports/designing-citizen-science-for-both-science-and-ducation`}
                             >
-                              <Button
-                                variant="outline-secondary"
-                                style={{
-                                  position: 'absolute',
-                                  bottom: '1.25rem',
-                                  right: '1.25rem'
-                                }}
-                              >
+                              <Button variant="outline-secondary">
                                 Read More
                               </Button>
                             </Link>
@@ -137,14 +130,7 @@ const Reports = class extends Component {
                             <Link 
                               to={`/resources/reports/math-science-teacher-leadership-synthesis-project`}
                             >
-                              <Button
-                                variant="outline-secondary"
-                                style={{
-                                  position: 'absolute',
-                                  bottom: '1.25rem',
-                                  right: '1.25rem'
-                                }}
-                              >
+                              <Button variant="outline-secondary">
                                 Read More
                               </Button>
                             </Link>
@@ -196,14 +182,7 @@ const Reports = class extends Component {
                             <Link 
                               to={`/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss`}
                             >
-                              <Button
-                                variant="outline-secondary"
-                                style={{
-                                  position: 'absolute',
-                                  bottom: '1.25rem',
-                                  right: '1.25rem'
-                                }}
-                              >
+                              <Button variant="outline-secondary">
                                 Read More
                               </Button>
                             </Link>
