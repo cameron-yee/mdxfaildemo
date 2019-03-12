@@ -93,7 +93,8 @@ const RDPrograms = class extends Component {
                               src={edge.node.frontmatter.image}
                               alt={edge.node.frontmatter.alt}
                               style={{
-                                marginBottom: '1rem'
+                                // marginBottom: '1rem',
+                                borderRadius: '4px'
                               }}
                             />
                           </Col>
@@ -117,11 +118,16 @@ const RDPrograms = class extends Component {
                               <div className="mr-auto">
                                 { 
                                   edge.node.frontmatter.areas.map((area, index) => {
-                                    const variants = ['primary','secondary','success','danger']
+                                    const variants = {
+                                      "Teacher Professional Learning": "primary",
+                                      "Instructional Materials Development": "secondary",
+                                      "Research": "success",
+                                      "Leadership Development": "danger"
+                                    }
                                     return(
                                       <span
                                         key={index}
-                                        className={`rd-pill badge badge-pill badge-${variants[index]}`}
+                                        className={`rd-pill badge badge-pill badge-${variants[area]}`}
                                         style={{ marginRight: '.5rem' }}
                                       >
                                         {area}
