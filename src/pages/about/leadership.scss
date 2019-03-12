@@ -1,5 +1,5 @@
 .leadership-scrollable-wrapper {
-  height: 36.5em;
+  height: 44em;
   margin-top: 2.618em;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -43,32 +43,22 @@
 
 .leadership-card {
   margin: 0 .5em;
-  max-width: 72vw;
-
   background: #fff;
-  border-radius: 8px;
-  // box-shadow: 0 2px 40px rgba(14,30,37,.16);
   color: rgba(14,30,37,.8);
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  font-size: .8rem;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  max-width: 23.224em;
-  position: relative;
-  text-align: left;
-  text-shadow: none;
+  max-width: 19rem;
   z-index: 10;
 }
 
-.leadership-card-text {
-  padding-bottom: 3rem;
-}
+// .leadership-card-text {
+//   padding-bottom: 3rem;
+// }
 
-.leadership-read-more {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  // margin-bottom: 0.75rem;
-}
+// .leadership-read-more {
+//   position: absolute;
+//   bottom: 5%;
+//   left: 50%;
+//   // margin-bottom: 0.75rem;
+// }

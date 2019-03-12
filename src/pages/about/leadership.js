@@ -85,65 +85,108 @@ const LeadershipPage = class extends Component {
         <SEO title="Leadership" />
         <Container>
           <PageTitle title="Leadership" />
-          <Row style={{ marginBottom: '2rem' }}>
+          <Row style={{ marginBottom: '3rem' }}>
             <Col xs={12}>
-              <h2>Management</h2>
-              <div className="leadership-scrollable-wrapper">
-                <div className="leadership-scrollable">
-                  { this.management.map((person, index) => {
-                      return(
-                        <Card key={`mgmt-${index}`} className="leadership-card">
-                          <div className="leadership-card-image-wrapper">
-                            <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
-                          </div>
-                          <Card.Body>
-                            <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
-                            <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
-                            <div className="button-wrapper">
-                              <Link
-                                to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                className="leadership-read-more"
-                              >
-                                <Button variant="outline-secondary">Read More</Button>
-                              </Link>
-                            </div>
-                          </Card.Body>
-                        </Card>
-                      )
-                    })
-                  }
-                </div>
-              </div>
+              <h2 style={{ marginBottom: '3rem' }}>Management</h2>
             </Col>
+            { this.management.map((person, index) => {
+              return(
+                <Col
+                  md={6}
+                  lg={4} 
+                  style={{ marginBottom: '2rem' }}
+                >
+                  <Card 
+                    key={`mgmt-${index}`} 
+                    className="h-100"
+                  >
+                    <Card.Img
+                      variant="top" 
+                      src={person.node.frontmatter.image} 
+                      alt={person.node.frontmatter.alt} 
+                    />
+                    <Card.Body>
+                      <Card.Title style={{ marginBottom: '1rem' }}>
+                        {person.node.frontmatter.fullName}
+                      </Card.Title>
+                      <Card.Text>
+                        {person.node.excerpt}
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer
+                    style={{
+                        background: 'white',
+                        borderTop: 'none',
+                        marginBottom: '.5rem'
+                      }}
+                    >
+                      <div className="d-flex">
+                        <div className="ml-auto align-self-end">
+                          <Link
+                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                            className="leadership-read-more"
+                          >
+                            <Button variant="outline-secondary">Read More</Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </Card.Footer>
+                  </Card>
+                </Col>
+              )
+            })}
+          </Row>
+          <Row style={{ marginBottom: '3rem' }}>
             <Col xs={12}>
-              <h2>Board of Directors</h2>
-              <div className="leadership-scrollable-wrapper">
-                <div className="leadership-scrollable">
-                  { this.bod.map((person, index) => {
-                      return(
-                        <Card key={`mgmt-${index}`} className="leadership-card">
-                          <div className="leadership-card-image-wrapper">
-                            <Card.Img className="leadership-card-image" variant="top" src={person.node.frontmatter.image} alt={person.node.frontmatter.alt} />
-                          </div>
-                          <Card.Body>
-                            <Card.Title>{person.node.frontmatter.fullName}</Card.Title>
-                            <Card.Text className="leadership-card-text">{person.node.excerpt}</Card.Text>
-                            <div className="button-wrapper">
-                              <Link
-                                to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
-                                className="leadership-read-more"
-                              >
-                                <Button variant="outline-secondary">Read More</Button>
-                              </Link>
-                            </div>
-                          </Card.Body>
-                        </Card>
-                      )
-                    })
-                  }
-                </div>
-              </div>
+              <h2 style={{ marginBottom: '3rem' }}>Board of Directors</h2>
             </Col>
+            { this.bod.map((person, index) => {
+              return(
+                <Col
+                  md={6}
+                  lg={4} 
+                  style={{ marginBottom: '2rem' }}
+                >
+                  <Card 
+                    key={`mgmt-${index}`} 
+                    className="h-100"
+                    style={{ marginBottom: '1rem' }}
+                  >
+                    <Card.Img
+                      variant="top" 
+                      src={person.node.frontmatter.image} 
+                      alt={person.node.frontmatter.alt} 
+                    />
+                    <Card.Body>
+                      <Card.Title>
+                        {person.node.frontmatter.fullName}
+                      </Card.Title>
+                      <Card.Text className="leadership-card-text">
+                        {person.node.excerpt}
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer
+                    style={{
+                        background: 'white',
+                        borderTop: 'none',
+                        marginBottom: '.5rem'
+                      }}
+                    >
+                      <div className="d-flex">
+                        <div className="ml-auto align-self-end">
+                          <Link
+                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                            className="leadership-read-more"
+                          >
+                            <Button variant="outline-secondary">Read More</Button>
+                          </Link>
+                        </div>
+                      </div>
+                    </Card.Footer>
+                  </Card>
+                </Col>
+              )
+            })}
           </Row>
         </Container>
       </Layout>
