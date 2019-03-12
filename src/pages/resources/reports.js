@@ -139,9 +139,9 @@ const Reports = class extends Component {
                   </Col>
                   <Col 
                     lg={4}
-                    className="rrc-card-col d-flex"
+                    className="rrc-card-col"
                   >
-                    <Card className="flex-fill">
+                    <Card className="h-100">
                       <Card.Body>
                         <Card.Title
                           style={{
@@ -167,6 +167,14 @@ const Reports = class extends Component {
                         >
                           Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art.
                         </Card.Text>
+                      </Card.Body>
+                      <Card.Footer
+                        style={{
+                          background: 'white',
+                          borderTop: 'none',
+                          marginBottom: '.5rem'
+                        }}
+                      >
                         <div className="d-flex">
                           <div className="ml-auto align-self-end">
                             <Link 
@@ -185,7 +193,7 @@ const Reports = class extends Component {
                             </Link>
                           </div>
                         </div>
-                      </Card.Body>
+                      </Card.Footer>
                     </Card>
                   </Col>
                 </Row>

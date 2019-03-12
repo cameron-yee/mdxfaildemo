@@ -47,14 +47,14 @@ const EducatorResourceCenter = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="Educator Resource Center" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Educator Resource Center" />
         <Layout location={this.props.location}>
           <section className="section">
             <Container>
               <PageTitle title="Educator Resource Center"></PageTitle>
               <Row>
                 <Col xs={12}>
-                  <p>Welcome to the Educator Resource Center—where you will discover resources to support classroom instruction, professional learning, district planning, and citizen science efforts.</p>
+                  <p>Welcome to the Educator Resource Center — where you will discover resources to support classroom instruction, professional learning, district planning, and citizen science efforts.</p>
                 </Col>
                 <ResourceCategories
                   navigate={false}
@@ -97,20 +97,57 @@ const EducatorResourceCenter = class extends Component {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     data_filter['excerpt'] = edge.node.excerpt
                     return(
-                      <Col md={4} key={edge.node.id} className="erc-card-col">
-                        <Card id={`resource-${index}`} className="erc-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
-                          <div className="erc-card-img-wrapper">
-                            <Card.Img variant="top" className="erc-card-img" src={edge.node.frontmatter.image}/>
-                          </div>
+                      <Col
+                        md={6}
+                        lg={4}
+                        className="rrc-card-col"
+                      >
+                        <Card 
+                          id={`resource-${index}`}
+                          data-filter={JSON.stringify(data_filter)} 
+                          data-type={edge.node.frontmatter.type}
+                          className="h-100"
+                        >
+                          <Card.Img
+                            variant="top"
+                            src={edge.node.frontmatter.image}
+                            alt={edge.node.frontmatter.alt}
+                          />
                           <Card.Body>
-                            <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                            <Card.Text className="erc-excerpt">{edge.node.excerpt}</Card.Text>
-                            <Link to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="p-2 erc-read-more"><Button variant="outline-secondary">Read More</Button></Link>
+                            <Card.Title
+                              style={{
+                                marginBottom: '1.5rem'
+                              }}
+                            >
+                              { index } {edge.node.frontmatter.title}
+                            </Card.Title>
+                            <Card.Text>
+                              {edge.node.excerpt}
+                            </Card.Text>
                           </Card.Body>
+                          <Card.Footer
+                            style={{
+                              background: 'white',
+                              borderTop: 'none',
+                              marginBottom: '.5rem'
+                            }}
+                          >
+                            <div className="d-flex">
+                              <div className="ml-auto align-self-end">
+                                <Link
+                                  to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                >
+                                  <Button variant="outline-secondary">
+                                    Read More
+                                  </Button>
+                                </Link>
+                              </div>
+                            </div>
+                          </Card.Footer>
                         </Card>
                       </Col>
                     )
-                  }) 
+                  })
                 }
               </Row>
             </Container>
