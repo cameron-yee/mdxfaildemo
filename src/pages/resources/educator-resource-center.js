@@ -119,7 +119,7 @@ const EducatorResourceCenter = class extends Component {
                                 marginBottom: '1.5rem'
                               }}
                             >
-                              { index } {edge.node.frontmatter.title}
+                              {edge.node.frontmatter.title}
                             </Card.Title>
                             <Card.Text>
                               {edge.node.excerpt}
