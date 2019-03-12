@@ -8,7 +8,7 @@ seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
 sidebarRegisterText: ''
-sidebarRegisterTitle: ''
+sidebarRegisterTitle: Sign up now
 sidebarContactsText: ''
 sidebarContacts:
   - Ashley Whitaker
