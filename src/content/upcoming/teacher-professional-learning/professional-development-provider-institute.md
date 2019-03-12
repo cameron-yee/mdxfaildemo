@@ -22,9 +22,13 @@ Join BSCS Science Learning for a Professional Development (PD) Provider Institut
 * Take part in an in-depth analysis of Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 * Increase your ability to support teachers in modifying their current curriculum materials to support student development of Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 
+Date(s) of Event: October 1-4, 2019
 
+Location for Event: BSCS Science Learning
 
-Participation Requirements:
+Cost of Event: The cost to register is $1,000
+
+Registration Deadline: September 1, 2019 
 
 Who should participate? 
 
