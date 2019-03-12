@@ -7,9 +7,9 @@ seoDescription: TEST DESCRIPTION
 seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions
-sidebarRegisterText: Wunderbar
-sidebarRegisterTitle: Wunderbar
-sidebarContactsText: Wunderbar
+sidebarRegisterText: ''
+sidebarRegisterTitle: ''
+sidebarContactsText: ''
 sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
