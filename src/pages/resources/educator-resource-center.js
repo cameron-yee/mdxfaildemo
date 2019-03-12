@@ -56,12 +56,12 @@ const EducatorResourceCenter = class extends Component {
                 <Col xs={12}>
                   <p>Welcome to the Educator Resource Center — where you will discover resources to support classroom instruction, professional learning, district planning, and citizen science efforts.</p>
                 </Col>
-                <ResourceCategories
-                  navigate={false}
-                  filterHash={this.state.filterHash}
-                  setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
-                />
               </Row>
+              <ResourceCategories
+                navigate={false}
+                filterHash={this.state.filterHash}
+                setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
+              />
               <hr />
             </Container>
           </section>

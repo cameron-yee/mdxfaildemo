@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 import Category from './category'
 import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row';
 
 const ResourceCategories = class extends Component {
   constructor(props) {
@@ -48,9 +49,6 @@ const ResourceCategories = class extends Component {
         console.log(true)
         document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start"});
       }
-      //   console.log(false)
-      //   document.body.scrollTop = document.documentElement.scrollTop = 0
-      // }
 
     } catch(e) {
       console.log(e);
@@ -58,28 +56,30 @@ const ResourceCategories = class extends Component {
     
     let courses = document.getElementsByClassName('card');
     for(let i = 0; i < courses.length; i++) {
-      // if(courses[i].getAttributeNames().includes('data-type')) {
-        if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
-          courses[i].style.display = 'none';
-          courses[i].parentElement.style.display = 'none';
-        } else {
-          courses[i].style.display = '';
-          courses[i].parentElement.style.display = '';
-        }
-      // }
+      if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
+        courses[i].style.display = 'none';
+        courses[i].parentElement.style.display = 'none';
+      } else {
+        courses[i].style.display = '';
+        courses[i].parentElement.style.display = '';
+      }
     }
 
   }
 
   render() {
     return (
-      Object.keys(this.state.categories).map((category, index) => {
-        return (
-          <Col md={3} key={index}>
-            <Category category={this.state.categories[category]} runCategoryFilter={(e, title) => this.categoryFilter(e, title)}/>
-          </Col>
-        )
-      })
+      <Row>
+        {
+          Object.keys(this.state.categories).map((category, index) => {
+            return (
+              <Col md={3} key={index}>
+                <Category category={this.state.categories[category]} runCategoryFilter={(e, title) => this.categoryFilter(e, title)}/>
+              </Col>
+            )
+          })
+        }
+      </Row>
     )
   }
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { Link } from 'gatsby';
 
+import Col from 'react-bootstrap/Col'
+
 const Category = class extends Component {
   setCategoryFilter = (e, title) => {
     this.props.runCategoryFilter(e, title);
@@ -9,8 +11,14 @@ const Category = class extends Component {
 
   render() {
     return (
-      <Link id={this.props.category.title.toLowerCase().replace(/ /g, "-")} to={this.props.category.path} className={this.props.category.boxImageClass} onClick={(e) => this.setCategoryFilter(e, this.props.category.title.toLowerCase())}>
-        <h4 className="title is-4">{this.props.category.title.split(" ")[0]}<br />{this.props.category.title.split(" ")[1]}</h4>
+      <Link
+        className="d-flex flex-column justify-content-center"
+        id={this.props.category.title.toLowerCase().replace(/ /g, "-")}
+        to={this.props.category.path}
+        onClick={(e) => this.setCategoryFilter(e, this.props.category.title.toLowerCase())}
+      >
+        <img classroom="p-2" src="/assets/sample-erc-icon.svg" alt="face and gear" />
+        <p className="p-2" style={{textAlign: 'center', fontSize: '1.5rem'}}>{this.props.category.title.split(" ")[0]}<br />{this.props.category.title.split(" ")[1]}</p>
       </Link>
     )
   }
