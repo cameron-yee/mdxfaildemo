@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import JoinModal from './join-modal/join-modal'
 
 
-const JoinEmailList = class extends Component {
+const JoinEmailListButton = class extends Component {
   constructor(props) {
     super(props)
 
@@ -38,4 +38,4 @@ const JoinEmailList = class extends Component {
   }
 }
 
-export default JoinEmailList
+export default JoinEmailListButton

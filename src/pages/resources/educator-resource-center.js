@@ -142,7 +142,6 @@ export const educatorResourceQuery = graphql`
             discipline,
             gradeLevel,
             image,
-            slug,
             price,
             programLength,
             title,

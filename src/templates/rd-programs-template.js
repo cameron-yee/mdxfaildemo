@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Layout from '../components/layout/layout'
 import PageTitle from '../components/layout/page-title/page-title'
-import SpecificContactForm from '../components/atoms/specific-contact-form/specific-contact-form'
+import SpecificContactForm from '../components/atoms/specific-contact-form/specific-contact-form-button'
 import Row from 'react-bootstrap/Row'
 
 import '../global-scss/index.scss'

@@ -10,7 +10,7 @@ const ResourceCategories = class extends Component {
     super(props);
     this.state = {
       categories: {
-        category01: { title: `Classroom`, path: `/resources/educator-resource-center#classroom`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid classroom` },
+        category01: { title: `Classroom Instruction`, path: `/resources/educator-resource-center#classroom-instruction`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid classroom` },
         category02: { title: `Professional Learning`, path: `/resources/educator-resource-center#professional-learning`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid professional-learning` },
         category03: { title: `District Planning`, path: `/resources/educator-resource-center#district-planning`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid district-planning` },
         category04: { title: `Citizen Science`, path: `/resources/educator-resource-center#citizen-science`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid citizen-science` }

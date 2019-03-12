@@ -10,7 +10,7 @@ import Table from 'react-bootstrap/Table'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
-import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
+import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form-button'
 
 import './staff-directory.scss'
 

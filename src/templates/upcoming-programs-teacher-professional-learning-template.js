@@ -5,7 +5,7 @@ import { Location } from '@reach/router'
 import Layout from '../components/layout/layout';
 import PageTitle from '../components/layout/page-title/page-title'
 import SEO from '../components/seo'
-import SpecificContactForm from '../components/atoms/specific-contact-form/specific-contact-form'
+import SpecificContactForm from '../components/atoms/specific-contact-form/specific-contact-form-button'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'

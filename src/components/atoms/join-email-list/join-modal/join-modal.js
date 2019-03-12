@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
-import * as Promise from 'bluebird'
+import * as BlueBirdPromise from 'bluebird'
 
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
@@ -10,9 +10,7 @@ import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
 
-import './join-modal.scss'
-
-Promise.config({
+BlueBirdPromise.config({
   cancellation: true,
 });
 
@@ -32,7 +30,7 @@ const JoinModal= class extends Component {
     }
     
     this.cancelToken = axios.CancelToken.source()
-    this.getContactId = Promise
+    this.getContactId = BlueBirdPromise
 
     this.token = process.env.CONSTANT_CONTACT_TOKEN //import from .env (define in Netlify dashboard) }
     this.api_key = process.env.CONSTANT_CONTACT_API_KEY
@@ -42,7 +40,7 @@ const JoinModal= class extends Component {
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
-      // this.getContactId.cancel()
+      this.getContactId.cancel()
     } catch(error) {
       console.log(error);
     }
@@ -105,7 +103,7 @@ const JoinModal= class extends Component {
       cancelToken: this.cancelToken.token
     })
     .then(response => {
-      this.checkIfContactExists = new Promise((resolve, reject, onCancel) => {
+      this.checkIfContactExists = new BlueBirdPromise((resolve, reject, onCancel) => {
         //eslint-disable-next-line
         onCancel(() => {throw "Promise canceled."})
         if(!Array.isArray(response.data.data.results) || !response.data.data.results.length) {
@@ -285,14 +283,17 @@ const JoinModal= class extends Component {
           { !this.state.loading && this.state.signed_up &&
             <Button variant="outline-success" disabled>Signed up</Button>
           }
-          { (!this.state.firstname || !this.state.lastname || !this.state.email) &&
+          { !this.state.signed_up && (!this.state.firstname || !this.state.lastname || !this.state.email) &&
             <Button variant="outline-primary" disabled>Sign up</Button>
           }
-          { !this.state.loading && !this.state.signed_up && this.state.firstname && this.state.lastname && this.state.email &&
+          { !this.state.signed_up && !this.state.loading && !this.state.signed_up && this.state.firstname && this.state.lastname && this.state.email &&
             <Button variant="outline-primary" type="submit">Sign up</Button>
           }
           { this.state.loading &&
-            <div variant="outline-success" className="is-loading"></div>
+            <Button variant="outline-success" disabled>
+              <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+              Sign up
+            </Button>
           }
         </Modal.Footer>
       </Form>

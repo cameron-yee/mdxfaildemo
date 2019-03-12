@@ -1,6 +1,6 @@
 ---
 date: 2018-12-18T22:33:31.300Z
-title: Leadership Development 1
+title: Field Test Opportunity 1
 additionalTags: tag1
 seoCanonicalUrl: https://www.google.com
 seoDescription: TEST DESC
@@ -12,7 +12,7 @@ sidebarContactsTitle: Test title
 sidebarRegisterURL: https://www.google.com
 sidebarRegisterText: Click below to register.
 sidebarRegisterTitle: Registration
-page: upcoming-programs-leadership-development
+page: upcoming-programs-field-test-opportunities
 ---
 
 Field test 1.  The subject appears to have abnormal powers...

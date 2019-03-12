@@ -5,7 +5,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-middle-school-science
 seoDescription: Test SEO description.
 seoLang: en-us
-type: Classroom
+type: Classroom Instruction
 template: Image Right
 image: /assets/red-panda.jpg
 alt: PLACEHOLDER

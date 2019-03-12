@@ -11,7 +11,7 @@ import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
-import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form'
+import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form-button'
 
 import './work-with-us.scss'
 
@@ -134,7 +134,7 @@ const WorkWithUsPage = class extends Component {
                 BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. We create instructional materials, provide professional learning programs for teachers, spearhead leadership development programs for schools and districts, and conduct research on how to improve science teaching and learning.
               </p>
               <p>
-                <Link to="/what-we-do">What we do</Link> falls within three BSCS divisions: Instructional Materials, Professional Learning, and Research.
+                <Link to="/our-work/what-we-do">What we do</Link> falls within three BSCS divisions: Instructional Materials, Professional Learning, and Research.
               </p>
               <p>
                 See below to learn more about our capabilities. We invite you to connect with our division directors to explore opportunities to work together!
@@ -235,7 +235,7 @@ const WorkWithUsPage = class extends Component {
                             lineHeight: '1.5'
                           }}
                         >
-                          Division of Professional Learning
+                          Professional Learning Division
                         </h2>
                       </div>
                       <div className="ml-auto">
@@ -312,7 +312,7 @@ const WorkWithUsPage = class extends Component {
                             lineHeight: '1.5'
                           }}
                         >
-                          Division of Research
+                          Research Division
                         </h2>
                       </div>
                       <div className="ml-auto">
@@ -440,6 +440,8 @@ const WorkWithUsPage = class extends Component {
                   <Card.Title>Contact Division Director</Card.Title>
                   <Card.Text style={{fontSize: '1rem'}}>
                     Please contact the appropriate division director to discuss opportunities to work together:
+                  </Card.Text>
+                  <Card.Text style={{fontSize: '1rem'}}>
                     <strong>BSCS Instructional Materials Division Director</strong>
                   </Card.Text>
                   <div className="d-flex justify-content-center">

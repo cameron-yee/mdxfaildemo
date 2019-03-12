@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 
 import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
-import JoinEmailList from '../../atoms/join-email-list/join-email-list'
+import JoinEmailList from '../../atoms/join-email-list/join-email-list-button'
 import ContactUsModal from '../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import ContactUsButton from '../../atoms/general-contact-form/general-contact-form-button'
 
