@@ -7,13 +7,13 @@ seoDescription: TEST DESCRIPTION
 seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions
-sidebarRegisterText: ''
-sidebarRegisterTitle: ''
-sidebarContactsText: Questions?
+sidebarRegisterText: Wunderbar
+sidebarRegisterTitle: Wunderbar
+sidebarContactsText: Wunderbar
 sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
-sidebarContactsTitle: Contact People and Info
+sidebarContactsTitle: Questions?
 page: upcoming-programs-teacher-professional-learning
 ---
 Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
