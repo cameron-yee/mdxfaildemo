@@ -7,8 +7,9 @@ seoDescription: TEST DESCRIPTION
 seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions
-sidebarRegisterText: Click Here
-sidebarRegisterTitle: Register online now
+sidebarRegisterText: ''
+sidebarRegisterTitle: ''
+sidebarContactsText: Questions?
 sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
