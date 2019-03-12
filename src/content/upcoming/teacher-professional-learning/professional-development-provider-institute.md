@@ -7,14 +7,15 @@ seoDescription: TEST DESCRIPTION
 seoLang: en-us
 sidebarRegisterURL: >-
   http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions
-sidebarRegisterText: Register Now
+sidebarRegisterText: Click Here
+sidebarRegisterTitle: Register online now
 sidebarContacts:
   - Ashley Whitaker
   - Jody Bintz
 sidebarContactsTitle: Contact People and Info
 page: upcoming-programs-teacher-professional-learning
 ---
-Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
+Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on **Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence**.
 
 ## Why participate?
 
@@ -29,10 +30,7 @@ High quality science education is more crucial than ever. Teachers must prepare 
 
 **Goals and Outcomes**
 
-* 
-
-Enhance your understanding of the research and literature underpinning the Next Generation Science Standards and increase ability to support teachers’ translation of research into the classroom.
-
+* Enhance your understanding of the research and literature underpinning the Next Generation Science Standards and increase ability to support teachers’ translation of research into the classroom.
 * Deepen your understanding of three-dimensional learning and the science and engineering practices laid out in the NGSS.
 * Take part in an in-depth analysis of Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 * Increase your ability to support teachers in modifying their current curriculum materials to support student development of Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
