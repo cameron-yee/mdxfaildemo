@@ -17,7 +17,7 @@ import PageTitle from '../../../components/layout/page-title/page-title'
 const CitizenScienceReport = (props) => {
   return (
     <>
-      <SEO title="Developing math/science teacher leadership: A consensus approach to evaluating program quality" />
+      <SEO title="Designing Citizen Science for Both Science and Education: A Workshop Report" />
       <Layout location={props.location}>
         <Container>
           <Row>
@@ -39,7 +39,7 @@ const CitizenScienceReport = (props) => {
                 <div className="d-flex flex-row bd-highlight mb-3">
                   <div className="p-2 bd-highlight">
                     <h1 className="jumbotron-heading" style={{ color: '#212529' }}>
-                      Math/Science Teacher Leadership Synthesis Project
+                      Designing Citizen Science for Both Science and Education: A Workshop Report
                     </h1>
                   </div>
                 </div>
@@ -51,24 +51,27 @@ const CitizenScienceReport = (props) => {
           <Container>
             <Row>
               <Col>
-                <h2 className="heading2">Developing math/science teacher leadership: A consensus approach to evaluating program quality</h2>
                 <p style={{ marginBottom: "2rem" }}>
-                  The <strong>Developing math/science teacher leadership: A consensus approach to evaluating program quality</strong> project is funded by the National Science Foundation (ECR 1534698). The purpose of this synthesis project is to build consensus on the key attributes of high-quality math/science teacher leadership development programs. High quality teacher leadership programs are those that prepare and support teachers to positively impact math/science teaching and learning beyond their own classrooms. The three major objectives of the project are to:
+                  In January 2017, BSCS convened a group of scientists, educators, and technologists with significant experience in citizen science to consider the challenges of designing citizen science projects to achieve ambitious objectives in the areas of both science and education. The workshop was based on the following premise:
                 </p>
-                <Card className="bg-light" style={{ marginBottom: "3rem" }}>
-                  <Card.Body>
-                    <ol>
-                      <li>Review research on math/science teacher leadership development and descriptions of existing programs;</li>
-                      <li>Bring together a group of knowledgeable practitioners, researchers and policymakers to build consensus on key attributes of quality programs; and</li>
-                      <li>Communicate the consensus attributes along with recommendations for implementation and future work to stakeholders.</li>
-                    </ol>
-                  </Card.Body>
-                </Card>
+                <p>
+                  <em>
+                    Achieving both scientific and educational benefits in a citizen science initiative requires not just a commitment to both, but the expertise and resources to design for both.
+                  </em>
+                </p>
+                <p>
+                  The goals of the workshop were to
+                </p>
+                <ol>
+                  <li>gather the insights of experienced citizen science project organizers about how to design citizen science projects and platforms for both scientific and educational outcomes and to</li>
+                  <li>organize these insights into a set of recommendations for software developers on how to design online citizen science platforms for both scientific and educational outcomes.</li>
+                </ol>
+                <p>Refer to our <a href="https://media.bscs.org/tech-report/2018-1/bscs_citscireport_release.pdf" target="_blank" rel="noopener noreferrer">press release</a> for more information.</p>
               </Col>
             </Row>
             <Row>
               <Col>
-                <h3 style={{ marginBottom: "1rem" }}>The reports from this project include:</h3>
+                <h3 style={{ marginBottom: "2rem" }}>The insights generated at this workshop have been compiled in the following workshop report:</h3>
               </Col>
             </Row>
             <Row style={{ marginBottom: "3rem" }}>
@@ -78,8 +81,8 @@ const CitizenScienceReport = (props) => {
                     <Row>
                       <Col xs={2} lg={1}>
                         <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-02_mstl_synthesis_report.pdf"
+                          variant="outline-secondary" 
+                          href="https://media.bscs.org/tech-report/2018-1/2018-1.pdf"
                           target="_blank"
                           style={{ marginTop: '.45rem' }}
                         >
@@ -87,40 +90,8 @@ const CitizenScienceReport = (props) => {
                         </Button>
                       </Col>
                       <Col>
-                        <p><strong>A Synthesis of Math/Science Teacher Leadership Development Programs: Consensus Findings and Recommendations</strong></p>
-                        <p>This document captures the synthesis of findings from the research and program review and symposium proceedings, and serves as the primary report from this project.</p>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={2} lg={1}>
-                        <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-03_mstl_research-program_review.pdf"
-                          target="_blank"
-                          style={{ marginTop: '.45rem' }}
-                        >
-                          <i className="fas fa-cloud-download-alt"></i>
-                        </Button>
-                      </Col>
-                      <Col>
-                        <p><strong>Math/Science Teacher Leadership Development: Findings from Research and Program Reviews</strong></p>
-                        <p>This document describes the review of a selection of teacher leadership development research studies and programs, and serves as a supplemental resource to the synthesis report. The codebook for the review of programs and research is available <a href="https://media.bscs.org/mstl/teacher_leadership_review_codebook_january_2016.pdf" target="_blank" rel="noopener noreferrer" className="text-secondary">here</a>.</p>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={2} lg={1}>
-                        <Button
-                          variant="secondary" 
-                          href="https://media.bscs.org/mstl/bscs_2017-04_mstl_symposium_proceedings.pdf"
-                          target="_blank"
-                          style={{ marginTop: '.45rem' }}
-                        >
-                          <i className="fas fa-cloud-download-alt"></i>
-                        </Button>
-                      </Col>
-                      <Col>
-                        <p><strong>Developing Math/Science Teacher Leadership: Symposium Proceedings</strong></p>
-                        <p>This document captures the discussions and findings from the symposium of experts in math and science teacher leadership development.</p>
+                        <p><strong>Designing Citizen Science for Both Science and Education: A Workshop Report</strong></p>
+                        <p>Edelson, D. C., Kirn, S. L., &amp; Workshop Participants. (2018). <em>Designing citizen science for both science and education: A workshop report</em>. (Technical Report No. 2018-01). Colorado Springs, CO: BSCS Science Learning.</p>
                       </Col>
                     </Row>
                   </Card.Body>
