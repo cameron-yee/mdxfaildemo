@@ -81,18 +81,6 @@ const WorkWithUsPage = class extends Component {
     this.setState({
       collapseHeight
     })
-
-    // window.setTimeout(() => {
-    //   collapseHeight[0] = document.getElementById(`collapse${0}`).scrollHeight
-    //   collapseHeight[1] = document.getElementById(`collapse${1}`).scrollHeight
-    //   collapseHeight[2] = document.getElementById(`collapse${2}`).scrollHeight
-    //   collapseHeight[3] = document.getElementById(`collapse${3}`).scrollHeight
-
-    //   this.setState({
-		// 		collapseHeight
-		// 	})
-    // }, 433)
-
   }
 
   render() {
@@ -101,12 +89,10 @@ const WorkWithUsPage = class extends Component {
       collapseHeight
     } = this.state
 
-    const styles = [
-      {maxHeight: collapseID === "collapse0" ? `${collapseHeight[0]}px` : '0px'},
-      {maxHeight: collapseID === "collapse1" ? `${collapseHeight[1]}px` : '0px'},
-      {maxHeight: collapseID === "collapse2" ? `${collapseHeight[2]}px` : '0px'},
-      {maxHeight: collapseID === "collapse3" ? `${collapseHeight[3]}px` : '0px'}
-    ]
+    let styles = []
+    panels.map((panel, index) => {
+      styles[index] = {maxHeight: collapseID === `collapse${index}` ? `${collapseHeight[index]}px` : '0px'}
+    })
 
     return (
       <Layout location={this.props.location}>
