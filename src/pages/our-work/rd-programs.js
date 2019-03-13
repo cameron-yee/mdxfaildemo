@@ -20,6 +20,9 @@ import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filt
 import '../../global-scss/index.scss';
 import './rd-programs.scss';
 
+import ReactPlaceholder from 'react-placeholder'
+import 'react-placeholder/lib/reactPlaceholder.css'
+
 
 const RDPrograms = class extends Component {
   constructor(props) {
@@ -28,7 +31,8 @@ const RDPrograms = class extends Component {
     this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
     this.state = {
       filter_hash: undefined,
-      activeFilters: []
+      activeFilters: [],
+      imagesLoaded: false
     }
   }
 
@@ -36,6 +40,29 @@ const RDPrograms = class extends Component {
     if(this.props.location.hash) {
       this.setState({filter_hash: this.props.location.hash})
     }
+
+    const loaded = this.checkImagesLoaded() 
+    console.log(loaded)
+    loaded ? this.setState({imagesLoaded: true}) : this.setState({imagesLoaded: false})
+  }
+
+  sleep = (time) => {
+    return new Promise(resolve => {setTimeout(() => { resolve() }, time)}) 
+  }
+
+  checkImagesLoaded = async () => {
+    const rd_images = document.getElementsByClassName('rd-image')
+    let loaded = true
+
+    for(let i = 0; i < rd_images.length; i++) {
+      if(rd_images[i].nodeName === 'IMG' && !rd_images[i].complete) {
+        loaded = false
+        await this.sleep(500)
+        return this.checkImagesLoaded()
+      }
+    }
+
+    return loaded
   }
 
   render() {
@@ -83,20 +110,28 @@ const RDPrograms = class extends Component {
                   let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                   data_filter['excerpt'] = edge.node.excerpt
                   return(
-                    <div id="parent">
-                      <div key={edge.node.id} id={`resource-${index}`} data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
+                    <div id="parent" key={edge.node.id}>
+                      <div id={`resource-${index}`} data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}>
                         <hr />
                         <Row style={{ marginBottom: '1rem' }}>
                           <Col sm={3} lg={2} className="d-none d-md-block">
-                            <img
-                              className="img-fluid"
-                              src={edge.node.frontmatter.image}
-                              alt={edge.node.frontmatter.alt}
-                              style={{
-                                // marginBottom: '1rem',
-                                borderRadius: '4px'
-                              }}
-                            />
+                            <ReactPlaceholder
+                              type='rect'
+                              ready={this.state.imagesLoaded}
+                              color='#E0E0E0'
+                              showLoadingAnimation={true}
+                              style={{width: '160px', height: '160px', borderRadius: '4px'}}
+                            >
+                              <img
+                                className="img-fluid rd-image"
+                                src={edge.node.frontmatter.image}
+                                alt={edge.node.frontmatter.alt}
+                                style={{
+                                  // marginBottom: '1rem',
+                                  borderRadius: '4px'
+                                }}
+                              />
+                            </ReactPlaceholder>
                           </Col>
                           <Col>
                             <h3>{edge.node.frontmatter.title}</h3>
