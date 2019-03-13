@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
-import Col from 'react-bootstrap/Col'
 
 const Category = class extends Component {
   setCategoryFilter = (e, title) => {
-    this.props.runCategoryFilter(e, title);
+    this.props.runCategoryFilter(e, title)
   }
 
   render() {
