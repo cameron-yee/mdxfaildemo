@@ -57,11 +57,11 @@ const EducatorResourceCenter = class extends Component {
   }
 
   checkImagesLoaded = async () => {
-    const rd_images = document.getElementsByClassName('rd-image')
+    const erc_card_images = document.getElementsByClassName('erc-card-image')
     let loaded = true
 
-    for(let i = 0; i < rd_images.length; i++) {
-      if(rd_images[i].nodeName === 'IMG' && !rd_images[i].complete) {
+    for(let i = 0; i < erc_card_images.length; i++) {
+      if(erc_card_images[i].nodeName === 'IMG' && !erc_card_images[i].complete) {
         loaded = false
         await this.sleep(500)
         return this.checkImagesLoaded()
@@ -144,6 +144,7 @@ const EducatorResourceCenter = class extends Component {
                             className="h-100"
                           >
                             <Card.Img
+                              className="erc-card-img"
                               variant="top"
                               src={edge.node.frontmatter.image}
                               alt={edge.node.frontmatter.alt}
