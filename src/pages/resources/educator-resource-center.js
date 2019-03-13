@@ -20,6 +20,9 @@ import ResourceCategories from '../../components/molecules/resource-categories/r
 import './educator-resource-center.scss';
 import '../../global-scss/index.scss';
 
+import ReactPlaceholder from 'react-placeholder'
+import 'react-placeholder/lib/reactPlaceholder.css'
+
 
 const EducatorResourceCenter = class extends Component {
   constructor(props) {
@@ -34,7 +37,8 @@ const EducatorResourceCenter = class extends Component {
     }
     this.state = {
       filterHash: undefined,
-      activeFilters: []
+      activeFilters: [],
+      imagesLoaded: false
     }
   }
 
@@ -42,6 +46,29 @@ const EducatorResourceCenter = class extends Component {
     if(this.props.location.hash) {
       this.setState({filterHash: this.props.location.hash})
     }
+
+    const loaded = this.checkImagesLoaded() 
+    console.log(loaded)
+    loaded ? this.setState({imagesLoaded: true}) : this.setState({imagesLoaded: false})
+  }
+
+  sleep = (time) => {
+    return new Promise(resolve => {setTimeout(() => { resolve() }, time)}) 
+  }
+
+  checkImagesLoaded = async () => {
+    const rd_images = document.getElementsByClassName('rd-image')
+    let loaded = true
+
+    for(let i = 0; i < rd_images.length; i++) {
+      if(rd_images[i].nodeName === 'IMG' && !rd_images[i].complete) {
+        loaded = false
+        await this.sleep(500)
+        return this.checkImagesLoaded()
+      }
+    }
+
+    return loaded
   }
 
   render() {
@@ -101,50 +128,59 @@ const EducatorResourceCenter = class extends Component {
                         md={6}
                         lg={4}
                         className="rrc-card-col"
+                        key={`resource-${index}`}
                       >
-                        <Card 
-                          id={`resource-${index}`}
-                          data-filter={JSON.stringify(data_filter)} 
-                          data-type={edge.node.frontmatter.type}
-                          className="h-100"
+                        <ReactPlaceholder
+                          type='rect'
+                          ready={this.state.imagesLoaded}
+                          color='#E0E0E0'
+                          showLoadingAnimation={true}
+                          style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                         >
-                          <Card.Img
-                            variant="top"
-                            src={edge.node.frontmatter.image}
-                            alt={edge.node.frontmatter.alt}
-                          />
-                          <Card.Body>
-                            <Card.Title
+                          <Card 
+                            id={`resource-${index}`}
+                            data-filter={JSON.stringify(data_filter)} 
+                            data-type={edge.node.frontmatter.type}
+                            className="h-100"
+                          >
+                            <Card.Img
+                              variant="top"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                            />
+                            <Card.Body>
+                              <Card.Title
+                                style={{
+                                  marginBottom: '1.5rem'
+                                }}
+                              >
+                                {edge.node.frontmatter.title}
+                              </Card.Title>
+                              <Card.Text>
+                                {edge.node.excerpt}
+                              </Card.Text>
+                            </Card.Body>
+                            <Card.Footer
                               style={{
-                                marginBottom: '1.5rem'
+                                background: 'white',
+                                borderTop: 'none',
+                                marginBottom: '.5rem'
                               }}
                             >
-                              {edge.node.frontmatter.title}
-                            </Card.Title>
-                            <Card.Text>
-                              {edge.node.excerpt}
-                            </Card.Text>
-                          </Card.Body>
-                          <Card.Footer
-                            style={{
-                              background: 'white',
-                              borderTop: 'none',
-                              marginBottom: '.5rem'
-                            }}
-                          >
-                            <div className="d-flex">
-                              <div className="ml-auto align-self-end">
-                                <Link
-                                  to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
-                                >
-                                  <Button variant="outline-secondary">
-                                    Read More
-                                  </Button>
-                                </Link>
+                              <div className="d-flex">
+                                <div className="ml-auto align-self-end">
+                                  <Link
+                                    to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                  >
+                                    <Button variant="outline-secondary">
+                                      Read More
+                                    </Button>
+                                  </Link>
+                                </div>
                               </div>
-                            </div>
-                          </Card.Footer>
-                        </Card>
+                            </Card.Footer>
+                          </Card>
+                        </ReactPlaceholder>
                       </Col>
                     )
                   })
