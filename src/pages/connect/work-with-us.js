@@ -4,7 +4,7 @@ import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
 import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
+// import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -12,88 +12,18 @@ import Row from 'react-bootstrap/Row'
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SpecificContactForm from '../../components/atoms/specific-contact-form/specific-contact-form-button'
+import Accordion from '../../components/atoms/accordion/accordion'
 
 import './work-with-us.scss'
 
 
 const WorkWithUsPage = class extends Component {
-  // constructor(props) {
-  //   super(props)
-
-  //   this.state = {
-  //     accordionPanels: {
-  //       collapseOne: {
-  //         expanded: true
-  //       },
-  //       collapseTwo: {
-  //         expanded: false
-  //       },
-  //       collapseThree: {
-  //         expanded: false
-  //       },
-  //       collapseFour: {
-  //         expanded: false
-  //       }
-  //     }
-  //   }
-
-  //   // this.handleChangeExpandedState = this.handleChangeExpandedState.bind(this)
-  // }
-
-  // handleChangeExpandedState = (event) => {
-  //   const key = event.target.id
-  //   this.setState(prevState => ({
-  //     accordionPanels: {
-  //       ...prevState.accordionPanels,
-  //       [key]: {
-  //         expanded: !prevState.accordionPanels[key].expanded
-  //       },
-  //     },
-  //   }), 
-  //   function () {
-  //     console.log(key)
-  //     console.log(this.state.accordionPanels[key].expanded)
-  //     console.log(this.state.accordionPanels)
-  //   })
-  // }
-
-  state = {
-    collapseID: ""
-  }
-
-  toggleCollapse = (collapseID) => {
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-    }))
-  }
-
   componentDidMount() {
     if(this.props.location.hash) {
       this.setState({filter_hash: this.props.location.hash})
     }
-
-    let collapseHeight= []
-    panels.map((panel, index) => {
-      return window.setTimeout(() => {
-        collapseHeight[index] = document.getElementById(`collapse${index}`).scrollHeight
-      }, 433)
-    })
-    this.setState({
-      collapseHeight
-    })
   }
-
   render() {
-    const {
-      collapseID,
-      collapseHeight
-    } = this.state
-
-    let styles = []
-    panels.map((panel, index) => {
-      styles[index] = {maxHeight: collapseID === `collapse${index}` ? `${collapseHeight[index]}px` : '0px'}
-    })
-
     return (
       <Layout location={this.props.location}>
         <SEO title="Work With Us" />
@@ -114,67 +44,9 @@ const WorkWithUsPage = class extends Component {
           </Row>
           <Row className="d-flex flex-wrap-reverse" style={{ marginBottom: '2rem' }}>
             <Col className="p-2">
-              <div className="accordion" id="accordion">
-                { panels.map((panel, index) => {
-                  return(
-                    <div 
-                      className="card accordion-card"
-                      key={index}
-                    >
-                      <button
-                        className="btn btn-link accordion-button"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target={`#collapse${index}`}
-                        aria-expanded="true"
-                        aria-controls={`collapse${index}`}
-                        onClick={() => this.toggleCollapse(`collapse${index}`)}
-                      >
-                        <div className="d-flex">
-                          <div className="mr-auto">
-                            <h2
-                              style={{
-                                marginBottom: '0',
-                                lineHeight: '1.5'
-                              }}
-                            >
-                              { panel.heading }
-                            </h2>
-                          </div>
-                          <div className="ml-auto">
-                            <i
-                              className={
-                                collapseID === `collapse${index}`
-                                ?
-                                "fa fa-angle-down counterclockwise-180"
-                                :
-                                "fa fa-angle-down clockwise-to-zero"
-                              }
-                            />
-                          </div>
-                        </div>
-                      </button>
-                      <div
-                        id={`collapse${index}`}
-                        className={
-                          collapseID === `collapse${index}`
-                          ? 
-                          'collapse accordionCollapse show' 
-                          : 
-                          'collapse accordionCollapse'
-                        }
-                        style={ styles[index] }
-                        aria-labelledby="headingOne"
-                        data-parent="#accordion"
-                      >
-                        <div className="card-body">
-                          { panel.content }
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              <Accordion
+                panels={panels}
+              />
             </Col>
           </Row>
         </Container>
@@ -188,7 +60,6 @@ export default props => (
     {locationProps => <WorkWithUsPage {...locationProps} {...props} />}
   </Location>
 )
-
 
 const panels = [
 	{
@@ -214,7 +85,16 @@ const panels = [
             </ul>
           </li>
         </ul>
-        <p>Please contact BSCS Instructional Materials Division Director, <SpecificContactForm sendto="Lindsey Mohan">Dr. Lindsey Mohan</SpecificContactForm>, to discuss opportunities to work together.</p>
+        <p style={{ marginBottom: '2rem' }}>
+          Please contact BSCS Instructional Materials Division Director, Dr. Lindsey Mohan, to discuss opportunities to work together:
+        </p>
+        <div className="d-flex" style={{ marginBottom: '2rem' }}>
+          <div className="mr-auto">
+            <SpecificContactForm sendto="Lindsey Mohan">
+              <Button variant="outline-secondary">Contact Lindsey Mohan</Button>
+            </SpecificContactForm>
+          </div>
+        </div>
       </>
     ,
 	},
@@ -230,7 +110,7 @@ const panels = [
               <li>Work closely with teachers over the course of one school year</li>
             </ul>
           </li>
-          <li>
+          <li>Custom-design professional learning opportunities for
             <ul>
               <li>inservice teachers, preservice teachers, and education leaders;</li>
               <li>lower elementary, upper elementary, middle school, high school, and postsecondary grade levels;</li>
@@ -238,7 +118,7 @@ const panels = [
               <li>face-to-face and/or facilitated online learning settings.</li>
             </ul>
           </li>
-          <li>
+          <li>Build capacity for NGSS:
             <ul>
               <li>Support educators and leaders in navigating the standards and effectively implementing 3-D, phenomena/problem-driven teaching and learning</li>
               <li>Prepare educators and leaders to evaluate, select, and implement instructional materials designed for next generation science</li>
@@ -246,7 +126,14 @@ const panels = [
           </li>
         </ul>
         <p>Interested in <Link to="/upcoming-programs/teacher-professional-learning">teacher professional learning</Link> or <Link to="/upcoming-programs/leadership-development">leadership development</Link>? Register now for upcoming programs or check out our <Link to="/educator-resource-center">Educator Resource Center</Link>.</p>
-        <p>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, <SpecificContactForm sendto="Jody Bintz">Jody Bintz</SpecificContactForm>, to discuss opportunities to work together.</p>
+        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, Jody Bintz, to discuss opportunities to work together:</p>
+        <div className="d-flex" style={{ marginBottom: '2rem' }}>
+          <div className="mr-auto">
+            <SpecificContactForm sendto="Jody Bintz">
+              <Button variant="outline-secondary">Contact Jody Bintz</Button>
+            </SpecificContactForm>
+          </div>
+        </div>
       </>
     ,
 	},	
@@ -256,8 +143,8 @@ const panels = [
       <>
         <h3>Our Capabilities</h3>
         <ul>
-          <li>
-            <ul>Rigorous intervention research
+          <li>Rigorous intervention research
+            <ul>
               <li>Randomized controlled trials at the district, school, and classroom levels</li>
               <li>Quasi-experiments at district, school, and classroom levels</li>
               <li>All science disciplines</li>
@@ -265,33 +152,45 @@ const panels = [
               <li>Multiple outcome domains: content knowledge for teachers and students, three-dimensional assessments, teacher classroom practice, and pedagogical content knowledge</li>
             </ul>
           </li>
-          <li>
-            <ul>Synthesis and quantitative meta-analysis
+          <li>Synthesis and quantitative meta-analysis
+            <ul>
               <li>Small- or large-scale reviews</li>
               <li>Traditional quantitative methods</li>
               <li>Meta-regression, including robust variance estimation</li>
               <li>Creation of online applications to share findings with a wide audience</li>
             </ul>
           </li>
-          <li>
-            <ul>Design-based research and field trials
+          <li>Design-based research and field trials
+            <ul>
               <li>Rapid design/test/revise iterations</li>
               <li>Data collection from multiple stakeholders to inform development and revision efforts</li>
             </ul>
           </li>
-          <li>
-            <ul>External evaluations
+          <li>External evaluations
+            <ul>
               <li>Comprehensive process evaluations</li>
               <li>Complete reports to funding agencies</li>
             </ul>
           </li>
         </ul>
-        <p>Please contact BSCS Research Division Directors, <SpecificContactForm sendto="Susan Kowalski">Dr. Susan Kowalski</SpecificContactForm> and <SpecificContactForm sendto="Chris Wilson">Dr. Chris Wilson</SpecificContactForm>, to discuss opportunities to work together.</p>
+        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Dr. Susan Kowalski and Dr. Chris Wilson, to discuss opportunities to work together:</p>
+        <div className="d-flex" style={{ marginBottom: '2rem' }}>
+          <div className="mr-4">
+            <SpecificContactForm sendto="Susan Kowalski">
+              <Button variant="outline-secondary">Contact Susan Kowalski</Button>
+            </SpecificContactForm>
+          </div>
+          <div className="mr-auto">
+            <SpecificContactForm sendto="Chris Wilson">
+              <Button variant="outline-secondary">Contact Chris Wilson</Button>
+            </SpecificContactForm>
+          </div>
+        </div>
       </>
     ,
 	},
-	{
-		heading: `Our Partners &amp; Collaborators`,
-		content: <></>,
-	}
+	// {
+	// 	heading: `Our Partners & Collaborators`,
+	// 	content: <></>,
+	// }
 ]
