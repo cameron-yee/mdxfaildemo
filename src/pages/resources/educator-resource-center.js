@@ -51,11 +51,13 @@ const EducatorResourceCenter = class extends Component {
   }
 
   loaded = () => {
+    let current_loaded = this.images_loaded + 1
     this.images_loaded = this.images_loaded + 1
     const cards = document.getElementsByClassName('erc-card')
     console.log(this.images_loaded)
+    console.log(current_loaded)
     console.log(cards.length)
-    if(this.images_loaded === cards.length) {
+    if(current_loaded === cards.length) {
       for(let i = 0; i < cards.length; i++) {
         cards[i].style.display = ''
       }
