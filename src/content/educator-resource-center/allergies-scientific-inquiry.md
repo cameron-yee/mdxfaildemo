@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
 template: Image Right
-image: /assets/red-panda.jpg
+image: /assets/UGE.jpg
 alt: PLACEHOLDER
 courseId: 0
 price: null

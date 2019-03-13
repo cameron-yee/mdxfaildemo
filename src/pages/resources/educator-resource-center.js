@@ -38,18 +38,32 @@ const EducatorResourceCenter = class extends Component {
     this.state = {
       filterHash: undefined,
       activeFilters: [],
-      imagesLoaded: false
+      imagesLoaded: false,
+      initialRender: false
     }
   }
 
   componentDidMount() {
     if(this.props.location.hash) {
-      this.setState({filterHash: this.props.location.hash})
+      this.setState({filterHash: this.props.location.hash, initialRender: true})
+    } else {
+      this.setState({initialRender: true})
     }
+  }
 
-    const loaded = this.checkImagesLoaded() 
-    console.log(loaded)
-    loaded ? this.setState({imagesLoaded: true}) : this.setState({imagesLoaded: false})
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.initialRender !== this.state.initialRender) {
+      const loaded = this.checkImagesLoaded() 
+      if(loaded) {
+        const cards = document.getElementsByClassName('erc-card')
+        for(let i = 0; i < cards.length; i++) {
+          cards[i].style.display = ''
+        }
+        this.setState({imagesLoaded: true})
+      } else {
+        this.setState({imagesLoaded: false})
+      }
+    }
   }
 
   sleep = (time) => {
@@ -57,7 +71,7 @@ const EducatorResourceCenter = class extends Component {
   }
 
   checkImagesLoaded = async () => {
-    const erc_card_images = document.getElementsByClassName('erc-card-image')
+    const erc_card_images = document.getElementsByClassName('erc-card-img')
     let loaded = true
 
     for(let i = 0; i < erc_card_images.length; i++) {
@@ -67,7 +81,6 @@ const EducatorResourceCenter = class extends Component {
         return this.checkImagesLoaded()
       }
     }
-
     return loaded
   }
 
@@ -130,58 +143,61 @@ const EducatorResourceCenter = class extends Component {
                         className="rrc-card-col"
                         key={`resource-${index}`}
                       >
-                        <ReactPlaceholder
-                          type='rect'
-                          ready={this.state.imagesLoaded}
-                          color='#E0E0E0'
-                          showLoadingAnimation={true}
-                          style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
+                        {!this.state.imagesLoaded &&
+                          <ReactPlaceholder
+                            type='rect'
+                            ready={this.state.imagesLoaded}
+                            color='#E0E0E0'
+                            showLoadingAnimation={true}
+                            style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
+                          ><span>Worthless Children Prop</span></ReactPlaceholder>
+                        }
+                        <Card 
+                          id={`resource-${index}`}
+                          data-filter={JSON.stringify(data_filter)} 
+                          data-type={edge.node.frontmatter.type}
+                          className="h-100 erc-card"
+                          style={{display: 'none'}}
                         >
-                          <Card 
-                            id={`resource-${index}`}
-                            data-filter={JSON.stringify(data_filter)} 
-                            data-type={edge.node.frontmatter.type}
-                            className="h-100"
-                          >
-                            <Card.Img
-                              className="erc-card-img"
-                              variant="top"
-                              src={edge.node.frontmatter.image}
-                              alt={edge.node.frontmatter.alt}
-                            />
-                            <Card.Body>
-                              <Card.Title
-                                style={{
-                                  marginBottom: '1.5rem'
-                                }}
-                              >
-                                {edge.node.frontmatter.title}
-                              </Card.Title>
-                              <Card.Text>
-                                {edge.node.excerpt}
-                              </Card.Text>
-                            </Card.Body>
-                            <Card.Footer
+                          <Card.Img
+                            className="erc-card-img"
+                            variant="top"
+                            src={edge.node.frontmatter.image}
+                            alt={edge.node.frontmatter.alt}
+                          />
+                          <Card.Body>
+                            <Card.Title
                               style={{
-                                background: 'white',
-                                borderTop: 'none',
-                                marginBottom: '.5rem'
+                                marginBottom: '1.5rem'
                               }}
                             >
-                              <div className="d-flex">
-                                <div className="ml-auto align-self-end">
-                                  <Link
-                                    to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
-                                  >
-                                    <Button variant="outline-secondary">
-                                      Read More
-                                    </Button>
-                                  </Link>
-                                </div>
+                              {edge.node.frontmatter.title}
+                            </Card.Title>
+                            <Card.Text>
+                              {edge.node.excerpt}
+                            </Card.Text>
+                          </Card.Body>
+                          <Card.Footer
+                            style={{
+                              background: 'white',
+                              borderTop: 'none',
+                              marginBottom: '.5rem'
+                            }}
+                          >
+                            <div className="d-flex">
+                              <div className="ml-auto align-self-end">
+                                <Link
+                                  to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                >
+                                  <Button variant="outline-secondary">
+                                    Read More
+                                  </Button>
+                                </Link>
                               </div>
-                            </Card.Footer>
-                          </Card>
-                        </ReactPlaceholder>
+                            </div>
+                          </Card.Footer>
+                        </Card>
+                        {/* </ReactPlaceholder> */}
                       </Col>
                     )
                   })
