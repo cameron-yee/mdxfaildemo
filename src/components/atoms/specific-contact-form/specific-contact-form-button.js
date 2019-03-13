@@ -3,7 +3,7 @@ import SpecificContactFormModal from './specific-contact-form-modal/specific-con
 
 import './specific-contact-form.scss'
 
-const SpecificContactForm = class extends Component {
+const SpecificContactFormButton = class extends Component {
   constructor(props) {
     super(props)
 
@@ -28,4 +28,4 @@ const SpecificContactForm = class extends Component {
   }
 }
 
-export default SpecificContactForm
+export default SpecificContactFormButton

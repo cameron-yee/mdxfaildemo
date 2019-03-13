@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Location } from '@reach/router'
 
 import Button from 'react-bootstrap/Button'

@@ -4,13 +4,14 @@ import PropTypes from 'prop-types'
 
 import Category from './category'
 import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row';
 
 const ResourceCategories = class extends Component {
   constructor(props) {
     super(props);
     this.state = {
       categories: {
-        category01: { title: `Classroom`, path: `/resources/educator-resource-center#classroom`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid classroom` },
+        category01: { title: `Classroom Instruction`, path: `/resources/educator-resource-center#classroom-instruction`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid classroom` },
         category02: { title: `Professional Learning`, path: `/resources/educator-resource-center#professional-learning`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid professional-learning` },
         category03: { title: `District Planning`, path: `/resources/educator-resource-center#district-planning`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid district-planning` },
         category04: { title: `Citizen Science`, path: `/resources/educator-resource-center#citizen-science`, description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, alt: `Placeholder Image.`, boxImageClass: `box aspect-ratio-box mid citizen-science` }
@@ -48,9 +49,6 @@ const ResourceCategories = class extends Component {
         console.log(true)
         document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start"});
       }
-      //   console.log(false)
-      //   document.body.scrollTop = document.documentElement.scrollTop = 0
-      // }
 
     } catch(e) {
       console.log(e);
@@ -58,28 +56,30 @@ const ResourceCategories = class extends Component {
     
     let courses = document.getElementsByClassName('card');
     for(let i = 0; i < courses.length; i++) {
-      // if(courses[i].getAttributeNames().includes('data-type')) {
-        if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
-          courses[i].style.display = 'none';
-          courses[i].parentElement.style.display = 'none';
-        } else {
-          courses[i].style.display = '';
-          courses[i].parentElement.style.display = '';
-        }
-      // }
+      if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
+        courses[i].style.display = 'none';
+        courses[i].parentElement.style.display = 'none';
+      } else {
+        courses[i].style.display = '';
+        courses[i].parentElement.style.display = '';
+      }
     }
 
   }
 
   render() {
     return (
-      Object.keys(this.state.categories).map((category, index) => {
-        return (
-          <Col md={3} key={index}>
-            <Category category={this.state.categories[category]} runCategoryFilter={(e, title) => this.categoryFilter(e, title)}/>
-          </Col>
-        )
-      })
+      <Row>
+        {
+          Object.keys(this.state.categories).map((category, index) => {
+            return (
+              <Col md={3} key={index}>
+                <Category category={this.state.categories[category]} runCategoryFilter={(e, title) => this.categoryFilter(e, title)}/>
+              </Col>
+            )
+          })
+        }
+      </Row>
     )
   }
 }

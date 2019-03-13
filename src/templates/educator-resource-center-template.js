@@ -32,12 +32,12 @@ const EducatorResourceCenterTemplate = class extends Component {
                   <Col md={7} className="erc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>
-                  <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
+                  <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
                 </Row>
               }
               {this.resource.template === 'Image Left' &&
                 <Row>
-                  <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
+                  <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
                   <Col md={7} className="erc-jumbotron-title">
                     <h1>{this.resource.title}</h1>
                   </Col>

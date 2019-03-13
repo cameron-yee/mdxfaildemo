@@ -1,7 +1,7 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: 'Second Test'
-type: Classroom
+type: Classroom Instruction
 template: Image Left
 image: /assets/mountain.jpg
 alt: PLACEHOLDER

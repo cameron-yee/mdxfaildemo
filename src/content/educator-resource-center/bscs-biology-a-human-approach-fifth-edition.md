@@ -5,7 +5,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-biology-human-approach
 seoDescription: Test SEO description.
 seoLang: en-us
-type: Classroom
+type: Classroom Instruction
 template: Image Left
 image: /assets/scifi.jpg
 alt: PLACEHOLDER

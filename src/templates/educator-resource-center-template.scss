@@ -30,15 +30,16 @@
   justify-content: center;
 }
 
-.jumbotron-image {
+.erc-jumbotron-image {
  background-position: center;
  background-repeat: no-repeat;
+ background-size: cover;
  height: 20rem;
  min-height: 200px;
  overflow: hidden;
 }
 
-.image {
+.erc-image {
   border-radius: 4px;
   margin-top: 15px;
 }

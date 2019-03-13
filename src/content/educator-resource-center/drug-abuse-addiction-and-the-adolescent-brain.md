@@ -4,7 +4,7 @@ title: 'Drug Abuse, Addiction, and the Adolescent Brain '
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/resources/educator-resource-center/drug-abuse'
 seoDescription: Test SEO description.
 seoLang: en-us
-type: Classroom
+type: Classroom Instruction
 template: Image Right
 image: /assets/shark.jpg
 alt: PLACEHOLDER

@@ -9,8 +9,6 @@ import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
 
-import './general-contact-form-modal.scss'
-
 const GeneralContactFormModal = class extends Component {
   constructor(props) {
     super(props)
@@ -272,7 +270,10 @@ const GeneralContactFormModal = class extends Component {
           <Button variant="outline-primary" onClick={this.postGeneralForm}>Contact Us</Button>
         }
         { this.state.loading &&
-          <Button variant="outline-secondary" className="is-loading" />
+          <Button variant="outline-success" disabled>
+            <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Sending...
+          </Button>
         }
         { !this.state.loading && this.state.sent &&
           <Button variant="outline-success" disabled>Message Sent</Button>

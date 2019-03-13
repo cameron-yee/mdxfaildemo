@@ -5,7 +5,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/biology-teacher-handbook
 seoDescription: Test SEO description.
 seoLang: en-us
-type: Classroom
+type: Classroom Instruction
 template: Image Left
 image: /assets/mountain.jpg
 alt: PLACEHOLDER

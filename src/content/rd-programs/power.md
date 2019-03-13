@@ -4,12 +4,10 @@ title: POWER
 areas:
   - Instructional Materials Development
   - Teacher Professional Learning
-  - Leadership Development
-  - Research
-image: /assets/owl.jpg
+image: /assets/elephant.jpg
 alt: PLACEHOLDER
 page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/rd-1
+seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/power
 seoDescription: Test SEO description.
 seoLang: en-us
 sidebarText: Results from this meta-analysis are now published in AERA Open Journal. 
@@ -24,10 +22,21 @@ The online tool, POWER calculator, uses data from the studies BSCS reviewed to e
 
 When planning a study, researchers can use the POWER calculator to determine how many subjects will be required to obtain a statistically significant result, giving researchers and funders increased confidence that they will obtain such a result without spending money and time unnecessarily on participants that are not needed. Once a study is completed, the tool enables users to interpret the size of their study’s effect in the context of similar studies.
 
-<a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator</a>
+<div class="d-flex justify-content-center">
+  <div class="p-2">
+    <a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator</a>
+  </div>
+</div>
 
 BSCS is continuing its research with a meta-analysis of 161 science education studies of teacher outcomes. New findings and a teacher-specific calculator will be made available soon. 
 
-<em>This material is based upon work supported by the National Science Foundation under Grant Nos. 1118555 and 1544236. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em>
+<div class="d-flex justify-content-center">
+  <div class="p-2">
+    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    </a>
+  </div>
+  <p class="p-2" style="margin: 0;"><em>This material is based upon work supported by the National Science Foundation under Grant Nos. 1118555 and 1544236. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
+</div>
 
 The PI for Award #1118555 is Sue Kowalski, BSCS Science Learning. The PI for Award #1544236 is Jessica Spybrook, Western Michigan University.
