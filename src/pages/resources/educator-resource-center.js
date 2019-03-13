@@ -38,50 +38,29 @@ const EducatorResourceCenter = class extends Component {
     this.state = {
       filterHash: undefined,
       activeFilters: [],
-      imagesLoaded: false,
-      initialRender: false
+      imagesLoaded: false
     }
+    this.images_loaded = 0
   }
 
   componentDidMount() {
+    console.log(this.state)
     if(this.props.location.hash) {
-      this.setState({filterHash: this.props.location.hash, initialRender: true})
-    } else {
-      this.setState({initialRender: true})
+      this.setState({filterHash: this.props.location.hash})
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if(prevState.initialRender !== this.state.initialRender) {
-      const loaded = this.checkImagesLoaded() 
-      if(loaded) {
-        const cards = document.getElementsByClassName('erc-card')
-        for(let i = 0; i < cards.length; i++) {
-          cards[i].style.display = ''
-        }
-        this.setState({imagesLoaded: true})
-      } else {
-        this.setState({imagesLoaded: false})
+  loaded = () => {
+    this.images_loaded = this.images_loaded + 1
+    const cards = document.getElementsByClassName('erc-card')
+    console.log(this.images_loaded)
+    console.log(cards.length)
+    if(this.images_loaded === cards.length) {
+      for(let i = 0; i < cards.length; i++) {
+        cards[i].style.display = ''
       }
+      this.setState({imagesLoaded: true})
     }
-  }
-
-  sleep = (time) => {
-    return new Promise(resolve => {setTimeout(() => { resolve() }, time)}) 
-  }
-
-  checkImagesLoaded = async () => {
-    const erc_card_images = document.getElementsByClassName('erc-card-img')
-    let loaded = true
-
-    for(let i = 0; i < erc_card_images.length; i++) {
-      if(erc_card_images[i].nodeName === 'IMG' && !erc_card_images[i].complete) {
-        loaded = false
-        await this.sleep(500)
-        return this.checkImagesLoaded()
-      }
-    }
-    return loaded
   }
 
   render() {
@@ -150,6 +129,7 @@ const EducatorResourceCenter = class extends Component {
                             color='#E0E0E0'
                             showLoadingAnimation={true}
                             style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
+                            // style={{width: '100%', height: '100%', borderRadius: '4px'}}
                           ><span>Worthless Children Prop</span></ReactPlaceholder>
                         }
                         <Card 
@@ -164,6 +144,7 @@ const EducatorResourceCenter = class extends Component {
                             variant="top"
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
+                            onLoad={this.loaded}
                           />
                           <Card.Body>
                             <Card.Title

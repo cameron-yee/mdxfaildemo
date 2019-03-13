@@ -30,39 +30,30 @@ const RDPrograms = class extends Component {
     this.programs = props.data.allMarkdownRemark.edges
     this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
     this.state = {
-      filter_hash: undefined,
+      // filter_hash: undefined,
       activeFilters: [],
       imagesLoaded: false
     }
+    this.images_loaded = 0
   }
 
-  componentDidMount() {
-    if(this.props.location.hash) {
-      this.setState({filter_hash: this.props.location.hash})
-    }
-
-    const loaded = this.checkImagesLoaded() 
-    console.log(loaded)
-    loaded ? this.setState({imagesLoaded: true}) : this.setState({imagesLoaded: false})
-  }
-
-  sleep = (time) => {
-    return new Promise(resolve => {setTimeout(() => { resolve() }, time)}) 
-  }
-
-  checkImagesLoaded = async () => {
+  // componentDidMount() {
+  //   if(this.props.location.hash) {
+  //     this.setState({filter_hash: this.props.location.hash})
+  //   }
+  // }
+    
+  loaded = () => {
+    this.images_loaded = this.images_loaded + 1
     const rd_images = document.getElementsByClassName('rd-image')
-    let loaded = true
-
-    for(let i = 0; i < rd_images.length; i++) {
-      if(rd_images[i].nodeName === 'IMG' && !rd_images[i].complete) {
-        loaded = false
-        await this.sleep(500)
-        return this.checkImagesLoaded()
+    console.log(this.images_loaded)
+    console.log(rd_images.length)
+    if(this.images_loaded === rd_images.length) {
+      for(let i = 0; i < rd_images.length; i++) {
+        rd_images[i].style.display = ''
       }
+      this.setState({imagesLoaded: true})
     }
-
-    return loaded
   }
 
   render() {
@@ -115,23 +106,26 @@ const RDPrograms = class extends Component {
                         <hr />
                         <Row style={{ marginBottom: '1rem' }}>
                           <Col sm={3} lg={2} className="d-none d-md-block">
-                            <ReactPlaceholder
-                              type='rect'
-                              ready={this.state.imagesLoaded}
-                              color='#E0E0E0'
-                              showLoadingAnimation={true}
-                              style={{width: '160px', height: '160px', borderRadius: '4px'}}
-                            >
-                              <img
-                                className="img-fluid rd-image"
-                                src={edge.node.frontmatter.image}
-                                alt={edge.node.frontmatter.alt}
-                                style={{
-                                  // marginBottom: '1rem',
-                                  borderRadius: '4px'
-                                }}
-                              />
-                            </ReactPlaceholder>
+                            {!this.state.imagesLoaded &&
+                              <ReactPlaceholder
+                                type='rect'
+                                ready={this.state.imagesLoaded}
+                                color='#E0E0E0'
+                                showLoadingAnimation={true}
+                                style={{width: '160px', height: '160px', borderRadius: '4px'}}
+                              >WORTHLESS CHILDREN</ReactPlaceholder>
+                            }
+                            <img
+                              className="img-fluid rd-image"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                              onLoad={this.loaded}
+                              style={{
+                                // marginBottom: '1rem',
+                                display: 'none',
+                                borderRadius: '4px'
+                              }}
+                            />
                           </Col>
                           <Col>
                             <h3>{edge.node.frontmatter.title}</h3>
