@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
 template: Image Right
-image: /assets/UGE.jpg
+image: https://media.bscs.org/bscsmw/UGE.jpg
 alt: PLACEHOLDER
 courseId: 0
 price: null
