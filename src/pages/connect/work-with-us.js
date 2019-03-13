@@ -77,18 +77,11 @@ const WorkWithUsPage = class extends Component {
     }
 
     window.setTimeout(() => {
-      const el1 = document.getElementById("collapseOne")
-      const collapseOneHeight = el1.scrollHeight
-      
-      const el2 = document.getElementById("collapseTwo")
-      const collapseTwoHeight = el2.scrollHeight
-      
-      const el3 = document.getElementById("collapseThree")
-      const collapseThreeHeight = el3.scrollHeight
+      const collapseOneHeight = document.getElementById("collapseOne").scrollHeight
+      const collapseTwoHeight = document.getElementById("collapseTwo").scrollHeight
+      const collapseThreeHeight = document.getElementById("collapseThree").scrollHeight
+      const collapseFourHeight = document.getElementById("collapseFour").scrollHeight
 
-      const el4 = document.getElementById("collapseFour")
-      const collapseFourHeight = el4.scrollHeight
-      
       // console.log(collapseOneHeight)
       // console.log(collapseTwoHeight)
       // console.log(collapseThreeHeight)
