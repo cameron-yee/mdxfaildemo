@@ -28,4 +28,4 @@ ViSTA is valuable in both university preservice methods courses and inservice pr
   </div>
   <p class="p-2" style="margin: 0;">
 
-_This material is based upon work supported by the National Science Foundation under_ _Grant No._ [_DRL-0957996_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=0957996)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
+_This material is based upon work supported by the National Science Foundation under_ _Grant No._ _DRL-0957996. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
