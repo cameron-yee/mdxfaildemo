@@ -4,7 +4,6 @@ import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
 import Button from 'react-bootstrap/Button'
-// import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -136,7 +135,7 @@ const panels = [
         </div>
       </>
     ,
-	},	
+	},
 	{
 		heading: `Research Division`,
 		content:
