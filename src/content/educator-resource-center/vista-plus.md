@@ -26,4 +26,12 @@ Access Resource Here (make this a button)
 
 \*A ViSTA Plus research study showed successful science learning outcomes for new teachers and ultimately their students during the student teaching year.  
 
+<div class="d-flex justify-content-center">
+  <div class="p-2">
+    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    </a>
+  </div>
+  <p class="p-2" style="margin: 0;">
+
 _This material is based upon work supported by the National Science Foundation under Grant No._ [_DRL-1220635_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1220635)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
