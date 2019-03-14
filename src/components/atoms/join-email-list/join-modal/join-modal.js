@@ -30,7 +30,7 @@ const JoinModal= class extends Component {
     }
     
     this.cancelToken = axios.CancelToken.source()
-    this.getContactId = BlueBirdPromise
+    this.getContactId = undefined
 
     this.token = process.env.CONSTANT_CONTACT_TOKEN //import from .env (define in Netlify dashboard) }
     this.api_key = process.env.CONSTANT_CONTACT_API_KEY
@@ -39,7 +39,9 @@ const JoinModal= class extends Component {
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
-      this.getContactId.cancel()
+      if(this.getContactId) {
+        this.getContactId.cancel()
+      }
     } catch(error) {
       console.log(error);
     }
