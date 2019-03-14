@@ -44,16 +44,18 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   const cards = document.getElementsByClassName('erc-card')
-    //   for(let i = 0; i < cards.length; i++) {
-    //     cards[i].style.display = ''
-    //   }
-    //   if(this.state.imagesLoaded !== true) {
-    //     this.setState({imagesLoaded: true})
-    //   }
-    // },
-    // 3000)
+    setTimeout(() => {
+      const cards = document.getElementsByClassName('erc-card')
+      const placeholders = document.getElementsByClassName('show-loading-animation')
+      for(let i = 0; i < cards.length; i++) {
+        cards[i].style.display = ''
+        placeholders[i].style.display = 'none'
+      }
+      if(this.state.imagesLoaded !== true) {
+        this.setState({imagesLoaded: true})
+      }
+    },
+    3000)
 
     const cards = document.getElementsByClassName('erc-card-img') 
     console.log(cards)
@@ -69,18 +71,6 @@ const EducatorResourceCenter = class extends Component {
     }
   }
 
-  // componentDidUpdate() {
-  //   const cards = document.getElementsByClassName('erc-card-img') 
-  //   console.log(cards)
-  //   for(let i = 0; i < cards.length; i++) {
-  //     if(cards[i].complete && this.images_loaded !== cards.length) {
-  //       console.log('hit')
-  //       this.loaded()
-  //     }
-  //   }
-  // }
-
-  //Not working in production?? If this is called at the same time, is it calculating the wrong number?
   loaded = () => {
     const cards = document.getElementsByClassName('erc-card')
     const placeholders = document.getElementsByClassName('show-loading-animation')
@@ -164,8 +154,7 @@ const EducatorResourceCenter = class extends Component {
                         {!this.state.imagesLoaded &&
                           <ReactPlaceholder
                             type='rect'
-                            // ready={this.state.imagesLoaded}
-                            ready={false}
+                            ready={this.state.imagesLoaded}
                             color='#E0E0E0'
                             showLoadingAnimation={true}
                             style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
