@@ -54,7 +54,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
             },
             "url": "https://www.bscs.org/",
             "logo": "https://www.bscs.org/static/img/bscs_logo.svg",
-            "description": "",
+            "description": "BSCS Science Learning is an independent nonprofit dedicated to transforming science education across the US through research-driven innovation.",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1 (719) 531-5550",
