@@ -57,24 +57,6 @@ const Accordion = class extends Component {
     }))
   }
 
-  // componentDidMount() {
-  //   let collapseHeight= []
-  //   this.props.panels.map((panel, index) => {
-  //     this.interval = setInterval(() => {
-  //       return collapseHeight[index] = document.getElementById(`collapse${index}`).scrollHeight
-  //     }, 500)
-  //     return this.interval
-  //   })
-  //   this.setState({
-  //     collapseHeight
-  //   })
-  // }
-
-  // componentWillUnmount() {
-  //   alert(this.interval)
-  //   clearInterval(this.interval)
-  // }
-
   componentDidMount() {
     let collapseHeight= []
 
