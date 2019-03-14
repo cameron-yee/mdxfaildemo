@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `BSCS Science Learning`,
-    description: ``,
+    title: `BSCS Science Learning – a 501(c)(3) organization`,
+    description: `BSCS Science Learning is an independent nonprofit dedicated to transforming science education across the US through research-driven innovation.`,
     author: `J. S. Nickerson`,
   },
   plugins: [
