@@ -16,7 +16,7 @@ const Category = class extends Component {
         to={this.props.category.path}
         onClick={(e) => this.setCategoryFilter(e, this.props.category.title.toLowerCase())}
       >
-        <img classroom="p-2" src="/assets/sample-erc-icon.svg" alt="face and gear" />
+        <img src="/assets/sample-erc-icon.svg" alt={this.props.category.alt} />
         <p className="p-2" style={{textAlign: 'center', fontSize: '1.5rem'}}>{this.props.category.title.split(" ")[0]}<br />{this.props.category.title.split(" ")[1]}</p>
       </Link>
     )

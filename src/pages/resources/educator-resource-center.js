@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { graphql, Link } from 'gatsby';
+import React, { Component } from 'react'
+import { graphql, Link } from 'gatsby'
 import SEO from '../../components/seo'
 import { Location } from '@reach/router'
 
@@ -8,7 +8,7 @@ import Layout from '../../components/layout/layout'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
@@ -17,8 +17,8 @@ import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dro
 import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
-import './educator-resource-center.scss';
-import '../../global-scss/index.scss';
+import './educator-resource-center.scss'
+import '../../global-scss/index.scss'
 
 import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
