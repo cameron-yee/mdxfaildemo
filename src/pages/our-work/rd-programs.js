@@ -37,11 +37,25 @@ const RDPrograms = class extends Component {
     this.images_loaded = 0
   }
 
-  // componentDidMount() {
+  componentDidMount() {
+    const images = document.getElementsByClassName('rd-image') 
+    console.log(images)
+    // for(let i = 0; i < images.length)
+    // setTimeout(() => {
+    //   const rd_images = document.getElementsByClassName('rd-image')
+    //   for(let i = 0; i < rd_images.length; i++) {
+    //     rd_images[i].style.display = ''
+    //   }
+    //   if(this.state.imagesLoaded !== true) {
+    //     this.setState({imagesLoaded: true})
+    //   }
+    // },
+    // 3000)
+
   //   if(this.props.location.hash) {
   //     this.setState({filter_hash: this.props.location.hash})
   //   }
-  // }
+  }
     
   loaded = () => {
     this.images_loaded = this.images_loaded + 1
