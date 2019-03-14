@@ -55,6 +55,15 @@ const EducatorResourceCenter = class extends Component {
     // },
     // 3000)
 
+    const cards = document.getElementsByClassName('erc-card-img') 
+    console.log(cards)
+    for(let i = 0; i < cards.length; i++) {
+      if(cards[i].complete && this.images_loaded !== cards.length) {
+        console.log('hit')
+        this.loaded()
+      }
+    }
+
     if(this.props.location.hash) {
       this.setState({filterHash: this.props.location.hash})
     }
@@ -64,7 +73,7 @@ const EducatorResourceCenter = class extends Component {
     const cards = document.getElementsByClassName('erc-card-img') 
     console.log(cards)
     for(let i = 0; i < cards.length; i++) {
-      if(cards[i].complete) {
+      if(cards[i].complete && this.images_loaded !== cards.length) {
         console.log('hit')
         this.loaded()
       }
@@ -76,7 +85,10 @@ const EducatorResourceCenter = class extends Component {
     const cards = document.getElementsByClassName('erc-card')
     if(this.images_loaded < cards.length) {
       this.images_loaded = this.images_loaded + 1
+    } else {
+      break
     }
+
     console.log(this.images_loaded)
     console.log(cards.length)
     if(this.images_loaded === cards.length && this.state.imagesLoaded !== true) {
