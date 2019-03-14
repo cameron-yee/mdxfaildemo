@@ -27,6 +27,6 @@ As a curriculum and software developer, Dr. Edelson is the author of Investigati
 
 As a researcher and advocate, Dr. Edelson has written extensively on geoscience, geography, and environmental science education, motivation, instructional design, educational technology and teacher professional development. He is an author or co-author on more than 50 papers in academic journals, books and conference proceedings, including The Cambridge Handbook of the Learning Sciences, The International Handbook on Science Education, the Journal of the Learning Sciences, and the Journal of Research on Science Teaching. In 2014, a collection of his essays was compiled into a book entitled GeoLearning: Thoughts on Geography and Education. 
 
-Dr. Edelson received his Ph.D. in Computer Science from Northwestern University and his B.S. in Engineering Sciences from Yale University. In 2013, he received the President’s Award from the National Council for Geographic Education. 
+<p style="margin-bottom: 2rem;">Dr. Edelson received his Ph.D. in Computer Science from Northwestern University and his B.S. in Engineering Sciences from Yale University. In 2013, he received the President’s Award from the National Council for Geographic Education.</p>
 
 <a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/daniel_edelson_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Daniel Edelson's vitae</a>
