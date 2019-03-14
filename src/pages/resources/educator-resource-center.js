@@ -61,7 +61,7 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidUpdate() {
-    const cards = document.getElementsByClassName('erc-card-image') 
+    const cards = document.getElementsByClassName('erc-card-img') 
     console.log(cards)
     for(let i = 0; i < cards.length; i++) {
       if(cards[i].complete) {
