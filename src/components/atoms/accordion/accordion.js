@@ -71,7 +71,6 @@ const Accordion = class extends Component {
   }
 
   componentWillUnmount() {
-    alert(this.intervalId)
     clearInterval(this.intervalId)
   }
 
