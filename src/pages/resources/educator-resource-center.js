@@ -69,16 +69,16 @@ const EducatorResourceCenter = class extends Component {
     }
   }
 
-  componentDidUpdate() {
-    const cards = document.getElementsByClassName('erc-card-img') 
-    console.log(cards)
-    for(let i = 0; i < cards.length; i++) {
-      if(cards[i].complete && this.images_loaded !== cards.length) {
-        console.log('hit')
-        this.loaded()
-      }
-    }
-  }
+  // componentDidUpdate() {
+  //   const cards = document.getElementsByClassName('erc-card-img') 
+  //   console.log(cards)
+  //   for(let i = 0; i < cards.length; i++) {
+  //     if(cards[i].complete && this.images_loaded !== cards.length) {
+  //       console.log('hit')
+  //       this.loaded()
+  //     }
+  //   }
+  // }
 
   //Not working in production?? If this is called at the same time, is it calculating the wrong number?
   loaded = () => {
