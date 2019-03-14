@@ -175,11 +175,11 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 property: `og:site_name`,
-                content: `Wolf River Diagnostic Learning Center`
+                content: `BSCS Science Learning`
               },
               {
                 property: `og:title`,
-                content: `Online Diagnostic Ultrasound Training`
+                content: ``
               },
               {
                 property: `og:description`,
@@ -187,11 +187,11 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 property: `og:image`,
-                content: `https://s3-us-west-2.amazonaws.com/wrdlc-static/static/img/61298390_l.jpg`
+                content: ``
               },
               {
                 property: `og:image:alt`,
-                content: `Fetal ultrasound on computer monitor with instructor and student defocused in background.`
+                content: ``
               },
               {
                 name: `twitter:card`,
