@@ -44,18 +44,18 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      const cards = document.getElementsByClassName('erc-card')
-      const placeholders = document.getElementsByClassName('show-loading-animation')
-      for(let i = 0; i < cards.length; i++) {
-        cards[i].style.display = ''
-        placeholders[i].style.display = 'none'
-      }
-      if(this.state.imagesLoaded !== true) {
-        this.setState({imagesLoaded: true})
-      }
-    },
-    3000)
+    // setTimeout(() => {
+    //   // const cards = document.getElementsByClassName('erc-card')
+    //   // const placeholders = document.getElementsByClassName('show-loading-animation')
+    //   // for(let i = 0; i < cards.length; i++) {
+    //     // cards[i].style.display = ''
+    //     // placeholders[i].style.display = 'none'
+    //   // }
+    //   if(this.state.imagesLoaded !== true) {
+    //     this.setState({imagesLoaded: true})
+    //   }
+    // },
+    // 3000)
 
     const cards = document.getElementsByClassName('erc-card-img') 
     console.log(cards)
@@ -73,7 +73,7 @@ const EducatorResourceCenter = class extends Component {
 
   loaded = () => {
     const cards = document.getElementsByClassName('erc-card')
-    const placeholders = document.getElementsByClassName('show-loading-animation')
+    // const placeholders = document.getElementsByClassName('show-loading-animation')
     if(this.images_loaded < cards.length) {
       this.images_loaded = this.images_loaded + 1
     } else {
@@ -85,10 +85,10 @@ const EducatorResourceCenter = class extends Component {
     if(this.images_loaded === cards.length && this.state.imagesLoaded !== true) {
       
       this.setState({imagesLoaded: true})
-      for(let i = 0; i < cards.length; i++) {
-        cards[i].style.display = ''
-        placeholders[i].style.display = 'none'
-      }
+      // for(let i = 0; i < cards.length; i++) {
+      //   cards[i].style.display = ''
+        // placeholders[i].style.display = 'none'
+      // }
     }
   }
 
@@ -151,7 +151,7 @@ const EducatorResourceCenter = class extends Component {
                         className="rrc-card-col"
                         key={`resource-${index}`}
                       >
-                        {!this.state.imagesLoaded &&
+                        {/* {!this.state.imagesLoaded &&
                           <ReactPlaceholder
                             type='rect'
                             ready={this.state.imagesLoaded}
@@ -160,21 +160,38 @@ const EducatorResourceCenter = class extends Component {
                             style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                             // style={{width: '100%', height: '100%', borderRadius: '4px'}}
                           ><span>Worthless Children Prop</span></ReactPlaceholder>
-                        }
+                        } */}
                         <Card 
                           id={`resource-${index}`}
                           data-filter={JSON.stringify(data_filter)} 
                           data-type={edge.node.frontmatter.type}
                           className="h-100 erc-card"
+                          // style={{display: 'none'}}
+                        >
+                        <Card.Img
+                          className="erc-card-img"
+                          variant="top"
+                          src={edge.node.frontmatter.image}
+                          alt={edge.node.frontmatter.alt}
+                          onLoad={this.loaded}
                           style={{display: 'none'}}
+                        />
+                        <ReactPlaceholder
+                          type='rect'
+                          ready={this.state.imagesLoaded}
+                          // color='#E0E0E0'
+                          color='rgb(41, 52, 118)'
+                          showLoadingAnimation={true}
+                          // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
+                          style={{width: '349.984px', height: '260.98px', borderRadius: '4px'}}
                         >
                           <Card.Img
                             className="erc-card-img"
                             variant="top"
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
-                            onLoad={this.loaded}
                           />
+                        </ReactPlaceholder>
                           <Card.Body>
                             <Card.Title
                               style={{
