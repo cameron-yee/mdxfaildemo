@@ -79,12 +79,10 @@ const EducatorResourceCenter = class extends Component {
     }
     console.log(this.images_loaded)
     console.log(cards.length)
-    if(this.images_loaded === cards.length) {
+    if(this.images_loaded === cards.length && this.state.imagesLoaded !== true) {
+      this.setState({imagesLoaded: true})
       for(let i = 0; i < cards.length; i++) {
         cards[i].style.display = ''
-      }
-      if(this.state.imagesLoaded !== true) {
-        this.setState({imagesLoaded: true})
       }
     }
   }
