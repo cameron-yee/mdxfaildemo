@@ -44,20 +44,42 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidMount() {
-    console.log(this.state)
+    // setTimeout(() => {
+    //   const cards = document.getElementsByClassName('erc-card')
+    //   for(let i = 0; i < cards.length; i++) {
+    //     cards[i].style.display = ''
+    //   }
+    //   if(this.state.imagesLoaded !== true) {
+    //     this.setState({imagesLoaded: true})
+    //   }
+    // },
+    // 3000)
+
     if(this.props.location.hash) {
       this.setState({filterHash: this.props.location.hash})
     }
   }
 
+  componentDidUpdate() {
+    const cards = document.getElementsByClassName('erc-card') 
+    console.log(cards)
+    for(let i = 0; i < cards.length; i++) {
+      if(cards[i].complete) {
+        console.log('hit')
+        this.loaded()
+      }
+    }
+  }
+
+  //Not working in production?? If this is called at the same time, is it calculating the wrong number?
   loaded = () => {
-    let current_loaded = this.images_loaded + 1
-    this.images_loaded = this.images_loaded + 1
     const cards = document.getElementsByClassName('erc-card')
+    if(this.images_loaded < cards.length) {
+      this.images_loaded = this.images_loaded + 1
+    }
     console.log(this.images_loaded)
-    console.log(current_loaded)
     console.log(cards.length)
-    if(current_loaded === cards.length) {
+    if(this.images_loaded === cards.length) {
       for(let i = 0; i < cards.length; i++) {
         cards[i].style.display = ''
       }
