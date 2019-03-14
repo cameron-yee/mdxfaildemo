@@ -27,7 +27,7 @@ const Reports = class extends Component {
               <PageTitle title="Reports" />
               <Row style={{ marginBottom: '2rem' }}>
                 <Col>
-                  <p>Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art. Tofu semiotics normcore, polaroid DIY banh mi ugh keytar microdosing plaid roof party disrupt food truck hoodie.</p>
+                  <p>BSCS Science Learning regularly releases reports with insights pertaining to instructional materials development, teacher professional learning, leadership development, and research. See below for a sample.</p>
                 </Col>
               </Row>
             </Container>
@@ -56,14 +56,14 @@ const Reports = class extends Component {
                             fontSize: '1rem'
                           }}
                         >
-                          <em>August, 2017</em>
+                          <em>January 2018</em>
                         </p>
                         <Card.Text
                           style={{
                             marginBottom: '2rem'
                           }}
                         >
-                          Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art.
+                          This report presents guidelines and strategies for designing citizen science projects with scientific and educational benefits.
                         </Card.Text>
                       </Card.Body>
                       <Card.Footer
@@ -98,7 +98,7 @@ const Reports = class extends Component {
                             marginBottom: '1.5rem'
                           }}
                         >
-                          Math/Science Teacher Leadership Synthesis Project
+                          Guidelines for Assessing Instructional Materials that Exemplify the NGSS
                         </Card.Title>
                         <p
                           style={{
@@ -108,14 +108,14 @@ const Reports = class extends Component {
                             fontSize: '1rem'
                           }}
                         >
-                          <em>August, 2017</em>
+                          <em>May 2017</em>
                         </p>
                         <Card.Text
                           style={{
                             marginBottom: '2rem'
                           }}
                         >
-                          Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art.
+                          This report includes four categories of criteria for evaluating student and teacher materials while also providing a blueprint for creating tools and processes to conduct valid assessments.
                         </Card.Text>
                       </Card.Body>
                       <Card.Footer
@@ -128,7 +128,7 @@ const Reports = class extends Component {
                         <div className="d-flex">
                           <div className="ml-auto align-self-end">
                             <Link 
-                              to={`/resources/reports/math-science-teacher-leadership-synthesis-project`}
+                              to={`/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss`}
                             >
                               <Button variant="outline-secondary">
                                 Read More
@@ -150,7 +150,7 @@ const Reports = class extends Component {
                             marginBottom: '1.5rem'
                           }}
                         >
-                          Guidelines for Assessing Instructional Materials that Exemplify the NGSS
+                          Math/Science Teacher Leadership Synthesis Project
                         </Card.Title>
                         <p
                           style={{
@@ -160,14 +160,14 @@ const Reports = class extends Component {
                             fontSize: '1rem'
                           }}
                         >
-                          <em>August, 2017</em>
+                          <em>February 2017</em>
                         </p>
                         <Card.Text
                           style={{
                             marginBottom: '2rem'
                           }}
                         >
-                          Lorem ipsum dolor amet edison bulb portland thundercats cloud bread, snackwave literally live-edge synth selvage wolf hammock street art.
+                          Three reports have resulted from a synthesis project intended to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
                         </Card.Text>
                       </Card.Body>
                       <Card.Footer
@@ -180,7 +180,7 @@ const Reports = class extends Component {
                         <div className="d-flex">
                           <div className="ml-auto align-self-end">
                             <Link 
-                              to={`/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss`}
+                              to={`/resources/reports/math-science-teacher-leadership-synthesis-project`}
                             >
                               <Button variant="outline-secondary">
                                 Read More
