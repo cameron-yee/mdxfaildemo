@@ -83,7 +83,9 @@ const EducatorResourceCenter = class extends Component {
       for(let i = 0; i < cards.length; i++) {
         cards[i].style.display = ''
       }
-      this.setState({imagesLoaded: true})
+      if(this.state.imagesLoaded !== true) {
+        this.setState({imagesLoaded: true})
+      }
     }
   }
 
