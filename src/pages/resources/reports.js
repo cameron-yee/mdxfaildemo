@@ -34,7 +34,7 @@ const Reports = class extends Component {
           </section>
           <section className="section">
               <Container>
-                <Row>
+                <Row style={{ marginBottom: '3rem' }}>
                   <Col 
                     lg={4}
                     className="rrc-card-col"
