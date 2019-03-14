@@ -62,12 +62,13 @@ export default class Footer extends Component {
       render={data => {
         return (
           <Container>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center justify-content-md-start">
               { data.allNavigationJson.edges.map((edge, index) => {
                 return (
                   <Col
                     xs={12}
-                    className="col-lg text-center text-lg-left"
+                    md={6}
+                    className="col-lg text-center text-md-left"
                     key={`menu-${index}`}
                     style={{
                       marginBottom: '2rem'
