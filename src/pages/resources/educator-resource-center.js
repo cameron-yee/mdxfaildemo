@@ -58,10 +58,8 @@ const EducatorResourceCenter = class extends Component {
     // 3000)
 
     const cards = document.getElementsByClassName('erc-card-img') 
-    console.log(cards)
     for(let i = 0; i < cards.length; i++) {
       if(cards[i].complete && this.images_loaded !== cards.length) {
-        console.log('hit')
         this.loaded()
       }
     }
@@ -73,22 +71,14 @@ const EducatorResourceCenter = class extends Component {
 
   loaded = () => {
     const cards = document.getElementsByClassName('erc-card')
-    // const placeholders = document.getElementsByClassName('show-loading-animation')
     if(this.images_loaded < cards.length) {
       this.images_loaded = this.images_loaded + 1
     } else {
       return
     }
 
-    console.log(this.images_loaded)
-    console.log(cards.length)
     if(this.images_loaded === cards.length && this.state.imagesLoaded !== true) {
-      
       this.setState({imagesLoaded: true})
-      // for(let i = 0; i < cards.length; i++) {
-      //   cards[i].style.display = ''
-        // placeholders[i].style.display = 'none'
-      // }
     }
   }
 
@@ -183,7 +173,13 @@ const EducatorResourceCenter = class extends Component {
                           color='rgb(41, 52, 118)'
                           showLoadingAnimation={true}
                           // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
-                          style={{width: '349.984px', height: '260.98px', borderRadius: '4px'}}
+                          style={{
+                            width: '349.984px',
+                            height: '260.98px',
+                            borderTopLeftRadius: '4px',
+                            borderTopRightRadius: '4px'
+
+                          }}
                         >
                           <Card.Img
                             className="erc-card-img"

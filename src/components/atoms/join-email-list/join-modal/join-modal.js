@@ -34,13 +34,12 @@ const JoinModal= class extends Component {
 
     this.token = process.env.CONSTANT_CONTACT_TOKEN //import from .env (define in Netlify dashboard) }
     this.api_key = process.env.CONSTANT_CONTACT_API_KEY
-    this.checkIfContactExists = this.checkIfContactExists.bind(this)
   }
 
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
-      // this.getContactId.cancel()
+      this.getContactId.cancel()
     } catch(error) {
       console.log(error);
     }
@@ -103,7 +102,7 @@ const JoinModal= class extends Component {
       cancelToken: this.cancelToken.token
     })
     .then(response => {
-      this.checkIfContactExists = new BlueBirdPromise((resolve, reject, onCancel) => {
+      this.getContactId = new BlueBirdPromise((resolve, reject, onCancel) => {
         //eslint-disable-next-line
         onCancel(() => {throw "Promise canceled."})
         if(!Array.isArray(response.data.data.results) || !response.data.data.results.length) {
@@ -129,13 +128,12 @@ const JoinModal= class extends Component {
         } 
       })
 
-      return this.checkIfContactExists
+      return this.getContactId
         .catch(error => {
           console.log(error)
         })
     })
     .then(contact_id => {
-      console.log(contact_id)
       if(contact_id !== 0) {
         this.addContactToEmailList(contact_id)
       } else {

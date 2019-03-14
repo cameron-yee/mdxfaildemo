@@ -38,8 +38,18 @@ const RDPrograms = class extends Component {
   }
 
   componentDidMount() {
-    const images = document.getElementsByClassName('rd-image') 
-    console.log(images)
+    const rd_images = document.getElementsByClassName('rd-image') 
+
+    for(let i = 0; i < rd_images.length; i++) {
+      if(rd_images[i].complete && this.images_loaded !== rd_images.length) {
+        this.loaded()
+      }
+    }
+
+    if(this.props.location.hash) {
+      this.setState({filterHash: this.props.location.hash})
+    }
+  }
     // for(let i = 0; i < images.length)
     // setTimeout(() => {
     //   const rd_images = document.getElementsByClassName('rd-image')
@@ -55,17 +65,17 @@ const RDPrograms = class extends Component {
   //   if(this.props.location.hash) {
   //     this.setState({filter_hash: this.props.location.hash})
   //   }
-  }
+  // }
     
   loaded = () => {
-    this.images_loaded = this.images_loaded + 1
     const rd_images = document.getElementsByClassName('rd-image')
-    console.log(this.images_loaded)
-    console.log(rd_images.length)
-    if(this.images_loaded === rd_images.length) {
-      for(let i = 0; i < rd_images.length; i++) {
-        rd_images[i].style.display = ''
-      }
+    if(this.images_loaded < rd_images.length) {
+      this.images_loaded = this.images_loaded + 1
+    } else {
+      return
+    }
+
+    if(this.images_loaded === rd_images.length && this.state.imagesLoaded !== true) {
       this.setState({imagesLoaded: true})
     }
   }
@@ -120,15 +130,24 @@ const RDPrograms = class extends Component {
                         <hr />
                         <Row style={{ marginBottom: '1rem' }}>
                           <Col sm={3} lg={2} className="d-none d-md-block">
-                            {!this.state.imagesLoaded &&
+                            {/* {!this.state.imagesLoaded && */}
                               <ReactPlaceholder
                                 type='rect'
                                 ready={this.state.imagesLoaded}
-                                color='#E0E0E0'
+                                color='rgb(41, 52, 118)'
                                 showLoadingAnimation={true}
                                 style={{width: '160px', height: '160px', borderRadius: '4px'}}
-                              >WORTHLESS CHILDREN</ReactPlaceholder>
-                            }
+                              >
+                                <img
+                                  className="img-fluid rd-image"
+                                  src={edge.node.frontmatter.image}
+                                  alt={edge.node.frontmatter.alt}
+                                  style={{
+                                    borderRadius: '4px'
+                                  }}
+                                />
+                              </ReactPlaceholder>
+                            {/* } */}
                             <img
                               className="img-fluid rd-image"
                               src={edge.node.frontmatter.image}
