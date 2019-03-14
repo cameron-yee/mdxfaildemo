@@ -83,6 +83,7 @@ const EducatorResourceCenter = class extends Component {
   //Not working in production?? If this is called at the same time, is it calculating the wrong number?
   loaded = () => {
     const cards = document.getElementsByClassName('erc-card')
+    const placeholders = document.getElementsByClassName('show-loading-animation')
     if(this.images_loaded < cards.length) {
       this.images_loaded = this.images_loaded + 1
     } else {
@@ -92,9 +93,11 @@ const EducatorResourceCenter = class extends Component {
     console.log(this.images_loaded)
     console.log(cards.length)
     if(this.images_loaded === cards.length && this.state.imagesLoaded !== true) {
+      
       this.setState({imagesLoaded: true})
       for(let i = 0; i < cards.length; i++) {
         cards[i].style.display = ''
+        placeholders[i].style.display = 'none'
       }
     }
   }
@@ -161,7 +164,8 @@ const EducatorResourceCenter = class extends Component {
                         {!this.state.imagesLoaded &&
                           <ReactPlaceholder
                             type='rect'
-                            ready={this.state.imagesLoaded}
+                            // ready={this.state.imagesLoaded}
+                            ready={false}
                             color='#E0E0E0'
                             showLoadingAnimation={true}
                             style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
