@@ -86,7 +86,7 @@ const EducatorResourceCenter = class extends Component {
     if(this.images_loaded < cards.length) {
       this.images_loaded = this.images_loaded + 1
     } else {
-      break
+      return
     }
 
     console.log(this.images_loaded)
