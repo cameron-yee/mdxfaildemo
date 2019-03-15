@@ -20,7 +20,7 @@ Join us for a Professional Development (PD) Provider Institute 2 in Colorado Spr
 
 ## 
 
-#### Why participate?
+##### Why participate?
 
 High quality science education is more crucial than ever. Teachers must prepare students to thrive within a competitive 21st century workforce, where scientific reasoning and critical thinking skills are the price of entry. PD Provider Institutes will increase your ability to effectively support teachers as they navigate their way through evolving science education standards and practices.
 
