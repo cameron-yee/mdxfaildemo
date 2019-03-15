@@ -12,6 +12,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 sidebarText: Results from this meta-analysis are now published in AERA Open Journal. 
 sidebarURL: https://journals.sagepub.com/doi/10.1177/2332858418791991 
+sortOrder: 4
 ---
 
 What works best for teachers and students in science education interventions? Statistics can provide some insight—but only if interpreted in context. For instance, the way a study is conducted may impact the outcome, independent of the actual effectiveness of the intervention. 

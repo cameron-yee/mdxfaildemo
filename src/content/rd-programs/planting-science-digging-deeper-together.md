@@ -10,6 +10,7 @@ page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/planting-science-digging-deeper-together
 seoDescription: Test SEO description.
 seoLang: en-us
+sortOrder: 7
 ---
 
 Plants are all around us. They are essential to our existence. Yet despite their ubiquity, how many science teachers truly understand plant biology and know how to effectively teach it to their students? 

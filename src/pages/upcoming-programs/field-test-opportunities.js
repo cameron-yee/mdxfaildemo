@@ -17,7 +17,11 @@ import './teacher-professional-learning.scss'
 const FieldTestOpportunitiesPage = class extends Component {
   constructor(props) {
     super(props)
-    this.programs = props.data.allMarkdownRemark.edges
+    if(props.data.allMarkdownRemark) {
+      this.programs = props.data.allMarkdownRemark.edges
+    } else {
+      this.programs = []
+    }
   }
 
   render() {
@@ -43,7 +47,7 @@ const FieldTestOpportunitiesPage = class extends Component {
             <section className="section">
               <Container>
                 <Row>
-                  {
+                  { this.programs &&
                     this.programs.map((edge, index) => {
                       // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                       // data_filter['excerpt'] = edge.node.excerpt

@@ -14,6 +14,7 @@ sidebarContacts:
   - Brian Donovan
 # sidebarButtonText: Learn More Here 
 # sidebarURL: http://datanuggets.org/
+sortOrder: 2
 ---
 
 The Issue

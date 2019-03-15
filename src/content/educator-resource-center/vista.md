@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
 template: Image Left
-image: /assets/mountain.jpg
+image: https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center

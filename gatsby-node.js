@@ -224,22 +224,24 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        }
-
-        // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
-          const nodeId = node.id
-          createPage({
-            path: `/upcoming-programs/teacher-professional-learning/${slug}/`,
-            component: markdownTemplate,
-            // In your blog post template's graphql query, you can use path
-            // as a GraphQL variable to query for data from the markdown file.
-            context: {
-              nodeId,
-            },
+        } else if (!result.data.allMarkdownRemark) {
+          reject("No data")
+        } else {
+          // Create pages for each markdown file.
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+            const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            const nodeId = node.id
+            createPage({
+              path: `/upcoming-programs/teacher-professional-learning/${slug}/`,
+              component: markdownTemplate,
+              // In your blog post template's graphql query, you can use path
+              // as a GraphQL variable to query for data from the markdown file.
+              context: {
+                nodeId,
+              },
+            })
           })
-        })
+        }
       })
     )
   })
@@ -268,22 +270,24 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        }
-
-        // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
-          const nodeId = node.id
-          createPage({
-            path: `/upcoming-programs/leadership-development/${slug}/`,
-            component: markdownTemplate,
-            // In your blog post template's graphql query, you can use path
-            // as a GraphQL variable to query for data from the markdown file.
-            context: {
-              nodeId,
-            },
+        } else if (!result.data.allMarkdownRemark) {
+          reject("No data")
+        } else {
+          // Create pages for each markdown file.
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+            const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            const nodeId = node.id
+            createPage({
+              path: `/upcoming-programs/leadership-development/${slug}/`,
+              component: markdownTemplate,
+              // In your blog post template's graphql query, you can use path
+              // as a GraphQL variable to query for data from the markdown file.
+              context: {
+                nodeId,
+              },
+            })
           })
-        })
+        }
       })
     )
   })
@@ -312,22 +316,24 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        }
-
-        // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
-          const nodeId = node.id
-          createPage({
-            path: `/upcoming-programs/field-test-opportunities/${slug}/`,
-            component: markdownTemplate,
-            // In your blog post template's graphql query, you can use path
-            // as a GraphQL variable to query for data from the markdown file.
-            context: {
-              nodeId,
-            },
+        } else if (!result.data.allMarkdownRemark) {
+          reject("No data")
+        } else {
+          // Create pages for each markdown file.
+          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+            const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            const nodeId = node.id
+            createPage({
+              path: `/upcoming-programs/field-test-opportunities/${slug}/`,
+              component: markdownTemplate,
+              // In your blog post template's graphql query, you can use path
+              // as a GraphQL variable to query for data from the markdown file.
+              context: {
+                nodeId,
+              },
+            })
           })
-        })
+        }
       })
     )
   })

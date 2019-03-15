@@ -14,6 +14,9 @@ import SEO from '../../components/seo'
 
 import './teacher-professional-learning.scss'
 
+import ReactPlaceholder from 'react-placeholder'
+import 'react-placeholder/lib/reactPlaceholder.css'
+
 // import SearchBy from '../../components/atoms/search-by/search-by'
 // import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 // import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
@@ -22,7 +25,45 @@ import './teacher-professional-learning.scss'
 const TeacherProfessionalLearningPage = class extends Component {
   constructor(props) {
     super(props)
-    this.programs = props.data.allMarkdownRemark.edges
+    if(props.data.allMarkdownRemark) {
+      this.programs = props.data.allMarkdownRemark.edges
+    } else {
+      this.programs = []
+    }
+
+    this.images_loaded = 0
+    this.state = {
+      imagesLoaded: false
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      if(this.state.imagesLoaded !== true) {
+        this.setState({imagesLoaded: true})
+      }
+    },
+    3000)
+
+    const tpl_images = document.getElementsByClassName('tpl-card-img') 
+    for(let i = 0; i < tpl_images.length; i++) {
+      if(tpl_images[i].complete && this.images_loaded !== tpl_images.length) {
+        this.loaded()
+      }
+    }
+  }
+
+  loaded = () => {
+    const tpl_images = document.getElementsByClassName('tpl-card-img')
+    if(this.images_loaded < tpl_images.length) {
+      this.images_loaded = this.images_loaded + 1
+    } else {
+      return
+    }
+
+    if(this.images_loaded === tpl_images.length && this.state.imagesLoaded !== true) {
+      this.setState({imagesLoaded: true})
+    }
   }
 
   render() {
@@ -48,7 +89,7 @@ const TeacherProfessionalLearningPage = class extends Component {
           <section className="section">
             <Container>
               <Row style={{ marginBottom: '3rem' }}>
-                {
+                { this.programs &&
                   this.programs.map((edge, index) => {
                     // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     // data_filter['excerpt'] = edge.node.excerpt
@@ -59,7 +100,37 @@ const TeacherProfessionalLearningPage = class extends Component {
                         className="tpl-card-col"
                       >
                         {/* <Card id={`resource-${index}`} className="tpl-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
-                        <Card id={`program-${index}`} className="h-100">
+                        <Card id={`program-${index}`} className="tpl-card h-100">
+                          <Card.Img
+                            className="tpl-card-img"
+                            variant="top"
+                            src={edge.node.frontmatter.image}
+                            alt={edge.node.frontmatter.alt}
+                            onLoad={this.loaded}
+                            style={{display: 'none'}}
+                          />
+                          <ReactPlaceholder
+                            type='rect'
+                            ready={this.state.imagesLoaded}
+                            // color='#E0E0E0'
+                            color='rgb(41, 52, 118)'
+                            showLoadingAnimation={true}
+                            // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
+                            style={{
+                              width: '349.984px',
+                              height: '260.98px',
+                              borderTopLeftRadius: '4px',
+                              borderTopRightRadius: '4px'
+
+                            }}
+                          >
+                            <Card.Img
+                              className="tpl-card-img"
+                              variant="top"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                            />
+                          </ReactPlaceholder>
                           <Card.Body>
                             <Card.Title
                               style={{
@@ -124,8 +195,10 @@ export const query = graphql`
         html
         excerpt(pruneLength: 200)
         frontmatter {
+          alt,
           date(formatString: "MMMM DD, YYYY"),
           additionalTags,
+          image,
           seoCanonicalUrl,
           seoDescription,
           seoLang,

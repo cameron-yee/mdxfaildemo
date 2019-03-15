@@ -12,6 +12,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 # sidebarText: Results from this meta-analysis are now published in AERA Open Journal. 
 # sidebarURL: https://journals.sagepub.com/doi/10.1177/2332858418791991 
+sortOrder: 9
 ---
 
 Current research suggests that scientific models can help teachers transform their science instruction and enhance student learning. This premise grounds the Model-Based Educational Resource (MBER)—developed by Dr. Cindy Passmore and colleagues at UC Davis—which engages high school biology students in constructing models to make sense of science. Now researchers are wondering: How effectively can this approach to biology education support next generation science learning? 

@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: District Planning
 template: Image Left
-image: /assets/cospgs.jpg
+image: https://media.bscs.org/bscsmw/educator-resource-center/teachers-in-classroom.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center

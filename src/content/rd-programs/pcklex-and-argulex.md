@@ -9,6 +9,7 @@ page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/pcklex-and-argulex
 seoDescription: Test SEO description.
 seoLang: en-us
+sortOrder: 6
 ---
 
 Constructed-response assessments, in which students use their own language to demonstrate knowledge, are widely viewed as providing greater insight into student thinking than multiple-choice assessments. In the past, constructed-response assessments were expensive and time consuming to score. But recent advances in technology and measurement research are making them a feasible option for education settings. Lexical analysis and machine-learning technologies allow researchers to use computers to score student and teacher writing. The goal is to develop computer models that score written responses with the same levels of accuracy and reliability as human expert scorers.
