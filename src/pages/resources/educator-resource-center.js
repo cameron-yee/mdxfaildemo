@@ -44,18 +44,12 @@ const EducatorResourceCenter = class extends Component {
   }
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   // const cards = document.getElementsByClassName('erc-card')
-    //   // const placeholders = document.getElementsByClassName('show-loading-animation')
-    //   // for(let i = 0; i < cards.length; i++) {
-    //     // cards[i].style.display = ''
-    //     // placeholders[i].style.display = 'none'
-    //   // }
-    //   if(this.state.imagesLoaded !== true) {
-    //     this.setState({imagesLoaded: true})
-    //   }
-    // },
-    // 3000)
+    setTimeout(() => {
+      if(this.state.imagesLoaded !== true) {
+        this.setState({imagesLoaded: true})
+      }
+    },
+    3000)
 
     const cards = document.getElementsByClassName('erc-card-img') 
     for(let i = 0; i < cards.length; i++) {
@@ -242,7 +236,12 @@ export default props => (
 
 export const educatorResourceQuery = graphql`
   query educatorResourceQuery {
-    allMarkdownRemark(filter: {frontmatter: { page: {eq: "educator-resource-center"}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: { page: {eq: "educator-resource-center"}}}
+      sort: {
+        fields: frontmatter___title,
+      }
+    ) {
       edges {
         node {
           id

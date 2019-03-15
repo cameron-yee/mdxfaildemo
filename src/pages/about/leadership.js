@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby';
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
@@ -13,7 +14,9 @@ import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 
 import './leadership.scss'
-import { Link } from 'gatsby';
+
+import ReactPlaceholder from 'react-placeholder'
+import 'react-placeholder/lib/reactPlaceholder.css'
 
 const LeadershipPage = class extends Component {
   constructor(props) {
@@ -21,9 +24,45 @@ const LeadershipPage = class extends Component {
     this.people = this.props.data.allMarkdownRemark.edges
     this.bod = this.getGroup(this.people, 'Board Member')
     this.management = this.getGroup(this.people, 'Management')
+  
+    this.images_loaded = 0
+    this.state = {
+      imagesLoaded: false
+    }
   }
 
-  //type either 'Board Member' or 'Management'
+  componentDidMount() {
+    const ld_images = document.getElementsByClassName('ld-image') 
+
+    for(let i = 0; i < ld_images.length; i++) {
+      if(ld_images[i].complete && this.images_loaded !== ld_images.length) {
+        this.loaded()
+      }
+    }
+
+    setTimeout(() => {
+      if(this.state.imagesLoaded !== true) {
+        console.log('hit')
+        this.setState({imagesLoaded: true})
+      }
+    },
+    3000)
+  }
+
+  loaded = () => {
+    const ld_images = document.getElementsByClassName('ld-image')
+    if(this.images_loaded < ld_images.length) {
+      this.images_loaded = this.images_loaded + 1
+    } else {
+      return
+    }
+
+    if(this.images_loaded === ld_images.length && this.state.imagesLoaded !== true) {
+      this.setState({imagesLoaded: true})
+    }
+  }
+
+  // type either 'Board Member' or 'Management'
   getGroup = (people, type) => {
     //This allows both BOD and Management people to have a sortOrder of 1, 2, etc.
     const type_people = people.filter(person => person.node.frontmatter.type === type) //Screw performance.  This is so clean and beautiful.
@@ -65,16 +104,22 @@ const LeadershipPage = class extends Component {
     })
 
     //Copying array so doing splice operations doesn't cause infinite loop by changing length
-    let ordered_copy = ordered.slice()
+    // let ordered_copy = ordered.slice()
+    let ordered_copy = [...ordered]
 
     for(let x = 0; x < people.length; x++) {
       if(people[x].node.frontmatter.sortOrder !== null) {
-        ordered_copy.splice(x, 1) //Removes the person
-        ordered_copy.splice(people[x].node.frontmatter.sortOrder - 1, 0, people[x]) //Adds the person back in the correct order 
+        let index = ordered_copy.indexOf(people[x])
+        ordered_copy.splice(index, 1) //Removes the person
+        if(people[x].node.frontmatter.sortOrder < ordered_copy.length) {
+          ordered_copy.splice(people[x].node.frontmatter.sortOrder - 1, 0, people[x]) //Adds the person back in the correct order 
+        } else {
+          ordered_copy.push(people[x])
+        }
       }
     }
 
-    //Returns the sorted list of people to render
+    // Returns the sorted list of people to render
     return ordered_copy
 
   }
@@ -93,15 +138,37 @@ const LeadershipPage = class extends Component {
               return(
                 <Col
                   md={6}
-                  lg={4} 
+                  lg={3} 
                   style={{ marginBottom: '2rem' }}
+                  key={`mgmt-${index}`} 
                 >
                   <Card 
-                    key={`mgmt-${index}`} 
                     className="h-100"
                   >
+                    <ReactPlaceholder
+                      type='rect'
+                      ready={this.state.imagesLoaded}
+                      color='rgb(41, 52, 118)'
+                      showLoadingAnimation={true}
+                      style={{
+                        width: '253px',
+                        height: '354.19px',
+                        borderTopLeftRadius: '4px',
+                        borderTopRightRadius: '4px'
+                      }}
+                    >
+                      <Card.Img
+                        className="ld-image"
+                        variant="top" 
+                        src={person.node.frontmatter.image} 
+                        alt={person.node.frontmatter.alt} 
+                      />
+                    </ReactPlaceholder>
                     <Card.Img
+                      className="ld-image"
                       variant="top" 
+                      onLoad={this.loaded}
+                      style={{display: 'none'}}
                       src={person.node.frontmatter.image} 
                       alt={person.node.frontmatter.alt} 
                     />
@@ -144,16 +211,38 @@ const LeadershipPage = class extends Component {
               return(
                 <Col
                   md={6}
-                  lg={4} 
+                  lg={3} 
                   style={{ marginBottom: '2rem' }}
+                  key={`mgmt-${index}`} 
                 >
                   <Card 
-                    key={`mgmt-${index}`} 
                     className="h-100"
                     style={{ marginBottom: '1rem' }}
                   >
+                    <ReactPlaceholder
+                      type='rect'
+                      ready={this.state.imagesLoaded}
+                      color='rgb(41, 52, 118)'
+                      showLoadingAnimation={true}
+                      style={{
+                        width: '253px',
+                        height: '354.19px',
+                        borderTopLeftRadius: '4px',
+                        borderTopRightRadius: '4px'
+                      }}
+                    >
+                      <Card.Img
+                        className="ld-image"
+                        variant="top" 
+                        src={person.node.frontmatter.image} 
+                        alt={person.node.frontmatter.alt} 
+                      />
+                    </ReactPlaceholder>
                     <Card.Img
+                      className="ld-image"
                       variant="top" 
+                      onLoad={this.loaded}
+                      style={{display: 'none'}}
                       src={person.node.frontmatter.image} 
                       alt={person.node.frontmatter.alt} 
                     />
@@ -202,7 +291,9 @@ export default props => (
 
 export const leadershipQuery = graphql`
   query leadershipQuery {
-    allMarkdownRemark(filter: {frontmatter: { page: {eq: "leadership"}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: { page: {eq: "leadership"}}}
+    ) {
       edges {
         node {
           id

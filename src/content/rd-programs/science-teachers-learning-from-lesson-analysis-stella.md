@@ -20,6 +20,7 @@ sidebarContactsText: Contact Jody Bintz to explore opportunities to work togethe
 sidebarContacts: 
   - Jody Bintz
 page: rd-programs
+sortOrder: 1
 ---
 STeLLA is a nationally-recognized program for teacher professional learning—developed from a 16-year line of research at BSCS Science Learning. 
 

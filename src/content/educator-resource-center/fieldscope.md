@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Citizen Science
 template: Image Left
-image: /assets/river.jpg
+image: https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg
 alt: PLACEHOLDER
 courseId: 0
 discipline: Multidisciplinary Sciences

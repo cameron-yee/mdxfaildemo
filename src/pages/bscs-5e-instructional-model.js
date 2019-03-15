@@ -34,11 +34,11 @@ const BSCS5eInstructionalModelPage = class extends Component {
             <Row className="justify-content-md-center" style={{marginBottom: '2rem'}}>
               <Col xs={12} md={8}>
                 <div className="d-flex adjust-content-center flex-wrap">
-                  <iframe className="p-2" width="622" height="350" src="https://www.youtube.com/embed/WDAtdpQhxYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="On Topic 1" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/WDAtdpQhxYk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                  <iframe className="p-2" width="622" height="350" src="https://www.youtube.com/embed/c242mIDLgUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="On Topic 2" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/c242mIDLgUE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                  <iframe className="p-2" width="622" height="350" src="https://www.youtube.com/embed/G4J4Am8vLrY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="On Topic 3" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/G4J4Am8vLrY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 {/* width="930" height="523"  */}
                 </div>
               </Col>

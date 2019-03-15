@@ -13,6 +13,7 @@ seoLang: en-us
 sidebarTitle: Data Nuggets
 sidebarButtonText: Learn More Here 
 sidebarURL: http://datanuggets.org/
+sortOrder: 10
 ---
 
 What exactly does a scientist do? How does she collect information and make sense of it all? 

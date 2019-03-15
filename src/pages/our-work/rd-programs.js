@@ -6,7 +6,6 @@ import { Location } from '@reach/router'
 import Layout from '../../components/layout/layout'
 
 import Button from 'react-bootstrap/Button'
-// import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
@@ -15,7 +14,6 @@ import PageTitle from '../../components/layout/page-title/page-title'
 import SearchBy from '../../components/atoms/search-by/search-by'
 import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
-// import ResourceCategories from '../../components/molecules/resource-categories/resource-categories'
 
 import '../../global-scss/index.scss';
 import './rd-programs.scss';
@@ -46,27 +44,14 @@ const RDPrograms = class extends Component {
       }
     }
 
-    if(this.props.location.hash) {
-      this.setState({filterHash: this.props.location.hash})
-    }
+    setTimeout(() => {
+      if(this.state.imagesLoaded !== true) {
+        this.setState({imagesLoaded: true})
+      }
+    },
+    3000)
   }
-    // for(let i = 0; i < images.length)
-    // setTimeout(() => {
-    //   const rd_images = document.getElementsByClassName('rd-image')
-    //   for(let i = 0; i < rd_images.length; i++) {
-    //     rd_images[i].style.display = ''
-    //   }
-    //   if(this.state.imagesLoaded !== true) {
-    //     this.setState({imagesLoaded: true})
-    //   }
-    // },
-    // 3000)
 
-  //   if(this.props.location.hash) {
-  //     this.setState({filter_hash: this.props.location.hash})
-  //   }
-  // }
-    
   loaded = () => {
     const rd_images = document.getElementsByClassName('rd-image')
     if(this.images_loaded < rd_images.length) {
@@ -222,7 +207,13 @@ export default props => (
 
 export const rdProgramsQuery = graphql`
   query rdProgramsQuery {
-    allMarkdownRemark(filter: {frontmatter: { page: {eq: "rd-programs"}}}) {
+    allMarkdownRemark(
+      filter: {frontmatter: { page: {eq: "rd-programs"}}}
+      sort: {
+        fields: [frontmatter___sortOrder, frontmatter___title],
+        order: ASC
+      }
+    ) {
       edges {
         node {
           id
@@ -233,6 +224,7 @@ export const rdProgramsQuery = graphql`
             areas,
             date,
             image,
+            sortOrder,
             title,
             page
           }

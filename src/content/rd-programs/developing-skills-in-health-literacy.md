@@ -13,6 +13,7 @@ page: rd-programs
 sidebarTitle: HLIT
 sidebarButtonText: Learn More Here 
 sidebarURL: http://healthliteracyft.bscs.org/
+sortOrder: 5
 ---
 Health-related information from family, friends, social media, and the internet bombard our lives every day. We make decisions as consumers about questions such as these:
 

@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
 template: Image Right
-image: https://media.bscs.org/bscsmw/UGE.jpg
+image: https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg
 alt: PLACEHOLDER
 courseId: 0
 price: null

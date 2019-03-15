@@ -14,6 +14,8 @@ sidebarContacts:
   - Ashley Whitaker
 sidebarContactsTitle: Questions?
 page: upcoming-programs-teacher-professional-learning
+alt: BSCS coffee mug filled with pens next to some highlighters on a table.
+image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/coffee-mug.jpg
 ---
 The _Next Generation Science Standards_ (NGSS) challenge teachers to think deeply about learning and teaching with the goal of developing a clear vision of science education that is coherent, focused, and rigorous. The Five Tools and Processes for Translating the NGSS are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision. 
 

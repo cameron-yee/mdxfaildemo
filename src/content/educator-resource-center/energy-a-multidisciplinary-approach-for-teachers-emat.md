@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
 template: Image Right
-image: /assets/snow-leopard.jpg
+image: https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg
 alt: PLACEHOLDER
 courseId: 0
 discipline: Earth Sciences
