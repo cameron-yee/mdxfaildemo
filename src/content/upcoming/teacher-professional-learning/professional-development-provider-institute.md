@@ -20,7 +20,7 @@ Join us for a Professional Development (PD) Provider Institute 2 in Colorado Spr
 
 ## 
 
-Why participate?
+\###H3 Why participate? ###H3
 
 High quality science education is more crucial than ever. Teachers must prepare students to thrive within a competitive 21st century workforce, where scientific reasoning and critical thinking skills are the price of entry. PD Provider Institutes will increase your ability to effectively support teachers as they navigate their way through evolving science education standards and practices.
 
@@ -37,8 +37,6 @@ Goals and Outcomes
 * Deepen your understanding of three-dimensional learning and the science and engineering practices laid out in the NGSS.
 * Take part in an in-depth analysis of Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 * Increase your ability to support teachers in modifying their current curriculum materials to support student development of Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
-
-
 
 Who should participate?
 
