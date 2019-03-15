@@ -46,20 +46,55 @@ const LeadershipDevelopmentPage = class extends Component {
             </section>
             <section className="section">
               <Container>
-                <Row>
+                <Row style={{ marginBottom: '3rem' }}>
                   { this.programs &&
                     this.programs.map((edge, index) => {
                       // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                       // data_filter['excerpt'] = edge.node.excerpt
                       return(
-                        <Col md={4} key={`tpl-${index}`} className="tpl-card-col">
+                        <Col
+                          lg={4}
+                          key={`tpl-${index}`}
+                          className="tpl-card-col"
+                        >
                           {/* <Card id={`resource-${index}`} className="tpl-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
-                          <Card id={`program-${index}`} className="tpl-card">
+                          <Card id={`program-${index}`} className="h-100">
                             <Card.Body>
-                              <Card.Title>{edge.node.frontmatter.title}</Card.Title>
-                              <Card.Text className="tpl-excerpt">{edge.node.excerpt}</Card.Text>
-                              <Link to={`/upcoming-programs/leadership-development/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} className="p-2 tpl-read-more"><Button variant="outline-secondary">More Information</Button></Link>
+                              <Card.Title
+                                style={{
+                                  marginBottom: '1.5rem'
+                                }}
+                              >
+                                {edge.node.frontmatter.title}
+                              </Card.Title>
+                              <Card.Text
+                                className="tpl-excerpt"
+                                style={{
+                                  marginBottom: '2rem'
+                                }}
+                              >
+                                {edge.node.excerpt}
+                              </Card.Text>
                             </Card.Body>
+                              <Card.Footer
+                                style={{
+                                  background: 'white',
+                                  borderTop: 'none',
+                                  marginBottom: '.5rem'
+                                }}
+                              >
+                                <div className="d-flex">
+                                  <div className="ml-auto align-self-end">
+                                    <Link
+                                      to={`/upcoming-programs/teacher-professional-learning/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                    >
+                                      <Button variant="outline-secondary">
+                                        More Information
+                                      </Button>
+                                    </Link>
+                                  </div>
+                                </div>
+                              </Card.Footer>
                           </Card>
                         </Col>
                       )

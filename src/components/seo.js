@@ -26,6 +26,8 @@ import mstile310 from '../images/favicon/mstile-70x70.png'
 
 import 'animate.css'
 
+import scienceTeacherAndStudents from '../images/seo/science_teacher_and_students.jpg'
+
 
 // function SEO({ description, lang, link, meta, keywords, title, canonical, jsonLd }) {
 const SEO = ({ description, lang, title, canonical, jsonLd }) => {
@@ -52,7 +54,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
             },
             "url": "https://www.bscs.org/",
             "logo": "https://www.bscs.org/static/img/bscs_logo.svg",
-            "description": "",
+            "description": "BSCS Science Learning is an independent nonprofit dedicated to transforming science education across the US through research-driven innovation.",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+1 (719) 531-5550",
@@ -179,19 +181,19 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 property: `og:title`,
-                content: ``
+                content: `BSCS Science Learning – a 501(c)(3) organization`
               },
               {
                 property: `og:description`,
-                content: metaDescription,
+                content: description,
               },
               {
                 property: `og:image`,
-                content: ``
+                content: scienceTeacherAndStudents
               },
               {
                 property: `og:image:alt`,
-                content: ``
+                content: `Elementary science teacher interacting with her students.`
               },
               {
                 name: `twitter:card`,
@@ -207,7 +209,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 name: `twitter:description`,
-                content: metaDescription,
+                content: description,
               },
               {
                 name: `msapplication-TileColor`, content: `#FFFFFF`

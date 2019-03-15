@@ -25,7 +25,7 @@ const LeadershipTemplate = class extends Component {
         <Layout location={this.props.location}>
           <Container>
             <PageTitle title={this.person.fullName} />
-            <Row style={{marginBottom: '1rem'}}>
+            <Row style={{marginBottom: '3rem'}}>
               {this.person.template === 'Image Left' &&
                 <React.Fragment>
                   <Col xs={4}>
