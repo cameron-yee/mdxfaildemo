@@ -19,7 +19,7 @@ The _Next Generation Science Standards_ (NGSS) challenge teachers to think deepl
 
 At the heart of the Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence.  
 
-Goals and Outcomes
+**Goals and Outcomes**
 
 * develop a deeper understanding of NGSS and the Framework for K-12 Science Education;
 * learn how to design and plan three-dimensional, phenomena or problem-driven units of instruction; and
