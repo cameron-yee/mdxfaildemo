@@ -38,7 +38,7 @@ High quality science education is more crucial than ever. Teachers must prepare 
 * Take part in an in-depth analysis of Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 * Increase your ability to support teachers in modifying their current curriculum materials to support student development of Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 
-#### Who should participate?
+##### Who should participate?
 
 * Science supervisors
 * K-12 teacher leaders
