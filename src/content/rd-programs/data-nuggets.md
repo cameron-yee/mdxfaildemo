@@ -4,8 +4,8 @@ title: Data Nuggets
 areas:
   - Instructional Materials Development
   - Research
-image: /assets/jellyfish.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/data-nuggets.svg
+alt: Data Nuggets Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/data-nuggets
 seoDescription: Test SEO description.

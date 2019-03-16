@@ -3,8 +3,8 @@ date: 2019-02-15T20:02:08.538Z
 title: PCK*lex and ArguLex
 areas:
   - Research
-image: /assets/sloth.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/argulex.svg
+alt: ARGULEX Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/pcklex-and-argulex
 seoDescription: Test SEO description.

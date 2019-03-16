@@ -6,6 +6,11 @@ import Category from './category'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 
+import classroomInstruction from '../../../images/educator-resource-center/classroom-instruction.svg'
+import professionalLearning from '../../../images/educator-resource-center/professional-learning.svg'
+import districtPlanning from '../../../images/educator-resource-center/district-planning.svg'
+import citizenScience from '../../../images/educator-resource-center/citizen-science.svg'
+
 const ResourceCategories = class extends Component {
   constructor(props) {
     super(props)
@@ -15,6 +20,7 @@ const ResourceCategories = class extends Component {
           title: `Classroom Instruction`,
           path: `/resources/educator-resource-center#classroom-instruction`,
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+          image: classroomInstruction,
           alt: `Placeholder Image.`,
           boxImageClass: `box aspect-ratio-box mid classroom`
         },
@@ -22,6 +28,7 @@ const ResourceCategories = class extends Component {
           title: `Professional Learning`,
           path: `/resources/educator-resource-center#professional-learning`,
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+          image: professionalLearning,
           alt: `Placeholder Image.`,
           boxImageClass: `box aspect-ratio-box mid professional-learning`
         },
@@ -29,6 +36,7 @@ const ResourceCategories = class extends Component {
           title: `District Planning`,
           path: `/resources/educator-resource-center#district-planning`,
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+          image: districtPlanning,
           alt: `Placeholder Image.`,
           boxImageClass: `box aspect-ratio-box mid district-planning`
         },
@@ -36,6 +44,7 @@ const ResourceCategories = class extends Component {
           title: `Citizen Science`,
           path: `/resources/educator-resource-center#citizen-science`,
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
+          image: citizenScience,
           alt: `Placeholder Image.`,
           boxImageClass: `box aspect-ratio-box mid citizen-science`
         }

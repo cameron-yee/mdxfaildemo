@@ -5,8 +5,8 @@ areas:
   - Instructional Materials Development
   - Teacher Professional Learning
   - Research
-image: /assets/rhino.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/3dmss.svg
+alt: 3DMSS Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/three-dimensional-teaching-and-learning-rebuilding-and-researching-an-online-middle-school-science-curriculum-to-support-the-ngss
 seoDescription: Test SEO description.

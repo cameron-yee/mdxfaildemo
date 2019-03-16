@@ -10,8 +10,8 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/science-teachers-learning-from-lesson-analysis-stella
 seoDescription: TEST SEO DESCRIPTION
 seoLang: en-us
-image: /assets/lions.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/stella.svg
+alt: STELLA Icon
 sidebarText: Want to know more about STeLLA? Download our STeLLA Info Sheet!
 sidebarTitle: ''
 sidebarButtonText: Download

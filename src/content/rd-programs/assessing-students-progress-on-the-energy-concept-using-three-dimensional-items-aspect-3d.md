@@ -5,8 +5,8 @@ areas:
   - Instructional Materials Development
   - Teacher Professional Learning
   - Research
-image: /assets/owl.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/ngss.svg
+alt: NGSS Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/assessing-students-progress-on-the-energy-concept-using-three-dimensional-items-aspect-3d
 seoDescription: Test SEO description.
