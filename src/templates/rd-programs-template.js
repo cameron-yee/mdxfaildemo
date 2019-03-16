@@ -39,7 +39,7 @@ const RDProgramsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
-                <Col md={9}>
+                <Col>
                   <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
                 </Col>
               }
@@ -50,9 +50,9 @@ const RDProgramsTemplate = class extends Component {
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
                 || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
-                <Col md={3}>
+                <Col md={4}>
                   {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
-                    <Card style={{marginBottom: '1rem'}}>
+                    <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
                       <Card.Body>
                         {this.resource.sidebarTitle &&
                           <Card.Title>{this.resource.sidebarTitle}</Card.Title>

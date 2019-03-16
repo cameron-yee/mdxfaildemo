@@ -44,9 +44,9 @@ See our growing line of research at-a-glance.
 
 <!-- <img src='https://media.bscs.org/bscsmw/rd-programs/stella/stella_two_approaches_low_quality.png' style="max-width: 100%; border-radius: 0;"> -->
 
-<iframe src='https://media.bscs.org/bscsmw/rd-programs/stella/stella_flyer.pdf' width='100%' height='600' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+<iframe src='https://media.bscs.org/bscsmw/rd-programs/stella/stella_flyer.pdf' style="width: 100%; height: 600px; margin-top: 1rem;" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 
-<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1VUkBwt8qEgdim_6WAt99JCX-f799OeUZC40wedWm8bM&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1VUkBwt8qEgdim_6WAt99JCX-f799OeUZC40wedWm8bM&font=Default&lang=en&initial_zoom=2&height=650' style="width: 100%; height: 650px;" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
 
 **Work with Us**
 
