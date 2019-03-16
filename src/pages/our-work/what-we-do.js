@@ -30,8 +30,8 @@ const WhatWeDoPage = (props) => {
             </p>
           </Col>
         </Row>
-        <Row>
-          <Col md={6} className="what-we-do-text-section colored">
+        <Row className="d-flex flex-wrap-reverse" noGutters={true} >
+          <Col md={6} className="p-4 what-we-do-text-section colored">
             <h3>Instructional Materials Development</h3>
 
             <p>For teachers to be successful in the classroom, they must have access to high quality instructional materials. We leverage research insights and current industry standards to produce reliable curricula, as we’ve done since our earliest days.</p>
@@ -41,20 +41,20 @@ const WhatWeDoPage = (props) => {
             <p>In today’s world, we primarily focus on developing NGSS-based, online, and highly interactive materials that meet the needs of increasingly diverse student populations.</p>
           </Col>
           <Col md={6} className="what-we-do-image-wrapper">
-            <div className="what-we-do-image imd-image"></div>
-          </Col>
-        </Row>
-        <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          {/* <Col md={6} className="what-we-do-image-wrapper">
-            <div className="what-we-do-image tpl-image"></div>
-          </Col> */}
-          <Col>
             <Img
               className="h-100"
               fluid={props.data.image1.childImageSharp.fluid}
               alt="Test"
             />
-            {/* <Img fixed={props.data.image1.childImageSharp.fixed} /> */}
+          </Col>
+        </Row>
+        <Row className="d-flex flex-wrap-reverse" noGutters={true} >
+          <Col>
+            <Img
+              className="h-100"
+              fluid={props.data.image2.childImageSharp.fluid}
+              alt="Test"
+            />
           </Col>
           <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
             <h3>Teacher Professional Learning</h3>
@@ -64,8 +64,8 @@ const WhatWeDoPage = (props) => {
             <p>Our approach to professional learning is proving to be powerful in both teacher preparation and continuing education programs; in district-wide programs and in programs enrolling individual teachers; in programs for elementary, middle, and high school teachers; and in programs facilitated in person and online.</p>
           </Col>
         </Row>
-        <Row>
-          <Col md={6} className="what-we-do-text-section colored">
+        <Row className="d-flex flex-wrap-reverse" noGutters={true} >
+          <Col md={6} className="p-4 what-we-do-text-section colored">
             <h3>Leadership Development</h3>
 
             <p>Support from the state level to the classroom level is needed to transform science education. That’s why we are committed to system-wide leadership development. We create and deliver research-driven programs that prepare schools, districts, and states to implement stronger systems and policies for science teaching and learning. </p>
@@ -73,14 +73,22 @@ const WhatWeDoPage = (props) => {
             <p>Our programs provide education leaders with <strong>high quality professional learning</strong> opportunities and support in selecting and implementing <strong>high quality instructional materials</strong>. As industry research indicates, both components are essential for effective science instruction.</p>
           </Col>
           <Col md={6} className="what-we-do-image-wrapper">
-            <div className="what-we-do-image ld-image"></div>
+            <Img
+              className="h-100"
+              fluid={props.data.image3.childImageSharp.fluid}
+              alt="Test"
+            />
           </Col>
         </Row>
-        <Row style={{ marginBottom: '2rem' }} className="d-flex flex-wrap-reverse">
+        <Row style={{ marginBottom: '2rem' }} className="d-flex flex-wrap-reverse" noGutters={true} >
           <Col md={6} className="p-2 what-we-do-image-wrapper">
-            <div className="what-we-do-image research-image"></div>
+            <Img
+              className="h-100"
+              fluid={props.data.image4.childImageSharp.fluid}
+              alt="Test"
+            />
           </Col>
-          <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
+          <Col md={6} className="p-4 p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
             <h3>Research</h3>
 
             <p>Our work begins and ends with research. We conduct a variety of studies for a deeper understanding of how teachers and students learn science. Our evaluations span from studies of our own interventions across schools and districts to big-picture analyses across the greater science education landscape.</p>
@@ -102,10 +110,6 @@ const WhatWeDoPage = (props) => {
           <Col xs={12} className="d-flex justify-content-center">
             <h3 className="p-2">Our Work in Action</h3>
           </Col>
-          {/* <Col className="d-flex">
-            <Link to="/resources/educator-resource-center" style={{width: '100%'}}><Button variant="outline-secondary" style={{width: '100%', minHeight: '100%', margin: '1rem'}}><h3>Educator Resource Center</h3></Button></Link>
-            <Link to="/our-work/rd-programs" style={{width: '100%'}}><Button variant="outline-secondary" style={{width: '100%', minHeight: '100%', margin: '1rem'}}><h3>R&amp;D Programs</h3></Button></Link>
-          </Col> */}
           <Col style={{padding: '0.5rem'}}>
             <Link to="/our-work/rd-programs" style={{width: '100%'}}>
               <Button variant="outline-secondary" style={{width: '100%', minHeight: '6rem', height: '100%'}}>
@@ -126,7 +130,6 @@ const WhatWeDoPage = (props) => {
         <Row>
           <Col>
             <p><strong>Interested in partnering with us or hiring us to support your science education advancement efforts? Let’s explore how we can <Link to="/connect/work-with-us">work together</Link>.</strong></p>
-            {/* <p style={{color: 'black', fontWeight: '500'}}>Interested in partnering with us or hiring us to support your science education advancement efforts? Let’s explore how we can <Link to="/connect/work-with-us">work together</Link>.</p> */}
           </Col>
         </Row>
       </Container>
@@ -141,28 +144,29 @@ export default props => (
   </Location>
 )
 
-export const query = graphql`
-  query {
-    image1: file(relativePath: { eq: "what-we-do/we_provide_professional.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1500) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+export const rowImage = graphql`
+  fragment rowImage on File {
+    childImageSharp {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
 `
 
-// export const query = graphql`
-//   query {
-//     image1: file(relativePath: { eq: "what-we-do/we_provide_professional.jpg" }) {
-//       childImageSharp {
-//         # Specify the image processing specifications right in the query.
-//         # Makes it trivial to update as your page's design changes.
-//         fixed(width: 125, height: 125) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    image1: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+      ...rowImage
+    }
+    image2: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+      ...rowImage
+    }
+    image3: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+      ...rowImage
+    }
+    image4: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+      ...rowImage
+    }
+  }
+`
