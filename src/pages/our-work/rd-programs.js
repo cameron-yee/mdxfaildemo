@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
-// import CardColumns from 'react-bootstrap/CardColumns'
+import CardColumns from 'react-bootstrap/CardColumns'
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
@@ -105,10 +105,9 @@ const RDPrograms = class extends Component {
               <hr />
             </Container>
           </section>
-          <section className="section" style={{ marginBottom: '4rem' }}>
+          <section className="section d-md-none" style={{ marginBottom: '4rem' }}>
             <Container>
               <Row className="justify-content-center justify-content-md-start">
-              {/* <Row> */}
                 {
                   this.programs.map((edge, index) => {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
@@ -209,6 +208,106 @@ const RDPrograms = class extends Component {
                     )
                   }) 
                 }
+              </Row>
+            </Container>
+          </section>
+          <section className="section d-none d-md-block" style={{ marginBottom: '4rem' }}>
+            <Container>
+              <Row>
+                <CardColumns>
+                  {
+                    this.programs.map((edge, index) => {
+                      let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                      data_filter['excerpt'] = edge.node.excerpt
+                      return(
+                        <Card
+                          key={edge.node.id}
+                          id={`resource-${index}`}
+                          data-filter={JSON.stringify(data_filter)} 
+                          data-type={edge.node.frontmatter.type}
+                          style={{
+                            borderColor: 'rgb(41, 52, 118)',
+                            marginBottom: '1.25rem'
+                          }}
+                        >
+                          <Card.Img
+                            variant="top"
+                            src={edge.node.frontmatter.image}
+                            alt={edge.node.frontmatter.alt}
+                            onLoad={this.loaded}
+                            style={{ padding: '1rem 4.5rem 0' }}
+                            className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
+                          />
+                          <div className="d-flex flex-row justify-content-center">
+                            <div className="dot d-inline-flex mr-2"></div>
+                            <div className="dot d-inline-flex mr-2"></div>
+                            <div className="dot d-inline-flex"></div>
+                          </div>
+                          <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
+                            <Card.Title
+                              style={{
+                                marginBottom: '1rem'
+                              }}
+                            >
+                              {edge.node.frontmatter.title}
+                            </Card.Title>
+                            <div className="d-flex">
+                              <div className="mr-auto mb-3">
+                                { 
+                                  edge.node.frontmatter.areas.map((area, index) => {
+                                    const variants = {
+                                      "Teacher Professional Learning": "primary",
+                                      "Instructional Materials Development": "secondary",
+                                      "Research": "success",
+                                      "Leadership Development": "danger"
+                                    }
+                                    return(
+                                      <>
+                                        <span
+                                          key={index}
+                                          className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                          style={{
+                                            marginRight: '.5rem',
+                                            fontSize: '.75rem',
+                                            fontWeight: '600'
+                                          }}
+                                        >
+                                          {area}
+                                        </span>
+                                      </>
+                                    )
+                                  })
+                                }
+                              </div>
+                            </div>
+                            <Card.Text>
+                              {edge.node.excerpt}
+                            </Card.Text>
+                          </Card.Body>
+                          <Card.Footer
+                            style={{
+                              background: 'white',
+                              borderTop: 'none',
+                              marginBottom: '.5rem'
+                            }}
+                          >
+                            <div className="d-flex">
+                              <div className="ml-auto align-self-end">
+                                <Link
+                                  to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                >
+                                  <Button variant="outline-secondary">
+                                    Read More
+                                  </Button>
+                                </Link>
+                              </div>
+                            </div>
+                          </Card.Footer>
+                        </Card>
+                      )
+                    }) 
+                  }
+                </CardColumns>
               </Row>
             </Container>
           </section>
