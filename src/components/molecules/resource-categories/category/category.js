@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import { Link } from 'gatsby'
 
-import './category.scss'
 
 const Category = class extends Component {
   setCategoryFilter = (e, title) => {

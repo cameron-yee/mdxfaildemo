@@ -96,6 +96,12 @@ ol {
   }
 }
 
+.badge {
+  &:hover {
+    cursor: default;
+  }
+}
+
 
 // .active > a {
 //   color: $primary;

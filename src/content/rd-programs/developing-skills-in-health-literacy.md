@@ -7,7 +7,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/developing-skills-in-health-literacy
 seoDescription: TEST SEO DESCRIPTION
 seoLang: en-us
-image: /assets/ocean.jpg
+image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
 page: rd-programs
 sidebarTitle: HLIT

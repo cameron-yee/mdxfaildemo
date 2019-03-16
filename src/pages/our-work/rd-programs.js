@@ -135,16 +135,52 @@ const RDPrograms = class extends Component {
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
                             onLoad={this.loaded}
-                            style={{ padding: '1rem 4.25rem 0' }}
+                            style={{ padding: '1rem 4.5rem 0' }}
+                            className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
                           />
-                          <Card.Body>
+                          <div className="d-flex flex-row justify-content-center">
+                            <div className="dot d-inline-flex mr-2"></div>
+                            <div className="dot d-inline-flex mr-2"></div>
+                            <div className="dot d-inline-flex"></div>
+                          </div>
+                          <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
                             <Card.Title
                               style={{
-                                marginBottom: '1.5rem'
+                                marginBottom: '1rem'
                               }}
                             >
                               {edge.node.frontmatter.title}
                             </Card.Title>
+                            <div className="d-flex">
+                              <div className="mr-auto mb-3">
+                                { 
+                                  edge.node.frontmatter.areas.map((area, index) => {
+                                    const variants = {
+                                      "Teacher Professional Learning": "primary",
+                                      "Instructional Materials Development": "secondary",
+                                      "Research": "success",
+                                      "Leadership Development": "danger"
+                                    }
+                                    return(
+                                      <>
+                                        <span
+                                          key={index}
+                                          className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                          style={{
+                                            marginRight: '.5rem',
+                                            fontSize: '.75rem',
+                                            fontWeight: '600'
+                                          }}
+                                        >
+                                          {area}
+                                        </span>
+                                        {/* <br /> */}
+                                      </>
+                                    )
+                                  })
+                                }
+                              </div>
+                            </div>
                             <Card.Text>
                               {edge.node.excerpt}
                             </Card.Text>
@@ -152,7 +188,8 @@ const RDPrograms = class extends Component {
                           <Card.Footer
                             style={{
                               background: 'white',
-                              borderTop: 'none'
+                              borderTop: 'none',
+                              marginBottom: '.5rem'
                             }}
                           >
                             <div className="d-flex">

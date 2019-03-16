@@ -4,7 +4,7 @@ title: "Planting Science: Digging Deeper Together"
 areas:
   - Teacher Professional Learning
   - Research
-image: /assets/meerkat.jpg
+image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/planting-science-digging-deeper-together
