@@ -4,8 +4,8 @@ title: "Collaborative Research: Extending and Investigating the Impact of the Hi
 areas:
   - Instructional Materials Development
   - Research
-image: /assets/grizzlies.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/mber.svg
+alt: MBER Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
 seoDescription: Test SEO description.
@@ -40,4 +40,3 @@ In addition to generating important research findings, the materials revised and
 </div>
 
 Partners: Dr. Cindy Passmore and colleagues at UC Davis
-

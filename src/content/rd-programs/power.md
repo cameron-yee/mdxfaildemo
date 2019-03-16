@@ -4,8 +4,8 @@ title: POWER
 areas:
   - Instructional Materials Development
   - Teacher Professional Learning
-image: /assets/elephant.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/power.svg
+alt: Power Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/power
 seoDescription: Test SEO description.

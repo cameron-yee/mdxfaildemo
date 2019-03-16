@@ -3,8 +3,8 @@ date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
 areas:
   - Research
-image: /assets/orangutan.jpg
-alt: PLACEHOLDER
+image: /assets/rd-programs/humane-genetics.svg
+alt: Humane Genetics Icon
 page: rd-programs
 seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
 seoDescription: Test SEO description.
