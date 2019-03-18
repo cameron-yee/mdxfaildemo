@@ -21,7 +21,7 @@ import '../../global-scss/index.scss'
 import './rd-programs.scss'
 
 // import ReactPlaceholder from 'react-placeholder'
-import 'react-placeholder/lib/reactPlaceholder.css'
+// import 'react-placeholder/lib/reactPlaceholder.css'
 
 
 const RDPrograms = class extends Component {
@@ -32,40 +32,40 @@ const RDPrograms = class extends Component {
     this.state = {
       // filter_hash: undefined,
       activeFilters: [],
-      imagesLoaded: false
+      // imagesLoaded: false
     }
-    this.images_loaded = 0
+    // this.images_loaded = 0
   }
 
-  componentDidMount() {
-    const rd_images = document.getElementsByClassName('rd-image') 
+  // componentDidMount() {
+  //   const rd_images = document.getElementsByClassName('rd-image') 
 
-    for(let i = 0; i < rd_images.length; i++) {
-      if(rd_images[i].complete && this.images_loaded !== rd_images.length) {
-        this.loaded()
-      }
-    }
+  //   for(let i = 0; i < rd_images.length; i++) {
+  //     if(rd_images[i].complete && this.images_loaded !== rd_images.length) {
+  //       this.loaded()
+  //     }
+  //   }
 
-    setTimeout(() => {
-      if(this.state.imagesLoaded !== true) {
-        this.setState({imagesLoaded: true})
-      }
-    },
-    3000)
-  }
+  //   setTimeout(() => {
+  //     if(this.state.imagesLoaded !== true) {
+  //       this.setState({imagesLoaded: true})
+  //     }
+  //   },
+  //   3000)
+  // }
 
-  loaded = () => {
-    const rd_images = document.getElementsByClassName('rd-image')
-    if(this.images_loaded < rd_images.length) {
-      this.images_loaded = this.images_loaded + 1
-    } else {
-      return
-    }
+  // loaded = () => {
+  //   const rd_images = document.getElementsByClassName('rd-image')
+  //   if(this.images_loaded < rd_images.length) {
+  //     this.images_loaded = this.images_loaded + 1
+  //   } else {
+  //     return
+  //   }
 
-    if(this.images_loaded === rd_images.length && this.state.imagesLoaded !== true) {
-      this.setState({imagesLoaded: true})
-    }
-  }
+  //   if(this.images_loaded === rd_images.length && this.state.imagesLoaded !== true) {
+  //     this.setState({imagesLoaded: true})
+  //   }
+  // }
 
   render() {
     return (
@@ -133,7 +133,7 @@ const RDPrograms = class extends Component {
                             variant="top"
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
-                            onLoad={this.loaded}
+                            // onLoad={this.loaded}
                             style={{ padding: '1rem 4.5rem 0' }}
                             className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
                           />
@@ -163,7 +163,7 @@ const RDPrograms = class extends Component {
                                     return(
                                       <>
                                         <span
-                                          key={index}
+                                          key={`${edge.node.id}-area-${index}`}
                                           className={`rd-pill badge badge-pill badge-${variants[area]}`}
                                           style={{
                                             marginRight: '.5rem',
@@ -220,90 +220,91 @@ const RDPrograms = class extends Component {
                       let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                       data_filter['excerpt'] = edge.node.excerpt
                       return(
-                        <Card
-                          key={edge.node.id}
-                          id={`resource-${index}`}
-                          data-filter={JSON.stringify(data_filter)} 
-                          data-type={edge.node.frontmatter.type}
-                          style={{
-                            borderColor: 'rgb(41, 52, 118)',
-                            marginBottom: '1.25rem'
-                          }}
-                        >
-                          <Card.Img
-                            variant="top"
-                            src={edge.node.frontmatter.image}
-                            alt={edge.node.frontmatter.alt}
-                            onLoad={this.loaded}
-                            style={{ padding: '1rem 4.5rem 0' }}
-                            className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
-                          />
-                          <div className="d-flex flex-row justify-content-center">
-                            <div className="dot d-inline-flex mr-2"></div>
-                            <div className="dot d-inline-flex mr-2"></div>
-                            <div className="dot d-inline-flex"></div>
-                          </div>
-                          <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
-                            <Card.Title
-                              style={{
-                                marginBottom: '1rem'
-                              }}
-                            >
-                              {edge.node.frontmatter.title}
-                            </Card.Title>
-                            <div className="d-flex">
-                              <div className="mr-auto mb-3">
-                                { 
-                                  edge.node.frontmatter.areas.map((area, index) => {
-                                    const variants = {
-                                      "Teacher Professional Learning": "primary",
-                                      "Instructional Materials Development": "secondary",
-                                      "Research": "success",
-                                      "Leadership Development": "danger"
-                                    }
-                                    return(
-                                      <>
-                                        <span
-                                          key={index}
-                                          className={`rd-pill badge badge-pill badge-${variants[area]}`}
-                                          style={{
-                                            marginRight: '.5rem',
-                                            fontSize: '.75rem',
-                                            fontWeight: '600'
-                                          }}
-                                        >
-                                          {area}
-                                        </span>
-                                      </>
-                                    )
-                                  })
-                                }
-                              </div>
-                            </div>
-                            <Card.Text>
-                              {edge.node.excerpt}
-                            </Card.Text>
-                          </Card.Body>
-                          <Card.Footer
+                        <div key={`desktop-${edge.node.id}`}>
+                          <Card
+                            id={`mobile-resource-${index}`}
+                            data-filter={JSON.stringify(data_filter)} 
+                            data-type={edge.node.frontmatter.type}
                             style={{
-                              background: 'white',
-                              borderTop: 'none',
-                              marginBottom: '.5rem'
+                              borderColor: 'rgb(41, 52, 118)',
+                              marginBottom: '1.25rem'
                             }}
                           >
-                            <div className="d-flex">
-                              <div className="ml-auto align-self-end">
-                                <Link
-                                  to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
-                                >
-                                  <Button variant="outline-secondary">
-                                    Read More
-                                  </Button>
-                                </Link>
-                              </div>
+                            <Card.Img
+                              variant="top"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                              // onLoad={this.loaded}
+                              style={{ padding: '1rem 4.5rem 0' }}
+                              className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
+                            />
+                            <div className="d-flex flex-row justify-content-center">
+                              <div className="dot d-inline-flex mr-2"></div>
+                              <div className="dot d-inline-flex mr-2"></div>
+                              <div className="dot d-inline-flex"></div>
                             </div>
-                          </Card.Footer>
-                        </Card>
+                            <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
+                              <Card.Title
+                                style={{
+                                  marginBottom: '1rem'
+                                }}
+                              >
+                                {edge.node.frontmatter.title}
+                              </Card.Title>
+                              <div className="d-flex">
+                                <div className="mr-auto mb-3">
+                                  { 
+                                    edge.node.frontmatter.areas.map((area, index) => {
+                                      const variants = {
+                                        "Teacher Professional Learning": "primary",
+                                        "Instructional Materials Development": "secondary",
+                                        "Research": "success",
+                                        "Leadership Development": "danger"
+                                      }
+                                      return(
+                                        <>
+                                          <span
+                                            key={`desktop-${edge.node.id}-area-${index}`}
+                                            className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontSize: '.75rem',
+                                              fontWeight: '600'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                        </>
+                                      )
+                                    })
+                                  }
+                                </div>
+                              </div>
+                              <Card.Text>
+                                {edge.node.excerpt}
+                              </Card.Text>
+                            </Card.Body>
+                            <Card.Footer
+                              style={{
+                                background: 'white',
+                                borderTop: 'none',
+                                marginBottom: '.5rem'
+                              }}
+                            >
+                              <div className="d-flex">
+                                <div className="ml-auto align-self-end">
+                                  <Link
+                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                  >
+                                    <Button variant="outline-secondary">
+                                      Read More
+                                    </Button>
+                                  </Link>
+                                </div>
+                              </div>
+                            </Card.Footer>
+                          </Card>
+                        </div>
                       )
                     }) 
                   }
