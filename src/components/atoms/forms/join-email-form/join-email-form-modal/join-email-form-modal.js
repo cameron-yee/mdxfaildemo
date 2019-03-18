@@ -14,7 +14,7 @@ BlueBirdPromise.config({
   cancellation: true,
 });
 
-const JoinModal= class extends Component {
+const JoinEmailFormModal = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -302,4 +302,4 @@ const JoinModal= class extends Component {
   }
 }
 
-export default JoinModal
+export default JoinEmailFormModal

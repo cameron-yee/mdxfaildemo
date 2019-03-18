@@ -6,35 +6,29 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 
-import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
-import JoinEmailList from '../../atoms/join-email-list/join-email-list-button'
-import ContactUsModal from '../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
-import ContactUsButton from '../../atoms/general-contact-form/general-contact-form-button'
+// import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
+import JoinEmailListFormButton from '../../atoms/forms/join-email-form/join-email-list-form-button/join-email-list-form-button'
+// import ContactUsModal from '../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
+import GeneralContactFormButton from '../../atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
 
 import './footer.scss'
 
 
 export default class Footer extends Component {
-    constructor(props) {
-    super(props)
+  //   constructor(props) {
+  //   super(props)
 
-    this.state = {
-      joinEmailListModalShow: false,
-      contactUsModalShow: false
-    }
+  //   this.state = {
+  //     joinEmailListModalShow: false,
+  //     contactUsModalShow: false
+  //   }
+  // }
 
-    this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
-    this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
+  // launchJoinEmail = () => { this.props.launchJoinEmail }
+  // closeJoinEmail = () => { this.props.closeJoinEmail }
 
-    this.launchContactUs = this.launchContactUs.bind(this)
-    this.closeContactUs = this.closeContactUs.bind(this)
-  }
-
-  launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
-  closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
-
-  launchContactUs = () => { this.setState({contactUsModalShow: true}) }
-  closeContactUs = () => { this.setState({contactUsModalShow: false}) }
+  // launchGeneral = () => { this.props.launchGeneral }
+  // closeGeneral = () => { this.props.closeGeneral }
 
   render() {
     const navigation =
@@ -92,11 +86,11 @@ export default class Footer extends Component {
                                   {item.itemTitle}
                                 </Link>
                                 :
-                                item.onClick === "this.launchJoinEmailList"
+                                item.onClick === "this.props.launchJoinEmail"
                                 ?
                                 <div
                                   className="nav-link footer-nl"
-                                  onClick={this.launchJoinEmailList}
+                                  onClick={this.props.launchGeneral}
                                   style={{
                                     cursor: "pointer"
                                   }}
@@ -106,7 +100,7 @@ export default class Footer extends Component {
                                 :
                                 <div
                                   className="nav-link footer-nl"
-                                  onClick={this.launchContactUs}
+                                  onClick={this.props.launchGeneral}
                                   style={{
                                     cursor: "pointer"
                                   }}
@@ -133,7 +127,7 @@ export default class Footer extends Component {
         <Container fluid>
           <Row className="d-sm-none justify-content-center">
             <Col xs={12} className="p-2 m-auto text-center">
-              <JoinEmailList />
+              <JoinEmailListFormButton  launch={this.props.launchJoinEmail} />
             </Col>
             <Col xs={12} className="p-2 m-auto text-center">
               <div className="d-flex justify-content-center">
@@ -169,7 +163,7 @@ export default class Footer extends Component {
           </Row>
           <div className="d-none d-sm-flex">
             <div className="p-2 flex-grow-1">
-              <JoinEmailList />
+              <JoinEmailListFormButton  launch={this.props.launchJoinEmail} />
             </div>
             <div className="p-2 align-self-center">
               <a
@@ -222,7 +216,7 @@ export default class Footer extends Component {
         <Container fluid>
           <Row className="d-sm-none justify-content-center">
             <Col xs={12} className="p-2 m-auto text-center">
-              <ContactUsButton />
+              <GeneralContactFormButton launch={this.props.launchGeneral}>Contact Us</GeneralContactFormButton>
             </Col>
             <Col xs={12} className="p-2 m-auto text-center">
               5415 Mark Dabling Blvd.<br />
@@ -231,7 +225,7 @@ export default class Footer extends Component {
           </Row>
           <div className="d-none d-sm-flex">
             <div className="p-2 mr-auto align-self-center">
-              <ContactUsButton />
+              <GeneralContactFormButton launch={this.props.launchGeneral}>Contact Us</GeneralContactFormButton>
             </div>
             <div
               className="p-2 ml-auto align-self-center"
@@ -264,8 +258,8 @@ export default class Footer extends Component {
             </Container>
           </Row>
         </Container>
-        <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
-        <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} />
+        {/* <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} /> */}
+        {/* <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} /> */}
       </footer>
     )
   }

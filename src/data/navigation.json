@@ -118,13 +118,13 @@
         "itemTitle": "Contact Us",
         "iconClass": "",
         "path": "/connect/contact-us/",
-        "onClick": "this.launchContactUs"
+        "onClick": "this.props.launchGeneral"
       },
       {
         "itemTitle": "Join E-mail List",
         "iconClass": "",
         "path": "/join/",
-        "onClick": "this.launchJoinEmailList"
+        "onClick": "this.props.launchJoinEmail"
       },
       {
         "itemTitle": "Work with Us",

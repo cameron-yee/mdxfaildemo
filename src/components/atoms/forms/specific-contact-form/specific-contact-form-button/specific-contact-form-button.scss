@@ -1,0 +1,9 @@
+@import '../../../../../global-scss/utilities/bootstrap-overrides.scss';
+
+span {
+  color: $primary;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

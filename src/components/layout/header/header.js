@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import Tagline from './tagline/tagline'
-import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
+// import JoinModal from '../../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 
 import MobileNavigation from './navigation/mobile/navigation'
 import DesktopNavigation from './navigation/desktop/navigation'
@@ -26,9 +26,6 @@ export default class Header extends Component {
     this.state = {
       modalShow: false,
     }
-
-    this.launch = this.launch.bind(this)
-    this.close = this.close.bind(this)
   }
 
   launch = () => { this.setState({modalShow: true}) }
@@ -74,7 +71,8 @@ export default class Header extends Component {
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
               <DesktopNavigation
                 location={this.props.location}
-                launch={this.launch}
+                launchGeneral={this.props.launchGeneral}
+                launchJoinEmail={this.props.launchJoinEmail}
               />
             </Col>
           </Row>
@@ -85,7 +83,8 @@ export default class Header extends Component {
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
               <MobileNavigation
                 location={this.props.location}
-                launch={this.launch}
+                launchGeneral={this.props.launchGeneral}
+                launchJoinEmail={this.props.launchJoinEmail}
               />
             </Col>
           </Row>
@@ -93,7 +92,7 @@ export default class Header extends Component {
         <Container fluid>
           <hr className="" style={{ margin: '0' }} />
         </Container>
-        <JoinModal show={this.state.modalShow} onHide={this.close} />
+        {/* <JoinModal show={this.state.modalShow} onHide={this.close} /> */}
       </>
     )
   }
