@@ -6,8 +6,8 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
-import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
-import ContactUsModal from '../../../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
+// import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
+// import ContactUsModal from '../../../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 
 import '../../header.scss'
 import './navigation.scss'
@@ -15,26 +15,26 @@ import './navigation.scss'
 import '../../../../../global-scss/index.scss'
 
 export default class DesktopNavigation extends Component {
-    constructor(props) {
-    super(props)
+  //   constructor(props) {
+  //   super(props)
 
-    this.state = {
-      joinEmailListModalShow: false,
-      contactUsModalShow: false
-    }
+  //   this.state = {
+  //     joinEmailListModalShow: false,
+  //     contactUsModalShow: false
+  //   }
 
-    this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
-    this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
+  //   this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
+  //   this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
 
-    this.launchContactUs = this.launchContactUs.bind(this)
-    this.closeContactUs = this.closeContactUs.bind(this)
-  }
+  //   this.launchContactUs = this.launchContactUs.bind(this)
+  //   this.closeContactUs = this.closeContactUs.bind(this)
+  // }
 
-  launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
-  closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
+  // launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
+  // closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
 
-  launchContactUs = () => { this.setState({contactUsModalShow: true}) }
-  closeContactUs = () => { this.setState({contactUsModalShow: false}) }
+  // launchContactUs = () => { this.setState({contactUsModalShow: true}) }
+  // closeContactUs = () => { this.setState({contactUsModalShow: false}) }
 
   render() {
     return (
@@ -103,11 +103,11 @@ export default class DesktopNavigation extends Component {
                                             }
                                           </Link>
                                           :
-                                          item.onClick === "this.launchJoinEmailList"
+                                          item.onClick === "this.props.launchJoinEmail"
                                           ?
                                           <div
                                             className="dropdown-item"
-                                            onClick={this.launchJoinEmailList}
+                                            onClick={this.props.launchJoinEmail}
                                             style={{
                                               cursor: "pointer"
                                             }}
@@ -121,7 +121,7 @@ export default class DesktopNavigation extends Component {
                                           :
                                           <div
                                             className="dropdown-item"
-                                            onClick={this.launchContactUs}
+                                            onClick={this.props.launchGeneral}
                                             style={{
                                               cursor: "pointer"
                                             }}
@@ -157,8 +157,8 @@ export default class DesktopNavigation extends Component {
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>
-              <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
-              <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} />
+              {/* <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
+              <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} /> */}
             </SpinDropdown>
           )
         }}

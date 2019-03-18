@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import SpecificContactFormModal from './specific-contact-form-modal/specific-contact-form-modal'
 
-import './specific-contact-form.scss'
+import SpecificContactFormModal from '../specific-contact-form-modal/specific-contact-form-modal'
+
+import './specific-contact-form-button.scss'
 
 const SpecificContactFormButton = class extends Component {
   constructor(props) {

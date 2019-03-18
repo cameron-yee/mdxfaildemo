@@ -23,6 +23,7 @@ const GeneralContactFormModal = class extends Component {
       phone_touched: false,
       message: undefined,
       message_touched: false,
+
       loading: false,
       notificationShow: false,
       sent: false
@@ -116,11 +117,11 @@ const GeneralContactFormModal = class extends Component {
     e.preventDefault()
     this.setState({loading: true})
 
-    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "sendto": this.props.sendto}
+    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message}
 
     // console.log(data)
     axios({
-      url: 'http://127.0.0.1:8888/post-specific-form',
+      url: 'http://127.0.0.1:8888/post-contact-form',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token

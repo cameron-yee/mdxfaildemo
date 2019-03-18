@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 
 import SEO from '../components/seo'
-import ContactUsButton from '../components/atoms/general-contact-form/general-contact-form-button'
+import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
 import Layout from '../components/layout/layout'
 import PageTitle from '../components/layout/page-title/page-title'
 
@@ -11,9 +11,16 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 const BSCS5eInstructionalModelPage = class extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      launchGeneral: false,
+    }
+  }
+
   render() {
     return (
-        <Layout location={this.props.location}>
+        <Layout location={this.props.location} launchGeneral={this.state.launchGeneral} closeGeneral={() => this.setState({launchGeneral: false})}>
           <SEO title="BSCS 5E Instructional Model" />
           <Container>
             <PageTitle title="BSCS 5E Instructional Model" />
@@ -34,11 +41,11 @@ const BSCS5eInstructionalModelPage = class extends Component {
             <Row className="justify-content-md-center" style={{marginBottom: '2rem'}}>
               <Col xs={12} md={8}>
                 <div className="d-flex adjust-content-center flex-wrap">
-                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 1): Creating the 5E Model" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/WDAtdpQhxYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 1): Creating the 5E Model" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/WDAtdpQhxYk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 2): How the 5Es Evolved Over Time" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/c242mIDLgUE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 2): How the 5Es Evolved Over Time" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/c242mIDLgUE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 3): Why the 5Es Remain Relevant Today" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/G4J4Am8vLrY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 3): Why the 5Es Remain Relevant Today" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/G4J4Am8vLrY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 {/* width="930" height="523"  */}
                 </div>
               </Col>
@@ -90,7 +97,7 @@ const BSCS5eInstructionalModelPage = class extends Component {
                 </ul>                
 
                 <p>For more information:</p>
-                <ContactUsButton />
+                <GeneralContactFormButton launch={() => this.setState({launchGeneral: true})}>Contact Us</GeneralContactFormButton>
               </Col>
             </Row>
           </Container>
