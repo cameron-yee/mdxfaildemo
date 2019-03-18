@@ -18,6 +18,7 @@ const PageTitle = class extends React.Component {
         <Row>
           <Col>
             <h1 style={{ marginTop: '.5rem' }}>{this.props.title}</h1>
+            <p><em>{this.props.date}</em></p>
             <hr style={{ marginBottom: '2.5rem' }} />
           </Col>
         </Row>

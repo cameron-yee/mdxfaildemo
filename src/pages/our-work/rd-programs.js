@@ -70,7 +70,7 @@ const RDPrograms = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="R&amp;D Programs" description="" canonical="https://bmw-bscs.netlify.com/rd-programs/" />
+        <SEO title="R&amp;D Programs" description="" canonical="https://bmw-bscs.netlify.com/our-work/rd-programs/" />
         <Layout location={this.props.location}>
           <section className="section">
             <Container>

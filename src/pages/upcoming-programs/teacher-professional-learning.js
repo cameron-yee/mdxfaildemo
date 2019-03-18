@@ -17,6 +17,7 @@ import './teacher-professional-learning.scss'
 import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
+import logo from '../../images/bscs_logo.svg'
 // import SearchBy from '../../components/atoms/search-by/search-by'
 // import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 // import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
@@ -127,6 +128,17 @@ const TeacherProfessionalLearningPage = class extends Component {
                             <Card.Img
                               className="tpl-card-img"
                               variant="top"
+                              style={{
+                                minHeight: '260.98px',
+                                backgroundColor: 'rgba(41, 52, 118, 1)',
+                                borderTopLeftRadius: '4px',
+                                borderTopRightRadius: '4px'
+                                // background: 'linear-gradient(180deg, rgba(205,205,205,1) 0%, rgba(130,135,165,1) 0%, rgba(41,52,118,1) 74%)'
+                                // backgroundImage: `url(../../../bscs_logo.svg)`,
+                                // backgroundSize: 'contain',
+                                // backgroundPosition: 'center',
+                                // backgroundRepeat: 'no-repeat'
+                              }}
                               src={edge.node.frontmatter.image}
                               alt={edge.node.frontmatter.alt}
                             />

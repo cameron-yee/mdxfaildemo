@@ -16,6 +16,8 @@ import BSCSTransformingScienceEducationModel from '../../images/bscs-transformin
 
 import './what-we-do.scss'
 
+import rowImage from '../../queries/images/row-image'
+
 const WhatWeDoPage = (props) => {
   console.log(props.data.image1)
   return (
@@ -143,16 +145,6 @@ export default props => (
     {locationProps => <WhatWeDoPage {...locationProps} {...props} />}
   </Location>
 )
-
-export const rowImage = graphql`
-  fragment rowImage on File {
-    childImageSharp {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-`
 
 export const query = graphql`
   query {

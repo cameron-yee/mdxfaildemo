@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { Location } from '@reach/router'
 
 import Layout from '../../components/layout/layout'
@@ -12,20 +14,7 @@ import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button';
 
-// import Container from '../components/layout/container/container'
-// import Divider from '../components/ui/divider/divider'
-// import Dropdown from '../components/ui/dropdown/dropdown'
-// // import HeroImage from '../components/ui/images/hero-image'
-// import ImageSection from '../components/layout/columns/image-section/image-section'
-// import Layout from '../components/layout/layout'
-// import PageTitle from '../components/ui/typography/page-title/page-title'
-// import SectionHeader from '../components/ui/typography/section-header/section-header'
-// import Table from '../components/ui/table/table'
-
-
-// const annual_report_prefix = 'https://media.bscs.org/bscsmw/financials/annual-reports/'
-// var url = `${annual_report_prefix}bscs_2016_annual_report.pdf`  
-
+import rowImage from '../../queries/images/row-image'
 
 const FinancialsPage = class extends Component {
   constructor(props) {
@@ -61,9 +50,14 @@ const FinancialsPage = class extends Component {
         <SEO title="Financials" />
         <Container>
           <PageTitle title="Financials" />
-          <Row style={{ marginBottom: '2rem' }}>
-            <Col xs={12} lg={6}>
-              <img src="/assets/ar-2017.jpg" alt="BSCS Science Learning Annual Report 2017" style={{width:"100%", marginBottom: '1rem'}} />
+          <Row class="d-flex" style={{ marginBottom: '2rem' }}>
+            <Col className="p-2" xs={12} lg={6}>
+              {/* <img src="/assets/ar-2017.jpg" alt="BSCS Science Learning Annual Report 2017" style={{width:"100%", marginBottom: '1rem'}} /> */}
+              <Img
+                className="h-100"
+                fluid={this.props.data.ar2017.childImageSharp.fluid}
+                alt="BSCS Science Learning Annual Report 2017"
+              />
             </Col>
             <Col xs={12} lg={6}>
               <p>
@@ -142,3 +136,11 @@ export default props => (
     {locationProps => <FinancialsPage {...locationProps} {...props} />}
   </Location>
 )
+
+export const query = graphql`
+  query {
+    ar2017: file(relativePath: { eq: "financials/ar-2017.jpg" }) {
+      ...rowImage
+    }
+  }
+`

@@ -56,6 +56,12 @@
         "iconClass": "",
         "path": "/our-work/rd-programs/",
         "onClick": null
+      },
+      {
+        "itemTitle": "News",
+        "iconClass": "",
+        "path": "/our-work/news/",
+        "onClick": null
       }
     ]
   },

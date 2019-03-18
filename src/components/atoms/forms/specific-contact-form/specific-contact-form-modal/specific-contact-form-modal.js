@@ -114,11 +114,13 @@ const SpecificContactFormModal = class extends Component {
   }
 
   postSpecificForm = (e) => {
-    console.log('hit')
     e.preventDefault()
     this.setState({loading: true})
 
     let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "sendto": this.props.sendto}
+    // if(document.getElementById('sc-file-input')) {
+    //   data["files"] = document.getElementById('sc-file-input').files
+    // }
 
     console.log(data)
     axios({
@@ -257,6 +259,21 @@ const SpecificContactFormModal = class extends Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
+            {/* {this.props.allowfiles &&
+              <Col xs={12}>
+                <Form.Group>
+                  <Form.Label>Upload Files</Form.Label>
+                  <Form.Control
+                    id="sc-file-input"
+                    type="file" 
+                    multiple={true}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter a message.
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Col>
+            } */}
           </Row>
         </Form>
       </Modal.Body>

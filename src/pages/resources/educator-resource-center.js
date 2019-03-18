@@ -178,6 +178,12 @@ const EducatorResourceCenter = class extends Component {
                           <Card.Img
                             className="erc-card-img"
                             variant="top"
+                            style={{
+                                minHeight: '260.98px',
+                                backgroundColor: 'rgba(41, 52, 118, 1)',
+                                borderTopLeftRadius: '4px',
+                                borderTopRightRadius: '4px'
+                            }}
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
                           />

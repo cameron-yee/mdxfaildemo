@@ -3,12 +3,14 @@ import React from 'react'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
+import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
+import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 
 const EmploymentOpportunitiesPage = (props) => {
   return (
@@ -23,8 +25,12 @@ const EmploymentOpportunitiesPage = (props) => {
             </p>
             <p>
               BSCS offers a flexible and inclusive work environment, with a strong commitment to the professional growth of all staff. Our office is in Colorado Springs, the #2 city in US News & World Report’s 2018 Best Places to Live. Located along the Front Range of the Rockies one hour south of Denver, Colorado Springs is known for a mild climate, a vibrant arts community, and year-round outdoor recreation.
-              Not seeing a job opening that aligns with your qualifications? If you're a science educator or science education researcher interested in working with us, please send your resume and a brief bio to careers@bscs.org. We'll be happy to keep your information on file.
+              Not seeing a job opening that aligns with your qualifications? If you're a science educator or science education researcher interested in working with us, please contact BSCS Careers.
+              {/* send your resume and a brief bio to careers@bscs.org. We'll be happy to keep your information on file. */}
             </p>
+            <SpecificContactForm sendto="BSCS Careers">
+              <Button variant="outline-secondary">Contact BSCS Careers</Button>
+            </SpecificContactForm>
           </Col>
         </Row>
       </Container>
