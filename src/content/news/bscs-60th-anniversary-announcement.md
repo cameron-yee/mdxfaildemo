@@ -1,5 +1,5 @@
 ---
-date: 2019-03-19T15:45:40.892Z
+date: 2018-03-14T15:45:40.892Z
 title: BSCS 60th Anniversary Announcement
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-60th-anniversary-announcement
@@ -8,6 +8,7 @@ seoLang: en-us
 sidebarURL: >-
   https://myemail.constantcontact.com/BSCS-60th-Anniversary-Announcement.html?soid=1126116988583&aid=StYqO0SJr-Y
 sidebarButtonText: Email Announcement
+sidebarContactsText: Questions?
 sidebarContacts:
   - Lauren Novo
 page: news
