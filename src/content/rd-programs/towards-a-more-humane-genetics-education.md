@@ -3,27 +3,23 @@ date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
 areas:
   - Research
-image: /assets/rd-programs/humane-genetics.svg
-alt: Humane Genetics Icon
-page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
+seoCanonicalUrl: >-
+  https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
 seoDescription: Test SEO description.
 seoLang: en-us
-sidebarContactsText: For more information, please contact Dr. Brian Donovan.
+image: /assets/rd-programs/humane-genetics.svg
+alt: Humane Genetics Icon
+sidebarContactsText: 'For more information, please contact Dr. Brian Donovan.'
 sidebarContacts:
   - Brian Donovan
-# sidebarButtonText: Learn More Here 
-# sidebarURL: http://datanuggets.org/
 sortOrder: 2
+page: rd-programs
 ---
-
 The Issue
 Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions(4-5, 7-8):
 
 1. People of the same racial group are genetically uniform.
-
 2. People of disparate races are categorically different.
-
 3. Biologically-influenced abilities cannot change.
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
@@ -46,27 +42,16 @@ For a deeper dive into our line of research, review our [research statement](htt
 
 Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, [here](https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10).
 
- 
-Forthcoming -
+Published -
 
-1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (accepted) Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations Science Education.
-
-2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (in press) [Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities](https://media.bscs.org/human/gendered_genetics.pdf). Science Education. 
-
-Published - 
-
-3. Donovan, B.M. (2018). [Looking backwards to move biology education toward its humanitarian potential: A review of Darwinism, Democracy, and Race](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21480). Science Education. 
-
-4. Donovan, B. M. (2017) [Learned inequality: Racial labels in the biology curriculum can affect the development of racial prejudice](https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21370). Journal of Research in Science Teaching. 54(3), 379-411. 
-
-5. Donovan, B. M. (2016). [Framing the genetics curriculum to support social justice: An experimental exploration of how the biology curriculum influences students’ beliefs about the racial achievement gap](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21221). Science Education. 100(3), 586-616. 
-
-6. Donovan, B. M. (2015a). [Putting humanity back into the teaching of human biology](https://www.sciencedirect.com/science/article/pii/S1369848615000138). Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences. 52, 65-75. 
-
-7. Donovan, B. M. (2015b). [Reclaiming race as a topic of the United States biology curriculum](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173). Science Education. 99(6) 1092-1117. 
-
-8. Donovan, B. M. (2014). [Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race](https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138). Journal of Research in Science Teaching, 51(4), 462–496. 
-
+1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) [Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations](https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506). _Science Education_.
+2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (2019) [Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities](https://media.bscs.org/human/gendered_genetics.pdf). _Science Education_. 
+3. Donovan, B.M. (2018). [Looking backwards to move biology education toward its humanitarian potential: A review of Darwinism, Democracy, and Race](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21480). _Science Education_. 
+4. Donovan, B. M. (2017) [Learned inequality: Racial labels in the biology curriculum can affect the development of racial prejudice](https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21370). _Journal of Research in Science Teaching_. 54(3), 379-411. 
+5. Donovan, B. M. (2016). [Framing the genetics curriculum to support social justice: An experimental exploration of how the biology curriculum influences students’ beliefs about the racial achievement gap](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21221). _Science Education_. 100(3), 586-616. 
+6. Donovan, B. M. (2015a). [Putting humanity back into the teaching of human biology](https://www.sciencedirect.com/science/article/pii/S1369848615000138). _Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences_. 52, 65-75. 
+7. Donovan, B. M. (2015b). [Reclaiming race as a topic of the United States biology curriculum](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173). _Science Education_. 99(6) 1092-1117. 
+8. Donovan, B. M. (2014). [Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race](https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138). _Journal of Research in Science Teaching_, 51(4), 462–496. 
 9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). [Revising the Economic Imperative for US STEM Education](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001760). PLoS Biology, 12(1), e1001760.
 
 <div class="d-flex justify-content-center">
