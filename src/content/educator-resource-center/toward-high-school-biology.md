@@ -8,7 +8,9 @@ seoLang: en-us
 type: Classroom Instruction
 template: Image Left
 image: /assets/cospgs.jpg
-alt: PLACEHOLDER
+alt: >-
+  adolescent girl with long hair and burgundy t-shirt looking through white
+  microscope
 courseId: 0
 gradeLevel:
   - High
