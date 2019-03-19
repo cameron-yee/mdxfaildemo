@@ -15,15 +15,16 @@ sidebarContacts:
   - Jody Bintz
 sidebarContactsTitle: Questions?
 page: upcoming-programs-teacher-professional-learning
-alt: Woman writing on classroom table.
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/woman-writing.jpg
 ---
 Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 
-## 
+### Details - 
+Dates: October 1-4, 2019
+Location: BSCS Science Learning
+Cost: $1,000 to register
+Registration Deadline: September 1, 2019 
 
 ##### Why participate?
-
 High quality science education is more crucial than ever. Teachers must prepare students to thrive within a competitive 21st century workforce, where scientific reasoning and critical thinking skills are the price of entry. PD Provider Institutes will increase your ability to effectively support teachers as they navigate their way through evolving science education standards and practices.
 
 **Benefits**
