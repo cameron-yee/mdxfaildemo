@@ -7,8 +7,8 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
 template: Image Left
-image: https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg
-alt: PLACEHOLDER
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg'
+alt: women watching video of a child on a large screen
 courseId: 0
 gradeLevel:
   - Elementary
