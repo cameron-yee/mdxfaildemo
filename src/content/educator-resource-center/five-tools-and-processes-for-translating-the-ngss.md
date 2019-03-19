@@ -7,11 +7,8 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: District Planning
 template: Image Left
-image: >-
-  https://media.bscs.org/bscsmw/educator-resource-center/teachers-in-classroom.jpg
-alt: >-
-  science teachers sitting at round tables in large classroom listening to
-  institute leader
+image: https://media.bscs.org/bscsmw/educator-resource-center/teachers-in-classroom.jpg
+alt: science teachers sitting at round tables in large classroom listening to institute leader
 courseId: 0
 page: educator-resource-center
 ---

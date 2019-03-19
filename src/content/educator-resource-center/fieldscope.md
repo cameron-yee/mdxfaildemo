@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Citizen Science
 template: Image Left
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg'
+image: https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg
 alt: two young female students in the desert studying a giant cactus
 courseId: 0
 discipline: Multidisciplinary Sciences

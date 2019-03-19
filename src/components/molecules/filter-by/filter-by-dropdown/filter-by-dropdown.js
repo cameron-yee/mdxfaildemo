@@ -30,7 +30,8 @@ const FilterByDropdown = class extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.props.activeFilters !== prevProps.activeFilters || this.props.filterHash !== prevProps.filterHash) {
+    // if(this.props.activeFilters !== prevProps.activeFilters || this.props.filterHash !== prevProps.filterHash) {
+    if(this.props.activeFilters !== prevProps.activeFilters) {
       this.setUpdatedFilters(this.props.activeFilters)
       const active_filters = this.checkIfFiltersActive(this.props.activeFilters)
       if(active_filters) {
@@ -72,15 +73,18 @@ const FilterByDropdown = class extends Component {
         if(Array.isArray(current_filter) && current_filter.length) {
           //Loops through each matchable value in a category of matchable values for each DOM element
           for(let x = 0; x < current_filter.length; x++) {
-            if(updated_filters.includes(current_filter[x]) && (!this.props.filterHash || (this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))))) {
+            // if(updated_filters.includes(current_filter[x]) && (!this.props.filterHash || (this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))))) {
+            if(updated_filters.includes(current_filter[x])) {
               show = displayElement(elem) // show = true
               break;
-            } else if(updated_filters.includes(current_filter[x]) && !this.props.filterHash) {
+            // } else if(updated_filters.includes(current_filter[x]) && !this.props.filterHash) {
+            } else if(updated_filters.includes(current_filter[x])) {
               show = displayElement(elem) // show = true
               break;
             }
           }
-        } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && (!this.props.filterHash || (this.props.filterHash && this.props.filterHash.replace('#', '') === (undefined || filter_category)))) {
+        // } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && (!this.props.filterHash || (this.props.filterHash && this.props.filterHash.replace('#', '') === (undefined || filter_category)))) {
+        } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter)) {
           show = displayElement(elem) // show = true
           break;
         }
@@ -97,10 +101,10 @@ const FilterByDropdown = class extends Component {
     if(Array.isArray(updated_filters) && updated_filters.length === 0) {
       for(let i = 0; i < this.search_items.length; i++) {
         let elem = document.getElementById(this.search_items[i][0]);
-        if(this.props.filterHash === undefined || elem.getAttribute('data-type').toLowerCase().replace(' ', '-') === this.props.filterHash.replace('#', '').replace(' ', '-')) {
-          elem.style.display = ''
-          elem.parentElement.style.display = ''
-        }
+        // if(this.props.filterHash === undefined || elem.getAttribute('data-type').toLowerCase().replace(' ', '-') === this.props.filterHash.replace('#', '').replace(' ', '-')) {
+        elem.style.display = ''
+        elem.parentElement.style.display = ''
+        // }
       }
       return false;
     } else {

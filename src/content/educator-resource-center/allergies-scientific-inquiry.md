@@ -7,7 +7,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
 template: Image Right
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg'
+image: https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg
 alt: close-up of yellow flower with pollen
 courseId: 0
 gradeLevel:

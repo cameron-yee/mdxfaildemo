@@ -14,7 +14,7 @@ const Category = class extends Component {
         className="d-flex flex-column justify-content-center"
         id={this.props.category.title.toLowerCase().replace(/ /g, "-")}
         to={this.props.category.path}
-        onClick={(e) => this.setCategoryFilter(e, this.props.category.title.toLowerCase())}
+        onClick={(e) => this.setCategoryFilter(e, this.props.category.title)}
       >
         <div className="d-flex flex-column">
           <div className="d-flex flex-row justify-content-center">

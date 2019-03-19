@@ -38,7 +38,7 @@ const FieldTestOpportunitiesPage = class extends Component {
                       Are you looking for new K-12 science curriculum materials? Are you interested in newly-developed teacher professional learning programs? Would your school or district be willing to test these materials and approaches in classroom settings?
                     </p>
                     <p>
-                      BSCS Science Learning offers a wide range of field-test opportunities for teachers, principals, and district leaders to consider. An important part of our process is to elicit teacher and student feedback on the usability and feasibility of our materials and programs. See what’s currently available below. If we do not presently offer a relevant opportunity for you, please feel free to reach out about how you can work with us (hyperlink to partner page) in the future.
+                      BSCS Science Learning offers a wide range of field-test opportunities for teachers, principals, and district leaders to consider. An important part of our process is to elicit teacher and student feedback on the usability and feasibility of our materials and programs. See what’s currently available below. If we do not presently offer a relevant opportunity for you, please feel free to reach out about how you can <Link to="/connect/work-with-us/">work with us</Link> in the future.
                     </p>
                   </Col>
                 </Row>
@@ -117,7 +117,12 @@ export default props => (
 
 export const query = graphql`
 {
-  allMarkdownRemark(filter: {frontmatter: { page: {eq: "upcoming-programs-field-test-opportunities"}}}) {
+  allMarkdownRemark(
+    filter: {frontmatter: { page: {eq: "upcoming-programs-field-test-opportunities"}}},
+    sort: {
+      fields: [frontmatter___sortOrder, frontmatter___date]
+    }
+  ) {
     edges {
       node {
         html
@@ -134,7 +139,8 @@ export const query = graphql`
           sidebarRegisterURL,
           sidebarRegisterText,
           sidebarRegisterTitle,
-          title
+          sortOrder,
+          title,
           page
         }
       }

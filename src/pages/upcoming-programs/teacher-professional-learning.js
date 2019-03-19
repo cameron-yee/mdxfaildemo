@@ -17,7 +17,7 @@ import './teacher-professional-learning.scss'
 import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
-import logo from '../../images/bscs_logo.svg'
+// import logo from '../../images/bscs_logo.svg'
 // import SearchBy from '../../components/atoms/search-by/search-by'
 // import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
 // import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
@@ -201,7 +201,12 @@ export default props => (
 
 export const query = graphql`
 {
-  allMarkdownRemark(filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}) {
+  allMarkdownRemark(
+    filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}
+    sort: {
+      fields: [frontmatter___sortOrder, frontmatter___date]
+    }
+  ) {
     edges {
       node {
         html
@@ -220,7 +225,8 @@ export const query = graphql`
           sidebarRegisterURL,
           sidebarRegisterText,
           sidebarRegisterTitle,
-          title
+          sortOrder,
+          title,
           page
         }
       }

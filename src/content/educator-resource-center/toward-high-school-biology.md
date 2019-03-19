@@ -6,11 +6,9 @@ seoCanonicalUrl: >-
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
-template: Image Left
-image: /assets/cospgs.jpg
-alt: >-
-  adolescent girl with long hair and burgundy t-shirt looking through white
-  microscope
+template: Image Right
+image: https://media.bscs.org/bscsmw/educator-resource-center/adolescent-girl.jpg
+alt: adolescent girl with long hair and burgundy t-shirt looking through white microscope
 courseId: 0
 gradeLevel:
   - High
