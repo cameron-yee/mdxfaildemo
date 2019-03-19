@@ -13,10 +13,6 @@ sidebarContacts:
   - Lauren Novo
 page: news
 ---
-March 14, 2018
-
-
-
 Dear Friends, 
 
 For BSCS, 2018 is an especially exciting year—it marks the 60th anniversary of our storied organization. 
