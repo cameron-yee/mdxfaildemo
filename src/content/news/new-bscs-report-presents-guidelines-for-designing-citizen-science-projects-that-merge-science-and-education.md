@@ -30,16 +30,16 @@ The report is organized around a framework of 12 valued scientific and education
 
 The report is freely available here: https://bscs.org/tech-report/2018-1 
 
-For more information, please contact: Lauren Novo at lnovo@bscs.org.
+For more information, please contact: Lauren Novo
 
 \###
 
 **About BSCS Science Learning**
 
-BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. Over the last 60 years, BSCS has brought the experience of inquiry learning to millions of students and teachers. Today, BSCS conducts research on how to improve science teaching and learning, develops research-based instructional materials, delivers professional learning programs for educators, and conducts leadership development programs for schools and districts. Learn more at bscs.org. 
+BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. Over the last 60 years, BSCS has brought the experience of inquiry learning to millions of students and teachers. Today, BSCS conducts research on how to improve science teaching and learning, develops research-based instructional materials, delivers professional learning programs for educators, and conducts leadership development programs for schools and districts.
 
-BSCS is transforming the way organizations and community members engage in citizen science through an interactive platform called FieldScope. With FieldScope, organizers of field studies can leverage sophisticated graphing and mapping visualization tools and resources to enhance their existing and future citizen science projects. Participants of all ages and backgrounds can then conveniently upload measurements, observations, and media to a shared project database. Learn more at fieldscope.org. 
+BSCS is transforming the way organizations and community members engage in citizen science through an interactive platform called FieldScope. With FieldScope, organizers of field studies can leverage sophisticated graphing and mapping visualization tools and resources to enhance their existing and future citizen science projects. Participants of all ages and backgrounds can then conveniently upload measurements, observations, and media to a shared project database. Learn more at [fieldscope.org](http://www.fieldscope.org/). 
 
 **About The Pisces Foundation** 
 
-The Pisces Foundation believes if we act now and boldly, we can quickly accelerate to a world where people and nature thrive together. Pisces mainstreams powerful new solutions to support innovators who know what it takes and are doing what’s necessary to have clean and abundant water, a safe climate, and kids with the environmental know-how to create a sustainable world. To learn more about Pisces’ work and collaborations visit: http://piscesfoundation.org/
+The Pisces Foundation believes if we act now and boldly, we can quickly accelerate to a world where people and nature thrive together. Pisces mainstreams powerful new solutions to support innovators who know what it takes and are doing what’s necessary to have clean and abundant water, a safe climate, and kids with the environmental know-how to create a sustainable world. To learn more about Pisces’ work and collaborations visit [piscesfoundation.org](https://piscesfoundation.org/).
