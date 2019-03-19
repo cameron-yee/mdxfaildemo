@@ -24,14 +24,14 @@ const path = require("path")
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const researchResourceCenterPages = new Promise((resolve, reject) => {
-    const markdownTemplate = path.resolve(`src/templates/research-resource-center-template.js`)
+  const reportsPages = new Promise((resolve, reject) => {
+    const markdownTemplate = path.resolve(`src/templates/reports-template.js`)
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
         `query MarkdownPagesQuery {
           allMarkdownRemark(
-            filter: {frontmatter: { page: {eq: "research-resource-center"}}}
+            filter: {frontmatter: { page: {eq: "reports"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
             edges {
@@ -399,7 +399,7 @@ exports.createPages = ({ graphql, actions }) => {
     leadershipPages,
     newsPages,
     rdProgramsPages,
-    researchResourceCenterPages,
+    reportsPages,
     upcomingProgramsTeacherProfessionalLearningPages,
     upcomingProgramsLeadershipDevelopmentPages,
     upcomingProgramsFieldTestOpportunitiesPages

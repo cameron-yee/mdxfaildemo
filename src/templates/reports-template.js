@@ -11,9 +11,9 @@ import Col from 'react-bootstrap/Col'
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
 import '../global-scss/index.scss';
-import './research-resource-center-template.scss'
+import './reports-template.scss'
 
-const ResearchResourceCenterTemplate = class extends Component {
+const ReportsTemplate = class extends Component {
   constructor(props) {
     super(props)
     this.html = this.props.data.markdownRemark.html
@@ -61,7 +61,7 @@ const ResearchResourceCenterTemplate = class extends Component {
 
 export default props => (
   <Location>
-    {locationProps => <ResearchResourceCenterTemplate {...locationProps} {...props} />}
+    {locationProps => <ReportsTemplate {...locationProps} {...props} />}
   </Location>
 )
 

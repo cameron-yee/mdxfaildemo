@@ -8,7 +8,7 @@ seoLang: en-us
 type: Classroom Instruction
 template: Image Right
 image: https://media.bscs.org/bscsmw/educator-resource-center/girls-in-classroom.jpg
-alt: PLACEHOLDER
+alt: girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in classroom with other girls 
 courseId: 0
 gradeLevel:
   - Middle

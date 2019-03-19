@@ -8,7 +8,7 @@ seoLang: en-us
 type: Classroom Instruction
 template: Image Right
 image: https://media.bscs.org/bscsmw/educator-resource-center/adolescent-girl.jpg
-alt: PLACEHOLDER
+alt: adolescent girl with long hair and burgundy t-shirt looking through white microscope
 courseId: 0
 gradeLevel:
   - High

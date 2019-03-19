@@ -38,7 +38,7 @@ const LeadershipDevelopmentPage = class extends Component {
                       Are you a science education leader or provider of professional learning services who is looking to support teachers’ professional growth? Would you like a deeper understanding of how to help teachers enact the Next Generation Science Standards (NGSS)? Could you benefit from tools and processes that prepare teams of educators to evaluate, select, and implement instructional materials designed for next generation science?
                     </p>
                     <p>
-                      BSCS Science Learning offers a wide range of professional learning opportunities for science education leaders and professional learning providers. See what’s currently available below. If we do not presently offer a relevant opportunity for you, please feel free to reach out about how you can work with us (hyperlink to partner page) in the future.
+                      BSCS Science Learning offers a wide range of professional learning opportunities for science education leaders and professional learning providers. See what’s currently available below. If we do not presently offer a relevant opportunity for you, please feel free to reach out about how you can <Link to="/connect/work-with-us/">work with us</Link> in the future.
                     </p>
                   </Col>
                 </Row>
@@ -117,7 +117,12 @@ export default props => (
 
 export const query = graphql`
 {
-  allMarkdownRemark(filter: {frontmatter: { page: {eq: "upcoming-programs-leadership-development"}}}) {
+  allMarkdownRemark(
+    filter: {frontmatter: { page: {eq: "upcoming-programs-leadership-development"}}}
+    sort: {
+      fields: [frontmatter___sortOrder, frontmatter___date]
+    }
+  ) {
     edges {
       node {
         html
@@ -134,7 +139,8 @@ export const query = graphql`
           sidebarRegisterURL,
           sidebarRegisterText,
           sidebarRegisterTitle,
-          title
+          sortOrder,
+          title,
           page
         }
       }

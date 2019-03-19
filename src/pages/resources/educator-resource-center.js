@@ -36,7 +36,7 @@ const EducatorResourceCenter = class extends Component {
       programLength: ['Program Length', false, ['Full Year', 'Modules']]
     }
     this.state = {
-      filterHash: undefined,
+      // filterHash: undefined,
       activeFilters: [],
       imagesLoaded: false
     }
@@ -90,9 +90,11 @@ const EducatorResourceCenter = class extends Component {
                 </Col>
               </Row>
               <ResourceCategories
-                navigate={false}
-                filterHash={this.state.filterHash}
-                setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
+                // navigate={false}
+                // filterHash={this.state.filterHash}
+                // setFilterHash={(filter_hash) => {this.setState({filterHash: filter_hash})}}
+                activeFilters={this.state.activeFilters}
+                setActiveFilters={(activeFilters) => {this.setState({activeFilters: activeFilters})}}
               />
               <hr />
             </Container>
@@ -106,18 +108,18 @@ const EducatorResourceCenter = class extends Component {
                 <div className="p-2 ml-auto">
                   <FilterByDropdown
                     items={this.filter_items}
-                    filterHash={this.state.filterHash}
+                    // filterHash={this.state.filterHash}
                     activeFilters={this.state.activeFilters}
                     setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
                   />
                 </div>
               </div>
-              {this.state.activeFilters.length > 0 &&
+              {/* {this.state.activeFilters.length > 0 && */}
                 <FilterByRow
                   activeFilters={this.state.activeFilters}
                   setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
                 />
-              }
+              {/* } */}
               <hr />
             </Container>
           </section>
@@ -148,7 +150,7 @@ const EducatorResourceCenter = class extends Component {
                         <Card 
                           id={`resource-${index}`}
                           data-filter={JSON.stringify(data_filter)} 
-                          data-type={edge.node.frontmatter.type}
+                          // data-type={edge.node.frontmatter.type}
                           className="h-100 erc-card"
                           // style={{display: 'none'}}
                         >
@@ -245,7 +247,7 @@ export const educatorResourceQuery = graphql`
     allMarkdownRemark(
       filter: {frontmatter: { page: {eq: "educator-resource-center"}}}
       sort: {
-        fields: frontmatter___title,
+        fields: [frontmatter___sortOrder, frontmatter___title],
       }
     ) {
       edges {
@@ -262,6 +264,7 @@ export const educatorResourceQuery = graphql`
             image,
             price,
             programLength,
+            sortOrder,
             title,
             type,
             page

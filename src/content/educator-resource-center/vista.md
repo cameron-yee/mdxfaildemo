@@ -8,7 +8,7 @@ seoLang: en-us
 type: Professional Learning
 template: Image Left
 image: https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
-alt: PLACEHOLDER
+alt: teacher in green sweater talking to her young students with two men filming her teach
 courseId: 0
 page: educator-resource-center
 ---

@@ -54,7 +54,7 @@ const LeadershipDevelopmentTemplate = class extends Component {
                     <Card style={{marginBottom: '1rem'}}>
                       <Card.Body>
                         { this.program.sidebarRegisterTitle &&
-                          <Card.Title>Resource Information</Card.Title>
+                          <Card.Title>{this.program.sidebarRegisterTitle}</Card.Title>
                         }
                         { this.program.sidebarRegisterText &&
                           <Card.Text style={{fontSize: '1rem'}}>

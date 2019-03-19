@@ -7,7 +7,7 @@ seoLang: en-us
 type: Professional Learning
 template: Image Right
 image: https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg
-alt: PLACEHOLDER
+alt: multiple white windmills on a snowy hill with blue skies and white clouds
 courseId: 0
 discipline: Earth Sciences
 page: educator-resource-center

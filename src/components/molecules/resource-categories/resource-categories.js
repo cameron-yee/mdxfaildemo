@@ -58,28 +58,41 @@ const ResourceCategories = class extends Component {
     }
   }
 
+  setUpdatedFilters = (title, updated_filters) => {
+    for(let key in this.state.categories) {
+      if(updated_filters.includes(this.state.categories[key].title) && this.state.categories[key].title !== title) {
+        updated_filters.splice(updated_filters.indexOf(this.state.categories[key].title), 1)
+      }
+    }
+
+    this.props.setActiveFilters(updated_filters)
+  }
+
   categoryFilter = (e, title) => {
     try {
       if(e !== undefined) {
         e.preventDefault()
       }
 
-      this.props.setFilterHash(title)
+      if(this.props.activeFilters.includes(title) === false) {
+        let updated_filters = this.props.activeFilters.concat(title)
+        this.setUpdatedFilters(title, updated_filters)
+      }
 
       let id, elem
       e !== undefined ? elem = e.target : elem = document.getElementById(title.replace('#','').replace(' ', '-')) 
 
-      if(this.props.navigate) {
-          window.location.href = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
-      } else if(window.history.pushState) {
-          window.history.pushState(null, null, (elem.getAttribute('href') || elem.parentElement.getAttribute('href')))
-      } else {
-          window.location.hash = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
-      }
+      // if(this.props.navigate) {
+      //     window.location.href = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
+      // } else if(window.history.pushState) {
+      //     window.history.pushState(null, null, (elem.getAttribute('href') || elem.parentElement.getAttribute('href')))
+      // } else {
+      //     window.location.hash = elem.getAttribute('href') || elem.parentElement.getAttribute('href')
+      // }
 
       if(e !== undefined) {
-        id = elem.getAttribute('id') || elem.parentElement.getAttribute('id')
-        console.log(true)
+        // id = elem.getAttribute('id') || elem.parentElement.getAttribute('id')
+        id = elem.closest('a').getAttribute('id')
         document.getElementById(id).scrollIntoView({behavior: "smooth", block: "start"})
       }
 
@@ -87,16 +100,16 @@ const ResourceCategories = class extends Component {
       console.log(e)
     }
     
-    let courses = document.getElementsByClassName('card')
-    for(let i = 0; i < courses.length; i++) {
-      if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
-        courses[i].style.display = 'none'
-        courses[i].parentElement.style.display = 'none'
-      } else {
-        courses[i].style.display = ''
-        courses[i].parentElement.style.display = ''
-      }
-    }
+    // let courses = document.getElementsByClassName('card')
+    // for(let i = 0; i < courses.length; i++) {
+    //   if(courses[i].getAttribute('data-type').toLowerCase().replace(' ', '-') !== title.replace('#', '').replace(' ', '-')) {
+    //     courses[i].style.display = 'none'
+    //     courses[i].parentElement.style.display = 'none'
+    //   } else {
+    //     courses[i].style.display = ''
+    //     courses[i].parentElement.style.display = ''
+    //   }
+    // }
 
   }
 
@@ -118,9 +131,12 @@ const ResourceCategories = class extends Component {
 }
 
 ResourceCategories.propTypes = {
-  navigate: PropTypes.bool.isRequired,
-  filterHash: PropTypes.string,
-  setFilterHash: PropTypes.func.isRequired
+  // navigate: PropTypes.bool.isRequired,
+  // filterHash: PropTypes.string,
+  // setFilterHash: PropTypes.func.isRequired
+  activeFilters: PropTypes.array.isRequired,
+  setActiveFilters: PropTypes.func.isRequired,
+  // categoryFilter: PropTypes.func.isRequired
 }
 
 export default ResourceCategories

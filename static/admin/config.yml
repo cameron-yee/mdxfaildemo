@@ -33,13 +33,14 @@ collections:
           - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
           - { name: discipline, label: Discipline, widget: select, multiple: true, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
           - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: additionalTags, label: Additional Tags, widget: list, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: educator-resource-center }
 
-    - name: research-resource-center
-      label: Research Resource Center
-      folder: src/content/research-resource-center
+    - name: reports
+      label: Reports
+      folder: src/content/reports
       create: true
       extension: md
       fields:
@@ -52,6 +53,7 @@ collections:
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: research-resource-center }
 
@@ -106,7 +108,7 @@ collections:
             required: false
           }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          # - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: news }
@@ -167,6 +169,7 @@ collections:
           required: false
         }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
@@ -191,6 +194,7 @@ collections:
           required: false
         }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
@@ -215,6 +219,7 @@ collections:
           required: false
         }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }

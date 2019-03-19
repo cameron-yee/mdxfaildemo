@@ -7,7 +7,7 @@ seoLang: en-us
 type: Classroom Instruction
 template: Image Right
 image: https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg
-alt: PLACEHOLDER
+alt: close-up of yellow flower with pollen
 courseId: 0
 gradeLevel:
   - Middle
