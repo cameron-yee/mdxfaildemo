@@ -8,7 +8,7 @@ seoLang: en-us
 type: Classroom Instruction
 template: Image Left
 image: /assets/cospgs.jpg
-alt: Alt text
+alt: PLACEHOLDER
 courseId: 0
 gradeLevel:
   - High
