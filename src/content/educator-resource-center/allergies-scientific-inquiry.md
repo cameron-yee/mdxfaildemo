@@ -13,6 +13,7 @@ courseId: 0
 gradeLevel:
   - Middle
 page: educator-resource-center
+price: null
 ---
 Allergies affect more than 50 million Americans, and are among the leading causes of chronic disease in the US. One in every 13 children, roughly two students in every classroom, have allergies to food.  
 

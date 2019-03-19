@@ -9,7 +9,8 @@ template: Image Left
 image: https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg
 alt: two young female students in the desert studying a giant cactus
 courseId: 0
-discipline: Multidisciplinary Sciences
+discipline:
+  - Multidisciplinary Sciences
 page: educator-resource-center
 ---
 Why is citizen science important? Not only does it allow communities to play a role in advancing scientific knowledge, it empowers individuals of all ages to make meaningful observations and learn about their natural environments. BSCS Science Learning’s interactive platform called FieldScope is transforming the way educators, community members, and organizations engage in citizen science. 

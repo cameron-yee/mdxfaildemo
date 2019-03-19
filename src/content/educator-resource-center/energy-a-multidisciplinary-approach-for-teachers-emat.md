@@ -9,7 +9,8 @@ template: Image Right
 image: https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg
 alt: multiple white windmills on a snowy hill with blue skies and white clouds
 courseId: 0
-discipline: Earth Sciences
+discipline:
+  - Earth Sciences
 page: educator-resource-center
 ---
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.

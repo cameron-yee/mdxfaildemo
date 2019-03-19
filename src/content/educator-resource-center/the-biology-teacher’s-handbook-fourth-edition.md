@@ -13,7 +13,8 @@ courseId: 0
 gradeLevel:
   - Middle
   - High
-discipline: Life Sciences
+discipline:
+  - Life Sciences
 page: educator-resource-center
 ---
 Where has biology teaching been, and where is it going? How can I create a culture of scientific inquiry in my classroom? How do I teach controversial questions? Biology educators will discover the answers to these and other key questions in The Biology Teacher’s Handbook, Fourth Edition. 

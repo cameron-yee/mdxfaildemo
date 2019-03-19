@@ -46,8 +46,8 @@ const EducatorResourceCenterTemplate = class extends Component {
               <Row>
                 <Col>
                   <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
-                  {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
-                  {this.resource.price === 0.0 && (<p><strong>Price: </strong>Free</p>)}
+                  {/* {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
+                  {this.resource.price === 0.0 && (<p><strong>Price: </strong>Free</p>)} */}
                   {/* {this.resource.courseId !== null && this.resource.courseId !== 0 && <CanvasRegister courseId={this.resource.courseId} />} */}
                 </Col>
               </Row>
@@ -76,7 +76,7 @@ export const query = graphql`
         discipline,
         gradeLevel,
         image,
-        price,
+        # price,
         programLength,
         seoCanonicalUrl,
         seoDescription,

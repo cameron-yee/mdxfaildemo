@@ -12,7 +12,8 @@ alt: girl with blonde hair tied in a bun and burgundy hoodie sitting at a table 
 courseId: 0
 gradeLevel:
   - Middle
-discipline: Multidisciplinary Sciences
+discipline: 
+  - Multidisciplinary Sciences
 page: educator-resource-center
 ---
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students. 

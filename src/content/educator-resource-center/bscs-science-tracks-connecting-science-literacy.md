@@ -12,7 +12,8 @@ alt: PLACEHOLDER
 courseId: 0
 gradeLevel:
   - Elementary
-discipline: Multidisciplinary Sciences
+discipline: 
+  - Multidisciplinary Sciences
 page: educator-resource-center
 ---
 Children are naturally inquisitive. That is one of the many reasons why it is important to engage students in science at a young age. With access to a high quality science education, students can channel their curiosities to help make sense of the world around them.
