@@ -13,15 +13,13 @@ page: upcoming-programs-teacher-professional-learning
 ---
 The Five Tools and Processes for Translating the NGSS are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision. At the heart of the Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence. 
 
-
-
 #### Dates
 
-* Uber Leaders (Meeting 1) - June 13/14
+* Uber Leaders (Meeting 1) - June 13/14, 2019
 * Tool 1 & 2 (Meeting 2) - August 21-24, 2019
-* ASTA Conference - Last week Oct / First week Nov
-* Tool 3 & 4 (Meeting 3) - Oct 10th -12 or Oct 17-19
-* Finalize Units (Meeting 4) - 2020: March 2nd or  March 9th  
+* ASTA Conference - Last week October / First week November 2019
+* Tool 3 & 4 (Meeting 3) - October 10-12 or October 17-19, 2019
+* Finalize Units (Meeting 4) - March 2 or  March 9, 2020  
 * Tool 5 (Meeting 5) - June 8-9, 2020
 
 **Goals and Outcomes** 
