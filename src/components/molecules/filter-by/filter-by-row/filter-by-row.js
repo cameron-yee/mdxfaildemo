@@ -20,30 +20,33 @@ const FilterByRow = class extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <hr /> */}
-        {/* <Row>
-          <Col xs={12} md={10}> */}
         <div className="d-sm-flex">
           <div className="p-2">
-          {/* </Col> 
-          <Col xs={12} md={2}> */}
             <Button size="sm" variant="outline-primary" onClick={this.reset}>Clear Filters</Button>
           </div>
           <div className="p-2">
             {
               this.props.activeFilters.map((filter, index) => {
-                return(
-                  <span key={`filter-${index}`} className="rd-pill badge badge-pill filter-pill">
-                    <i className="far fa-times-circle fa-lg remove-filter" onClick={() => this.removeFilter(filter)}></i>
-                    {filter}
-                  </span>
-                )
+                const category_filters = ['Classroom Instruction','Professional Learning','District Planning','Citizen Science']
+                if(category_filters.includes(filter)) {
+                  return(
+                    <span key={`filter-${index}`} className="rd-pill badge badge-pill filter-pill category">
+                      <i className="far fa-times-circle fa-lg remove-filter" onClick={() => this.removeFilter(filter)}></i>
+                      {filter}
+                    </span>
+                  )
+                } else {
+                  return(
+                    <span key={`filter-${index}`} className="rd-pill badge badge-pill filter-pill">
+                      <i className="far fa-times-circle fa-lg remove-filter" onClick={() => this.removeFilter(filter)}></i>
+                      {filter}
+                    </span>
+                  )
+                }
               })
             }
           </div>
         </div>
-          {/* </Col>  */}
-        {/* </Row> */}
       </React.Fragment>
     )
   }

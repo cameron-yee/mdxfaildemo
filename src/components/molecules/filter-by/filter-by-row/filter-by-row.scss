@@ -7,6 +7,10 @@
   background-color: rgb(94, 60, 124); 
   // background-color: #6f42c1;
   color: white !important;
+
+  &.category {
+    background-color: rgb(255, 159, 0); 
+  }
 }
 
 .remove-filter {

@@ -96,12 +96,10 @@ const RDPrograms = class extends Component {
                   />
                 </div>
               </div>
-              {this.state.activeFilters.length > 0 &&
-                <FilterByRow
-                  activeFilters={this.state.activeFilters}
-                  setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
-                />
-              }
+              <FilterByRow
+                activeFilters={this.state.activeFilters}
+                setActiveFilters={(activeFilters) => this.setState({activeFilters: activeFilters})}
+              />
               <hr />
             </Container>
           </section>

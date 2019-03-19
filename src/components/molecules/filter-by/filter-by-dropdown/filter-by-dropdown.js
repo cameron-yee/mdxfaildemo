@@ -11,6 +11,7 @@ import './filter-by-dropdown.scss'
 const FilterByDropdown = class extends Component {
   constructor(props) {
     super(props);
+    //Array of Arrays, [[elem_id, elem_json]]
     this.search_items = [];
   }
 
@@ -30,7 +31,6 @@ const FilterByDropdown = class extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // if(this.props.activeFilters !== prevProps.activeFilters || this.props.filterHash !== prevProps.filterHash) {
     if(this.props.activeFilters !== prevProps.activeFilters) {
       this.setUpdatedFilters(this.props.activeFilters)
       const active_filters = this.checkIfFiltersActive(this.props.activeFilters)
@@ -42,7 +42,6 @@ const FilterByDropdown = class extends Component {
 
   setUpdatedFilters = (updated_filters) => {
       this.props.setActiveFilters(updated_filters)
-      // this.setState({activeFilters: updated_filters})
       return updated_filters
   }
 
@@ -59,39 +58,61 @@ const FilterByDropdown = class extends Component {
       return false
     }
 
+    let activeCategoryFilter = false
+    const category_filters = ['Classroom Instruction','Professional Learning','District Planning','Citizen Science']
+    for(let i = 0; i < category_filters.length; i++) {
+      if(updated_filters.includes(category_filters[i])) {
+        activeCategoryFilter = category_filters[i] 
+        break;
+      }
+    }
+
     //Loops through searchable elements in DOM
     for(let i = 0; i < this.search_items.length; i++) {
       const resource_json = this.search_items[i][1] 
       let elem = document.getElementById(this.search_items[i][0]);
       let show = false
 
-      //Loops through matchable values for each DOM element
-      for(var key in resource_json) {
-        const current_filter = resource_json[key]
-        let filter_category;
-        'type' in resource_json ? filter_category = resource_json['type'].toLowerCase() : filter_category = undefined
-        if(Array.isArray(current_filter) && current_filter.length) {
-          //Loops through each matchable value in a category of matchable values for each DOM element
-          for(let x = 0; x < current_filter.length; x++) {
-            // if(updated_filters.includes(current_filter[x]) && (!this.props.filterHash || (this.props.filterHash && (this.props.filterHash.replace('#', '') === (undefined || filter_category))))) {
-            if(updated_filters.includes(current_filter[x])) {
-              show = displayElement(elem) // show = true
-              break;
-            // } else if(updated_filters.includes(current_filter[x]) && !this.props.filterHash) {
-            } else if(updated_filters.includes(current_filter[x])) {
-              show = displayElement(elem) // show = true
-              break;
+      //If a category filter exists, only show elements that have that filter as a type
+      if(
+        'type' in resource_json
+        && activeCategoryFilter
+        && activeCategoryFilter !== resource_json['type']
+      ) {
+        hideElement(elem) 
+      //If only a category filter exists since if length is 1 and activeCategory exists the updated_filters list must only be a category filter
+      } else if(
+        'type' in resource_json
+        && activeCategoryFilter
+        && activeCategoryFilter === resource_json['type']
+        && updated_filters.length === 1
+      ) {
+        show = displayElement(elem)
+      //After category filter checks, decide if elements should be displayed if there are multiple filters
+      //Elements should only display if they meet the category filter and at least one additional filter
+      } else {
+        //Loops through matchable values for each DOM element
+        for(var key in resource_json) {
+          const current_filter = resource_json[key]
+          if(Array.isArray(current_filter) && current_filter.length && key !== 'type') {
+            //Loops through each matchable value in a category of matchable values for each DOM element
+            for(let x = 0; x < current_filter.length; x++) {
+              if(updated_filters.includes(current_filter[x])) {
+                show = displayElement(elem) // show = true
+                break;
+              } else if(updated_filters.includes(current_filter[x])) {
+                show = displayElement(elem) // show = true
+                break;
+              }
             }
+          } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && key !== 'type') {
+            show = displayElement(elem) // show = true
+            break;
           }
-        // } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter) && (!this.props.filterHash || (this.props.filterHash && this.props.filterHash.replace('#', '') === (undefined || filter_category)))) {
-        } else if(typeof(current_filter) === 'string' && updated_filters.includes(current_filter)) {
-          show = displayElement(elem) // show = true
-          break;
         }
-      }
-      if(!show) {
-        // console.log(this.props.filterHash.replace('#', ''), updated_filters)
-        hideElement(elem)
+        if(!show) {
+          hideElement(elem)
+        }
       }
     }
   }
@@ -101,23 +122,14 @@ const FilterByDropdown = class extends Component {
     if(Array.isArray(updated_filters) && updated_filters.length === 0) {
       for(let i = 0; i < this.search_items.length; i++) {
         let elem = document.getElementById(this.search_items[i][0]);
-        // if(this.props.filterHash === undefined || elem.getAttribute('data-type').toLowerCase().replace(' ', '-') === this.props.filterHash.replace('#', '').replace(' ', '-')) {
         elem.style.display = ''
         elem.parentElement.style.display = ''
-        // }
       }
       return false;
     } else {
       return true
     }
   }
-
-  //Item will be string value that was clicked on
-  // handleFilter = (e, key, filter) => {
-  //   if(e !== undefined) {
-  //     e.preventDefault()
-  //   }
-
 
   handleFilter = (e, key, filter) => {
     if(e !== undefined) {
