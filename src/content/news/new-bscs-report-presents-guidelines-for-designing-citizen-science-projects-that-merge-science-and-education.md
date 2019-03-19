@@ -1,5 +1,5 @@
 ---
-date: 2019-03-19T15:53:40.847Z
+date: 2018-07-25T15:53:40.847Z
 title: >-
   New BSCS Report Presents Guidelines for Designing Citizen Science Projects
   that Merge Science and Education 
