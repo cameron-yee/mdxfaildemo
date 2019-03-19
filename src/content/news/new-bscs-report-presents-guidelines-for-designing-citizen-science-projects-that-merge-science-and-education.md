@@ -7,6 +7,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education
 seoDescription: Test SEO description.
 seoLang: en-us
+sidebarContactsText: Questions?
 sidebarContacts:
   - Lauren Novo
 page: news
