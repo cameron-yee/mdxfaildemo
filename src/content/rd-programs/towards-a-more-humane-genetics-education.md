@@ -3,6 +3,7 @@ date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
 areas:
   - Research
+  - Instructional Materials Development
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
 seoDescription: Test SEO description.
