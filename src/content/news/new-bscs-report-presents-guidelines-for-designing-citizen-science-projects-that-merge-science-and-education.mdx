@@ -7,11 +7,22 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education
 seoDescription: Test SEO description.
 seoLang: en-us
+sidebarContactsTitle: ""
 sidebarContactsText: Questions?
 sidebarContacts:
   - Lauren Novo
+sidebarURL: ""
+sidebarText: ""
+sidebarTitle: ""
+sidebarButtonText: ""
 page: news
+additionalTags: ""
 ---
+
+import { Link } from 'gatsby'
+import SpecificContactForm from 'components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+import Button from 'react-bootstrap/Button'
+
 #### BSCS Science Learning Convenes Citizen Science Experts to Advance the Field
 
 **FOR IMMEDIATE RELEASE** – **July 25, 2018** – Over the last two decades, there has been an explosion in the number of citizen science projects underway. And despite initial skepticism by scientific traditionalists, citizen science has proven itself as a method for conducting rigorous science. In parallel with the science, there have been many discussions of the educational benefits that participants in citizen science projects can gain. 
@@ -28,9 +39,11 @@ The report is organized around a framework of 12 valued scientific and education
 
 “This report is an exciting next step for utilizing citizen science inside and outside the classroom,” said Jason Morris, senior program officer, Environmental Education at the Pisces Foundation. “The report shares real world examples that strongly suggest citizen science projects can incorporate high quality science while achieving the educational outcomes that equip our kids with the environmental know-how they need to create a sustainable world.” 
 
-The report is freely available here: https://bscs.org/tech-report/2018-1 
+<!-- The report is freely available here: <a class="btn btn-outline-secondary" href="/resources/reports/designing-citizen-science-for-both-science-and-education" target="_blank" rel="noopenner noreferrer">Access Report</a> -->
 
-For more information, please contact: Lauren Novo
+The report is freely available here: <Link className="btn btn-outline-secondary" to="/resources/reports/designing-citizen-science-for-both-science-and-education">Access Report</Link>
+
+For more information, please contact: <SpecificContactForm sendto="Lauren Novo">Lauren Novo</SpecificContactForm>
 
 \###
 

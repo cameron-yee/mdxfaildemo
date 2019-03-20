@@ -25,7 +25,7 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 const NewsPage = class extends Component {
   constructor(props) {
     super(props)
-    this.newsletters = props.data.allMarkdownRemark.edges
+    this.newsletters = props.data.allMdx.edges
     // this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
     this.state = {
       // filter_hash: undefined,
@@ -142,7 +142,7 @@ export default props => (
 
 export const newsQuery = graphql`
   query newsQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {frontmatter: { page: {eq: "news"}}}
       sort: {
         fields: [frontmatter___date],
@@ -155,7 +155,6 @@ export const newsQuery = graphql`
           excerpt(pruneLength: 200)
           frontmatter {
             additionalTags,
-            alt,
             date(formatString: "MMMM DD, YYYY"),
             title,
             page
