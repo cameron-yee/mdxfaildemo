@@ -25,10 +25,8 @@ Racism is a serious problem in the United States. Research has shown that the bi
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
 
-
 #### Our Focus
 How can such beliefs be (un)learned through biology education?
-
 
 #### What We’ve Learned
 **Teaching about human difference is not socially neutral**.
@@ -48,7 +46,7 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 **Published** -
 
-1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) [Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations](https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506). _Science Education_.
+1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506">Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations</a>. _Science Education_.
 2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (2019) [Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities](https://media.bscs.org/human/gendered_genetics.pdf). _Science Education_. 
 3. Donovan, B.M. (2018). [Looking backwards to move biology education toward its humanitarian potential: A review of Darwinism, Democracy, and Race](https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21480). _Science Education_. 
 4. Donovan, B. M. (2017) [Learned inequality: Racial labels in the biology curriculum can affect the development of racial prejudice](https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21370). _Journal of Research in Science Teaching_. 54(3), 379-411. 
