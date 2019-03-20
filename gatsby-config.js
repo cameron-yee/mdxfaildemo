@@ -83,6 +83,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-mdx`
     // `gatsby-plugin-transition-link`,
   ],
 }

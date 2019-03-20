@@ -12,14 +12,16 @@ import PageTitle from '../components/layout/page-title/page-title'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Row from 'react-bootstrap/Row'
 
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+
 import '../global-scss/index.scss'
 // import './rd-programs-template.scss'
 
 const NewsTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.markdownRemark.html
-    this.resource = this.props.data.markdownRemark.frontmatter
+    this.html = this.props.data.mdx.code.body
+    this.resource = this.props.data.mdx.frontmatter
   }
 
   render() {
@@ -40,12 +42,14 @@ const NewsTemplate = class extends Component {
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
                 <Col>
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  {/* <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div> */}
+                  <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
                 <Col>
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  <MDXRenderer>{this.html}</MDXRenderer>
+                  {/* <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div> */}
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
@@ -63,7 +67,7 @@ const NewsTemplate = class extends Component {
                           </Card.Text>
                         }
                         {this.resource.sidebarURL &&
-                          <div class="d-flex justify-content-center">
+                          <div className="d-flex justify-content-center">
                             {this.resource.sidebarButtonText && 
                               <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
                                 <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
@@ -93,7 +97,7 @@ const NewsTemplate = class extends Component {
                           {this.resource.sidebarContacts &&
                             this.resource.sidebarContacts.map(contact => {
                               return (
-                                <div key={contact} class="d-flex justify-content-center">
+                                <div key={contact} className="d-flex justify-content-center">
                                   <div className="p-2">
                                     <SpecificContactForm sendto={contact}>
                                       <Button size="sm" variant="outline-primary">Contact {contact}</Button>
@@ -124,13 +128,13 @@ export default props => (
 
 export const query = graphql`
   query($nodeId: String!) {
-    markdownRemark(id: {eq: $nodeId}) {
-      html
+    mdx(id: {eq: $nodeId}) {
+      code {
+        body
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
-        alt,
-        image,
         seoCanonicalUrl,
         seoDescription,
         seoLang,
