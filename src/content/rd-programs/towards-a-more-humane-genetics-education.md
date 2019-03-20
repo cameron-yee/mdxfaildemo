@@ -17,13 +17,13 @@ sortOrder: 2
 page: rd-programs
 ---
 #### The Issue
-Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions(4-5, 7-8):
+Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions<sup>(4-5, 7-8)</sup>:
 
 1. People of the same racial group are genetically uniform.
 2. People of disparate races are categorically different.
 3. Biologically-influenced abilities cannot change.
 
-Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
+Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability<sup>(6)</sup>.
 <br>
 </br>
 #### Our Focus
