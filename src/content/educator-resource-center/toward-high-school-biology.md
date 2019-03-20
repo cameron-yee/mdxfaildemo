@@ -7,8 +7,10 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
 template: Image Right
-image: https://media.bscs.org/bscsmw/educator-resource-center/adolescent-girl.jpg
-alt: adolescent girl with long hair and burgundy t-shirt looking through white microscope
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/adolescent-girl.jpg'
+alt: >-
+  adolescent girl with long hair and burgundy t-shirt looking through white
+  microscope
 courseId: 0
 gradeLevel:
   - High
@@ -20,7 +22,7 @@ Research shows that students have difficulty understanding chemical reactions at
 
 BSCS Science Learning has developed and field tested a curriculum unit to provide students with a better foundation for high school biology. Through 19 carefully sequenced lessons and activities, Toward High School Biology: Understanding Growth in Living Things helps middle school students connect core ideas about chemical reactions to the biological phenomena of growth and repair in plants and animals. This curriculum supports the Next Generation Science Standards (NGSS)—using LEGOs, ball-and-stick models, videos, and a variety of print manipulatives to support students in developing evidence-based explanations.  
 
-Toward High School Biology, [Student Edition](https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681404431) is available for purchase through NSTA Press. It should be used in conjunction with the [Teacher Edition](https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681405605), which provides complete lesson plans and instructions for carrying out the activities. Complimentary video demonstrations and tutorials are also available online.   
+Toward High School Biology, <a href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681404431" target="_blank" rel="noopener noreferrer">Student Edition</a> is available for purchase through NSTA Press. It should be used in conjunction with the <a href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681405605" target="_blank" rel="noopener noreferrer">Teacher Edition</a>, which provides complete lesson plans and instructions for carrying out the activities. Complimentary video demonstrations and tutorials are also available online.   
 
 <a class="btn btn-outline-secondary" href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9781681404431" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
