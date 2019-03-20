@@ -21,7 +21,7 @@ This program is freely available and features five classroom lessons.
 
 Four of the lessons are centered around a short video. View the segments below:
 
-* <a href="<https://vimeo.com/315712201" target="_blank" rel="noopener noreferrer">Segment 1</a>
+* [Segment 1](https://vimeo.com/315712201)
 * [Segment 2](https://vimeo.com/315712242)
 * [Segment 3](https://vimeo.com/315712075)
 * [Segment 4](https://vimeo.com/315712128)
