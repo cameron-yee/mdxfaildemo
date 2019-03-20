@@ -2,17 +2,15 @@
 date: 2019-02-15T20:02:08.538Z
 title: POWER
 areas:
-  - Instructional Materials Development
-  - Teacher Professional Learning
-image: /assets/rd-programs/power.svg
-alt: Power Icon
-page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/power
+  - Research
+seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/power'
 seoDescription: Test SEO description.
 seoLang: en-us
-sidebarText: Results from this meta-analysis are now published in AERA Open Journal. 
-sidebarURL: https://journals.sagepub.com/doi/10.1177/2332858418791991 
+image: /assets/rd-programs/power.svg
+alt: Power Icon
+sidebarURL: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
 sortOrder: 4
+page: rd-programs
 ---
 
 What works best for teachers and students in science education interventions? Statistics can provide some insight—but only if interpreted in context. For instance, the way a study is conducted may impact the outcome, independent of the actual effectiveness of the intervention. 
