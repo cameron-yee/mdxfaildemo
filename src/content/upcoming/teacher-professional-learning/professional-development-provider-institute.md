@@ -6,7 +6,9 @@ seoCanonicalUrl: >-
 seoDescription: TEST DESCRIPTION
 seoLang: en-us
 sidebarRegisterURL: >-
-  http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions
+  <a
+  href="http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions"_blank"
+  rel="noopener noreferrer"></a>
 sidebarRegisterText: ''
 sidebarRegisterTitle: Sign up now
 sidebarContactsText: ''
@@ -15,8 +17,6 @@ sidebarContacts:
   - Jody Bintz
 sidebarContactsTitle: Questions?
 page: upcoming-programs-teacher-professional-learning
-alt: woman wearing baseball cap writing with a marker on large piece of paper on table
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/woman-writing.jpg
 ---
 Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 
