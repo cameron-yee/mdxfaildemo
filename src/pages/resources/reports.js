@@ -76,7 +76,7 @@ const Reports = class extends Component {
                         <div className="d-flex">
                           <div className="ml-auto align-self-end">
                             <Link 
-                              to={`/resources/reports/designing-citizen-science-for-both-science-and-ducation`}
+                              to={`/resources/reports/designing-citizen-science-for-both-science-and-education`}
                             >
                               <Button variant="outline-secondary">
                                 Read More

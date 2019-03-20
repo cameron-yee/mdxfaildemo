@@ -201,8 +201,6 @@ exports.createPages = ({ graphql, actions }) => {
         } else if (!result.data.allMdx) {
           reject("No data")
         } else {
-          console.log(JSON.stringify(result))
-
           // Create pages for each markdown file.
           result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
