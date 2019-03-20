@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
 
 import Col from 'react-bootstrap/Col'
@@ -14,8 +15,8 @@ import '../global-scss/index.scss'
 const LeadershipTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.markdownRemark.html
-    this.person = this.props.data.markdownRemark.frontmatter
+    this.html = this.props.data.mdx.code.body
+    this.person = this.props.data.mdx.frontmatter
   }
 
   render() {
@@ -32,14 +33,14 @@ const LeadershipTemplate = class extends Component {
                     <img src={this.person.image} alt={this.person.alt} style={{width: '100%'}} />
                   </Col>
                   <Col xs={8}>
-                    <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                    <MDXRenderer>{this.html}</MDXRenderer>
                   </Col>
                 </React.Fragment>
               }
               {this.person.template === 'Image Right' &&
                 <React.Fragment>
                   <Col xs={8}>
-                    <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                    <MDXRenderer>{this.html}</MDXRenderer>
                   </Col>
                   <Col xs={4}>
                     <img src={this.person.image} alt={this.person.alt} style={{width: '100%'}} />
@@ -62,8 +63,10 @@ export default props => (
 
 export const query = graphql`
   query($nodeId: String!) {
-    markdownRemark(id: {eq: $nodeId}) {
-      html
+    mdx(id: {eq: $nodeId}) {
+      code {
+        body
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         seoCanonicalUrl,

@@ -27,7 +27,7 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 const EducatorResourceCenter = class extends Component {
   constructor(props) {
     super(props)
-    this.resources = props.data.allMarkdownRemark.edges
+    this.resources = props.data.allMdx.edges
     // this.filter_items = ["Classroom", "Professional Learning","District Planning", "Citizen Science"]
     this.filter_items = {
       //Index 0 for if multiple values are allowed to be selected
@@ -244,7 +244,7 @@ export default props => (
 
 export const educatorResourceQuery = graphql`
   query educatorResourceQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {frontmatter: { page: {eq: "educator-resource-center"}}}
       sort: {
         fields: [frontmatter___sortOrder, frontmatter___title],

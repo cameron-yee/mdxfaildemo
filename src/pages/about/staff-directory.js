@@ -19,7 +19,7 @@ const StaffDirectoryPage = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      staff: props.data.allMarkdownRemark.edges,
+      staff: props.data.allMdx.edges,
       //Table columns will be sorted either alphabetically (1), reverse-alphabetically (2), or another column is being filtered (0) 
       order: {
         firstName: 0,
@@ -244,7 +244,7 @@ export default props => (
 
 export const leadershipQuery = graphql`
   query staffDirectoryQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {
         frontmatter: { 
           page: {

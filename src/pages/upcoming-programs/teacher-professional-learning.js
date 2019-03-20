@@ -26,8 +26,8 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 const TeacherProfessionalLearningPage = class extends Component {
   constructor(props) {
     super(props)
-    if(props.data.allMarkdownRemark) {
-      this.programs = props.data.allMarkdownRemark.edges
+    if(props.data.allMdx) {
+      this.programs = props.data.allMdx.edges
     } else {
       this.programs = []
     }
@@ -128,19 +128,14 @@ const TeacherProfessionalLearningPage = class extends Component {
                             <Card.Img
                               className="tpl-card-img"
                               variant="top"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
                               style={{
                                 minHeight: '260.98px',
                                 backgroundColor: 'rgba(41, 52, 118, 1)',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
-                                // background: 'linear-gradient(180deg, rgba(205,205,205,1) 0%, rgba(130,135,165,1) 0%, rgba(41,52,118,1) 74%)'
-                                // backgroundImage: `url(../../../bscs_logo.svg)`,
-                                // backgroundSize: 'contain',
-                                // backgroundPosition: 'center',
-                                // backgroundRepeat: 'no-repeat'
                               }}
-                              src={edge.node.frontmatter.image}
-                              alt={edge.node.frontmatter.alt}
                             />
                           </ReactPlaceholder>
                           <Card.Body>
@@ -201,7 +196,7 @@ export default props => (
 
 export const query = graphql`
 {
-  allMarkdownRemark(
+  allMdx(
     filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}
     sort: {
       fields: [frontmatter___sortOrder, frontmatter___date]
@@ -209,7 +204,6 @@ export const query = graphql`
   ) {
     edges {
       node {
-        html
         excerpt(pruneLength: 200)
         frontmatter {
           alt,

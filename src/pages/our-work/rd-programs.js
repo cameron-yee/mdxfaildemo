@@ -27,7 +27,7 @@ import './rd-programs.scss'
 const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
-    this.programs = props.data.allMarkdownRemark.edges
+    this.programs = props.data.allMdx.edges
     this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
     this.state = {
       // filter_hash: undefined,
@@ -325,7 +325,7 @@ export default props => (
 
 export const rdProgramsQuery = graphql`
   query rdProgramsQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {frontmatter: { page: {eq: "rd-programs"}}}
       sort: {
         fields: [frontmatter___sortOrder, frontmatter___title],

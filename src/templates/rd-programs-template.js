@@ -18,8 +18,8 @@ import '../global-scss/index.scss'
 const RDProgramsTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.markdownRemark.html
-    this.resource = this.props.data.markdownRemark.frontmatter
+    this.html = this.props.data.mdx.code.body
+    this.resource = this.props.data.mdx.frontmatter
   }
 
   render() {
@@ -40,12 +40,12 @@ const RDProgramsTemplate = class extends Component {
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
                 <Col>
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
                 <Col>
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
@@ -124,8 +124,10 @@ export default props => (
 
 export const query = graphql`
   query($nodeId: String!) {
-    markdownRemark(id: {eq: $nodeId}) {
-      html
+    mdx(id: {eq: $nodeId}) {
+      code {
+        body
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
