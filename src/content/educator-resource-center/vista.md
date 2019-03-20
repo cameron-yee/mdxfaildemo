@@ -11,6 +11,7 @@ image: https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-studen
 alt: teacher in green sweater talking to her young students with two men filming her teach
 courseId: 0
 page: educator-resource-center
+sortOrder: 10
 ---
 Teaching elementary science can be challenging. Teachers must navigate leading active student learning experiences while diving into science content that is often outside their expertise. Even the most seasoned teachers seek opportunities for guidance and support.
 

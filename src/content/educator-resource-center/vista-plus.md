@@ -13,6 +13,7 @@ courseId: 0
 gradeLevel:
   - Elementary
 page: educator-resource-center
+sortOrder: 7
 ---
 Elementary science teachers’ first year in the classroom can be challenging. They must navigate leading active student learning experiences while diving into science content that is often outside their expertise. New teachers are more likely to feel prepared for this role if they’ve taken a high quality preservice methods course in college.  
 

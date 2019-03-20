@@ -11,6 +11,7 @@ image: /assets/river.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
+sortOrder: 1
 ---
 For a school district, the adoption of instructional materials is a costly investment with long-term impacts. This decision-making process is critically important because instructional materials can either support or inhibit improvements in teaching and learning.
 
