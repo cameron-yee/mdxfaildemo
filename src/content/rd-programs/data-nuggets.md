@@ -2,18 +2,17 @@
 date: 2019-02-15T20:02:08.538Z
 title: Data Nuggets
 areas:
-  - Instructional Materials Development
   - Research
-image: /assets/rd-programs/data-nuggets.svg
-alt: Data Nuggets Icon
-page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/data-nuggets
+seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/data-nuggets'
 seoDescription: Test SEO description.
 seoLang: en-us
+image: /assets/rd-programs/data-nuggets.svg
+alt: Data Nuggets Icon
+sidebarURL: 'http://datanuggets.org/'
+sidebarButtonText: Learn More Here
 sidebarTitle: Data Nuggets
-sidebarButtonText: Learn More Here 
-sidebarURL: http://datanuggets.org/
 sortOrder: 10
+page: rd-programs
 ---
 
 What exactly does a scientist do? How does she collect information and make sense of it all? 
