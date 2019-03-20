@@ -25,8 +25,10 @@ Racism is a serious problem in the United States. Research has shown that the bi
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
 
+
 #### Our Focus
 How can such beliefs be (un)learned through biology education?
+
 
 #### What We’ve Learned
 **Teaching about human difference is not socially neutral**.
