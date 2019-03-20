@@ -181,12 +181,12 @@ const StaffDirectoryPage = class extends Component {
                     >
                       Contact
                     </th>
-                    <th
+                    {/* <th
                       className="text-align-center"
                       style={{ borderTop: 'none' }}
                     >
                       Profile
-                    </th>
+                    </th> */}
                   </tr>
                 </thead>
                 <tbody>
@@ -207,7 +207,7 @@ const StaffDirectoryPage = class extends Component {
                               <i className="far fa-envelope"></i>
                             </SpecificContactForm>
                           </td>
-                          {
+                          {/* {
                             person.node.frontmatter.url !== null
                             ?
                             <td className="vertical-align-middle text-align-center">
@@ -221,7 +221,7 @@ const StaffDirectoryPage = class extends Component {
                             </td>
                             :
                             <td className="vertical-align-middle">&nbsp;</td>
-                          }
+                          } */}
                         </tr>
                       )
                     })
