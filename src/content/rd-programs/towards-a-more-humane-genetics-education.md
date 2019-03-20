@@ -17,7 +17,6 @@ sortOrder: 2
 page: rd-programs
 ---
 #### The Issue
-
 Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions(4-5, 7-8):
 
 1. People of the same racial group are genetically uniform.
@@ -26,18 +25,11 @@ Racism is a serious problem in the United States. Research has shown that the bi
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
 
-
-
 #### Our Focus
-
 How can such beliefs be (un)learned through biology education?
 
-
-
 #### What We’ve Learned
-
 **Teaching about human difference is not socially neutral**.
-
 
 Insights from our research have begun to illustrate how biology education affects the development of racism, for better or worse. We’ve learned:
 
