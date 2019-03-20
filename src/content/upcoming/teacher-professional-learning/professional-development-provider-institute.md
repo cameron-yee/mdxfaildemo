@@ -5,10 +5,7 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
 seoDescription: TEST DESCRIPTION
 seoLang: en-us
-sidebarRegisterURL: >-
-  <a
-  href="http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0120jt62zew3/questions"_blank"
-  rel="noopener noreferrer"></a>
+sidebarRegisterURL: 'http://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/start'
 sidebarRegisterText: ''
 sidebarRegisterTitle: Sign up now
 sidebarContactsText: ''
