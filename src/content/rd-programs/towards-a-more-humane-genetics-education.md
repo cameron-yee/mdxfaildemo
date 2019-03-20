@@ -56,7 +56,7 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 6. Donovan, B. M. (2015a). <a href="https://www.sciencedirect.com/science/article/pii/S1369848615000138">Putting humanity back into the teaching of human biology</a>. _Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences_. 52, 65-75. 
 7. Donovan, B. M. (2015b). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173">Reclaiming race as a topic of the United States biology curriculum</a>. _Science Education_. 99(6) 1092-1117. 
 8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race</a>. _Journal of Research in Science Teaching_, 51(4), 462–496. 
-9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). [Revising the Economic Imperative for US STEM Education](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001760). PLoS Biology, 12(1), e1001760.
+9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). <a href="https://journals.plos.org/plosbiology/article id=10.1371/journal.pbio.1001760">Revising the Economic Imperative for US STEM Education</a>. PLoS Biology, 12(1), e1001760.
 
 <div class="d-flex justify-content-center">
   <div class="p-2">
