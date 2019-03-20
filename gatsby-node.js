@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdxRemark(
             filter: {frontmatter: { page: {eq: "reports"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -56,12 +56,12 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdxRemark) {
           reject("No data")
         } else {
 
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -86,7 +86,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "educator-resource-center"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -104,12 +104,12 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdxRemark) {
           reject("No data")
         } else {
 
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -133,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdxRemark(
             filter: {frontmatter: { page: {eq: "rd-programs"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -151,12 +151,12 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdxRemark) {
           reject("No data")
         } else {
 
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -226,7 +226,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "leadership"}}}
           ) {
             edges {
@@ -243,22 +243,24 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        }
-
-        // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          const slug = node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
-          const nodeId = node.id
-          createPage({
-            path: `/about/leadership/${slug}/`,
-            component: markdownTemplate,
-            // In your blog post template's graphql query, you can use path
-            // as a GraphQL variable to query for data from the markdown file.
-            context: {
-              nodeId,
-            },
+        } else if (!result.data.allMdx) {
+          reject("No data")
+        } else {
+          // Create pages for each markdown file.
+          result.data.allMdx.edges.forEach(({ node }) => {
+            const slug = node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            const nodeId = node.id
+            createPage({
+              path: `/about/leadership/${slug}/`,
+              component: markdownTemplate,
+              // In your blog post template's graphql query, you can use path
+              // as a GraphQL variable to query for data from the markdown file.
+              context: {
+                nodeId,
+              },
+            })
           })
-        })
+        }
       })
     )
   })
@@ -269,7 +271,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "upcoming-programs-teacher-professional-learning"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -287,11 +289,11 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -315,7 +317,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "upcoming-programs-leadership-development"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -333,11 +335,11 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -361,7 +363,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "upcoming-programs-field-test-opportunities"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -379,11 +381,11 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
@@ -419,7 +421,7 @@ exports.createPages = ({ graphql, actions }) => {
   //   resolve(
   //     graphql(
   //       `query MarkdownPagesQuery {
-  //         allMarkdownRemark(
+  //         allMdx(
   //           filter: {frontmatter: { page: {eq: "upcoming-programs-leadership-development"}}}
   //           sort: { order: ASC, fields: [frontmatter___slug] }
   //         ) {
@@ -439,7 +441,7 @@ exports.createPages = ({ graphql, actions }) => {
   //       }
 
   //       // Create pages for each markdown file.
-  //       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  //       result.data.allMdx.edges.forEach(({ node }) => {
   //         const slug = node.frontmatter.slug
   //         createPage({
   //           path: `/upcoming-programs/leadership-development/${slug}/`,
@@ -461,7 +463,7 @@ exports.createPages = ({ graphql, actions }) => {
   //   resolve(
   //     graphql(
   //       `query MarkdownPagesQuery {
-  //         allMarkdownRemark(
+  //         allMdx(
   //           filter: {frontmatter: { page: {eq: "upcoming-programs-field-test-opportunities"}}}
   //           sort: { order: ASC, fields: [frontmatter___slug] }
   //         ) {
@@ -481,7 +483,7 @@ exports.createPages = ({ graphql, actions }) => {
   //       }
 
   //       // Create pages for each markdown file.
-  //       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  //       result.data.allMdx.edges.forEach(({ node }) => {
   //         const slug = node.frontmatter.slug
   //         createPage({
   //           path: `/upcoming-programs/field-test-opportunities/${slug}/`,

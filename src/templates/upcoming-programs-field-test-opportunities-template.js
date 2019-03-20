@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { Location } from '@reach/router' 
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import Layout from '../components/layout/layout';
 import PageTitle from '../components/layout/page-title/page-title'
@@ -18,8 +19,8 @@ import '../global-scss/index.scss';
 const FieldTestOpportunitiesTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.markdownRemark.html
-    this.program = this.props.data.markdownRemark.frontmatter
+    this.html = this.props.data.mdx.code.body
+    this.program = this.props.data.mdx.frontmatter
   }
 
   render() {
@@ -40,12 +41,12 @@ const FieldTestOpportunitiesTemplate = class extends Component {
             <Row className="d-flex flex-wrap-reverse" style={{marginBottom: '1rem'}}>
               {((this.program.sidebarContacts && this.program.sidebarContactsText) || (this.program.sidebarRegisterURL && this.program.sidebarRegisterText)) &&
                 <Col className="p-2" md={9}>
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!(this.program.sidebarContacts && this.program.sidebarContactsText) && !(this.program.sidebarRegisterURL && this.program.sidebarRegisterText)) &&
                 <Col className="p-2">
-                  <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                  <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(this.program.sidebarContacts || this.program.sidebarContactsText || this.program.sidebarContactsTitle || this.program.sidebarRegisterURL || this.program.sidebarRegisterText) &&
@@ -116,8 +117,10 @@ export default props => (
 
 export const query = graphql`
   query($nodeId: String!) {
-    markdownRemark(id: {eq: $nodeId}) {
-      html
+    mdx(id: {eq: $nodeId}) {
+      code {
+        body
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,

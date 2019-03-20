@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { Location } from '@reach/router'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
 
 import Layout from '../components/layout/layout';
@@ -16,8 +17,8 @@ import './reports-template.scss'
 const ReportsTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.markdownRemark.html
-    this.resource = this.props.data.markdownRemark.frontmatter
+    this.html = this.props.data.mdx.code.body
+    this.resource = this.props.data.mdx.frontmatter
   }
 
   render() {
@@ -45,7 +46,7 @@ const ReportsTemplate = class extends Component {
               }
                 <Row>
                   <Col>
-                    <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
+                    <MDXRenderer>{this.html}</MDXRenderer>
                     {/* {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
                     {this.resource.price === 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>Free</p>)} */}
                     <br />
@@ -67,24 +68,26 @@ export default props => (
 
 export const query = graphql`
   query($nodeId: String!) {
-    markdownRemark(id: {eq: $nodeId}) {
-      html
+    mdx(id: {eq: $nodeId}) {
+      code {
+        body
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
-        alt,
-        courseId,
-        discipline,
-        gradeLevel,
-        image,
+        # alt,
+        # courseId,
+        # discipline,
+        # gradeLevel,
+        # image,
         # price,
-        programLength,
+        # programLength,
         seoCanonicalUrl,
         seoDescription,
         seoLang,
         template,
         title,
-        type
+        # type
       }
     }
   }

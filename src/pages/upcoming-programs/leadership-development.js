@@ -17,8 +17,8 @@ import './teacher-professional-learning.scss'
 const LeadershipDevelopmentPage = class extends Component {
   constructor(props) {
     super(props)
-    if(props.data.allMarkdownRemark) {
-      this.programs = props.data.allMarkdownRemark.edges
+    if(props.data.allMdx) {
+      this.programs = props.data.allMdx.edges
     } else {
       this.programs = []
     }
@@ -117,7 +117,7 @@ export default props => (
 
 export const query = graphql`
 {
-  allMarkdownRemark(
+  allMdx(
     filter: {frontmatter: { page: {eq: "upcoming-programs-leadership-development"}}}
     sort: {
       fields: [frontmatter___sortOrder, frontmatter___date]
@@ -125,7 +125,6 @@ export const query = graphql`
   ) {
     edges {
       node {
-        html
         excerpt(pruneLength: 200)
         frontmatter {
           date(formatString: "MMMM DD, YYYY"),
