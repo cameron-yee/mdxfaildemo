@@ -19,6 +19,14 @@
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}
+
 const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
@@ -172,7 +180,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMarkdownRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "news"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -190,12 +198,11 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMarkdownRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
-
           // Create pages for each markdown file.
-          result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          result.data.allMdx.edges.forEach(({ node }) => {
             const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({

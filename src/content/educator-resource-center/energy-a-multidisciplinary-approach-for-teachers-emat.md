@@ -6,12 +6,13 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
 template: Image Right
-image: https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
 alt: multiple white windmills on a snowy hill with blue skies and white clouds
 courseId: 0
 discipline:
   - Earth Sciences
 page: educator-resource-center
+sortOrder: 4
 ---
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
@@ -35,4 +36,4 @@ _This resource was developed in collaboration with Oregon Public Broadcasting, t
   </div>
   <p class="p-2" style="margin: 0;">
 
-_This material is based upon work supported by the National Science Foundation under_ _Grant No._ [_DRL 1118643_](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1118643)_. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
+_This material is based upon work supported by the National Science Foundation under_ _Grant No._ _DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._

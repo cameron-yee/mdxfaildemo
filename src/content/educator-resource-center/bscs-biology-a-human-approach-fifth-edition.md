@@ -14,6 +14,7 @@ gradeLevel:
   - High
 programLength: Full Year
 page: educator-resource-center
+sortOrder: 3
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students. 
 

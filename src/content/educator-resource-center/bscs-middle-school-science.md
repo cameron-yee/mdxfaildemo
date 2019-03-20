@@ -15,6 +15,7 @@ gradeLevel:
 discipline: 
   - Multidisciplinary Sciences
 page: educator-resource-center
+sortOrder: 11
 ---
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students. 
 

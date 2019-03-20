@@ -11,6 +11,7 @@ image: https://media.bscs.org/bscsmw/educator-resource-center/teachers-in-classr
 alt: science teachers sitting at round tables in large classroom listening to institute leader
 courseId: 0
 page: educator-resource-center
+sortOrder: 5
 ---
 Nineteen US states—representing nearly forty percent of students—have adopted the Next Generation Science Standards (NGSS). An additional 20 states have developed their own standards influenced by the Framework for K-12 Science Education. A district’s decision to introduce new science standards can be highly rewarding for teachers and students, especially when supported by an intentional process for planning and implementation. 
 

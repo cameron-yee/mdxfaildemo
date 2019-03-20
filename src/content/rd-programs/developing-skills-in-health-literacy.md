@@ -9,11 +9,11 @@ seoDescription: TEST SEO DESCRIPTION
 seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
-page: rd-programs
+sidebarURL: 'http://healthliteracyft.bscs.org/'
+sidebarButtonText: Learn More Here
 sidebarTitle: HLIT
-sidebarButtonText: Learn More Here 
-sidebarURL: http://healthliteracyft.bscs.org/
 sortOrder: 5
+page: rd-programs
 ---
 Health-related information from family, friends, social media, and the internet bombard our lives every day. We make decisions as consumers about questions such as these:
 
@@ -26,4 +26,4 @@ Answers about health topics can be complicated. Understanding the science behind
 
 BSCS Science Learning’s Developing Skills in Health Literacy project aims to help middle and high school students develop critical-thinking skills in topics about health that enable them to accurately evaluate the information they get from various sources. This five-year project (going through 2020) works with teachers from across the country to develop and study innovative instructional materials designed to enhance students’ skills and abilities in understanding human health. 
 
-_This project was supported by the Office of the Director, National Institutes of Health under Award Number_ [_R25OD020208_](https://nihsepa.org/project/developing-skills-in-health-literacy/)_. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health._
+_This project was supported by the Office of the Director, National Institutes of Health under Award Number_ _R25OD020208. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health._

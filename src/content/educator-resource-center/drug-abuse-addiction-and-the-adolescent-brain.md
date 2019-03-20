@@ -10,6 +10,7 @@ image: /assets/shark.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
+sortOrder: 9
 ---
 Every day, more than 130 people in the United States die after overdosing on opioids. The misuse of and addiction to opioids is a serious national crisis that affects public health as well as social and economic welfare. While opioid use by teenagers has decreased to historically low levels in some cases, there has been a dramatic increase in vaping. Research is showing that exposure to nicotine, marijuana, or other drugs during adolescence can affect the brain’s function and development on both a short-term and a long-term basis.
 
@@ -21,9 +22,9 @@ This program is freely available and features five classroom lessons.
 
 Four of the lessons are centered around a short video. View the segments below:
 
-* [Segment 1](https://vimeo.com/315712201)
-* [Segment 2](https://vimeo.com/315712242)
-* [Segment 3](https://vimeo.com/315712075)
-* [Segment 4](https://vimeo.com/315712128)
+* <a href="https://vimeo.com/315712201" target="_blank" rel="noopener noreferrer">Segment 1</a>
+* <a href="https://vimeo.com/315712242" target="_blank" rel="noopener noreferrer">Segment 2</a>
+* <a href="https://vimeo.com/315712075" target="_blank" rel="noopener noreferrer">Segment 3</a>
+* <a href="https://vimeo.com/315712128" target="_blank" rel="noopener noreferrer">Segment 4</a>
 
 _This resource was developed with funding from the National Institute on Drug Abuse (NIDA)._

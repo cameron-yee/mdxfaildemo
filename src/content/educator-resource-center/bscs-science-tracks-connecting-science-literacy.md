@@ -1,6 +1,6 @@
 ---
 date: 2019-02-25T19:10:35.334Z
-title: 'BSCS Science Tracks: Connecting Science & Literacy '
+title: 'BSCS Science Tracks: Connecting Science & Literacy'
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-science-tracks
 seoDescription: Test SEO description.
@@ -15,6 +15,7 @@ gradeLevel:
 discipline: 
   - Multidisciplinary Sciences
 page: educator-resource-center
+sortOrder: 13
 ---
 Children are naturally inquisitive. That is one of the many reasons why it is important to engage students in science at a young age. With access to a high quality science education, students can channel their curiosities to help make sense of the world around them.
 
