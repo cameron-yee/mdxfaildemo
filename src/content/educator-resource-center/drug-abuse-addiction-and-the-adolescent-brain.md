@@ -10,6 +10,7 @@ image: /assets/shark.jpg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
+sortOrder: 9
 ---
 Every day, more than 130 people in the United States die after overdosing on opioids. The misuse of and addiction to opioids is a serious national crisis that affects public health as well as social and economic welfare. While opioid use by teenagers has decreased to historically low levels in some cases, there has been a dramatic increase in vaping. Research is showing that exposure to nicotine, marijuana, or other drugs during adolescence can affect the brain’s function and development on both a short-term and a long-term basis.
 

@@ -11,6 +11,7 @@ image: /assets/cells.jpeg
 alt: PLACEHOLDER
 courseId: 0
 page: educator-resource-center
+sortOrder: 8
 ---
 In 2014-15, more than 11,000 people died in an outbreak of Ebola in West Africa. And just a few years later, the Democratic Republic of Congo is experiencing a world-first: an Ebola outbreak in a war zone. Citizens around the globe continue to share concerns about the spread of this disease. 
 

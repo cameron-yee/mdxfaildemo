@@ -12,6 +12,7 @@ courseId: 0
 discipline:
   - Multidisciplinary Sciences
 page: educator-resource-center
+sortOrder: 6
 ---
 Why is citizen science important? Not only does it allow communities to play a role in advancing scientific knowledge, it empowers individuals of all ages to make meaningful observations and learn about their natural environments. BSCS Science Learning’s interactive platform called FieldScope is transforming the way educators, community members, and organizations engage in citizen science. 
 
