@@ -30,7 +30,7 @@ const IndexPage = (props) => (
     </Jumbotron>
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
-        <Col>
+        <Col style={{ marginBottom: '1.5rem' }}>
           <Card className="h-100">
             <Img
               variant="top"
@@ -60,7 +60,7 @@ const IndexPage = (props) => (
             </Card.Footer>
           </Card>
         </Col>
-        <Col>
+        <Col style={{ marginBottom: '1.5rem' }}>
           <Card className="h-100">
             <Img
               variant="top"
@@ -90,7 +90,7 @@ const IndexPage = (props) => (
             </Card.Footer>
           </Card>
         </Col>
-        <Col>
+        <Col style={{ marginBottom: '1.5rem' }}>
           <Card className="h-100">
             <Img
               variant="top"
@@ -120,7 +120,7 @@ const IndexPage = (props) => (
             </Card.Footer>
           </Card>
         </Col>
-        <Col>
+        <Col style={{ marginBottom: '1.5rem' }}>
           <Card className="h-100">
             <Img
               variant="top"
