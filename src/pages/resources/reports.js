@@ -27,7 +27,7 @@ const Reports = class extends Component {
               <PageTitle title="Reports" />
               <Row style={{ marginBottom: '2rem' }}>
                 <Col>
-                  <p>BSCS Science Learning regularly releases reports with insights pertaining to instructional materials development, teacher professional learning, leadership development, and research. See below for a sample.</p>
+                  <p>BSCS Science Learning regularly releases reports with insights pertaining to instructional materials development, teacher professional learning, leadership development, and research. See below for a selection of reports.</p>
                 </Col>
               </Row>
             </Container>
