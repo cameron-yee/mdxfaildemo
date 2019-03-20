@@ -1,0 +1,31 @@
+.categoryImageParent {
+  width: 100%;
+}
+
+.categoryImageChild {
+  border: 1px solid rgba(41, 52, 118, .9);
+  width: 50%;
+  max-width: 105px;
+
+  &:hover {
+    background-color: rgba(41, 52, 118, .9);
+    // filter: invert(1);
+  }
+}
+
+.categoryImageGrandChild {
+  &:hover {
+    // background-color: rgba(41, 52, 118, .9);
+    filter: invert(1);
+  }
+}
+
+.categoryImageParent:hover .categoryImageChild:not(:hover) {
+  background-color: rgba(41, 52, 118, .9);
+  // filter: invert(1);
+}
+
+.categoryImageParent:hover .categoryImageGrandChild:not(:hover) {
+  // background-color: rgba(41, 52, 118, .9);
+  filter: invert(1);
+}
