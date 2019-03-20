@@ -175,10 +175,10 @@ export const query = graphql`
     image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
       ...cardImage
     }
-    image3: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
+    image3: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
       ...cardImage
     }
-    image4: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
+    image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
       ...cardImage
     }
   }
