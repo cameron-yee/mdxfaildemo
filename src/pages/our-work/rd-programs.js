@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
-import CardColumns from 'react-bootstrap/CardColumns'
+// import CardColumns from 'react-bootstrap/CardColumns'
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
@@ -103,7 +103,8 @@ const RDPrograms = class extends Component {
               <hr />
             </Container>
           </section>
-          <section className="section d-md-none" style={{ marginBottom: '4rem' }}>
+          {/* <section className="section d-md-none" style={{ marginBottom: '4rem' }}> */}
+          <section className="section" style={{ marginBottom: '4rem' }}>
             <Container>
               <Row className="justify-content-center justify-content-md-start">
                 {
@@ -132,14 +133,14 @@ const RDPrograms = class extends Component {
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
                             // onLoad={this.loaded}
-                            style={{ padding: '1rem 4.5rem 0' }}
+                            style={{ padding: '1rem 7rem 0' }}
                             className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
                           />
-                          <div className="d-flex flex-row justify-content-center">
+                          {/* <div className="d-flex flex-row justify-content-center">
                             <div className="dot d-inline-flex mr-2"></div>
                             <div className="dot d-inline-flex mr-2"></div>
                             <div className="dot d-inline-flex"></div>
-                          </div>
+                          </div> */}
                           <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
                             <Card.Title
                               style={{
@@ -209,7 +210,7 @@ const RDPrograms = class extends Component {
               </Row>
             </Container>
           </section>
-          <section className="section d-none d-md-block" style={{ marginBottom: '4rem' }}>
+          {/* <section className="section d-none d-md-block" style={{ marginBottom: '4rem' }}>
             <Container>
               <Row>
                 <CardColumns>
@@ -309,7 +310,7 @@ const RDPrograms = class extends Component {
                 </CardColumns>
               </Row>
             </Container>
-          </section>
+          </section> */}
         </Layout>
       </React.Fragment>
     )

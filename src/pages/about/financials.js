@@ -14,7 +14,7 @@ import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button';
 
-import rowImage from '../../queries/images/row-image'
+// import rowImage from '../../queries/images/row-image'
 
 const FinancialsPage = class extends Component {
   constructor(props) {

@@ -11,14 +11,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
-import SearchBy from '../../components/atoms/search-by/search-by'
-import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
-import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
+// import SearchBy from '../../components/atoms/search-by/search-by'
+// import FilterByDropdown from '../../components/molecules/filter-by/filter-by-dropdown/filter-by-dropdown'
+// import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filter-by-row'
 
 import '../../global-scss/index.scss';
 import './rd-programs.scss';
 
-import ReactPlaceholder from 'react-placeholder'
+// import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
 

@@ -16,7 +16,7 @@ import BSCSTransformingScienceEducationModel from '../../images/bscs-transformin
 
 import './what-we-do.scss'
 
-import rowImage from '../../queries/images/row-image'
+// import rowImage from '../../queries/images/row-image'
 
 const WhatWeDoPage = (props) => {
   console.log(props.data.image1)
