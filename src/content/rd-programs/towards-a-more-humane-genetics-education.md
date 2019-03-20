@@ -45,7 +45,8 @@ At present, genetics education does very little to address how information about
 For a deeper dive into our line of research, review our <a href="https://media.bscs.org/human/research_statement.pdf" target="_blank" rel="noopener noreferrer">research statement</a>  and published papers below, or click <a href="https://vimeo.com/315526217">here</a> to watch a video of the presentation, Towards a More Humane Genetics Education.
 
 Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, <a href="https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10" target="_blank" rel="noopener noreferrer">here</a> 
-
+<br>
+</br>
 **Published** -
 
 1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506" target="_blank" rel="noopener noreferrer">Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations</a>. _Science Education_.
