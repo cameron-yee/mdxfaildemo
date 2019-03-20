@@ -3,6 +3,7 @@ date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
 areas:
   - Research
+  - Instructional Materials Development
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
 seoDescription: Test SEO description.
@@ -15,7 +16,8 @@ sidebarContacts:
 sortOrder: 2
 page: rd-programs
 ---
-The Issue
+#### The Issue
+
 Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions(4-5, 7-8):
 
 1. People of the same racial group are genetically uniform.
@@ -24,15 +26,23 @@ Racism is a serious problem in the United States. Research has shown that the bi
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability(6).
 
-Our Focus
+
+
+#### Our Focus
+
 How can such beliefs be (un)learned through biology education?
 
-What We’ve Learned
-Teaching about human difference is not socially neutral.
+
+
+#### What We’ve Learned
+
+**Teaching about human difference is not socially neutral**.
+
+
 Insights from our research have begun to illustrate how biology education affects the development of racism, for better or worse. We’ve learned:
 
-When biology education causes youth to perceive too much genetic variation between racial groups, it can increase prejudice.
-Conversely, the way we teach biology can reduce racial prejudice by helping students understand that there is more genetic variation within racial groups than there is between them.
+* When biology education causes youth to perceive too much genetic variation between racial groups, it can increase prejudice.
+* Conversely, the way we teach biology can reduce racial prejudice by helping students understand that there is more genetic variation within racial groups than there is between them.
 
 In sum, the humane genetics research project is beginning to suggest that genetics education can create humane or inhumane outcomes depending on how it addresses human difference. If this hypothesis is correct, then learning about the social and quantitative complexities of human genetic variation research could prepare students to become informed participants in a society where human genetics is invoked as a rationale in sociopolitical debates concerning racial inequality.
 
@@ -42,7 +52,7 @@ For a deeper dive into our line of research, review our [research statement](htt
 
 Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, [here](https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10).
 
-Published -
+**Published** -
 
 1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) [Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations](https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506). _Science Education_.
 2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (2019) [Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities](https://media.bscs.org/human/gendered_genetics.pdf). _Science Education_. 
