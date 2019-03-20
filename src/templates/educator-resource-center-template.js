@@ -28,22 +28,22 @@ const EducatorResourceCenterTemplate = class extends Component {
           <Container>
             <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
               {this.resource.template === 'Image Right' &&
-                <Row>
-                  <Col md={7} className="erc-jumbotron-title">
+                <Row style={{ marginBottom: '2rem' }}>
+                  <Col md={7} className="erc-jumbotron-title pl-4 pr-4">
                     <h1>{this.resource.title}</h1>
                   </Col>
                   <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
                 </Row>
               }
               {this.resource.template === 'Image Left' &&
-                <Row>
+                <Row style={{ marginBottom: '2rem' }}>
                   <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                  <Col md={7} className="erc-jumbotron-title">
+                  <Col md={7} className="erc-jumbotron-title pl-4 pr-4">
                     <h1>{this.resource.title}</h1>
                   </Col>
                 </Row>
               }
-              <Row>
+              <Row style={{ marginBottom: '3rem' }}>
                 <Col>
                   <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div>
                   {/* {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
