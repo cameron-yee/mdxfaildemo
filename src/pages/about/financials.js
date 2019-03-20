@@ -137,10 +137,20 @@ export default props => (
   </Location>
 )
 
+export const rowImage = graphql`
+  fragment rowImage2 on File {
+    childImageSharp {
+      fluid(maxWidth: 600) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     ar2017: file(relativePath: { eq: "financials/ar-2017.jpg" }) {
-      ...rowImage
+      ...rowImage2
     }
   }
 `

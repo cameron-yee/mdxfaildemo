@@ -1,9 +1,9 @@
 // import { graphql } from 'gatsby' 
 
-// export const rowImage = graphql`
-//   fragment rowImage on File {
+// export const cardImage = graphql`
+//   fragment cardImage on File {
 //     childImageSharp {
-//       fluid(maxWidth: 600) {
+//       fluid(maxWidth: 500) {
 //         ...GatsbyImageSharpFluid_noBase64
 //       }
 //     }

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -12,6 +13,8 @@ import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 
 import '../global-scss/index.scss'
+
+// import cardImage from '../queries/images/card-image'
 
 
 const IndexPage = (props) => (
@@ -29,7 +32,11 @@ const IndexPage = (props) => (
       <Row style={{ marginBottom: '2rem' }}>
         <Col>
           <Card className="h-100">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Img
+              variant="top"
+              fluid={props.data.image1.childImageSharp.fluid} 
+              className="card-img-top" 
+            />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
@@ -55,7 +62,11 @@ const IndexPage = (props) => (
         </Col>
         <Col>
           <Card className="h-100">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Img
+              variant="top"
+              fluid={props.data.image2.childImageSharp.fluid} 
+              className="card-img-top" 
+            />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
@@ -81,7 +92,11 @@ const IndexPage = (props) => (
         </Col>
         <Col>
           <Card className="h-100">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Img
+              variant="top"
+              fluid={props.data.image3.childImageSharp.fluid} 
+              className="card-img-top" 
+            />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
@@ -107,7 +122,11 @@ const IndexPage = (props) => (
         </Col>
         <Col>
           <Card className="h-100">
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Img
+              variant="top"
+              fluid={props.data.image4.childImageSharp.fluid} 
+              className="card-img-top" 
+            />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
               <Card.Text className="lead">
@@ -137,3 +156,30 @@ const IndexPage = (props) => (
 )
 
 export default IndexPage
+
+export const cardImage = graphql`
+  fragment cardImage on File {
+    childImageSharp {
+      fluid(maxWidth: 500) {
+        ...GatsbyImageSharpFluid_noBase64
+      }
+    }
+  }
+`
+
+export const query = graphql`
+  query {
+    image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
+      ...cardImage
+    }
+    image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
+      ...cardImage
+    }
+    image3: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
+      ...cardImage
+    }
+    image4: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
+      ...cardImage
+    }
+  }
+`
