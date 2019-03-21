@@ -49,7 +49,7 @@ export default class Header extends Component {
               </Link>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
+              <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
