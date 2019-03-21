@@ -14,7 +14,8 @@ import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button';
 
-// import rowImage from '../../queries/images/row-image'
+// eslint-disable-next-line
+import rowImage from '../../queries/images/row-image'
 
 const FinancialsPage = class extends Component {
   constructor(props) {
@@ -57,6 +58,7 @@ const FinancialsPage = class extends Component {
                 className="h-100"
                 fluid={this.props.data.ar2017.childImageSharp.fluid}
                 alt="BSCS Science Learning Annual Report 2017"
+                backgroundColor='rgb(41, 52, 118)'
               />
             </Col>
             <Col xs={12} lg={6}>
@@ -137,20 +139,20 @@ export default props => (
   </Location>
 )
 
-export const rowImage = graphql`
-  fragment rowImage2 on File {
-    childImageSharp {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-`
+// export const rowImage = graphql`
+//   fragment rowImage on File {
+//     childImageSharp {
+//       fluid(maxWidth: 600) {
+//         ...GatsbyImageSharpFluid_noBase64
+//       }
+//     }
+//   }
+// `
 
 export const query = graphql`
   query {
     ar2017: file(relativePath: { eq: "financials/ar-2017.jpg" }) {
-      ...rowImage2
+      ...rowImage
     }
   }
 `

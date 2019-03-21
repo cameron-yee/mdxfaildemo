@@ -36,6 +36,7 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image1.childImageSharp.fluid} 
               className="card-img-top" 
+              backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
@@ -66,6 +67,7 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image2.childImageSharp.fluid} 
               className="card-img-top" 
+              backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
@@ -96,6 +98,7 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image3.childImageSharp.fluid} 
               className="card-img-top" 
+              backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
@@ -126,6 +129,7 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image4.childImageSharp.fluid} 
               className="card-img-top" 
+              backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
               {/* <Card.Title>Card Title</Card.Title> */}
@@ -160,7 +164,7 @@ export default IndexPage
 export const cardImage = graphql`
   fragment cardImage on File {
     childImageSharp {
-      fluid(maxWidth: 500) {
+      fluid(maxWidth: 500, quality: 100) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }

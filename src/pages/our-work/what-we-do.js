@@ -16,7 +16,8 @@ import BSCSTransformingScienceEducationModel from '../../images/bscs-transformin
 
 import './what-we-do.scss'
 
-// import rowImage from '../../queries/images/row-image'
+// eslint-disable-next-line
+import rowImage from '../../queries/images/row-image'
 
 
 const WhatWeDoPage = (props) => {
@@ -47,7 +48,8 @@ const WhatWeDoPage = (props) => {
             <Img
               className="h-100"
               fluid={props.data.image1.childImageSharp.fluid}
-              alt="Test"
+              alt="male student holding an iPad that says 'Focus Question: What are the building blocks of living things?'"
+              backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
         </Row>
@@ -56,7 +58,8 @@ const WhatWeDoPage = (props) => {
             <Img
               className="h-100"
               fluid={props.data.image2.childImageSharp.fluid}
-              alt="Test"
+              alt="teacher with long hair and denim jacket pointing at something on a desk with three female fifth-grade students"
+              backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
           <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
@@ -79,7 +82,8 @@ const WhatWeDoPage = (props) => {
             <Img
               className="h-100"
               fluid={props.data.image3.childImageSharp.fluid}
-              alt="Test"
+              alt="young girl with long brown hair, white sweatshirt, and safety goggles on her forehead looking at a vial in her left hand as she puts rocks inside of it"
+              backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
         </Row>
@@ -88,7 +92,8 @@ const WhatWeDoPage = (props) => {
             <Img
               className="h-100"
               fluid={props.data.image4.childImageSharp.fluid}
-              alt="Test"
+              alt="young boy with glasses and blue hoodie scrunching his face while looking at a vial in his right hand"
+              backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
           <Col md={6} className="p-4 p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
@@ -147,28 +152,18 @@ export default props => (
   </Location>
 )
 
-export const rowImage = graphql`
-  fragment rowImage on File {
-    childImageSharp {
-      fluid(maxWidth: 600) {
-        ...GatsbyImageSharpFluid_noBase64
-      }
-    }
-  }
-`
-
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+    image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
       ...rowImage
     }
-    image2: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+    image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
       ...rowImage
     }
-    image3: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+    image3: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
       ...rowImage
     }
-    image4: file(relativePath: { eq: "what-we-do/teacher-and-students.jpg" }) {
+    image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
       ...rowImage
     }
   }
