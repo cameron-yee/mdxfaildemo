@@ -19,7 +19,7 @@ NextGen TIME includes a suite of tools and processes designed to guide your deep
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
 
-Learn more:  https://www.nsta.org/conferences/pli/2019pli03.aspx
+<a href="https://www.nsta.org/conferences/pli/2019pli03.aspx" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 #### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
