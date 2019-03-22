@@ -5,9 +5,9 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
 seoDescription: Test SEO description.
 seoLang: en-us
-sidebarRegisterURL: ''
-sidebarRegisterText: ''
-sidebarRegisterTitle: ''
+sidebarRegisterURL: 'https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm'
+sidebarRegisterText: Learn More Here
+sidebarRegisterTitle: Session Information
 sidebarContactsText: Questions?
 sidebarContacts:
   - Ashley Whitaker
@@ -21,7 +21,6 @@ NextGen TIME includes a suite of tools and processes designed to guide your deep
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
 
-<a href="https://www.nsta.org/conferences/pli/2019pli03.aspx" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 ##### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
@@ -29,15 +28,12 @@ Join us to learn about NextGen TIME tools and processes to collaboratively selec
 
 Friday, April 12, 3:30 - 4:30 p.m.
 
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 ##### NGSS@NSTA Forum Session: Five Tools and Processes for Translating the NGSS into Instruction and Classroom Assessment
 
 Join us to learn about Five Tools that will help you and your colleagues use the NGSS to plan for instruction and classroom assessment.
 
 Friday, April 12, 8 - 9 a.m.
-
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
 Saturday, April 13, 8 - 9 a.m.
