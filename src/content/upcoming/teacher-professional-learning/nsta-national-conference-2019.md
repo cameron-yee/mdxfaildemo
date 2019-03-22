@@ -13,6 +13,8 @@ sidebarContacts:
   - Ashley Whitaker
 page: upcoming-programs-teacher-professional-learning
 ---
+### NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth.
+
 #### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
 NextGen TIME includes a suite of tools and processes designed to guide your deep dive into next generation science and to support you in the evaluation, selection, and implementation of new materials. The full process of NextGen TIME is often spread out over an extended period of time, but this professional learning experience will ground you in the core processes while helping you see through alignment claims. 
