@@ -13,15 +13,13 @@ sidebarContacts:
   - Ashley Whitaker
 page: upcoming-programs-teacher-professional-learning
 ---
-### NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth.
-
-#### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
+PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
 NextGen TIME includes a suite of tools and processes designed to guide your deep dive into next generation science and to support you in the evaluation, selection, and implementation of new materials. The full process of NextGen TIME is often spread out over an extended period of time, but this professional learning experience will ground you in the core processes while helping you see through alignment claims. 
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
 
-<a href="https://www.nsta.org/conferences/pli/2019pli03.aspx" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
+Learn more:  https://www.nsta.org/conferences/pli/2019pli03.aspx
 
 #### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
@@ -29,16 +27,13 @@ Join us to learn about NextGen TIME tools and processes to collaboratively selec
 
 Friday, April 12, 3:30 - 4:30 p.m.
 
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
-
+Learn more:  https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
 
 #### NGSS@NSTA Forum Session: Five Tools and Processes for Translating the NGSS into Instruction and Classroom Assessment
 
 Join us to learn about Five Tools that will help you and your colleagues use the NGSS to plan for instruction and classroom assessment.
 
 Friday, April 12, 8 - 9 a.m.
-
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
 
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
 
