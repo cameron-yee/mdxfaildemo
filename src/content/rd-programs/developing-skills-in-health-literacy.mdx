@@ -9,9 +9,9 @@ seoDescription: TEST SEO DESCRIPTION
 seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
-sidebarURL: 'http://healthliteracyft.bscs.org/'
-sidebarButtonText: Learn More Here
-sidebarTitle: HLIT
+# sidebarURL: 'http://healthliteracyft.bscs.org/'
+# sidebarButtonText: Learn More Here
+# sidebarTitle: HLIT
 sortOrder: 5
 page: rd-programs
 ---

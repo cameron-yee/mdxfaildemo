@@ -5,11 +5,15 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
 
 import Layout from '../components/layout/layout';
+import PageTitle from '../components/layout/page-title/page-title'
+import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
-import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 
 import '../global-scss/index.scss';
 import './reports-template.scss'
@@ -27,32 +31,83 @@ const ReportsTemplate = class extends Component {
         <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
         <Layout location={this.props.location}>
           <Container>
-            <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
-              {this.resource.template === 'Image Right' &&
-                <Row>
-                  <Col md={7} className="rcc-jumbotron-title">
-                    <h1>{this.resource.title}</h1>
-                  </Col>
-                  <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                </Row>
+            {!this.resource.customTitle &&
+              <PageTitle title={this.resource.title} />
+            }
+            <Row style={{marginBottom: '1rem'}}>
+              {(this.resource.sidebarURL || this.resource.sidebarText) &&
+                <Col md={8}>
+                  {/* <MDXRenderer>{this.html}</MDXRenderer> */}
+                  <MDXRenderer>{this.html}</MDXRenderer>
+                </Col>
               }
-              {this.resource.template === 'Image Left' &&
-                <Row>
-                  <Col md={5} className="jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                  <Col md={7} className="rcc-jumbotron-title">
-                    <h1>{this.resource.title}</h1>
-                  </Col>
-                </Row>
+              {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
+                <Col>
+                  <MDXRenderer>{this.html}</MDXRenderer>
+                  {/* <MDXRenderer>{this.html}</MDXRenderer> */}
+                </Col>
               }
-                <Row>
-                  <Col>
-                    <MDXRenderer>{this.html}</MDXRenderer>
-                    {/* {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
-                    {this.resource.price === 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>Free</p>)} */}
-                    <br />
-                    {/* {this.resource.courseId !== null && this.resource.courseId !== 0 && <CanvasRegister courseId={this.resource.courseId} />} */}
-                  </Col>
-                </Row>
+              {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
+                || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
+                <Col md={4}>
+                  {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
+                    <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
+                      <Card.Body>
+                        {this.resource.sidebarTitle &&
+                          <Card.Title>{this.resource.sidebarTitle}</Card.Title>
+                        }
+                        {this.resource.sidebarText &&
+                          <Card.Text style={{fontSize: '1rem'}}>
+                            {this.resource.sidebarText}
+                          </Card.Text>
+                        }
+                        {this.resource.sidebarURL &&
+                          <div className="d-flex justify-content-center">
+                            {this.resource.sidebarButtonText && 
+                              <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
+                                <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
+                              </a>
+                            }
+                            {!this.resource.sidebarButtonText && 
+                              <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
+                                <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
+                              </a>
+                            }
+                          </div>
+                        }
+                      </Card.Body>
+                    </Card>
+                  }
+                  {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
+                      <Card>
+                        <Card.Body>
+                          {this.resource.sidebarContactsTitle &&
+                            <Card.Title>{this.resource.sidebarContactsTitle}</Card.Title>
+                          }
+                          {this.resource.sidebarContactsText &&
+                            <Card.Text style={{fontSize: '1rem'}}>
+                              {this.resource.sidebarContactsText}
+                            </Card.Text>
+                          }
+                          {this.resource.sidebarContacts &&
+                            this.resource.sidebarContacts.map(contact => {
+                              return (
+                                <div key={contact} className="d-flex justify-content-center">
+                                  <div className="p-2">
+                                    <SpecificContactForm sendto={contact}>
+                                      <Button size="sm" variant="outline-primary">Contact {contact}</Button>
+                                    </SpecificContactForm>
+                                  </div>
+                                </div>
+                              )
+                            })
+                          }
+                        </Card.Body>
+                      </Card>
+                  }
+                </Col>
+              }
+            </Row>
           </Container>
         </Layout>
       </React.Fragment>
@@ -75,19 +130,17 @@ export const query = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
-        # alt,
-        # courseId,
-        # discipline,
-        # gradeLevel,
-        # image,
-        # price,
-        # programLength,
+        customTitle,
         seoCanonicalUrl,
         seoDescription,
         seoLang,
-        template,
-        title,
-        # type
+        sidebarButtonText,
+        sidebarTitle,
+        sidebarURL,
+        sidebarContacts,
+        sidebarContactsText,
+        sidebarContactsTitle,
+        title
       }
     }
   }

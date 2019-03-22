@@ -132,6 +132,13 @@ button {
 }
 // .hvr-ripple-out {
 .btn-outline-secondary {
+  &.purple {
+    // color: $white !important;
+    color: $purple !important;
+    // background-color: $purple !important;
+    background-color: $white !important;
+    border-color: $purple !important;
+  }
   // border: 1px solid ;
   display: inline-block;
   vertical-align: middle;
@@ -141,6 +148,9 @@ button {
   position: relative;
   &:hover {
     color: $secondary !important;
+  }
+  &.purple:hover {
+    color: $purple !important;
   }
 }
 // .hvr-ripple-out:before {
@@ -159,6 +169,12 @@ button {
 // .hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
 .btn-outline-secondary:hover:before, .btn-outline-secondary:focus:before, .btn-outline-secondary:active:before {
   border: $secondary solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
+}
+
+.btn-outline-secondary.purple:hover:before, .btn-outline-secondary.purple:focus:before, .btn-outline-secondary.purple:active:before {
+  border: $purple solid 1px;
   -webkit-animation-name: btn-outline-secondary;
   animation-name: btn-outline-secondary;
 }

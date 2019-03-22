@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
 
 import Button from 'react-bootstrap/Button'

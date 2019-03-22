@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
@@ -17,6 +17,11 @@ import PageTitle from '../../components/layout/page-title/page-title'
 
 
 const Reports = class extends Component {
+  constructor(props) {
+    super(props)
+    this.reports = this.props.data.allMdx.edges
+  }
+
   render() {
     return (
       <>
@@ -35,162 +40,73 @@ const Reports = class extends Component {
           <section className="section">
               <Container>
                 <Row style={{ marginBottom: '3rem' }}>
-                  <Col 
-                    lg={4}
-                    className="rrc-card-col"
-                  >
-                    <Card className="h-100">
-                      <Card.Body>
-                        <Card.Title
-                          style={{
-                            marginBottom: '1.5rem'
-                          }}
+                  {
+                    this.reports.map((edge, index) => {
+                      return(
+                        <Col 
+                          lg={4}
+                          className="rrc-card-col"
+                          key={`report-${index}`}
                         >
-                          Designing Citizen Science for Both Science and Education: A Workshop Report
-                        </Card.Title>
-                        <p
-                          style={{
-                            fontFamily: '"Lora", "Adobe Blank"',
-                            fontWeight: '400',
-                            fontStyle: 'italic',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          <em>January 2018</em>
-                        </p>
-                        <Card.Text
-                          style={{
-                            marginBottom: '2rem'
-                          }}
-                        >
-                          This report presents guidelines and strategies for designing citizen science projects with scientific and educational benefits.
-                        </Card.Text>
-                      </Card.Body>
-                      <Card.Footer
-                        style={{
-                          background: 'white',
-                          borderTop: 'none',
-                          marginBottom: '.5rem'
-                        }}
-                      >
-                        <div className="d-flex">
-                          <div className="ml-auto align-self-end">
-                            <Link 
-                              to={`/resources/reports/designing-citizen-science-for-both-science-and-education`}
+                          <Card
+                            className="h-100"
+                            style={{
+                              border: '1px solid rgba(41, 52, 118, .9)',
+                              backgroundColor: 'rgba(41, 52, 118, .1)',
+                            }}
+                          >
+                            <Card.Body>
+                              <Card.Title
+                                style={{
+                                  marginBottom: '1.5rem',
+                                  color: 'rgba(41, 52, 118, .9)'
+                                }}
+                              >
+                                {edge.node.frontmatter.title}
+                              </Card.Title>
+                              <p
+                                style={{
+                                  fontFamily: '"Lora", "Adobe Blank"',
+                                  fontWeight: '400',
+                                  fontStyle: 'italic',
+                                  fontSize: '1rem'
+                                }}
+                              >
+                                <em>{edge.node.frontmatter.reportDate}</em>
+                              </p>
+                              <Card.Text
+                                style={{
+                                  marginBottom: '2rem'
+                                }}
+                              >
+                                {edge.node.frontmatter.description}
+                              </Card.Text>
+                            </Card.Body>
+                            <Card.Footer
+                              style={{
+                                background: 'transparent',
+                                // backgroundColor: 'rgba(41, 52, 118, .1)',
+                                borderTop: 'none',
+                                marginBottom: '.5rem'
+                              }}
                             >
-                              <Button variant="outline-secondary">
-                                Read More
-                              </Button>
-                            </Link>
-                          </div>
-                        </div>
-                      </Card.Footer>
-                    </Card>
-                  </Col>
-                  <Col 
-                    lg={4}
-                    className="rrc-card-col"
-                  >
-                    <Card className="h-100">
-                      <Card.Body>
-                        <Card.Title
-                          style={{
-                            marginBottom: '1.5rem'
-                          }}
-                        >
-                          Guidelines for Assessing Instructional Materials that Exemplify the NGSS
-                        </Card.Title>
-                        <p
-                          style={{
-                            fontFamily: '"Lora", "Adobe Blank"',
-                            fontWeight: '400',
-                            fontStyle: 'italic',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          <em>May 2017</em>
-                        </p>
-                        <Card.Text
-                          style={{
-                            marginBottom: '2rem'
-                          }}
-                        >
-                          This report includes four categories of criteria for evaluating student and teacher materials while also providing a blueprint for creating tools and processes to conduct valid assessments.
-                        </Card.Text>
-                      </Card.Body>
-                      <Card.Footer
-                        style={{
-                          background: 'white',
-                          borderTop: 'none',
-                          marginBottom: '.5rem'
-                        }}
-                      >
-                        <div className="d-flex">
-                          <div className="ml-auto align-self-end">
-                            <Link 
-                              to={`/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss`}
-                            >
-                              <Button variant="outline-secondary">
-                                Read More
-                              </Button>
-                            </Link>
-                          </div>
-                        </div>
-                      </Card.Footer>
-                    </Card>
-                  </Col>
-                  <Col 
-                    lg={4}
-                    className="rrc-card-col"
-                  >
-                    <Card className="h-100">
-                      <Card.Body>
-                        <Card.Title
-                          style={{
-                            marginBottom: '1.5rem'
-                          }}
-                        >
-                          Math/Science Teacher Leadership Synthesis Project
-                        </Card.Title>
-                        <p
-                          style={{
-                            fontFamily: '"Lora", "Adobe Blank"',
-                            fontWeight: '400',
-                            fontStyle: 'italic',
-                            fontSize: '1rem'
-                          }}
-                        >
-                          <em>February 2017</em>
-                        </p>
-                        <Card.Text
-                          style={{
-                            marginBottom: '2rem'
-                          }}
-                        >
-                          Three reports have resulted from a synthesis project intended to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
-                        </Card.Text>
-                      </Card.Body>
-                      <Card.Footer
-                        style={{
-                          background: 'white',
-                          borderTop: 'none',
-                          marginBottom: '.5rem'
-                        }}
-                      >
-                        <div className="d-flex">
-                          <div className="ml-auto align-self-end">
-                            <Link 
-                              to={`/resources/reports/math-science-teacher-leadership-synthesis-project`}
-                            >
-                              <Button variant="outline-secondary">
-                                Read More
-                              </Button>
-                            </Link>
-                          </div>
-                        </div>
-                      </Card.Footer>
-                    </Card>
-                  </Col>
+                              <div className="d-flex">
+                                <div className="ml-auto align-self-end">
+                                  <Link 
+                                    to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                  >
+                                    <Button variant="outline-secondary" className="purple">
+                                      Read More
+                                    </Button>
+                                  </Link>
+                                </div>
+                              </div>
+                            </Card.Footer>
+                          </Card>
+                        </Col>
+                      )
+                    })
+                  }
                 </Row>
               </Container>
           </section>
@@ -205,3 +121,29 @@ export default props => (
     {locationProps => <Reports {...locationProps} {...props} />}
   </Location>
 )
+
+export const reportsQuery = graphql`
+  query reportsQuery {
+    allMdx(
+      filter: {frontmatter: { page: {eq: "reports"}}}
+      sort: {
+        fields: [frontmatter___sortOrder, frontmatter___title],
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            additionalTags,
+            date,
+            description,
+            sortOrder,
+            reportDate,
+            title,
+            page
+          }
+        }
+      }
+    }
+  }
+`

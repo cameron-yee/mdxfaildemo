@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMdxRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "reports"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -56,7 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMdxRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
 
@@ -104,7 +104,7 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMdxRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
 
@@ -133,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `query MarkdownPagesQuery {
-          allMdxRemark(
+          allMdx(
             filter: {frontmatter: { page: {eq: "rd-programs"}}}
             sort: { order: ASC, fields: [frontmatter___title] }
           ) {
@@ -151,7 +151,7 @@ exports.createPages = ({ graphql, actions }) => {
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
-        } else if (!result.data.allMdxRemark) {
+        } else if (!result.data.allMdx) {
           reject("No data")
         } else {
 

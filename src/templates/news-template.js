@@ -41,7 +41,7 @@ const NewsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
-                <Col>
+                <Col md={8}>
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
