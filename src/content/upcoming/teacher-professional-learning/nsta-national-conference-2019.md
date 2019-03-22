@@ -15,23 +15,29 @@ sidebarContactsTitle: Questions?
 page: upcoming-programs-teacher-professional-learning
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
+
 <br>
 </br>
-#### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
+
+##### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
 NextGen TIME includes a suite of tools and processes designed to guide your deep dive into next generation science and to support you in the evaluation, selection, and implementation of new materials. The full process of NextGen TIME is often spread out over an extended period of time, but this professional learning experience will ground you in the core processes while helping you see through alignment claims. 
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
+
 <br>
 </br>
-#### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
+
+##### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
 Join us to learn about NextGen TIME tools and processes to collaboratively select and support the implementation of instructional materials designed for next generation science.
 
 Friday, April 12, 3:30 - 4:30 p.m.
+
 <br>
 </br>
-#### NGSS@NSTA Forum Session: Five Tools and Processes for Translating the NGSS into Instruction and Classroom Assessment
+
+##### NGSS@NSTA Forum Session: Five Tools and Processes for Translating the NGSS into Instruction and Classroom Assessment
 
 Join us to learn about Five Tools that will help you and your colleagues use the NGSS to plan for instruction and classroom assessment.
 
