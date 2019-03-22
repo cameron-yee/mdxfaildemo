@@ -40,31 +40,16 @@ Friday, April 12, 8 - 9 a.m.
 <a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer">Learn More Here</a>
 
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
-
-Plan for instruction using Tool 1 from the Five Tools to deepen your understanding of instruction that incorporates all three dimensions of the NGSS.
-
-Saturday, April 13, 8:00 - 9:00 a.m.
+Saturday, April 13, 8 - 9 a.m.
 
 **Using Tool 2 of the Five Tools and Process to Translate Performance Expectations into a Plan for Classroom Assessment**	
-
-Use Tool 2 of the Five Tools to consider how NGSS performance expectations can be used to think about evidence of learning and plan for classroom assessment.
-
 Saturday, April 13, 9:30 - 10:30 a.m. 
 
 **Using Tool 3 of the Five Tools and Processes to Develop a Conceptual Flow Using the 5E Instructional Model**	
-
-Use Tool three to learn how the BSCS 5E Instructional Model supports planning for coherent three-dimensional instructional sequences by comparing classroom scenarios.
-
 Saturday, April 13, 11 a.m. - 12 p.m.
 
 **Using Tool 4 of the Five Tools and Processes to Design Learning Sequences Using the 5E Instructional Model**	
-
-Use tool four of the five tools and processes to design a NGSS learning sequence integrating the three dimensions using the BSCS 5E Instructional Model.
-
-Saturday, April 13, 2 p.m. - 3:00 p.m. 
+Saturday, April 13, 2 - 3 p.m. 
 
 **Using Tool 5 of the Five Tools and Processes to Develop Performance Tasks from Evidence of Learning Specifications**	
-
-Use Tool 5 from the Five Tools to engage in a process to create assessments that meet the performance expectations based on task specifications.
-
 Saturday, April 13, 3:30 p.m. - 4:30 p.m.
