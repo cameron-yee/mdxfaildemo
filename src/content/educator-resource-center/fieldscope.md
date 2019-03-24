@@ -25,11 +25,12 @@ FieldScope is freely available to educators, students, and community members who
 <div class="d-flex justify-content-center">
   <div class="p-2">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
   </div>
-  <p class="p-2" style="margin: 0;">
+  <p class="p-2 m-0"><em>This material is based upon work supported by the National Science Foundation under Grants Nos. GEO-0627923 and DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society.</em></p>
+</div>
 
-_This material is based upon work supported by the National Science Foundation under Grants Nos._ _GEO-0627923_ _and_ _DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society._
+
 
 \*May need to also credit Moore Foundation…Sean is looking into this.

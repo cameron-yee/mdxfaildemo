@@ -21,7 +21,7 @@ import 'react-placeholder/lib/reactPlaceholder.css'
 const LeadershipPage = class extends Component {
   constructor(props) {
     super(props)
-    this.people = this.props.data.allMarkdownRemark.edges
+    this.people = this.props.data.allMdx.edges
     this.bod = this.getGroup(this.people, 'Board Member')
     this.management = this.getGroup(this.people, 'Management')
   
@@ -291,7 +291,7 @@ export default props => (
 
 export const leadershipQuery = graphql`
   query leadershipQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: {frontmatter: { page: {eq: "leadership"}}}
     ) {
       edges {

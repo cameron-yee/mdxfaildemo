@@ -32,7 +32,7 @@ _This resource was developed in collaboration with Oregon Public Broadcasting, t
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.

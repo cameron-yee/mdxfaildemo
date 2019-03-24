@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
 
 import Button from 'react-bootstrap/Button'
@@ -12,7 +13,6 @@ import PageTitle from '../components/layout/page-title/page-title'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Row from 'react-bootstrap/Row'
 
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import '../global-scss/index.scss'
 // import './rd-programs-template.scss'
@@ -41,15 +41,15 @@ const NewsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
-                <Col>
-                  {/* <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div> */}
+                <Col md={8}>
+                  {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
                 <Col>
                   <MDXRenderer>{this.html}</MDXRenderer>
-                  {/* <div className="markdown-div" dangerouslySetInnerHTML={{ __html: this.html }}></div> */}
+                  {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
