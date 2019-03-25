@@ -138,14 +138,14 @@ button {
     border-color: $purple !important;
   }
   &.classroom-instruction {
-    color: rgba(41, 52, 118, .9) !important;
+    color: rgba(94, 60, 124, 1) !important;
     background-color: $white !important;
-    border-color: rgba(41, 52, 118, .9) !important;
+    border-color: rgba(94, 60, 124, 1) !important;
   }
   &.professional-learning {
-    color: rgba(48, 135, 180, 1) !important;
+    color: rgba(255, 159, 0, 1) !important;
     background-color: $white !important;
-    border-color: rgba(48, 135, 180, 1) !important;
+    border-color: rgba(255, 159, 0, 1) !important;
   }
   &.district-planning {
     color: rgba(174, 37, 38, 1) !important;
@@ -170,10 +170,10 @@ button {
     color: $purple !important;
   }
   &.classroom-instruction:hover {
-    color: rgba(41, 52, 118, .9) !important;
+    color: rgba(94, 60, 124, 1) !important;
   }
   &.professional-learning:hover {
-    color: rgba(48, 135, 180, 1) !important;
+    color: rgba(255, 159, 0, 1) !important;
   }
   &.district-planning:hover {
     color: rgba(174, 37, 38, 1) !important;
@@ -209,13 +209,13 @@ button {
 
 }
 .btn-outline-secondary.classroom-instruction:hover:before, .btn-outline-secondary.classroom-instruction:focus:before, .btn-outline-secondary.classroom-instruction:active:before {
-  border: rgba(41, 52, 118, .9) solid 1px;
+  border: rgba(94, 60, 124, 1) solid 1px;
   -webkit-animation-name: btn-outline-secondary;
   animation-name: btn-outline-secondary;
 }
 
 .btn-outline-secondary.professional-learning:hover:before, .btn-outline-secondary.professional-learning:focus:before, .btn-outline-secondary.professional-learning:active:before {
-  border: rgba(48, 135, 180, 1) solid 1px;
+  border: rgba(255, 159, 0, 1) solid 1px;
   -webkit-animation-name: btn-outline-secondary;
   animation-name: btn-outline-secondary;
 }

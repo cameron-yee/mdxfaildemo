@@ -1,14 +1,15 @@
 .filter-pill {
   margin: 0 0.5rem;
   padding: .5rem;
-  background-color: rgb(255, 159, 0); 
+  // background-color: rgb(255, 159, 0); 
+  background-color: rgb(76, 76, 76); 
   color: white !important;
 
   &.classroom-instruction {
-    background-color:rgba(41, 52, 118, .9); 
+    background-color:rgba(94, 60, 124, 1); 
   }
   &.professional-learning {
-    background-color: rgba(48, 135, 180, 1);
+    background-color: rgba(255, 159, 0, 1);
   }
   &.district-planning {
     background-color: rgba(174, 37, 38, 1);
