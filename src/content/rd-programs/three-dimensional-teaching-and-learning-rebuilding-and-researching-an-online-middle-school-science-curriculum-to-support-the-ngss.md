@@ -3,14 +3,14 @@ date: 2019-02-15T20:02:08.538Z
 title: >-
   Three-Dimensional Teaching and Learning: Rebuilding and Researching an Online
   Middle School Science Curriculum to Support the NGSS
-areas:
-  - Instructional Materials Development
-  - Teacher Professional Learning
-  - Research
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/three-dimensional-teaching-and-learning-rebuilding-and-researching-an-online-middle-school-science-curriculum-to-support-the-ngss
 seoDescription: Test SEO description.
 seoLang: en-us
+areas:
+  - Instructional Materials Development
+  - Teacher Professional Learning
+  - Research
 image: /assets/rd-programs/3dmss.svg
 alt: 3DMSS Icon
 sidebarContactsText: 'For more information, contact Sue Kowalski.'
@@ -29,4 +29,14 @@ Ultimately, students solve the mystery and learn important lessons about how the
 
 The 3D Middle School Science project will be available in Canvas or as a PDF with embedded links in 2019.
 
-_This material is based upon work supported by the National Science Foundation under Grant No. DRL-1502571. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
+<div class="d-flex justify-content-center">
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grant No. DRL-1502571. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+  </p>
+  </div>
+</div>
