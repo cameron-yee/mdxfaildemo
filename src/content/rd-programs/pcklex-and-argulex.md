@@ -1,11 +1,11 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: PCK*lex and ArguLex
-areas:
-  - Research
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/pcklex-and-argulex'
 seoDescription: Test SEO description.
 seoLang: en-us
+areas:
+  - Research
 image: /assets/rd-programs/argulex.svg
 alt: ARGULEX Icon
 sortOrder: 6
@@ -25,7 +25,8 @@ Following in the footsteps of PCK*lex is ArguLex, a project that applies similar
     
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
-    <p style="font-style: italic; text-align: center;">This material is based upon work supported by the National Science Foundation under Grants No. 1437173 and No. 1561150. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grants No. 1437173 and No. 1561150. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
 </p>
  </div>
 </div>
