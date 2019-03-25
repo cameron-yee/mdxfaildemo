@@ -1,18 +1,19 @@
 ---
 date: 2019-02-15T20:02:08.538Z
-title: "Collaborative Research: Extending and Investigating the Impact of the High School Model-based Educational Resource (MBER)"
+title: >-
+  Collaborative Research: Extending and Investigating the Impact of the High
+  School Model-based Educational Resource (MBER)
 areas:
   - Instructional Materials Development
   - Research
-image: /assets/rd-programs/mber.svg
-alt: MBER Icon
-page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
+seoCanonicalUrl: >-
+  https://bmw-bscs.netlify.com/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
 seoDescription: Test SEO description.
 seoLang: en-us
-# sidebarText: Results from this meta-analysis are now published in AERA Open Journal. 
-# sidebarURL: https://journals.sagepub.com/doi/10.1177/2332858418791991 
+image: /assets/rd-programs/mber.svg
+alt: MBER Icon
 sortOrder: 9
+page: rd-programs
 ---
 
 Current research suggests that scientific models can help teachers transform their science instruction and enhance student learning. This premise grounds the Model-Based Educational Resource (MBER)—developed by Dr. Cindy Passmore and colleagues at UC Davis—which engages high school biology students in constructing models to make sense of science. Now researchers are wondering: How effectively can this approach to biology education support next generation science learning? 
@@ -31,13 +32,16 @@ This study will also address a significant gap in the research on next generatio
 
 In addition to generating important research findings, the materials revised and studied in this project will be open source and freely available to teachers and schools, thereby maximizing the broader impacts of this work. 
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+      This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
   </div>
-  <p class="p-2" style="margin: 0;"><em>This material is based upon work supported by the National Science Foundation under Grant No. 1813538. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
 
 Partners: Dr. Cindy Passmore and colleagues at UC Davis
