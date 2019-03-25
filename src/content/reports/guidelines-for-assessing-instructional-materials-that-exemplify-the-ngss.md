@@ -1,18 +1,18 @@
 ---
 date: 2018-12-18T23:03:06.180Z
-title: "Guidelines for Assessing Instructional Materials that Exemplify the NGSS"
-# template: Image Right
-# image: /assets/canvas.jpg
-# alt: Canvas painting of two people walking on a path.
-additionalTags: null
-page: reports
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss
+title: Guidelines for Assessing Instructional Materials that Exemplify the NGSS
+seoCanonicalUrl: >-
+  https://bmw-bscs.netlify.com/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss
 seoDescription: Test SEO description.
 seoLang: en-us
-customTitle: false
+cardDescription: >-
+  This report includes four categories of criteria for evaluating student and
+  teacher materials while also providing a blueprint for creating tools and
+  processes to conduct valid assessments.
 reportDate: May 2017
-cardDescription: This report includes four categories of criteria for evaluating student and teacher materials while also providing a blueprint for creating tools and processes to conduct valid assessments.
+customTitle: false
 sortOrder: 2
+page: reports
 ---
 
 import Button from 'react-bootstrap/Button'
@@ -111,7 +111,15 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
   </div>
   <div className="p-2 bd-highlight my-5">
     <p>
-      This material is based upon work supported by the <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-secondary">National Science Foundation</a> under Grant No. DGE-1445675. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
+<div class="d-flex justify-content-center">
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    </a>
+    <p style="font-style: italic; text-align: center;">
+      This material is based upon work supported by the National Science Foundation under Grant No. (DGE-1445675). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
 </div>
