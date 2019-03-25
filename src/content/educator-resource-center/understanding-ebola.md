@@ -6,12 +6,12 @@ seoCanonicalUrl: >-
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Classroom Instruction
-template: Image Right
 image: /assets/cells.jpeg
 alt: PLACEHOLDER
+template: Image Right
 courseId: 0
-page: educator-resource-center
 sortOrder: 8
+page: educator-resource-center
 ---
 In 2014-15, more than 11,000 people died in an outbreak of Ebola in West Africa. And just a few years later, the Democratic Republic of Congo is experiencing a world-first: an Ebola outbreak in a war zone. Citizens around the globe continue to share concerns about the spread of this disease. 
 
@@ -21,13 +21,16 @@ In alignment with the Next Generation Science Standards, the resource addresses 
 
 <a class="btn btn-outline-secondary" href="http://ebola.bscs.org/ /" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. DRL-1518346. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
   </div>
-  <p class="p-2" style="margin: 0;"><em>This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. DRL-1518346. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
 
 
