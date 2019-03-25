@@ -21,7 +21,6 @@ sidebarContacts:
 sortOrder: 1
 page: rd-programs
 ---
-
 import 'global-scss/index.scss'
 
 STeLLA is a nationally-recognized program for teacher professional learning—developed from a 16-year line of research at BSCS Science Learning. 
@@ -120,7 +119,6 @@ See our growing line of research at-a-glance below.
   </div>
 </div>
 
-
 **Work with Us**
 
 High quality science education is more important than ever. Teachers must prepare students to succeed in a 21st century society, where scientific reasoning and critical thinking skills are essential. To prepare teachers to achieve this goal, BSCS is working to bring the STeLLA approach to teachers nationwide through partnerships with schools, districts, teacher educators, and funders. 
@@ -133,7 +131,7 @@ High quality science education is more important than ever. Teachers must prepar
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
-      This material is based upon work supported by the National Science Foundation under Awards #0310721, #0918277, #0957996, #1118643, #1220635, #1321242, #1503280, #1725389, and #1813127 and by the Minnesota Department of Education under Award #2016-00170. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or of the Minnesota Department of Education.
+      This material is based upon work supported by the National Science Foundation under Award Nos. (0310721), (0918277), (0957996), (1118643), (1220635), (1321242), (1503280), (1725389), and (1813127) and by the Minnesota Department of Education under Award No. (2016-00170). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or of the Minnesota Department of Education.
     </p>
   </div>
 </div>
