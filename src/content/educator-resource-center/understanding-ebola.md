@@ -25,17 +25,15 @@ In alignment with the Next Generation Science Standards, the resource addresses 
 
 <a class="btn btn-outline-secondary" href="http://ebola.bscs.org/ /" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
-<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
-<div class="d-flex justify-content-center">
-  <div style="width: 70%;">
-    
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
-    </a>
-    <p style="font-style: italic; text-align: center;">
-      This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. DRL-1518346. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-    </p>
-  </div>
+<div class="d-flex justify-content-center"> 
+	 <div style="width: 70%;">
+		<a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+			<img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+		</a>
+		<p style="font-style: italic; text-align: center;">
+	This material was developed in partnership with Oregon Public Broadcasting and is based upon work supported by the National Science Foundation under Grant No. (DRL-1518346). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
+		</p>
+	</div>
 </div>
 
 
