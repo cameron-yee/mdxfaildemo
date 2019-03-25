@@ -97,8 +97,9 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
   </Card.Body>
 </Card>
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div className="d-flex justify-content-center">
-  <div className="p-2 bd-highlight my-5">
+  <div className="p-2 bd-highlight mt-2 mb-5">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img
         src={nsfLogo}
@@ -109,10 +110,15 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
       />
     </a>
   </div>
-  <div className="p-2 bd-highlight my-5">
-    <p>
+  <div className="p-2 bd-highlight mt-2 mb-5">
+    <p style="font-style: italic;">
+      This material is based upon work supported by the National Science Foundation under Grant No. (DGE-1445675). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
+  </div>
+</div>
 
-<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
+
+<!-- <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
     
@@ -122,4 +128,4 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
       This material is based upon work supported by the National Science Foundation under Grant No. (DGE-1445675). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
-</div>
+</div> -->

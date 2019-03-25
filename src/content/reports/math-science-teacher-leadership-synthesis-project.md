@@ -187,15 +187,7 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
     </a>
   </div>
   <div className="p-2 bd-highlight my-3">
-    <p>
-
-<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
-<div class="d-flex justify-content-center">
-  <div style="width: 70%;">
-    
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
-    </a>
-    <p style="font-style: italic; text-align: center;">
+    <p style="font-style: italic;">
       This material is based upon work supported by the National Science Foundation under Grant No. (ECR-1534698). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>

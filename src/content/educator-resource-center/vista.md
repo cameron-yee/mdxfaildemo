@@ -19,6 +19,10 @@ template: Image Left
 courseId: 0
 sortOrder: 10
 page: educator-resource-center
+sidebarContacts:
+  - Cameron Yee
+sidebarContactsText: Contact Cameron Yee to register for ViSTA.
+sidebarContactsTitle: Registration
 ---
 
 import { Link } from 'gatsby'
@@ -30,12 +34,12 @@ BSCS Science Learning’s online professional learning resource, ViSTA, is desig
 ViSTA is valuable in both university preservice methods courses and inservice professional learning programs. Instructors, facilitators, and individual users may sign up for a free 14-day trial to review the resource. Once a course or user is registered, ongoing access costs $15 per module. 
 
 <div class="d-flex justify-content-center"> 
-	 <div style="width: 70%;">
-		<a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-			<img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
-		</a>
-		<p style="font-style: italic; text-align: center;">
-	This material is based upon work supported by the National Science Foundation under Grant No. (DRL-0957996). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-		</p>
-	</div>
+  <a class="p-2" href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  </a>
+  <p class="p-2">
+    <em>
+      This material is based upon work supported by the National Science Foundation under Grant No. (DRL-0957996). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </em>
+  </p>
 </div>
