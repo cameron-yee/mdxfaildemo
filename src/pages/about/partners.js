@@ -65,6 +65,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Achieve
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -74,6 +75,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Agile Mind
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -83,6 +85,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               American Association for the Advancement of Science (AAAS)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -92,6 +95,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               American Chemical Society
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -101,6 +105,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               American Institute of Biological Sciences (AIBS)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -110,6 +115,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               American Museum of Natural History (AMNH)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -119,6 +125,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Arizona Department of Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -128,6 +135,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Arizona Science Teachers Association
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -137,6 +145,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Association for Science Teacher Education (ASTE)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -146,6 +155,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Association of Zoos &amp; Aquariums
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -155,6 +165,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               BEACON Center for the Study of Evolution in Action
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -164,6 +175,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Blackdove Studios
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -173,6 +185,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Botanical Society of America
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -182,6 +195,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Center to Support Excellence in Teaching, Stanford University (CSET)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -191,6 +205,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Charles A. Dana Center at The University of Texas at Austin
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -200,6 +215,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Children's Hospital Colorado
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -209,6 +225,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Colorado Science Education Network
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -218,6 +235,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Concord Consortium
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -227,6 +245,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               CREATE for STEM (at MSU)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -236,6 +255,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Digital Promise
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -245,6 +265,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               GLOBE Implementation Office
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -254,6 +275,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Gordon and Betty Moore Foundation
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -263,6 +285,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Gulf of Maine Research Institute
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -272,6 +295,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               Horizon Research, Inc.
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -281,6 +305,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Howard Hughes Medical Institute (HHMI) BioInteractive
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -290,6 +315,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Kendall Hunt Publishing Company
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -299,6 +325,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               McREL
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -308,6 +335,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Minnesota Department of Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -317,6 +345,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Monterey Bay Aquarium
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -326,6 +355,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Association for Research in Science Teaching (NARST)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -335,6 +365,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Association of Biology Teachers (NABT)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -344,6 +375,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               National Council for Geographic Education
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -353,6 +385,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Institutes of Health
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -362,6 +395,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Science Education Leadership Association (NSELA)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -371,6 +405,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Science Foundation (NSF)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -380,6 +415,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               National Science Teachers Association (NSTA)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -389,6 +425,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Nebraska Department of Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -398,6 +435,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               New Mexico Public Education Department
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -407,6 +445,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               North American Association for Environmental Education (NAAEE)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -416,6 +455,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Oregon Public Broadcasting (OPB)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -425,6 +465,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Pisces Foundation
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -434,6 +475,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               SeaPerch at RoboNation
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -443,6 +485,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Society for Research on Educational Effectiveness (SREE)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -452,6 +495,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               TERC
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -461,6 +505,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               UCAR Center for Science Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -470,6 +515,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               US Department of Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -479,6 +525,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               WestEd
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -488,6 +535,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               WGBH
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -497,6 +545,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Wyoming Department of Education
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
         </ul>
@@ -515,6 +564,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Boston College
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -524,6 +574,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               California State Polytechnic University– Pomona
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -533,6 +584,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Colorado College
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -542,6 +594,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Colorado State University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -551,6 +604,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               DePaul University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -560,6 +614,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Florida Agricultural and Mechanical University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -569,6 +624,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Georgia Tech Research Institute
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -578,6 +634,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Loyola University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -587,6 +644,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Miami University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -596,6 +654,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Michigan State University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -605,6 +664,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               Montana State University
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -614,6 +674,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Northwestern University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -623,6 +684,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Rice University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -632,6 +694,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Stanford University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -641,6 +704,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of California, Berkeley
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -650,6 +714,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of California, Davis
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -659,6 +724,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Chicago
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -668,6 +734,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Colorado, Boulder
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -677,6 +744,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Colorado, Colorado Springs
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -686,6 +754,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Georgia
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -695,6 +764,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Houston – Victoria
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -704,6 +774,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Louisville (Kentucky)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -713,6 +784,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Minnesota Twin Cities
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -722,6 +794,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Missouri
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -731,6 +804,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Nebraska Medical Center
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -740,6 +814,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of New Mexico
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -749,6 +824,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of Northern Colorado
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -758,6 +834,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               University of North Texas
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
         </ul>
@@ -776,6 +853,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Achievement First (Connecticut, New York, and Rhode Island)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -785,6 +863,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Alpine School District (Utah)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -794,6 +873,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               Arvada West High School (Colorado)
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -803,6 +883,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Boulder Valley School District (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -812,6 +893,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Chicago Public Schools (Illinois)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -821,6 +903,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Colorado Springs School District 11 (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -830,6 +913,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               The Dalton School (New York)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -839,6 +923,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Denver Public Schools (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -848,6 +933,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Fairfax County Public Schools (Virginia)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -857,6 +943,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Friends Academy (New York)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -866,6 +953,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Gunnison Watershed School District (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -875,6 +963,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Harrison School District 2 (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -884,6 +973,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Jefferson County Public Schools (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -893,6 +983,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Jefferson County Public Schools (Kentucky)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -902,6 +993,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Mesa County Valley School District 51 (Colorado)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -911,6 +1003,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               Minneapolis Public Schools (Minnesota)
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -920,6 +1013,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Newberg School District (Oregon)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -929,6 +1023,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Oʻahu Leilehua-Mililani-Waialua Complex (Hawaii)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -938,6 +1033,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Owatonna Public Schools (Minnesota)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -947,6 +1043,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Pomona Unified School District (California)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -956,6 +1053,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Riverdale Country School (New York)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -965,6 +1063,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Saint Paul Public Schools (Minnesota)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -974,6 +1073,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Salt Lake City School District (Utah)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -983,6 +1083,7 @@ const panels = [
               rel="noopener noreferrer"
             > */}
               San Francisco Unified School District (California)
+              {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
           <li>
@@ -992,6 +1093,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               School District of Hartford Joint No. 1 (Wisconsin)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -1001,6 +1103,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Seattle Public Schools (Washington)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -1010,6 +1113,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Tumwater School District (Washington)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
           <li>
@@ -1019,6 +1123,7 @@ const panels = [
               rel="noopener noreferrer"
             >
               Winona Area Public Schools (Minnesota)
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
         </ul>
