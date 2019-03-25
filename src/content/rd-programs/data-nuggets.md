@@ -14,7 +14,6 @@ sidebarURL: 'http://datanuggets.org/'
 sortOrder: 10
 page: rd-programs
 ---
-
 What exactly does a scientist do? How does she collect information and make sense of it all? 
 
 Data Nuggets, a four-year research project between Michigan State University and BSCS, is studying the effects of bringing real-world data into middle and high school classrooms. Students are given the opportunity to dive into an actual scientist’s research and practice looking for patterns in the data, develop explanations about natural phenomena, and identify hypotheses and predictions.
@@ -28,7 +27,7 @@ From topics such as “Won’t you be my urchin” to “Sticky situations: big 
     </a>
   </div>
   <p class="p-2" style="margin: 0;"><em>
-This material is based upon work supported by the National Science Foundation under Grant No. DRL-1503005. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+This material is based upon work supported by the National Science Foundation under Grant No. (DRL-1503005). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 </p>
   </div>
 </div>
