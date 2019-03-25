@@ -1,108 +1,108 @@
 @import '../../global-scss/utilities/variables.scss';
 
-.classroom {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 10px 0 0 10px;
-  position: relative;
+// .classroom {
+//   background:
+//     linear-gradient(
+//       rgba(0, 0, 0, 0.6),
+//       rgba(0, 0, 0, 0.6)
+//     ),
+//     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 10px 0 0 10px;
+//   position: relative;
 
-  &:hover {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px 0 0 10px;
-    position: relative;
-  }
-}
+//   &:hover {
+//     background:
+//       linear-gradient(
+//         rgba(0, 0, 0, 0.45),
+//         rgba(0, 0, 0, 0.45)
+//       ),
+//       url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin: 10px 0 0 10px;
+//     position: relative;
+//   }
+// }
 
-.professional-learning {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 10px 0 0 10px;
-  position: relative;
+// .professional-learning {
+//   background:
+//     linear-gradient(
+//       rgba(0, 0, 0, 0.6),
+//       rgba(0, 0, 0, 0.6)
+//     ),
+//     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 10px 0 0 10px;
+//   position: relative;
 
-  &:hover {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px 0 0 10px;
-    position: relative;
-  }
-}
+//   &:hover {
+//     background:
+//       linear-gradient(
+//         rgba(0, 0, 0, 0.45),
+//         rgba(0, 0, 0, 0.45)
+//       ),
+//       url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin: 10px 0 0 10px;
+//     position: relative;
+//   }
+// }
 
-.district-planning {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 10px 0 0 10px;
-  position: relative;
+// .district-planning {
+//   background:
+//     linear-gradient(
+//       rgba(0, 0, 0, 0.6),
+//       rgba(0, 0, 0, 0.6)
+//     ),
+//     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 10px 0 0 10px;
+//   position: relative;
 
-  &:hover {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px 0 0 10px;
-    position: relative;
-  }
-}
+//   &:hover {
+//     background:
+//       linear-gradient(
+//         rgba(0, 0, 0, 0.45),
+//         rgba(0, 0, 0, 0.45)
+//       ),
+//       url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin: 10px 0 0 10px;
+//     position: relative;
+//   }
+// }
 
-.citizen-science {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 10px 0 0 10px;
-  position: relative;
+// .citizen-science {
+//   background:
+//     linear-gradient(
+//       rgba(0, 0, 0, 0.6),
+//       rgba(0, 0, 0, 0.6)
+//     ),
+//     url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   margin: 10px 0 0 10px;
+//   position: relative;
 
-  &:hover {
-    background:
-      linear-gradient(
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.45)
-      ),
-      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px 0 0 10px;
-    position: relative;
-  }
-}
+//   &:hover {
+//     background:
+//       linear-gradient(
+//         rgba(0, 0, 0, 0.45),
+//         rgba(0, 0, 0, 0.45)
+//       ),
+//       url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     margin: 10px 0 0 10px;
+//     position: relative;
+//   }
+// }
 
 .mid h4 {
   color: white;
@@ -143,11 +143,20 @@
   margin-bottom: 1.5rem;
 }
 
-// .erc-card {
-//   height: 100%;
-  // position: relative;
-  // padding-bottom: 10%;
-// }
+.erc-card {
+  &.classroom-instruction {
+    border: 1px solid rgba(41, 52, 118, .9);
+  }
+  &.professional-learning {
+    border: 1px solid rgba(48, 135, 180, 1);
+  }
+  &.district-planning {
+    border: 1px solid rgba(174, 37, 38, 1);
+  }
+  &.citizen-science {
+    border: 1px solid rgba(17, 151,98, 1);
+  }
+}
 
 .erc-card-img-wrapper {
   overflow: hidden;
@@ -156,9 +165,7 @@
 }
 
 // .erc-card-img {
-//   height: auto;
-//   min-width: 100%;
-//   width: 100%;
+//   border: 1px solid transparent !important;
 // }
 
 .erc-excerpt {

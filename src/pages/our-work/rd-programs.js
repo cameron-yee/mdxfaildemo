@@ -180,7 +180,8 @@ const RDPrograms = class extends Component {
                               </div>
                             </div>
                             <Card.Text>
-                              {edge.node.excerpt}
+                              {edge.node.frontmatter.cardDescription}
+                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                             </Card.Text>
                           </Card.Body>
                           <Card.Footer
@@ -338,6 +339,7 @@ export const rdProgramsQuery = graphql`
           excerpt(pruneLength: 200)
           frontmatter {
             additionalTags,
+            cardDescription,
             alt,
             areas,
             date,

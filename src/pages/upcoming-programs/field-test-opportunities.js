@@ -12,7 +12,7 @@ import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SEO from '../../components/seo'
 
-import './teacher-professional-learning.scss'
+import './upcoming-programs.scss'
 
 const FieldTestOpportunitiesPage = class extends Component {
   constructor(props) {
@@ -54,10 +54,10 @@ const FieldTestOpportunitiesPage = class extends Component {
                       return(
                         <Col
                           lg={4}
-                          key={`tpl-${index}`}
-                          className="tpl-card-col"
+                          key={`up-${index}`}
+                          className="up-card-col"
                         >
-                          {/* <Card id={`resource-${index}`} className="tpl-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
+                          {/* <Card id={`resource-${index}`} className="up-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
                           <Card id={`program-${index}`} className="h-100">
                             <Card.Body>
                               <Card.Title
@@ -68,12 +68,13 @@ const FieldTestOpportunitiesPage = class extends Component {
                                 {edge.node.frontmatter.title}
                               </Card.Title>
                               <Card.Text
-                                className="tpl-excerpt"
+                                className="up-excerpt"
                                 style={{
                                   marginBottom: '2rem'
                                 }}
                               >
-                                {edge.node.excerpt}
+                                {edge.node.frontmatter.cardDescription}
+                                {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                               </Card.Text>
                             </Card.Body>
                               <Card.Footer
@@ -129,6 +130,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY"),
           additionalTags,
+          cardDescription,
           seoCanonicalUrl,
           seoDescription,
           seoLang,

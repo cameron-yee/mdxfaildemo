@@ -11,7 +11,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 customTitle: false
 reportDate: January 2018
-description: This report presents guidelines and strategies for designing citizen science projects with scientific and educational benefits.
+cardDescription: This report presents guidelines and strategies for designing citizen science projects with scientific and educational benefits.
 sortOrder: 1
 ---
 

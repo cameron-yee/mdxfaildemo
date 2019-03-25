@@ -11,7 +11,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 customTitle: true
 reportDate: February 2017
-description: Three reports have resulted from a synthesis project intended to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
+cardDescription: Three reports have resulted from a synthesis project intended to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
 sortOrder: 3
 ---
 

@@ -11,7 +11,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 customTitle: false
 reportDate: May 2017
-description: This report includes four categories of criteria for evaluating student and teacher materials while also providing a blueprint for creating tools and processes to conduct valid assessments.
+cardDescription: This report includes four categories of criteria for evaluating student and teacher materials while also providing a blueprint for creating tools and processes to conduct valid assessments.
 sortOrder: 2
 ---
 

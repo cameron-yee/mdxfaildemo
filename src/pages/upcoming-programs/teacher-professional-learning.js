@@ -12,7 +12,7 @@ import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 import SEO from '../../components/seo'
 
-import './teacher-professional-learning.scss'
+import './upcoming-programs.scss'
 
 import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
@@ -46,7 +46,7 @@ const TeacherProfessionalLearningPage = class extends Component {
     },
     3000)
 
-    const tpl_images = document.getElementsByClassName('tpl-card-img') 
+    const tpl_images = document.getElementsByClassName('up-card-img') 
     for(let i = 0; i < tpl_images.length; i++) {
       if(tpl_images[i].complete && this.images_loaded !== tpl_images.length) {
         this.loaded()
@@ -55,7 +55,7 @@ const TeacherProfessionalLearningPage = class extends Component {
   }
 
   loaded = () => {
-    const tpl_images = document.getElementsByClassName('tpl-card-img')
+    const tpl_images = document.getElementsByClassName('up-card-img')
     if(this.images_loaded < tpl_images.length) {
       this.images_loaded = this.images_loaded + 1
     } else {
@@ -97,13 +97,13 @@ const TeacherProfessionalLearningPage = class extends Component {
                     return(
                       <Col
                         lg={4}
-                        key={`tpl-${index}`}
-                        className="tpl-card-col"
+                        key={`up-${index}`}
+                        className="up-card-col"
                       >
-                        {/* <Card id={`resource-${index}`} className="tpl-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
-                        <Card id={`program-${index}`} className="tpl-card h-100">
+                        {/* <Card id={`resource-${index}`} className="up-card" data-filter={JSON.stringify(data_filter)} data-type={edge.node.frontmatter.type}> */}
+                        <Card id={`program-${index}`} className="up-card h-100">
                           <Card.Img
-                            className="tpl-card-img"
+                            className="up-card-img"
                             variant="top"
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
@@ -126,7 +126,7 @@ const TeacherProfessionalLearningPage = class extends Component {
                             }}
                           >
                             <Card.Img
-                              className="tpl-card-img"
+                              className="up-card-img"
                               variant="top"
                               src={edge.node.frontmatter.image}
                               alt={edge.node.frontmatter.alt}
@@ -147,12 +147,13 @@ const TeacherProfessionalLearningPage = class extends Component {
                               {edge.node.frontmatter.title}
                             </Card.Title>
                             <Card.Text
-                              className="tpl-excerpt"
+                              className="up-excerpt"
                               style={{
                                 marginBottom: '2rem'
                               }}
                             >
-                              {edge.node.excerpt}
+                              {edge.node.frontmatter.cardDescription}
+                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                             </Card.Text>
                           </Card.Body>
                             <Card.Footer
@@ -209,6 +210,7 @@ export const query = graphql`
           alt,
           date(formatString: "MMMM DD, YYYY"),
           additionalTags,
+          cardDescription,
           image,
           seoCanonicalUrl,
           seoDescription,

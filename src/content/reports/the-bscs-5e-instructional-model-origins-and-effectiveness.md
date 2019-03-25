@@ -8,7 +8,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 customTitle: true
 reportDate: July 2006
-description: This report explores the BSCS 5E Instructional Model’s effectiveness and widespread use in curriculum development.
+cardDescription: This report explores the BSCS 5E Instructional Model’s effectiveness and widespread use in curriculum development.
 sortOrder: 4
 ---
 

@@ -3,12 +3,44 @@
 }
 
 .categoryImageChild {
-  border: 3px solid rgba(41, 52, 118, .9);
-  width: 50%;
-  max-width: 105px;
+  &.classroom-instruction {
+    border: 3px solid rgba(41, 52, 118, .9);
+    width: 50%;
+    max-width: 105px;
+  }
+  &.professional-learning {
+    border: 3px solid rgba(48, 135, 180, 1);
+    width: 50%;
+    max-width: 105px;
+  }
+  &.district-planning {
+    border: 3px solid rgba(174, 37, 38, 1);
+    width: 50%;
+    max-width: 105px;
+  }
+  &.citizen-science {
+    border: 3px solid rgba(17, 151,98, 1);
+    width: 50%;
+    max-width: 105px;
+  }
 
-  &:hover {
+  &.classroom-instruction:hover {
     background-color: rgba(41, 52, 118, .9);
+    // filter: invert(1);
+  }
+
+  &.professional-learning:hover {
+    background-color: rgba(48, 135, 180, 1);
+    // filter: invert(1);
+  }
+
+  &.district-planning:hover {
+    background-color: rgba(174, 37, 38, 1);
+    // filter: invert(1);
+  }
+
+  &.citizen-science:hover {
+    background-color: rgba(17, 151,98, 1);
     // filter: invert(1);
   }
 }
@@ -20,8 +52,20 @@
   }
 }
 
-.categoryImageParent:hover .categoryImageChild:not(:hover) {
+.categoryImageParent.classroom-instruction:hover .categoryImageChild:not(:hover) {
   background-color: rgba(41, 52, 118, .9);
+  // filter: invert(1);
+}
+.categoryImageParent.professional-learning:hover .categoryImageChild:not(:hover) {
+  background-color: rgba(48, 135, 180, 1);
+  // filter: invert(1);
+}
+.categoryImageParent.district-planning:hover .categoryImageChild:not(:hover) {
+  background-color: rgba(174, 37, 38, 1);
+  // filter: invert(1);
+}
+.categoryImageParent.citizen-science:hover .categoryImageChild:not(:hover) {
+  background-color: rgba(17, 151,98, 1);
   // filter: invert(1);
 }
 

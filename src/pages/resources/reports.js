@@ -79,7 +79,8 @@ const Reports = class extends Component {
                                   marginBottom: '2rem'
                                 }}
                               >
-                                {edge.node.frontmatter.description}
+                                {edge.node.frontmatter.cardDescription}
+                                {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                               </Card.Text>
                             </Card.Body>
                             <Card.Footer
@@ -133,10 +134,11 @@ export const reportsQuery = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 200)
           frontmatter {
             additionalTags,
+            cardDescription,
             date,
-            description,
             sortOrder,
             reportDate,
             title,

@@ -177,7 +177,8 @@ const LeadershipPage = class extends Component {
                         {person.node.frontmatter.fullName}
                       </Card.Title>
                       <Card.Text>
-                        {person.node.excerpt}
+                        {person.node.frontmatter.cardDescription}
+                        {!person.node.frontmatter.cardDescription && person.node.excerpt}
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer
@@ -251,7 +252,8 @@ const LeadershipPage = class extends Component {
                         {person.node.frontmatter.fullName}
                       </Card.Title>
                       <Card.Text className="leadership-card-text">
-                        {person.node.excerpt}
+                        {person.node.frontmatter.cardDescription}
+                        {!person.node.frontmatter.cardDescription && person.node.excerpt}
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer
@@ -300,6 +302,7 @@ export const leadershipQuery = graphql`
           excerpt(pruneLength: 200)
           frontmatter {
             additionalTags,
+            cardDescription,
             fullName
             type,
             alt,

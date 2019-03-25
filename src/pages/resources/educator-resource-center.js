@@ -151,7 +151,7 @@ const EducatorResourceCenter = class extends Component {
                           id={`resource-${index}`}
                           data-filter={JSON.stringify(data_filter)} 
                           // data-type={edge.node.frontmatter.type}
-                          className="h-100 erc-card"
+                          className={`h-100 erc-card ${edge.node.frontmatter.type.toLowerCase().replace(/ /g, '-')}`}
                           // style={{display: 'none'}}
                         >
                         <Card.Img
@@ -183,8 +183,8 @@ const EducatorResourceCenter = class extends Component {
                             style={{
                                 minHeight: '260.98px',
                                 backgroundColor: 'rgba(41, 52, 118, 1)',
-                                borderTopLeftRadius: '4px',
-                                borderTopRightRadius: '4px'
+                                // borderTopLeftRadius: '4px',
+                                // borderTopRightRadius: '4px',
                             }}
                             src={edge.node.frontmatter.image}
                             alt={edge.node.frontmatter.alt}
@@ -199,14 +199,15 @@ const EducatorResourceCenter = class extends Component {
                               {edge.node.frontmatter.title}
                             </Card.Title>
                             <Card.Text>
-                              {edge.node.excerpt}
+                              {edge.node.frontmatter.cardDescription}
+                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                             </Card.Text>
                           </Card.Body>
                           <Card.Footer
                             style={{
                               background: 'white',
                               borderTop: 'none',
-                              marginBottom: '.5rem'
+                              marginBottom: '.5rem',
                             }}
                           >
                             <div className="d-flex">
@@ -258,6 +259,7 @@ export const educatorResourceQuery = graphql`
             additionalTags,
             alt,
             courseId,
+            cardDescription,
             date,
             discipline,
             gradeLevel,

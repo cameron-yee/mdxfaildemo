@@ -26,16 +26,16 @@ collections:
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
           - { name: cardDescription, label: Card Description, widget: string, required: false }
           - { name: type, label: Type, widget: select, options: ['Classroom Instruction', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-          - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
-          - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
+          - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
           - { name: courseId, label: Course ID, widget: number, valueType: int, min: 0, max: 10000, default: 0, required: false }
-          - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
           - { name: discipline, label: Discipline, widget: select, multiple: true, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
+          - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
+          - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
           - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: additionalTags, label: Additional Tags, widget: list, required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: educator-resource-center }
 
@@ -47,25 +47,25 @@ collections:
       fields:
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: string }
-          - { name: reportDate, label: Report Date, widget: string }
-          - { name: description, label: Report Description, widget: string }
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
-          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: cardDescription, label: Card Description, widget: string, required: false }
+          - { name: reportDate, label: Report Date, widget: string }
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
           }
+          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+          - { name: customTitle, label: Custom Title, widget: boolean, default: false }
+          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: reports }
-          - { name: customTitle, label: Custom Title, widget: boolean, default: false }
 
     - name: r&d-programs
       label: R&D Programs
@@ -75,23 +75,24 @@ collections:
       fields:
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: string }
-          - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+          - { name: cardDescription, label: Card Description, widget: string, required: false }
+          - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Image Alt Text, widget: string }
-          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
           - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
           }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: rd-programs }
 
@@ -103,23 +104,21 @@ collections:
       fields:
           - { name: date, label: Date, widget: date }
           - { name: title, label: Title, widget: string }
-          # - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          # - { name: image, label: Image, widget: image }
-          # - { name: alt, label: Image Alt Text, widget: string }
-          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: cardDescription, label: Card Description, widget: string, required: false }
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+          - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
           }
+          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
           - { name: body, label: Body, widget: markdown }
           - { name: page, label: Page, widget: hidden, default: news }
 
@@ -135,12 +134,13 @@ collections:
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: type, label: Type, widget: select, options: ['Management', 'Board Member'] }
         - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: leadership }
 
@@ -170,17 +170,18 @@ collections:
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
         - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
         - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
           field: { label: Contact, name: contact, widget: string },
           required: false
         }
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
 
@@ -195,17 +196,18 @@ collections:
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
         - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
         - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
           field: { label: Contact, name: contact, widget: string },
           required: false
         }
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
 
@@ -220,17 +222,18 @@ collections:
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
         - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
         - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
           field: { label: Contact, name: contact, widget: string },
           required: false
         }
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }
 

@@ -17,12 +17,12 @@ const Category = class extends Component {
         to={this.props.category.path}
         onClick={(e) => this.setCategoryFilter(e, this.props.category.title)}
       >
-        <div className="categoryImageParent">
+        <div className={`categoryImageParent ${this.props.category.title.toLowerCase().replace(/ /g, "-")}`}>
           <div
             className="d-flex flex-row justify-content-center"
           >
               <div
-                className="rounded-circle p-3 categoryImageChild"
+                className={`rounded-circle p-3 categoryImageChild ${this.props.category.title.toLowerCase().replace(/ /g, "-")}`}
               >
                 <img
                   className="categoryImageGrandChild"

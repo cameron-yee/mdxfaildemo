@@ -1,40 +1,40 @@
 @import '../../global-scss/utilities/variables.scss';
 
-.tpl-card-col {
+.up-card-col {
   margin-bottom: 1.5rem;
 }
 
-.tpl-card {
+.up-card {
   height: 100%;
   // position: relative;
   // padding-bottom: 10%;
 }
 
-.tpl-card-img-wrapper {
+.up-card-img-wrapper {
   overflow: hidden;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
 
-.tpl-card-img {
+.up-card-img {
   height: auto;
   min-width: 100%;
   width: 100%;
 }
 
-.tpl-excerpt {
+.up-excerpt {
   padding-bottom: 2rem !important;
   // margin-bottom: 1.5rem;
 }
 
-.tpl-read-more {
+.up-read-more {
   float: right;
   position: absolute;
   bottom: 2%;
   right: 10%;
 }
 
-.tpl-gradient {
+.up-gradient {
   background: rgba(255,255,255,1);
   background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
 }

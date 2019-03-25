@@ -28,9 +28,18 @@ const FilterByRow = class extends Component {
             {
               this.props.activeFilters.map((filter, index) => {
                 const category_filters = ['Classroom Instruction','Professional Learning','District Planning','Citizen Science']
-                if(category_filters.includes(filter)) {
+                if(category_filters.indexOf(filter) > -1) {
                   return(
-                    <span key={`filter-${index}`} className="rd-pill badge badge-pill filter-pill category">
+                    <span
+                      key={`filter-${index}`}
+                      className={`
+                        rd-pill
+                        badge
+                        badge-pill
+                        filter-pill
+                        ${category_filters[category_filters.indexOf(filter)].toLowerCase().replace(/ /g, '-')}
+                      `}
+                    >
                       <i className="far fa-times-circle fa-lg remove-filter" onClick={() => this.removeFilter(filter)}></i>
                       {filter}
                     </span>

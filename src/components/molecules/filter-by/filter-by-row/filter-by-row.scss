@@ -1,15 +1,20 @@
 .filter-pill {
   margin: 0 0.5rem;
   padding: .5rem;
-  // background-color: rgb(255, 159, 0); 
-  // background-color: rgb(21, 159, 0); 
-  // background-color: lighten(#370982, 10%); 
-  background-color:rgba(41, 52, 118, .9); 
-  // background-color: #6f42c1;
+  background-color: rgb(255, 159, 0); 
   color: white !important;
 
-  &.category {
-    background-color: rgb(255, 159, 0); 
+  &.classroom-instruction {
+    background-color:rgba(41, 52, 118, .9); 
+  }
+  &.professional-learning {
+    background-color: rgba(48, 135, 180, 1);
+  }
+  &.district-planning {
+    background-color: rgba(174, 37, 38, 1);
+  }
+  &.citizen-science {
+    background-color: rgba(17, 151,98, 1);
   }
 }
 
