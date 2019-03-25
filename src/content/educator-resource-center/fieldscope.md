@@ -5,14 +5,14 @@ seoCanonicalUrl: 'https://bmw-bscs.netlify.com/resources/educator-resource-cente
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Citizen Science
-template: Image Left
-image: https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg'
 alt: two young female students in the desert studying a giant cactus
+template: Image Left
 courseId: 0
 discipline:
   - Multidisciplinary Sciences
-page: educator-resource-center
 sortOrder: 6
+page: educator-resource-center
 ---
 Why is citizen science important? Not only does it allow communities to play a role in advancing scientific knowledge, it empowers individuals of all ages to make meaningful observations and learn about their natural environments. BSCS Science Learning’s interactive platform called FieldScope is transforming the way educators, community members, and organizations engage in citizen science. 
 
@@ -22,13 +22,16 @@ FieldScope is freely available to educators, students, and community members who
 
 <a class="btn btn-outline-secondary" href="http://fieldscope.org/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grants Nos. GEO-0627923 and DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society.
+    </p>
   </div>
-  <p class="p-2 m-0"><em>This material is based upon work supported by the National Science Foundation under Grants Nos. GEO-0627923 and DRL-1010749. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. The development of FieldScope has also been supported by the National Geographic Society.</em></p>
 </div>
 
 
