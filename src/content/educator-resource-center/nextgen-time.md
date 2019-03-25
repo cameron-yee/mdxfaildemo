@@ -5,13 +5,18 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/nextgentime
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  NextGen TIME is a suite of tools and processes for curriculum-based
+  professional learning that supports educators with the evaluation, selection,
+  and implementation of instructional materials designed for next generation
+  science. 
 type: District Planning
-template: Image Right
 image: /assets/river.jpg
 alt: PLACEHOLDER
+template: Image Right
 courseId: 0
-page: educator-resource-center
 sortOrder: 1
+page: educator-resource-center
 ---
 For a school district, the adoption of instructional materials is a costly investment with long-term impacts. This decision-making process is critically important because instructional materials can either support or inhibit improvements in teaching and learning.
 
