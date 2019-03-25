@@ -4,6 +4,9 @@ title: FieldScope
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/resources/educator-resource-center/fieldscope'
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  FieldScope, an interactive digital platform, is transforming the way
+  educators, community members, and organizations engage in citizen science.
 type: Citizen Science
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg'
 alt: two young female students in the desert studying a giant cactus
