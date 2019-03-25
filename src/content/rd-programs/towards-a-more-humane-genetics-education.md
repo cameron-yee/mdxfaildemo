@@ -17,6 +17,7 @@ sortOrder: 2
 page: rd-programs
 ---
 #### The Issue
+
 Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions<sup>(4-5, 7-8)</sup>:
 
 1. People of the same racial group are genetically uniform.
@@ -26,11 +27,15 @@ Racism is a serious problem in the United States. Research has shown that the bi
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability<sup>(6)</sup>.
 <br />
 <br />
+
 #### Our Focus
+
 How can such beliefs be (un)learned through biology education?
 <br />
 <br />
+
 #### What We’ve Learned
+
 **Teaching about human difference is not socially neutral**.
 
 Insights from our research have begun to illustrate how biology education affects the development of racism, for better or worse. We’ve learned:
@@ -47,6 +52,8 @@ For a deeper dive into our line of research, review our <a href="https://media.b
 Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, <a href="https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10" target="_blank" rel="noopener noreferrer">here</a> 
 <br>
 </br>
+
+
 **Published** -
 
 1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506" target="_blank" rel="noopener noreferrer">Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations</a>. _Science Education_.
@@ -58,12 +65,9 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 7. Donovan, B. M. (2015b). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173" target="_blank" rel="noopener noreferrer">Reclaiming race as a topic of the United States biology curriculum</a>. _Science Education_. 99(6) 1092-1117. 
 8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138" target="_blank" rel="noopener noreferrer">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race</a>. _Journal of Research in Science Teaching_, 51(4), 462–496. 
 9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). <a href="https://journals.plos.org/plosbiology/article id=10.1371/journal.pbio.1001760" target="_blank" rel="noopener noreferrer">Revising the Economic Imperative for US STEM Education</a>. PLoS Biology, 12(1), e1001760.
-
-<div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
-    </a>
-  </div>
-  <p class="p-2 m-0"><em>This  material  is  based  upon  work  supported  by  the  National  Science Foundation under Grant No. (1660985). Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
-</div>
+   \
+         <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+       </a>
+       <p style="font-style: italic; text-align: center;">
+         This material is based upon work supported by the National Science Foundation under Grant No. (1660985). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+       </p>
