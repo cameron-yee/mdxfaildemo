@@ -133,13 +133,30 @@ button {
 // .hvr-ripple-out {
 .btn-outline-secondary {
   &.purple {
-    // color: $white !important;
     color: $purple !important;
-    // background-color: $purple !important;
     background-color: $white !important;
     border-color: $purple !important;
   }
-  // border: 1px solid ;
+  &.classroom-instruction {
+    color: rgba(41, 52, 118, .9) !important;
+    background-color: $white !important;
+    border-color: rgba(41, 52, 118, .9) !important;
+  }
+  &.professional-learning {
+    color: rgba(48, 135, 180, 1) !important;
+    background-color: $white !important;
+    border-color: rgba(48, 135, 180, 1) !important;
+  }
+  &.district-planning {
+    color: rgba(174, 37, 38, 1) !important;
+    background-color: $white !important;
+    border-color: rgba(174, 37, 38, 1) !important;
+  }
+  &.citizen-science {
+    color: rgba(17, 151,98, 1) !important;
+    background-color: $white !important;
+    border-color: rgba(17,151,98, 1) !important;
+  }
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -151,6 +168,18 @@ button {
   }
   &.purple:hover {
     color: $purple !important;
+  }
+  &.classroom-instruction:hover {
+    color: rgba(41, 52, 118, .9) !important;
+  }
+  &.professional-learning:hover {
+    color: rgba(48, 135, 180, 1) !important;
+  }
+  &.district-planning:hover {
+    color: rgba(174, 37, 38, 1) !important;
+  }
+  &.citizen-science:hover {
+    color: rgba(17, 151,98, 1) !important;
   }
 }
 // .hvr-ripple-out:before {
@@ -175,6 +204,30 @@ button {
 
 .btn-outline-secondary.purple:hover:before, .btn-outline-secondary.purple:focus:before, .btn-outline-secondary.purple:active:before {
   border: $purple solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
+
+}
+.btn-outline-secondary.classroom-instruction:hover:before, .btn-outline-secondary.classroom-instruction:focus:before, .btn-outline-secondary.classroom-instruction:active:before {
+  border: rgba(41, 52, 118, .9) solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
+}
+
+.btn-outline-secondary.professional-learning:hover:before, .btn-outline-secondary.professional-learning:focus:before, .btn-outline-secondary.professional-learning:active:before {
+  border: rgba(48, 135, 180, 1) solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
+}
+
+.btn-outline-secondary.district-planning:hover:before, .btn-outline-secondary.district-planning:focus:before, .btn-outline-secondary.district-planning:active:before {
+  border: rgba(174, 37, 38, 1) solid 1px;
+  -webkit-animation-name: btn-outline-secondary;
+  animation-name: btn-outline-secondary;
+}
+
+.btn-outline-secondary.citizen-science:hover:before, .btn-outline-secondary.citizen-science:focus:before, .btn-outline-secondary.citizen-science:active:before {
+  border: rgba(17, 151,98, 1) solid 1px;
   -webkit-animation-name: btn-outline-secondary;
   animation-name: btn-outline-secondary;
 }
