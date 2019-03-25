@@ -74,7 +74,7 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
     </a>
     <p style="font-style: italic; text-align: center;">
 This material is based upon work supported by the National Science Foundation under Grant No. (1660985). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-   </p>
+</p>
   </div>
 </div>
        
