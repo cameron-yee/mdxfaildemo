@@ -47,6 +47,90 @@ const OurStoryPage = class extends Component {
                 <p>As researchers, we pursue deeper understandings of how teachers and students learn science through ongoing studies. As educators, we prepare teachers to improve their practice by enhancing their own science learning and by offering powerful curriculum materials. As capacity builders, we develop leaders to create a stronger system for science learning. And as an organization, we remain committed to transforming science education so that all students have an opportunity to learn science for their lives and careers.</p>
               </Col>
             </Row>
+            <Row>
+              <Col>
+                <div class="timeline">
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>1958</h2>
+                      <p>Biological Sciences Curriculum Study (BSCS) is founded in Boulder, CO.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>1963</h2>
+                      <p>First versions of BSCS's high school biology program (Yellow, Blue, and Green) are published after three years of field-testing.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>1968</h2>
+                      <p>From 1968 to 1970, the percentage of students who take the College Board exam in biology and a BSCS biology course increase from 35% to 47%.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>1972</h2>
+                      <p>BSCS becomes an independent 501(c)(3) nonprofit.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>1975</h2>
+                      <p>Throughout the mid 1970's, 50% of all high schools use some BSCS program.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>1979</h2>
+                      <p>2 millionth copy of BSCS Green Version is sold.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>1982</h2>
+                      <p>BSCS moves to Colorado College campus in Colorado Springs.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>1987</h2>
+                      <p>BSCS develops 5E Instructional Model, which becomes the global standard for science curriculum development.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>1994</h2>
+                      <p>BSCS purchases a building in Colorado Springs and moves its headquarters to Mark Dabling Blvd.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>2002</h2>
+                      <p>BSCS creates three Centers: Curriculum Development, Professional Development, and Research & Evaluation (which today are three similarly-structured BSCS Divisions).</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>2010</h2>
+                      <p>Colorado educators participate in BSCS's first research study on STeLLA, which becomes the organization's nationally-recognized approach to teacher professional learning.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-right">
+                    <div class="timeline-content">
+                      <h2>2016</h2>
+                      <p>BSCS launches a strategic planning process that results in three long-term, strategic initiatives: 21st Century High School Biology, "VIP" Professional Learning for 21st Century Teaching, and Equity & Social Justice.</p>
+                    </div>
+                  </div>
+                  <div class="timeline-container timeline-left">
+                    <div class="timeline-content">
+                      <h2>2018</h2>
+                      <p>BSCS celebrates its 60th anniversary and rebrands from Biological Sciences Curriculum Study to BSCS Science Learning.</p>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            </Row>
           </Container>
         </Layout>
     )

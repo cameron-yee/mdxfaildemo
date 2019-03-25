@@ -51,7 +51,7 @@ const RDProgramsTemplate = class extends Component {
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
                 || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
-                <Col md={4}>
+                <Col md={3}>
                   {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
                       <Card.Body>
