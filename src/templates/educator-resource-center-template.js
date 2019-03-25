@@ -30,7 +30,7 @@ const EducatorResourceCenterTemplate = class extends Component {
             <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
               {this.resource.template === 'Image Right' &&
                 <Row style={{ marginBottom: '2rem' }}>
-                  <Col md={7} className="erc-jumbotron-title pl-4 pr-4">
+                  <Col md={7} className={`erc-jumbotron-title pl-4 pr-4 erc-jumbotron-image ${this.resource.type.toLowerCase().replace(/ /g, '-')}`}>
                     <h1>{this.resource.title}</h1>
                   </Col>
                   <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
@@ -39,7 +39,7 @@ const EducatorResourceCenterTemplate = class extends Component {
               {this.resource.template === 'Image Left' &&
                 <Row style={{ marginBottom: '2rem' }}>
                   <Col md={5} className="erc-jumbotron-image" style={{backgroundImage: `url(${this.resource.image})`}} />
-                  <Col md={7} className="erc-jumbotron-title pl-4 pr-4">
+                  <Col md={7} className={`erc-jumbotron-title pl-4 pr-4 erc-jumbotron-image ${this.resource.type.toLowerCase().replace(/ /g, '-')}`}>
                     <h1>{this.resource.title}</h1>
                   </Col>
                 </Row>

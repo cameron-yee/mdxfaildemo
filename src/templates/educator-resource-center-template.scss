@@ -22,8 +22,22 @@
     color: black !important;
     margin-top: 2rem;
   }
-  background: rgb(41,52,118);
-  background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
+  &.classroom-instruction {
+    background: rgb(94,60,124);
+    background: linear-gradient(180deg, rgba(94,60,124,0.9) 11%, rgba(41,52,118,1) 74%);
+  }
+  &.professional-learning {
+    background: rgb(41,52,118);
+    background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(43,80,139,0.7749474789915967) 60%, rgba(48,135,180,1) 100%);
+  }
+  &.district-planning {
+    background: rgb(41,52,118);
+    background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(174,37,38,1) 100%);
+  }
+  &.citizen-science {
+    background: rgb(41,52,118);
+    background: linear-gradient(180deg, rgba(41,52,118,1) 0%, rgba(17,151,98,1) 100%);
+  }
   color: white !important;
   display: flex;
   align-items: center;

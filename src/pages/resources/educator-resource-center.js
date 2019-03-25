@@ -215,7 +215,8 @@ const EducatorResourceCenter = class extends Component {
                                 <Link
                                   to={`/resources/educator-resource-center/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                                 >
-                                  <Button variant="outline-secondary">
+                                  <Button variant="outline-secondary" className={`${edge.node.frontmatter.type.toLowerCase().replace(/ /g, '-')}`}>
+                                  {/* <Button variant="outline-secondary" className="purple"> */}
                                     Read More
                                   </Button>
                                 </Link>
