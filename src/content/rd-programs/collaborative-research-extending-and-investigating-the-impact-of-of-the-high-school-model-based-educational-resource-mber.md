@@ -40,7 +40,7 @@ In addition to generating important research findings, the materials revised and
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
-      This material is based upon work supported by the National Science Foundation under Grant No. (DRL 1813538). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+      This material is based upon work supported by the National Science Foundation under Grant No. (DRL-1813538). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
 </div>
