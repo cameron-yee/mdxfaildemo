@@ -27,9 +27,11 @@ From topics such as “Won’t you be my urchin” to “Sticky situations: big 
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
   </div>
-  <p class="p-2" style="margin: 0;"><em>
-This material is based upon work supported by the National Science Foundation under Grant No. DRL-1503005. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-</p>
+  <p class="p-2" style="margin: 0;">
+    <em>
+      This material is based upon work supported by the National Science Foundation under Grant No. DRL-1503005. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </em>
+  </p>
   </div>
 </div>
 

@@ -129,10 +129,11 @@ High quality science education is more important than ever. Teachers must prepar
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
     
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
-This material is based upon work supported by the National Science Foundation under Awards #0310721, #0918277, #0957996, #1118643, #1220635, #1321242, #1503280, #1725389, and #1813127 and by the Minnesota Department of Education under Award #2016-00170. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or of the Minnesota Department of Education.
- </p>
+      This material is based upon work supported by the National Science Foundation under Awards #0310721, #0918277, #0957996, #1118643, #1220635, #1321242, #1503280, #1725389, and #1813127 and by the Minnesota Department of Education under Award #2016-00170. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or of the Minnesota Department of Education.
+    </p>
   </div>
 </div>
