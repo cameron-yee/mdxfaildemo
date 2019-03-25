@@ -30,8 +30,7 @@ From topics such as “Won’t you be my urchin” to “Sticky situations: big 
     <em>
       This material is based upon work supported by the National Science Foundation under Grant No. (DRL-1503005). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </em>
-</p>
-  </div>
+  </p>
 </div>
 
 Data Nuggets Partners: <a href="https://msu.edu/" target="_blank" rel="noopener noreferrer">Michigan State University (MSU)</a>, <a href="https://www3.beacon-center.org/" target="_blank" rel="noopener noreferrer">Bio/Computational Evolution in Action CONsortium (BEACON)</a>
