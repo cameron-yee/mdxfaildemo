@@ -58,7 +58,7 @@ const panels = [
 		content:
       <>
         <ul style={{ listStyleType: 'none' }}>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.achieve.org"
               target="_blank"
@@ -68,7 +68,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.agilemind.com"
               target="_blank"
@@ -78,7 +78,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.aaas.org"
               target="_blank"
@@ -88,7 +88,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.acs.org/content/acs/en.html"
               target="_blank"
@@ -98,7 +98,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.aibs.org/home/index.html"
               target="_blank"
@@ -108,7 +108,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.amnh.org"
               target="_blank"
@@ -118,7 +118,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.azed.gov"
               target="_blank"
@@ -128,7 +128,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://azsta.org"
               target="_blank"
@@ -138,7 +138,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://theaste.org"
               target="_blank"
@@ -148,7 +148,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.aza.org"
               target="_blank"
@@ -158,7 +158,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www3.beacon-center.org"
               target="_blank"
@@ -168,7 +168,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.smartshoot.com/blackdovestudios"
               target="_blank"
@@ -178,7 +178,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.botany.org"
               target="_blank"
@@ -188,7 +188,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://cset.stanford.edu"
               target="_blank"
@@ -198,7 +198,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.utdanacenter.org"
               target="_blank"
@@ -208,7 +208,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.childrenscolorado.org"
               target="_blank"
@@ -218,7 +218,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://lists.colorado.edu/sympa/info/csen-all"
               target="_blank"
@@ -228,7 +228,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://concord.org"
               target="_blank"
@@ -238,7 +238,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://create4stem.msu.edu"
               target="_blank"
@@ -248,7 +248,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://digitalpromise.org"
               target="_blank"
@@ -258,7 +258,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.globe.gov/about/gio"
               target="_blank"
@@ -268,7 +268,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.moore.org"
               target="_blank"
@@ -278,7 +278,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.gmri.org"
               target="_blank"
@@ -288,7 +288,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href=""
               target="_blank"
@@ -298,7 +298,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.hhmi.org/biointeractive"
               target="_blank"
@@ -308,7 +308,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.kendallhunt.com"
               target="_blank"
@@ -318,7 +318,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.mcrel.org"
               target="_blank"
@@ -328,7 +328,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://education.mn.gov/mde/index.html"
               target="_blank"
@@ -338,7 +338,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.montereybayaquarium.org"
               target="_blank"
@@ -348,7 +348,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.narst.org"
               target="_blank"
@@ -358,7 +358,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://nabt.org"
               target="_blank"
@@ -368,7 +368,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href=""
               target="_blank"
@@ -378,7 +378,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.nih.gov"
               target="_blank"
@@ -388,7 +388,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.nsela.org"
               target="_blank"
@@ -398,7 +398,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.nsf.gov"
               target="_blank"
@@ -408,7 +408,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.nsta.org"
               target="_blank"
@@ -418,7 +418,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.education.ne.gov"
               target="_blank"
@@ -428,7 +428,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://webnew.ped.state.nm.us"
               target="_blank"
@@ -438,7 +438,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://naaee.org"
               target="_blank"
@@ -448,7 +448,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.opb.org"
               target="_blank"
@@ -458,7 +458,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://piscesfoundation.org"
               target="_blank"
@@ -468,7 +468,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.seaperch.org/index"
               target="_blank"
@@ -478,7 +478,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.sree.org"
               target="_blank"
@@ -488,7 +488,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.terc.edu"
               target="_blank"
@@ -498,7 +498,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://scied.ucar.edu"
               target="_blank"
@@ -508,7 +508,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.ed.gov"
               target="_blank"
@@ -518,7 +518,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.wested.org"
               target="_blank"
@@ -528,7 +528,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.wgbh.org"
               target="_blank"
@@ -538,7 +538,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://edu.wyoming.gov"
               target="_blank"
@@ -557,7 +557,7 @@ const panels = [
 		content:
       <>
         <ul style={{ listStyleType: 'none' }}>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.bc.edu"
               target="_blank"
@@ -567,7 +567,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.cpp.edu"
               target="_blank"
@@ -577,7 +577,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.coloradocollege.edu"
               target="_blank"
@@ -587,7 +587,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.colostate.edu"
               target="_blank"
@@ -597,7 +597,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.depaul.edu/Pages/default.aspx"
               target="_blank"
@@ -607,7 +607,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.famu.edu"
               target="_blank"
@@ -617,7 +617,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.gtri.gatech.edu"
               target="_blank"
@@ -627,7 +627,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.luc.edu"
               target="_blank"
@@ -637,7 +637,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.miami.miamioh.edu"
               target="_blank"
@@ -647,7 +647,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://msu.edu"
               target="_blank"
@@ -657,7 +657,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href="http://www.montana.edu/"
               target="_blank"
@@ -667,7 +667,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.northwestern.edu"
               target="_blank"
@@ -677,7 +677,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.rice.edu"
               target="_blank"
@@ -687,7 +687,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.stanford.edu"
               target="_blank"
@@ -697,7 +697,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.berkeley.edu"
               target="_blank"
@@ -707,7 +707,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.ucdavis.edu"
               target="_blank"
@@ -717,7 +717,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.uchicago.edu"
               target="_blank"
@@ -727,7 +727,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.colorado.edu"
               target="_blank"
@@ -737,7 +737,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.uccs.edu"
               target="_blank"
@@ -747,7 +747,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.uga.edu"
               target="_blank"
@@ -757,7 +757,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.uhv.edu"
               target="_blank"
@@ -767,7 +767,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://louisville.edu"
               target="_blank"
@@ -777,7 +777,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://twin-cities.umn.edu"
               target="_blank"
@@ -787,7 +787,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://missouri.edu"
               target="_blank"
@@ -797,7 +797,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.unmc.edu"
               target="_blank"
@@ -807,7 +807,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.unm.edu"
               target="_blank"
@@ -817,7 +817,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.unco.edu"
               target="_blank"
@@ -827,7 +827,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.unt.edu"
               target="_blank"
@@ -846,7 +846,7 @@ const panels = [
 		content:
       <>
         <ul style={{ listStyleType: 'none' }}>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.achievementfirst.org"
               target="_blank"
@@ -856,7 +856,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://alpineschools.org"
               target="_blank"
@@ -866,7 +866,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href=""
               target="_blank"
@@ -876,7 +876,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.bvsd.org/Pages/default.aspx"
               target="_blank"
@@ -886,7 +886,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://cps.edu/Pages/home.aspx"
               target="_blank"
@@ -896,7 +896,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.d11.org"
               target="_blank"
@@ -906,7 +906,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.dalton.org"
               target="_blank"
@@ -916,7 +916,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.dpsk12.org"
               target="_blank"
@@ -926,7 +926,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.fcps.edu"
               target="_blank"
@@ -936,7 +936,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.fa.org"
               target="_blank"
@@ -946,7 +946,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.gunnisonschools.net"
               target="_blank"
@@ -956,7 +956,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.hsd2.org"
               target="_blank"
@@ -966,7 +966,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.jeffcopublicschools.org"
               target="_blank"
@@ -976,7 +976,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.jefferson.kyschools.us"
               target="_blank"
@@ -986,7 +986,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://d51schools.org"
               target="_blank"
@@ -996,7 +996,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href="http://mpls.k12.mn.us"
               target="_blank"
@@ -1006,7 +1006,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.newberg.k12.or.us"
               target="_blank"
@@ -1016,7 +1016,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.hawaiipublicschools.org/ConnectWithUs/Organization/OfficesAndBranches/Pages/Leilehua-Mililani-Waialua.aspx"
               target="_blank"
@@ -1026,7 +1026,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.owatonna.k12.mn.us"
               target="_blank"
@@ -1036,7 +1036,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://proudtobe.pusd.org"
               target="_blank"
@@ -1046,7 +1046,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.riverdale.edu/index.cfm"
               target="_blank"
@@ -1056,7 +1056,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.spps.org"
               target="_blank"
@@ -1066,7 +1066,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.slcschools.org"
               target="_blank"
@@ -1076,7 +1076,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             {/* <a
               href=""
               target="_blank"
@@ -1086,7 +1086,7 @@ const panels = [
               {/* &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup> */}
             {/* </a> */}
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.hartfordjt1.k12.wi.us"
               target="_blank"
@@ -1096,7 +1096,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.seattleschools.org"
               target="_blank"
@@ -1106,7 +1106,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.tumwater.k12.wa.us"
               target="_blank"
@@ -1116,7 +1116,7 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} class="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
-          <li>
+          <li style={{ marginBottom: '.25rem' }}>
             <a
               href="https://www.winonaschools.org"
               target="_blank"
