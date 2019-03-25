@@ -38,7 +38,7 @@ Eighteen science educators from across the country participated with BSCS staff 
 
 The Guidelines for the Evaluation of Instructional Materials in Science found here can be downloaded free of charge by all who are interested.
 
-### Download the Guidelines
+### Download the Guidelines:
 
 <Card className="bg-light" style={{ marginBottom: "3rem" }}>
   <Card.Body>
@@ -60,7 +60,7 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
   </Card.Body>
 </Card>
 
-### Download the Executive Summary
+### Download the Executive Summary:
 
 <Card className="bg-light" style={{ marginBottom: "3rem" }}>
   <Card.Body>

@@ -29,6 +29,7 @@ import hriLogo from 'images/project-logos/hri-logo.svg'
 import nsfLogo from 'images/project-logos/nsf-logo.svg'
 
 <BSCSBreadcrumb pathname="/resources/reports/math-science-teacher-leadership-synthesis-project" />
+
 <div className="d-flex flex-row bd-highlight mb-3">
   <div className="p-2 bd-highlight">
     <img

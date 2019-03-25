@@ -1,16 +1,16 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: Data Nuggets
-areas:
-  - Research
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/data-nuggets'
 seoDescription: Test SEO description.
 seoLang: en-us
+areas:
+  - Research
 image: /assets/rd-programs/data-nuggets.svg
 alt: Data Nuggets Icon
-sidebarURL: 'http://datanuggets.org/'
 sidebarButtonText: Learn More Here
 sidebarTitle: Data Nuggets
+sidebarURL: 'http://datanuggets.org/'
 sortOrder: 10
 page: rd-programs
 ---
@@ -27,7 +27,10 @@ From topics such as “Won’t you be my urchin” to “Sticky situations: big 
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
   </div>
-  <p class="p-2" style="margin: 0;"><em>This material is based upon work supported by the National Science Foundation under Grant No. DRL-1503005. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
+  <p class="p-2" style="margin: 0;"><em>
+This material is based upon work supported by the National Science Foundation under Grant No. DRL-1503005. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+</p>
+  </div>
 </div>
 
 Data Nuggets Partners: <a href="https://msu.edu/" target="_blank" rel="noopener noreferrer">Michigan State University (MSU)</a>, <a href="https://www3.beacon-center.org/" target="_blank" rel="noopener noreferrer">Bio/Computational Evolution in Action CONsortium (BEACON)</a>

@@ -1,11 +1,11 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: POWER
-areas:
-  - Research
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/power'
 seoDescription: Test SEO description.
 seoLang: en-us
+areas:
+  - Research
 image: /assets/rd-programs/power.svg
 alt: Power Icon
 sidebarURL: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
@@ -29,13 +29,16 @@ When planning a study, researchers can use the POWER calculator to determine how
 
 BSCS is continuing its research with a meta-analysis of 161 science education studies of teacher outcomes. New findings and a teacher-specific calculator will be made available soon. 
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grant Nos. 1118555 and 1544236. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+</p>
   </div>
-  <p class="p-2" style="margin: 0;"><em>This material is based upon work supported by the National Science Foundation under Grant Nos. 1118555 and 1544236. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
 
 The PI for Award #1118555 is Sue Kowalski, BSCS Science Learning. The PI for Award #1544236 is Jessica Spybrook, Western Michigan University.

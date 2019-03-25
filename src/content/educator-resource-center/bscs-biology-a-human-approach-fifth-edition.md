@@ -5,16 +5,20 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-biology-human-approach
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  BSCS Biology: A Human Approach is an activity-driven, full-year program that
+  uses human examples to engage 9th and 10th grade students in fundamental
+  biology concepts. 
 type: Classroom Instruction
-template: Image Left
 image: /assets/scifi.jpg
 alt: PLACEHOLDER
+template: Image Left
 courseId: 0
 gradeLevel:
   - High
 programLength: Full Year
-page: educator-resource-center
 sortOrder: 3
+page: educator-resource-center
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students. 
 

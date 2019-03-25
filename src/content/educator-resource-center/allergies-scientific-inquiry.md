@@ -5,16 +5,19 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/resources/educator-resource-center/allergies-and-scientific-inquiry
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  Allergies & Scientific Inquiry is an online curriculum supplement developed to
+  help middle school educators more effectively teach about food allergies.
+  Lessons are aligned to the Next Generation Science Standards.
 type: Classroom Instruction
-template: Image Right
-image: https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg'
 alt: close-up of yellow flower with pollen
+template: Image Right
 courseId: 0
 gradeLevel:
   - Middle
-page: educator-resource-center
-price: null
 sortOrder: 2
+page: educator-resource-center
 ---
 Allergies affect more than 50 million Americans, and are among the leading causes of chronic disease in the US. One in every 13 children, roughly two students in every classroom, have allergies to food.  
 

@@ -1,13 +1,13 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
-areas:
-  - Research
-  - Instructional Materials Development
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/our-work/rd-programs/towards-a-more-humane-genetics-education
 seoDescription: Test SEO description.
 seoLang: en-us
+areas:
+  - Research
+  - Instructional Materials Development
 image: /assets/rd-programs/humane-genetics.svg
 alt: Humane Genetics Icon
 sidebarContactsText: 'For more information, please contact Dr. Brian Donovan.'
@@ -17,6 +17,7 @@ sortOrder: 2
 page: rd-programs
 ---
 #### The Issue
+
 Racism is a serious problem in the United States. Research has shown that the biology curriculum can affect how students think about race. It can lead students to believe more strongly in three misconceptions<sup>(4-5, 7-8)</sup>:
 
 1. People of the same racial group are genetically uniform.
@@ -28,6 +29,7 @@ Individuals often justify racism with these misconceptions by arguing that it is
 <br />
 
 #### Our Focus
+
 How can such beliefs be (un)learned through biology education?
 <br />
 <br />
@@ -62,12 +64,16 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 7. Donovan, B. M. (2015b). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173" target="_blank" rel="noopener noreferrer">Reclaiming race as a topic of the United States biology curriculum</a>. _Science Education_. 99(6) 1092-1117. 
 8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138" target="_blank" rel="noopener noreferrer">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race</a>. _Journal of Research in Science Teaching_, 51(4), 462–496. 
 9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). <a href="https://journals.plos.org/plosbiology/article id=10.1371/journal.pbio.1001760" target="_blank" rel="noopener noreferrer">Revising the Economic Imperative for US STEM Education</a>. PLoS Biology, 12(1), e1001760.
-
+  
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grant No. (1660985). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+</p>
   </div>
-  <p class="p-2 m-0"><em>This  material  is  based  upon  work  supported  by  the  National  Science Foundation under Grant No. (1660985). Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
+       

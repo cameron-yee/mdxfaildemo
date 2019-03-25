@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
-import { Location } from '@reach/router'
 import SEO from '../components/seo'
 
 import Button from 'react-bootstrap/Button'
@@ -13,7 +11,7 @@ import SpecificContactForm from '../components/atoms/forms/specific-contact-form
 import Row from 'react-bootstrap/Row'
 
 import '../global-scss/index.scss'
-// import './rd-programs-template.scss'
+
 
 const DonatePage = class extends Component {
   render() {

@@ -4,15 +4,19 @@ title: 'Energy: A Multidisciplinary Approach for Teachers (EMAT)'
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/emat'
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  EMAT, an online course, helps teachers frame complex energy concepts in a way
+  that will resonate with high school students and prepare them to participate
+  in important societal conversations. 
 type: Professional Learning
-template: Image Right
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
 alt: multiple white windmills on a snowy hill with blue skies and white clouds
+template: Image Right
 courseId: 0
 discipline:
   - Earth Sciences
-page: educator-resource-center
 sortOrder: 4
+page: educator-resource-center
 ---
 
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
@@ -28,14 +32,13 @@ Professional learning leaders across schools and districts can request their own
 _This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
-
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
     <p style="font-style: italic; text-align: center;">
-      This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-    </p>
+This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+  </p>
   </div>
-</div>
+</div>    
