@@ -25,6 +25,12 @@
         "onClick": null
       },
       {
+        "itemTitle": "Partners",
+        "iconClass": "",
+        "path": "/about/partners/",
+        "onClick": null
+      },
+      {
         "itemTitle": "Financials",
         "iconClass": "",
         "path": "/about/financials/",
