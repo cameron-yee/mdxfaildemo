@@ -1,18 +1,18 @@
 ---
 date: 2018-12-18T23:03:06.180Z
-title: "Math/Science Teacher Leadership Synthesis Project"
-# template: Image Right
-# image: /assets/canvas.jpg
-# alt: Canvas painting of two people walking on a path.
-additionalTags: null
-page: reports
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/reports/mathscience-teacher-leadership-synthesis-project/
+title: Math/Science Teacher Leadership Synthesis Project
+seoCanonicalUrl: >-
+  https://bmw-bscs.netlify.com/resources/reports/mathscience-teacher-leadership-synthesis-project/
 seoDescription: Test SEO description.
 seoLang: en-us
-customTitle: true
+cardDescription: >-
+  Three reports have resulted from a synthesis project intended to build
+  consensus on the key attributes of high-quality math/science teacher
+  leadership development programs.
 reportDate: February 2017
-cardDescription: Three reports have resulted from a synthesis project intended to build consensus on the key attributes of high-quality math/science teacher leadership development programs.
+customTitle: true
 sortOrder: 3
+page: reports
 ---
 
 import BSCSBreadcrumb from 'components/layout/breadcrumb/breadcrumb'
@@ -188,7 +188,15 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
   </div>
   <div className="p-2 bd-highlight my-3">
     <p>
-      This material is based upon work supported by the <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer" className="text-secondary">National Science Foundation</a> under Grant No. ECR 1534698. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
+<div class="d-flex justify-content-center">
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
+    </a>
+    <p style="font-style: italic; text-align: center;">
+      This material is based upon work supported by the National Science Foundation under Grant No. (ECR-1534698). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
 </div>
