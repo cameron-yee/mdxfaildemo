@@ -5,6 +5,10 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/understanding-ebola
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  Understanding Ebola Virus Disease, is a free resource designed to educate
+  teachers, students, and community members about Ebola and the factors that
+  influence it’s spread. 
 type: Classroom Instruction
 image: /assets/cells.jpeg
 alt: PLACEHOLDER
