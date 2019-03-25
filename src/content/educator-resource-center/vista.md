@@ -6,12 +6,15 @@ seoCanonicalUrl: >-
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
+image: >-
+  https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
+alt: >-
+  teacher in green sweater talking to her young students with two men filming
+  her teach
 template: Image Left
-image: https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
-alt: teacher in green sweater talking to her young students with two men filming her teach
 courseId: 0
-page: educator-resource-center
 sortOrder: 10
+page: educator-resource-center
 ---
 
 import { Link } from 'gatsby'
@@ -24,12 +27,14 @@ ViSTA is valuable in both university preservice methods courses and inservice pr
 
 <a class="btn btn-outline-secondary" href="http://vista.bscs.org/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grant No. DRL-0957996. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
   </div>
-
-  <p class="p-2"><em>This material is based upon work supported by the National Science Foundation under Grant No. DRL-0957996. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
