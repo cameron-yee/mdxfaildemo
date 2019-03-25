@@ -12,7 +12,7 @@ import SEO from '../../components/seo'
 import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 
-// import BSCSTransformingScienceEducationModel from '../../images/bscs-transforming-science-education-model.svg'
+import BSCSTransformingScienceEducationModel from '../../images/bscs-transforming-science-education-model.svg'
 
 import './what-we-do.scss'
 
@@ -110,12 +110,7 @@ const WhatWeDoPage = (props) => {
           </Col>
           <Col xs={12} className="d-flex justify-content-center">
             <div className="bscs-transforming-science-education-model-wrapper">
-              {/* <img src={BSCSTransformingScienceEducationModel} alt="BSCS’s four areas of work: Leadership Development, Teacher Professional Learning, Instructional Materials, and Research. Leadership Development is important for the state, district, and school levels, while Teacher Professional Learning and Instructional Materials are important for the classroom level. Research and innovation are involved in each area of work." /> */}
-              <Img
-                fluid={props.data.image5.childImageSharp.fluid}
-                alt="BSCS’s four areas of work: Leadership Development, Teacher Professional Learning, Instructional Materials, and Research. Leadership Development is important for the state, district, and school levels, while Teacher Professional Learning and Instructional Materials are important for the classroom level. Research and innovation are involved in each area of work."
-                backgroundColor='rgb(41, 52, 118)'
-              />
+              <img src={BSCSTransformingScienceEducationModel} alt="BSCS’s four areas of work: Leadership Development, Teacher Professional Learning, Instructional Materials, and Research. Leadership Development is important for the state, district, and school levels, while Teacher Professional Learning and Instructional Materials are important for the classroom level. Research and innovation are involved in each area of work." />
             </div>
           </Col>
         </Row>
@@ -169,9 +164,6 @@ export const query = graphql`
       ...rowImage
     }
     image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
-      ...rowImage
-    }
-    image5: file(relativePath: { eq: "bscs-transforming-science-education-model.svg" }) {
       ...rowImage
     }
   }
