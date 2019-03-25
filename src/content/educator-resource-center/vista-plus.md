@@ -5,6 +5,10 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/vista-plus
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  ViSTA Plus is a full-semester online course designed to enhance preservice
+  elementary teachers’ science content knowledge and instructional practices.
+  Users explore the powerful STeLLA approach.
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg'
 alt: women watching video of a child on a large screen
