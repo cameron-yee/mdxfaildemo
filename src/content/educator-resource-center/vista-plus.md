@@ -6,14 +6,14 @@ seoCanonicalUrl: >-
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Professional Learning
-template: Image Left
-image: https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg'
 alt: women watching video of a child on a large screen
+template: Image Left
 courseId: 0
 gradeLevel:
   - Elementary
-page: educator-resource-center
 sortOrder: 7
+page: educator-resource-center
 ---
 Elementary science teachers’ first year in the classroom can be challenging. They must navigate leading active student learning experiences while diving into science content that is often outside their expertise. New teachers are more likely to feel prepared for this role if they’ve taken a high quality preservice methods course in college.  
 
@@ -27,12 +27,14 @@ Access Resource Here (make this a button)
 
 \*A ViSTA Plus research study showed successful science learning outcomes for new teachers and ultimately their students during the student teaching year.  
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
-    <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+  <div style="width: 70%;">
+    
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
+    <p style="font-style: italic; text-align: center;">
+This material is based upon work supported by the National Science Foundation under Grant No. DRL-1220635. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
   </div>
-
-  <p class="p-2"><em>This material is based upon work supported by the National Science Foundation under Grant No. DRL-1220635. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</em></p>
 </div>
