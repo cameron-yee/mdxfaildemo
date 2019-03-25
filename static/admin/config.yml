@@ -24,6 +24,7 @@ collections:
           - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
           - { name: seoDescription, label: SEO Description, widget: string }
           - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+          - { name: cardDescription, label: Card Description, widget: string, required: false }
           - { name: type, label: Type, widget: select, options: ['Classroom Instruction', 'Professional Learning', 'District Planning', 'Citizen Science'] }
           - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
           - { name: image, label: Image, widget: image }
