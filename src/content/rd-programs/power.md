@@ -12,7 +12,6 @@ sidebarURL: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
 sortOrder: 4
 page: rd-programs
 ---
-
 What works best for teachers and students in science education interventions? Statistics can provide some insight—but only if interpreted in context. For instance, the way a study is conducted may impact the outcome, independent of the actual effectiveness of the intervention. 
 
 To help researchers understand study results in context, BSCS Science Learning reviewed 96 studies of the efficacy of science instruction while taking into account the various factors contributing to the outcomes. This work resulted in published findings and an online tool for researchers to use when planning or evaluating studies of science education interventions. 
@@ -37,7 +36,7 @@ BSCS is continuing its research with a meta-analysis of 161 science education st
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
-      This material is based upon work supported by the National Science Foundation under Grant Nos. 1118555 and 1544236. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+      This material is based upon work supported by the National Science Foundation under Grant Nos. (1118555) and (1544236). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
 </div>

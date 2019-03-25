@@ -5,6 +5,10 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/vista
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  ViSTA is designed to help preservice and inservice elementary teachers enhance
+  their science content knowledge and instructional practices. Users explore the
+  powerful STeLLA approach.
 type: Professional Learning
 image: >-
   https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg

@@ -5,18 +5,21 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/biology-teacher-handbook
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  The Biology Teacher’s Handbook, Fourth Edition, is filled with valuable
+  teaching ideas and guidelines for grades 6-12 and college biology educators.
 type: Classroom Instruction
-template: Image Left
 image: /assets/mountain.jpg
 alt: PLACEHOLDER
+template: Image Left
 courseId: 0
+discipline:
+  - Life Sciences
 gradeLevel:
   - Middle
   - High
-discipline:
-  - Life Sciences
-page: educator-resource-center
 sortOrder: 12
+page: educator-resource-center
 ---
 Where has biology teaching been, and where is it going? How can I create a culture of scientific inquiry in my classroom? How do I teach controversial questions? Biology educators will discover the answers to these and other key questions in The Biology Teacher’s Handbook, Fourth Edition. 
 

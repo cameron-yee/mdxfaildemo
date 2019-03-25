@@ -27,7 +27,7 @@ Following in the footsteps of PCK*lex is ArguLex, a project that applies similar
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
     <p style="font-style: italic; text-align: center;">
-      This material is based upon work supported by the National Science Foundation under Grants No. 1437173 and No. 1561150. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
+      This material is based upon work supported by the National Science Foundation under Grants Nos. (1437173) and (1561150). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
  </div>
 </div>

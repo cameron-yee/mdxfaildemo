@@ -5,17 +5,23 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-middle-school-science
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  BSCS Middle School Science is a standards- and inquiry-based program comprised
+  of four units: Earth/Space Science, Life Science, Physical Science, and
+  Science and Society. 
 type: Classroom Instruction
+image: 'https://media.bscs.org/bscsmw/educator-resource-center/girls-in-classroom.jpg'
+alt: >-
+  girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in
+  classroom with other girls
 template: Image Right
-image: https://media.bscs.org/bscsmw/educator-resource-center/girls-in-classroom.jpg
-alt: girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in classroom with other girls 
 courseId: 0
+discipline:
+  - Multidisciplinary Sciences
 gradeLevel:
   - Middle
-discipline: 
-  - Multidisciplinary Sciences
-page: educator-resource-center
 sortOrder: 11
+page: educator-resource-center
 ---
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students. 
 
