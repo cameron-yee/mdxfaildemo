@@ -4,6 +4,10 @@ title: 'Energy: A Multidisciplinary Approach for Teachers (EMAT)'
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/emat'
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  EMAT, an online course, helps teachers frame complex energy concepts in a way
+  that will resonate with high school students and prepare them to participate
+  in important societal conversations. 
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
 alt: multiple white windmills on a snowy hill with blue skies and white clouds
