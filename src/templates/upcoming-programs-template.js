@@ -16,7 +16,7 @@ import Row from 'react-bootstrap/Row'
 
 import '../global-scss/index.scss';
 
-const FieldTestOpportunitiesTemplate = class extends Component {
+const UpcomingProgramsTemplate = class extends Component {
   constructor(props) {
     super(props)
     this.html = this.props.data.mdx.code.body
@@ -111,7 +111,7 @@ const FieldTestOpportunitiesTemplate = class extends Component {
 
 export default props => (
   <Location>
-    {locationProps => <FieldTestOpportunitiesTemplate {...locationProps} {...props} />}
+    {locationProps => <UpcomingProgramsTemplate {...locationProps} {...props} />}
   </Location>
 )
 
@@ -134,6 +134,7 @@ export const query = graphql`
         sidebarRegisterText,
         sidebarRegisterTitle,
         title
+        type
       }
     }
   }

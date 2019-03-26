@@ -102,19 +102,19 @@
       {
         "itemTitle": "Teacher Professional Learning",
         "iconClass": "",
-        "path": "/upcoming-programs/teacher-professional-learning/",
+        "path": "/upcoming-programs#teacher-professional-learning",
         "onClick": null
       },
       {
         "itemTitle": "Leadership Development",
         "iconClass": "",
-        "path": "/upcoming-programs/leadership-development/",
+        "path": "/upcoming-programs#leadership-development",
         "onClick": null
       },
       {
         "itemTitle": "Field-Test Opportunities",
         "iconClass": "",
-        "path": "/upcoming-programs/field-test-opportunities/",
+        "path": "/upcoming-programs#field-test-opportunities",
         "onClick": null
       }
     ]

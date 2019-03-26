@@ -12,7 +12,8 @@ sidebarContactsText: Contact us for more information.
 sidebarContacts:
   - Ashley Whitaker
 sidebarContactsTitle: Questions?
-page: upcoming-programs-teacher-professional-learning
+page: upcoming-programs
+type: Teacher Professional Learning
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
 

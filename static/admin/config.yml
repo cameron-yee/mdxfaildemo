@@ -168,14 +168,15 @@ collections:
         - { name: url, label: Profile URL, widget: string, required: false}
         - { name: page, label: Page, widget: hidden, default: staff-directory }
 
-    - name: upcoming-teacher-professional-learning
-      label: "Upcoming Programs: Teacher Professional Learning"
-      folder: src/content/upcoming/teacher-professional-learning
+    - name: upcoming-programs
+      label: "Upcoming Programs"
+      folder: src/content/upcoming-programs
       create: true
       extension: md
       fields:
         - { name: date, label: Date, widget: date }
         - { name: title, label: Title of Program, widget: string }
+        - { name: type, label: Type, widget: select, options: ['Teacher Professional Learning', 'Leadership Development', 'Field-Test Opportunities'] }
         - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
