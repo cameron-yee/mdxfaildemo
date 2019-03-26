@@ -29,7 +29,7 @@ BSCS Middle School Science is a standards- and inquiry-based program comprised o
 
 The curriculum is available free online for teachers who agree to provide usability data and complete student pretests and posttests. Click below to register for resource access.
 
-<a class="btn btn-outline-secondary" href="https://bscs.org/mssciencepreview/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
+<a class="btn btn-outline-secondary" href="https://bscs.org/mssciencepreview/" target="_blank" rel="noopener noreferrer">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 recreate this link and change the question asking about the “2014-2015 school year” to “for the upcoming school year”
 
