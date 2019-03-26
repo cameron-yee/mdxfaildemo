@@ -18,7 +18,9 @@ discipline:
 sortOrder: 4
 page: educator-resource-center
 sidebarButtonText: Access Resource Here
-sidebarURL: https://bscs.sarus.io/
+sidebarURLs: 
+  - URL: https://bscs.sarus.io/
+  - External: true
 sidebarURLExternal: true
 ---
 
