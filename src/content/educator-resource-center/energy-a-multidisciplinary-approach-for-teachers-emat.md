@@ -30,10 +30,6 @@ That’s why BSCS Science Learning developed EMAT. This free online course helps
 
 Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting <SpecificContactForm sendto="Jeffrey Snowden">Jeffrey Snowden</SpecificContactForm>.
 
-Register for the full course below.
-
-<a class="btn btn-outline-secondary" href="https://bscs.sarus.io/" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem; margin-bottom: 1rem;">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
-
 _This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
