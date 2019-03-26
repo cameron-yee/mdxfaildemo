@@ -9,7 +9,7 @@
     max-width: 105px;
   }
   &.professional-learning {
-    border: 3px solid rgba(255, 159, 0, 1);;
+    border: 3px solid rgba(255, 159, 0, 1);
     width: 50%;
     max-width: 105px;
   }
@@ -25,22 +25,22 @@
   }
 
   &.classroom-instruction:hover {
-    background-color: rgba(94, 60, 124, 1);
+    background-color: rgba(94, 60, 124, .9);
     // filter: invert(1);
   }
 
   &.professional-learning:hover {
-    background-color: rgba(255, 159, 0, 1);
+    background-color: rgba(255, 159, 0, .9);
     // filter: invert(1);
   }
 
   &.district-planning:hover {
-    background-color: rgba(174, 37, 38, 1);
+    background-color: rgba(174, 37, 38, .9);
     // filter: invert(1);
   }
 
   &.citizen-science:hover {
-    background-color: rgba(17, 151,98, 1);
+    background-color: rgba(17, 151,98, .9);
     // filter: invert(1);
   }
 }
@@ -53,19 +53,19 @@
 }
 
 .categoryImageParent.classroom-instruction:hover .categoryImageChild:not(:hover) {
-  background-color: rgba(94, 60, 124, 1);
+  background-color: rgba(94, 60, 124, .9);
   // filter: invert(1);
 }
 .categoryImageParent.professional-learning:hover .categoryImageChild:not(:hover) {
-  background-color: rgba(255, 159, 0, 1);
+  background-color: rgba(255, 159, 0, .9);
   // filter: invert(1);
 }
 .categoryImageParent.district-planning:hover .categoryImageChild:not(:hover) {
-  background-color: rgba(174, 37, 38, 1);
+  background-color: rgba(174, 37, 38, .9);
   // filter: invert(1);
 }
 .categoryImageParent.citizen-science:hover .categoryImageChild:not(:hover) {
-  background-color: rgba(17, 151,98, 1);
+  background-color: rgba(17, 151,98, .9);
   // filter: invert(1);
 }
 
