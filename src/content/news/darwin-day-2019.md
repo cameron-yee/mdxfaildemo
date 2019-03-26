@@ -10,6 +10,7 @@ cardDescription: >-
   science and to promote science in general.
 sidebarContacts:
   - Lauren Novo
+sidebarContactsTitle: Questions?
 sortOrder: 1
 page: news
 ---
