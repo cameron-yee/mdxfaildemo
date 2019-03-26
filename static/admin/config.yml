@@ -36,12 +36,17 @@ collections:
           - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - { name: sidebarURLs, label: Sidebar URLs, widget: list,
+          - name: sidebarURLs
+            label: Sidebar URLs
+            widget: list
             fields:
-              - { label: URL, name: URL, widget: string,}
-              - { label: External, name: External, widget: boolean, default: true }
-            required: false }
-          # - { name: sidebarURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
+              - name: resource
+                label: Resource
+                widget: object
+                fields:
+                  - { name: url, label: URL, widget: string }
+                  - { name: external, label: External, widget: boolean, default: true }
+            required: false
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false

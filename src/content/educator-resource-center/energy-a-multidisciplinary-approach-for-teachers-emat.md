@@ -15,6 +15,11 @@ template: Image Right
 courseId: 0
 discipline:
   - Earth Sciences
+sidebarButtonText: Access Resource Here
+sidebarURLs:
+  - resource:
+      external: true
+      url: 'https://bscs.sarus.io/'
 sortOrder: 4
 page: educator-resource-center
 sidebarButtonText: Access Resource Here

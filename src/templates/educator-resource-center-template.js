@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 import Layout from '../components/layout/layout';
-import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button' 
+import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -107,7 +107,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                               {this.resource.sidebarContactsText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarContacts && 
+                          { this.resource.sidebarContacts &&
                             this.resource.sidebarContacts.map(contact => {
                               return(
                                 <div key={contact} className="d-flex justify-content-lg-center">
@@ -160,8 +160,10 @@ export const query = graphql`
         sidebarContactsText,
         sidebarContactsTitle,
         sidebarButtonText,
-        sidebarURL,
-        sidebarURLExternal,
+        sidebarURLs {
+          url,
+          external
+        },
         sidebarText,
         sidebarTitle,
         template,
