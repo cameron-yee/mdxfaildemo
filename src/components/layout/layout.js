@@ -7,6 +7,8 @@ import Footer from './footer/footer'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 
+import 'typeface-open-sans'
+import 'typeface-lora'
 import './layout.scss'
 
 
