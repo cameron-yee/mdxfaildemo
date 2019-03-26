@@ -219,9 +219,23 @@ export default class Footer extends Component {
               <GeneralContactFormButton launch={this.props.launchGeneral}>Contact Us</GeneralContactFormButton>
             </Col>
             <Col xs={12} className="p-2 m-auto text-center">
-              <a href="tel:719-531-5550">719-531-5550</a>
-              5415 Mark Dabling Blvd.<br />
-              Colorado Springs, CO 80918
+              <a href="tel:719-531-5550">
+                <div className="d-flex">
+                  <div className="m-auto">
+                    719-531-5550&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                    <br />
+                  </div>
+                </div>
+              </a>
+              <a href="https://goo.gl/maps/y5uT65epu1E2" target="_blank" rel="noopener noreferrer">
+                <div className="d-flex">
+                  <div className="m-auto">
+                      5415 Mark Dabling Blvd.&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup><br />
+                      Colorado Springs, CO 80918
+
+                  </div>
+                </div>
+              </a>
             </Col>
           </Row>
           <div className="d-none d-sm-flex">
@@ -234,9 +248,27 @@ export default class Footer extends Component {
                 textAlign: 'right'
               }}
             >
-              <a href="tel:719-531-5550">719-531-5550</a>
-              5415 Mark Dabling Blvd.<br />
-              Colorado Springs, CO 80918
+              <a href="tel:719-531-5550">
+                <div className="d-flex">
+                  <div className="ml-auto">
+                    719-531-5550<br />
+                  </div>
+                  <div>
+                    &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                  </div>
+                </div>
+              </a>
+              <a href="https://goo.gl/maps/y5uT65epu1E2" target="_blank" rel="noopener noreferrer">
+                <div className="d-flex">
+                  <div className="ml-auto">
+                      5415 Mark Dabling Blvd.<br />
+                      Colorado Springs, CO 80918
+                  </div>
+                  <div>
+                    &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </Container>
