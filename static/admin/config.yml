@@ -37,6 +37,7 @@ collections:
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
           - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: sidebarURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
@@ -64,6 +65,7 @@ collections:
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
           - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: sidebarURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
@@ -94,6 +96,7 @@ collections:
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
           - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: sidebarURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
           - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
@@ -120,6 +123,7 @@ collections:
           - { name: sidebarButtonText, label: Sidebar Button Text, widget: string, required: false }
           - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
           - { name: sidebarURL, label: Sidebar URL, widget: string, required: false }
+          - { name: sidebarURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
             required: false
@@ -184,6 +188,7 @@ collections:
         - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
         - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
         - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+        - { name: sidebarRegisterURLExternal, label: Sidebar URL External, widget: boolean, default: true, required: false }
         - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
           field: { label: Contact, name: contact, widget: string },
           required: false
@@ -195,57 +200,57 @@ collections:
         - { name: body, label: Body, widget: markdown }
         - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
 
-    - name: upcoming-teacher-leadership-development
-      label: "Upcoming Programs: Leadership Development"
-      folder: src/content/upcoming/leadership-development
-      create: true
-      extension: md
-      fields:
-        - { name: date, label: Date, widget: date }
-        - { name: title, label: Title of Program, widget: string }
-        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-        - { name: seoDescription, label: SEO Description, widget: string }
-        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-        - { name: cardDescription, label: Card Description, widget: string, required: false }
-        - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
-        - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
-        - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-          field: { label: Contact, name: contact, widget: string },
-          required: false
-        }
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-        - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
+    # - name: upcoming-teacher-leadership-development
+    #   label: "Upcoming Programs: Leadership Development"
+    #   folder: src/content/upcoming/leadership-development
+    #   create: true
+    #   extension: md
+    #   fields:
+    #     - { name: date, label: Date, widget: date }
+    #     - { name: title, label: Title of Program, widget: string }
+    #     - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+    #     - { name: seoDescription, label: SEO Description, widget: string }
+    #     - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+    #     - { name: cardDescription, label: Card Description, widget: string, required: false }
+    #     - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
+    #     - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
+    #     - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+    #     - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
+    #       field: { label: Contact, name: contact, widget: string },
+    #       required: false
+    #     }
+    #     - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+    #     - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+    #     - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+    #     - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+    #     - { name: body, label: Body, widget: markdown }
+    #     - { name: page, label: Page, widget: hidden, default: upcoming-programs-leadership-development }
 
-    - name: upcoming-teacher-field-test-opportunities
-      label: "Upcoming Programs: Field Test Opportunities"
-      folder: src/content/upcoming/field-test-opportunities
-      create: true
-      extension: md
-      fields:
-        - { name: date, label: Date, widget: date }
-        - { name: title, label: Title of Program, widget: string }
-        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-        - { name: seoDescription, label: SEO Description, widget: string }
-        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-        - { name: cardDescription, label: Card Description, widget: string, required: false }
-        - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
-        - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
-        - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
-        - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-          field: { label: Contact, name: contact, widget: string },
-          required: false
-        }
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-        - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
-        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-        - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }
+    # - name: upcoming-teacher-field-test-opportunities
+    #   label: "Upcoming Programs: Field Test Opportunities"
+    #   folder: src/content/upcoming/field-test-opportunities
+    #   create: true
+    #   extension: md
+    #   fields:
+    #     - { name: date, label: Date, widget: date }
+    #     - { name: title, label: Title of Program, widget: string }
+    #     - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+    #     - { name: seoDescription, label: SEO Description, widget: string }
+    #     - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+    #     - { name: cardDescription, label: Card Description, widget: string, required: false }
+    #     - { name: sidebarRegisterText, label: Sidebar Registration Text, widget: string, required: false }
+    #     - { name: sidebarRegisterTitle, label: Sidebar Registration Title, widget: string, required: false }
+    #     - { name: sidebarRegisterURL, label: Sidebar Registration Link, widget: string, required: false }
+    #     - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
+    #       field: { label: Contact, name: contact, widget: string },
+    #       required: false
+    #     }
+    #     - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+    #     - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+    #     - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
+    #     - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+    #     - { name: body, label: Body, widget: markdown }
+    #     - { name: page, label: Page, widget: hidden, default: upcoming-programs-field-test-opportunities }
 
     # - name: strategic-initiative
     #   label: Strategic Initiative

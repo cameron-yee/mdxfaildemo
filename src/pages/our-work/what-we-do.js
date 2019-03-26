@@ -35,7 +35,7 @@ const WhatWeDoPage = (props) => {
           </Col>
         </Row>
         <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col md={6} className="p-4 what-we-do-text-section colored">
+          <Col lg={6} className="p-4 what-we-do-text-section colored">
             <h3>Instructional Materials Development</h3>
 
             <p>For teachers to be successful in the classroom, they must have access to high quality instructional materials. We leverage research insights and current industry standards to produce reliable curricula, as we’ve done since our earliest days.</p>
@@ -44,7 +44,7 @@ const WhatWeDoPage = (props) => {
 
             <p>In today’s world, we primarily focus on developing NGSS-based, online, and highly interactive materials that meet the needs of increasingly diverse student populations.</p>
           </Col>
-          <Col md={6} className="what-we-do-image-wrapper">
+          <Col lg={6} className="what-we-do-image-wrapper">
             <Img
               className="h-100"
               fluid={props.data.image1.childImageSharp.fluid}
@@ -53,8 +53,8 @@ const WhatWeDoPage = (props) => {
             />
           </Col>
         </Row>
-        <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col>
+        <Row className="d-flex flex-wrap" noGutters={true} >
+          <Col lg={6} className="what-we-do-image-wrapper">
             <Img
               className="h-100"
               fluid={props.data.image2.childImageSharp.fluid}
@@ -62,7 +62,7 @@ const WhatWeDoPage = (props) => {
               backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
-          <Col md={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
+          <Col lg={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
             <h3>Teacher Professional Learning</h3>
 
             <p>A thriving science education system depends on high quality professional learning opportunities for teachers. We are recognized for our signature approach to professional development, resulting from our 15-year line of research on how teachers and students learn science.</p>
@@ -71,14 +71,14 @@ const WhatWeDoPage = (props) => {
           </Col>
         </Row>
         <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col md={6} className="p-4 what-we-do-text-section colored">
+          <Col lg={6} className="p-4 what-we-do-text-section colored">
             <h3>Leadership Development</h3>
 
             <p>Support from the state level to the classroom level is needed to transform science education. That’s why we are committed to system-wide leadership development. We create and deliver research-driven programs that prepare schools, districts, and states to implement stronger systems and policies for science teaching and learning. </p>
 
             <p>Our programs provide education leaders with <strong>high quality professional learning</strong> opportunities and support in selecting and implementing <strong>high quality instructional materials</strong>. As industry research indicates, both components are essential for effective science instruction.</p>
           </Col>
-          <Col md={6} className="what-we-do-image-wrapper">
+          <Col lg={6} className="what-we-do-image-wrapper">
             <Img
               className="h-100"
               fluid={props.data.image3.childImageSharp.fluid}
@@ -87,8 +87,8 @@ const WhatWeDoPage = (props) => {
             />
           </Col>
         </Row>
-        <Row style={{ marginBottom: '2rem' }} className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col md={6} className="p-2 what-we-do-image-wrapper">
+        <Row style={{ marginBottom: '2rem' }} className="d-flex flex-wrap" noGutters={true} >
+          <Col lg={6} className="p-2 what-we-do-image-wrapper">
             <Img
               className="h-100"
               fluid={props.data.image4.childImageSharp.fluid}
@@ -96,7 +96,7 @@ const WhatWeDoPage = (props) => {
               backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
-          <Col md={6} className="p-4 p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
+          <Col lg={6} className="p-4 p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
             <h3>Research</h3>
 
             <p>Our work begins and ends with research. We conduct a variety of studies for a deeper understanding of how teachers and students learn science. Our evaluations span from studies of our own interventions across schools and districts to big-picture analyses across the greater science education landscape.</p>

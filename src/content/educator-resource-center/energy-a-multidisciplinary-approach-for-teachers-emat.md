@@ -20,7 +20,8 @@ page: educator-resource-center
 sidebarContacts:
   - Jeffrey Snowden
 sidebarContactsText: Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
-sidebarContactsTitle: Usage request 
+sidebarContactsTitle: Usage request
+sidebarURLExternal: true
 ---
 
 import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-modal/specific-contact-form-modal'

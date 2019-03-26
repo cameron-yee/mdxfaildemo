@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Location } from '@reach/router'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
@@ -56,24 +56,37 @@ const EducatorResourceCenterTemplate = class extends Component {
                   {this.resource.price === 0.0 && (<p><strong>Price: </strong>Free</p>)} */}
                   {/* {this.resource.courseId !== null && this.resource.courseId !== 0 && <CanvasRegister courseId={this.resource.courseId} />} */}
                 </Col>
-                {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle || this.resource.sidebarRegisterURL || this.resource.sidebarRegisterText) &&
+                {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle || this.resource.sidebarURL || this.resource.sidebarText) &&
                   <Col className="p-2" md={3}>
-                    {(this.resource.sidebarRegisterURL || this.resource.sidebarRegisterText || this.resource.sidebarRegisterTitle) &&
+                    {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                       <Card style={{marginBottom: '1rem'}}>
                         <Card.Body>
-                          { this.resource.sidebarRegisterTitle &&
-                            <Card.Title>{this.resource.sidebarRegisterTitle}</Card.Title>
+                          { this.resource.sidebarTitle &&
+                            <Card.Title>{this.resource.sidebarTitle}</Card.Title>
                           }
-                          { this.resource.sidebarRegisterText &&
+                          { this.resource.sidebarText &&
                             <Card.Text style={{fontSize: '1rem'}}>
                               {this.resource.sidebarText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarRegisterURL &&
+                          { this.resource.sidebarURL &&
                             <div className="d-flex justify-content-center">
-                              <a className="p-2" href={this.resource.sidebarRegisterURL} target="_blank" rel="noopener noreferrer">
-                                <Button size="sm" variant="outline-secondary">Register</Button>
+                              { this.resource.sidebarURLExternal &&
+                              <a
+                                class="p-2 btn btn-outline-secondary"
+                                href={this.resource.sidebarURL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style="margin-top: 1rem; margin-bottom: 1rem;"
+                              >
+                                {this.resource.sidebarButtonText}&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
                               </a>
+                              }
+                              { !this.resource.sidebarURLExternal &&
+                                <Link to={this.resource.sidebarURL}>
+                                  <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
+                                </Link>
+                              }
                             </div>
                           }
                         </Card.Body>
@@ -144,9 +157,11 @@ export const query = graphql`
         sidebarContacts,
         sidebarContactsText,
         sidebarContactsTitle,
-        sidebarRegisterURL,
-        sidebarRegisterText,
-        sidebarRegisterTitle,
+        sidebarButtonText,
+        sidebarURL,
+        sidebarURLExternal,
+        sidebarText,
+        sidebarTitle,
         template,
         title,
         type
