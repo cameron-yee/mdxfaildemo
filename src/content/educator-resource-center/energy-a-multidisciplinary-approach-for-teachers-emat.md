@@ -19,6 +19,7 @@ sidebarButtonText: Access Resource Here
 sidebarURLs:
   - resource:
       external: true
+      buttonText: 'Access Resource'
       url: 'https://bscs.sarus.io/'
 sortOrder: 4
 page: educator-resource-center
