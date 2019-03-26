@@ -25,6 +25,6 @@ To help middle school teachers more effectively teach about food allergies, BSCS
 
 Lessons engage students in the practices of scientific inquiry, and are aligned to the Next Generation Science Standards.  
 
-<a href="http://allergies.bscs.org/" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Access Resource Here</button></a>
+<a href="http://allergies.bscs.org/" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></button></a>
 
 _This resource was supported by a grant (R25 A1098674-01) from the National Institute of Allergy and Infectious Diseases._

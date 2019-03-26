@@ -21,13 +21,13 @@ BSCS Science Learning has developed a curriculum supplement to teach middle scho
 
 This program is freely available and features five classroom lessons.
 
-<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/educator-resource-center/nida--full.pdf" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
+<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/educator-resource-center/nida--full.pdf" target="_blank" rel="noopener noreferrer">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 Four of the lessons are centered around a short video. View the segments below:
 
-* <a href="https://vimeo.com/315712201" target="_blank" rel="noopener noreferrer">Segment 1</a>
-* <a href="https://vimeo.com/315712242" target="_blank" rel="noopener noreferrer">Segment 2</a>
-* <a href="https://vimeo.com/315712075" target="_blank" rel="noopener noreferrer">Segment 3</a>
-* <a href="https://vimeo.com/315712128" target="_blank" rel="noopener noreferrer">Segment 4</a>
+* <a href="https://vimeo.com/315712201" target="_blank" rel="noopener noreferrer">Segment 1&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+* <a href="https://vimeo.com/315712242" target="_blank" rel="noopener noreferrer">Segment 2&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+* <a href="https://vimeo.com/315712075" target="_blank" rel="noopener noreferrer">Segment 3&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+* <a href="https://vimeo.com/315712128" target="_blank" rel="noopener noreferrer">Segment 4&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 _This resource was developed with funding from the National Institute on Drug Abuse (NIDA)._

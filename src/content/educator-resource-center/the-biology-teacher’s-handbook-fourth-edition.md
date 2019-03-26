@@ -27,4 +27,4 @@ BSCS Science Learning has filled this volume with valuable teaching ideas and gu
 
 This resource is available for purchase through NSTA Press.
 
-<a class="btn btn-outline-secondary" href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9780873552448" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
+<a class="btn btn-outline-secondary" href="https://www.nsta.org/store/product_detail.aspx?id=10.2505/9780873552448" target="_blank" rel="noopener noreferrer">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>

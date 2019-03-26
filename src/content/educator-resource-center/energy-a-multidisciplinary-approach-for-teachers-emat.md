@@ -17,7 +17,14 @@ discipline:
   - Earth Sciences
 sortOrder: 4
 page: educator-resource-center
+sidebarContacts:
+  - Jeffrey Snowden
+sidebarContactsText: Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
+sidebarContactsTitle: Usage request 
 ---
+
+import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-modal/specific-contact-form-modal'
+
 
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
@@ -25,21 +32,18 @@ That’s why BSCS Science Learning developed EMAT. This free online course helps
 
 Preview the assets (hyperlink to the same assets page referenced in the “classroom” version of this resource page) or register for the full course below. 
 
-<a class="btn btn-outline-secondary" href="https://bscs.sarus.io/" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem; margin-bottom: 1rem;">Access Resource Here</a>
-
-Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
+<a class="btn btn-outline-secondary" href="https://bscs.sarus.io/" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem; margin-bottom: 1rem;">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 _This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
-    
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>
     <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grant No. DRL 1118643. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
   </div>
-</div>    
+</div>

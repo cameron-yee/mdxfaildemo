@@ -27,7 +27,7 @@ BSCS Science Learning’s elementary program allows preK through grade 5 student
 
 BSCS recently revised two units* to align with the Next Generation Science Standards. All units are available for purchase through the Kendall Hunt Publishing Company.  
 
-<a class="btn btn-outline-secondary" href="https://k12.kendallhunt.com/program/bscs-science-tracks-connecting-science-literacy/" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
+<a class="btn btn-outline-secondary" href="https://k12.kendallhunt.com/program/bscs-science-tracks-connecting-science-literacy/" target="_blank" rel="noopener noreferrer">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 \*BSCS Science Tracks: Connecting Science & Literacy NGSS-aligned units: 
 
