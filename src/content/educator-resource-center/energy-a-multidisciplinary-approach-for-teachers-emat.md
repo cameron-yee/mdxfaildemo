@@ -15,9 +15,12 @@ template: Image Right
 courseId: 0
 discipline:
   - Earth Sciences
+sidebarButtonText: Access Resource Here
+sidebarURLs:
+  - external: true
+    url: 'https://bscs.sarus.io/'
 sortOrder: 4
 page: educator-resource-center
-sidebarButtonText: Access Resource Here
 ---
 
 import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'

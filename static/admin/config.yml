@@ -40,8 +40,12 @@ collections:
             label: Sidebar URLs
             widget: list
             fields:
-              - { name: url, label: URL, widget: string }
-              - { name: external, label: External, widget: boolean, default: true }
+              - name: resource
+                label: Resource
+                widget: object
+                fields:
+                  - { name: url, label: URL, widget: string }
+                  - { name: external, label: External, widget: boolean, default: true }
             required: false
           - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
             field: { label: Contact, name: contact, widget: string },
