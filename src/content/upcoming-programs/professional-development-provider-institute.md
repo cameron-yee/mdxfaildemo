@@ -5,9 +5,9 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
 seoDescription: TEST DESCRIPTION
 seoLang: en-us
-sidebarRegisterURL: 'https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/start'
-sidebarRegisterText: ''
-sidebarRegisterTitle: Sign up now
+siderbarURL: 'https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/start'
+siderbarText: ''
+siderbarTitle: Sign up now
 sidebarContactsText: ''
 sidebarContacts:
   - Ashley Whitaker
@@ -25,7 +25,7 @@ Join us for a Professional Development (PD) Provider Institute 2 in Colorado Spr
 * Dates: October 1-4, 2019
 * Location: BSCS Science Learning
 * Cost: $1,000 to register
-* Registration Deadline: September 1, 2019 
+* Registration Deadline: September 1, 2019
 
 
 

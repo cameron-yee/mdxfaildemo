@@ -5,9 +5,12 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-60th-anniversary-announcement
 seoDescription: Test SEO description.
 seoLang: en-us
-sidebarURL: >-
-  https://myemail.constantcontact.com/BSCS-60th-Anniversary-Announcement.html?soid=1126116988583&aid=StYqO0SJr-Y
-sidebarButtonText: Email Announcement
+sidebarURLs:
+  - resource:
+      buttonText: Email Announcement
+      external: true
+      url: https://myemail.constantcontact.com/BSCS-60th-Anniversary-Announcement.html?soid=1126116988583&aid=StYqO0SJr-Y
+
 sidebarContactsText: Questions?
 sidebarContacts:
   - Lauren Novo

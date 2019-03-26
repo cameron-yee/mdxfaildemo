@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Location } from '@reach/router'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import SEO from '../components/seo'
@@ -40,22 +40,22 @@ const NewsTemplate = class extends Component {
               date={this.resource.date}
             />
             <Row style={{marginBottom: '1rem'}}>
-              {(this.resource.sidebarURL || this.resource.sidebarText) &&
+              {(this.resource.sidebarURLs || this.resource.sidebarText) &&
                 <Col className="order-2 order-lg-1">
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
-              {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
+              {(!this.resource.sidebarURLs && !this.resource.sidebarText) &&
                 <Col className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                 </Col>
               }
-              {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
+              {(this.resource.sidebarURLs || this.resource.sidebarText || this.resource.sidebarTitle
                 || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
                 <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
-                  {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
+                  {(this.resource.sidebarURLs || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
                       <Card.Body>
                         {this.resource.sidebarTitle &&
@@ -66,19 +66,33 @@ const NewsTemplate = class extends Component {
                             {this.resource.sidebarText}
                           </Card.Text>
                         }
-                        {this.resource.sidebarURL &&
-                          <div className="d-flex justify-content-lg-center">
-                            {this.resource.sidebarButtonText && 
-                              <a href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
-                                <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
-                              </a>
-                            }
-                            {!this.resource.sidebarButtonText && 
-                              <a href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
-                                <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
-                              </a>
-                            }
-                          </div>
+                        { this.resource.sidebarURLs &&
+                          this.resource.sidebarURLs.map((resource, index) => {
+                            return (
+                              <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
+                                { resource['resource']['external'] &&
+                                  <a
+                                    className="btn btn-outline-secondary"
+                                    href={resource['resource']['url']}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                      marginTop: '1rem',
+                                      marginBottom: '1rem'
+                                    }}
+                                  >
+                                    {resource['resource']['buttonText']}
+                                    &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                                  </a>
+                                }
+                                { !resource['resource']['external'] &&
+                                  <Link to={resource['resource']['url']}>
+                                    <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
+                                  </Link>
+                                }
+                              </div>
+                            )
+                          })
                         }
                       </Card.Body>
                     </Card>
@@ -136,10 +150,15 @@ export const query = graphql`
         seoCanonicalUrl,
         seoDescription,
         seoLang,
-        sidebarURL,
         sidebarText,
         sidebarTitle,
-        sidebarButtonText,
+        sidebarURLs {
+          resource {
+            buttonText,
+            external,
+            url
+          }
+        },
         sidebarContacts,
         sidebarContactsText,
         sidebarContactsTitle,

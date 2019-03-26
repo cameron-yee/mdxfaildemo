@@ -8,9 +8,12 @@ areas:
   - Research
 image: /assets/rd-programs/data-nuggets.svg
 alt: Data Nuggets Icon
-sidebarButtonText: Learn More Here
 sidebarTitle: Data Nuggets
-sidebarURL: 'http://datanuggets.org/'
+sidebarURLs:
+  - resource:
+    buttonText: Learn More Here
+    external: true
+    url: 'http://datanuggets.org/'
 sortOrder: 10
 page: rd-programs
 ---

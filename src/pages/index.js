@@ -34,8 +34,8 @@ const IndexPage = (props) => (
           <Card className="h-100">
             <Img
               variant="top"
-              fluid={props.data.image1.childImageSharp.fluid} 
-              className="card-img-top" 
+              fluid={props.data.image1.childImageSharp.fluid}
+              className="card-img-top"
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
@@ -53,7 +53,7 @@ const IndexPage = (props) => (
             >
               <div className="d-flex">
                 <div className="ml-auto">
-                  <Link to="/what-we-do/">
+                  <Link to="/our-work/what-we-do#instructional-materials-development">
                     <Button variant="outline-secondary">Read More</Button>
                   </Link>
                 </div>
@@ -65,8 +65,8 @@ const IndexPage = (props) => (
           <Card className="h-100">
             <Img
               variant="top"
-              fluid={props.data.image2.childImageSharp.fluid} 
-              className="card-img-top" 
+              fluid={props.data.image2.childImageSharp.fluid}
+              className="card-img-top"
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
@@ -84,7 +84,7 @@ const IndexPage = (props) => (
             >
               <div className="d-flex">
                 <div className="ml-auto">
-                  <Link to="/what-we-do/">
+                  <Link to="/our-work/what-we-do#teacher-professional-learning">
                     <Button variant="outline-secondary">Read More</Button>
                   </Link>
                 </div>
@@ -96,8 +96,8 @@ const IndexPage = (props) => (
           <Card className="h-100">
             <Img
               variant="top"
-              fluid={props.data.image3.childImageSharp.fluid} 
-              className="card-img-top" 
+              fluid={props.data.image3.childImageSharp.fluid}
+              className="card-img-top"
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
@@ -115,7 +115,7 @@ const IndexPage = (props) => (
             >
               <div className="d-flex">
                 <div className="ml-auto">
-                  <Link to="/what-we-do/">
+                  <Link to="/our-work/what-we-do#leadership-development">
                     <Button variant="outline-secondary">Read More</Button>
                   </Link>
                 </div>
@@ -127,8 +127,8 @@ const IndexPage = (props) => (
           <Card className="h-100">
             <Img
               variant="top"
-              fluid={props.data.image4.childImageSharp.fluid} 
-              className="card-img-top" 
+              fluid={props.data.image4.childImageSharp.fluid}
+              className="card-img-top"
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
@@ -146,7 +146,7 @@ const IndexPage = (props) => (
             >
               <div className="d-flex">
                 <div className="ml-auto">
-                  <Link to="/what-we-do/">
+                  <Link to="/our-work/what-we-do#research">
                     <Button variant="outline-secondary">Read More</Button>
                   </Link>
                 </div>

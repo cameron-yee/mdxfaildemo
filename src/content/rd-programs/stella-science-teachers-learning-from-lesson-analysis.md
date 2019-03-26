@@ -12,10 +12,13 @@ areas:
   - Research
 image: /assets/rd-programs/stella.svg
 alt: STELLA Icon
-sidebarButtonText: Download
 sidebarTitle: ''
 sidebarText: 'Want to know more about STeLLA? Download our STeLLA Info Sheet!'
-sidebarURL: 'https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf'
+sidebarURLs:
+  - resource:
+      buttonText: Download
+      external: true
+      url: 'https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf'
 sidebarContactsText: Contact Jody Bintz to explore opportunities to work together.
 sidebarContacts:
   - Jody Bintz

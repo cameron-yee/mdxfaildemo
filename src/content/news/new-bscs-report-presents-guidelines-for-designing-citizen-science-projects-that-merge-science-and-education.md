@@ -11,10 +11,6 @@ sidebarContactsTitle: ""
 sidebarContactsText: Questions?
 sidebarContacts:
   - Lauren Novo
-sidebarURL: ""
-sidebarText: ""
-sidebarTitle: ""
-sidebarButtonText: ""
 page: news
 additionalTags: ""
 ---

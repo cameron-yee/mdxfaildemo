@@ -8,7 +8,11 @@ areas:
   - Research
 image: /assets/rd-programs/power.svg
 alt: Power Icon
-sidebarURL: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
+sidebarURLs:
+   - resource:
+      buttonText: Access Resource
+      external: true
+      url: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
 sortOrder: 4
 page: rd-programs
 ---

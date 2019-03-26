@@ -12,7 +12,11 @@ seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/assessing-stu
 seoDescription: Test SEO description.
 seoLang: en-us
 sidebarText: Learn more about our intervention and assessment and the research design and methods.
-sidebarURL: https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
+sidebarURLs:
+  - resource:
+      buttonText: Access Resource
+      external: true
+      url: https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
 sidebarContactsText: Contact the project PI.
 sidebarContacts:
   - Cari Herrmann Abell

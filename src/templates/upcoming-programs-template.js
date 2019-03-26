@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { graphql } from 'gatsby';
-import { Location } from '@reach/router' 
+import { graphql, Link } from 'gatsby';
+import { Location } from '@reach/router'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
 import Layout from '../components/layout/layout';
@@ -39,35 +39,56 @@ const UpcomingProgramsTemplate = class extends Component {
               // replace={["upcoming-programs", "Upcoming Programs"]}
             />
             <Row className="d-flex flex-wrap-reverse" style={{marginBottom: '1rem'}}>
-              {((this.program.sidebarContacts && this.program.sidebarContactsText) || (this.program.sidebarRegisterURL && this.program.sidebarRegisterText)) &&
+              {((this.program.sidebarContacts && this.program.sidebarContactsText) || (this.program.sidebarURLs && this.program.sidebarText)) &&
                 <Col className="p-2" md={9}>
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
-              {(!(this.program.sidebarContacts && this.program.sidebarContactsText) && !(this.program.sidebarRegisterURL && this.program.sidebarRegisterText)) &&
+              {(!(this.program.sidebarContacts && this.program.sidebarContactsText) && !(this.program.sidebarURLs && this.program.sidebarText)) &&
                 <Col className="p-2">
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
-              {(this.program.sidebarContacts || this.program.sidebarContactsText || this.program.sidebarContactsTitle || this.program.sidebarRegisterURL || this.program.sidebarRegisterText) &&
+              {(this.program.sidebarContacts || this.program.sidebarContactsText || this.program.sidebarContactsTitle || this.program.sidebarURLs || this.program.sidebarText) &&
                 <Col className="p-2" md={3}>
-                  {(this.program.sidebarRegisterURL || this.program.sidebarRegisterText || this.program.sidebarRegisterTitle) &&
+                  {(this.program.sidebarURLs || this.program.sidebarText || this.program.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}}>
                       <Card.Body>
-                        { this.program.sidebarRegisterTitle &&
-                          <Card.Title>{this.program.sidebarRegisterTitle}</Card.Title>
+                        { this.program.sidebarTitle &&
+                          <Card.Title>{this.program.sidebarTitle}</Card.Title>
                         }
-                        { this.program.sidebarRegisterText &&
+                        { this.program.sidebarText &&
                           <Card.Text style={{fontSize: '1rem'}}>
                             {this.program.sidebarText}
                           </Card.Text>
                         }
-                        { this.program.sidebarRegisterURL &&
-                          <div className="d-flex justify-content-center">
-                            <a className="p-2" href={this.program.sidebarRegisterURL} target="_blank" rel="noopener noreferrer">
-                              <Button size="sm" variant="outline-secondary">Register</Button>
-                            </a>
-                          </div>
+                        { this.resource.sidebarURLs &&
+                          this.resource.sidebarURLs.map((resource, index) => {
+                            return (
+                              <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
+                                { resource['resource']['external'] &&
+                                  <a
+                                    className="btn btn-outline-secondary"
+                                    href={resource['resource']['url']}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                      marginTop: '1rem',
+                                      marginBottom: '1rem'
+                                    }}
+                                  >
+                                    {resource['resource']['buttonText']}
+                                    &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                                  </a>
+                                }
+                                { !resource['resource']['external'] &&
+                                  <Link to={resource['resource']['url']}>
+                                    <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
+                                  </Link>
+                                }
+                              </div>
+                            )
+                          })
                         }
                       </Card.Body>
                     </Card>
@@ -83,7 +104,7 @@ const UpcomingProgramsTemplate = class extends Component {
                             {this.program.sidebarContactsText}
                           </Card.Text>
                         }
-                        { this.program.sidebarContacts && 
+                        { this.program.sidebarContacts &&
                           this.program.sidebarContacts.map(contact => {
                             return(
                               <div key={contact} className="d-flex justify-content-center">
@@ -101,7 +122,7 @@ const UpcomingProgramsTemplate = class extends Component {
                   }
                 </Col>
               }
-            </Row> 
+            </Row>
           </Container>
         </Layout>
       </React.Fragment>
@@ -130,9 +151,15 @@ export const query = graphql`
         sidebarContacts,
         sidebarContactsText,
         sidebarContactsTitle,
-        sidebarRegisterURL,
-        sidebarRegisterText,
-        sidebarRegisterTitle,
+        sidebarURLs {
+          resource {
+            buttonText,
+            external,
+            url
+          }
+        },
+        sidebarText,
+        sidebarTitle,
         title
         type
       }

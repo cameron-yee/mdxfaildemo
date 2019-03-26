@@ -71,10 +71,6 @@ const EducatorResourceCenterTemplate = class extends Component {
                           }
                           { this.resource.sidebarURLs &&
                             this.resource.sidebarURLs.map((resource, index) => {
-                              console.log(resource['resource'])
-                              console.log(resource['resource']['url'])
-                              console.log(resource['resource']['external'])
-                              console.log(resource['resource']['buttonText'])
                               return (
                                 <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
                                   { resource['resource']['external'] &&
@@ -167,7 +163,6 @@ export const query = graphql`
         sidebarContacts,
         sidebarContactsText,
         sidebarContactsTitle,
-        sidebarButtonText,
         sidebarURLs {
           resource {
             buttonText,

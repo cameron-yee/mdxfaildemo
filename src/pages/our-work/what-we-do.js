@@ -35,7 +35,11 @@ const WhatWeDoPage = (props) => {
           </Col>
         </Row>
         <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col lg={6} className="p-4 what-we-do-text-section colored">
+          <Col
+            id="instructional-materials-development"
+            lg={6}
+            className="p-4 what-we-do-text-section colored"
+          >
             <h3>Instructional Materials Development</h3>
 
             <p>For teachers to be successful in the classroom, they must have access to high quality instructional materials. We leverage research insights and current industry standards to produce reliable curricula, as we’ve done since our earliest days.</p>
@@ -62,7 +66,12 @@ const WhatWeDoPage = (props) => {
               backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
-          <Col lg={6} className="p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
+          <Col
+            id="teacher-professional-learning"
+            lg={6}
+            className="p-4 what-we-do-text-section"
+            style={{ background: 'rgba(0, 0, 0, .1)' }}
+          >
             <h3>Teacher Professional Learning</h3>
 
             <p>A thriving science education system depends on high quality professional learning opportunities for teachers. We are recognized for our signature approach to professional development, resulting from our 15-year line of research on how teachers and students learn science.</p>
@@ -71,7 +80,11 @@ const WhatWeDoPage = (props) => {
           </Col>
         </Row>
         <Row className="d-flex flex-wrap-reverse" noGutters={true} >
-          <Col lg={6} className="p-4 what-we-do-text-section colored">
+          <Col
+            id="leadership-development"
+            lg={6}
+            className="p-4 what-we-do-text-section colored"
+          >
             <h3>Leadership Development</h3>
 
             <p>Support from the state level to the classroom level is needed to transform science education. That’s why we are committed to system-wide leadership development. We create and deliver research-driven programs that prepare schools, districts, and states to implement stronger systems and policies for science teaching and learning. </p>
@@ -96,7 +109,12 @@ const WhatWeDoPage = (props) => {
               backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
-          <Col lg={6} className="p-4 p-4 what-we-do-text-section" style={{ background: 'rgba(0, 0, 0, .1)' }}>
+          <Col
+            id="research"
+            lg={6}
+            className="p-4 p-4 what-we-do-text-section"
+            style={{ background: 'rgba(0, 0, 0, .1)' }}
+          >
             <h3>Research</h3>
 
             <p>Our work begins and ends with research. We conduct a variety of studies for a deeper understanding of how teachers and students learn science. Our evaluations span from studies of our own interventions across schools and districts to big-picture analyses across the greater science education landscape.</p>
