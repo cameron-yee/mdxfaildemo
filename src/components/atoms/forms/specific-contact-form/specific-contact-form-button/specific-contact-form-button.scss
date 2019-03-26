@@ -11,7 +11,9 @@ span {
 
 .inlineAnchor {
   color: $secondary;
+  transition: color .2s ease-in-out;
   &:hover {
     color: $primary;
+    transition: color .2s ease-in-out;
   }
 }
