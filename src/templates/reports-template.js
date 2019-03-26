@@ -36,20 +36,20 @@ const ReportsTemplate = class extends Component {
             }
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
-                <Col md={8}>
+                <Col className="order-2 order-lg-1">
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
-                <Col>
+                <Col className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
                 || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
-                <Col md={4}>
+                <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                   {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
                       <Card.Body>
@@ -62,14 +62,14 @@ const ReportsTemplate = class extends Component {
                           </Card.Text>
                         }
                         {this.resource.sidebarURL &&
-                          <div className="d-flex justify-content-center">
+                          <div className="d-flex justify-content-lg-center">
                             {this.resource.sidebarButtonText && 
-                              <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
+                              <a href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
                                 <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
                               </a>
                             }
                             {!this.resource.sidebarButtonText && 
-                              <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
+                              <a href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
                                 <Button size="sm" variant="outline-secondary">Access Resource Here</Button>
                               </a>
                             }
@@ -92,7 +92,7 @@ const ReportsTemplate = class extends Component {
                           {this.resource.sidebarContacts &&
                             this.resource.sidebarContacts.map(contact => {
                               return (
-                                <div key={contact} className="d-flex justify-content-center">
+                                <div key={contact} className="d-flex justify-content-lg-center">
                                   <div className="p-2">
                                     <SpecificContactForm sendto={contact}>
                                       <Button size="sm" variant="outline-primary">Contact {contact}</Button>

@@ -49,7 +49,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                 </Row>
               }
               <Row style={{ marginBottom: '3rem' }}>
-                <Col>
+                <Col className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   {/* {this.resource.price !== 0.0 && this.resource.price !== null && (<p><strong>Price: </strong>{`$${this.resource.price}`}</p>)}
@@ -57,7 +57,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                   {/* {this.resource.courseId !== null && this.resource.courseId !== 0 && <CanvasRegister courseId={this.resource.courseId} />} */}
                 </Col>
                 {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle || this.resource.sidebarURL || this.resource.sidebarText) &&
-                  <Col className="p-2" md={3}>
+                  <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                     {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                       <Card style={{marginBottom: '1rem'}}>
                         <Card.Body>
@@ -70,10 +70,10 @@ const EducatorResourceCenterTemplate = class extends Component {
                             </Card.Text>
                           }
                           { this.resource.sidebarURL &&
-                            <div className="d-flex justify-content-center">
+                            <div className="d-flex justify-content-lg-center">
                               { this.resource.sidebarURLExternal &&
                               <a
-                                className="p-2 btn btn-outline-secondary"
+                                className="btn btn-outline-secondary"
                                 href={this.resource.sidebarURL}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -110,12 +110,10 @@ const EducatorResourceCenterTemplate = class extends Component {
                           { this.resource.sidebarContacts && 
                             this.resource.sidebarContacts.map(contact => {
                               return(
-                                <div key={contact} className="d-flex justify-content-center">
-                                  <div className="p-2 w-100">
-                                    <SpecificContactForm sendto={contact}>
-                                      <Button size="sm" variant="outline-primary">Contact {contact}</Button>
-                                    </SpecificContactForm>
-                                  </div>
+                                <div key={contact} className="d-flex justify-content-lg-center">
+                                  <SpecificContactForm sendto={contact}>
+                                    <Button size="sm" variant="outline-primary">Contact {contact}</Button>
+                                  </SpecificContactForm>
                                 </div>
                               )
                             })
