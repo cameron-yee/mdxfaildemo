@@ -17,9 +17,9 @@ discipline:
   - Earth Sciences
 sortOrder: 4
 page: educator-resource-center
-sideBarButtonText: Access Resource Here
-sideBarURL: https://bscs.sarus.io/
-sideBarURLExternal: true
+sidebarButtonText: Access Resource Here
+sidebarURL: https://bscs.sarus.io/
+sidebarURLExternal: true
 ---
 
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
@@ -27,10 +27,6 @@ _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifest
 That’s why BSCS Science Learning developed EMAT. This free online course helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. Supporting both teacher and student learning, EMAT includes six units featuring 34 engaging classroom videos, 30 content animations, and 20 interactive learning experiences. 
 
 Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
-
-Register for the full course below.
-
-<a class="btn btn-outline-secondary" href="https://bscs.sarus.io/" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem; margin-bottom: 1rem;">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 _This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
 

@@ -77,9 +77,9 @@ const EducatorResourceCenterTemplate = class extends Component {
                                 href={this.resource.sidebarURL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style="margin-top: 1rem; margin-bottom: 1rem;"
+                                style={{marginTop: '1rem', 'marginBottom': '1rem'}}
                               >
-                                {this.resource.sidebarButtonText}&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+                                {this.resource.sidebarButtonText}&nbsp;<sup><i style={{fontSize: '.65rem'}} class="fas fa-external-link-alt"></i></sup>
                               </a>
                               }
                               { !this.resource.sidebarURLExternal &&
