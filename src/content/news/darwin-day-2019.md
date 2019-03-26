@@ -4,6 +4,10 @@ title: 'Celebrating Darwin Day - February 12, 2019'
 seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/news/darwin-day-2019'
 seoDescription: Test SEO description.
 seoLang: en-us
+cardDescription: >-
+  Darwin Day is a celebration to commemorate the birthday of Charles Darwin on
+  February 12, 1809. The day is used to highlight Darwin's contributions to
+  science and to promote science in general.
 sidebarContacts:
   - Lauren Novo
 sortOrder: 1
