@@ -56,9 +56,9 @@ const EducatorResourceCenterTemplate = class extends Component {
                   {this.resource.price === 0.0 && (<p><strong>Price: </strong>Free</p>)} */}
                   {/* {this.resource.courseId !== null && this.resource.courseId !== 0 && <CanvasRegister courseId={this.resource.courseId} />} */}
                 </Col>
-                {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle || this.resource.sidebarURL || this.resource.sidebarText) &&
+                {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle || this.resource.sidebarURLs || this.resource.sidebarText) &&
                   <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
-                    {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
+                    {(this.resource.sidebarURLs || this.resource.sidebarText || this.resource.sidebarTitle) &&
                       <Card style={{marginBottom: '1rem'}}>
                         <Card.Body>
                           { this.resource.sidebarTitle &&
@@ -69,29 +69,37 @@ const EducatorResourceCenterTemplate = class extends Component {
                               {this.resource.sidebarText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarURL &&
-                            <div className="d-flex justify-content-lg-center">
-                              { this.resource.sidebarURLExternal &&
-                              <a
-                                className="btn btn-outline-secondary"
-                                href={this.resource.sidebarURL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                  marginTop: '1rem',
-                                  marginBottom: '1rem'
-                                }}
-                              >
-                                {this.resource.sidebarButtonText}
-                                &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
-                              </a>
-                              }
-                              { !this.resource.sidebarURLExternal &&
-                                <Link to={this.resource.sidebarURL}>
-                                  <Button size="sm" variant="outline-secondary">{this.resource.sidebarButtonText}</Button>
-                                </Link>
-                              }
-                            </div>
+                          { this.resource.sidebarURLs &&
+                            this.resource.sidebarURLs.map((resource, index) => {
+                              console.log(resource['resource'])
+                              console.log(resource['resource']['url'])
+                              console.log(resource['resource']['external'])
+                              console.log(resource['resource']['buttonText'])
+                              return (
+                                <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
+                                  { resource['resource']['external'] &&
+                                    <a
+                                      className="btn btn-outline-secondary"
+                                      href={resource['resource']['url']}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      style={{
+                                        marginTop: '1rem',
+                                        marginBottom: '1rem'
+                                      }}
+                                    >
+                                      {resource['resource']['buttonText']}
+                                      &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                                    </a>
+                                  }
+                                  { !resource['resource']['external'] &&
+                                    <Link to={resource['resource']['url']}>
+                                      <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
+                                    </Link>
+                                  }
+                                </div>
+                              )
+                            })
                           }
                         </Card.Body>
                       </Card>
@@ -161,8 +169,11 @@ export const query = graphql`
         sidebarContactsTitle,
         sidebarButtonText,
         sidebarURLs {
-          url,
-          external
+          resource {
+            buttonText,
+            external,
+            url
+          }
         },
         sidebarText,
         sidebarTitle,
