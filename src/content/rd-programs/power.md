@@ -9,7 +9,7 @@ areas:
 image: /assets/rd-programs/power.svg
 alt: Power Icon
 sidebarURLs:
-   - resource:
+  - resource:
       buttonText: Access Resource
       external: true
       url: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'

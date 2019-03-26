@@ -11,9 +11,9 @@ alt: Data Nuggets Icon
 sidebarTitle: Data Nuggets
 sidebarURLs:
   - resource:
-    buttonText: Learn More Here
-    external: true
-    url: 'http://datanuggets.org/'
+      buttonText: Learn More Here
+      external: true
+      url: 'http://datanuggets.org/'
 sortOrder: 10
 page: rd-programs
 ---
