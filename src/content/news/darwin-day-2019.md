@@ -1,7 +1,8 @@
 ---
 date: 2019-02-12T20:12:07.266Z
-title: 'Celebrating Darwin Day - February 12, 2019'
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/news/darwin-day-2019'
+title: Celebrating Darwin Day 2019
+seoCanonicalUrl: >-
+  https://bmw-bscs.netlify.com/admin/#/collections/news/celebrating-darwin-day-2019
 seoDescription: Test SEO description.
 seoLang: en-us
 cardDescription: >-
