@@ -12,6 +12,23 @@ image: /assets/shark.jpg
 alt: PLACEHOLDER
 template: Image Right
 courseId: 0
+sidebarURLs:
+  - resource:
+      buttonText: Segment 1
+      external: true
+      url: 'https://vimeo.com/315712201'
+  - resource:
+      buttonText: Segment 2
+      external: true
+      url: 'https://vimeo.com/315712242'
+  - resource:
+      buttonText: Segment 3
+      external: true
+      url: 'https://vimeo.com/315712075'
+  - resource:
+      buttonText: Segment 4
+      external: true
+      url: 'https://vimeo.com/315712128'
 sortOrder: 9
 page: educator-resource-center
 ---
