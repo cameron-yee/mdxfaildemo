@@ -40,11 +40,9 @@ The grant was awarded to BSCS by the National Science Foundation, who also funde
 
 “As a Colorado-based nonprofit organization, BSCS is passionate about extending the impact of our STeLLA program and research in our own backyard,” said Edelson. “It is rewarding to see three major universities come together for the benefit of our state’s future science educators.”
 
-\*STeLLA stands for Science Teachers Learning from Lesson Analysis. 
+\*STeLLA stands for Science Teachers Learning from Lesson Analysis. 
 
 For more information or to schedule an interview, please contact: Lauren Novo
-
-\###
 
 **About BSCS Science Learning**
 
