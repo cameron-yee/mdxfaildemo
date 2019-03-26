@@ -22,11 +22,13 @@ sideBarURL: https://bscs.sarus.io/
 sideBarURLExternal: true
 ---
 
+import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
 That’s why BSCS Science Learning developed EMAT. This free online course helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. Supporting both teacher and student learning, EMAT includes six units featuring 34 engaging classroom videos, 30 content animations, and 20 interactive learning experiences. 
 
-Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
+Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting <SpecificContactForm sendto="Jeffrey Snowden">Jeffrey Snowden</SpecificContactForm>.
 
 Register for the full course below.
 
