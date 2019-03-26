@@ -17,21 +17,18 @@ discipline:
   - Earth Sciences
 sortOrder: 4
 page: educator-resource-center
-sidebarContacts:
-  - Jeffrey Snowden
-sidebarContactsText: Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
-sidebarContactsTitle: Usage request
-sidebarURLExternal: true
+sideBarButtonText: Access Resource Here
+sideBarURL: https://bscs.sarus.io/
+sideBarURLExternal: true
 ---
-
-import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-modal/specific-contact-form-modal'
-
 
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
 That’s why BSCS Science Learning developed EMAT. This free online course helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. Supporting both teacher and student learning, EMAT includes six units featuring 34 engaging classroom videos, 30 content animations, and 20 interactive learning experiences. 
 
-Preview the assets (hyperlink to the same assets page referenced in the “classroom” version of this resource page) or register for the full course below. 
+Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
+
+Register for the full course below.
 
 <a class="btn btn-outline-secondary" href="https://bscs.sarus.io/" target="_blank" rel="noopener noreferrer" style="margin-top: 1rem; margin-bottom: 1rem;">Access Resource Here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
