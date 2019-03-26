@@ -14,11 +14,11 @@ sidebarURL: 'http://datanuggets.org/'
 sortOrder: 10
 page: rd-programs
 ---
-What exactly does a scientist do? How does she collect information and make sense of it all? 
+What exactly does a scientist do? How does she collect information and make sense of it all?
 
 Data Nuggets, a four-year research project between Michigan State University and BSCS, is studying the effects of bringing real-world data into middle and high school classrooms. Students are given the opportunity to dive into an actual scientist’s research and practice looking for patterns in the data, develop explanations about natural phenomena, and identify hypotheses and predictions.
 
-From topics such as “Won’t you be my urchin” to “Sticky situations: big and small animals with sticky feet,” teachers get to pick and choose from numerous options that get their students to think like a scientist, while the scientists who write the curriculum have an opportunity to share their research findings with a new audience in science. 
+From topics such as “Won’t you be my urchin” to “Sticky situations: big and small animals with sticky feet,” teachers get to pick and choose from numerous options that get their students to think like a scientist, while the scientists who write the curriculum have an opportunity to share their research findings with a new audience in science.
 
 <div class="d-flex justify-content-center">
   <div class="p-2">

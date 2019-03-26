@@ -13,4 +13,3 @@ seoLang: en-us
 ---
 
 **Nate Root** started his career as a property & casualty actuary in Chicago and achieved his designation of Fellow of the Casualty Actuarial Society. After spending over 20 years in the commercial insurance industry with a leading commercial carrier leading actuarial, information, and large-scale technology transformation efforts, he moved to strategic partner consulting. Currently, he is the Insurance Data Lead for Capgemini and works with insurers on solving data, information, and analytics related challenges to improve the industry. Nate is a graduate of Grinnell College (B.A. in Mathematics) and University of Michigan (M.S. in Mathematics).
-

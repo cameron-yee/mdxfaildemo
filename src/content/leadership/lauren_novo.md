@@ -4,7 +4,7 @@ fullName: Lauren Novo
 template: Image Left
 image: https://media.bscs.org/bscsmw/leadership/management/lauren_5x7_2017.jpg
 alt: Lauren Novo headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/lauren-novo

@@ -2,7 +2,7 @@
 date: 2018-07-25T15:53:40.847Z
 title: >-
   New BSCS Report Presents Guidelines for Designing Citizen Science Projects
-  that Merge Science and Education 
+  that Merge Science and Education
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education
 seoDescription: Test SEO description.
@@ -25,19 +25,19 @@ import Button from 'react-bootstrap/Button'
 
 #### BSCS Science Learning Convenes Citizen Science Experts to Advance the Field
 
-**FOR IMMEDIATE RELEASE** – **July 25, 2018** – Over the last two decades, there has been an explosion in the number of citizen science projects underway. And despite initial skepticism by scientific traditionalists, citizen science has proven itself as a method for conducting rigorous science. In parallel with the science, there have been many discussions of the educational benefits that participants in citizen science projects can gain. 
+**FOR IMMEDIATE RELEASE** – **July 25, 2018** – Over the last two decades, there has been an explosion in the number of citizen science projects underway. And despite initial skepticism by scientific traditionalists, citizen science has proven itself as a method for conducting rigorous science. In parallel with the science, there have been many discussions of the educational benefits that participants in citizen science projects can gain.
 
-However, conventional wisdom holds that a project has to choose between scientific or educational goals. In a recently completed project, BSCS Science Learning—an independent nonprofit dedicated to transforming science education—set out to show that it is not necessary to choose and has released a report that presents guidelines for designing citizen science projects with scientific and educational benefits. 
+However, conventional wisdom holds that a project has to choose between scientific or educational goals. In a recently completed project, BSCS Science Learning—an independent nonprofit dedicated to transforming science education—set out to show that it is not necessary to choose and has released a report that presents guidelines for designing citizen science projects with scientific and educational benefits.
 
-With funding from the Pisces Foundation, BSCS convened a group of scientists, educators, and technologists with experience organizing citizen science projects to consider challenges and share insights on achieving both outcomes. The resulting report offers design recommendations for individuals and organizations who seek to create citizen science projects, as well as for developers of software to support citizen science.  
+With funding from the Pisces Foundation, BSCS convened a group of scientists, educators, and technologists with experience organizing citizen science projects to consider challenges and share insights on achieving both outcomes. The resulting report offers design recommendations for individuals and organizations who seek to create citizen science projects, as well as for developers of software to support citizen science.
 
 “There are two widespread, polar opposite misconceptions about the relationship between scientific and educational outcomes in citizen science,” said Dr. Daniel Edelson, executive director of BSCS. “Some people believe both scientific and educational outcomes occur automatically in a citizen science project, whereas others believe the two outcomes are incompatible. Based on the premise that neither idea is true, we gathered experts to develop a practical design framework grounded in real-world examples.”
 
 The report is organized around a framework of 12 valued scientific and educational outcomes that were identified by participants in the workshop. The report presents specific design strategies to achieve these outcomes, together with examples of how they have been implemented in existing citizen science projects.
 
-“Our report is intended to provide a practical framework for bridging the gap in fieldwork outcomes.” said Edelson. “We are hoping the broader citizen science community will pick up on this work and continue to add strategies and examples to guide future designers of citizen science projects.” 
+“Our report is intended to provide a practical framework for bridging the gap in fieldwork outcomes.” said Edelson. “We are hoping the broader citizen science community will pick up on this work and continue to add strategies and examples to guide future designers of citizen science projects.”
 
-“This report is an exciting next step for utilizing citizen science inside and outside the classroom,” said Jason Morris, senior program officer, Environmental Education at the Pisces Foundation. “The report shares real world examples that strongly suggest citizen science projects can incorporate high quality science while achieving the educational outcomes that equip our kids with the environmental know-how they need to create a sustainable world.” 
+“This report is an exciting next step for utilizing citizen science inside and outside the classroom,” said Jason Morris, senior program officer, Environmental Education at the Pisces Foundation. “The report shares real world examples that strongly suggest citizen science projects can incorporate high quality science while achieving the educational outcomes that equip our kids with the environmental know-how they need to create a sustainable world.”
 
 The report is freely available here:
 

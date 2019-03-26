@@ -27,7 +27,6 @@ As a cell biologist and biophysicist, he investigates the molecular events that 
 
 He is also involved in a number of K-12 science activities and is engaged in educational research projects centered on improving student learning and engagement.
 
-Dr. Cardullo originally joined the BSCS Board of Directors in 2007 and served as Board Chair from 2009-2015. He returned to the Board as Vice Chair in 2018. 
+Dr. Cardullo originally joined the BSCS Board of Directors in 2007 and served as Board Chair from 2009-2015. He returned to the Board as Vice Chair in 2018.
 
 -- Read about Dr. Cardullo's selection as a Vision and Change Leadership Fellow.
-

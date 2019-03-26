@@ -14,7 +14,7 @@ page: news
 
 **FOR IMMEDIATE RELEASE** – **April 16, 2018** – A new $2.8 million program is expected to benefit future secondary science teachers and students throughout Colorado. The federal grant was awarded to BSCS Science Learning—an independent nonprofit dedicated to transforming science education through research-driven innovation—and will fund a five-year STeLLA CO2 project, starting this month in partnership with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley.
 
-STeLLA CO2 builds off a 15-year line of STeLLA* research, where BSCS studies the effectiveness of video-based analysis of practice as a tool for teachers to visualize and apply powerful science instruction. This is the first STeLLA project designed to collaborate with university faculty educating preservice (future) middle and high school science teachers. 
+STeLLA CO2 builds off a 15-year line of STeLLA* research, where BSCS studies the effectiveness of video-based analysis of practice as a tool for teachers to visualize and apply powerful science instruction. This is the first STeLLA project designed to collaborate with university faculty educating preservice (future) middle and high school science teachers.
 
 The program has the potential to impact one-third of all secondary science educators certified in Colorado annually.
 
@@ -26,21 +26,21 @@ BSCS will broaden its existing line of research and deliver an enhanced version 
 
 STeLLA CO2 includes two key phases.
 
-In the first phase, BSCS will engage the community of undergraduate preservice teacher leaders including university science faculty, university education faculty, and cooperating teachers. This community will develop an understanding of the STeLLA approach and create a shared vision for how to apply this proven-effective model in each of the three university settings. At the conclusion of the first phase, each university will be equipped to incorporate the video-based STeLLA CO2 resources into their existing programs for undergraduate preservice teachers. 
+In the first phase, BSCS will engage the community of undergraduate preservice teacher leaders including university science faculty, university education faculty, and cooperating teachers. This community will develop an understanding of the STeLLA approach and create a shared vision for how to apply this proven-effective model in each of the three university settings. At the conclusion of the first phase, each university will be equipped to incorporate the video-based STeLLA CO2 resources into their existing programs for undergraduate preservice teachers.
 
-In the second phase, the community of teacher leaders will implement their version of a STeLLA CO2 course at their respective institutions with undergraduate preservice teachers. Cooperating teachers play a vital role in the community, as they can ensure consistency between what is learned through university coursework and what is practiced during student teaching experiences. 
+In the second phase, the community of teacher leaders will implement their version of a STeLLA CO2 course at their respective institutions with undergraduate preservice teachers. Cooperating teachers play a vital role in the community, as they can ensure consistency between what is learned through university coursework and what is practiced during student teaching experiences.
 
-“A key aspect that drew us to the program is the inclusion of science faculty in the community,” said Dr. Rob Reinsvold, associate professor, School of Biological Sciences, University of Northern Colorado, Greeley. “Faculty from various science departments will participate as learners in the first two years, and work with education faculty and cooperating teachers to influence new teachers’ ideas. We believe this multi-faceted community will reinforce effective instructional practices at every touch point in the teacher preparation process.” 
+“A key aspect that drew us to the program is the inclusion of science faculty in the community,” said Dr. Rob Reinsvold, associate professor, School of Biological Sciences, University of Northern Colorado, Greeley. “Faculty from various science departments will participate as learners in the first two years, and work with education faculty and cooperating teachers to influence new teachers’ ideas. We believe this multi-faceted community will reinforce effective instructional practices at every touch point in the teacher preparation process.”
 
 Research will be conducted across both phases to develop a new understanding of the benefits and challenges associated with bringing STeLLA to this new context. And ultimately, research will explore STeLLA’s effectiveness on first-year practice outcomes for preservice secondary science teachers.
 
 “Collaborations between undergraduate preservice teacher programs at the university and local school districts lead to outstanding teacher preparation,” said Patrick McGuire, associate professor, College of Education, and co-director of the UCCSTeach program. “University faculty and in-service educators can learn from each other through a synergistic cycle of improvement, ultimately enhancing the STEM learning experience for preservice teachers and their future high school students. We are proud to play a role in this important effort.”
 
-The grant was awarded to BSCS by the National Science Foundation, who also funded the original STeLLA CO project. This five-year STeLLA CO2 project kicks off with a 1.5 day “community vision” conference, April 23-24, and will continue with the first phase of STeLLA professional development this summer. 
+The grant was awarded to BSCS by the National Science Foundation, who also funded the original STeLLA CO project. This five-year STeLLA CO2 project kicks off with a 1.5 day “community vision” conference, April 23-24, and will continue with the first phase of STeLLA professional development this summer.
 
 “As a Colorado-based nonprofit organization, BSCS is passionate about extending the impact of our STeLLA program and research in our own backyard,” said Edelson. “It is rewarding to see three major universities come together for the benefit of our state’s future science educators.”
 
-\*STeLLA stands for Science Teachers Learning from Lesson Analysis. 
+\*STeLLA stands for Science Teachers Learning from Lesson Analysis.
 
 For more information or to schedule an interview, please contact: Lauren Novo
 

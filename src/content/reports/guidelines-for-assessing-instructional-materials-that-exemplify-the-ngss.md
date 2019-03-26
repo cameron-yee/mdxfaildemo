@@ -45,7 +45,7 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/ngal/bscs_ngal_2017.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -67,7 +67,7 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/ngal/executive_summary_ngal.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -82,7 +82,7 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/ngal/guidelines_onepager.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -121,7 +121,7 @@ The Guidelines for the Evaluation of Instructional Materials in Science found he
 <!-- <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
-    
+
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;">
     </a>
     <p style="font-style: italic; text-align: center;">

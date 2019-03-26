@@ -49,27 +49,27 @@ At present, genetics education does very little to address how information about
 
 For a deeper dive into our line of research, review our <a href="https://media.bscs.org/human/research_statement.pdf" target="_blank" rel="noopener noreferrer">research statement</a>  and published papers below, or click <a href="https://vimeo.com/315526217">here</a> to watch a video of the presentation, Towards a More Humane Genetics Education.
 
-Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, <a href="https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10" target="_blank" rel="noopener noreferrer">here</a> 
+Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, <a href="https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10" target="_blank" rel="noopener noreferrer">here</a>
 <br />
 <br />
 
 **Published** -
 
 1. Donovan, B. M., Semmens, R., Keck, P., Brimhall, E., Busch, K. C., Weindling, M., Duncan, A., Stuhlsatz, M., Buck Bracey, Z., Bloom, M., Kowalski, S., Salazar, B. (2019) <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/sce.21506" target="_blank" rel="noopener noreferrer">Towards a More Humane Genetics Education: Learning about the social and quantitative complexities of human genetic variation research could reduce racial bias in adolescent and adult populations</a>. _Science Education_.
-2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (2019) <a href="https://bscs.org/sites/default/files/gendered_genetics.pdf" target="_blank" rel="noopener noreferrer">Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities</a>. _Science Education_. 
-3. Donovan, B.M. (2018). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21480" target="_blank" rel="noopener noreferrer">Looking backwards to move biology education toward its humanitarian potential: A review of Darwinism, Democracy, and Race</a>. _Science Education_. 
-4. Donovan, B. M. (2017) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21370" target="_blank" rel="noopener noreferrer">Learned inequality: Racial labels in the biology curriculum can affect the development of racial prejudice</a>. _Journal of Research in Science Teaching_. 54(3), 379-411. 
-5. Donovan, B. M. (2016). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21221" target="_blank" rel="noopener noreferrer">Framing the genetics curriculum to support social justice: An experimental exploration of how the biology curriculum influences students’ beliefs about the racial achievement gap</a>. _Science Education_. 100(3), 586-616. 
-6. Donovan, B. M. (2015a). <a href="https://www.sciencedirect.com/science/article/pii/S1369848615000138" target="_blank" rel="noopener noreferrer">Putting humanity back into the teaching of human biology</a>. _Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences_. 52, 65-75. 
-7. Donovan, B. M. (2015b). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173" target="_blank" rel="noopener noreferrer">Reclaiming race as a topic of the United States biology curriculum</a>. _Science Education_. 99(6) 1092-1117. 
-8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138" target="_blank" rel="noopener noreferrer">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race</a>. _Journal of Research in Science Teaching_, 51(4), 462–496. 
+2. Donovan, B.M., Stuhlsatz, M., Edelson, D.C., Buck Bracey, Z.B. (2019) <a href="https://bscs.org/sites/default/files/gendered_genetics.pdf" target="_blank" rel="noopener noreferrer">Gendered Genetics: How reading about the genetic basis of sex differences in biology textbooks could affect beliefs associated with science gender disparities</a>. _Science Education_.
+3. Donovan, B.M. (2018). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21480" target="_blank" rel="noopener noreferrer">Looking backwards to move biology education toward its humanitarian potential: A review of Darwinism, Democracy, and Race</a>. _Science Education_.
+4. Donovan, B. M. (2017) <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21370" target="_blank" rel="noopener noreferrer">Learned inequality: Racial labels in the biology curriculum can affect the development of racial prejudice</a>. _Journal of Research in Science Teaching_. 54(3), 379-411.
+5. Donovan, B. M. (2016). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21221" target="_blank" rel="noopener noreferrer">Framing the genetics curriculum to support social justice: An experimental exploration of how the biology curriculum influences students’ beliefs about the racial achievement gap</a>. _Science Education_. 100(3), 586-616.
+6. Donovan, B. M. (2015a). <a href="https://www.sciencedirect.com/science/article/pii/S1369848615000138" target="_blank" rel="noopener noreferrer">Putting humanity back into the teaching of human biology</a>. _Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences_. 52, 65-75.
+7. Donovan, B. M. (2015b). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sce.21173" target="_blank" rel="noopener noreferrer">Reclaiming race as a topic of the United States biology curriculum</a>. _Science Education_. 99(6) 1092-1117.
+8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138" target="_blank" rel="noopener noreferrer">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race</a>. _Journal of Research in Science Teaching_, 51(4), 462–496.
 9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). <a href="https://journals.plos.org/plosbiology/article id=10.1371/journal.pbio.1001760" target="_blank" rel="noopener noreferrer">Revising the Economic Imperative for US STEM Education</a>. PLoS Biology, 12(1), e1001760.
-  
+
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
-    
+
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>
@@ -78,4 +78,3 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
     </p>
   </div>
 </div>
-       

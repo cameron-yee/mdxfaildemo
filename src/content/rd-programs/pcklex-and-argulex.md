@@ -22,7 +22,7 @@ Following in the footsteps of PCK*lex is ArguLex, a project that applies similar
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 70%;">
-    
+
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
     </a>

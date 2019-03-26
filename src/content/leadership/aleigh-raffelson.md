@@ -4,7 +4,7 @@ fullName: Aleigh Raffelson
 template: Image Left
 image: /assets/koala.jpg
 alt: Aleigh Raffelson headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/aleigh-raffelson

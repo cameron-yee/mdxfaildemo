@@ -44,7 +44,7 @@ Refer to our <Link to="/our-work/news/new-bscs-report-presents-guidelines-for-de
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/tech-report/2018-1/2018-1.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -72,7 +72,7 @@ Refer to our <Link to="/our-work/news/new-bscs-report-presents-guidelines-for-de
     >
       <div
         style={{
-          fontFamily: 'futura-pt-condensed, sans-serif', 
+          fontFamily: 'futura-pt-condensed, sans-serif',
           fontStyle: 'normal',
           fontWeight: '400',
           fontSize: '5rem',

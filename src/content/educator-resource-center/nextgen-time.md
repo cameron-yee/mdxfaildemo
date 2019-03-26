@@ -9,7 +9,7 @@ cardDescription: >-
   NextGen TIME is a suite of tools and processes for curriculum-based
   professional learning that supports educators with the evaluation, selection,
   and implementation of instructional materials designed for next generation
-  science. 
+  science.
 type: District Planning
 image: /assets/river.jpg
 alt: PLACEHOLDER
@@ -20,7 +20,7 @@ page: educator-resource-center
 ---
 For a school district, the adoption of instructional materials is a costly investment with long-term impacts. This decision-making process is critically important because instructional materials can either support or inhibit improvements in teaching and learning.
 
-Historically, the selection process can be as simple as an individual leafing through materials—sometimes referred to as a “thumb test”—or as intensive as a year-long process involving teams of teachers and administrators. BSCS Science Learning and its collaborators have designed the NextGen TIME program for districts that are prepared to make an investment in the process to go beyond mere selection of materials to planning for implementation in order to maximize the benefit of their instructional materials. 
+Historically, the selection process can be as simple as an individual leafing through materials—sometimes referred to as a “thumb test”—or as intensive as a year-long process involving teams of teachers and administrators. BSCS Science Learning and its collaborators have designed the NextGen TIME program for districts that are prepared to make an investment in the process to go beyond mere selection of materials to planning for implementation in order to maximize the benefit of their instructional materials.
 
 NextGen TIME is a suite of tools and processes designed for professional development of leaders at the state, district, and school levels. Over the course of the NextGen TIME program, teams of educators are guided through the evaluation, selection, and planning for implementation of materials that will help teachers enact the vision of the Next Generation Science Standards (NGSS) in their classrooms. All program tools are freely available.
 

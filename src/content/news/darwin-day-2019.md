@@ -15,9 +15,9 @@ sidebarContactsTitle: Questions?
 sortOrder: 1
 page: news
 ---
-Dear Friend, 
+Dear Friend,
 
-Every year on Darwin Day, BSCS Science Learning celebrates the profound impact of Charles Darwin’s theory of evolution. Nearly 140 years after his death, Darwin’s contributions to science remain significant, and his name is recognizable around the world. 
+Every year on Darwin Day, BSCS Science Learning celebrates the profound impact of Charles Darwin’s theory of evolution. Nearly 140 years after his death, Darwin’s contributions to science remain significant, and his name is recognizable around the world.
 
 This year, we would like to use this moment to shine a broader spotlight on scientists whose names are not as well known, whose ideas were dismissed or appropriated over the course of history. At BSCS Science Learning, our vision for science education is one that includes the voices of every great scientist and every science student, regardless of social identity.
 

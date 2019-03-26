@@ -74,7 +74,7 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/mstl/bscs_2017-02_mstl_synthesis_report.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -90,7 +90,7 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/mstl/bscs_2017-03_mstl_research-program_review.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}
@@ -106,7 +106,7 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/mstl/bscs_2017-04_mstl_symposium_proceedings.pdf"
           target="_blank"
           style={{ marginTop: '.45rem' }}

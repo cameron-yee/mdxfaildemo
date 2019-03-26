@@ -4,7 +4,7 @@ fullName: Jody Bintz
 template: Image Left
 image: https://media.bscs.org/bscsmw/leadership/management/jody_bintz_5x7.jpg
 alt: Jody Bintz headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/jody-bintz

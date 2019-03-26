@@ -24,6 +24,6 @@ Health-related information from family, friends, social media, and the internet 
 
 Answers about health topics can be complicated. Understanding the science behind these questions requires the ability to ask questions and find and evaluate information from different sources.
 
-BSCS Science Learning’s Developing Skills in Health Literacy project aims to help middle and high school students develop critical-thinking skills in topics about health that enable them to accurately evaluate the information they get from various sources. This five-year project (going through 2020) works with teachers from across the country to develop and study innovative instructional materials designed to enhance students’ skills and abilities in understanding human health. 
+BSCS Science Learning’s Developing Skills in Health Literacy project aims to help middle and high school students develop critical-thinking skills in topics about health that enable them to accurately evaluate the information they get from various sources. This five-year project (going through 2020) works with teachers from across the country to develop and study innovative instructional materials designed to enhance students’ skills and abilities in understanding human health.
 
 _This project was supported by the Office of the Director, National Institutes of Health under Award Number_ _R25OD020208. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health._

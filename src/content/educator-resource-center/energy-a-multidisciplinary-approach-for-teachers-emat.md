@@ -7,7 +7,7 @@ seoLang: en-us
 cardDescription: >-
   EMAT, an online course, helps teachers frame complex energy concepts in a way
   that will resonate with high school students and prepare them to participate
-  in important societal conversations. 
+  in important societal conversations.
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
 alt: multiple white windmills on a snowy hill with blue skies and white clouds
@@ -18,7 +18,7 @@ discipline:
 sortOrder: 4
 page: educator-resource-center
 sidebarButtonText: Access Resource Here
-sidebarURLs: 
+sidebarURLs:
   - URL: https://bscs.sarus.io/
   - External: true
 sidebarURLExternal: true
@@ -28,15 +28,15 @@ import SpecificContactForm from '../../components/atoms/forms/specific-contact-f
 
 _Do we need more wind farms? Should I buy solar panels for my roof? Is my lifestyle contributing to climate change?_ These are relevant questions in today’s world. And the ability to answer them depends on an understanding of energy.
 
-That’s why BSCS Science Learning developed EMAT. This free online course helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. Supporting both teacher and student learning, EMAT includes six units featuring 34 engaging classroom videos, 30 content animations, and 20 interactive learning experiences. 
+That’s why BSCS Science Learning developed EMAT. This free online course helps teachers frame complex energy concepts in a way that will resonate with high school students and prepare them to participate in important societal conversations. Supporting both teacher and student learning, EMAT includes six units featuring 34 engaging classroom videos, 30 content animations, and 20 interactive learning experiences.
 
 Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting <SpecificContactForm sendto="Jeffrey Snowden" childrenclass="inlineAnchor">Jeffrey Snowden</SpecificContactForm>.
 
-_This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._ 
+_This resource was developed in collaboration with Oregon Public Broadcasting, the National Teachers Enhancement Network of Montana State University, the National Renewable Energy Lab, and the Great Lakes Bioenergy Research Center._
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div style="width: 70%;">
+  <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>

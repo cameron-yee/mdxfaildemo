@@ -29,13 +29,13 @@ import { Link } from 'gatsby'
 
 Teaching elementary science can be challenging. Teachers must navigate leading active student learning experiences while diving into science content that is often outside their expertise. Even the most seasoned teachers seek opportunities for guidance and support.
 
-BSCS Science Learning’s online professional learning resource, ViSTA, is designed to help preservice and inservice teachers enhance their science content knowledge and instructional practices. ViSTA users explore the powerful <Link to="/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis">STeLLA</Link> approach, learning to apply high-leverage teaching strategies through video-based lesson analysis. With access to five content-specific modules—Plants, Electricity, Water Cycle, Force and Motion, and Inquiry—ViSTA users will discover a range of K-8 classroom videos, assignments, and guided in-class exercises that are relevant to their specific contexts. 
+BSCS Science Learning’s online professional learning resource, ViSTA, is designed to help preservice and inservice teachers enhance their science content knowledge and instructional practices. ViSTA users explore the powerful <Link to="/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis">STeLLA</Link> approach, learning to apply high-leverage teaching strategies through video-based lesson analysis. With access to five content-specific modules—Plants, Electricity, Water Cycle, Force and Motion, and Inquiry—ViSTA users will discover a range of K-8 classroom videos, assignments, and guided in-class exercises that are relevant to their specific contexts.
 
 ViSTA is valuable in both university preservice methods courses and inservice professional learning programs. Instructors, facilitators, and individual users may sign up for a free 14-day trial to review the resource. Once a course or user is registered, ongoing access costs $15 per module.
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div style="width: 70%;">
+  <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>

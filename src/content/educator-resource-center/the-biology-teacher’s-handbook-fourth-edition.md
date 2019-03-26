@@ -21,9 +21,9 @@ gradeLevel:
 sortOrder: 12
 page: educator-resource-center
 ---
-Where has biology teaching been, and where is it going? How can I create a culture of scientific inquiry in my classroom? How do I teach controversial questions? Biology educators will discover the answers to these and other key questions in The Biology Teacher’s Handbook, Fourth Edition. 
+Where has biology teaching been, and where is it going? How can I create a culture of scientific inquiry in my classroom? How do I teach controversial questions? Biology educators will discover the answers to these and other key questions in The Biology Teacher’s Handbook, Fourth Edition.
 
-BSCS Science Learning has filled this volume with valuable teaching ideas and guidelines for grades 6-12 and college biology educators. Teachers will learn strategies to enhance their instructional practices, create a culture of inquiry in the classroom, promote scientific discussion, and more. 
+BSCS Science Learning has filled this volume with valuable teaching ideas and guidelines for grades 6-12 and college biology educators. Teachers will learn strategies to enhance their instructional practices, create a culture of inquiry in the classroom, promote scientific discussion, and more.
 
 This resource is available for purchase through NSTA Press.
 

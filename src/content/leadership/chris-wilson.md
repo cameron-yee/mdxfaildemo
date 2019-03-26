@@ -4,7 +4,7 @@ fullName: Chris Wilson
 template: Image Left
 image: https://media.bscs.org/bscsmw/leadership/management/chris_wilson_5x7.jpg
 alt: Chris Wilson headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/chris-wilson

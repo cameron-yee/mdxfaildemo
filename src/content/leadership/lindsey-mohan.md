@@ -5,7 +5,7 @@ template: Image Left
 # image: /assets/koala.jpg
 image: https://media.bscs.org/bscsmw/leadership/management/lmohan_photo.jpg
 alt: Lindsey Mohan headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/lindsey-mohan

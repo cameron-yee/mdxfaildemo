@@ -52,7 +52,7 @@ The **BSCS 5E Instructional Model** has its origins with the work of earlier sci
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/bscsmw/5es/bscs_5e_full_report.pdf"
           target="_blank"
           rel="noopener noreferrer"
@@ -75,7 +75,7 @@ The **BSCS 5E Instructional Model** has its origins with the work of earlier sci
     <Row>
       <Col xs={2} lg={1}>
         <Button
-          variant="outline-secondary" 
+          variant="outline-secondary"
           href="https://media.bscs.org/bscsmw/5es/bscs_5e_executive_summary.pdf"
           target="_blank"
           rel="noopener noreferrer"

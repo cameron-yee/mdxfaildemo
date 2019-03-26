@@ -15,23 +15,23 @@ alt: MBER Icon
 sortOrder: 9
 page: rd-programs
 ---
-Current research suggests that scientific models can help teachers transform their science instruction and enhance student learning. This premise grounds the Model-Based Educational Resource (MBER)—developed by Dr. Cindy Passmore and colleagues at UC Davis—which engages high school biology students in constructing models to make sense of science. Now researchers are wondering: How effectively can this approach to biology education support next generation science learning? 
+Current research suggests that scientific models can help teachers transform their science instruction and enhance student learning. This premise grounds the Model-Based Educational Resource (MBER)—developed by Dr. Cindy Passmore and colleagues at UC Davis—which engages high school biology students in constructing models to make sense of science. Now researchers are wondering: How effectively can this approach to biology education support next generation science learning?
 
-BSCS Science Learning has been awarded a grant to study the impact of the MBER program through a cluster-randomized trial (CRT) and expand the promise of efficacy and feasibility established in previous work. Throughout this project, we will revise the MBER program, develop associated assessment, and conduct an experimental study with 32 teachers in diverse California schools. 
+BSCS Science Learning has been awarded a grant to study the impact of the MBER program through a cluster-randomized trial (CRT) and expand the promise of efficacy and feasibility established in previous work. Throughout this project, we will revise the MBER program, develop associated assessment, and conduct an experimental study with 32 teachers in diverse California schools.
 
 Our General Research Questions
 
-* What is the impact of MBER on high school students’ science achievement? 
-* What factors influence that impact? 
+* What is the impact of MBER on high school students’ science achievement?
+* What factors influence that impact?
 
-This study will also address a significant gap in the research on next generation curriculum materials. As we seek to advance the field’s knowledge about the impact of innovative materials on student learning, we will examine the following exploratory research questions: 
+This study will also address a significant gap in the research on next generation curriculum materials. As we seek to advance the field’s knowledge about the impact of innovative materials on student learning, we will examine the following exploratory research questions:
 
 * How does using MBER develop teachers’ vision of the Next Generation Science Standards (NGSS)?
 * How is student learning mediated by the fidelity of implementation of the materials?
-* How do teachers interact with materials designed to be modified for their classroom context? 
-* To what extent do MBER materials provide equitable opportunities to learn and close achievement gaps? 
+* How do teachers interact with materials designed to be modified for their classroom context?
+* To what extent do MBER materials provide equitable opportunities to learn and close achievement gaps?
 
-In addition to generating important research findings, the materials revised and studied in this project will be open source and freely available to teachers and schools, thereby maximizing the broader impacts of this work. 
+In addition to generating important research findings, the materials revised and studied in this project will be open source and freely available to teachers and schools, thereby maximizing the broader impacts of this work.
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">

@@ -4,7 +4,7 @@ fullName: Sue Kowalski
 template: Image Left
 image: https://media.bscs.org/bscsmw/leadership/management/sue_5x7.jpg
 alt: Sue Kowalski headshot.
-additionalTags: 
+additionalTags:
 type: Management
 page: leadership
 seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/sue-kowalski
