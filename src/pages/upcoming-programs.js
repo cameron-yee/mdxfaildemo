@@ -18,9 +18,9 @@ import './upcoming-programs.scss'
 import ReactPlaceholder from 'react-placeholder'
 import 'react-placeholder/lib/reactPlaceholder.css'
 
-import tplLogo from '../images/educator-resource-center/classroom-instruction.svg'
-import ldLogo from '../images/educator-resource-center/professional-learning.svg'
-import ftoLogo from '../images/educator-resource-center/district-planning.svg'
+import ftoLogo from '../images/educator-resource-center/classroom-instruction.svg'
+import tplLogo from '../images/educator-resource-center/professional-learning.svg'
+import ldLogo from '../images/educator-resource-center/district-planning.svg'
 
 // import logo from '../../images/bscs_logo.svg'
 // import SearchBy from '../../components/atoms/search-by/search-by'
@@ -54,12 +54,14 @@ const UpcomingProgramsPage = class extends Component {
     },
     3000)
 
-    const tpl_images = document.getElementsByClassName('up-card-img') 
+    const tpl_images = document.getElementsByClassName('up-card-img')
     for(let i = 0; i < tpl_images.length; i++) {
       if(tpl_images[i].complete && this.images_loaded !== tpl_images.length) {
         this.loaded()
       }
     }
+
+    this.checkIfProgramsExist()
   }
 
   loaded = () => {
@@ -73,6 +75,22 @@ const UpcomingProgramsPage = class extends Component {
     if(this.images_loaded === tpl_images.length && this.state.imagesLoaded !== true) {
       this.setState({imagesLoaded: true})
     }
+  }
+
+  checkIfProgramsExist = () => {
+    let tpl = false
+    let ld = false
+    let fto = false
+    for(let i = 0; i < this.programs.length; i++) {
+      if(this.programs[i].node.frontmatter.type === 'Teacher Professional Learning') {
+        tpl = true
+      } else if(this.programs[i].node.frontmatter.type === 'Leadership Development') {
+        ld = true
+      } else if(this.programs[i].node.frontmatter.type === 'Field-Test Opportunities') {
+        fto = true
+      }
+    }
+    this.setState({tplPrograms: tpl, ldPrograms: ld, ftoPrograms: fto})
   }
 
   render() {
@@ -89,14 +107,14 @@ const UpcomingProgramsPage = class extends Component {
                 </Col>
                 <Col xs={6} sm={5} md={3}>
                   <div
-                    className={`categoryImageParent classroom-instruction`}
+                    className={`categoryImageParent professional-learning`}
                     onClick={(e) => document.getElementById('teacher-professional-learning').scrollIntoView({behavior: "smooth", block: "start"})}
                   >
                     <div
                       className="d-flex flex-row justify-content-center"
                     >
                         <div
-                          className={`rounded-circle p-3 categoryImageChild classroom-instruction`}
+                          className={`rounded-circle p-3 categoryImageChild professional-learning`}
                         >
                           <img
                             className="categoryImageGrandChild"
@@ -139,18 +157,18 @@ const UpcomingProgramsPage = class extends Component {
                 </Col>
                 <Col xs={6} sm={5} md={3}>
                   <div
-                    className={`categoryImageParent citizen-science`}
+                    className={`categoryImageParent classroom-instruction`}
                     onClick={(e) => document.getElementById('field-test-opportunities').scrollIntoView({behavior: "smooth", block: "start"})}
                   >
                     <div
                       className="d-flex flex-row justify-content-center"
                     >
                         <div
-                          className={`rounded-circle p-3 categoryImageChild citizen-science`}
+                          className={`rounded-circle p-3 categoryImageChild classroom-instruction`}
                         >
                           <img
                             className="categoryImageGrandChild"
-                            src={tplLogo}
+                            src={ftoLogo}
                             alt="TEST"
                           />
                         </div>
@@ -181,17 +199,15 @@ const UpcomingProgramsPage = class extends Component {
               <Row style={{ marginBottom: '3rem' }}>
                 { !this.state.tplPrograms &&
                   <Col>
-                    <Alert variant="secondary">There are no Upcoming Teacher Professional Learning Programs at this time.</Alert>
+                    <Alert variant="secondary">There are no upcoming teacher professional learning programs at this time.</Alert>
                   </Col>
                 }
                 { this.programs &&
+                  // eslint-disable-next-line
                   this.programs.map((edge, index) => {
                     // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     // data_filter['excerpt'] = edge.node.excerpt
                     if(edge.node.frontmatter.type === 'Teacher Professional Learning') {
-                      if(!this.state.tplPrograms) {
-                        this.setState({tplPrograms: true})
-                      }
                       return(
                         <Col
                           lg={4}
@@ -277,7 +293,7 @@ const UpcomingProgramsPage = class extends Component {
                         </Col>
                       )
                     }
-                  }) 
+                  })
                 }
               </Row>
             </Container>
@@ -302,17 +318,15 @@ const UpcomingProgramsPage = class extends Component {
               <Row style={{ marginBottom: '3rem' }}>
                 { !this.state.ldPrograms &&
                   <Col>
-                    <Alert variant="secondary">There are no Upcoming Leadership Development Programs at this time.</Alert> 
+                    <Alert variant="secondary">There are no upcoming leadership development programs at this time.</Alert>
                   </Col>
                 }
                 { this.programs &&
+                  // eslint-disable-next-line
                   this.programs.map((edge, index) => {
                     // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     // data_filter['excerpt'] = edge.node.excerpt
                     if(edge.node.frontmatter.type === "Leadership Development") {
-                      if(!this.state.ldPrograms) {
-                        this.setState({ldPrograms: true})
-                      }
                       return(
                         <Col
                           lg={4}
@@ -398,7 +412,7 @@ const UpcomingProgramsPage = class extends Component {
                         </Col>
                       )
                     }
-                  }) 
+                  })
                 }
               </Row>
             </Container>
@@ -423,18 +437,14 @@ const UpcomingProgramsPage = class extends Component {
               <Row style={{ marginBottom: '3rem' }}>
                 { !this.state.ftoPrograms &&
                   <Col>
-                    <Alert variant="secondary">There are no Upcoming Field-Test Opportunity Programs at this time.</Alert> 
+                    <Alert variant="secondary">There are no upcoming field-test opportunities at this time.</Alert>
                   </Col>
                 }
                 { this.programs &&
+                  // eslint-disable-next-line
                   this.programs.map((edge, index) => {
                     // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     // data_filter['excerpt'] = edge.node.excerpt
-                    if(edge.node.frontmatter.type === "Field-Test Opportunities") {
-                      if(!this.state.ftoPrograms) {
-                        this.setState({ftoPrograms: true})
-                      }
-                    }
                     if(edge.node.frontmatter.type === "Field-Test Opportunities") {
                       return(
                         <Col
@@ -521,7 +531,7 @@ const UpcomingProgramsPage = class extends Component {
                         </Col>
                       )
                     }
-                  }) 
+                  })
                 }
               </Row>
             </Container>
