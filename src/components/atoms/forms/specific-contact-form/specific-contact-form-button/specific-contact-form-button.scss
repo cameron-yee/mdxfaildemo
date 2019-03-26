@@ -1,9 +1,17 @@
 @import '../../../../../global-scss/utilities/bootstrap-overrides.scss';
+@import '../../../../../global-scss//utilities/variables.scss';
 
 span {
   color: $primary;
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.inlineAnchor {
+  color: $secondary;
+  &:hover {
+    color: $primary;
   }
 }
