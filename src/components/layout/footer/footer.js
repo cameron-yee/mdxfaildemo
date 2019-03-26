@@ -219,6 +219,7 @@ export default class Footer extends Component {
               <GeneralContactFormButton launch={this.props.launchGeneral}>Contact Us</GeneralContactFormButton>
             </Col>
             <Col xs={12} className="p-2 m-auto text-center">
+              <a href="tel:719-531-5550">719-531-5550</a>
               5415 Mark Dabling Blvd.<br />
               Colorado Springs, CO 80918
             </Col>
@@ -233,6 +234,7 @@ export default class Footer extends Component {
                 textAlign: 'right'
               }}
             >
+              <a href="tel:719-531-5550">719-531-5550</a>
               5415 Mark Dabling Blvd.<br />
               Colorado Springs, CO 80918
             </div>
