@@ -73,13 +73,17 @@ const EducatorResourceCenterTemplate = class extends Component {
                             <div className="d-flex justify-content-center">
                               { this.resource.sidebarURLExternal &&
                               <a
-                                class="p-2 btn btn-outline-secondary"
+                                className="p-2 btn btn-outline-secondary"
                                 href={this.resource.sidebarURL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style="margin-top: 1rem; margin-bottom: 1rem;"
+                                style={{
+                                  marginTop: '1rem',
+                                  marginBottom: '1rem'
+                                }}
                               >
-                                {this.resource.sidebarButtonText}&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+                                {this.resource.sidebarButtonText}
+                                &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
                               </a>
                               }
                               { !this.resource.sidebarURLExternal &&
