@@ -90,7 +90,7 @@ export default class Footer extends Component {
                                 ?
                                 <div
                                   className="nav-link footer-nl"
-                                  onClick={this.props.launchGeneral}
+                                  onClick={this.props.launchJoinEmail}
                                   style={{
                                     cursor: "pointer"
                                   }}
