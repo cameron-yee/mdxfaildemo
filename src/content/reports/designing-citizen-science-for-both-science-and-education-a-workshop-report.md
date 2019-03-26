@@ -15,6 +15,8 @@ cardDescription: This report presents guidelines and strategies for designing ci
 sortOrder: 1
 ---
 
+import Link from 'gatsby'
+
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -32,7 +34,7 @@ The goals of the workshop were to
   <li>organize these insights into a set of recommendations for software developers on how to design online citizen science platforms for both scientific and educational outcomes.</li>
 </ol>
 
-Refer to our <a href="https://media.bscs.org/tech-report/2018-1/bscs_citscireport_release.pdf" target="_blank" rel="noopener noreferrer">press release</a> for more information.
+Refer to our <Link to="/our-work/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education-">press release</Link> for more information.
 
 ### The insights generated at this workshop have been compiled in the following workshop report:
 <br />

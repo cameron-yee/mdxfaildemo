@@ -40,18 +40,18 @@ const RDProgramsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURL || this.resource.sidebarText) &&
-                <Col>
+                <Col className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURL && !this.resource.sidebarText) &&
-                <Col>
+                <Col className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle
                 || this.resource.sidebarContacts || this.resource.sidebarContactsText) &&
-                <Col md={3}>
+                <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                   {(this.resource.sidebarURL || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
                       <Card.Body>
