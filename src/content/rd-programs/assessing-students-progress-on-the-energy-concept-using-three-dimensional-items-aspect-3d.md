@@ -1,27 +1,35 @@
 ---
 date: 2019-02-15T20:02:08.538Z
-title: Assessing Students’ Progress on the Energy Concept Using Three-Dimensional Items (ASPECt-3D)
+title: >-
+  Assessing Students’ Progress on the Energy Concept Using Three-Dimensional
+  Items (ASPECt-3D)
+seoCanonicalUrl: >-
+  https://bscs.org/our-work/rd-programs/assessing-students-progress-on-the-energy-concept-using-three-dimensional-items-aspect-3d
+seoDescription: >-
+  BSCS research project to measure student ability to use NGSS three dimensions
+  for understanding science content.
+seoLang: en-us
 areas:
   - Instructional Materials Development
   - Teacher Professional Learning
   - Research
 image: /assets/rd-programs/ngss.svg
 alt: NGSS Icon
-page: rd-programs
-seoTitle: BSCS research project on 3D science learning
-seoDescription: BSCS research project to measure student ability to use NGSS three dimensions for understanding science content.
-seoCanonicalUrl: https://bscs.org/our-work/rd-programs/assessing-students-progress-on-the-energy-concept-using-three-dimensional-items-aspect-3d
-seoLang: en-us
-sidebarText: Learn more about our intervention and assessment and the research design and methods.
+sidebarText: >-
+  Learn more about our intervention and assessment and the research design and
+  methods.
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
-sidebarContactsText: Contact the project PI.
+      url: >-
+        https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
+sidebarContactsText: 'For more information, please contact Cari Herrmann Abell.'
 sidebarContacts:
   - Cari Herrmann Abell
+sidebarContactsTitle: Questions?
 sortOrder: 8
+page: rd-programs
 ---
 
 The Next Generation Science Standards (NGSS) identifies three equally important dimensions to learning science: science and engineering practices, crosscutting concepts, and disciplinary core ideas. This focus on 3D learning has created a critical need for assessments that can measure students’ ability to use these three dimensions together to make sense of real-world phenomena.
