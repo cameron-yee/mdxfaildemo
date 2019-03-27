@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:00:19.479Z
 title: 'Energy: A Multidisciplinary Approach for Teachers (EMAT)'
-seoTitle: BSCS professional learning resource about energy
-seoDescription: BSCS professional learning program prepares high school educators to effectively teach students about energy.
 seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/emat'
+seoDescription: >-
+  BSCS professional learning program prepares high school educators to
+  effectively teach students about energy.
 seoLang: en-us
 cardDescription: >-
   EMAT, an online course, helps teachers frame complex energy concepts in a way
@@ -11,15 +12,15 @@ cardDescription: >-
   in important societal conversations.
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
-alt: multiple white windmills on a snowy hill with blue skies and white clouds
+alt: Five white windmills on a snowy hill with blue skies and white clouds.
 template: Image Right
 courseId: 0
 discipline:
   - Earth Sciences
 sidebarURLs:
   - resource:
+      buttonText: Access Resource
       external: true
-      buttonText: 'Access Resource'
       url: 'https://bscs.sarus.io/'
 sortOrder: 4
 page: educator-resource-center
