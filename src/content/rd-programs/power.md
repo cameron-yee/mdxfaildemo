@@ -1,9 +1,10 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: POWER
-seoTitle: BSCS research and tool for science education studies
-seoDescription: BSCS has developed an online calculator to estimate the effect size of a science education study based on key characteristics.
 seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/power'
+seoDescription: >-
+  BSCS has developed an online calculator to estimate the effect size of a
+  science education study based on key characteristics.
 seoLang: en-us
 areas:
   - Research
@@ -14,6 +15,10 @@ sidebarURLs:
       buttonText: Access Resource
       external: true
       url: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
+sidebarContactsText: 'For more information, please contact Sue Kowalski.'
+sidebarContacts:
+  - Sue Kowalski
+sidebarContactsTitle: Questions?
 sortOrder: 4
 page: rd-programs
 ---
