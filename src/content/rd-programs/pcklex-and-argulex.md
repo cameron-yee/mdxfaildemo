@@ -1,14 +1,19 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: PCK*lex and ArguLex
-seoTitle: BSCS research on machine-learning technologies
-seoDescription: BSCS studies how computers score student and teacher writing and science content knowledge.
 seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/pcklex-and-argulex'
+seoDescription: >-
+  BSCS studies how computers score student and teacher writing and science
+  content knowledge.
 seoLang: en-us
 areas:
   - Research
 image: /assets/rd-programs/argulex.svg
 alt: ARGULEX Icon
+sidebarContactsText: 'For more information, please contact Chris Wilson.'
+sidebarContacts:
+  - Chris Wilson
+sidebarContactsTitle: Questions?
 sortOrder: 6
 page: rd-programs
 ---
