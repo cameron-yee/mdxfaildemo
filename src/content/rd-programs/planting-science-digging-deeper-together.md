@@ -1,16 +1,20 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: 'Planting Science: Digging Deeper Together'
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/planting-science-digging-deeper-together'
+seoDescription: >-
+  BSCS explores how deeply science teachers understand plant biology and how
+  effectively they teach the subject to students.
+seoLang: en-us
 areas:
   - Teacher Professional Learning
   - Research
-seoTitle: BSCS R&D program on teaching plant biology
-seoDescription: BSCS explores how deeply science teachers understand plant biology and how effectively they teach the subject to students.
-seoCanonicalUrl: >-
-  https://bscs.org/our-work/rd-programs/planting-science-digging-deeper-together
-seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
+sidebarContactsText: 'For more information, please contact Anne Westbrook.'
+sidebarContacts:
+  - Anne Westbrook
+sidebarContactsTitle: Questions?
 sortOrder: 7
 page: rd-programs
 ---
