@@ -16,8 +16,9 @@ sidebarURLs:
       buttonText: Learn More Here
       external: true
       url: 'http://datanuggets.org/'
-sidebarContactsText: 'For more information, please contact Molly Stuhlsatz.'
+sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
+  - Chris Wilson
   - Molly Stuhlsatz
 sidebarContactsTitle: Questions?
 sortOrder: 10
