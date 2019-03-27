@@ -19,16 +19,28 @@ const JoinEmailFormModal = class extends Component {
     super(props)
     this.state = {
       email: undefined,
-      firstname: undefined,
-      lastname: undefined,
-      firstname_touched: false,
-      lastname_touched: false,
       email_touched: false,
+      firstname: undefined,
+      firstname_touched: false,
+      lastname: undefined,
+      lastname_touched: false,
+      phone: undefined,
+      phone_touched: false,
+      schoolOrOrganization: undefined,
+      title: undefined,
+      street: undefined,
+      city: undefined,
+      state: undefined,
+      zip: undefined,
+      scienceEducationInterest: [],
+      level: [],
+      currentlyUsing: undefined,
+      topicsOfInterest: undefined,
       signed_up: false,
       loading: false,
       notificationShow: false
     }
-    
+
     this.cancelToken = axios.CancelToken.source()
     this.getContactId = undefined
 
@@ -88,6 +100,85 @@ const JoinEmailFormModal = class extends Component {
     this.setState({lastname_touched: true})
   }
 
+  setSchoolOrOrganization = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('school-or-organization-input');
+    this.setState({schoolOrOrganization: input_elem.value})
+  }
+
+  setTitle = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('title-input');
+    this.setState({title: input_elem.value})
+  }
+
+  setStreet = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('street-input');
+    this.setState({street: input_elem.value})
+  }
+
+  setCity = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('city-input');
+    this.setState({city: input_elem.value})
+  }
+
+  setContactState = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('state-input');
+    this.setState({state: input_elem.value})
+  }
+
+  setZip = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('zip-input');
+    this.setState({zip: input_elem.value})
+  }
+
+  setPhone = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('sc-phone-input');
+    (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
+    ||
+    (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
+    ||
+    (/^[^-][\d()-+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+    &&
+    (input_elem.value !== (undefined || ''))) //Phone # may be omitted
+    ?
+    this.setState({phone: 'errors'})
+    :
+    this.setState({phone: input_elem.value})
+  }
+
+  blurPhone = (e) => {
+    e.preventDefault()
+    this.setState({phone_touched: true})
+  }
+
+  setCurrentlyUsing = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('currently-using-input');
+    this.setState({currentlyUsing: input_elem.value})
+  }
+
+  setTopicsOfInterest = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('topics-of-interest-input');
+    this.setState({topicsOfInterest: input_elem.value})
+  }
+
+  getCheckboxValues = () => {
+    let tags = []
+    let checkedBoxes = document.querySelectorAll('input.custom-control-input:checked')
+    for(let i = 0; i < checkedBoxes.length; i++) {
+      tags.push(checkedBoxes[i].nextSibling.textContent)
+    }
+
+    return tags
+  }
+
   checkIfContactExists = (e) => {
     e.preventDefault()
 
@@ -119,15 +210,13 @@ const JoinEmailFormModal = class extends Component {
                 // alert('You are already registered on the email list')
                 this.showNotification()
                 resolve(0)
-              } else {
-                if(response.data.data.results[0].lists.length - 1 === i) {
-                  //Contact exists, but is not in eCommunity
+              } else if(response.data.data.results[0].lists.length - 1 === i) {
+                  //Contact exists, but is not in eCommunity; Only resolving after every list has been checked
                   resolve(response.data.data.results[0].id)
-                }
               }
             }
           }
-        } 
+        }
       })
 
       return this.getContactId
@@ -143,11 +232,7 @@ const JoinEmailFormModal = class extends Component {
       }
     })
     .catch(error => {
-      if(axios.isCancel(error)) {
-        console.log(`Request canceled: ${error}`);
-      } else {
-        console.log(error);
-      }
+      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
     })
   }
 
@@ -164,24 +249,35 @@ const JoinEmailFormModal = class extends Component {
     .then(response => {
       console.log(response);
       if(response.status === 200) {
-        // let submit_button = document.getElementById('submit-button')
-        // if(submit_button.classList.contains('is-loading')) {
-        //   submit_button.classList.remove('is-loading')
-          this.setState({signed_up: true, loading: false});
-        // }
+        this.setState({signed_up: true, loading: false});
       }
     })
     .catch(error => {
-      if(axios.isCancel(error)) {
-        console.log(`Request canceled: ${error}`);
-      } else {
-        console.log(error);
-      }
+      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
     })
   }
 
-  addContactToEmailList = (contact_id) => {
-    let data = {"email": this.state.email, "contact_id": contact_id}
+  addContactToEmailList = async (contact_id) => {
+    let data = {
+      "email": this.state.email,
+      "first_name": this.state.firstname,
+      "last_name": this.state.lastname,
+      "contact_id": contact_id,
+      "cell_phone": this.state.phone,
+      "company_name": this.state.schoolOrOrganization,
+      "addresses": [{
+        "address_type": "BUSINESS",
+        "line1": this.state.street,
+        "city": this.state.city,
+        "state": this.state.state,
+        "postal_code": this.state.zip
+      }],
+      "job_title": this.state.title,
+      "source": "BSCS main website join email form",
+      "tags": await this.getCheckboxValues(),
+      "currentlyUsing": this.state.currentlyUsing,
+      "topicsOfInterest": this.state.topicsOfInterest
+    }
 
     axios({
       url: 'http://127.0.0.1:8888/add-contact-to-email-list',
@@ -190,24 +286,15 @@ const JoinEmailFormModal = class extends Component {
       cancelToken: this.cancelToken.token
     })
     .then(response => {
-      console.log(response);
       if(response.status === 200) {
-        // let submit_button = document.getElementById('submit-button')
-        // if(submit_button.classList.contains('is-loading')) {
-        //   submit_button.classList.remove('is-loading')
-          this.setState({signed_up: true, loading: false});
-        // }
+        this.setState({signed_up: true, loading: false});
       }
     })
     .catch(error => {
-      if(axios.isCancel(error)) {
-        console.log(`Request canceled: ${error}`);
-      } else {
-        console.log(error);
-      }
+      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
     })
   }
-  
+
   render() {
     return (
       <Modal
@@ -227,11 +314,15 @@ const JoinEmailFormModal = class extends Component {
             You are already enrolled in the email list.
           </Alert>
           <Row>
-            <Col md={6}>
+            <Col xs={12}>
+              <p>Be the first to know about BSCS's upcoming professional learning programs, field-test opportunities, project news, and more!</p>
+            </Col>
+            <Col xs={12}>
               <Form.Group>
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
                   id="first-name-input"
+                  size="sm"
                   type="text"
                   placeholder=""
                   maxLength="50"
@@ -244,12 +335,13 @@ const JoinEmailFormModal = class extends Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
-            <Col md={6}>
+            <Col md={12}>
               <Form.Group>
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control
                   id="last-name-input"
                   type="text"
+                  size="sm"
                   placeholder=""
                   maxLength="50"
                   onKeyUp={this.setLastName}
@@ -261,12 +353,13 @@ const JoinEmailFormModal = class extends Component {
                 </Form.Control.Feedback>
               </Form.Group>
             </Col>
-            <Col>
+            <Col xs={12}>
               <Form.Group>
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   id="email-list-input"
                   type="email"
+                  size="sm"
                   placeholder=""
                   onKeyUp={this.setEmail}
                   onBlur={this.blurEmail}
@@ -275,6 +368,169 @@ const JoinEmailFormModal = class extends Component {
                 <Form.Control.Feedback type="invalid">
                   Please provide a valid email address.
                 </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              {/* <hr style={{borderColor: '#293476'}} /> */}
+              <p><strong>Optional Fields</strong></p>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>School / Organization</Form.Label>
+                <Form.Control
+                  id="school-or-organization-input"
+                  type="text"
+                  size="sm"
+                  maxLength="50"
+                  placeholder=""
+                  onKeyUp={this.setSchoolOrOrganization}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  id="title-input"
+                  type="text"
+                  size="sm"
+                  maxLength="50"
+                  placeholder=""
+                  onKeyUp={this.setTitle}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>Street</Form.Label>
+                <Form.Control
+                  id="street-input"
+                  type="text"
+                  size="sm"
+                  maxLength="50"
+                  placeholder=""
+                  onKeyUp={this.setStreet}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>City</Form.Label>
+                <Form.Control
+                  id="city-input"
+                  type="text"
+                  size="sm"
+                  maxLength="50"
+                  placeholder=""
+                  onKeyUp={this.setCity}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>State</Form.Label>
+                <Form.Control
+                  id="state-input"
+                  type="text"
+                  size="sm"
+                  maxLength="50"
+                  placeholder=""
+                  onKeyUp={this.setContactState}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Label>Zip</Form.Label>
+                <Form.Control
+                  id="zip-input"
+                  type="text"
+                  size="sm"
+                  maxLength="10"
+                  placeholder=""
+                  onKeyUp={this.setZip}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              <Form.Group>
+                <Form.Label>Phone number</Form.Label>
+                <Form.Control
+                  id="sc-phone-input"
+                  type="text"
+                  size="sm"
+                  placeholder=""
+                  maxLength="20"
+                  onKeyUp={this.setPhone}
+                  onBlur={this.blurPhone}
+                  isInvalid={this.state.phone_touched && this.state.phone === 'errors'}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please provide a valid phone number.
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              <Form.Label>Science Education interest (select all that apply):</Form.Label>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Check custom type="checkbox" id="biology-interest" label="Biology" />
+                <Form.Check custom type="checkbox" id="physics-interest" label="Physics" />
+                <Form.Check custom type="checkbox" id="health-interest" label="Health" />
+                <Form.Check custom type="checkbox" id="earth-science-interest" label="Earth Science" />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Check custom type="checkbox" id="tpl-interest" label="Teacher Professional Learning" />
+                <Form.Check custom type="checkbox" id="chemistry-interest" label="Chemistry" />
+                <Form.Check custom type="checkbox" id="methods-interest" label="Methods (University Level)" />
+                <Form.Check custom type="checkbox" id="integrated-science-interest" label="Integrated Science" />
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              <Form.Label>Level:</Form.Label>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Check custom type="checkbox" id="elementary-level" label="Elementary" />
+                <Form.Check custom type="checkbox" id="middle-junior-high-level" label="Middle/Junior High" />
+                <Form.Check custom type="checkbox" id="high-school-level" label="High School" />
+              </Form.Group>
+            </Col>
+            <Col xs={6}>
+              <Form.Group>
+                <Form.Check custom type="checkbox" id="college-university-level" label="College/University" />
+                <Form.Check custom type="checkbox" id="other-level" label="Other" />
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              <Form.Label>List any BSCS Programs you're currently using (max 300 chars):</Form.Label>
+              <Form.Group>
+                <Form.Control
+                  as="textarea"
+                  id="currently-using-input"
+                  type="text"
+                  size="sm"
+                  maxLength="300"
+                  placeholder=""
+                  onKeyUp={this.setCurrentlyUsing}
+                />
+              </Form.Group>
+            </Col>
+            <Col xs={12}>
+              <Form.Label>Topics of Interest (max 300 chars):</Form.Label>
+              <Form.Group>
+                <Form.Control
+                  as="textarea"
+                  id="topics-of-interest-input"
+                  type="text"
+                  size="sm"
+                  maxLength="300"
+                  placeholder=""
+                  onKeyUp={this.setTopicsOfInterest}
+                />
               </Form.Group>
             </Col>
           </Row>
