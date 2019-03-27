@@ -15,6 +15,10 @@ sidebarURLs:
       buttonText: Access Resource
       external: true
       url: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
+  # - resource:
+  #     buttonText: Access the POWER calculator
+  #     external: true
+  #     url: https://effectsizecalculator.bscs.org
 sidebarContactsText: 'For more information, please contact Sue Kowalski.'
 sidebarContacts:
   - Sue Kowalski
@@ -30,7 +34,7 @@ The online tool, POWER calculator, uses data from the studies BSCS reviewed to e
 
 When planning a study, researchers can use the POWER calculator to determine how many subjects will be required to obtain a statistically significant result, giving researchers and funders increased confidence that they will obtain such a result without spending money and time unnecessarily on participants that are not needed. Once a study is completed, the tool enables users to interpret the size of their study’s effect in the context of similar studies.
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mb-5">
   <div class="p-2">
     <a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator</a>
   </div>

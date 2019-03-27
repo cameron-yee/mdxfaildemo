@@ -16,6 +16,11 @@ alt: PLACEHOLDER
 template: Image Right
 courseId: 0
 sortOrder: 8
+sidebarURLs:
+  - resource:
+      buttonText: Access Resource
+      external: true
+      url: https://ebola.bscs.org/
 page: educator-resource-center
 ---
 In 2014-15, more than 11,000 people died in an outbreak of Ebola in West Africa. And just a few years later, the Democratic Republic of Congo is experiencing a world-first: an Ebola outbreak in a war zone. Citizens around the globe continue to share concerns about the spread of this disease.
@@ -23,8 +28,6 @@ In 2014-15, more than 11,000 people died in an outbreak of Ebola in West Africa.
 BSCS Science Learning has developed a free resource to educate the public about Ebola. The website—Understanding Ebola Virus Disease—includes an interactive model that allows teachers, students, and community members to actively explore the factors that influence a disease’s spread and mortality rate.
 
 In alignment with the Next Generation Science Standards, the resource addresses selected disciplinary core ideas, science practices, and crosscutting concepts.
-
-<a class="btn btn-outline-secondary" href="http://ebola.bscs.org/ /" target="_blank" rel="noopener noreferrer">Access Resource Here</a>
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">

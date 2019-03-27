@@ -89,7 +89,7 @@ const panels = [
           </li>
         </ul>
         <p style={{ marginBottom: '2rem' }}>
-          Please contact BSCS Instructional Materials Division Director, Dr. Lindsey Mohan, to discuss opportunities to work together:
+          Please contact BSCS Instructional Materials Division Director, Lindsey Mohan, to discuss opportunities to work together:
         </p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-auto">
@@ -128,7 +128,7 @@ const panels = [
             </ul>
           </li>
         </ul>
-        <p>Interested in <Link to="/upcoming-programs/teacher-professional-learning">teacher professional learning</Link> or <Link to="/upcoming-programs/leadership-development">leadership development</Link>? Register now for upcoming programs or check out our <Link to="/educator-resource-center">Educator Resource Center</Link>.</p>
+        <p>Interested in <Link to="/upcoming-programs#teacher-professional-learning">teacher professional learning</Link> or <Link to="/upcoming-programs#leadership-development">leadership development</Link>? Register now for upcoming programs or check out our <Link to="/resources/educator-resource-center">Educator Resource Center</Link>.</p>
         <p style={{ marginBottom: '2rem' }}>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, Jody Bintz, to discuss opportunities to work together:</p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-auto">
@@ -176,7 +176,7 @@ const panels = [
             </ul>
           </li>
         </ul>
-        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Dr. Susan Kowalski and Dr. Chris Wilson, to discuss opportunities to work together:</p>
+        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Susan Kowalski and Chris Wilson, to discuss opportunities to work together:</p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-4">
             <SpecificContactForm sendto="Susan Kowalski">
