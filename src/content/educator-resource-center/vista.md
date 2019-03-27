@@ -1,10 +1,10 @@
 ---
 date: 2019-03-11T15:49:23.350Z
 title: ViSTA
-seoTitle: BSCS program for elementary science teachers
-seoDescription: BSCS offers professional learning resource with classroom videos and assignments to support new elementary science teachers.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/vista
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/vista'
+seoDescription: >-
+  BSCS offers professional learning resource with classroom videos and
+  assignments to support new elementary science teachers.
 seoLang: en-us
 cardDescription: >-
   ViSTA is designed to help preservice and inservice elementary teachers enhance
@@ -14,16 +14,16 @@ type: Professional Learning
 image: >-
   https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
 alt: >-
-  teacher in green sweater talking to her young students with two men filming
-  her teach
+  Female teacher in green sweater talking to her young students with two men
+  filming her teach.
 template: Image Left
 courseId: 0
-sortOrder: 10
-page: educator-resource-center
 sidebarContacts:
   - Cameron Yee
 sidebarContactsText: Contact Cameron Yee to register for ViSTA.
 sidebarContactsTitle: Registration
+sortOrder: 10
+page: educator-resource-center
 ---
 
 import { Link } from 'gatsby'
