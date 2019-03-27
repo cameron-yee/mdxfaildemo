@@ -1,10 +1,10 @@
 ---
 date: 2019-02-25T19:19:30.204Z
 title: BSCS Middle School Science
-seoTitle: BSCS’s multidisciplinary science program
-seoDescription: BSCS has developed and field tested a multidisciplinary science program for middle school students.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/bscs-middle-school-science
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/bscs-middle-school-science'
+seoDescription: >-
+  BSCS has developed and field tested a multidisciplinary science program for
+  middle school students.
 seoLang: en-us
 cardDescription: >-
   BSCS Middle School Science is a standards- and inquiry-based program comprised
@@ -13,8 +13,8 @@ cardDescription: >-
 type: Classroom Instruction
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/girls-in-classroom.jpg'
 alt: >-
-  girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in
-  classroom with other girls
+  Girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in
+  classroom with other girls.
 template: Image Right
 courseId: 0
 discipline:
