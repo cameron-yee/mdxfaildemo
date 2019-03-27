@@ -10,9 +10,10 @@ areas:
   - Research
 image: /assets/rd-programs/argulex.svg
 alt: ARGULEX Icon
-sidebarContactsText: 'For more information, please contact Chris Wilson.'
+sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
   - Chris Wilson
+  - Molly Stuhlsatz
 sidebarContactsTitle: Questions?
 sortOrder: 6
 page: rd-programs
