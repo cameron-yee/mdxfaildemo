@@ -16,8 +16,9 @@ areas:
 image: /assets/rd-programs/ngss.svg
 alt: NGSS Icon
 sidebarText: >-
-  Learn more about our intervention and assessment and the research design and
+  Learn about our intervention and assessment and the research design and
   methods.
+sidebarTitle: Want to know more?
 sidebarURLs:
   - resource:
       buttonText: Access Resource
