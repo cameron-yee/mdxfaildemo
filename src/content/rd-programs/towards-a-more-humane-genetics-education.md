@@ -1,17 +1,17 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: Towards a More Humane Genetics Education
-seoTitle: BSCS research on impact of genetics education
-seoDescription: BSCS research project explores how genetics education affects development of racial and gender biases among students.
-seoCanonicalUrl: >-
-  https://bscs.org/our-work/rd-programs/towards-a-more-humane-genetics-education
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/towards-a-more-humane-genetics-education'
+seoDescription: >-
+  BSCS research project explores how genetics education affects development of
+  racial and gender biases among students.
 seoLang: en-us
 areas:
   - Research
   - Instructional Materials Development
 image: /assets/rd-programs/humane-genetics.svg
 alt: Humane Genetics Icon
-sidebarContactsText: 'For more information, please contact Dr. Brian Donovan.'
+sidebarContactsText: 'For more information, please contact Brian Donovan.'
 sidebarContacts:
   - Brian Donovan
 sortOrder: 2
