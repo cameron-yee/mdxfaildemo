@@ -1,10 +1,10 @@
 ---
 date: 2019-02-25T19:28:16.929Z
 title: Five Tools and Processes for Translating the NGSS
-seoTitle: BSCS helps science educators navigate NGSS
-seoDescription: BSCS helps professional development leaders work with science teachers on curriculum, instruction, and assessment.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/five-tools
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/five-tools'
+seoDescription: >-
+  BSCS helps professional development leaders work with science teachers on
+  curriculum, instruction, and assessment.
 seoLang: en-us
 cardDescription: >-
   Five Tools and Processes is designed to help professional development leaders
@@ -14,8 +14,8 @@ type: District Planning
 image: >-
   https://media.bscs.org/bscsmw/educator-resource-center/teachers-in-classroom.jpg
 alt: >-
-  science teachers sitting at round tables in large classroom listening to
-  institute leader
+  Science teachers sitting at round tables in large classroom attentively
+  listening to institute leader.
 template: Image Left
 courseId: 0
 sortOrder: 5
