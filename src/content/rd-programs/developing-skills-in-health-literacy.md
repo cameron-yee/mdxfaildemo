@@ -13,7 +13,7 @@ alt: PLACEHOLDER
 sidebarTitle: ''
 sidebarContactsText: 'For more information, please contact Anne Westbrook.'
 sidebarContacts:
-  - Anne Westrbook
+  - Anne Westbrook
 sidebarContactsTitle: Questions?
 sortOrder: 5
 page: rd-programs
