@@ -14,6 +14,11 @@ areas:
   - Research
 image: /assets/rd-programs/mber.svg
 alt: MBER Icon
+sidebarTitle: ''
+sidebarContactsText: 'For more information, please contact Chris Wilson.'
+sidebarContacts:
+  - Chris Wilson
+sidebarContactsTitle: Questions?
 sortOrder: 9
 page: rd-programs
 ---
