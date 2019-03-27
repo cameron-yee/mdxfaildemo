@@ -12,7 +12,7 @@ cardDescription: >-
   in important societal conversations.
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
-alt: Five white windmills on a snowy hill with blue skies and white clouds.
+alt: Five white windmills on a snowy hill with a blue sky and white clouds.
 template: Image Right
 courseId: 0
 discipline:
