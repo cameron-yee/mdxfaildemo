@@ -1,16 +1,17 @@
 ---
 date: 2019-02-25T21:53:50.180Z
 title: FieldScope
-seoTitle: BSCS’s citizen science platform
-seoDescription: FieldScope is transforming the way educators, community members, and organizations engage in citizen science.
 seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/fieldscope'
+seoDescription: >-
+  FieldScope is transforming the way educators, community members, and
+  organizations engage in citizen science.
 seoLang: en-us
 cardDescription: >-
   FieldScope, an interactive digital platform, is transforming the way
   educators, community members, and organizations engage in citizen science.
 type: Citizen Science
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg'
-alt: two young female students in the desert studying a giant cactus
+alt: Two young female college students in the desert studying a giant cactus
 template: Image Left
 courseId: 0
 discipline:
