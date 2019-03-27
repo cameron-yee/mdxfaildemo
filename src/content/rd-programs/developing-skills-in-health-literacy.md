@@ -1,15 +1,20 @@
 ---
 date: 2019-02-25T19:12:58.082Z
 title: Developing Skills in Health Literacy
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/developing-skills-in-health-literacy'
+seoDescription: >-
+  BSCS project helps middle and high school students develop skills for
+  accurately evaluating health information.
+seoLang: en-us
 areas:
   - Instructional Materials Development
-seoTitle: BSCS project addresses student health literacy
-seoDescription: BSCS project helps middle and high school students develop skills for accurately evaluating health information.
-seoCanonicalUrl: >-
-  https://bscs.org/our-work/rd-programs/developing-skills-in-health-literacy
-seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
+sidebarTitle: ''
+sidebarContactsText: 'For more information, please contact Anne Westbrook.'
+sidebarContacts:
+  - Anne Westrbook
+sidebarContactsTitle: Questions?
 sortOrder: 5
 page: rd-programs
 ---
