@@ -5,7 +5,6 @@ seoTitle: New BSCS report about NGSS science curriculum
 seoDescription: BSCS shares guidelines for evaluating instructional materials that align with next generation science standards.
 seoCanonicalUrl: >-
   https://bscs.org/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss
-seoDescription: Test SEO description.
 seoLang: en-us
 cardDescription: >-
   This report includes four categories of criteria for evaluating student and
