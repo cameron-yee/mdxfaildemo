@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:28:16.929Z
 title: Five Tools and Processes for Translating the NGSS
+seoTitle: BSCS helps science educators navigate NGSS
+seoDescription: BSCS helps professional development leaders work with science teachers on curriculum, instruction, and assessment.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/five-tools
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/five-tools
 seoLang: en-us
 cardDescription: >-
   Five Tools and Processes is designed to help professional development leaders

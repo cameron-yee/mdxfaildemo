@@ -1,18 +1,20 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 title: "Designing Citizen Science for Both Science and Education: A Workshop Report"
-# template: Image Right
-# image: /assets/canvas.jpg
-# alt: Canvas painting of two people walking on a path.
-additionalTags: null
-page: reports
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report
+seoTitle: New BSCS report about citizen science
+seoDescription: BSCS shares guidelines and strategies for designing citizen projects with both scientific and educational benefits.
+seoCanonicalUrl: https://bscs.org/resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report
 seoDescription: Test SEO description.
 seoLang: en-us
 customTitle: false
 reportDate: January 2018
 cardDescription: This report presents guidelines and strategies for designing citizen science projects with scientific and educational benefits.
 sortOrder: 1
+page: reports
+# template: Image Right
+# image: /assets/canvas.jpg
+# alt: Canvas painting of two people walking on a path.
+additionalTags: null
 ---
 
 import Link from 'gatsby'

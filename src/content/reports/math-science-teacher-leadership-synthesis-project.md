@@ -1,9 +1,10 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 title: Math/Science Teacher Leadership Synthesis Project
+seoTitle: New BSCS report about STEM leaders
+seoDescription: BSCS reveals key attributes of high quality math and science teacher leadership development programs.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/resources/reports/mathscience-teacher-leadership-synthesis-project/
-seoDescription: Test SEO description.
+  https://bscs.org/resources/reports/mathscience-teacher-leadership-synthesis-project/
 seoLang: en-us
 cardDescription: >-
   Three reports have resulted from a synthesis project intended to build

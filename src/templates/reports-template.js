@@ -28,7 +28,7 @@ const ReportsTemplate = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
+        <SEO title={this.resource.seoTitle} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
         <Layout location={this.props.location}>
           <Container>
             {!this.resource.customTitle &&

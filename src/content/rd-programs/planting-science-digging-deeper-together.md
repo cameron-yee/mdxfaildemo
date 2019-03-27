@@ -4,9 +4,10 @@ title: 'Planting Science: Digging Deeper Together'
 areas:
   - Teacher Professional Learning
   - Research
+seoTitle: BSCS R&D program on teaching plant biology
+seoDescription: BSCS explores how deeply science teachers understand plant biology and how effectively they teach the subject to students.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/our-work/rd-programs/planting-science-digging-deeper-together
-seoDescription: Test SEO description.
+  https://bscs.org/our-work/rd-programs/planting-science-digging-deeper-together
 seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER

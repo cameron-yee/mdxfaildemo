@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T18:54:37.279Z
 title: 'The Biology Teacher’s Handbook, Fourth Edition'
+seoTitle: BSCS’s resource for biology teachers
+seoDescription: BSCS’s handbook includes teaching ideas and guidelines for middle, high school, and college biology educators.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/biology-teacher-handbook
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/biology-teacher-handbook
 seoLang: en-us
 cardDescription: >-
   The Biology Teacher’s Handbook, Fourth Edition, is filled with valuable

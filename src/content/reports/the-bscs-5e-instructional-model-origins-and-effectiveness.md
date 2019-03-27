@@ -1,15 +1,16 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 title: "The BSCS 5E Instructional Model: Origins and Effectiveness"
-additionalTags: null
 page: reports
-seoCanonicalUrl: https://bmw-bscs.netlify.com/resources/reports/the-bscs-5e-instructional-model-origins-and-effectiveness/
-seoDescription: Test SEO description.
+seoTitle: Report about BSCS 5E Instructional Model
+seoDescription: BSCS shares the impact and global use of its 5E Instructional Model for curriculum development.
+seoCanonicalUrl: https://bscs.org/resources/reports/the-bscs-5e-instructional-model-origins-and-effectiveness/
 seoLang: en-us
 customTitle: true
 reportDate: July 2006
 cardDescription: This report explores the BSCS 5E Instructional Model’s effectiveness and widespread use in curriculum development.
 sortOrder: 4
+additionalTags: null
 ---
 
 import BSCSBreadcrumb from 'components/layout/breadcrumb/breadcrumb'

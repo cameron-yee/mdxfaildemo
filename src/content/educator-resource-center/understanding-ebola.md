@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T18:58:06.329Z
 title: Understanding Ebola
+seoTitle: BSCS information about Ebola Virus Disease
+seoDescription: BSCS shares information to inform and educate teachers, students, and the public about Ebola Virus Disease.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/understanding-ebola
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/understanding-ebola
 seoLang: en-us
 cardDescription: >-
   Understanding Ebola Virus Disease, is a free resource designed to educate

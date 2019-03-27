@@ -3,9 +3,10 @@ date: 2019-02-25T19:12:58.082Z
 title: Developing Skills in Health Literacy
 areas:
   - Instructional Materials Development
+seoTitle: BSCS project addresses student health literacy
+seoDescription: BSCS project helps middle and high school students develop skills for accurately evaluating health information.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/our-work/rd-programs/developing-skills-in-health-literacy
-seoDescription: TEST SEO DESCRIPTION
+  https://bscs.org/our-work/rd-programs/developing-skills-in-health-literacy
 seoLang: en-us
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER

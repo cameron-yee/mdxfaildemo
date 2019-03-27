@@ -3,9 +3,10 @@ date: 2019-02-15T20:02:08.538Z
 title: >-
   Collaborative Research: Extending and Investigating the Impact of the High
   School Model-based Educational Resource (MBER)
+seoTitle: BSCS studies model-based science education resource
+seoDescription: BSCS explores how an effective approach to biology education can support next generation science learning.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
-seoDescription: Test SEO description.
+  https://bscs.org/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
 seoLang: en-us
 areas:
   - Instructional Materials Development

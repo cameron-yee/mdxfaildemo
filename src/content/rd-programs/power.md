@@ -1,8 +1,9 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: POWER
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/power'
-seoDescription: Test SEO description.
+seoTitle: BSCS research and tool for science education studies
+seoDescription: BSCS has developed an online calculator to estimate the effect size of a science education study based on key characteristics.
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/power'
 seoLang: en-us
 areas:
   - Research

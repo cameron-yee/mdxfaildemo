@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:19:30.204Z
 title: BSCS Middle School Science
+seoTitle: BSCS’s multidisciplinary science program
+seoDescription: BSCS has developed and field tested a multidisciplinary science program for middle school students.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-middle-school-science
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/bscs-middle-school-science
 seoLang: en-us
 cardDescription: >-
   BSCS Middle School Science is a standards- and inquiry-based program comprised

@@ -8,8 +8,9 @@ areas:
 image: /assets/rd-programs/ngss.svg
 alt: NGSS Icon
 page: rd-programs
-seoCanonicalUrl: https://bmw-bscs.netlify.com/our-work/rd-programs/assessing-students-progress-on-the-energy-concept-using-three-dimensional-items-aspect-3d
-seoDescription: Test SEO description.
+seoTitle: BSCS research project on 3D science learning
+seoDescription: BSCS research project to measure student ability to use NGSS three dimensions for understanding science content.
+seoCanonicalUrl: https://bscs.org/our-work/rd-programs/assessing-students-progress-on-the-energy-concept-using-three-dimensional-items-aspect-3d
 seoLang: en-us
 sidebarText: Learn more about our intervention and assessment and the research design and methods.
 sidebarURLs:

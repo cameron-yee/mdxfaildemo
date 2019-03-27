@@ -1,9 +1,10 @@
 ---
 date: 2019-03-11T15:49:23.350Z
 title: ViSTA
+seoTitle: BSCS program for elementary science teachers
+seoDescription: BSCS offers professional learning resource with classroom videos and assignments to support new elementary science teachers.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/vista
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/vista
 seoLang: en-us
 cardDescription: >-
   ViSTA is designed to help preservice and inservice elementary teachers enhance

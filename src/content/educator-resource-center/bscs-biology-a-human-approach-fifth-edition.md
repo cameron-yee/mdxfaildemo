@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:05:26.997Z
 title: 'BSCS Biology: A Human Approach, Fifth Edition'
+seoTitle: 'BSCS: A Human Approach - 5th Edition'
+seoDescription: BSCS’s high school biology program, revised to address Next Generation Science Standards recommendations.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-biology-human-approach
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/bscs-biology-human-approach
 seoLang: en-us
 cardDescription: >-
   BSCS Biology: A Human Approach is an activity-driven, full-year program that

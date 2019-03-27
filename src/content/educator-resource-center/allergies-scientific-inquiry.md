@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T18:34:04.933Z
 title: ' Allergies and Scientific Inquiry'
+seoTitle: BSCS middle school curriculum on allergies
+seoDescription: BSCS online curriculum unit to help middle school science educators effectively teach students about food allergies.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/resources/educator-resource-center/allergies-and-scientific-inquiry
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/allergies-and-scientific-inquiry
 seoLang: en-us
 cardDescription: >-
   Allergies & Scientific Inquiry is an online curriculum supplement developed to

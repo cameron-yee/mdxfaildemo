@@ -1,8 +1,9 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: PCK*lex and ArguLex
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/pcklex-and-argulex'
-seoDescription: Test SEO description.
+seoTitle: BSCS research on machine-learning technologies
+seoDescription: BSCS studies how computers score student and teacher writing and science content knowledge.
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/pcklex-and-argulex'
 seoLang: en-us
 areas:
   - Research

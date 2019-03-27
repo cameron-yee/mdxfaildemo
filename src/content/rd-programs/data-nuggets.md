@@ -1,8 +1,9 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: Data Nuggets
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/our-work/rd-programs/data-nuggets'
-seoDescription: Test SEO description.
+seoTitle: BSCS research around data in science class
+seoDescription: BSCS studies impact of bringing real-world data into middle and high school science classrooms.
+seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/data-nuggets'
 seoLang: en-us
 areas:
   - Research

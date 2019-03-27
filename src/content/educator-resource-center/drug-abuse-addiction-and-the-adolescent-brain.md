@@ -1,8 +1,9 @@
 ---
 date: 2019-03-04T17:19:22.154Z
-title: 'Drug Abuse, Addiction, and the Adolescent Brain '
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/resources/educator-resource-center/drug-abuse'
-seoDescription: Test SEO description.
+title: 'Drug Abuse, Addiction, and the Adolescent Brain'
+seoTitle: BSCS curriculum on drug abuse and addiction
+seoDescription: BSCS curriculum unit teaches middle school science students about drug abuse and addiction in relevant contexts.
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/drug-abuse'
 seoLang: en-us
 cardDescription: >-
   BSCS curriculum unit teaches middle school science students about drug abuse

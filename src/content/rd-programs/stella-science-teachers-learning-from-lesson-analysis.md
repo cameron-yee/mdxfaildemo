@@ -1,9 +1,10 @@
 ---
 date: 2019-03-07T19:12:58.082Z
 title: 'STeLLA: Science Teachers Learning from Lesson Analysis'
+seoTitle: STeLLA - BSCS teacher professional learning
+seoDescription: BSCS’s nationally-recognized STeLLA approach to professional learning supports science teachers and students.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis
-seoDescription: TEST SEO DESCRIPTION
+  https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis
 seoLang: en-us
 areas:
   - Instructional Materials Development

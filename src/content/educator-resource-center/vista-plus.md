@@ -1,9 +1,10 @@
 ---
 date: 2019-03-12T21:00:27.738Z
 title: ViSTA Plus
+seoTitle: BSCS course for new science teachers
+seoDescription: BSCS developed a full semester online course to support new elementary science teachers with knowledge and instruction practices.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/vista-plus
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/vista-plus
 seoLang: en-us
 cardDescription: >-
   ViSTA Plus is a full-semester online course designed to enhance preservice

@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:10:35.334Z
 title: 'BSCS Science Tracks: Connecting Science & Literacy'
+seoTitle: BSCS’s elementary science program
+seoDescription: BSCS’s elementary program allows preK through grade 5 students to do science activities like scientists.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/bscs-science-tracks
-seoDescription: Test SEO description.
+  https://bscss.org/resources/educator-resource-center/bscs-science-tracks
 seoLang: en-us
 cardDescription: >-
   BSCS Science Tracks: Connecting Science & Literacy allows preK through grade 5

@@ -1,9 +1,10 @@
 ---
 date: 2019-02-25T19:31:10.370Z
 title: NextGen TIME
+seoTitle: BSCS program to support adoption of science instructional materials
+seoDescription: BSCS’s tools and processes for evaluation, selection, and implementation of instructional materials designed for next generation science.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/nextgentime
-seoDescription: Test SEO description.
+  https://bscs.org/resources/educator-resource-center/nextgentime
 seoLang: en-us
 cardDescription: >-
   NextGen TIME is a suite of tools and processes for curriculum-based

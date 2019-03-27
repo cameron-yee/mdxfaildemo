@@ -1,8 +1,10 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 title: Guidelines for Assessing Instructional Materials that Exemplify the NGSS
+seoTitle: New BSCS report about NGSS science curriculum
+seoDescription: BSCS shares guidelines for evaluating instructional materials that align with next generation science standards.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss
+  https://bscs.org/resources/reports/guidelines-for-assessing-instructional-materials-that-exemplify-the-ngss
 seoDescription: Test SEO description.
 seoLang: en-us
 cardDescription: >-

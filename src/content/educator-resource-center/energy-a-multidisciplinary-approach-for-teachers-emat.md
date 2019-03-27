@@ -1,8 +1,9 @@
 ---
 date: 2019-02-25T19:00:19.479Z
 title: 'Energy: A Multidisciplinary Approach for Teachers (EMAT)'
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/educator-resource-center/emat'
-seoDescription: Test SEO description.
+seoTitle: BSCS professional learning resource about energy
+seoDescription: BSCS professional learning program prepares high school educators to effectively teach students about energy.
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/emat'
 seoLang: en-us
 cardDescription: >-
   EMAT, an online course, helps teachers frame complex energy concepts in a way

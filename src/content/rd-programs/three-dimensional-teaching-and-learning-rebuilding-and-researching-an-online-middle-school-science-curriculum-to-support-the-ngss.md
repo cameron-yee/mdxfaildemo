@@ -3,9 +3,10 @@ date: 2019-02-15T20:02:08.538Z
 title: >-
   Three-Dimensional Teaching and Learning: Rebuilding and Researching an Online
   Middle School Science Curriculum to Support the NGSS
+seoTitle: BSCS middle school life sciences curriculum
+seoDescription: BSCS develops and tests digital curriculum materials for students and associated professional learning for teachers.
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/our-work/rd-programs/three-dimensional-teaching-and-learning-rebuilding-and-researching-an-online-middle-school-science-curriculum-to-support-the-ngss
-seoDescription: Test SEO description.
+  https://bscs.org/our-work/rd-programs/three-dimensional-teaching-and-learning-rebuilding-and-researching-an-online-middle-school-science-curriculum-to-support-the-ngss
 seoLang: en-us
 areas:
   - Instructional Materials Development
