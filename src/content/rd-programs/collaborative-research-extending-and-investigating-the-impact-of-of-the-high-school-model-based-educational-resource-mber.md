@@ -15,9 +15,10 @@ areas:
 image: /assets/rd-programs/mber.svg
 alt: MBER Icon
 sidebarTitle: ''
-sidebarContactsText: 'For more information, please contact Chris Wilson.'
+sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
   - Chris Wilson
+  - Molly Stuhlsatz
 sidebarContactsTitle: Questions?
 sortOrder: 9
 page: rd-programs
