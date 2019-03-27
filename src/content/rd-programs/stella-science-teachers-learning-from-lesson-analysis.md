@@ -14,8 +14,8 @@ areas:
   - Research
 image: /assets/rd-programs/stella.svg
 alt: STELLA Icon
-sidebarText: Want to know more about STeLLA? Download our STeLLA Info Sheet!
-sidebarTitle: ''
+sidebarText: Download our STeLLA Info Sheet!
+sidebarTitle: Want to know more about STeLLA?
 sidebarURLs:
   - resource:
       buttonText: Download
