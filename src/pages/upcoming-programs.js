@@ -96,7 +96,11 @@ const UpcomingProgramsPage = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="Upcoming Programs" />
+        <SEO
+          title="BSCS’s upcoming opportunities for teachers and leaders"
+          description="Science educators can register now for BSCS’s upcoming professional learning, leadership development, and field-test programs."
+          canonical="https://bscs.org/upcoming-programs/"
+        />
         <Layout location={this.props.location}>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>

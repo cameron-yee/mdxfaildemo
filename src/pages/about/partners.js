@@ -24,8 +24,8 @@ const Partners = class extends Component {
     return (
         <Layout location={this.props.location} launchGeneral={this.state.launchGeneral} closeGeneral={() => this.setState({launchGeneral: false})}>
           <SEO
-            title="Partners &amp; Collaborators"
-            description=""
+            title="Browse BSCS’s partners and collaborators"
+            description="BSCS works with a range of businesses, organizations, schools, districts, and universities on science education programs."
             canonical="https://bscs.org/about/partners/"
           />
           <Container>
