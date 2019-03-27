@@ -1,10 +1,11 @@
 ---
 date: 2019-03-07T19:12:58.082Z
 title: 'STeLLA: Science Teachers Learning from Lesson Analysis'
-seoTitle: STeLLA - BSCS teacher professional learning
-seoDescription: BSCS’s nationally-recognized STeLLA approach to professional learning supports science teachers and students.
 seoCanonicalUrl: >-
   https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis
+seoDescription: >-
+  BSCS’s nationally-recognized STeLLA approach to professional learning supports
+  science teachers and students.
 seoLang: en-us
 areas:
   - Instructional Materials Development
@@ -13,16 +14,17 @@ areas:
   - Research
 image: /assets/rd-programs/stella.svg
 alt: STELLA Icon
+sidebarText: Want to know more about STeLLA? Download our STeLLA Info Sheet!
 sidebarTitle: ''
-sidebarText: 'Want to know more about STeLLA? Download our STeLLA Info Sheet!'
 sidebarURLs:
   - resource:
       buttonText: Download
       external: true
       url: 'https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf'
-sidebarContactsText: Contact Jody Bintz to explore opportunities to work together.
+sidebarContactsText: 'For more information, please contact Jody Bintz.'
 sidebarContacts:
   - Jody Bintz
+sidebarContactsTitle: Questions?
 sortOrder: 1
 page: rd-programs
 ---
