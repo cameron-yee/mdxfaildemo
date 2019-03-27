@@ -1,9 +1,10 @@
 ---
 date: 2019-02-15T20:02:08.538Z
 title: Data Nuggets
-seoTitle: BSCS research around data in science class
-seoDescription: BSCS studies impact of bringing real-world data into middle and high school science classrooms.
 seoCanonicalUrl: 'https://bscs.org/our-work/rd-programs/data-nuggets'
+seoDescription: >-
+  BSCS studies impact of bringing real-world data into middle and high school
+  science classrooms.
 seoLang: en-us
 areas:
   - Research
@@ -15,6 +16,10 @@ sidebarURLs:
       buttonText: Learn More Here
       external: true
       url: 'http://datanuggets.org/'
+sidebarContactsText: 'For more information, please contact Molly Stuhlsatz.'
+sidebarContacts:
+  - Molly Stuhlsatz
+sidebarContactsTitle: Questions?
 sortOrder: 10
 page: rd-programs
 ---
