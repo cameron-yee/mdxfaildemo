@@ -13,7 +13,7 @@ cardDescription: >-
   Lessons are aligned to the Next Generation Science Standards.
 type: Classroom Instruction
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg'
-alt: close-up of yellow flower with pollen
+alt: Close-up of yellow flower with pollen.
 template: Image Right
 courseId: 0
 gradeLevel:
