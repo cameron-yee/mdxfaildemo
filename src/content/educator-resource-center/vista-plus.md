@@ -1,10 +1,10 @@
 ---
 date: 2019-03-12T21:00:27.738Z
 title: ViSTA Plus
-seoTitle: BSCS course for new science teachers
-seoDescription: BSCS developed a full semester online course to support new elementary science teachers with knowledge and instruction practices.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/vista-plus
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/vista-plus'
+seoDescription: >-
+  BSCS developed a full semester online course to support new elementary science
+  teachers with knowledge and instruction practices.
 seoLang: en-us
 cardDescription: >-
   ViSTA Plus is a full-semester online course designed to enhance preservice
@@ -12,7 +12,7 @@ cardDescription: >-
   Users explore the powerful STeLLA approach.
 type: Professional Learning
 image: 'https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg'
-alt: women watching video of a child on a large screen
+alt: Women watching video of a child on a large screen.
 template: Image Left
 courseId: 0
 gradeLevel:
