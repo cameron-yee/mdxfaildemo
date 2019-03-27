@@ -20,7 +20,7 @@ const StaffDirectoryPage = class extends Component {
     super(props)
     this.state = {
       staff: props.data.allMdx.edges,
-      //Table columns will be sorted either alphabetically (1), reverse-alphabetically (2), or another column is being filtered (0) 
+      //Table columns will be sorted either alphabetically (1), reverse-alphabetically (2), or another column is being filtered (0)
       order: {
         firstName: 0,
         lastName: 0,
@@ -75,8 +75,8 @@ const StaffDirectoryPage = class extends Component {
           let compare;
           type === 'firstName' ? compare = 0 : compare = 1
 
-          const personA = a.node.frontmatter[type] || a.node.frontmatter['fullName'].split(' ')[compare] 
-          const personB = b.node.frontmatter[type] || b.node.frontmatter['fullName'].split(' ')[compare] 
+          const personA = a.node.frontmatter[type] || a.node.frontmatter['fullName'].split(' ')[compare]
+          const personB = b.node.frontmatter[type] || b.node.frontmatter['fullName'].split(' ')[compare]
           if(negative) {
             return this.reverseComparison(personA, personB)
           } else {
@@ -86,7 +86,7 @@ const StaffDirectoryPage = class extends Component {
         order: {
           firstName: options['firstName'],
           lastName: options['lastName'],
-          title: options['title']          
+          title: options['title']
         }
       }))
     )
@@ -95,7 +95,11 @@ const StaffDirectoryPage = class extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Staff Directory" />
+        <SEO
+          title="Meet the BSCS team"
+          description="BSCS employs science educators, research scientists, and many other dedicated staff who are committed to transforming science education."
+          canonical="https://bscs.org/about/staff-directory/"
+        />
         <Container>
           <PageTitle title="Staff Directory" />
           <Row style={{ marginBottom: '2rem' }}>
@@ -151,9 +155,9 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th 
-                      className="no-action" 
-                      style={{ borderTop: 'none' }} 
+                    <th
+                      className="no-action"
+                      style={{ borderTop: 'none' }}
                       onClick={() => this.sort('title')}
                     >
                       <div className="d-flex align-items-center">
@@ -175,8 +179,8 @@ const StaffDirectoryPage = class extends Component {
                         </div>
                       </div>
                     </th>
-                    <th 
-                      className="text-align-center" 
+                    <th
+                      className="text-align-center"
                       style={{ borderTop: 'none' }}
                     >
                       Contact
@@ -212,8 +216,8 @@ const StaffDirectoryPage = class extends Component {
                             ?
                             <td className="vertical-align-middle text-align-center">
                               <a
-                                href={person.node.frontmatter.url} 
-                                target="_blank" 
+                                href={person.node.frontmatter.url}
+                                target="_blank"
                                 rel="noopener noreferrer"
                               >
                                 <i className="fas fa-external-link-alt"></i>
@@ -246,7 +250,7 @@ export const leadershipQuery = graphql`
   query staffDirectoryQuery {
     allMdx(
       filter: {
-        frontmatter: { 
+        frontmatter: {
           page: {
             eq: "staff-directory"
           }

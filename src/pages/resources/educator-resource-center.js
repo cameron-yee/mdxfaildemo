@@ -51,7 +51,7 @@ const EducatorResourceCenter = class extends Component {
     },
     3000)
 
-    const cards = document.getElementsByClassName('erc-card-img') 
+    const cards = document.getElementsByClassName('erc-card-img')
     for(let i = 0; i < cards.length; i++) {
       if(cards[i].complete && this.images_loaded !== cards.length) {
         this.loaded()
@@ -79,7 +79,11 @@ const EducatorResourceCenter = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="Educator Resource Center" />
+        <SEO
+          title="BSCS offers resources for educators"
+          description="Discover resources to support classroom instruction, professional learning, district planning, and citizen science."
+          canonical="https://bscs.org/resources/educator-resource-center/"
+        />
         <Layout location={this.props.location}>
           <section className="section">
             <Container>
@@ -147,9 +151,9 @@ const EducatorResourceCenter = class extends Component {
                             // style={{width: '100%', height: '100%', borderRadius: '4px'}}
                           ><span>Worthless Children Prop</span></ReactPlaceholder>
                         } */}
-                        <Card 
+                        <Card
                           id={`resource-${index}`}
-                          data-filter={JSON.stringify(data_filter)} 
+                          data-filter={JSON.stringify(data_filter)}
                           // data-type={edge.node.frontmatter.type}
                           className={`h-100 erc-card ${edge.node.frontmatter.type.toLowerCase().replace(/ /g, '-')}`}
                           // style={{display: 'none'}}

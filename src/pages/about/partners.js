@@ -23,7 +23,11 @@ const Partners = class extends Component {
   render() {
     return (
         <Layout location={this.props.location} launchGeneral={this.state.launchGeneral} closeGeneral={() => this.setState({launchGeneral: false})}>
-          <SEO title="Partners &amp; Collaborators" />
+          <SEO
+            title="Partners &amp; Collaborators"
+            description=""
+            canonical="https://bscs.org/about/partners/"
+          />
           <Container>
             <PageTitle title="Partners &amp; Collaborators" />
             <Row className="justify-content-md-center" style={{marginBottom: '1rem'}}>

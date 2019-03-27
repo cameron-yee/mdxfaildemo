@@ -25,7 +25,11 @@ const WorkWithUsPage = class extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Work With Us" />
+        <SEO
+          title="BSCS works with diverse partners and collaborators"
+          description="Learn how you can work with BSCS across instructional materials development, professional learning, and research."
+          canonical="https://bscs.org/connect/work-with-us/"
+        />
         <Container>
           <PageTitle title="Work With Us" />
           <Row>

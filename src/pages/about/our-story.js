@@ -13,7 +13,11 @@ const OurStoryPage = class extends Component {
   render() {
     return (
         <Layout location={this.props.location}>
-          <SEO title="Our Story" />
+          <SEO
+            title="BSCS Science Learning -- celebrating 60 years"
+            description="BSCS has a rich history of transforming science teaching and learning over the last 60 years. Read our story."
+            canonical="https://bscs.org/about/our-story/"
+          />
           <Container>
             <PageTitle title="Our Story" />
             <Row style={{ marginBottom: '2rem' }}>
@@ -25,7 +29,7 @@ const OurStoryPage = class extends Component {
                 <p>As the Cold War heated up, the US recognized the need for science education reform. A whirlwind of action followed in 1958. The National Aeronautics and Space Administration (NASA) was created. Congress passed the National Defense Education Act (NDEA). And the National Science Foundation (NSF) established BSCS to develop state-of-the-art biology textbooks for students across the country.</p>
 
                 <p>Even in our earliest days, working within the University of Colorado Boulder, we were invested in the big picture: to transform science education. Our goal was not just to create effective biology curriculum. Our goal was to enhance biology teaching and learning. By embracing students’ inquisitive spirits and making them active participants in the scientific process, we believed students would create stronger connections between science and the world around them.</p>
-                
+
                 <p>This was only the starting point for what we would contribute to science education. Today, as an independent 501(c)(3) nonprofit organization headquartered in Colorado Springs, we are proud of what we have accomplished over the last 60 years.</p>
 
                 <p>BSCS has filled classrooms around the country with research-driven biology textbooks, pioneered effective teaching approaches, developed new education leaders, and conducted studies that will continue to alter the course of our science education system. Most importantly, we have championed the cause for meaningful, inquiry-based science learning.</p>

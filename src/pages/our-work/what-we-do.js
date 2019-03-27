@@ -24,7 +24,11 @@ const WhatWeDoPage = (props) => {
   console.log(props.data.image1)
   return (
     <Layout location={props.location}>
-      <SEO title="What We Do" />
+      <SEO
+        title="How BSCS impacts science education"
+        description="BSCS’s work includes instructional materials development, teacher professional learning, leadership development, and research."
+        canonical="https://bscs.org/our-work/what-we-do"
+      />
       <Container>
         <PageTitle title="What We Do" />
         <Row style={{ marginBottom: '1rem' }}>

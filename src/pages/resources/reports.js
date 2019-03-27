@@ -25,7 +25,11 @@ const Reports = class extends Component {
   render() {
     return (
       <>
-        <SEO title="Reports" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO
+          title="BSCS reports for science educators and researchers"
+          description="BSCS releases reports about instructional materials development, teacher professional learning, leadership development, and research."
+          canonical="https://bscs.org/resources/reports"
+        />
         <Layout location={this.props.location}>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>
@@ -43,7 +47,7 @@ const Reports = class extends Component {
                   {
                     this.reports.map((edge, index) => {
                       return(
-                        <Col 
+                        <Col
                           lg={4}
                           className="rrc-card-col"
                           key={`report-${index}`}
@@ -93,7 +97,7 @@ const Reports = class extends Component {
                             >
                               <div className="d-flex">
                                 <div className="ml-auto align-self-end">
-                                  <Link 
+                                  <Link
                                     to={`/resources/reports/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                                   >
                                     <Button variant="outline-secondary" className="purple">

@@ -39,7 +39,10 @@ const NewsPage = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="News" description="" canonical="https://bmw-bscs.netlify.com/our-work/news/" />
+        <SEO
+          title="What’s Happening at BSCS"
+          description="Read the latest news and updates at BSCS Science Learning."
+          canonical="https://bscs.org/our-work/news/" />
         <Layout location={this.props.location}>
           <section className="section">
             <Container>
@@ -89,7 +92,7 @@ const NewsPage = class extends Component {
                             key={edge.node.id}
                           >
                           {index !== 0 &&
-                            <hr /> 
+                            <hr />
                           }
                           <div
                             id={`resource-${index}`}
@@ -123,7 +126,7 @@ const NewsPage = class extends Component {
                         </Col>
                       </React.Fragment>
                     )
-                  }) 
+                  })
                 }
               </Row>
             </Container>

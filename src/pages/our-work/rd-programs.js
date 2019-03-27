@@ -38,7 +38,7 @@ const RDPrograms = class extends Component {
   }
 
   // componentDidMount() {
-  //   const rd_images = document.getElementsByClassName('rd-image') 
+  //   const rd_images = document.getElementsByClassName('rd-image')
 
   //   for(let i = 0; i < rd_images.length; i++) {
   //     if(rd_images[i].complete && this.images_loaded !== rd_images.length) {
@@ -70,7 +70,11 @@ const RDPrograms = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title="R&amp;D Programs" description="" canonical="https://bmw-bscs.netlify.com/our-work/rd-programs/" />
+        <SEO
+          title="BSCS conducts innovative R&amp;D Programs"
+          description="Browse a sample of BSCS’s current research and development programs designed to improve science education."
+          canonical="https://bscs.org/our-work/rd-programs/"
+        />
         <Layout location={this.props.location}>
           <section className="section">
             <Container>
@@ -121,7 +125,7 @@ const RDPrograms = class extends Component {
                       >
                         <Card
                           id={`resource-${index}`}
-                          data-filter={JSON.stringify(data_filter)} 
+                          data-filter={JSON.stringify(data_filter)}
                           data-type={edge.node.frontmatter.type}
                           className="h-100"
                           style={{
@@ -151,7 +155,7 @@ const RDPrograms = class extends Component {
                             </Card.Title>
                             <div className="d-flex">
                               <div className="mr-auto mb-3">
-                                { 
+                                {
                                   edge.node.frontmatter.areas.map((area, index) => {
                                     const variants = {
                                       "Teacher Professional Learning": "primary",
@@ -206,7 +210,7 @@ const RDPrograms = class extends Component {
                         </Card>
                       </Col>
                     )
-                  }) 
+                  })
                 }
               </Row>
             </Container>
@@ -223,7 +227,7 @@ const RDPrograms = class extends Component {
                         <div key={`desktop-${edge.node.id}`}>
                           <Card
                             id={`mobile-resource-${index}`}
-                            data-filter={JSON.stringify(data_filter)} 
+                            data-filter={JSON.stringify(data_filter)}
                             data-type={edge.node.frontmatter.type}
                             style={{
                               borderColor: 'rgb(41, 52, 118)',
@@ -253,7 +257,7 @@ const RDPrograms = class extends Component {
                               </Card.Title>
                               <div className="d-flex">
                                 <div className="mr-auto mb-3">
-                                  { 
+                                  {
                                     edge.node.frontmatter.areas.map((area, index) => {
                                       const variants = {
                                         "Teacher Professional Learning": "primary",
@@ -306,7 +310,7 @@ const RDPrograms = class extends Component {
                           </Card>
                         </div>
                       )
-                    }) 
+                    })
                   }
                 </CardColumns>
               </Row>

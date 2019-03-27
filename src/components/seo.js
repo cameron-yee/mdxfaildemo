@@ -36,7 +36,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
       query={detailsQuery}
       render={data => {
         const metaDescription = description || data.site.siteMetadata.description
-        const language = lang || "en-us" //English US.  Do we want to specify U.S.? Or just English? 
+        const language = lang || "en-us" //English US.  Do we want to specify U.S.? Or just English?
 
         const jsonLdString =
           jsonLd
@@ -52,8 +52,8 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               "postalCode": "80918",
               "streetAddress": "5415 Mark Dabling Blvd."
             },
-            "url": "https://www.bscs.org/",
-            "logo": "https://www.bscs.org/static/img/bscs_logo.svg",
+            "url": "https://bscs.org/",
+            "logo": "https://bscs.org/static/img/bscs_logo.svg",
             "description": "BSCS Science Learning is an independent nonprofit dedicated to transforming science education across the US through research-driven innovation.",
             "contactPoint": {
               "@type": "ContactPoint",
@@ -83,72 +83,72 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`57x57`, 
+                sizes:`57x57`,
                 href: atip57
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`60x60`, 
+                sizes:`60x60`,
                 href: atip60
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`72x72`, 
+                sizes:`72x72`,
                 href: atip72
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`76x76`, 
+                sizes:`76x76`,
                 href: atip76
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`114x114`, 
+                sizes:`114x114`,
                 href: atip114
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`120x120`, 
+                sizes:`120x120`,
                 href: atip120
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`144x144`, 
+                sizes:`144x144`,
                 href: atip144
               },
               {
                 rel: `apple-touch-icon-precomposed`,
-                sizes:`152x152`, 
+                sizes:`152x152`,
                 href: atip152
               },
               {
                 rel: `icon`,
                 type: `image/png`,
-                sizes:`16x16`, 
+                sizes:`16x16`,
                 href: favicon16
               },
               {
                 rel: `icon`,
                 type: `image/png`,
-                sizes:`32x32`, 
+                sizes:`32x32`,
                 href: favicon32
               },
               {
                 rel: `icon`,
                 type: `image/png`,
-                sizes:`96x96`, 
+                sizes:`96x96`,
                 href: favicon96
               },
               {
                 rel: `icon`,
                 type: `image/png`,
-                sizes:`128x128`, 
+                sizes:`128x128`,
                 href: favicon128
               },
               {
                 rel: `icon`,
                 type: `image/png`,
-                sizes:`196x196`, 
+                sizes:`196x196`,
                 href: favicon196
               }
             ]}
@@ -169,7 +169,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               },
               {
                 property: `og:url`,
-                content: `https://www.bscs.org/`
+                content: `https://bscs.org/`
               },
               {
                 property: `og:type`,

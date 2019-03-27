@@ -24,7 +24,7 @@ const LeadershipPage = class extends Component {
     this.people = this.props.data.allMdx.edges
     this.bod = this.getGroup(this.people, 'Board Member')
     this.management = this.getGroup(this.people, 'Management')
-  
+
     this.images_loaded = 0
     this.state = {
       imagesLoaded: false
@@ -32,7 +32,7 @@ const LeadershipPage = class extends Component {
   }
 
   componentDidMount() {
-    const ld_images = document.getElementsByClassName('ld-image') 
+    const ld_images = document.getElementsByClassName('ld-image')
 
     for(let i = 0; i < ld_images.length; i++) {
       if(ld_images[i].complete && this.images_loaded !== ld_images.length) {
@@ -112,7 +112,7 @@ const LeadershipPage = class extends Component {
         let index = ordered_copy.indexOf(people[x])
         ordered_copy.splice(index, 1) //Removes the person
         if(people[x].node.frontmatter.sortOrder < ordered_copy.length) {
-          ordered_copy.splice(people[x].node.frontmatter.sortOrder - 1, 0, people[x]) //Adds the person back in the correct order 
+          ordered_copy.splice(people[x].node.frontmatter.sortOrder - 1, 0, people[x]) //Adds the person back in the correct order
         } else {
           ordered_copy.push(people[x])
         }
@@ -129,7 +129,11 @@ const LeadershipPage = class extends Component {
       <Layout location={this.props.location}>
         <SEO title="Leadership" />
         <Container>
-          <PageTitle title="Leadership" />
+          <PageTitle
+            title="Meet the BSCS leadership"
+            description="Get to know BSCS’s management team and distinguished board of directors."
+            canonical="https://bscs.org/about/leadership/"
+          />
           <Row style={{ marginBottom: '3rem' }}>
             <Col xs={12}>
               <h2 style={{ marginBottom: '3rem' }}>Management</h2>
@@ -138,11 +142,11 @@ const LeadershipPage = class extends Component {
               return(
                 <Col
                   md={6}
-                  lg={3} 
+                  lg={3}
                   style={{ marginBottom: '2rem' }}
-                  key={`mgmt-${index}`} 
+                  key={`mgmt-${index}`}
                 >
-                  <Card 
+                  <Card
                     className="h-100"
                   >
                     <ReactPlaceholder
@@ -159,18 +163,18 @@ const LeadershipPage = class extends Component {
                     >
                       <Card.Img
                         className="ld-image"
-                        variant="top" 
-                        src={person.node.frontmatter.image} 
-                        alt={person.node.frontmatter.alt} 
+                        variant="top"
+                        src={person.node.frontmatter.image}
+                        alt={person.node.frontmatter.alt}
                       />
                     </ReactPlaceholder>
                     <Card.Img
                       className="ld-image"
-                      variant="top" 
+                      variant="top"
                       onLoad={this.loaded}
                       style={{display: 'none'}}
-                      src={person.node.frontmatter.image} 
-                      alt={person.node.frontmatter.alt} 
+                      src={person.node.frontmatter.image}
+                      alt={person.node.frontmatter.alt}
                     />
                     <Card.Body>
                       <Card.Title style={{ marginBottom: '1rem' }}>
@@ -191,7 +195,7 @@ const LeadershipPage = class extends Component {
                       <div className="d-flex">
                         <div className="ml-auto align-self-end">
                           <Link
-                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                             className="leadership-read-more"
                           >
                             <Button variant="outline-secondary">Read More</Button>
@@ -212,11 +216,11 @@ const LeadershipPage = class extends Component {
               return(
                 <Col
                   md={6}
-                  lg={3} 
+                  lg={3}
                   style={{ marginBottom: '2rem' }}
-                  key={`mgmt-${index}`} 
+                  key={`mgmt-${index}`}
                 >
-                  <Card 
+                  <Card
                     className="h-100"
                     style={{ marginBottom: '1rem' }}
                   >
@@ -234,18 +238,18 @@ const LeadershipPage = class extends Component {
                     >
                       <Card.Img
                         className="ld-image"
-                        variant="top" 
-                        src={person.node.frontmatter.image} 
-                        alt={person.node.frontmatter.alt} 
+                        variant="top"
+                        src={person.node.frontmatter.image}
+                        alt={person.node.frontmatter.alt}
                       />
                     </ReactPlaceholder>
                     <Card.Img
                       className="ld-image"
-                      variant="top" 
+                      variant="top"
                       onLoad={this.loaded}
                       style={{display: 'none'}}
-                      src={person.node.frontmatter.image} 
-                      alt={person.node.frontmatter.alt} 
+                      src={person.node.frontmatter.image}
+                      alt={person.node.frontmatter.alt}
                     />
                     <Card.Body>
                       <Card.Title>
@@ -266,7 +270,7 @@ const LeadershipPage = class extends Component {
                       <div className="d-flex">
                         <div className="ml-auto align-self-end">
                           <Link
-                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`} 
+                            to={`/about/leadership/${person.node.frontmatter.fullName.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                             className="leadership-read-more"
                           >
                             <Button variant="outline-secondary">Read More</Button>

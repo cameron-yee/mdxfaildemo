@@ -24,7 +24,7 @@ const FinancialsPage = class extends Component {
     this.years = ['2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008']
     this.state = {
       year: '2016',
-      url: `${this.annual_report_prefix}bscs_2016_annual_report.pdf`  
+      url: `${this.annual_report_prefix}bscs_2016_annual_report.pdf`
     }
   }
 
@@ -43,12 +43,16 @@ const FinancialsPage = class extends Component {
     } catch(e) {
       console.log(e)
     };
-  } 
+  }
 
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Financials" />
+        <SEO
+          title="BSCS Science Learning financial documents"
+          description="Browse BSCS’s annual reports, audit reports, and other financial statements."
+          canonical="https://bscs.org/about/financials/"
+        />
         <Container>
           <PageTitle title="Financials" />
           <Row class="d-flex" style={{ marginBottom: '2rem' }}>

@@ -14,10 +14,15 @@ import SpecificContactForm from '../../components/atoms/forms/specific-contact-f
 
 const EmploymentOpportunitiesPage = (props) => {
   return (
-    <Layout location={props.location}>
+    <Layout
+     location={props.location}>
       <SEO title="Employment Opportunities" />
       <Container>
-        <PageTitle title="Employment Opportunities" />
+        <PageTitle
+          title="Join the BSCS team"
+          description="Browse current employment opportunities with BSCS Science Learning and enjoy a flexible and inclusive work environment."
+          canonical="https://bscs.org/connect/employment-opportunities/"
+        />
         <Row style={{ marginBottom: '2rem' }}>
           <Col>
             <p>
