@@ -1,8 +1,9 @@
 ---
 date: 2019-03-15T16:26:13.794Z
-title: Five Tools Institute in Arizona
+title: The Five Tools Institute in Arizona
+type: Teacher Professional Learning
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/five-tools-institute-in-arizona
+  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/the-five-tools-institute-in-arizona
 seoDescription: Test SEO description
 seoLang: en-us
 sidebarContacts:
@@ -10,9 +11,6 @@ sidebarContacts:
   - Cindy Gay
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/woman-and-notes.jpg
-alt: woman with curly brown hair and burgundy cardigan putting Post-it notes on wall
-type: Teacher Professional Learning
 ---
 The Five Tools and Processes for Translating the NGSS are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision. At the heart of the Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence. 
 
