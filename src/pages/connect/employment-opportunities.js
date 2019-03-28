@@ -4,6 +4,7 @@ import { Location } from '@reach/router'
 import SEO from '../../components/seo'
 
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -23,8 +24,8 @@ const EmploymentOpportunitiesPage = (props) => {
           description="Browse current employment opportunities with BSCS Science Learning and enjoy a flexible and inclusive work environment."
           canonical="https://bscs.org/connect/employment-opportunities/"
         />
-        <Row style={{ marginBottom: '2rem' }}>
-          <Col>
+        <Row style={{ marginBottom: '2rem' }} className="d-flex flex-wrap-reverse">
+          <Col md={8} lg={9}>
             <p>
               Interested in joining our team at BSCS Science Learning? Browse employment opportunities posted below!
             </p>
@@ -33,9 +34,18 @@ const EmploymentOpportunitiesPage = (props) => {
               Not seeing a job opening that aligns with your qualifications? If you're a science educator or science education researcher interested in working with us, please contact BSCS Careers.
               {/* send your resume and a brief bio to careers@bscs.org. We'll be happy to keep your information on file. */}
             </p>
-            <SpecificContactForm sendto="BSCS Careers">
-              <Button variant="outline-secondary">Contact BSCS Careers</Button>
-            </SpecificContactForm>
+          </Col>
+          <Col md={4} lg={3} className="justify-content-center">
+            <Card className="mb-4">
+              <Card.Body className="d-flex justify-content-center">
+                <Card.Title></Card.Title>
+                <Card.Text style={{fontSize: '1rem'}}>
+                </Card.Text>
+                <SpecificContactForm sendto="BSCS Careers">
+                  <Button variant="outline-secondary">Contact BSCS Careers</Button>
+                </SpecificContactForm>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
