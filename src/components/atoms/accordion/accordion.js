@@ -34,7 +34,7 @@ const Accordion = class extends Component {
   //         expanded: !prevState.accordionPanels[key].expanded
   //       },
   //     },
-  //   }), 
+  //   }),
   //   function () {
   //     console.log(key)
   //     console.log(this.state.accordionPanels[key].expanded)
@@ -51,10 +51,22 @@ const Accordion = class extends Component {
     collapseID: ""
   }
 
-  toggleCollapse = (collapseID) => {
+  toggleCollapse = (collapseID, id) => {
     this.setState(prevState => ({
       collapseID: prevState.collapseID !== collapseID ? collapseID : ""
     }))
+    setTimeout(() => {
+      const element = document.getElementById(id)
+      const elementRect = element.getBoundingClientRect()
+      const absoluteElementTop = elementRect.top + window.pageYOffset
+      // const middle = absoluteElementTop - (window.innerHeight / 2)
+      const top = absoluteElementTop
+      window.scrollTo({
+        left: 0,
+        top: top,
+        behavior: 'smooth'
+      })
+    }, 700)
   }
 
   componentDidMount() {
@@ -89,9 +101,10 @@ const Accordion = class extends Component {
       <div className="accordion" id="accordion">
         { this.props.panels.map((panel, index) => {
           return(
-            <div 
+            <div
               className="card accordion-card"
               key={index}
+              id={`id${index}`}
             >
               <button
                 className="btn btn-link accordion-button"
@@ -100,7 +113,7 @@ const Accordion = class extends Component {
                 data-target={`#collapse${index}`}
                 aria-expanded="true"
                 aria-controls={`collapse${index}`}
-                onClick={() => this.toggleCollapse(`collapse${index}`)}
+                onClick={() => this.toggleCollapse(`collapse${index}`, `id${index}`)}
               >
                 <div className="d-flex">
                   <div className="mr-auto">
@@ -130,9 +143,9 @@ const Accordion = class extends Component {
                 id={`collapse${index}`}
                 className={
                   collapseID === `collapse${index}`
-                  ? 
-                  'collapse accordionCollapse show' 
-                  : 
+                  ?
+                  'collapse accordionCollapse show'
+                  :
                   'collapse accordionCollapse'
                 }
                 style={ styles[index] }
