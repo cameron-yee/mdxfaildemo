@@ -10,7 +10,9 @@ siderbarText: ''
 siderbarTitle: ''
 sidebarContactsText: Contact us for more information.
 sidebarContacts:
-  - Ashley Whitaker
+  - contact:
+      person: Ashley Whitaker
+      infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
 type: Teacher Professional Learning

@@ -10,11 +10,21 @@ cardDescription: >-
   February 12, 1809. The day is used to highlight Darwin's contributions to
   science and to promote science in general.
 sidebarContacts:
-  - Lauren Novo
+  - contact:
+      person: Lauren Novo
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 1
 page: news
 ---
+
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+
+import dannySig from 'images/signatures/daniel-edelson-signature.svg'
+import richSig from 'images/signatures/rich-cardullo-signature.svg'
+
 Dear Friend,
 
 Every year on Darwin Day, BSCS Science Learning celebrates the profound impact of Charles Darwin’s theory of evolution. Nearly 140 years after his death, Darwin’s contributions to science remain significant, and his name is recognizable around the world.
@@ -32,3 +42,28 @@ _**Rosalind Franklin** played a crucial but unsung role in the discovery of DNA�
 As BSCS reflects on these stories, we remain focused on pursuing a more equitable, inclusive, and just future for science learning. We envision a society in which all learners have access to a high-quality science education, all learners are empowered to use science effectively in their lives, and all learners are both acknowledged and celebrated.
 
 We appreciate your support as we continue working toward this future.
+
+<Container className="mt-5">
+  <Row>
+    <Col sm={6}>
+      <img src={dannySig} alt="Daniel C. Edelson signature" />
+    </Col>
+    <Col sm={6} className="d-none d-sm-block">
+      <img src={richSig} alt="Rich Cardullo signature" />
+    </Col>
+    <Col className="d-block d-sm-none">
+      <p>Daniel C. Edelson<br />BSCS Executive Director</p>
+    </Col>
+  </Row>
+  <Row>
+    <Col sm={6} className="d-none d-sm-block">
+      <p>Daniel C. Edelson<br />BSCS Executive Director</p>
+    </Col>
+    <Col className="d-block d-sm-none mt-3">
+      <img src={richSig} alt="Rich Cardullo signature" />
+    </Col>
+    <Col sm={6}>
+      <p>Rich Cardullo<br />Chair, BSCS Board of Directors</p>
+    </Col>
+  </Row>
+</Container>

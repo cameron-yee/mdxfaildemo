@@ -43,14 +43,23 @@ collections:
                 label: Resource
                 widget: object
                 fields:
-                  - { name: url, label: URL, widget: string }
                   - { name: buttonText, label: Button Text, widget: string }
                   - { name: external, label: External, widget: boolean, default: true }
+                  - { name: text, label: Text, widget: string, required: false }
+                  - { name: url, label: URL, widget: string }
             required: false
-          - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-            field: { label: Contact, name: contact, widget: string },
+          - name: sidebarContacts
+            label: Sidebar Contact People
+            widget: list
+            fields:
+              - name: contact
+                label: Contact
+                widget: object
+                fields:
+                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                  - { name: person, label: Person, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
             required: false
-          }
           - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: additionalTags, label: Additional Tags, widget: list, required: false }
@@ -81,14 +90,23 @@ collections:
                 label: Resource
                 widget: object
                 fields:
-                  - { name: url, label: URL, widget: string }
                   - { name: buttonText, label: Button Text, widget: string }
                   - { name: external, label: External, widget: boolean, default: true }
+                  - { name: text, label: Text, widget: string, required: false }
+                  - { name: url, label: URL, widget: string }
             required: false
-          - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-            field: { label: Contact, name: contact, widget: string },
+          - name: sidebarContacts
+            label: Sidebar Contact People
+            widget: list
+            fields:
+              - name: contact
+                label: Contact
+                widget: object
+                fields:
+                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                  - { name: person, label: Person, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
             required: false
-          }
           - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: customTitle, label: Custom Title, widget: boolean, default: false }
@@ -122,14 +140,24 @@ collections:
                 label: Resource
                 widget: object
                 fields:
-                  - { name: url, label: URL, widget: string }
                   - { name: buttonText, label: Button Text, widget: string }
                   - { name: external, label: External, widget: boolean, default: true }
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-          - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-            field: { label: Contact, name: contact, widget: string },
+                  - { name: text, label: Text, widget: string, required: false }
+                  - { name: url, label: URL, widget: string }
             required: false
-          }
+          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+          - name: sidebarContacts
+            label: Sidebar Contact People
+            widget: list
+            fields:
+              - name: contact
+                label: Contact
+                widget: object
+                fields:
+                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                  - { name: person, label: Person, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
+            required: false
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
           - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
@@ -158,13 +186,22 @@ collections:
                 label: Resource
                 widget: object
                 fields:
-                  - { name: url, label: URL, widget: string }
                   - { name: buttonText, label: Button Text, widget: string }
                   - { name: external, label: External, widget: boolean, default: true }
-          - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-            field: { label: Contact, name: contact, widget: string },
+                  - { name: text, label: Text, widget: string, required: false }
+                  - { name: url, label: URL, widget: string }
+          - name: sidebarContacts
+            label: Sidebar Contact People
+            widget: list
+            fields:
+              - name: contact
+                label: Contact
+                widget: object
+                fields:
+                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                  - { name: person, label: Person, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
             required: false
-          }
           - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
           - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
           - { name: additionalTags, label: Additional Tags, widget: string, required: false }
@@ -232,13 +269,22 @@ collections:
               label: Resource
               widget: object
               fields:
-                - { name: url, label: URL, widget: string }
                 - { name: buttonText, label: Button Text, widget: string }
                 - { name: external, label: External, widget: boolean, default: true }
-        - { name: sidebarContacts, label: Sidebar Contact People, widget: list,
-          field: { label: Contact, name: contact, widget: string },
-          required: false
-        }
+                - { name: text, label: Text, widget: string, required: false }
+                - { name: url, label: URL, widget: string }
+          - name: sidebarContacts
+            label: Sidebar Contact People
+            widget: list
+            fields:
+              - name: contact
+                label: Contact
+                widget: object
+                fields:
+                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                  - { name: person, label: Person, widget: string }
+                  - { name: text, label: Text, widget: string, required: false }
+            required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }

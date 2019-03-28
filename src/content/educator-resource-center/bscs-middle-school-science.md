@@ -23,9 +23,12 @@ gradeLevel:
   - Middle
 sortOrder: 11
 sidebarContactsTitle: Registration
-sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
+# sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
 sidebarContacts:
-  - Cameron Yee
+  - contact:
+      person: Cameron Yee
+      infoat: false
+      text: Contact Cameron Yee to Register for BSCS Middle School Science.
 page: educator-resource-center
 ---
 

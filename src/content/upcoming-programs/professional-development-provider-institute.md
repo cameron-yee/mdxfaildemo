@@ -10,8 +10,12 @@ siderbarText: ''
 siderbarTitle: Sign up now
 sidebarContactsText: ''
 sidebarContacts:
-  - Ashley Whitaker
-  - Jody Bintz
+  - contact:
+      person: Ashley Whitaker
+      infoat: false
+  - contact:
+      person: Jody Bintz
+      infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
 image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/woman-writing.jpg

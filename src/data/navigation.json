@@ -149,6 +149,12 @@
         "iconClass": "",
         "path": "/connect/employment-opportunities/",
         "onClick": null
+      },
+      {
+        "itemTitle": "Donate",
+        "iconClass": "",
+        "path": "/donate/",
+        "onClick": null
       }
     ]
   }

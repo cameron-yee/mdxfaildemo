@@ -176,11 +176,11 @@ const panels = [
             </ul>
           </li>
         </ul>
-        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Susan Kowalski and Chris Wilson, to discuss opportunities to work together:</p>
+        <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Sue Kowalski and Chris Wilson, to discuss opportunities to work together:</p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-4">
-            <SpecificContactForm sendto="Susan Kowalski" infoat="true">
-              <Button variant="outline-secondary">Contact Susan Kowalski</Button>
+            <SpecificContactForm sendto="Sue Kowalski" infoat="true">
+              <Button variant="outline-secondary">Contact Sue Kowalski</Button>
             </SpecificContactForm>
           </div>
           <div className="mr-auto">

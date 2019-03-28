@@ -11,7 +11,9 @@ siderbarText: ''
 siderbarTitle: Sign up now
 sidebarContactsText: ''
 sidebarContacts:
-  - Ashley Whitaker
+  - contact:
+      person: Ashley Whitaker
+      infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
 image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/coffee-mug.jpg

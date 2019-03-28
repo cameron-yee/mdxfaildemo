@@ -13,7 +13,9 @@ sidebarURLs:
 
 sidebarContactsText: Questions?
 sidebarContacts:
-  - Lauren Novo
+  - contact:
+      person: Lauren Novo
+      infoat: false
 page: news
 ---
 Dear Friends,

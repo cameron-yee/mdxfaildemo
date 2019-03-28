@@ -10,7 +10,15 @@ seoLang: en-us
 sidebarContactsTitle: ""
 sidebarContactsText: Questions?
 sidebarContacts:
-  - Lauren Novo
+  - contact:
+      person: Lauren Novo
+      infoat: false
+sidebarURLs:
+  - resource:
+      buttonText: Access Report
+      external: false
+      text: "The report is freely available:"
+      url: /resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/
 page: news
 additionalTags: ""
 ---
@@ -35,9 +43,9 @@ The report is organized around a framework of 12 valued scientific and education
 
 “This report is an exciting next step for utilizing citizen science inside and outside the classroom,” said Jason Morris, senior program officer, Environmental Education at the Pisces Foundation. “The report shares real world examples that strongly suggest citizen science projects can incorporate high quality science while achieving the educational outcomes that equip our kids with the environmental know-how they need to create a sustainable world.”
 
-The report is freely available here:
+<!-- The report is freely available here: -->
 
-<Link className="btn btn-outline-secondary mb-4" target="_blank" to="/resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/">Access Report</Link>
+<!-- <Link className="btn btn-outline-secondary mb-4" target="_blank" to="/resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/">Access Report</Link> -->
 
 For more information, please contact: <SpecificContactForm sendto="Lauren Novo">Lauren Novo</SpecificContactForm>
 

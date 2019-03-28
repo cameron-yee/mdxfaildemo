@@ -17,8 +17,12 @@ alt: MBER Icon
 sidebarTitle: ''
 sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
-  - Chris Wilson
-  - Molly Stuhlsatz
+  - contact:
+      person: Chris Wilson
+      infoat: false
+  - contact:
+      person: Molly Stuhlsatz
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 9
 page: rd-programs
