@@ -143,7 +143,8 @@ const JoinEmailFormModal = class extends Component {
     ||
     (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
     ||
-    (/^[^-][\d()-+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+    // eslint-disable-next-line
+    (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
     &&
     (input_elem.value !== (undefined || ''))) //Phone # may be omitted
     ?
@@ -189,7 +190,8 @@ const JoinEmailFormModal = class extends Component {
     let data = {"email": this.state.email}
 
     axios({
-      url: 'http://127.0.0.1:8888/check-if-contact-exists',
+      // url: 'http://127.0.0.1:8888/check-if-contact-exists',
+      url: 'https://pymail.bscs.org/check-if-contact-exists',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -241,7 +243,8 @@ const JoinEmailFormModal = class extends Component {
 
     axios({
       //Also enrolls them in eCommunity upon contact creation
-      url: 'http://127.0.0.1:8888/create-contact',
+      // url: 'http://127.0.0.1:8888/create-contact',
+      url: 'https://pymail.bscs.org/create-contact',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -280,7 +283,8 @@ const JoinEmailFormModal = class extends Component {
     }
 
     axios({
-      url: 'http://127.0.0.1:8888/add-contact-to-email-list',
+      // url: 'http://127.0.0.1:8888/add-contact-to-email-list',
+      url: 'https://pymail.bscs.org/add-contact-to-email-list',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -319,7 +323,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>First Name</Form.Label>
+                <Form.Label>First Name<span style={{color: 'red'}}>*</span></Form.Label>
                 <Form.Control
                   id="first-name-input"
                   size="sm"
@@ -337,7 +341,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col md={12}>
               <Form.Group>
-                <Form.Label>Last Name</Form.Label>
+                <Form.Label>Last Name<span style={{color: 'red'}}>*</span></Form.Label>
                 <Form.Control
                   id="last-name-input"
                   type="text"
@@ -355,7 +359,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email<span style={{color: 'red'}}>*</span></Form.Label>
                 <Form.Control
                   id="email-list-input"
                   type="email"
@@ -371,8 +375,8 @@ const JoinEmailFormModal = class extends Component {
               </Form.Group>
             </Col>
             <Col xs={12}>
-              {/* <hr style={{borderColor: '#293476'}} /> */}
-              <p><strong>Optional Fields</strong></p>
+              <hr />
+              <h4 className="mb-4" style={{fontWeight: '300'}}><strong>Optional Fields</strong></h4>
             </Col>
             <Col xs={6}>
               <Form.Group>

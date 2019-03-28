@@ -93,7 +93,8 @@ const panels = [
         </p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-auto">
-            <SpecificContactForm sendto="Lindsey Mohan">
+            {/* <SpecificContactForm sendto="Lindsey Mohan" infoat="true"> */}
+            <SpecificContactForm sendto="Cameron Yee" infoat="false">
               <Button variant="outline-secondary">Contact Lindsey Mohan</Button>
             </SpecificContactForm>
           </div>
@@ -132,7 +133,7 @@ const panels = [
         <p style={{ marginBottom: '2rem' }}>Please contact BSCS Associate Director for Strategic Partnerships &amp; Professional Learning, Jody Bintz, to discuss opportunities to work together:</p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-auto">
-            <SpecificContactForm sendto="Jody Bintz">
+            <SpecificContactForm sendto="Jody Bintz" infoat="true">
               <Button variant="outline-secondary">Contact Jody Bintz</Button>
             </SpecificContactForm>
           </div>
@@ -179,12 +180,12 @@ const panels = [
         <p style={{ marginBottom: '2rem' }}>Please contact BSCS Research Division Directors, Susan Kowalski and Chris Wilson, to discuss opportunities to work together:</p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-4">
-            <SpecificContactForm sendto="Susan Kowalski">
+            <SpecificContactForm sendto="Susan Kowalski" infoat="true">
               <Button variant="outline-secondary">Contact Susan Kowalski</Button>
             </SpecificContactForm>
           </div>
           <div className="mr-auto">
-            <SpecificContactForm sendto="Chris Wilson">
+            <SpecificContactForm sendto="Chris Wilson" infoat="true">
               <Button variant="outline-secondary">Contact Chris Wilson</Button>
             </SpecificContactForm>
           </div>

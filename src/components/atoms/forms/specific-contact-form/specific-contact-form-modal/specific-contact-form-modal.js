@@ -27,7 +27,7 @@ const SpecificContactFormModal = class extends Component {
       notificationShow: false,
       sent: false
     }
-    
+
     this.cancelToken = axios.CancelToken.source()
   }
 
@@ -88,13 +88,14 @@ const SpecificContactFormModal = class extends Component {
     ||
     (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
     ||
-    (/^[^-][\d()-+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+    // eslint-disable-next-line
+    (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
     &&
     (input_elem.value !== (undefined || ''))) //Phone # may be omitted
     ?
     this.setState({phone: 'errors'})
     :
-    this.setState({phone: input_elem.value}) 
+    this.setState({phone: input_elem.value})
   }
 
   blurPhone = (e) => {
@@ -118,13 +119,15 @@ const SpecificContactFormModal = class extends Component {
     this.setState({loading: true})
 
     let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "sendto": this.props.sendto}
-    // if(document.getElementById('sc-file-input')) {
-    //   data["files"] = document.getElementById('sc-file-input').files
-    // }
+
+    if(this.props.infoat) {
+      data["infoat"] = this.props.infoat === "true"
+    }
 
     console.log(data)
     axios({
-      url: 'http://127.0.0.1:8888/post-specific-form',
+      // url: 'http://127.0.0.1:8888/post-specific-form',
+      url: 'https://pymail.bscs.org/post-specific-form',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -143,7 +146,7 @@ const SpecificContactFormModal = class extends Component {
       }
     })
   }
-  
+
   render() {
     return (
       <Modal
@@ -265,7 +268,7 @@ const SpecificContactFormModal = class extends Component {
                   <Form.Label>Upload Files</Form.Label>
                   <Form.Control
                     id="sc-file-input"
-                    type="file" 
+                    type="file"
                     multiple={true}
                   />
                   <Form.Control.Feedback type="invalid">

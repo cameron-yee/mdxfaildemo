@@ -28,7 +28,7 @@ const GeneralContactFormModal = class extends Component {
       notificationShow: false,
       sent: false
     }
-    
+
     this.cancelToken = axios.CancelToken.source()
   }
 
@@ -88,13 +88,14 @@ const GeneralContactFormModal = class extends Component {
     ||
     (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
     ||
-    (/^[^-][\d()-+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+    // eslint-disable-next-line
+    (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
     &&
     (input_elem.value !== (undefined || ''))) //Phone # may be omitted
     ?
     this.setState({phone: 'errors'})
     :
-    this.setState({phone: input_elem.value}) 
+    this.setState({phone: input_elem.value})
   }
 
   blurPhone = (e) => {
@@ -121,7 +122,8 @@ const GeneralContactFormModal = class extends Component {
 
     // console.log(data)
     axios({
-      url: 'http://127.0.0.1:8888/post-contact-form',
+      // url: 'http://127.0.0.1:8888/post-contact-form',
+      url: 'https://pymail.bscs.org/post-contact-form',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -140,7 +142,7 @@ const GeneralContactFormModal = class extends Component {
       }
     })
   }
-  
+
   render() {
     return (
       <Modal
@@ -156,7 +158,7 @@ const GeneralContactFormModal = class extends Component {
       </Modal.Header>
       <Modal.Body>
         <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-          Your message has been receieved!
+          Your message has been received!
         </Alert>
         <Form>
           <Row>
