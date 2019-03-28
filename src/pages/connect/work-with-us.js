@@ -93,8 +93,7 @@ const panels = [
         </p>
         <div className="d-flex" style={{ marginBottom: '2rem' }}>
           <div className="mr-auto">
-            {/* <SpecificContactForm sendto="Lindsey Mohan" infoat="true"> */}
-            <SpecificContactForm sendto="Cameron Yee" infoat="false">
+            <SpecificContactForm sendto="Lindsey Mohan" infoat="true">
               <Button variant="outline-secondary">Contact Lindsey Mohan</Button>
             </SpecificContactForm>
           </div>
