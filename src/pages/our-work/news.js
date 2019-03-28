@@ -85,11 +85,10 @@ const NewsPage = class extends Component {
                     // let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     // data_filter['excerpt'] = edge.node.excerpt
                     return(
-                      <React.Fragment>
+                      <React.Fragment key={edge.node.id}>
                           <Col
                             xs={12}
                             id="parent"
-                            key={edge.node.id}
                           >
                           {index !== 0 &&
                             <hr />

@@ -111,15 +111,30 @@ const ReportsTemplate = class extends Component {
                             </Card.Text>
                           }
                           {this.resource.sidebarContacts &&
-                            this.resource.sidebarContacts.map(contact => {
+                            this.resource.sidebarContacts.map((contact, index) => {
                               return (
-                                <div key={contact} className="d-flex justify-content-lg-center">
-                                  <div className="p-2">
-                                    <SpecificContactForm sendto={contact}>
-                                      <Button size="sm" variant="outline-primary">Contact {contact}</Button>
-                                    </SpecificContactForm>
+                                <React.Fragment key={`${contact['contact']['person']}-${index}`}>
+                                  {contact['contact']['text'] &&
+                                    <Card.Text style={{fontSize: '1rem'}}>
+                                      {contact['contact']['text']}
+                                    </Card.Text>
+                                  }
+                                  <div class="d-flex justify-content-center">
+                                    <div className="p-2">
+                                      <SpecificContactForm
+                                        sendto={contact['contact']['person']}
+                                        infoat={contact['contact']['infoat']}
+                                      >
+                                        <Button
+                                          size="sm"
+                                          variant="outline-primary"
+                                        >
+                                          Contact {contact['contact']['person']}
+                                        </Button>
+                                      </SpecificContactForm>
+                                    </div>
                                   </div>
-                                </div>
+                                </React.Fragment>
                               )
                             })
                           }
@@ -165,7 +180,13 @@ export const query = graphql`
             url
           }
         },
-        sidebarContacts,
+        sidebarContacts {
+          contact {
+            infoat,
+            person,
+            text
+          }
+        },
         sidebarContactsText,
         sidebarContactsTitle,
         title

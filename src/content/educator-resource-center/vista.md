@@ -19,7 +19,9 @@ alt: >-
 template: Image Left
 courseId: 0
 sidebarContacts:
-  - Cameron Yee
+  - contact:
+      person: Cameron Yee
+      infoat: false
 sidebarContactsText: Contact Cameron Yee to register for ViSTA.
 sidebarContactsTitle: Registration
 sortOrder: 10

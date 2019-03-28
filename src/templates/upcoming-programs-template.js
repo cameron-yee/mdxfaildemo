@@ -111,16 +111,31 @@ const UpcomingProgramsTemplate = class extends Component {
                             {this.program.sidebarContactsText}
                           </Card.Text>
                         }
-                        { this.program.sidebarContacts &&
-                          this.program.sidebarContacts.map(contact => {
-                            return(
-                              <div key={contact} className="d-flex justify-content-center">
-                                <div className="p-2 w-100">
-                                  <SpecificContactForm sendto={contact}>
-                                    <Button size="sm" variant="outline-primary">Contact {contact}</Button>
-                                  </SpecificContactForm>
+                        {this.resource.sidebarContacts &&
+                          this.resource.sidebarContacts.map((contact, index) => {
+                            return (
+                              <React.Fragment key={`${contact['contact']['person']}-${index}`}>
+                                {contact['contact']['text'] &&
+                                  <Card.Text style={{fontSize: '1rem'}}>
+                                    {contact['contact']['text']}
+                                  </Card.Text>
+                                }
+                                <div class="d-flex justify-content-center">
+                                  <div className="p-2">
+                                    <SpecificContactForm
+                                      sendto={contact['contact']['person']}
+                                      infoat={contact['contact']['infoat']}
+                                    >
+                                      <Button
+                                        size="sm"
+                                        variant="outline-primary"
+                                      >
+                                        Contact {contact['contact']['person']}
+                                      </Button>
+                                    </SpecificContactForm>
+                                  </div>
                                 </div>
-                              </div>
+                              </React.Fragment>
                             )
                           })
                         }
@@ -155,7 +170,13 @@ export const query = graphql`
         seoCanonicalUrl,
         seoDescription,
         seoLang,
-        sidebarContacts,
+        sidebarContacts {
+          contact {
+            infoat,
+            person,
+            text
+          }
+        },
         sidebarContactsText,
         sidebarContactsTitle,
         sidebarURLs {

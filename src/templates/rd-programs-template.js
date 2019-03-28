@@ -66,13 +66,13 @@ const RDProgramsTemplate = class extends Component {
                         { this.resource.sidebarURLs &&
                           this.resource.sidebarURLs.map((resource, index) => {
                             return (
-                              <>
+                              <React.Fragment key={`erc-sidebarurl-${index}`}>
                                 { resource['resource']['text'] &&
                                 <Card.Text style={{fontSize: '1rem'}}>
                                   {resource['resource']['text']}
                                 </Card.Text>
                                 }
-                                <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
+                                <div className="d-flex justify-content-lg-center">
                                   { resource['resource']['external'] &&
                                     <a
                                       className="btn btn-outline-secondary"
@@ -94,7 +94,7 @@ const RDProgramsTemplate = class extends Component {
                                     </Link>
                                   }
                                 </div>
-                              </>
+                              </React.Fragment>
                             )
                           })
                         }
@@ -113,15 +113,30 @@ const RDProgramsTemplate = class extends Component {
                             </Card.Text>
                           }
                           {this.resource.sidebarContacts &&
-                            this.resource.sidebarContacts.map(contact => {
+                            this.resource.sidebarContacts.map((contact, index) => {
                               return (
-                                <div key={contact} class="d-flex justify-content-center">
-                                  <div className="p-2">
-                                    <SpecificContactForm sendto={contact}>
-                                      <Button size="sm" variant="outline-primary">Contact {contact}</Button>
-                                    </SpecificContactForm>
+                                <React.Fragment key={`${contact['contact']['person']}-${index}`}>
+                                  {contact['contact']['text'] &&
+                                    <Card.Text style={{fontSize: '1rem'}}>
+                                      {contact['contact']['text']}
+                                    </Card.Text>
+                                  }
+                                  <div class="d-flex justify-content-center">
+                                    <div className="p-2">
+                                      <SpecificContactForm
+                                        sendto={contact['contact']['person']}
+                                        infoat={contact['contact']['infoat']}
+                                      >
+                                        <Button
+                                          size="sm"
+                                          variant="outline-primary"
+                                        >
+                                          Contact {contact['contact']['person']}
+                                        </Button>
+                                      </SpecificContactForm>
+                                    </div>
                                   </div>
-                                </div>
+                                </React.Fragment>
                               )
                             })
                           }
@@ -168,7 +183,13 @@ export const query = graphql`
         },
         sidebarText,
         sidebarTitle,
-        sidebarContacts,
+        sidebarContacts {
+          contact {
+            infoat,
+            person,
+            text
+          }
+        },
         sidebarContactsText,
         sidebarContactsTitle,
         title,

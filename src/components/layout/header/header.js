@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -36,7 +36,7 @@ export default class Header extends Component {
       <>
         <Container fluid>
           <div className="d-flex">
-            <div className="p-2 flex-grow-1">
+            <div className="p-2 flex-grow-1 mt-4">
               <Link to="/">
                 <img
                   className="bscsLogo img-fluid"
@@ -48,12 +48,12 @@ export default class Header extends Component {
                 />
               </Link>
             </div>
-            <div className="p-2 align-self-center d-none d-sm-inline-block">
+            {/* <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
             </div>
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
-            </div>
+            </div> */}
           </div>
         </Container>
         <Container fluid>

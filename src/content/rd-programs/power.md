@@ -22,7 +22,9 @@ sidebarURLs:
       url: 'https://journals.sagepub.com/doi/10.1177/2332858418791991'
 sidebarContactsText: 'For more information, please contact Sue Kowalski.'
 sidebarContacts:
-  - Sue Kowalski
+  - contact:
+      person: Sue Kowalski
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 4
 page: rd-programs

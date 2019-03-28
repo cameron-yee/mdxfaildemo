@@ -13,7 +13,9 @@ image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
 sidebarContactsText: 'For more information, please contact Anne Westbrook.'
 sidebarContacts:
-  - Anne Westbrook
+  - contact:
+      person: Anne Westbrook
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 7
 page: rd-programs

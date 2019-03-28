@@ -10,7 +10,9 @@ seoLang: en-us
 sidebarContactsTitle: ""
 sidebarContactsText: Questions?
 sidebarContacts:
-  - Lauren Novo
+  - contact:
+      person: Lauren Novo
+      infoat: false
 sidebarURLs:
   - resource:
       buttonText: Access Report
