@@ -72,28 +72,35 @@ const EducatorResourceCenterTemplate = class extends Component {
                           { this.resource.sidebarURLs &&
                             this.resource.sidebarURLs.map((resource, index) => {
                               return (
-                                <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
-                                  { resource['resource']['external'] &&
-                                    <a
-                                      className="btn btn-outline-secondary"
-                                      href={resource['resource']['url']}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      style={{
-                                        marginTop: '1rem',
-                                        marginBottom: '1rem'
-                                      }}
-                                    >
-                                      {resource['resource']['buttonText']}
-                                      &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
-                                    </a>
+                                <React.Fragment key={`erc-sidebarurl-${index}`}>
+                                  { resource['resource']['text'] &&
+                                  <Card.Text style={{fontSize: '1rem'}}>
+                                    {resource['resource']['text']}
+                                  </Card.Text>
                                   }
-                                  { !resource['resource']['external'] &&
-                                    <Link to={resource['resource']['url']}>
-                                      <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
-                                    </Link>
-                                  }
-                                </div>
+                                  <div className="d-flex justify-content-lg-center">
+                                    { resource['resource']['external'] &&
+                                      <a
+                                        className="btn btn-outline-secondary"
+                                        href={resource['resource']['url']}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                          marginTop: '1rem',
+                                          marginBottom: '1rem'
+                                        }}
+                                      >
+                                        {resource['resource']['buttonText']}
+                                        &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                                      </a>
+                                    }
+                                    { !resource['resource']['external'] &&
+                                      <Link to={resource['resource']['url']}>
+                                        <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
+                                      </Link>
+                                    }
+                                  </div>
+                                </React.Fragment>
                               )
                             })
                           }
@@ -167,6 +174,7 @@ export const query = graphql`
           resource {
             buttonText,
             external,
+            text,
             url
           }
         },
