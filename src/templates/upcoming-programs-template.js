@@ -111,8 +111,8 @@ const UpcomingProgramsTemplate = class extends Component {
                             {this.program.sidebarContactsText}
                           </Card.Text>
                         }
-                        {this.resource.sidebarContacts &&
-                          this.resource.sidebarContacts.map((contact, index) => {
+                        {this.program.sidebarContacts &&
+                          this.program.sidebarContacts.map((contact, index) => {
                             return (
                               <React.Fragment key={`${contact['contact']['person']}-${index}`}>
                                 {contact['contact']['text'] &&

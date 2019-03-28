@@ -19,8 +19,8 @@ type: Teacher Professional Learning
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
 
-<br>
-</br>
+<br />
+<br />
 
 ##### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
@@ -28,8 +28,8 @@ NextGen TIME includes a suite of tools and processes designed to guide your deep
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
 
-<br>
-</br>
+<br />
+<br />
 
 ##### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
@@ -66,8 +66,8 @@ Saturday, April 13, 2 - 3 p.m.
 
 Saturday, April 13, 3:30 p.m. - 4:30 p.m.
 
-<br>
-</br>
+<br />
+<br />
 
 <a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
 
