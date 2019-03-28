@@ -39,8 +39,7 @@ const IndexPage = (props) => (
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
-              {/* <Card.Title>Card Title</Card.Title> */}
-              <Card.Text className="lead">
+              <Card.Text style={{ fontSize: '1.3rem' }}>
                 We develop science instructional materials for students.
               </Card.Text>
             </Card.Body>
@@ -70,8 +69,7 @@ const IndexPage = (props) => (
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
-              {/* <Card.Title>Card Title</Card.Title> */}
-              <Card.Text className="lead">
+              <Card.Text style={{ fontSize: '1.3rem' }}>
                 We provide professional learning programs for science teachers.
               </Card.Text>
             </Card.Body>
@@ -101,8 +99,7 @@ const IndexPage = (props) => (
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
-              {/* <Card.Title>Card Title</Card.Title> */}
-              <Card.Text className="lead">
+              <Card.Text style={{ fontSize: '1.3rem' }}>
                 We spearhead leadership development programs for schools and districts.
               </Card.Text>
             </Card.Body>
@@ -132,8 +129,7 @@ const IndexPage = (props) => (
               backgroundColor='rgb(41, 52, 118)'
             />
             <Card.Body>
-              {/* <Card.Title>Card Title</Card.Title> */}
-              <Card.Text className="lead">
+              <Card.Text style={{ fontSize: '1.3rem' }}>
                 We conduct research on science teaching and learning.
               </Card.Text>
             </Card.Body>
