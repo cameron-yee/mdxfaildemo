@@ -1,17 +1,19 @@
 ---
 date: 2019-02-25T18:54:37.279Z
 title: 'The Biology Teacher’s Handbook, Fourth Edition'
-seoTitle: BSCS’s resource for biology teachers
-seoDescription: BSCS’s handbook includes teaching ideas and guidelines for middle, high school, and college biology educators.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/biology-teacher-handbook
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/biology-teacher-handbook'
+seoDescription: >-
+  BSCS’s handbook includes teaching ideas and guidelines for middle, high
+  school, and college biology educators.
 seoLang: en-us
 cardDescription: >-
   The Biology Teacher’s Handbook, Fourth Edition, is filled with valuable
   teaching ideas and guidelines for grades 6-12 and college biology educators.
 type: Classroom Instruction
 image: /assets/teachers-biology-handbook.jpg
-alt: PLACEHOLDER
+alt: >-
+  Front cover of "The Biology Teacher's Handbook, Fourth Edition" with a drawing
+  of a yellow flower and a green chameleon.
 template: Image Left
 courseId: 0
 discipline:
@@ -19,12 +21,12 @@ discipline:
 gradeLevel:
   - Middle
   - High
-sortOrder: 12
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://www.nsta.org/store/product_detail.aspx?id=10.2505/9780873552448
+      url: 'https://www.nsta.org/store/product_detail.aspx?id=10.2505/9780873552448'
+sortOrder: 12
 page: educator-resource-center
 ---
 Where has biology teaching been, and where is it going? How can I create a culture of scientific inquiry in my classroom? How do I teach controversial questions? Biology educators will discover the answers to these and other key questions in The Biology Teacher’s Handbook, Fourth Edition.
