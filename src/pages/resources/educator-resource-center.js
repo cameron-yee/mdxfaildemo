@@ -170,7 +170,7 @@ const EducatorResourceCenter = class extends Component {
                           type='rect'
                           ready={this.state.imagesLoaded}
                           // color='#E0E0E0'
-                          color='rgb(41, 52, 118)'
+                          color='rgb(205,205,205)'
                           showLoadingAnimation={true}
                           // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                           style={{
@@ -186,7 +186,8 @@ const EducatorResourceCenter = class extends Component {
                             variant="top"
                             style={{
                                 minHeight: '260.98px',
-                                backgroundColor: 'rgba(41, 52, 118, 1)',
+                                backgroundColor: 'rgba(205,205,205, .5)',
+                                // backgroundColor: 'rgba(41, 52, 118, 1)',
                                 // borderTopLeftRadius: '4px',
                                 // borderTopRightRadius: '4px',
                             }}

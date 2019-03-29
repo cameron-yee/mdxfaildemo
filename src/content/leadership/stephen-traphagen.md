@@ -14,7 +14,7 @@ sortOrder: 2
 ---
 
 ### *High School Biology & AP Biology Teacher*
-<a href="https://rmhs.d214.org/" target="_blank" rel="noopener noreferrer">Rolling Meadows High School</a>
+<a href="https://rmhs.d214.org/" target="_blank" rel="noopener noreferrer">Rolling Meadows High School&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
 
 **Stephen Traphagen**, M.Ed., is a biology and AP biology teacher at Rolling Meadows High School in Rolling Meadows, Illinois, and a Teaching Fellow with Knowles Science Teaching Foundation.
 

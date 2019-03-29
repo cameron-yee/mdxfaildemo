@@ -21,7 +21,7 @@ sidebarContacts:
       infoat: true
       person: Sue Kowalski
 sidebarContactsTitle: Questions?
-sortOrder: 3
+sortOrder: 5
 page: rd-programs
 ---
 Middle school science teachers are always searching for professional learning (PL) opportunities and classroom curricula that are NGSS  aligned. But time is limited, and high quality NGSS-aligned materials are scarce. That’s why BSCS Science Learning’s Three-Dimensional Teaching and Learning project, or 3D Middle School Science, is valuable.

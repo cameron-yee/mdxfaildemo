@@ -21,7 +21,6 @@ import rowImage from '../../queries/images/row-image'
 
 
 const WhatWeDoPage = (props) => {
-  console.log(props.data.image1)
   return (
     <Layout location={props.location}>
       <SEO
@@ -57,7 +56,7 @@ const WhatWeDoPage = (props) => {
               className="h-100"
               fluid={props.data.image1.childImageSharp.fluid}
               alt="male student holding an iPad that says 'Focus Question: What are the building blocks of living things?'"
-              backgroundColor='rgb(41, 52, 118)'
+              // backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
         </Row>
@@ -67,7 +66,7 @@ const WhatWeDoPage = (props) => {
               className="h-100"
               fluid={props.data.image2.childImageSharp.fluid}
               alt="teacher with long hair and denim jacket pointing at something on a desk with three female fifth-grade students"
-              backgroundColor='rgb(41, 52, 118)'
+              // backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
           <Col
@@ -100,7 +99,7 @@ const WhatWeDoPage = (props) => {
               className="h-100"
               fluid={props.data.image3.childImageSharp.fluid}
               alt="young girl with long brown hair, white sweatshirt, and safety goggles on her forehead looking at a vial in her left hand as she puts rocks inside of it"
-              backgroundColor='rgb(41, 52, 118)'
+              // backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
         </Row>
@@ -110,7 +109,7 @@ const WhatWeDoPage = (props) => {
               className="h-100"
               fluid={props.data.image4.childImageSharp.fluid}
               alt="young boy with glasses and blue hoodie scrunching his face while looking at a vial in his right hand"
-              backgroundColor='rgb(41, 52, 118)'
+              // backgroundColor='rgb(41, 52, 118)'
             />
           </Col>
           <Col
@@ -130,7 +129,7 @@ const WhatWeDoPage = (props) => {
           <Col xs={12} className="d-flex justify-content-center">
             <h3 className="p-2">Our Model for Transforming Science Education</h3>
           </Col>
-          <Col xs={12} className="d-flex justify-content-center">
+          <Col xs={12} lg={{span: 8, offset: 2}} className="d-flex justify-content-center">
             <div className="bscs-transforming-science-education-model-wrapper">
               <img src={BSCSTransformingScienceEducationModel} alt="BSCS’s four areas of work: Leadership Development, Teacher Professional Learning, Instructional Materials, and Research. Leadership Development is important for the state, district, and school levels, while Teacher Professional Learning and Instructional Materials are important for the classroom level. Research and innovation are involved in each area of work." />
             </div>
@@ -176,7 +175,7 @@ export default props => (
 
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
+    image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
       ...rowImage
     }
     image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {

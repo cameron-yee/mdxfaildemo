@@ -57,6 +57,8 @@ const Reports = class extends Component {
                             style={{
                               border: '1px solid rgba(41, 52, 118, .9)',
                               backgroundColor: 'rgba(41, 52, 118, .1)',
+                              // border: '1px solid rgba(94, 60, 124, .9)',
+                              // backgroundColor: 'rgba(94, 60, 124, .1)',
                             }}
                           >
                             <Card.Body>
@@ -64,6 +66,7 @@ const Reports = class extends Component {
                                 style={{
                                   marginBottom: '1.5rem',
                                   color: 'rgba(41, 52, 118, .9)'
+                                  // color: 'rgba(94, 60, 124, 1)'
                                 }}
                               >
                                 {edge.node.frontmatter.title}

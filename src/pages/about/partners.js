@@ -841,6 +841,16 @@ const panels = [
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
+          <li style={{ marginBottom: '.25rem' }}>
+            <a
+              href="https://wmich.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Western Michigan University
+              &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
+            </a>
+          </li>
         </ul>
       </>
     ,
@@ -882,16 +892,6 @@ const panels = [
           </li>
           <li style={{ marginBottom: '.25rem' }}>
             <a
-              href="https://www.bvsd.org/Pages/default.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Boulder Valley School District (Colorado)
-              &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
-            </a>
-          </li>
-          <li style={{ marginBottom: '.25rem' }}>
-            <a
               href="https://cps.edu/Pages/home.aspx"
               target="_blank"
               rel="noopener noreferrer"
@@ -902,31 +902,11 @@ const panels = [
           </li>
           <li style={{ marginBottom: '.25rem' }}>
             <a
-              href="https://www.d11.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Colorado Springs School District 11 (Colorado)
-              &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
-            </a>
-          </li>
-          <li style={{ marginBottom: '.25rem' }}>
-            <a
               href="https://www.dalton.org"
               target="_blank"
               rel="noopener noreferrer"
             >
               The Dalton School (New York)
-              &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
-            </a>
-          </li>
-          <li style={{ marginBottom: '.25rem' }}>
-            <a
-              href="https://www.dpsk12.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Denver Public Schools (Colorado)
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
             </a>
           </li>
@@ -967,16 +947,6 @@ const panels = [
               rel="noopener noreferrer"
             >
               Harrison School District 2 (Colorado)
-              &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
-            </a>
-          </li>
-          <li style={{ marginBottom: '.25rem' }}>
-            <a
-              href="https://www.jeffcopublicschools.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Jefferson County Public Schools (Colorado)
               &nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup>
             </a>
           </li>

@@ -13,7 +13,7 @@ seoLang: en-us
 ---
 
 ### *Professor*
-<a href="https://ed.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Graduate School of Education</a>
+<a href="https://ed.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford Graduate School of Education&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
 
 **Hilda Borko**, Ph.D., is a professor at Stanford University’s Graduate School of Education. Her research explores teacher cognition and the process of learning to teach, with an emphasis on changes in novice and experienced teachers' knowledge and beliefs about teaching, learning, subject matter, and classroom practices.
 

@@ -17,7 +17,7 @@ sidebarContacts:
       person: Anne Westbrook
       infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 7
+sortOrder: 10
 page: rd-programs
 ---
 Plants are all around us. They are essential to our existence. Yet despite their ubiquity, how many science teachers truly understand plant biology and know how to effectively teach it to their students?

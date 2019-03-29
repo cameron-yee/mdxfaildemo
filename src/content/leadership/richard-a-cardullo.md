@@ -18,7 +18,7 @@ sortOrder: 1
 ###  *Interim Vice Provost, Undergraduate Education*
 
 ### Undergraduate Education Professor
-<a href="https://www.ucr.edu/" target="_blank" rel="noopener noreferrer">University of California Riverside</a>
+<a href="https://www.ucr.edu/" target="_blank" rel="noopener noreferrer">University of California Riverside&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
 
 
 **Richard A. Cardullo**, Ph.D., is currently the Interim Vice Provost of Undergraduate Education, the Howard H Hays Chair of University Honors, and a Professor of Biology at the University of California, Riverside.

@@ -26,7 +26,7 @@ sidebarContacts:
       person: Sue Kowalski
       infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 4
+sortOrder: 3
 page: rd-programs
 ---
 What works best for teachers and students in science education interventions? Statistics can provide some insight—but only if interpreted in context. For instance, the way a study is conducted may impact the outcome, independent of the actual effectiveness of the intervention.
@@ -46,7 +46,7 @@ When planning a study, researchers can use the POWER calculator to determine how
 BSCS is continuing its research with a meta-analysis of 161 science education studies of teacher outcomes. New findings and a teacher-specific calculator will be made available soon.
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mb-5">
   <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
       <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />

@@ -17,7 +17,7 @@ sidebarContacts:
       person: Anne Westbrook
       infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 5
+sortOrder: 6
 page: rd-programs
 ---
 Health-related information from family, friends, social media, and the internet bombard our lives every day. We make decisions as consumers about questions such as these:

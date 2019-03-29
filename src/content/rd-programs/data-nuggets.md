@@ -25,7 +25,7 @@ sidebarContacts:
       person: Molly Stuhlsatz
       infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 10
+sortOrder: 8
 page: rd-programs
 ---
 What exactly does a scientist do? How does she collect information and make sense of it all?

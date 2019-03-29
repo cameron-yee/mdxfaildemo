@@ -83,6 +83,7 @@ const RDPrograms = class extends Component {
                 <ResourceCategories navigate={false} />
               </Row> */}
               {/* <hr /> */}
+              <p>Browse BSCS Science Learning's robust R&D Programs and active projects below.</p>
             </Container>
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
@@ -115,101 +116,178 @@ const RDPrograms = class extends Component {
                   this.programs.map((edge, index) => {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                     data_filter['excerpt'] = edge.node.excerpt
-                    return(
-                      <Col
-                        xs={10}
-                        md={6}
-                        lg={4}
-                        className="rrc-card-col"
-                        key={edge.node.id}
-                      >
-                        <Card
-                          id={`resource-${index}`}
-                          data-filter={JSON.stringify(data_filter)}
-                          data-type={edge.node.frontmatter.type}
-                          className="h-100"
-                          style={{
-                            borderColor: 'rgb(41, 52, 118)'
-                          }}
+                    if(edge.node.frontmatter.sortOrder < 5) {
+                      return(
+                        <Col
+                          xs={10}
+                          md={6}
+                          // lg={3}
+                          className="rrc-card-col"
+                          key={edge.node.id}
                         >
-                          <Card.Img
-                            variant="top"
-                            src={edge.node.frontmatter.image}
-                            alt={edge.node.frontmatter.alt}
-                            // onLoad={this.loaded}
-                            style={{ padding: '1rem 7rem 0' }}
-                            className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
-                          />
-                          {/* <div className="d-flex flex-row justify-content-center">
-                            <div className="dot d-inline-flex mr-2"></div>
-                            <div className="dot d-inline-flex mr-2"></div>
-                            <div className="dot d-inline-flex"></div>
-                          </div> */}
-                          <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
-                            <Card.Title
-                              style={{
-                                marginBottom: '1rem'
-                              }}
-                            >
-                              {edge.node.frontmatter.title}
-                            </Card.Title>
-                            <div className="d-flex">
-                              <div className="mr-auto mb-3">
-                                {
-                                  edge.node.frontmatter.areas.map((area, index) => {
-                                    const variants = {
-                                      "Teacher Professional Learning": "primary",
-                                      "Instructional Materials Development": "secondary",
-                                      "Research": "success",
-                                      "Leadership Development": "danger"
-                                    }
-                                    return(
-                                      <>
-                                        <span
-                                          key={`${edge.node.id}-area-${index}`}
-                                          className={`rd-pill badge badge-pill badge-${variants[area]}`}
-                                          style={{
-                                            marginRight: '.5rem',
-                                            fontSize: '.75rem',
-                                            fontWeight: '600'
-                                          }}
-                                        >
-                                          {area}
-                                        </span>
-                                        {/* <br /> */}
-                                      </>
-                                    )
-                                  })
-                                }
-                              </div>
-                            </div>
-                            <Card.Text>
-                              {edge.node.frontmatter.cardDescription}
-                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
-                            </Card.Text>
-                          </Card.Body>
-                          <Card.Footer
+                          <Card
+                            id={`resource-${index}`}
+                            data-filter={JSON.stringify(data_filter)}
+                            data-type={edge.node.frontmatter.type}
+                            className="h-100"
                             style={{
-                              background: 'white',
-                              borderTop: 'none',
-                              marginBottom: '.5rem'
+                              borderColor: 'rgb(41, 52, 118)'
                             }}
                           >
-                            <div className="d-flex">
-                              <div className="ml-auto align-self-end">
-                                <Link
-                                  to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                            {/* <div className="d-flex flex-row justify-content-center">
+                              <div className="dot d-inline-flex mr-2"></div>
+                              <div className="dot d-inline-flex mr-2"></div>
+                              <div className="dot d-inline-flex"></div>
+                            </div> */}
+                            {/* <Card.Img
+                              variant="top"
+                              // className="p-0"
+                              src={edge.node.frontmatter.image}
+                              alt={edge.node.frontmatter.alt}
+                              // onLoad={this.loaded}
+                              style={{ padding: '1rem 7rem 0', width: '30%' }}
+                              className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2 p-0"
+                            /> */}
+                            <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
+                              <div className="d-flex align-items-center mb-3">
+                                <img
+                                  // variant="top"
+                                  className="p-0 mr-3"
+                                  src={edge.node.frontmatter.image}
+                                  alt={edge.node.frontmatter.alt}
+                                  // onLoad={this.loaded}
+                                  style={{ padding: '1rem 7rem 0', width: '30%' }}
+                                  // className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2 p-0"
+                                />
+                                <Card.Title
+                                  style={{
+                                    marginBottom: '1rem'
+                                  }}
                                 >
-                                  <Button variant="outline-secondary">
-                                    Read More
-                                  </Button>
-                                </Link>
+                                  {edge.node.frontmatter.title}
+                                </Card.Title>
+                              </div>
+                              <div className="d-flex">
+                                <div className="mr-auto mb-3">
+                                  {
+                                    edge.node.frontmatter.areas.map((area, index) => {
+                                      const variants = {
+                                        "Teacher Professional Learning": "primary",
+                                        "Instructional Materials Development": "secondary",
+                                        "Research": "success",
+                                        "Leadership Development": "danger"
+                                      }
+                                      return(
+                                        <React.Fragment key={`${edge.node.id}-area-${index}`}>
+                                          <span
+                                            className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontSize: '.75rem',
+                                              fontWeight: '600'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                          {/* <br /> */}
+                                        </React.Fragment>
+                                      )
+                                    })
+                                  }
+                                </div>
+                              </div>
+                              <Card.Text>
+                                {edge.node.frontmatter.cardDescription}
+                                {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
+                              </Card.Text>
+                            </Card.Body>
+                            <Card.Footer
+                              style={{
+                                background: 'white',
+                                borderTop: 'none',
+                                marginBottom: '.5rem'
+                              }}
+                            >
+                              <div className="d-flex">
+                                <div className="ml-auto align-self-end">
+                                  <Link
+                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                  >
+                                    <Button variant="outline-secondary">
+                                      Read More
+                                    </Button>
+                                  </Link>
+                                </div>
+                              </div>
+                            </Card.Footer>
+                          </Card>
+                        </Col>
+                      )
+                    } else {
+                      return(
+                        <React.Fragment key={edge.node.id}>
+                            <Col
+                              xs={12}
+                              id="parent"
+                            >
+                            {index === 4 &&
+                              <React.Fragment>
+                                <br />
+                                <br />
+                              </React.Fragment>
+                            }
+                            {index !== 4 &&
+                              <hr />
+                            }
+                            <div
+                              id={`resource-${index}`}
+                              data-filter={JSON.stringify(data_filter)}
+                              data-type={edge.node.frontmatter.type}
+                            >
+                              <h3>{edge.node.frontmatter.title}</h3>
+                              <p>{edge.node.frontmatter.cardDescription}</p>
+                              <p>{!edge.node.frontmatter.cardDescription && edge.node.excerpt}</p>
+                              <div className="d-flex">
+                                <div className="mr-auto mb-3">
+                                  {
+                                    edge.node.frontmatter.areas.map((area, index) => {
+                                      const variants = {
+                                        "Teacher Professional Learning": "primary",
+                                        "Instructional Materials Development": "secondary",
+                                        "Research": "success",
+                                        "Leadership Development": "danger"
+                                      }
+                                      return(
+                                        <React.Fragment key={`${edge.node.id}-area-${index}`}>
+                                          <span
+                                            className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                            style={{
+                                              marginRight: '.5rem',
+                                              fontSize: '.75rem',
+                                              fontWeight: '600'
+                                            }}
+                                          >
+                                            {area}
+                                          </span>
+                                          {/* <br /> */}
+                                        </React.Fragment>
+                                      )
+                                    })
+                                  }
+                                </div>
+                                <div className="p-2 ml-auto button-wrapper">
+                                  <Link
+                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                  >
+                                    <Button variant="outline-secondary" style={{ width: '124px' }}>Read More</Button>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
-                          </Card.Footer>
-                        </Card>
-                      </Col>
-                    )
+                          </Col>
+                        </React.Fragment>
+                      )
+                    }
                   })
                 }
               </Row>

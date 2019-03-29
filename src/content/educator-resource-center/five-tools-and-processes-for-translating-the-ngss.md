@@ -11,7 +11,7 @@ cardDescription: >-
   work with teachers on curriculum, instruction, and assessment to achieve the
   vision of NGSS.
 type: District Planning
-image: assets/teachers-in-classroom.jpg
+image: /assets/teachers-in-classroom.jpg
 alt: Science teachers sitting at round tables in large classroom attentively listening to institute leader.
 template: Image Left
 courseId: 0
