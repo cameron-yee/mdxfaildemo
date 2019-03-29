@@ -13,8 +13,8 @@ cardDescription: >-
 type: Classroom Instruction
 image: /assets/science-tracks.jpg
 alt: >-
-  Front cover of the textbook, Science Tracks, with a picture of a sea otter
-  floating on his back in the water.
+  Front cover of the textbook "BSCS Science Tracks: Investigating Matter and
+  Energy in Ecosystems", with a picture of a sea otter floating in water.
 template: Image Right
 courseId: 0
 discipline:
