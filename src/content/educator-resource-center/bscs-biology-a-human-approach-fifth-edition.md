@@ -1,10 +1,11 @@
 ---
 date: 2019-02-25T19:05:26.997Z
 title: 'BSCS Biology: A Human Approach, Fifth Edition'
-seoTitle: 'BSCS: A Human Approach - 5th Edition'
-seoDescription: BSCS’s high school biology program, revised to address Next Generation Science Standards recommendations.
 seoCanonicalUrl: >-
   https://bscs.org/resources/educator-resource-center/bscs-biology-human-approach
+seoDescription: >-
+  BSCS’s high school biology program, revised to address Next Generation Science
+  Standards recommendations.
 seoLang: en-us
 cardDescription: >-
   BSCS Biology: A Human Approach is an activity-driven, full-year program that
@@ -12,18 +13,19 @@ cardDescription: >-
   biology concepts.
 type: Classroom Instruction
 image: /assets/a-human-approach.jpg
-alt: PLACEHOLDER
+alt: 'Front cover of the textbook, A Human Approach.'
 template: Image Left
 courseId: 0
 gradeLevel:
   - High
 programLength: Full Year
-sortOrder: 3
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition/
+      url: >-
+        https://k12.kendallhunt.com/program/bscs-biology-human-approach-fifth-edition/
+sortOrder: 3
 page: educator-resource-center
 ---
 For 60 years, BSCS Science Learning has been recognized globally as a leader in high school biology curricula. BSCS continues to develop research-based instructional materials that are designed to meet the needs of science teachers and students.
