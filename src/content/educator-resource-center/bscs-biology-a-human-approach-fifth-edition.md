@@ -11,7 +11,7 @@ cardDescription: >-
   uses human examples to engage 9th and 10th grade students in fundamental
   biology concepts.
 type: Classroom Instruction
-image: /assets/scifi.jpg
+image: /assets/a-human-approach.jpg
 alt: PLACEHOLDER
 template: Image Left
 courseId: 0

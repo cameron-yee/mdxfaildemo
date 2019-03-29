@@ -11,7 +11,7 @@ cardDescription: >-
   elementary teachers’ science content knowledge and instructional practices.
   Users explore the powerful STeLLA approach.
 type: Professional Learning
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/video-screen.jpg'
+image: assets/video-screen.jpg
 alt: Women watching video of a child on a large screen.
 template: Image Left
 courseId: 0

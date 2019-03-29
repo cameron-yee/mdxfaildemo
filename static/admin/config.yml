@@ -19,53 +19,53 @@ collections:
       create: true
       extension: md
       fields:
-          - { name: date, label: Date, widget: date }
-          - { name: title, label: Title, widget: string }
-          - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-          - { name: seoDescription, label: SEO Description, widget: string }
-          - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          - { name: cardDescription, label: Card Description, widget: string, required: false }
-          - { name: type, label: Type, widget: select, options: ['Classroom Instruction', 'Professional Learning', 'District Planning', 'Citizen Science'] }
-          - { name: image, label: Image, widget: image }
-          - { name: alt, label: Image Alt Text, widget: string }
-          - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
-          - { name: courseId, label: Course ID, widget: number, valueType: int, min: 0, max: 10000, default: 0, required: false }
-          - { name: discipline, label: Discipline, widget: select, multiple: true, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
-          - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
-          - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
-          - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
-          - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - name: sidebarURLs
-            label: Sidebar URLs
-            widget: list
-            fields:
-              - name: resource
-                label: Resource
-                widget: object
-                fields:
-                  - { name: buttonText, label: Button Text, widget: string }
-                  - { name: external, label: External, widget: boolean, default: true }
-                  - { name: text, label: Text, widget: string, required: false }
-                  - { name: url, label: URL, widget: string }
-            required: false
-          - name: sidebarContacts
-            label: Sidebar Contact People
-            widget: list
-            fields:
-              - name: contact
-                label: Contact
-                widget: object
-                fields:
-                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                  - { name: person, label: Person, widget: string }
-                  - { name: text, label: Text, widget: string, required: false }
-            required: false
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-          - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: additionalTags, label: Additional Tags, widget: list, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-          - { name: body, label: Body, widget: markdown }
-          - { name: page, label: Page, widget: hidden, default: educator-resource-center }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
+        - { name: type, label: Type, widget: select, options: ['Classroom Instruction', 'Professional Learning', 'District Planning', 'Citizen Science'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: template, label: template, widget: select, options: ['Image Left', 'Image Right'] }
+        - { name: courseId, label: Course ID, widget: number, valueType: int, min: 0, max: 10000, default: 0, required: false }
+        - { name: discipline, label: Discipline, widget: select, multiple: true, options: ['Life Sciences', 'Physical Sciences', 'Earth Sciences', 'Multidisciplinary Sciences'], required: false }
+        - { name: gradeLevel, label: Grade Level, widget: select, multiple: true, options: ['Elementary', 'Middle', 'High', 'Postsecondary'], required: false }
+        - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
+        - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
+        - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - name: sidebarURLs
+          label: Sidebar URLs
+          widget: list
+          fields:
+            - name: resource
+              label: Resource
+              widget: object
+              fields:
+                - { name: buttonText, label: Button Text, widget: string }
+                - { name: external, label: External, widget: boolean, default: true }
+                - { name: text, label: Text, widget: string, required: false }
+                - { name: url, label: URL, widget: string }
+          required: false
+        - name: sidebarContacts
+          label: Sidebar Contact People
+          widget: list
+          fields:
+            - name: contact
+              label: Contact
+              widget: object
+              fields:
+                - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                - { name: person, label: Person, widget: string }
+                - { name: text, label: Text, widget: string, required: false }
+          required: false
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: additionalTags, label: Additional Tags, widget: list, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: educator-resource-center }
 
     - name: reports
       label: Reports
@@ -73,47 +73,47 @@ collections:
       create: true
       extension: md
       fields:
-          - { name: date, label: Date, widget: date }
-          - { name: title, label: Title, widget: string }
-          - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-          - { name: seoDescription, label: SEO Description, widget: string }
-          - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          - { name: cardDescription, label: Card Description, widget: string, required: false }
-          - { name: reportDate, label: Report Date, widget: string }
-          - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
-          - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - name: sidebarURLs
-            label: Sidebar URLs
-            widget: list
-            fields:
-              - name: resource
-                label: Resource
-                widget: object
-                fields:
-                  - { name: buttonText, label: Button Text, widget: string }
-                  - { name: external, label: External, widget: boolean, default: true }
-                  - { name: text, label: Text, widget: string, required: false }
-                  - { name: url, label: URL, widget: string }
-            required: false
-          - name: sidebarContacts
-            label: Sidebar Contact People
-            widget: list
-            fields:
-              - name: contact
-                label: Contact
-                widget: object
-                fields:
-                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                  - { name: person, label: Person, widget: string }
-                  - { name: text, label: Text, widget: string, required: false }
-            required: false
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-          - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: customTitle, label: Custom Title, widget: boolean, default: false }
-          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-          - { name: body, label: Body, widget: markdown }
-          - { name: page, label: Page, widget: hidden, default: reports }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
+        - { name: reportDate, label: Report Date, widget: string }
+        - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
+        - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - name: sidebarURLs
+          label: Sidebar URLs
+          widget: list
+          fields:
+            - name: resource
+              label: Resource
+              widget: object
+              fields:
+                - { name: buttonText, label: Button Text, widget: string }
+                - { name: external, label: External, widget: boolean, default: true }
+                - { name: text, label: Text, widget: string, required: false }
+                - { name: url, label: URL, widget: string }
+          required: false
+        - name: sidebarContacts
+          label: Sidebar Contact People
+          widget: list
+          fields:
+            - name: contact
+              label: Contact
+              widget: object
+              fields:
+                - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                - { name: person, label: Person, widget: string }
+                - { name: text, label: Text, widget: string, required: false }
+          required: false
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: customTitle, label: Custom Title, widget: boolean, default: false }
+        - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: reports }
 
     - name: r&d-programs
       label: R&D Programs
@@ -121,48 +121,48 @@ collections:
       create: true
       extension: md
       fields:
-          - { name: date, label: Date, widget: date }
-          - { name: title, label: Title, widget: string }
-          - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-          - { name: seoDescription, label: SEO Description, widget: string }
-          - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          - { name: cardDescription, label: Card Description, widget: string, required: false }
-          - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
-          - { name: image, label: Image, widget: image }
-          - { name: alt, label: Image Alt Text, widget: string }
-          - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
-          - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - name: sidebarURLs
-            label: Sidebar URLs
-            widget: list
-            fields:
-              - name: resource
-                label: Resource
-                widget: object
-                fields:
-                  - { name: buttonText, label: Button Text, widget: string }
-                  - { name: external, label: External, widget: boolean, default: true }
-                  - { name: text, label: Text, widget: string, required: false }
-                  - { name: url, label: URL, widget: string }
-            required: false
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-          - name: sidebarContacts
-            label: Sidebar Contact People
-            widget: list
-            fields:
-              - name: contact
-                label: Contact
-                widget: object
-                fields:
-                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                  - { name: person, label: Person, widget: string }
-                  - { name: text, label: Text, widget: string, required: false }
-            required: false
-          - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-          - { name: body, label: Body, widget: markdown }
-          - { name: page, label: Page, widget: hidden, default: rd-programs }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
+        - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
+        - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
+        - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - name: sidebarURLs
+          label: Sidebar URLs
+          widget: list
+          fields:
+            - name: resource
+              label: Resource
+              widget: object
+              fields:
+                - { name: buttonText, label: Button Text, widget: string }
+                - { name: external, label: External, widget: boolean, default: true }
+                - { name: text, label: Text, widget: string, required: false }
+                - { name: url, label: URL, widget: string }
+          required: false
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - name: sidebarContacts
+          label: Sidebar Contact People
+          widget: list
+          fields:
+            - name: contact
+              label: Contact
+              widget: object
+              fields:
+                - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                - { name: person, label: Person, widget: string }
+                - { name: text, label: Text, widget: string, required: false }
+          required: false
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: rd-programs }
 
     - name: news
       label: News
@@ -170,44 +170,44 @@ collections:
       create: true
       extension: md
       fields:
-          - { name: date, label: Date, widget: date }
-          - { name: title, label: Title, widget: string }
-          - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
-          - { name: seoDescription, label: SEO Description, widget: string }
-          - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
-          - { name: cardDescription, label: Card Description, widget: string, required: false }
-          - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
-          - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
-          - name: sidebarURLs
-            label: Sidebar URLs
-            widget: list
-            fields:
-              - name: resource
-                label: Resource
-                widget: object
-                fields:
-                  - { name: buttonText, label: Button Text, widget: string }
-                  - { name: external, label: External, widget: boolean, default: true }
-                  - { name: text, label: Text, widget: string, required: false }
-                  - { name: url, label: URL, widget: string }
-          - name: sidebarContacts
-            label: Sidebar Contact People
-            widget: list
-            fields:
-              - name: contact
-                label: Contact
-                widget: object
-                fields:
-                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                  - { name: person, label: Person, widget: string }
-                  - { name: text, label: Text, widget: string, required: false }
-            required: false
-          - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
-          - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
-          - { name: additionalTags, label: Additional Tags, widget: string, required: false }
-          - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
-          - { name: body, label: Body, widget: markdown }
-          - { name: page, label: Page, widget: hidden, default: news }
+        - { name: date, label: Date, widget: date }
+        - { name: title, label: Title, widget: string }
+        - { name: seoCanonicalUrl, label: SEO Canonical URL, widget: string }
+        - { name: seoDescription, label: SEO Description, widget: string }
+        - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
+        - { name: cardDescription, label: Card Description, widget: string, required: false }
+        - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
+        - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - name: sidebarURLs
+          label: Sidebar URLs
+          widget: list
+          fields:
+            - name: resource
+              label: Resource
+              widget: object
+              fields:
+                - { name: buttonText, label: Button Text, widget: string }
+                - { name: external, label: External, widget: boolean, default: true }
+                - { name: text, label: Text, widget: string, required: false }
+                - { name: url, label: URL, widget: string }
+        - name: sidebarContacts
+          label: Sidebar Contact People
+          widget: list
+          fields:
+            - name: contact
+              label: Contact
+              widget: object
+              fields:
+                - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                - { name: person, label: Person, widget: string }
+                - { name: text, label: Text, widget: string, required: false }
+          required: false
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: additionalTags, label: Additional Tags, widget: string, required: false }
+        - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
+        - { name: body, label: Body, widget: markdown }
+        - { name: page, label: Page, widget: hidden, default: news }
 
     - name: leadership
       label: Leadership
@@ -273,18 +273,18 @@ collections:
                 - { name: external, label: External, widget: boolean, default: true }
                 - { name: text, label: Text, widget: string, required: false }
                 - { name: url, label: URL, widget: string }
-          - name: sidebarContacts
-            label: Sidebar Contact People
-            widget: list
-            fields:
-              - name: contact
-                label: Contact
-                widget: object
-                fields:
-                  - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                  - { name: person, label: Person, widget: string }
-                  - { name: text, label: Text, widget: string, required: false }
-            required: false
+        - name: sidebarContacts
+          label: Sidebar Contact People
+          widget: list
+          fields:
+            - name: contact
+              label: Contact
+              widget: object
+              fields:
+                - { name: infoat, label: Send to Info, widget: boolean, default: false }
+                - { name: person, label: Person, widget: string }
+                - { name: text, label: Text, widget: string, required: false }
+          required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }

@@ -11,7 +11,7 @@ cardDescription: >-
   that will resonate with high school students and prepare them to participate
   in important societal conversations.
 type: Professional Learning
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/windmills.jpg'
+image: assets/windmills.jpg
 alt: Five white windmills on a snowy hill with a blue sky and white clouds.
 template: Image Right
 courseId: 0

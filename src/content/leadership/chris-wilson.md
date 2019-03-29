@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Chris Wilson
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/management/chris_wilson_5x7.jpg
+image: /assets/chris_wilson_5x7.jpg
 alt: Chris Wilson headshot.
 additionalTags:
 type: Management
@@ -22,4 +22,4 @@ Prior to joining BSCS, Chris was a visiting assistant professor in the Center fo
 
 <p style="margin-bottom: 2rem;">He holds a B.S. in Zoology from the University of Liverpool in England, an M.S. in Zoology specializing in Evolutionary Biology and a Ph.D. in Zoology specializing in Informal Science Education in Zoos from Michigan State University.</p>
 
-<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/chris_wilson_vitae_may_2015.pdf" target="_blank" rel="noopener noreferrer">Read Chris Wilson's vitae</a>
+<a class="btn btn-outline-secondary" href="/assets/chris_wilson_vitae_may_2015.pdf" target="_blank" rel="noopener noreferrer">Read Chris Wilson's vitae</a>

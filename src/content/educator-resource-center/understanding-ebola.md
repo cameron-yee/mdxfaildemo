@@ -11,7 +11,7 @@ cardDescription: >-
   teachers, students, and community members about Ebola and the factors that
   influence it’s spread.
 type: Classroom Instruction
-image: /assets/cells.jpeg
+image: /assets/ebola.jpg
 alt: PLACEHOLDER
 template: Image Right
 courseId: 0

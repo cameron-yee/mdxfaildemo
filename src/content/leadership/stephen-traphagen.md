@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Stephen Traphagen, Vice Chair
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_stephen_t_5x7.jpg
+image: /assets/bod_stephen_t_5x7.jpg
 alt: Stephen Traphagen headshot.
 additionalTags: BOD
 type: Board Member

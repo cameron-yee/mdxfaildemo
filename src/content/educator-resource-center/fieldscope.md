@@ -10,7 +10,7 @@ cardDescription: >-
   FieldScope, an interactive digital platform, is transforming the way
   educators, community members, and organizations engage in citizen science.
 type: Citizen Science
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/two-women.jpg'
+image: assets/two-women.jpg
 alt: Two young female college students in the desert studying a giant cactus
 template: Image Left
 courseId: 0

@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Louis M. Gomez
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_2018_louis_g.jpg
+image: /assets/bod_2018_louis_g.jpg
 alt: Louis M. Gomez headshot.
 additionalTags: BOD
 type: Board Member

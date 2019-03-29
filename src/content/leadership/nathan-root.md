@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nathan Root
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_2018_nate_r.jpg
+image: /assets/bod_2018_nate_r.jpg
 alt: Nathan Root headshot.
 additionalTags: BOD
 type: Board Member

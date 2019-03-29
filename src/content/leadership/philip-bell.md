@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Right
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_bell.png
+image: /assets/bod_bell.png
 alt: Philip Bell headshot
 additionalTags: BOD
 page: leadership

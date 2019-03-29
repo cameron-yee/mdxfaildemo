@@ -10,7 +10,7 @@ cardDescription: >-
   The Biology Teacher’s Handbook, Fourth Edition, is filled with valuable
   teaching ideas and guidelines for grades 6-12 and college biology educators.
 type: Classroom Instruction
-image: /assets/mountain.jpg
+image: /assets/teachers-biology-handbook.jpg
 alt: PLACEHOLDER
 template: Image Left
 courseId: 0

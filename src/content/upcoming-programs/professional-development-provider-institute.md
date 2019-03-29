@@ -13,12 +13,12 @@ sidebarContacts:
   - contact:
       person: Ashley Whitaker
       infoat: false
-  - contact:
-      person: Jody Bintz
-      infoat: false
+  # - contact:
+  #     person: Jody Bintz
+  #     infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/woman-writing.jpg
+image: assets/woman-writing.jpg
 alt: woman wearing baseball cap writing with a marker on large piece of paper on table.
 type: Teacher Professional Learning
 ---

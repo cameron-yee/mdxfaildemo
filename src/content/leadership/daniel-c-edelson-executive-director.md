@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Daniel C. Edelson, Executive Director
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/management/danny_5x7.jpg
+image: /assets/danny_5x7.jpg
 alt: Daniel C. Edelson headshot.
 additionalTags: Executive Director
 type: Management
@@ -29,4 +29,4 @@ As a researcher and advocate, Dr. Edelson has written extensively on geoscience,
 
 <p style="margin-bottom: 2rem;">Dr. Edelson received his Ph.D. in Computer Science from Northwestern University and his B.S. in Engineering Sciences from Yale University. In 2013, he received the President’s Award from the National Council for Geographic Education.</p>
 
-<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/daniel_edelson_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Daniel Edelson's vitae</a>
+<a class="btn btn-outline-secondary" href="/assets/daniel_edelson_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Daniel Edelson's vitae</a>

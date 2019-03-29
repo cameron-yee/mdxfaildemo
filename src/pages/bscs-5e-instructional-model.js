@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import SEO from '../components/seo'
 import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
@@ -9,6 +11,9 @@ import PageTitle from '../components/layout/page-title/page-title'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+
+// eslint-disable-next-line
+import rowImage from '../queries/images/row-image'
 
 const BSCS5eInstructionalModelPage = class extends Component {
   constructor(props) {
@@ -25,7 +30,7 @@ const BSCS5eInstructionalModelPage = class extends Component {
           <Container>
             <PageTitle title="BSCS 5E Instructional Model" />
             <Row style={{ marginBottom: '2rem' }}>
-              <Col>
+              <Col xs={12} md={7}>
                 <p>Did you know the BSCS 5Es were developed in 1987? Did you know they were developed during a retreat in Colorado that was part of the curriculum development of BSCS Science for Life and Living?</p>
 
                 <p>Do you know why each phase in the instructional model begins with the letter E?</p>
@@ -34,8 +39,12 @@ const BSCS5eInstructionalModelPage = class extends Component {
 
                 <p>Don't miss this fascinating conversation between former BSCS Executive Director Janet Carlson and former Senior Science Educator Nancy Landes, who took part in that 5E retreat.</p>
               </Col>
-              <Col>
-                <img src="https://media.bscs.org/bscsmw/5es/5e_emblem_transparent.png" alt="5Es. Developed by BSCS in 1987." />
+              <Col xs={12} md={5}>
+                <Img
+                  fluid={this.props.data.fiveELogo.childImageSharp.fluid}
+                  alt="5Es. Developed by BSCS in 1987."
+                  backgroundColor='rgb(41, 52, 118)'
+                />
               </Col>
             </Row>
             <Row className="justify-content-md-center" style={{marginBottom: '2rem'}}>
@@ -94,7 +103,7 @@ const BSCS5eInstructionalModelPage = class extends Component {
                     <li>Elaboration - students' understanding of the phenomenon challenged and deepened through new experiences</li>
                     <li>Evaluation - students assess their understanding of the phenomenon</li>
                   </ul>
-                </ul>                
+                </ul>
 
                 <p>For more information:</p>
                 <GeneralContactFormButton launch={() => this.setState({launchGeneral: true})}>Contact Us</GeneralContactFormButton>
@@ -111,3 +120,11 @@ export default props => (
     {locationProps => <BSCS5eInstructionalModelPage {...locationProps} {...props} />}
   </Location>
 )
+
+export const query = graphql`
+  query {
+    fiveELogo: file(relativePath: { eq: "5e_emblem_transparent.png" }) {
+      ...rowImage
+    }
+  }
+`

@@ -6,10 +6,12 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/the-five-tools-institute-in-arizona
 seoDescription: Test SEO description
 seoLang: en-us
+image: /assets/woman-and-notes.jpg
+alt: woman with curly brown hair and burgundy cardigan putting Post-it notes on wall
 sidebarContacts:
-  - contact:
-      person: Jody Bintz
-      infoat: false
+  # - contact:
+  #     person: Jody Bintz
+  #     infoat: false
   - contact:
       person: Cindy Gay
       infoat: false

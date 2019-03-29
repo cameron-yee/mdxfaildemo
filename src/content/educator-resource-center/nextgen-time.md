@@ -12,7 +12,7 @@ cardDescription: >-
   and implementation of instructional materials designed for next generation
   science.
 type: District Planning
-image: /assets/river.jpg
+image: /assets/nextgen-time.jpg
 alt: PLACEHOLDER
 template: Image Right
 courseId: 0

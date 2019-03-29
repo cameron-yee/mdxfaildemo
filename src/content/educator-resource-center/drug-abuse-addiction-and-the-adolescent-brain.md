@@ -9,7 +9,7 @@ cardDescription: >-
   BSCS curriculum unit teaches middle school science students about drug abuse
   and addiction in relevant contexts.
 type: Classroom Instruction
-image: /assets/shark.jpg
+image: /assets/drug_abuse.jpg
 alt: PLACEHOLDER
 template: Image Right
 courseId: 0

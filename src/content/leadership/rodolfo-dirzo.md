@@ -6,7 +6,7 @@ seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
 template: Image Right
-image: 'https://media.bscs.org/bscsmw/leadership/bod/bod_dirzo_low_quality.jpeg'
+image: '/assets/bod_dirzo_low_quality.jpeg'
 alt: Rodolfo Dirzo headshot
 additionalTags: BOD
 page: leadership

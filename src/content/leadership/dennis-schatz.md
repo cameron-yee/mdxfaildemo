@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Dennis Schatz
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_dennis_s_5x7.jpg
+image: /assets/bod_dennis_s_5x7.jpg
 alt: Dennis Schatz headshot.
 additionalTags: BOD
 type: Board Member

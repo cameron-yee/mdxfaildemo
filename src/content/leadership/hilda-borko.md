@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
 template: Image Right
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_2018_hilda_b.jpg
+image: /assets/bod_2018_hilda_b.jpg
 alt: Hilda Borko headshot.
 additionalTags: BOD
 type: Board Member

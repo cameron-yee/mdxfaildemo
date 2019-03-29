@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nicole Gillespie
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_nicole_g_5x7.jpg
+image: /assets/bod_nicole_g_5x7.jpg
 alt: Nicole Gillespie headshot.
 additionalTags: BOD
 type: Board Member

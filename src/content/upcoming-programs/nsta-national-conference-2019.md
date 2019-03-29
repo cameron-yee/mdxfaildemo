@@ -3,6 +3,8 @@ date: 2019-03-22T21:52:00.347Z
 title: NSTA National Conference 2019
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
+image: /assets/nsta-conference.jpg
+alt: PLACEHOLDER ALT
 seoDescription: Test SEO description.
 seoLang: en-us
 siderbarURL: ''

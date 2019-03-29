@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard A. Cardullo, Chair
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_richard_c_5x7.jpg
+image: /assets/bod_richard_c_5x7.jpg
 alt: Richard A. Cardullo headshot.
 additionalTags: BOD
 type: Board Member

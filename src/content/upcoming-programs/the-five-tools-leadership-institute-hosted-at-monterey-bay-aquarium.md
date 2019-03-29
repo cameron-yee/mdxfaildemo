@@ -16,7 +16,7 @@ sidebarContacts:
       infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/coffee-mug.jpg
+image: assets/coffee-mug.jpg
 alt: white coffee mug with the text "BSCS Science Learning" next to colored markers and pens on a table
 type: Teacher Professional Learning
 ---

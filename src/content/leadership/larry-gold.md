@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Larry Gold
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_larry_g_5x7_v3.jpg
+image: /assets/bod_larry_g_5x7_v3.jpg
 alt: Larry Gold headshot.
 additionalTags: BOD
 type: Board Member

@@ -11,7 +11,7 @@ cardDescription: >-
   students to interact like scientists, participating in inquiry-based
   activities while also developing important skills.
 type: Classroom Instruction
-image: /assets/cospgs.jpg
+image: /assets/science-tracks.jpg
 alt: PLACEHOLDER
 template: Image Right
 courseId: 0
