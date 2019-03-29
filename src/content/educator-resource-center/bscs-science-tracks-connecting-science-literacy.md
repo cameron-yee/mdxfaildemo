@@ -14,7 +14,7 @@ type: Classroom Instruction
 image: /assets/science-tracks.jpg
 alt: >-
   Front cover of the textbook "BSCS Science Tracks: Investigating Matter and
-  Energy in Ecosystems", with a picture of a sea otter floating in water.
+  Energy in Ecosystems", with a picture of a mother sea otter and her pup.
 template: Image Right
 courseId: 0
 discipline:
