@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Location } from '@reach/router'
 import Img from 'gatsby-image'
 
@@ -13,7 +13,6 @@ import SEO from '../../components/seo'
 
 // eslint-disable-next-line
 import rowImage from '../../queries/images/row-image'
-import BSCSBreadcrumb from '../../components/layout/breadcrumb/breadcrumb';
 
 const StrategicInitiativesPage = class extends Component {
   render() {

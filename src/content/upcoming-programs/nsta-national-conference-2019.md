@@ -7,9 +7,13 @@ image: /assets/nsta-conference.jpg
 alt: PLACEHOLDER ALT
 seoDescription: Test SEO description.
 seoLang: en-us
-siderbarURL: ''
-siderbarText: ''
-siderbarTitle: ''
+sidebarURLs:
+  - resource:
+      buttonText: Learn More
+      external: true
+      url: https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
+# siderbarText: ''
+# siderbarTitle: ''
 sidebarContactsText: Contact us for more information.
 sidebarContacts:
   - contact:
@@ -48,28 +52,32 @@ Join us to learn about Five Tools that will help you and your colleagues use the
 
 Friday, April 12, 8 - 9 a.m.
 
+<br />
+
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
 
 Saturday, April 13, 8 - 9 a.m.
+
+<br />
 
 **Using Tool 2 of the Five Tools and Process to Translate Performance Expectations into a Plan for Classroom Assessment**
 
 Saturday, April 13, 9:30 - 10:30 a.m.
 
+<br />
+
 **Using Tool 3 of the Five Tools and Processes to Develop a Conceptual Flow Using the 5E Instructional Model**
 
 Saturday, April 13, 11 a.m. - 12 p.m.
+
+<br />
 
 **Using Tool 4 of the Five Tools and Processes to Design Learning Sequences Using the 5E Instructional Model**
 
 Saturday, April 13, 2 - 3 p.m.
 
+<br />
+
 **Using Tool 5 of the Five Tools and Processes to Develop Performance Tasks from Evidence of Learning Specifications**
 
 Saturday, April 13, 3:30 p.m. - 4:30 p.m.
-
-<br />
-<br />
-
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
-

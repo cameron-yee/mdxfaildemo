@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import SEO from '../components/seo'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -11,6 +13,9 @@ import SpecificContactForm from '../components/atoms/forms/specific-contact-form
 import Row from 'react-bootstrap/Row'
 
 import '../global-scss/index.scss'
+
+// eslint-disable-next-line
+import rowImage from '../queries/images/row-image'
 
 
 const DonatePage = class extends Component {
@@ -29,9 +34,8 @@ const DonatePage = class extends Component {
             <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
               <Col className="p-2">
                 <p>A donation to BSCS Science Learning makes a difference! We appreciate any contribution, whether it is inspired by what BSCS has meant to you personally, or by what you know BSCS has the ability to accomplish for teachers and students around the country. With your support, BSCS will remain a leader in science education for the next 60 years.</p>
-
                 <p>Choose from one of three funds to support:</p>
-                
+
                 <ul>
                   <li><strong>Annual Fund:</strong> supports current priorities and the mission of BSCS</li>
                   <li><strong>Endowment Fund:</strong> provides BSCS with a stable source of income to sustain key programs over the long-term</li>
@@ -40,9 +44,9 @@ const DonatePage = class extends Component {
 
                 <p>If you would like to make a donation, please mail a check or money order to BSCS at the following address:</p>
 
-                <p className="mb-0">BSCS Science Learning</p>
-                <p className="mt-0 mb-0">5415 Mark Dabling Blvd.</p>
-                <p className="mt-0">Colorado Springs, CO 80918</p>
+                <p className="mb-0 ml-5">BSCS Science Learning</p>
+                <p className="mt-0 mb-0 ml-5">5415 Mark Dabling Blvd.</p>
+                <p className="mt-0 ml-5">Colorado Springs, CO 80918</p>
 
                 <p>Online payments will be accepted soon.</p>
 
@@ -54,6 +58,12 @@ const DonatePage = class extends Component {
               </Col>
               <Col md={4} className="p-2">
                   <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
+                    <Img
+                      className="card-img-top"
+                      fluid={this.props.data.astronautGirl.childImageSharp.fluid}
+                      alt="NO ALT"
+                      backgroundColor='rgb(41, 52, 118)'
+                    />
                     <Card.Body>
                         {/* <Card.Title></Card.Title> */}
                         <Card.Text style={{fontSize: '1rem'}}>
@@ -81,3 +91,11 @@ const DonatePage = class extends Component {
 }
 
 export default DonatePage
+
+export const query = graphql`
+  query {
+    astronautGirl: file(relativePath: { eq: "astronaut-girl.jpg" }) {
+      ...rowImage
+    }
+  }
+`

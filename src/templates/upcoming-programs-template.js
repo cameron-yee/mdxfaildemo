@@ -62,8 +62,8 @@ const UpcomingProgramsTemplate = class extends Component {
                             {this.program.sidebarText}
                           </Card.Text>
                         }
-                        { this.resource.sidebarURLs &&
-                          this.resource.sidebarURLs.map((resource, index) => {
+                        { this.program.sidebarURLs &&
+                          this.program.sidebarURLs.map((resource, index) => {
                             return (
                               <React.Fragment key={`up-sidebarurl-${index}`}>
                                 { resource['resource']['text'] &&
