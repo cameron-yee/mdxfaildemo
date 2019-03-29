@@ -13,7 +13,7 @@ cardDescription: >-
   biology concepts.
 type: Classroom Instruction
 image: /assets/a-human-approach.jpg
-alt: 'Front cover of the textbook, A Human Approach.'
+alt: 'Front cover of the textbook, "BSCS: A Human Approach, Fifth Edition".'
 template: Image Left
 courseId: 0
 gradeLevel:
