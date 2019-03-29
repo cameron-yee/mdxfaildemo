@@ -152,7 +152,7 @@ const LeadershipPage = class extends Component {
                     <ReactPlaceholder
                       type='rect'
                       ready={this.state.imagesLoaded}
-                      color='rgb(41, 52, 118)'
+                      // color='rgb(41, 52, 118)'
                       showLoadingAnimation={true}
                       style={{
                         width: '253px',
@@ -164,6 +164,10 @@ const LeadershipPage = class extends Component {
                       <Card.Img
                         className="ld-image"
                         variant="top"
+                        style={{
+                          minHeight: '354.19px',
+                          backgroundColor: rgba(205, 205, 205, .5)
+                        }}
                         src={person.node.frontmatter.image}
                         alt={person.node.frontmatter.alt}
                       />

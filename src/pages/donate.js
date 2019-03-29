@@ -62,7 +62,7 @@ const DonatePage = class extends Component {
                       className="card-img-top"
                       fluid={this.props.data.astronautGirl.childImageSharp.fluid}
                       alt="NO ALT"
-                      backgroundColor='rgb(41, 52, 118)'
+                      backgroundColor='rgb(205, 205, 205, .5)'
                     />
                     <Card.Body>
                         {/* <Card.Title></Card.Title> */}
