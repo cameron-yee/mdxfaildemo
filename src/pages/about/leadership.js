@@ -166,7 +166,7 @@ const LeadershipPage = class extends Component {
                         variant="top"
                         style={{
                           minHeight: '354.19px',
-                          backgroundColor: rgba(205, 205, 205, .5)
+                          backgroundColor: 'rgba(205, 205, 205, .5)'
                         }}
                         src={person.node.frontmatter.image}
                         alt={person.node.frontmatter.alt}
