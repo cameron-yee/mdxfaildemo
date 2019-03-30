@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Lauren Novo
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/management/lauren_5x7_2017.jpg
+image: /assets/lauren_5x7_2017.jpg
 alt: Lauren Novo headshot.
 additionalTags:
 type: Management

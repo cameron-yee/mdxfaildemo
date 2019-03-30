@@ -1,6 +1,6 @@
 ---
 date: 2019-02-25T18:34:04.933Z
-title: ' Allergies and Scientific Inquiry'
+title: 'Allergies and Scientific Inquiry'
 seoCanonicalUrl: >-
   https://bscs.org/resources/educator-resource-center/allergies-and-scientific-inquiry
 seoDescription: >-
@@ -12,7 +12,7 @@ cardDescription: >-
   help middle school educators more effectively teach about food allergies.
   Lessons are aligned to the Next Generation Science Standards.
 type: Classroom Instruction
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/yellow-flower.jpg'
+image: /assets/yellow-flower.jpg
 alt: Close-up of yellow flower with pollen.
 template: Image Right
 courseId: 0

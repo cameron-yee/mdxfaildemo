@@ -27,9 +27,11 @@ sidebarURLs:
         https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
 sidebarContactsText: 'For more information, please contact Cari Herrmann Abell.'
 sidebarContacts:
-  - Cari Herrmann Abell
+  - contact:
+      person: Cari Herrmann Abell
+      infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 8
+sortOrder: 9
 page: rd-programs
 ---
 

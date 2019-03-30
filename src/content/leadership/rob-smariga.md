@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Rob Smariga
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/management/smariga_5x7.jpg
+image: /assets/smariga_5x7.jpg
 alt: Rob Smariga headshot.
 additionalTags:
 type: Management

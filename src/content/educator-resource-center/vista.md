@@ -11,15 +11,14 @@ cardDescription: >-
   their science content knowledge and instructional practices. Users explore the
   powerful STeLLA approach.
 type: Professional Learning
-image: >-
-  https://media.bscs.org/bscsmw/educator-resource-center/teacher-and-students-in-class.jpg
-alt: >-
-  Female teacher in green sweater talking to her young students with two men
-  filming her teach.
+image: /assets/teacher-and-students-in-class.jpg
+alt: Female teacher in green sweater talking to her young students with two men filming her teach.
 template: Image Left
 courseId: 0
 sidebarContacts:
-  - Cameron Yee
+  - contact:
+      person: Cameron Yee
+      infoat: false
 sidebarContactsText: Contact Cameron Yee to register for ViSTA.
 sidebarContactsTitle: Registration
 sortOrder: 10

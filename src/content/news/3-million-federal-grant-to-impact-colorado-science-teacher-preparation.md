@@ -7,7 +7,9 @@ seoDescription: Test SEO description.
 seoLang: en-us
 sidebarContactsText: Questions?
 sidebarContacts:
-  - Lauren Novo
+  - contact:
+      person: Lauren Novo
+      infoat: false
 page: news
 ---
 #### BSCS Science Learning to Partner with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley

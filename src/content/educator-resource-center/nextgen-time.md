@@ -1,10 +1,10 @@
 ---
 date: 2019-02-25T19:31:10.370Z
 title: NextGen TIME
-seoTitle: BSCS program to support adoption of science instructional materials
-seoDescription: BSCS’s tools and processes for evaluation, selection, and implementation of instructional materials designed for next generation science.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/nextgentime
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/nextgentime'
+seoDescription: >-
+  BSCS’s tools and processes for evaluation, selection, and implementation of
+  instructional materials designed for next generation science.
 seoLang: en-us
 cardDescription: >-
   NextGen TIME is a suite of tools and processes for curriculum-based
@@ -12,16 +12,18 @@ cardDescription: >-
   and implementation of instructional materials designed for next generation
   science.
 type: District Planning
-image: /assets/river.jpg
-alt: PLACEHOLDER
+image: /assets/nextgen-time.jpg
+alt: >-
+  Woman standing in front of a wall that is covered with large, white Post-It
+  notes and brightly colored, small Post-It notes.
 template: Image Right
 courseId: 0
-sortOrder: 1
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://nextgentime.org/
+      url: 'https://nextgentime.org/'
+sortOrder: 1
 page: educator-resource-center
 ---
 For a school district, the adoption of instructional materials is a costly investment with long-term impacts. This decision-making process is critically important because instructional materials can either support or inhibit improvements in teaching and learning.

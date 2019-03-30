@@ -12,10 +12,14 @@ image: /assets/rd-programs/argulex.svg
 alt: ARGULEX Icon
 sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
-  - Chris Wilson
-  - Molly Stuhlsatz
+  - contact:
+      person: Chris Wilson
+      infoat: false
+  - contact:
+      person: Molly Stuhlsatz
+      infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 6
+sortOrder: 4
 page: rd-programs
 ---
 Constructed-response assessments, in which students use their own language to demonstrate knowledge, are widely viewed as providing greater insight into student thinking than multiple-choice assessments. In the past, constructed-response assessments were expensive and time consuming to score. But recent advances in technology and measurement research are making them a feasible option for education settings. Lexical analysis and machine-learning technologies allow researchers to use computers to score student and teacher writing. The goal is to develop computer models that score written responses with the same levels of accuracy and reliability as human expert scorers.
@@ -28,10 +32,9 @@ Following in the footsteps of PCK*lex is ArguLex, a project that applies similar
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div style="width: 70%;">
-
+  <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>
     <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grants Nos. (1437173) and (1561150). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.

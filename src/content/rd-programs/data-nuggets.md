@@ -18,10 +18,14 @@ sidebarURLs:
       url: 'http://datanuggets.org/'
 sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
-  - Chris Wilson
-  - Molly Stuhlsatz
+  - contact:
+      person: Chris Wilson
+      infoat: false
+  - contact:
+      person: Molly Stuhlsatz
+      infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 10
+sortOrder: 8
 page: rd-programs
 ---
 What exactly does a scientist do? How does she collect information and make sense of it all?
@@ -30,17 +34,16 @@ Data Nuggets, a four-year research project between Michigan State University and
 
 From topics such as “Won’t you be my urchin” to “Sticky situations: big and small animals with sticky feet,” teachers get to pick and choose from numerous options that get their students to think like a scientist, while the scientists who write the curriculum have an opportunity to share their research findings with a new audience in science.
 
+<hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div class="p-2">
+  <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>
-  </div>
-  <p class="p-2" style="margin: 0;">
-    <em>
+    <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grant No. (DRL-1503005). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
-    </em>
-  </p>
+    </p>
+ </div>
 </div>
 
 Data Nuggets Partners: <a href="https://msu.edu/" target="_blank" rel="noopener noreferrer">Michigan State University (MSU)</a>, <a href="https://www3.beacon-center.org/" target="_blank" rel="noopener noreferrer">Bio/Computational Evolution in Action CONsortium (BEACON)</a>

@@ -23,7 +23,9 @@ sidebarURLs:
       url: 'https://media.bscs.org/bscsmw/rd-programs/stella/stella_brief.pdf'
 sidebarContactsText: 'For more information, please contact Jody Bintz.'
 sidebarContacts:
-  - Jody Bintz
+  - contact:
+      person: Jody Bintz
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 1
 page: rd-programs
@@ -95,7 +97,7 @@ See our growing line of research at-a-glance:
       <div class="timeline-content">
         <h2>RESPeCT</h2>
         <h4>2013</h4>
-        <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        <p>BSCS partnered with California State Polytechnic University, Pomona and a high-needs, urban district in California to test a dissemination model of the intensive STeLLA program. The ultimate goal was for STeLLA to successfully reach and impact every elementary school teacher and their students in the high-needs, urban district, where more than 65% of students are English language learners. BSCS created model units and professional learning materials covering grades K-6 and conducted leadership development programs to prepare the university science faculty and PUSD elementary school teachers to lead STeLLA programs. Research is being conducted to identify the effectiveness of a STeLLA program delivered by trained school district and teacher leaders on both elementary teacher professional learning and student outcomes. Preliminary results are promising. An initial impact study revealed statistically significant improvements in student outcomes that are comparable to results in BSCS-led STeLLA programs.</p>
       </div>
     </div>
     <div class="timeline-container timeline-left">

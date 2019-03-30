@@ -11,7 +11,7 @@ cardDescription: >-
   of four units: Earth/Space Science, Life Science, Physical Science, and
   Science and Society.
 type: Classroom Instruction
-image: 'https://media.bscs.org/bscsmw/educator-resource-center/girls-in-classroom.jpg'
+image: /assets/girls-in-classroom.jpg
 alt: >-
   Girl with blonde hair tied in a bun and burgundy hoodie sitting at a table in
   classroom with other girls.
@@ -23,9 +23,12 @@ gradeLevel:
   - Middle
 sortOrder: 11
 sidebarContactsTitle: Registration
-sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
+# sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
 sidebarContacts:
-  - Cameron Yee
+  - contact:
+      person: Cameron Yee
+      infoat: false
+      text: Contact Cameron Yee to Register for BSCS Middle School Science.
 page: educator-resource-center
 ---
 

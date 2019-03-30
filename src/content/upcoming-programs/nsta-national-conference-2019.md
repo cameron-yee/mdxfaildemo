@@ -1,24 +1,29 @@
 ---
 date: 2019-03-22T21:52:00.347Z
 title: NSTA National Conference 2019
+type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
-seoDescription: Test SEO description.
+seoDescription: Arial view of people walking around in a large building at a conference.
 seoLang: en-us
-siderbarURL: ''
-siderbarText: ''
-siderbarTitle: ''
-sidebarContactsText: Contact us for more information.
+sidebarURLs:
+  - resource:
+      buttonText: Learn More
+      external: true
+      url: >-
+        https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
 sidebarContacts:
-  - Ashley Whitaker
+  - contact:
+      infoat: false
+      person: Ashley Whitaker
+sidebarContactsText: Contact us for more information.
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-type: Teacher Professional Learning
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
 
-<br>
-</br>
+<br />
+<br />
 
 ##### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
@@ -26,8 +31,8 @@ NextGen TIME includes a suite of tools and processes designed to guide your deep
 
 Wednesday, April 10, 9 a.m. - 4 p.m.
 
-<br>
-</br>
+<br />
+<br />
 
 ##### NGSS@NSTA Forum Session: NextGen TIME: Toolkit for Instructional Materials Evaluation/Transforming Implementation Through Materials Evaluation
 
@@ -44,28 +49,32 @@ Join us to learn about Five Tools that will help you and your colleagues use the
 
 Friday, April 12, 8 - 9 a.m.
 
+<br />
+
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
 
 Saturday, April 13, 8 - 9 a.m.
+
+<br />
 
 **Using Tool 2 of the Five Tools and Process to Translate Performance Expectations into a Plan for Classroom Assessment**
 
 Saturday, April 13, 9:30 - 10:30 a.m.
 
+<br />
+
 **Using Tool 3 of the Five Tools and Processes to Develop a Conceptual Flow Using the 5E Instructional Model**
 
 Saturday, April 13, 11 a.m. - 12 p.m.
+
+<br />
 
 **Using Tool 4 of the Five Tools and Processes to Design Learning Sequences Using the 5E Instructional Model**
 
 Saturday, April 13, 2 - 3 p.m.
 
+<br />
+
 **Using Tool 5 of the Five Tools and Processes to Develop Performance Tasks from Evidence of Learning Specifications**
 
 Saturday, April 13, 3:30 p.m. - 4:30 p.m.
-
-<br>
-</br>
-
-<a href="https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm" target="_blank" rel="noopener noreferrer"><button class="btn btn-outline-secondary">Learn More Here</button></a>
-

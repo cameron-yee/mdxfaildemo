@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Richard A. Cardullo, Chair
 template: Image Left
-image: https://media.bscs.org/bscsmw/leadership/bod/bod_richard_c_5x7.jpg
+image: /assets/bod_richard_c_5x7.jpg
 alt: Richard A. Cardullo headshot.
 additionalTags: BOD
 type: Board Member
@@ -18,7 +18,7 @@ sortOrder: 1
 ###  *Interim Vice Provost, Undergraduate Education*
 
 ### Undergraduate Education Professor
-<a href="https://www.ucr.edu/" target="_blank" rel="noopener noreferrer">University of California Riverside</a>
+<a href="https://www.ucr.edu/" target="_blank" rel="noopener noreferrer">University of California Riverside&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
 
 
 **Richard A. Cardullo**, Ph.D., is currently the Interim Vice Provost of Undergraduate Education, the Howard H Hays Chair of University Honors, and a Professor of Biology at the University of California, Riverside.

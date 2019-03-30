@@ -1,8 +1,6 @@
 ---
 date: 2019-02-15T20:02:08.538Z
-title: >-
-  Collaborative Research: Extending and Investigating the Impact of the High
-  School Model-based Educational Resource (MBER)
+title: Extending and Investigating the Impact of the High School Model-based Educational Resource (MBER)
 seoCanonicalUrl: >-
   https://bscs.org/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
 seoDescription: >-
@@ -17,10 +15,14 @@ alt: MBER Icon
 sidebarTitle: ''
 sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
-  - Chris Wilson
-  - Molly Stuhlsatz
+  - contact:
+      person: Chris Wilson
+      infoat: false
+  - contact:
+      person: Molly Stuhlsatz
+      infoat: false
 sidebarContactsTitle: Questions?
-sortOrder: 9
+sortOrder: 7
 page: rd-programs
 ---
 Current research suggests that scientific models can help teachers transform their science instruction and enhance student learning. This premise grounds the Model-Based Educational Resource (MBER)—developed by Dr. Cindy Passmore and colleagues at UC Davis—which engages high school biology students in constructing models to make sense of science. Now researchers are wondering: How effectively can this approach to biology education support next generation science learning?

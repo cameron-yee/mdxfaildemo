@@ -3,7 +3,7 @@ date: 2018-12-18T23:03:06.180Z
 fullName: Lindsey Mohan
 template: Image Left
 # image: /assets/koala.jpg
-image: https://media.bscs.org/bscsmw/leadership/management/lmohan_photo.jpg
+image: /assets/lmohan_photo.jpg
 alt: Lindsey Mohan headshot.
 additionalTags:
 type: Management

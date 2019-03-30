@@ -13,7 +13,9 @@ image: /assets/rd-programs/humane-genetics.svg
 alt: Humane Genetics Icon
 sidebarContactsText: 'For more information, please contact Brian Donovan.'
 sidebarContacts:
-  - Brian Donovan
+  - contact:
+      person: Brian Donovan
+      infoat: false
 sidebarContactsTitle: Questions?
 sortOrder: 2
 page: rd-programs

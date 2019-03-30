@@ -5,16 +5,21 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/five-tools-monterey
 seoDescription: Test SEO description.
 seoLang: en-us
-siderbarURL: >-
-  https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
-siderbarText: ''
-siderbarTitle: Sign up now
+sidebarURLs:
+  - resource:
+      buttonText: Sign up
+      external: true
+      url: https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
+sidebarText: ''
+sidebarTitle: Sign up now
 sidebarContactsText: ''
 sidebarContacts:
-  - Ashley Whitaker
+  - contact:
+      person: Ashley Whitaker
+      infoat: false
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-image: https://media.bscs.org/bscsmw/upcoming-programs/tpl/coffee-mug.jpg
+image: assets/coffee-mug.jpg
 alt: white coffee mug with the text "BSCS Science Learning" next to colored markers and pens on a table
 type: Teacher Professional Learning
 ---

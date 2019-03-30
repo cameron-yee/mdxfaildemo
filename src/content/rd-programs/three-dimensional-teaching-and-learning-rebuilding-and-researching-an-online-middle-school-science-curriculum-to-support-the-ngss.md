@@ -17,9 +17,11 @@ image: /assets/rd-programs/3dmss.svg
 alt: 3DMSS Icon
 sidebarContactsText: 'For more information, please contact Sue Kowalski.'
 sidebarContacts:
-  - Sue Kowalski
+  - contact:
+      infoat: true
+      person: Sue Kowalski
 sidebarContactsTitle: Questions?
-sortOrder: 3
+sortOrder: 5
 page: rd-programs
 ---
 

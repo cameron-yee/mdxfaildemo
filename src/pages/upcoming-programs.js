@@ -119,6 +119,7 @@ const UpcomingProgramsPage = class extends Component {
                     >
                         <div
                           className={`rounded-circle p-3 categoryImageChild professional-learning`}
+                          // className={`p-3 categoryImageChild professional-learning`}
                         >
                           <img
                             className="categoryImageGrandChild"
@@ -250,7 +251,7 @@ const UpcomingProgramsPage = class extends Component {
                                 alt={edge.node.frontmatter.alt}
                                 style={{
                                   minHeight: '260.98px',
-                                  backgroundColor: 'rgba(41, 52, 118, 1)',
+                                  backgroundColor: 'rgba(205, 205, 205, .5)',
                                   borderTopLeftRadius: '4px',
                                   borderTopRightRadius: '4px'
                                 }}

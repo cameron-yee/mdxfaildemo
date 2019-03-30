@@ -60,7 +60,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                   <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                     {(this.resource.sidebarURLs || this.resource.sidebarText || this.resource.sidebarTitle) &&
                       <Card style={{marginBottom: '1rem'}}>
-                        <Card.Body>
+                        <Card.Body className="justify-content-xs-center">
                           { this.resource.sidebarTitle &&
                             <Card.Title>{this.resource.sidebarTitle}</Card.Title>
                           }
@@ -72,28 +72,35 @@ const EducatorResourceCenterTemplate = class extends Component {
                           { this.resource.sidebarURLs &&
                             this.resource.sidebarURLs.map((resource, index) => {
                               return (
-                                <div key={`erc-sidebarurl-${index}`} className="d-flex justify-content-lg-center">
-                                  { resource['resource']['external'] &&
-                                    <a
-                                      className="btn btn-outline-secondary"
-                                      href={resource['resource']['url']}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      style={{
-                                        marginTop: '1rem',
-                                        marginBottom: '1rem'
-                                      }}
-                                    >
-                                      {resource['resource']['buttonText']}
-                                      &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
-                                    </a>
+                                <React.Fragment key={`erc-sidebarurl-${index}`} className="justify-content-center">
+                                  { resource['resource']['text'] &&
+                                  <Card.Text style={{fontSize: '1rem'}}>
+                                    {resource['resource']['text']}
+                                  </Card.Text>
                                   }
-                                  { !resource['resource']['external'] &&
-                                    <Link to={resource['resource']['url']}>
-                                      <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
-                                    </Link>
-                                  }
-                                </div>
+                                  <div className="d-flex justify-content-center">
+                                    { resource['resource']['external'] &&
+                                      <a
+                                        className="btn btn-outline-secondary"
+                                        href={resource['resource']['url']}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                          marginTop: '1rem',
+                                          marginBottom: '1rem'
+                                        }}
+                                      >
+                                        {resource['resource']['buttonText']}
+                                        &nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup>
+                                      </a>
+                                    }
+                                    { !resource['resource']['external'] &&
+                                      <Link to={resource['resource']['url']}>
+                                        <Button size="sm" variant="outline-secondary">{resource['resource']['buttonText']}</Button>
+                                      </Link>
+                                    }
+                                  </div>
+                                </React.Fragment>
                               )
                             })
                           }
@@ -111,14 +118,31 @@ const EducatorResourceCenterTemplate = class extends Component {
                               {this.resource.sidebarContactsText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarContacts &&
-                            this.resource.sidebarContacts.map(contact => {
-                              return(
-                                <div key={contact} className="d-flex justify-content-lg-center">
-                                  <SpecificContactForm sendto={contact}>
-                                    <Button size="sm" variant="outline-primary">Contact {contact}</Button>
-                                  </SpecificContactForm>
-                                </div>
+                          {this.resource.sidebarContacts &&
+                            this.resource.sidebarContacts.map((contact, index) => {
+                              return (
+                                <React.Fragment key={`${contact['contact']['person']}-${index}`}>
+                                  {contact['contact']['text'] &&
+                                    <Card.Text style={{fontSize: '1rem'}}>
+                                      {contact['contact']['text']}
+                                    </Card.Text>
+                                  }
+                                  <div class="d-flex justify-content-center">
+                                    <div className="p-2">
+                                      <SpecificContactForm
+                                        sendto={contact['contact']['person']}
+                                        infoat={contact['contact']['infoat']}
+                                      >
+                                        <Button
+                                          size="sm"
+                                          variant="outline-primary"
+                                        >
+                                          Contact {contact['contact']['person']}
+                                        </Button>
+                                      </SpecificContactForm>
+                                    </div>
+                                  </div>
+                                </React.Fragment>
                               )
                             })
                           }
@@ -160,13 +184,20 @@ export const query = graphql`
         seoCanonicalUrl,
         seoDescription,
         seoLang,
-        sidebarContacts,
+        sidebarContacts {
+          contact {
+            infoat,
+            person,
+            text
+          }
+        },
         sidebarContactsText,
         sidebarContactsTitle,
         sidebarURLs {
           resource {
             buttonText,
             external,
+            text,
             url
           }
         },
