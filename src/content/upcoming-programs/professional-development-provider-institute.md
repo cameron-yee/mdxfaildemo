@@ -13,6 +13,7 @@ sidebarURLs:
   - resource:
       buttonText: Register
       external: true
+      text: Sign up now
       url: >-
         https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0125jtynj7wt/questions
 sidebarContacts:
