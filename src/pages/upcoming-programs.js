@@ -233,12 +233,13 @@ const UpcomingProgramsPage = class extends Component {
                               type='rect'
                               ready={this.state.imagesLoaded}
                               // color='#E0E0E0'
-                              color='rgb(41, 52, 118)'
+                              // color='rgb(41, 52, 118)'
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                // width: '349.984px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -356,8 +357,10 @@ const UpcomingProgramsPage = class extends Component {
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                // width: '349.984px',
+                                // height: '260.98px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -370,7 +373,7 @@ const UpcomingProgramsPage = class extends Component {
                                 alt={edge.node.frontmatter.alt}
                                 style={{
                                   minHeight: '260.98px',
-                                  backgroundColor: 'rgba(41, 52, 118, 1)',
+                                  backgroundColor: 'rgba(205, 205, 205, 1)',
                                   borderTopLeftRadius: '4px',
                                   borderTopRightRadius: '4px'
                                 }}
@@ -475,8 +478,8 @@ const UpcomingProgramsPage = class extends Component {
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -489,7 +492,7 @@ const UpcomingProgramsPage = class extends Component {
                                 alt={edge.node.frontmatter.alt}
                                 style={{
                                   minHeight: '260.98px',
-                                  backgroundColor: 'rgba(41, 52, 118, 1)',
+                                  backgroundColor: 'rgba(205, 205, 205, 1)',
                                   borderTopLeftRadius: '4px',
                                   borderTopRightRadius: '4px'
                                 }}

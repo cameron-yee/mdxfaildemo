@@ -6,6 +6,8 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
 seoDescription: Arial view of people walking around in a large building at a conference.
 seoLang: en-us
+image: /assets/nsta-conference.jpg
+alt: NEED ALT
 sidebarURLs:
   - resource:
       buttonText: Learn More
