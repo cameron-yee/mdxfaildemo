@@ -30,6 +30,18 @@ The first project, PCKlex, explores measurement of teachers’ pedagogical conte
 
 Following in the footsteps of PCK*lex is ArguLex, a project that applies similar technologies to the measurement of students’ abilities to engage in scientific argumentation. Explanation and argument are essential practices in the Next Generation Science Standards (NGSS). However, these new standards will only have a meaningful impact if they are accompanied by high quality assessments that are closely aligned with a three-dimensional vision for teaching and learning science. Such assessments require a shift away from reliance on the efficiency and affordability of multiple-choice items and towards the use of more subjective, written tasks, aligned to NGSS performance expectations. The goal of the ArguLex project is to use automated analysis and machine learning techniques to develop an efficient, valid, and reliable measure of students’ placement on a learning progression for argumentation. Additionally, we are interested in the degree to which the computer scoring models are more or less biased against English language learners than humans scoring the same data (relative linguistic bias) and the capacity for automated scoring to differentiate between linguistic fluency and argumentation ability. This project is a collaboration with Stanford University and Michigan State University.
 
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://msu.edu/" target="_blank" rel="noopener noreferrer">
+    Michigan State University (MSU)&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">
+    Stanford University&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 90%;">
@@ -41,5 +53,3 @@ Following in the footsteps of PCK*lex is ArguLex, a project that applies similar
     </p>
  </div>
 </div>
-
-Partners: <a href="https://msu.edu/" target="_blank" rel="noopener noreferrer">Michigan State University</a> and <a href="https://www.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>

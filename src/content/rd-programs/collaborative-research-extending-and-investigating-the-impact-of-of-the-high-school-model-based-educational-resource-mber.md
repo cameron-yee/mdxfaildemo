@@ -43,16 +43,22 @@ This study will also address a significant gap in the research on next generatio
 
 In addition to generating important research findings, the materials revised and studied in this project will be open source and freely available to teachers and schools, thereby maximizing the broader impacts of this work.
 
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://education.ucdavis.edu/faculty-profile/cindy-passmore" target="_blank" rel="noopener noreferrer">
+    Cindy Passmore and colleagues at UC Davis&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
-  <div style="width: 70%;">
+  <div style="width: 90%;">
     <a href="https://www.nsf.gov" target="_blank" rel="noopener noreferrer">
-      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" />
+      <img src="/assets/nsf_logo.svg" alt="National Science Foundation logo" style="height: 85px;" class="mx-auto d-block mb-4" />
     </a>
     <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grant No. (DRL-1813538). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
-  </div>
+ </div>
 </div>
-
-Partners: Cindy Passmore and colleagues at UC Davis

@@ -34,6 +34,18 @@ Data Nuggets, a four-year research project between Michigan State University and
 
 From topics such as “Won’t you be my urchin” to “Sticky situations: big and small animals with sticky feet,” teachers get to pick and choose from numerous options that get their students to think like a scientist, while the scientists who write the curriculum have an opportunity to share their research findings with a new audience in science.
 
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://msu.edu/" target="_blank" rel="noopener noreferrer">
+    Michigan State University (MSU)&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www3.beacon-center.org/" target="_blank" rel="noopener noreferrer">
+    Bio/Computational Evolution in Action CONsortium (BEACON)&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 90%;">
@@ -45,5 +57,3 @@ From topics such as “Won’t you be my urchin” to “Sticky situations: big 
     </p>
  </div>
 </div>
-
-Data Nuggets Partners: <a href="https://msu.edu/" target="_blank" rel="noopener noreferrer">Michigan State University (MSU)</a>, <a href="https://www3.beacon-center.org/" target="_blank" rel="noopener noreferrer">Bio/Computational Evolution in Action CONsortium (BEACON)</a>
