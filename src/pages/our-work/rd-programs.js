@@ -117,7 +117,7 @@ const RDPrograms = class extends Component {
                   <hr />
                 </Col>
               </Row>
-              <Row className="justify-content-center" style={{ marginBottom: '4rem' }}>
+              <Row className="justify-content-center justify-content-md-start" style={{ marginBottom: '4rem' }}>
                 {
                   this.programs.map((edge, index) => {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
