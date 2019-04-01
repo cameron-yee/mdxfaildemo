@@ -9,6 +9,10 @@ seoDescription: >-
   Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting
   Data, Constructing Explanations, and Engaging in Argument from Evidence.
 seoLang: en-us
+image: /assets/woman-writing.jpg
+alt: >-
+  woman wearing baseball cap writing with a marker on large piece of paper on
+  table
 sidebarURLs:
   - resource:
       buttonText: Sign up now
