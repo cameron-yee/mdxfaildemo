@@ -24,7 +24,21 @@ import rowImage from '../queries/images/row-image'
 const IndexPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Home" />
-    <Jumbotron className="jumbotron jumbotron-index">
+    <Jumbotron className="jumbotron jumbotron-index" style={{ position: 'relative', overflow: 'hidden', background: 'transparent' }}>
+      {/* <Img
+        fluid={props.data.jumbotron.childImageSharp.fluid}
+        style={{
+          position: 'absolute',
+          // top: '0px',
+          // left: '0px',
+          // width: '100%',
+          // height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center center',
+          opacity: '1',
+          transition: 'opacity 0.5s ease 0s'
+        }}
+      /> */}
       <div className="jumbotron-inside">
         <div className="jumbotronContent">
           <h1 className="jumbotronHeading">BSCS MISSION:</h1>
@@ -199,6 +213,9 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    jumbotron: file(relativePath: { eq: "homepage/website_banner_2019_01.jpg" }) {
+      ...cardImage
+    }
     image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
       ...cardImage
     }
