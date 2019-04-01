@@ -207,7 +207,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
+    image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
       ...cardImage
     }
     image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
