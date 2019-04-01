@@ -261,6 +261,8 @@ collections:
         - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - { name: image, label: Image, widget: image }
+        - { name: alt, label: Image Alt Text, widget: string }
         - name: sidebarURLs
           label: Sidebar URLs
           widget: list
