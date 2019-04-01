@@ -44,7 +44,7 @@
     align-items: center;
   }
   border-radius: 0;
-  padding: 3rem 3rem;
+  padding: 4rem 3rem;
   max-width: 550px;
   height: 400px;
 }
@@ -69,8 +69,24 @@
 }
 
 // .indexJumbotronHeading {
-.jumbotronHeading {
-  font-size: 2.25rem;
+// .jumbotronHeading {
+//   font-size: 2.25rem;
+// }
+
+@media (min-width: 544px) {
+  .jumbotronHeading {font-size: calc(1.425rem + 2.1vw);}
+}
+
+@media (min-width: 768px) {
+  .jumbotronHeading {font-size: 2.25rem;}
+}
+
+@media (min-width: 992px) {
+  .jumbotronHeading {font-size: 2.25rem;}
+}
+
+@media (min-width: 1200px) {
+  .jumbotronHeading {font-size: 2.25rem;}
 }
 
 //
