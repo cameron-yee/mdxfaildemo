@@ -111,7 +111,13 @@ const RDPrograms = class extends Component {
           {/* <section className="section d-md-none" style={{ marginBottom: '4rem' }}> */}
           <section className="section" style={{ marginBottom: '4rem' }}>
             <Container>
-              <Row className="justify-content-center">
+              <Row style={{ marginBottom: '2rem', marginTop: '2rem' }}>
+                <Col>
+                  <h2>Featured Programs</h2>
+                  <hr />
+                </Col>
+              </Row>
+              <Row className="justify-content-center" style={{ marginBottom: '4rem' }}>
                 {
                   this.programs.map((edge, index) => {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
@@ -149,19 +155,15 @@ const RDPrograms = class extends Component {
                               className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2 p-0"
                             /> */}
                             <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
-                              <div className="d-flex align-items-center mb-3">
+                              <div className="d-flex align-items-center">
                                 {/* <img
                                   className="p-0 mr-3"
                                   src={edge.node.frontmatter.image}
                                   alt={edge.node.frontmatter.alt}
                                   style={{ padding: '1rem 7rem 0', width: '40px' }}
                                 /> */}
-                                <Card.Title
-                                  style={{
-                                    marginBottom: '1rem'
-                                  }}
-                                >
-                                  {edge.node.frontmatter.title}
+                                <Card.Title>
+                                  <h3 className="rd-h3">{edge.node.frontmatter.title}</h3>
                                 </Card.Title>
                               </div>
                               <div className="d-flex">
@@ -220,67 +222,95 @@ const RDPrograms = class extends Component {
                           </Card>
                         </Col>
                       )
-                    } else {
+                    }
+                  })
+                }
+              </Row>
+              <Row style={{ marginBottom: '2rem' }}>
+                <Col>
+                  <h2>Active Projects</h2>
+                  <hr />
+                </Col>
+              </Row>
+              <Row className="justify-content-center">
+                {
+                  this.programs.map((edge, index) => {
+                  let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
+                  data_filter['excerpt'] = edge.node.excerpt
+                    if(edge.node.frontmatter.sortOrder > 5) {
                       return(
                         <React.Fragment key={edge.node.id}>
-                            <Col
-                              xs={12}
-                              id="parent"
-                            >
-                            {index === 4 &&
-                              <React.Fragment>
-                                <br />
-                                <br />
-                              </React.Fragment>
-                            }
-                            {index !== 4 &&
-                              <hr />
-                            }
-                            <div
+                          <Col
+                            xs={12}
+                            id="parent"
+                          >
+                            {/* <Card
                               id={`resource-${index}`}
                               data-filter={JSON.stringify(data_filter)}
                               data-type={edge.node.frontmatter.type}
-                            >
-                              <h3>{edge.node.frontmatter.title}</h3>
-                              <p>{edge.node.frontmatter.cardDescription}</p>
-                              <p>{!edge.node.frontmatter.cardDescription && edge.node.excerpt}</p>
-                              <div className="d-flex">
-                                <div className="mr-auto mb-3">
-                                  {
-                                    edge.node.frontmatter.areas.map((area, index) => {
-                                      const variants = {
-                                        "Teacher Professional Learning": "primary",
-                                        "Instructional Materials Development": "secondary",
-                                        "Research": "success",
-                                        "Leadership Development": "danger"
-                                      }
-                                      return(
-                                        <React.Fragment key={`${edge.node.id}-area-${index}`}>
-                                          <span
-                                            className={`rd-pill badge badge-pill badge-${variants[area]}`}
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontSize: '.75rem',
-                                              fontWeight: '600'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                          {/* <br /> */}
-                                        </React.Fragment>
-                                      )
-                                    })
-                                  }
+                              className="h-100"
+                              style={{
+                                borderColor: 'rgb(41, 52, 118)'
+                              }}
+                            > */}
+                              {/* {index === 4 &&
+                                <React.Fragment>
+                                  <br />
+                                  <br />
+                                </React.Fragment>
+                              }
+                              {index !== 4 &&
+                                <hr />
+                              } */}
+                              {/* <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0"> */}
+                                <div
+                                  id={`resource-${index}`}
+                                  data-filter={JSON.stringify(data_filter)}
+                                  data-type={edge.node.frontmatter.type}
+                                >
+                                  <h3 className="rd-h3">{edge.node.frontmatter.title}</h3>
+                                  <div style={{ marginBottom: '.75rem' }}>
+                                    {
+                                      edge.node.frontmatter.areas.map((area, index) => {
+                                        const variants = {
+                                          "Teacher Professional Learning": "primary",
+                                          "Instructional Materials Development": "secondary",
+                                          "Research": "success",
+                                          "Leadership Development": "danger"
+                                        }
+                                        return(
+                                          <React.Fragment key={`${edge.node.id}-area-${index}`}>
+                                            <span
+                                              className={`rd-pill badge badge-pill badge-${variants[area]}`}
+                                              style={{
+                                                marginRight: '.5rem',
+                                                fontSize: '.75rem',
+                                                fontWeight: '600'
+                                              }}
+                                            >
+                                              {area}
+                                            </span>
+                                            {/* <br /> */}
+                                          </React.Fragment>
+                                        )
+                                      })
+                                    }
+                                  </div>
+                                  {/* <p>{edge.node.frontmatter.cardDescription}</p> */}
+                                  <p className="mb-lg-0">{!edge.node.frontmatter.cardDescription && edge.node.excerpt}</p>
+                                  <div className="d-flex">
+                                    <div className="p-2 ml-auto button-wrapper">
+                                      <Link
+                                        to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                      >
+                                        <Button variant="outline-secondary" style={{ width: '124px' }}>Read More</Button>
+                                      </Link>
+                                    </div>
+                                  </div>
                                 </div>
-                                <div className="p-2 ml-auto button-wrapper">
-                                  <Link
-                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
-                                  >
-                                    <Button variant="outline-secondary" style={{ width: '124px' }}>Read More</Button>
-                                  </Link>
-                                </div>
-                              </div>
-                            </div>
+                                <hr style={{ marginBottom: '3rem' }} />
+                              {/* </Card.Body>
+                            </Card> */}
                           </Col>
                         </React.Fragment>
                       )
@@ -415,7 +445,7 @@ export const rdProgramsQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 150)
           frontmatter {
             additionalTags,
             cardDescription,

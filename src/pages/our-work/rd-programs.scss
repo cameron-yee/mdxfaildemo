@@ -1,15 +1,15 @@
 .rd-pill {
   &.badge-success {
-    background-color: rgb(21, 159, 0); 
+    background-color: rgb(21, 159, 0);
   }
 
   &.badge-danger {
-    background-color: rgb(255, 159, 0); 
+    background-color: rgb(255, 159, 0);
   }
 }
 
 // Orange choices (RGB):
-// 255, 153, 51 
+// 255, 153, 51
 // 255, 128, 0
 // 255, 165, 0
 // 255, 159, 0
@@ -19,3 +19,19 @@
 // 18, 173, 42
 // 113, 178, 56
 // 166, 203, 69
+
+@media (min-width: 544px) {
+  .rd-h3 {font-size: calc(1.305rem + 0.66vw);}
+}
+
+@media (min-width: 768px) {
+  .rd-h3 {font-size: calc(1.305rem + 0.66vw);}
+}
+
+@media (min-width: 992px) {
+  .rd-h3 {font-size: calc(1.305rem + 0.66vw);}
+}
+
+@media (min-width: 1200px) {
+  .rd-h3 {font-size: 1.8rem;}
+}
