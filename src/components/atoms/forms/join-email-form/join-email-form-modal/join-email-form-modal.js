@@ -380,7 +380,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col xs={6}>
               <Form.Group>
-                <Form.Label>School / Organization</Form.Label>
+                <Form.Label>School/Organization</Form.Label>
                 <Form.Control
                   id="school-or-organization-input"
                   type="text"
@@ -499,13 +499,13 @@ const JoinEmailFormModal = class extends Component {
             <Col xs={6}>
               <Form.Group>
                 <Form.Check custom type="checkbox" id="elementary-level" label="Elementary" />
-                <Form.Check custom type="checkbox" id="middle-junior-high-level" label="Middle/Junior High" />
+                <Form.Check custom type="checkbox" id="middle-junior-high-level" label="Middle / Junior High" />
                 <Form.Check custom type="checkbox" id="high-school-level" label="High School" />
               </Form.Group>
             </Col>
             <Col xs={6}>
               <Form.Group>
-                <Form.Check custom type="checkbox" id="college-university-level" label="College/University" />
+                <Form.Check custom type="checkbox" id="college-university-level" label="College / University" />
                 <Form.Check custom type="checkbox" id="other-level" label="Other" />
               </Form.Group>
             </Col>
