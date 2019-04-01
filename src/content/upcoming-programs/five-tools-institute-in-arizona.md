@@ -9,6 +9,10 @@ seoDescription: >-
   professional development leaders work with teachers on curriculum,
   instruction, and assessment as they achieve this vision. 
 seoLang: en-us
+image: /assets/woman-and-notes.jpg
+alt: >-
+  woman with curly brown hair and burgundy cardigan putting Post-it notes on
+  wall
 sidebarContacts:
   - contact:
       infoat: false
