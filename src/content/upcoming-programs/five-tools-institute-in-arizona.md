@@ -4,17 +4,15 @@ title: The Five Tools Institute in Arizona
 type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/the-five-tools-institute-in-arizona
-seoDescription: Test SEO description
+seoDescription: >-
+  The Five Tools and Processes for Translating the NGSS are designed to help
+  professional development leaders work with teachers on curriculum,
+  instruction, and assessment as they achieve this vision. 
 seoLang: en-us
-image: /assets/woman-and-notes.jpg
-alt: woman with curly brown hair and burgundy cardigan putting Post-it notes on wall
 sidebarContacts:
-  # - contact:
-  #     person: Jody Bintz
-  #     infoat: false
   - contact:
-      person: Cindy Gay
       infoat: false
+      person: Cindy Gay
 sidebarContactsTitle: Questions?
 page: upcoming-programs
 ---
