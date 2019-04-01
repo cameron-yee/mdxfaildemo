@@ -1,27 +1,24 @@
 ---
 date: 2019-03-22T21:52:00.347Z
 title: NSTA National Conference 2019
+type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
-image: /assets/nsta-conference.jpg
-alt: PLACEHOLDER ALT
-seoDescription: Test SEO description.
+seoDescription: Arial view of people walking around in a large building at a conference.
 seoLang: en-us
 sidebarURLs:
   - resource:
       buttonText: Learn More
       external: true
-      url: https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
-# siderbarText: ''
-# siderbarTitle: ''
-sidebarContactsText: Contact us for more information.
+      url: >-
+        https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
 sidebarContacts:
   - contact:
-      person: Ashley Whitaker
       infoat: false
+      person: Ashley Whitaker
+sidebarContactsText: Contact us for more information.
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-type: Teacher Professional Learning
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
 

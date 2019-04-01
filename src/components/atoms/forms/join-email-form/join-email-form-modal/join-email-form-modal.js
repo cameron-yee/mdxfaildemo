@@ -323,7 +323,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>First Name<span style={{color: 'red'}}>*</span></Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> First Name</Form.Label>
                 <Form.Control
                   id="first-name-input"
                   size="sm"
@@ -341,7 +341,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col md={12}>
               <Form.Group>
-                <Form.Label>Last Name<span style={{color: 'red'}}>*</span></Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Last Name</Form.Label>
                 <Form.Control
                   id="last-name-input"
                   type="text"
@@ -359,7 +359,7 @@ const JoinEmailFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Email<span style={{color: 'red'}}>*</span></Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Email</Form.Label>
                 <Form.Control
                   id="email-list-input"
                   type="email"

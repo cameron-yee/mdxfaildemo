@@ -39,7 +39,7 @@ When planning a study, researchers can use the POWER calculator to determine how
 
 <!-- <div class="d-flex justify-content-center mb-5">
   <div class="p-2">
-    <a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator</a>
+    <a class="btn btn-outline-secondary" href="https://effectsizecalculator.bscs.org" target="_blank" rel="noopener noreferrer">Access the POWER calculator&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
   </div>
 </div> -->
 
@@ -54,8 +54,8 @@ BSCS is continuing its research with a meta-analysis of 161 science education st
     <p style="font-style: italic; text-align: center;">
       This material is based upon work supported by the National Science Foundation under Grant Nos. (1118555) and (1544236). Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
     </p>
+    <p style="font-style: italic; text-align: center;">
+      The PI for Award #1118555 is Sue Kowalski, BSCS Science Learning. The PI for Award #1544236 is Jessica Spybrook, Western Michigan University.
+    </p>
   </div>
 </div>
-
-
-The PI for Award #1118555 is Sue Kowalski, BSCS Science Learning. The PI for Award #1544236 is Jessica Spybrook, Western Michigan University.

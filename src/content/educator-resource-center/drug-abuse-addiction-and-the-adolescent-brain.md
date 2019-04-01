@@ -1,16 +1,17 @@
 ---
 date: 2019-03-04T17:19:22.154Z
 title: 'Drug Abuse, Addiction, and the Adolescent Brain'
-seoTitle: BSCS curriculum on drug abuse and addiction
-seoDescription: BSCS curriculum unit teaches middle school science students about drug abuse and addiction in relevant contexts.
 seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/drug-abuse'
+seoDescription: >-
+  BSCS curriculum unit teaches middle school science students about drug abuse
+  and addiction in relevant contexts.
 seoLang: en-us
 cardDescription: >-
   BSCS curriculum unit teaches middle school science students about drug abuse
   and addiction in relevant contexts.
 type: Classroom Instruction
 image: /assets/drug_abuse.jpg
-alt: PLACEHOLDER
+alt: Blue human head with brain.
 template: Image Right
 courseId: 0
 sidebarURLs:

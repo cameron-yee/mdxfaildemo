@@ -24,7 +24,21 @@ import rowImage from '../queries/images/row-image'
 const IndexPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Home" />
-    <Jumbotron className="jumbotron jumbotron-index">
+    <Jumbotron className="jumbotron jumbotron-index" style={{ position: 'relative', overflow: 'hidden', background: 'transparent' }}>
+      {/* <Img
+        fluid={props.data.jumbotron.childImageSharp.fluid}
+        style={{
+          position: 'absolute',
+          // top: '0px',
+          // left: '0px',
+          // width: '100%',
+          // height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center center',
+          opacity: '1',
+          transition: 'opacity 0.5s ease 0s'
+        }}
+      /> */}
       <div className="jumbotron-inside">
         <div className="jumbotronContent">
           <h1 className="jumbotronHeading">BSCS MISSION:</h1>
@@ -155,8 +169,7 @@ const IndexPage = (props) => (
           </Card>
         </Col>
       </Row>
-      <Row className="mb-3">
-        {/* <Col md={{ span: 8, offset: 2 }} style={{border: '1px solid #293476'}} className="rounded p-3"> */}
+      {/* <Row className="mb-3">
         <Col md={{ span: 8, offset: 2 }} className="rounded p-3">
           <h2 className="mb-3">Featured Programs and Resources</h2>
           <p><strong>Program 1</strong></p>
@@ -166,26 +179,20 @@ const IndexPage = (props) => (
           <p><strong>Program 3</strong></p>
           <p className="mb-3">Franzen cardigan tbh, leggings tilde 90's prism brunch pop-up fashion axe bushwick. Health goth twee slow-carb pork belly forage, chillwave meditation stumptown vexillologist.</p>
         </Col>
-      </Row>
+      </Row> */}
       <Row style={{ marginBottom: '2rem' }} noGutters>
-        {/* <Col md={8} className="d-flex justify-content-center align-items-center" style={{background: 'rgba(41,52,118,.9)', color: 'white'}}> */}
-        {/* <Col xs={12}> */}
-          {/* <h2>Support BSCS Science Learning</h2> */}
-        {/* </Col> */}
-        <Col md={8}
-          // className="d-flex"
-          className="align-items-center rounded-left"
-          // style={{border: '1px solid #293476', borderRight: 'none' }}
-        >
+        <Col md={8} className="align-items-center rounded-left order-2 order-md-1" >
           <h2 className="pr-3 w-100">Support BSCS Science Learning</h2>
           <p className="pr-3 w-100">We are a proud 501(c)(3) nonprofit organization devoted to science education. Please consider a gift to BSCS this year and help us transform science teaching and learning. Your support makes a difference!</p>
+          <Link to="/donate/">
+            <Button variant="outline-secondary" className="mb-4">Donate Now</Button>
+          </Link>
         </Col>
-        <Col md={4}>
+        <Col md={4} className="order-1 order-md-2">
           <Img
-            className="h-100 rounded"
+            className="rounded mb-4"
             fluid={props.data.image5.childImageSharp.fluid}
-            alt="NEED ALT"
-            // backgroundColor='rgb(41, 52, 118)'
+            alt=""
           />
         </Col>
       </Row>
@@ -207,6 +214,10 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    jumbotron: file(relativePath: { eq: "homepage/website_banner_2019_01.jpg" }) {
+      ...cardImage
+    }
+    # image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
     image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
       ...cardImage
     }

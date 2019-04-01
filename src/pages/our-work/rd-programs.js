@@ -111,7 +111,7 @@ const RDPrograms = class extends Component {
           {/* <section className="section d-md-none" style={{ marginBottom: '4rem' }}> */}
           <section className="section" style={{ marginBottom: '4rem' }}>
             <Container>
-              <Row className="justify-content-center justify-content-md-start">
+              <Row className="justify-content-center">
                 {
                   this.programs.map((edge, index) => {
                     let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
@@ -150,15 +150,12 @@ const RDPrograms = class extends Component {
                             /> */}
                             <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
                               <div className="d-flex align-items-center mb-3">
-                                <img
-                                  // variant="top"
+                                {/* <img
                                   className="p-0 mr-3"
                                   src={edge.node.frontmatter.image}
                                   alt={edge.node.frontmatter.alt}
-                                  // onLoad={this.loaded}
-                                  style={{ padding: '1rem 7rem 0', width: '30%' }}
-                                  // className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2 p-0"
-                                />
+                                  style={{ padding: '1rem 7rem 0', width: '40px' }}
+                                /> */}
                                 <Card.Title
                                   style={{
                                     marginBottom: '1rem'

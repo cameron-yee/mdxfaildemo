@@ -43,6 +43,14 @@ As a result of this project, we will produce sets of NGSS-aligned assessments fo
 
 ***ASPECt-3D** builds on a previously funded IES project (R305A120138) focused mainly on assessing students’ understanding of science content. The researchers developed three vertically equated, multiple-choice instruments to assess students’ progress on the energy concept.
 
-*The research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant R305A180512 to BSCS Science Learning. The opinions expressed are those of the authors and do not represent views of the Institute or the U.S. Department of Education.*
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
 
-Partner: AAAS
+<div className="d-flex justify-content-md-center">
+  <a className="p-2" href="https://www.aaas.org/" target="_blank" rel="noopener noreferrer">
+    American Association for the Advancement of Science (AAAS)&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
+<hr />
+
+*The research reported here was supported by the Institute of Education Sciences, U.S. Department of Education, through Grant R305A180512 to BSCS Science Learning. The opinions expressed are those of the authors and do not represent views of the Institute or the U.S. Department of Education.*

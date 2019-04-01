@@ -21,4 +21,4 @@ Sue taught high school science for 10 years in Bloomington, MN. While in Bloomin
 
 <p style="margin-bottom: 2rem;">Sue received a B.A. in Physics from Colorado College, and an M.A. and Ph.D. in the department of curriculum and instruction of science education at the University of Minnesota, Twin Cities. Her dissertation examined the intersection of race and gender in high school physics’ group work conversations. Her hobbies include keeping up with her two small children, gardening, canning, running, biking, swimming, choral singing, and reading.</p>
 
-<a class="btn btn-outline-secondary" href="/assets/sue_kowalski_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Sue Kowalski's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
+<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/sue_kowalski_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Sue Kowalski's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>

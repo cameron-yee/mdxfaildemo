@@ -1,10 +1,10 @@
 ---
 date: 2019-02-25T18:58:06.329Z
 title: Understanding Ebola
-seoTitle: BSCS information about Ebola Virus Disease
-seoDescription: BSCS shares information to inform and educate teachers, students, and the public about Ebola Virus Disease.
-seoCanonicalUrl: >-
-  https://bscs.org/resources/educator-resource-center/understanding-ebola
+seoCanonicalUrl: 'https://bscs.org/resources/educator-resource-center/understanding-ebola'
+seoDescription: >-
+  BSCS shares information to inform and educate teachers, students, and the
+  public about Ebola Virus Disease.
 seoLang: en-us
 cardDescription: >-
   Understanding Ebola Virus Disease, is a free resource designed to educate
@@ -12,15 +12,15 @@ cardDescription: >-
   influence it’s spread.
 type: Classroom Instruction
 image: /assets/ebola.jpg
-alt: PLACEHOLDER
+alt: Green sphere covered by worm-like light green squigglies and blue blobs.
 template: Image Right
 courseId: 0
-sortOrder: 8
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://ebola.bscs.org/
+      url: 'https://ebola.bscs.org/'
+sortOrder: 8
 page: educator-resource-center
 ---
 In 2014-15, more than 11,000 people died in an outbreak of Ebola in West Africa. And just a few years later, the Democratic Republic of Congo is experiencing a world-first: an Ebola outbreak in a war zone. Citizens around the globe continue to share concerns about the spread of this disease.
