@@ -21,7 +21,7 @@ sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: 'https://bscs.sarus.io/'
+      url: 'https://bscs.sarus.io/courses/e8936c0c773779de'
 sortOrder: 4
 page: educator-resource-center
 ---
