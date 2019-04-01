@@ -11,7 +11,7 @@ seoDescription: >-
 seoLang: en-us
 image: /assets/woman-writing.jpg
 alt: >-
-  woman wearing baseball cap writing with a marker on large piece of paper on
+  Woman wearing baseball cap writing with a marker on large piece of paper on
   table
 sidebarURLs:
   - resource:
