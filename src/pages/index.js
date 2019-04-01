@@ -155,8 +155,7 @@ const IndexPage = (props) => (
           </Card>
         </Col>
       </Row>
-      <Row className="mb-3">
-        {/* <Col md={{ span: 8, offset: 2 }} style={{border: '1px solid #293476'}} className="rounded p-3"> */}
+      {/* <Row className="mb-3">
         <Col md={{ span: 8, offset: 2 }} className="rounded p-3">
           <h2 className="mb-3">Featured Programs and Resources</h2>
           <p><strong>Program 1</strong></p>
@@ -168,14 +167,8 @@ const IndexPage = (props) => (
         </Col>
       </Row>
       <Row style={{ marginBottom: '2rem' }} noGutters>
-        {/* <Col md={8} className="d-flex justify-content-center align-items-center" style={{background: 'rgba(41,52,118,.9)', color: 'white'}}> */}
-        {/* <Col xs={12}> */}
-          {/* <h2>Support BSCS Science Learning</h2> */}
-        {/* </Col> */}
         <Col md={8}
-          // className="d-flex"
           className="align-items-center rounded-left"
-          // style={{border: '1px solid #293476', borderRight: 'none' }}
         >
           <h2 className="pr-3 w-100">Support BSCS Science Learning</h2>
           <p className="pr-3 w-100">We are a proud 501(c)(3) nonprofit organization devoted to science education. Please consider a gift to BSCS this year and help us transform science teaching and learning. Your support makes a difference!</p>
@@ -185,10 +178,9 @@ const IndexPage = (props) => (
             className="h-100 rounded"
             fluid={props.data.image5.childImageSharp.fluid}
             alt="NEED ALT"
-            // backgroundColor='rgb(41, 52, 118)'
           />
         </Col>
-      </Row>
+      </Row> */}
     </Container>
   </Layout>
 )
