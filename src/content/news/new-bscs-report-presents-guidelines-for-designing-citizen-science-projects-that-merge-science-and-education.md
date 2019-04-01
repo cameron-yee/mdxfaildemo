@@ -5,22 +5,25 @@ title: >-
   that Merge Science and Education
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education
-seoDescription: Test SEO description.
+seoDescription: >-
+  BSCS Science Learning has released a report that presents guidelines for
+  designing citizen science projects with scientific and educational benefits.
 seoLang: en-us
-sidebarContactsTitle: ""
-sidebarContactsText: Questions?
-sidebarContacts:
-  - contact:
-      person: Lauren Novo
-      infoat: false
 sidebarURLs:
   - resource:
       buttonText: Access Report
       external: false
-      text: "The report is freely available:"
-      url: /resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/
+      text: 'The report is freely available:'
+      url: >-
+        /resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/
+sidebarContacts:
+  - contact:
+      infoat: false
+      person: Lauren Novo
+sidebarContactsText: Questions?
+sidebarContactsTitle: ''
+additionalTags: ''
 page: news
-additionalTags: ""
 ---
 
 import { Link } from 'gatsby'
