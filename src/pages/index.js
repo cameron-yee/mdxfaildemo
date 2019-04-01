@@ -196,7 +196,7 @@ const IndexPage = (props) => (
           <Img
             className="rounded mb-4"
             fluid={props.data.image5.childImageSharp.fluid}
-            alt=""
+            alt="Young girl in an astronaut suit pointing at the moon."
             backgroundColor='rgba(205, 205, 205, 1)'
           />
         </Col>
