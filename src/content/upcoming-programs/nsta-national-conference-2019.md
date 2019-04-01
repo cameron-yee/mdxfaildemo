@@ -18,6 +18,7 @@ sidebarContacts:
       person: Ashley Whitaker
 sidebarContactsText: Contact us for more information.
 sidebarContactsTitle: Questions?
+sortOrder: 1
 page: upcoming-programs
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
