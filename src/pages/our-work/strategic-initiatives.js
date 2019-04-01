@@ -62,7 +62,7 @@ const StrategicInitiativesPage = class extends Component {
                   className="ml-3 mb-3 rounded"
                   fluid={this.props.data.threeGirlsInClassroom.childImageSharp.fluid}
                   alt="NEED ALT"
-                  backgroundColor='rgb(41, 52, 118)'
+                  backgroundColor='rgba(205, 205, 205, 1)'
                 />
               </div>
               <p>Following a strategic planning process in 2016, BSCS Science Learning is pursuing three long-term, strategic initiatives.</p>

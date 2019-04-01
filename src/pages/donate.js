@@ -52,8 +52,8 @@ const DonatePage = class extends Component {
 
                 <p>Other ways to support BSCS:</p>
                 <ul>
-                  <li><strong>AmazonSmile:</strong> <a href="https://smile.amazon.com/" target="_blank" rel="noopener noreferrer">AmazonSmile</a> donates .5% of your purchase price to BSCS (at no additional cost to you) on qualifying Amazon purchases. Sign-up is simple (we're listed as BSCS Science Learning).</li>
-                  <li><strong>iGive:</strong> <a href="https://www.igive.com/welcome/lp16/cr64a.cfm" target="_blank" rel="noopener noreferrer">iGive</a> donates a percentage of each purchase to BSCS (at no additional cost to you) when you shop at more than 1,300 participating online stores. Register now (we're listed as BSCS Science Learning).</li>
+                  <li><strong>AmazonSmile:</strong> <a href="https://smile.amazon.com/" target="_blank" rel="noopener noreferrer">AmazonSmile&nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup></a> donates .5% of your purchase price to BSCS (at no additional cost to you) on qualifying Amazon purchases. Sign-up is simple (we're listed as BSCS Science Learning).</li>
+                  <li><strong>iGive:</strong> <a href="https://www.igive.com/welcome/lp16/cr64a.cfm" target="_blank" rel="noopener noreferrer">iGive&nbsp;<sup><i style={{ fontSize: '.65rem' }} className="fas fa-external-link-alt"></i></sup></a> donates a percentage of each purchase to BSCS (at no additional cost to you) when you shop at more than 1,300 participating online stores. Register now (we're listed as BSCS Science Learning).</li>
                 </ul>
               </Col>
               <Col md={4} className="p-2">
