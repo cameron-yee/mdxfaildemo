@@ -17,6 +17,7 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Cindy Gay
+sidebarContactsText: 'For more information, please contact Cindy Gay.'
 sidebarContactsTitle: Questions?
 sortOrder: 3
 page: upcoming-programs
