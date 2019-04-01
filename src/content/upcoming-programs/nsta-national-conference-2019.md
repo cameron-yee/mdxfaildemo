@@ -7,7 +7,7 @@ seoCanonicalUrl: >-
 seoDescription: BSCS Science Learning will be attending NSTA 2019 in St. Louis.
 seoLang: en-us
 image: /assets/nsta-conference.jpg
-alt: people walking in a conference center
+alt: People walking in a conference center.
 sidebarURLs:
   - resource:
       buttonText: Learn More
