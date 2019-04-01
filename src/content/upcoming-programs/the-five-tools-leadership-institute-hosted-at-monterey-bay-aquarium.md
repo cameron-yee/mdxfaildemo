@@ -14,6 +14,10 @@ cardDescription: >-
   of science education that is coherent, focused, and rigorous. 
 sidebarText: ''
 sidebarTitle: Registration is open
+image: /assets/coffee-mug.jpg
+alt: >-
+  white coffee mug with the text "BSCS Science Learning" next to colored markers
+  and pens on a table
 sidebarURLs:
   - resource:
       buttonText: Sign up
