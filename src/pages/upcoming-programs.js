@@ -313,6 +313,11 @@ const UpcomingProgramsPage = class extends Component {
                 <div
                   className="d-flex flex-row align-items-center"
                 >
+                  <div className="ml-auto">
+                    <span className="back-to-top-text m-3">
+                      Back to Top
+                    </span>
+                  </div>
                   <div className={`rounded-circle p-3 categoryImageChild professional-learning`} >
                     <img
                       className="categoryImageGrandChild"
@@ -320,11 +325,6 @@ const UpcomingProgramsPage = class extends Component {
                       alt="TEST"
                     />
                   </div>
-                  <span
-                    className="back-to-top-text m-3"
-                  >
-                    Back to Top
-                  </span>
                 </div>
               </div>
               <hr />
@@ -461,6 +461,11 @@ const UpcomingProgramsPage = class extends Component {
                 <div
                   className="d-flex flex-row align-items-center"
                 >
+                  <div className="ml-auto">
+                    <span className="back-to-top-text m-3">
+                      Back to Top
+                    </span>
+                  </div>
                   <div className={`rounded-circle p-3 categoryImageChild district-planning`} >
                     <img
                       className="categoryImageGrandChild"
@@ -468,11 +473,6 @@ const UpcomingProgramsPage = class extends Component {
                       alt="TEST"
                     />
                   </div>
-                  <span
-                    className="back-to-top-text m-3"
-                  >
-                    Back to Top
-                  </span>
                 </div>
               </div>
               <hr />
@@ -606,6 +606,11 @@ const UpcomingProgramsPage = class extends Component {
                 <div
                   className="d-flex flex-row align-items-center"
                 >
+                  <div className="ml-auto">
+                    <span className="back-to-top-text m-3">
+                      Back to Top
+                    </span>
+                  </div>
                   <div className={`rounded-circle p-3 categoryImageChild classroom-instruction`} >
                     <img
                       className="categoryImageGrandChild"
@@ -613,14 +618,8 @@ const UpcomingProgramsPage = class extends Component {
                       alt="TEST"
                     />
                   </div>
-                  <span
-                    className="back-to-top-text m-3"
-                  >
-                    Back to Top
-                  </span>
                 </div>
               </div>
-              <hr />
             </Container>
           </section>
         </Layout>
