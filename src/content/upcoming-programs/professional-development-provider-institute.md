@@ -1,26 +1,29 @@
 ---
 date: 2019-03-08T21:58:54.877Z
 title: Professional Development Provider Institute
+type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
-seoDescription: TEST DESCRIPTION
+seoDescription: >-
+  The Professional Development Provider Institute in October 2019 will focus on
+  Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting
+  Data, Constructing Explanations, and Engaging in Argument from Evidence.
 seoLang: en-us
-siderbarURL: 'https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/start'
-siderbarText: ''
-siderbarTitle: Sign up now
-sidebarContactsText: ''
+sidebarURLs:
+  - resource:
+      buttonText: Register
+      external: true
+      text: Sign up now
+      url: >-
+        https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0125jtynj7wt/questions
 sidebarContacts:
   - contact:
-      person: Ashley Whitaker
       infoat: false
-  # - contact:
-  #     person: Jody Bintz
-  #     infoat: false
+      person: Ashley Whitaker
+sidebarContactsText: ''
 sidebarContactsTitle: Questions?
+sortOrder: 4
 page: upcoming-programs
-image: assets/woman-writing.jpg
-alt: woman wearing baseball cap writing with a marker on large piece of paper on table.
-type: Teacher Professional Learning
 ---
 Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
 

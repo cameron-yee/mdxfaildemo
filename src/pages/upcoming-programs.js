@@ -103,7 +103,7 @@ const UpcomingProgramsPage = class extends Component {
         />
         <Layout location={this.props.location}>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
-            <Container>
+            <Container id="upcoming-filters">
               <PageTitle title="Upcoming Programs" />
               <Row className="justify-content-center" style={{marginBottom: '5rem'}}>
                 <Col xs={12} style={{marginBottom: '2rem'}}>
@@ -233,12 +233,13 @@ const UpcomingProgramsPage = class extends Component {
                               type='rect'
                               ready={this.state.imagesLoaded}
                               // color='#E0E0E0'
-                              color='rgb(41, 52, 118)'
+                              // color='rgb(41, 52, 118)'
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                // width: '349.984px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -303,6 +304,32 @@ const UpcomingProgramsPage = class extends Component {
               </Row>
             </Container>
           </section>
+          <section className="section mb-5">
+            <Container>
+              <div
+                className={`categoryImageParent professional-learning back-to-top`}
+                onClick={(e) => document.getElementById('upcoming-filters').scrollIntoView({behavior: "smooth", block: "start"})}
+              >
+                <div
+                  className="d-flex flex-row align-items-center"
+                >
+                  <div className={`rounded-circle p-3 categoryImageChild professional-learning`} >
+                    <img
+                      className="categoryImageGrandChild"
+                      src={tplLogo}
+                      alt="TEST"
+                    />
+                  </div>
+                  <span
+                    className="back-to-top-text m-3"
+                  >
+                    Back to Top
+                  </span>
+                </div>
+              </div>
+              <hr />
+            </Container>
+          </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
             <Container>
               <h2 id="leadership-development">Leadership Development</h2>
@@ -356,8 +383,10 @@ const UpcomingProgramsPage = class extends Component {
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                // width: '349.984px',
+                                // height: '260.98px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -370,7 +399,7 @@ const UpcomingProgramsPage = class extends Component {
                                 alt={edge.node.frontmatter.alt}
                                 style={{
                                   minHeight: '260.98px',
-                                  backgroundColor: 'rgba(41, 52, 118, 1)',
+                                  backgroundColor: 'rgba(205, 205, 205, 1)',
                                   borderTopLeftRadius: '4px',
                                   borderTopRightRadius: '4px'
                                 }}
@@ -420,6 +449,33 @@ const UpcomingProgramsPage = class extends Component {
                   })
                 }
               </Row>
+            </Container>
+          </section>
+          {/* <section className="section" style={{ padding: '.75rem 1.5rem' }}> */}
+          <section className="section mb-5">
+            <Container>
+              <div
+                className={`categoryImageParent district-planning back-to-top`}
+                onClick={(e) => document.getElementById('upcoming-filters').scrollIntoView({behavior: "smooth", block: "start"})}
+              >
+                <div
+                  className="d-flex flex-row align-items-center"
+                >
+                  <div className={`rounded-circle p-3 categoryImageChild district-planning`} >
+                    <img
+                      className="categoryImageGrandChild"
+                      src={ldLogo}
+                      alt="TEST"
+                    />
+                  </div>
+                  <span
+                    className="back-to-top-text m-3"
+                  >
+                    Back to Top
+                  </span>
+                </div>
+              </div>
+              <hr />
             </Container>
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
@@ -475,8 +531,8 @@ const UpcomingProgramsPage = class extends Component {
                               showLoadingAnimation={true}
                               // style={{width: '349.984px', height: '653.078px', borderRadius: '4px'}}
                               style={{
-                                width: '349.984px',
-                                height: '260.98px',
+                                height: '350px',
+                                width: '100%',
                                 borderTopLeftRadius: '4px',
                                 borderTopRightRadius: '4px'
 
@@ -489,7 +545,7 @@ const UpcomingProgramsPage = class extends Component {
                                 alt={edge.node.frontmatter.alt}
                                 style={{
                                   minHeight: '260.98px',
-                                  backgroundColor: 'rgba(41, 52, 118, 1)',
+                                  backgroundColor: 'rgba(205, 205, 205, 1)',
                                   borderTopLeftRadius: '4px',
                                   borderTopRightRadius: '4px'
                                 }}
@@ -539,6 +595,32 @@ const UpcomingProgramsPage = class extends Component {
                   })
                 }
               </Row>
+            </Container>
+          </section>
+          <section className="section mb-5">
+            <Container>
+              <div
+                className={`categoryImageParent classroom-instruction back-to-top`}
+                onClick={(e) => document.getElementById('upcoming-filters').scrollIntoView({behavior: "smooth", block: "start"})}
+              >
+                <div
+                  className="d-flex flex-row align-items-center"
+                >
+                  <div className={`rounded-circle p-3 categoryImageChild classroom-instruction`} >
+                    <img
+                      className="categoryImageGrandChild"
+                      src={ftoLogo}
+                      alt="TEST"
+                    />
+                  </div>
+                  <span
+                    className="back-to-top-text m-3"
+                  >
+                    Back to Top
+                  </span>
+                </div>
+              </div>
+              <hr />
             </Container>
           </section>
         </Layout>

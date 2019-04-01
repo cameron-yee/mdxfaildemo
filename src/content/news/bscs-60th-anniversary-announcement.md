@@ -3,19 +3,21 @@ date: 2018-03-14T15:45:40.892Z
 title: BSCS 60th Anniversary Announcement
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-60th-anniversary-announcement
-seoDescription: Test SEO description.
+seoDescription: >-
+  BSCS celebrates 60th anniversary in 2018 and changes name to BSCS Science
+  Learning.
 seoLang: en-us
 sidebarURLs:
   - resource:
       buttonText: Email Announcement
       external: true
-      url: https://myemail.constantcontact.com/BSCS-60th-Anniversary-Announcement.html?soid=1126116988583&aid=StYqO0SJr-Y
-
-sidebarContactsText: Questions?
+      url: >-
+        https://myemail.constantcontact.com/BSCS-60th-Anniversary-Announcement.html?soid=1126116988583&aid=StYqO0SJr-Y
 sidebarContacts:
   - contact:
-      person: Lauren Novo
       infoat: false
+      person: Lauren Novo
+sidebarContactsText: Questions?
 page: news
 ---
 Dear Friends,

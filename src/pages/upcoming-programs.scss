@@ -60,6 +60,18 @@
   }
 }
 
+.back-to-top {
+  cursor: pointer;
+}
+
+.back-to-top-text {
+  color: $secondary;
+
+  &:hover {
+    color: darken($secondary, 10%);
+  }
+}
+
 // .breadcrumb-item {
 //   color: white;
 //   &.active {

@@ -3,7 +3,7 @@ date: 2019-02-12T20:12:07.266Z
 title: Celebrating Darwin Day 2019
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/celebrating-darwin-day-2019
-seoDescription: Test SEO description.
+seoDescription: Celebrating Darwin Day 2019 stories.
 seoLang: en-us
 cardDescription: >-
   Darwin Day is a celebration to commemorate the birthday of Charles Darwin on
@@ -11,8 +11,8 @@ cardDescription: >-
   science and to promote science in general.
 sidebarContacts:
   - contact:
-      person: Lauren Novo
       infoat: false
+      person: Lauren Novo
 sidebarContactsTitle: Questions?
 sortOrder: 1
 page: news

@@ -4,7 +4,7 @@ title: NSTA National Conference 2019
 type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/nsta-national-conference-2019
-seoDescription: Arial view of people walking around in a large building at a conference.
+seoDescription: BSCS Science Learning will be attending NSTA 2019 in St. Louis.
 seoLang: en-us
 sidebarURLs:
   - resource:
@@ -18,6 +18,7 @@ sidebarContacts:
       person: Ashley Whitaker
 sidebarContactsText: Contact us for more information.
 sidebarContactsTitle: Questions?
+sortOrder: 1
 page: upcoming-programs
 ---
 NSTA conferences offer the latest in science content, teaching strategy, and research to enhance and expand your professional growth. BSCS is excited to present sessions at this year's conference in St. Louis.
