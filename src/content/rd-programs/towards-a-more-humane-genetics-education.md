@@ -6,6 +6,9 @@ seoDescription: >-
   BSCS research project explores how genetics education affects development of
   racial and gender biases among students.
 seoLang: en-us
+cardDescription: >-
+  Racism is a serious problem in the United States. Research has shown that the
+  biology curriculum can affect how students think about race.
 areas:
   - Research
   - Instructional Materials Development
@@ -14,8 +17,8 @@ alt: Humane Genetics Icon
 sidebarContactsText: 'For more information, please contact Brian Donovan.'
 sidebarContacts:
   - contact:
-      person: Brian Donovan
       infoat: false
+      person: Brian Donovan
 sidebarContactsTitle: Questions?
 sortOrder: 2
 page: rd-programs
