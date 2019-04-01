@@ -54,7 +54,8 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image1.childImageSharp.fluid}
               className="card-img-top"
-              // backgroundColor='rgb(41, 52, 118)'
+              alt='male student holding an iPad that says "Focus Question: What are the building blocks of living things?"'
+              backgroundColor='rgba(205, 205, 205, 1)'
             />
             <Card.Body>
               <Card.Text style={{ fontSize: '1.3rem' }}>
@@ -84,7 +85,8 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image2.childImageSharp.fluid}
               className="card-img-top"
-              // backgroundColor='rgb(41, 52, 118)'
+              alt="teacher with long hair and denim jacket pointing at something on a desk with three female fifth-grade students"
+              backgroundColor='rgba(205, 205, 205, 1)'
             />
             <Card.Body>
               <Card.Text style={{ fontSize: '1.3rem' }}>
@@ -114,7 +116,8 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image3.childImageSharp.fluid}
               className="card-img-top"
-              // backgroundColor='rgb(41, 52, 118)'
+              alt=""
+              backgroundColor='rgba(205, 205, 205, 1)'
             />
             <Card.Body>
               <Card.Text style={{ fontSize: '1.3rem' }}>
@@ -144,7 +147,8 @@ const IndexPage = (props) => (
               variant="top"
               fluid={props.data.image4.childImageSharp.fluid}
               className="card-img-top"
-              // backgroundColor='rgb(41, 52, 118)'
+              backgroundColor='rgba(205, 205, 205, 1)'
+              alt="young boy with glasses and blue hoodie scrunching his face while looking at a vial in his right hand"
             />
             <Card.Body>
               <Card.Text style={{ fontSize: '1.3rem' }}>
@@ -193,6 +197,7 @@ const IndexPage = (props) => (
             className="rounded mb-4"
             fluid={props.data.image5.childImageSharp.fluid}
             alt=""
+            backgroundColor='rgba(205, 205, 205, 1)'
           />
         </Col>
       </Row>
