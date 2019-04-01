@@ -44,15 +44,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       `open sans\:200,200i,300,300i,400,400i,600,600i,700,700i`,
-    //       `lora\:400,400i`,
-    //     ]
-    //   }
-    // },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
