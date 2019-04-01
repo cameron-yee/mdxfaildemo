@@ -13,7 +13,7 @@ cardDescription: >-
   deeply about learning and teaching with the goal of developing a clear vision
   of science education that is coherent, focused, and rigorous. 
 sidebarText: ''
-sidebarTitle: Sign up now
+sidebarTitle: Registration is open
 sidebarURLs:
   - resource:
       buttonText: Sign up
