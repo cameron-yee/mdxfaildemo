@@ -61,7 +61,7 @@ const FinancialsPage = class extends Component {
               <Img
                 className="h-100"
                 fluid={this.props.data.ar2017.childImageSharp.fluid}
-                alt="BSCS Science Learning Annual Report 2017"
+                alt="Young girl in an astronaut suit pointing at the moon."
                 // backgroundColor='rgb(41, 52, 118)'
               />
             </Col>
