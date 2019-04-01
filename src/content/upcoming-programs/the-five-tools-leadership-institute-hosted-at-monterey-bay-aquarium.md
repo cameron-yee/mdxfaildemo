@@ -1,27 +1,30 @@
 ---
 date: 2019-03-12T18:23:56.484Z
 title: The Five Tools Leadership Institute Hosted at Monterey Bay Aquarium
+type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/five-tools-monterey
 seoDescription: Test SEO description.
 seoLang: en-us
+sidebarText: ''
+sidebarTitle: Sign up now
+image: /assets/coffee-mug.jpg
+alt: >-
+  white coffee mug with the text "BSCS Science Learning" next to colored markers
+  and pens on a table
 sidebarURLs:
   - resource:
       buttonText: Sign up
       external: true
-      url: https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
-sidebarText: ''
-sidebarTitle: Sign up now
-sidebarContactsText: ''
+      url: >-
+        https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
 sidebarContacts:
   - contact:
-      person: Ashley Whitaker
       infoat: false
+      person: Ashley Whitaker
+sidebarContactsText: ''
 sidebarContactsTitle: Questions?
 page: upcoming-programs
-image: assets/coffee-mug.jpg
-alt: white coffee mug with the text "BSCS Science Learning" next to colored markers and pens on a table
-type: Teacher Professional Learning
 ---
 The _Next Generation Science Standards_ (NGSS) challenge teachers to think deeply about learning and teaching with the goal of developing a clear vision of science education that is coherent, focused, and rigorous. The Five Tools and Processes for Translating the NGSS are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision.
 
