@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Aleigh Raffelson
 template: Image Left
-image: /assets/koala.jpg
+image: /assets/aleigh_raffelson_5x7.jpg
 alt: Aleigh Raffelson headshot.
 additionalTags:
 type: Management

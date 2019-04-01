@@ -4,7 +4,7 @@ import { graphql, StaticQuery, Link } from 'gatsby'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
 // import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'

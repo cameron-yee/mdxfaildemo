@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { Location } from '@reach/router'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -204,7 +205,11 @@ const IndexPage = (props) => (
   </Layout>
 )
 
-export default IndexPage
+export default props => (
+  <Location>
+    {locationProps => <IndexPage {...locationProps} {...props} />}
+  </Location>
+)
 
 // export const cardImage = graphql`
 //   fragment cardImage on File {
