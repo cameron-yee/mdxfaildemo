@@ -41,8 +41,7 @@ const IndexPage = (props) => (
       /> */}
       <div className="jumbotron-inside">
         <div className="jumbotronContent">
-          <h1 className="jumbotronHeading">BSCS MISSION:</h1>
-          <h1 className="jumbotronHeading">To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
+          <h1 className="jumbotronHeading">BSCS MISSION:<br /> To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
         </div>
       </div>
     </Jumbotron>

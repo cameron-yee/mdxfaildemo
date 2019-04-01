@@ -9,15 +9,16 @@ seoDescription: >-
   Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting
   Data, Constructing Explanations, and Engaging in Argument from Evidence.
 seoLang: en-us
+sidebarTitle: Registration is open
 image: /assets/woman-writing.jpg
 alt: >-
-  woman wearing baseball cap writing with a marker on large piece of paper on
+  Woman wearing baseball cap writing with a marker on large piece of paper on
   table
 sidebarURLs:
   - resource:
       buttonText: Sign up now
       external: true
-      text: Registration is open
+      text: ''
       url: >-
         https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0125jtynj7wt/questions
 sidebarContacts:
