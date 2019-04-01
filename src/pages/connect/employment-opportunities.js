@@ -42,7 +42,7 @@ const EmploymentOpportunitiesPage = (props) => {
                 <Card.Text style={{fontSize: '1rem'}}>
                 </Card.Text>
                 <SpecificContactForm sendto="BSCS Careers">
-                  <Button variant="outline-secondary">Contact BSCS Careers</Button>
+                  <Button variant="outline-primary">Contact BSCS Careers</Button>
                 </SpecificContactForm>
               </Card.Body>
             </Card>
