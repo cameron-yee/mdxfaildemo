@@ -9,6 +9,12 @@ seoDescription: >-
   Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting
   Data, Constructing Explanations, and Engaging in Argument from Evidence.
 seoLang: en-us
+sidebarURLs:
+  - resource:
+      buttonText: Register
+      external: true
+      url: >-
+        https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0125jtynj7wt/questions
 sidebarContacts:
   - contact:
       infoat: false
