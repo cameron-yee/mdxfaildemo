@@ -127,7 +127,7 @@ const RDPrograms = class extends Component {
                         <Col
                           xs={10}
                           md={6}
-                          // lg={3}
+                          // xl={3}
                           className="rrc-card-col"
                           key={edge.node.id}
                         >
