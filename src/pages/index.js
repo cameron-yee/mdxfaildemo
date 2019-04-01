@@ -179,22 +179,23 @@ const IndexPage = (props) => (
           <p><strong>Program 3</strong></p>
           <p className="mb-3">Franzen cardigan tbh, leggings tilde 90's prism brunch pop-up fashion axe bushwick. Health goth twee slow-carb pork belly forage, chillwave meditation stumptown vexillologist.</p>
         </Col>
-      </Row>
+      </Row> */}
       <Row style={{ marginBottom: '2rem' }} noGutters>
-        <Col md={8}
-          className="align-items-center rounded-left"
-        >
+        <Col md={8} className="align-items-center rounded-left order-2 order-md-1" >
           <h2 className="pr-3 w-100">Support BSCS Science Learning</h2>
           <p className="pr-3 w-100">We are a proud 501(c)(3) nonprofit organization devoted to science education. Please consider a gift to BSCS this year and help us transform science teaching and learning. Your support makes a difference!</p>
+          <Link to="/donate/">
+            <Button variant="outline-secondary" className="mb-4">Donate Now</Button>
+          </Link>
         </Col>
-        <Col md={4}>
+        <Col md={4} className="order-1 order-md-2">
           <Img
-            className="h-100 rounded"
+            className="rounded mb-4"
             fluid={props.data.image5.childImageSharp.fluid}
-            alt="NEED ALT"
+            alt=""
           />
         </Col>
-      </Row> */}
+      </Row>
     </Container>
   </Layout>
 )
