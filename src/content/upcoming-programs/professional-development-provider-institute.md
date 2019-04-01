@@ -11,9 +11,9 @@ seoDescription: >-
 seoLang: en-us
 sidebarURLs:
   - resource:
-      buttonText: Register
+      buttonText: Sign up now
       external: true
-      text: Sign up now
+      text: Registration is open
       url: >-
         https://survey.constantcontact.com/survey/a07eg0ermxwjqse65vd/a0125jtynj7wt/questions
 sidebarContacts:
