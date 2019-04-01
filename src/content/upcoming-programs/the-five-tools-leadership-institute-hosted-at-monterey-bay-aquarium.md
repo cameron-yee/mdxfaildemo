@@ -28,7 +28,7 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Ashley Whitaker
-sidebarContactsText: ''
+sidebarContactsText: 'For more information, please contact Ashley Whitaker.'
 sidebarContactsTitle: Questions?
 sortOrder: 2
 page: upcoming-programs
