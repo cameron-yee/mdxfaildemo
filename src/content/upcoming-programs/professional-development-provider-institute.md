@@ -4,12 +4,11 @@ title: Professional Development Provider Institute
 type: Teacher Professional Learning
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
-seoDescription: TEST DESCRIPTION
+seoDescription: >-
+  The Professional Development Provider Institute in October 2019 will focus on
+  Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting
+  Data, Constructing Explanations, and Engaging in Argument from Evidence.
 seoLang: en-us
-image: /assets/woman-writing.jpg
-alt: >-
-  woman wearing baseball cap writing with a marker on large piece of paper on
-  table.
 sidebarContacts:
   - contact:
       infoat: false
