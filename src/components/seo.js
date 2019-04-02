@@ -229,6 +229,9 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
               {
                 name: `msapplication-square310x310logo`, content: mstile310
               },
+              {
+                name: `google-site-verification`, content: `F9gHj-NlrgzUDneRpkYJRBlDS585QUmJAHtldLWYTYg`
+              },
             ]
               // .concat(
               //   keywords.length > 0
