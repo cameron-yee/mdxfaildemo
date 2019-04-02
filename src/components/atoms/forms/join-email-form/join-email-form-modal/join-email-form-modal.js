@@ -6,6 +6,7 @@ import * as BlueBirdPromise from 'bluebird'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
@@ -38,7 +39,9 @@ const JoinEmailFormModal = class extends Component {
       topicsOfInterest: undefined,
       signed_up: false,
       loading: false,
-      notificationShow: false
+      notificationShow: false,
+      showErrorNotification: false,
+      errors: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -65,6 +68,14 @@ const JoinEmailFormModal = class extends Component {
 
   hideNotification = () => {
     this.setState({notificationShow: false})
+  }
+
+  showErrorNotification = () => {
+    this.setState({showErrorNotification: true})
+  }
+
+  hideErrorNotification = () => {
+    this.setState({showErrorNotification: false})
   }
 
   setEmail = (e) => {
@@ -223,6 +234,7 @@ const JoinEmailFormModal = class extends Component {
 
       return this.getContactId
         .catch(error => {
+          this.setState({errors: true, showErrorNotification: true});
           console.log(error)
         })
     })
@@ -235,6 +247,7 @@ const JoinEmailFormModal = class extends Component {
     })
     .catch(error => {
       axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+      this.setState({errors: true, showErrorNotification: true});
     })
   }
 
@@ -257,6 +270,7 @@ const JoinEmailFormModal = class extends Component {
     })
     .catch(error => {
       axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+      this.setState({errors: true, showErrorNotification: true});
     })
   }
 
@@ -296,6 +310,7 @@ const JoinEmailFormModal = class extends Component {
     })
     .catch(error => {
       axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+      this.setState({errors: true, showErrorNotification: true});
     })
   }
 
@@ -314,9 +329,6 @@ const JoinEmailFormModal = class extends Component {
       </Modal.Header>
       <Form onSubmit={(e) => this.checkIfContactExists(e)}>
         <Modal.Body>
-          <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-            You are already enrolled in the email list.
-          </Alert>
           <Row>
             <Col xs={12}>
               <p>Be the first to know about BSCS's upcoming professional learning programs, field-test opportunities, project news, and more!</p>
@@ -540,21 +552,42 @@ const JoinEmailFormModal = class extends Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          { !this.state.loading && this.state.signed_up &&
-            <Button variant="outline-success" disabled>Signed up</Button>
-          }
-          { !this.state.signed_up && (!this.state.firstname || !this.state.lastname || !this.state.email) &&
-            <Button variant="outline-primary" disabled>Sign up</Button>
-          }
-          { !this.state.signed_up && !this.state.loading && !this.state.signed_up && this.state.firstname && this.state.lastname && this.state.email &&
-            <Button variant="outline-primary" type="submit">Sign up</Button>
-          }
-          { this.state.loading &&
-            <Button variant="outline-success" disabled>
-              <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-              Sign up
-            </Button>
-          }
+          <Container>
+            <Row>
+              <Col xs={12}>
+                <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+                  You are already enrolled in the email list.
+                </Alert>
+                <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
+                  We are having problems with our servers right now.  Please try again later.  Sorry for the inconvenience.
+                </Alert>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <div className="d-flex justify-content-end">
+                  { !this.state.errors && !this.state.loading && this.state.signed_up &&
+                    <Button variant="outline-success" disabled>Signed up</Button>
+                  }
+                  { !this.state.errors && !this.state.signed_up && (!this.state.firstname || !this.state.lastname || !this.state.email) &&
+                    <Button variant="outline-primary" disabled>Sign up</Button>
+                  }
+                  { !this.state.errors && !this.state.signed_up && !this.state.loading && !this.state.signed_up && this.state.firstname && this.state.lastname && this.state.email &&
+                    <Button variant="outline-primary" type="submit">Sign up</Button>
+                  }
+                  { !this.state.errors && this.state.loading &&
+                    <Button variant="outline-success" disabled>
+                      <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                      Sign up
+                    </Button>
+                  }
+                  {this.state.errors &&
+                    <Button variant="outline-danger" disabled>Error</Button>
+                  }
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Modal.Footer>
       </Form>
     </Modal>

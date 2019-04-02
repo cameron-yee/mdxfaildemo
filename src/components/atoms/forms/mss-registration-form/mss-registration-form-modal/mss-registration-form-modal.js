@@ -6,6 +6,7 @@ import * as BlueBirdPromise from 'bluebird'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
@@ -45,7 +46,9 @@ const MSSRegistrationFormModal = class extends Component {
       hearAboutOpportunity: undefined,
       registered: false,
       loading: false,
-      notificationShow: false
+      notificationShow: false,
+      showErrorNotification: false,
+      errors: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -72,6 +75,14 @@ const MSSRegistrationFormModal = class extends Component {
 
   hideNotification = () => {
     this.setState({notificationShow: false})
+  }
+
+  showErrorNotification = () => {
+    this.setState({showErrorNotification: true})
+  }
+
+  hideErrorNotification = () => {
+    this.setState({showErrorNotification: false})
   }
 
   setEmail = (e) => {
@@ -226,28 +237,26 @@ const MSSRegistrationFormModal = class extends Component {
   }
 
   getPreviewOrUse = () => {
-    let preview_or_use = document.querySelectorAll('input.custom-control-input.p-or-u:checked')[0].nextSibling.textContent
-    return preview_or_use
+    // let preview_or_use = document.querySelectorAll('input.custom-control-input.p-or-u:checked')[0].nextSibling.textContent
+    // return preview_or_use
+    let preview_or_use = document.getElementsByName('p-or-u')
+    for(let i = 0; i < preview_or_use.length; i++) {
+      if(preview_or_use[i].checked) {
+        return preview_or_use[i].nextSibling.textContent
+      }
+    }
+    return undefined
   }
 
   getComputers = () => {
-    let computers = document.querySelectorAll('input.custom-control-input[id$="computers"]:checked')[0].nextSibling.textContent
-    return computers
-  }
-
-  controlComputers = (e) => {
-    e.preventDefault()
-    const elem = document.getElementById(e.target.id)
-    let computers = document.querySelectorAll('input.custom-control-input[id$="computers"]:checked')
+    // let computers = document.querySelectorAll('input.custom-control-input[id$="computers"]:checked')[0].nextSibling.textContent
+    let computers = document.getElementsByName('computers')
     for(let i = 0; i < computers.length; i++) {
-      if(computers[i] != elem) {
-        computers[i].removeAttribute('checked')
-      } else {
-        console.log(elem)
-        computers[i].setAttribute('checked', true)
+      if(computers[i].checked) {
+        return computers[i].nextSibling.textContent
       }
     }
-
+    return undefined
   }
 
   postMSSRegistrationForm = async (e) => {
@@ -263,23 +272,28 @@ const MSSRegistrationFormModal = class extends Component {
       "street": this.state.street,
       "city": this.state.city,
       "state": this.state.state,
+      "zip": this.state.zip,
       "country": this.state.country,
       "previewOrUse": await this.getPreviewOrUse(),
-      "computers": await this.getComputers(),
+      "classroomComputers": await this.getComputers(),
+      "howManyStudents": this.state.howManyStudents,
       "gradesTeaching": this.state.gradesTeaching,
       "additionalComments": this.state.additionalComments,
       "hearAboutOpportunity": this.state.hearAboutOpportunity,
-      "sendto": this.props.sendto
     }
 
     if(this.props.infoat) {
       data["infoat"] = this.props.infoat === "true"
     }
 
+    if(this.props.sendto) {
+      data["sendto"] = this.props.sendto
+    }
+
     console.log(data)
     axios({
-      // url: 'http://127.0.0.1:8888/post-specific-form',
-      url: 'https://pymail.bscs.org/post-mss-registration-form',
+      url: 'http://127.0.0.1:8888/post-mss-registration-form',
+      // url: 'https://pymail.bscs.org/post-mss-registration-form',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
@@ -287,13 +301,15 @@ const MSSRegistrationFormModal = class extends Component {
     .then(response => {
       console.log(response);
       if(response.status === 200) {
-          this.setState({notificationShow: true, loading: false, sent: true});
+        this.setState({notificationShow: true, loading: false, registered: true});
       }
     })
     .catch(error => {
       if(axios.isCancel(error)) {
+        this.setState({errors: true, showErrorNotification: true});
         console.log(`Request canceled: ${error}`);
       } else {
+        this.setState({errors: true, showErrorNotification: true});
         console.log(error);
       }
     })
@@ -314,9 +330,6 @@ const MSSRegistrationFormModal = class extends Component {
       </Modal.Header>
       <Form onSubmit={(e) => this.postMSSRegistrationForm(e)}>
         <Modal.Body>
-          <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-            Thank you for registering for BSCS Middle School Science.  You should receive an email within 1 week with your login information and additional course information.
-          </Alert>
           <Row>
             <Col xs={12}>
               <Form.Group>
@@ -399,6 +412,7 @@ const MSSRegistrationFormModal = class extends Component {
                   maxLength="50"
                   placeholder=""
                   onKeyUp={this.setStreet}
+                  onBlur={this.blurStreet}
                   isInvalid={this.state.street_touched && (!this.state.street || this.state.street === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -416,6 +430,7 @@ const MSSRegistrationFormModal = class extends Component {
                   maxLength="50"
                   placeholder=""
                   onKeyUp={this.setCity}
+                  onBlur={this.blurCity}
                   isInvalid={this.state.city_touched && (!this.state.city || this.state.city === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -433,6 +448,7 @@ const MSSRegistrationFormModal = class extends Component {
                   maxLength="50"
                   placeholder=""
                   onKeyUp={this.setContactState}
+                  onBlur={this.blurContactState}
                   isInvalid={this.state.state_touched && (!this.state.state || this.state.state === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -450,6 +466,7 @@ const MSSRegistrationFormModal = class extends Component {
                   maxLength="10"
                   placeholder=""
                   onKeyUp={this.setZip}
+                  onBlur={this.blurZip}
                   isInvalid={this.state.zip_touched && (!this.state.zip || this.state.zip === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -467,6 +484,7 @@ const MSSRegistrationFormModal = class extends Component {
                   maxLength="50"
                   placeholder=""
                   onKeyUp={this.setCountry}
+                  onBlur={this.blurCountry}
                   isInvalid={this.state.country_touched && (!this.state.country || this.state.country === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -497,8 +515,8 @@ const MSSRegistrationFormModal = class extends Component {
             </Col>
             <Col xs={6}>
               <Form.Group>
-                <Form.Check custom type="radio" className="p-or-u" id="like-to-preview" label="Preview" defaultChecked />
-                <Form.Check custom type="radio" className="p-or-u" id="like-to-use" label="Use" />
+                <Form.Check custom type="radio" name="p-or-u" id="like-to-preview" label="Preview" defaultChecked />
+                <Form.Check custom type="radio" name="p-or-u" id="like-to-use" label="Use" />
               </Form.Group>
             </Col>
             <Col xs={12}>
@@ -510,8 +528,8 @@ const MSSRegistrationFormModal = class extends Component {
                   size="sm"
                   maxLength="100"
                   placeholder=""
-                  onKeyUp={this.setGradesUsing}
-                  onBlur={this.blurPhone}
+                  onKeyUp={this.setGradesTeaching}
+                  onBlur={this.blurGradesTeaching}
                   isInvalid={this.state.gradesTeaching_touched && (!this.state.gradesTeaching || this.state.gradesTeaching === '')}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -524,22 +542,55 @@ const MSSRegistrationFormModal = class extends Component {
               <Form.Group>
                 <Form.Control
                   id="mss-how-many-students-input"
-                  type="number"
-                  step="1"
+                  type="text"
                   size="sm"
                   placeholder=""
+                  onKeyUp={this.setHowManyStudents}
                 />
               </Form.Group>
             </Col>
             <Col xs={6}>
               <Form.Label>Classroom Computers<span style={{color: 'red'}}>*</span></Form.Label>
-              <Form.Group>
-                <Form.Check custom type="radio" id="mss-one-projector-computers" className="computers" label="My classroom has one computer that I can project." defaultChecked onClick={(e) => this.controlComputers(e)} />
-                <Form.Check custom type="radio" id="mss-multiple-computers" className="computers" label="My classroom has multiple computers for students to use in groups." onClick={(e) => this.controlComputers(e)} />
-                <Form.Check custom type="radio" id="mss-one-per-student-computers" className="computers" label="My classroom has one computer for each student to use." onClick={(e) => this.controlComputers(e)} />
-                <Form.Check custom type="radio" id="mss-tablets-computers" className="computers" label="My classroom has tablets for students to use. " onClick={(e) => this.controlComputers(e)} />
-                <Form.Check custom type="radio" id="mss-not-a-teacher-computers" className="computers" label="I am not a classroom teacher." onClick={(e) => this.controlComputers(e)} />
-              </Form.Group>
+              {/* <fieldset> */}
+                <Form.Group>
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="mss-one-projector-computers"
+                    label="My classroom has one computer that I can project."
+                    defaultChecked
+                    name="computers"
+                  />
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="mss-multiple-computers"
+                    label="My classroom has multiple computers for students to use in groups."
+                    name="computers"
+                  />
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="mss-one-per-student-computers"
+                    label="My classroom has one computer for each student to use."
+                    name="computers"
+                  />
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="mss-tablets-computers"
+                    label="My classroom has tablets for students to use."
+                    name="computers"
+                  />
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="mss-not-a-teacher-computers"
+                    label="I am not a classroom teacher."
+                    name="computers"
+                  />
+                </Form.Group>
+              {/* </fieldset> */}
             </Col>
             <Col xs={12}>
               <Form.Label>Additional Comments</Form.Label>
@@ -571,22 +622,43 @@ const MSSRegistrationFormModal = class extends Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          { !this.state.loading && this.state.registered &&
-            <Button variant="outline-success" disabled>Registered</Button>
-          }
-          {/* { !this.state.registered && (!this.state.firstname || !this.state.lastname || !this.state.email) && */}
-          { !this.state.registered && !this.state.loading && (!this.state.registered || !this.state.firstname || !this.state.lastname || !this.state.email || !this.state.school || !this.state.street || !this.state.state || !this.state.zip || !this.state.country || !this.state.gradesUsing || !this.state.classroomComputers) &&
-            <Button variant="outline-primary" disabled>Register</Button>
-          }
-          { !this.state.registered && !this.state.loading && !this.state.registered && this.state.firstname && this.state.lastname && this.state.email && this.state.school && this.state.street && this.state.state && this.state.zip && this.state.country && this.state.gradesUsing && this.state.classroomComputers &&
-            <Button variant="outline-primary" type="submit">Register</Button>
-          }
-          { this.state.loading &&
-            <Button variant="outline-success" disabled>
-              <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-              Register
-            </Button>
-          }
+          <Container>
+            <Row>
+              <Col xs={12}>
+                <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+                  Thank you for registering for BSCS Middle School Science.  You should receive an email within one week with your login information and additional course information.
+                </Alert>
+                <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
+                  There was an error during registration.  Please contact Cameron Yee by clicking the button on the right side of this page.  If that fails, our server may temporarily be down and you will need to try again later. Sorry for the inconvenience.
+                </Alert>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <div className="d-flex justify-content-end">
+                  { !this.state.errors && !this.state.loading && this.state.registered &&
+                    <Button variant="outline-success" disabled>Registered</Button>
+                  }
+                  {/* { !this.state.registered && (!this.state.firstname || !this.state.lastname || !this.state.email) && */}
+                  { !this.state.errors && !this.state.registered && !this.state.loading && (!this.state.firstname || !this.state.lastname || !this.state.email || !this.state.school || !this.state.street || !this.state.state || !this.state.zip || !this.state.country || !this.state.gradesTeaching) &&
+                    <Button variant="outline-primary" disabled>Register</Button>
+                  }
+                  { !this.state.errors && !this.state.registered && !this.state.loading && this.state.firstname && this.state.lastname && this.state.email && this.state.school && this.state.street && this.state.state && this.state.zip && this.state.country && this.state.gradesTeaching &&
+                    <Button variant="outline-primary" type="submit">Register</Button>
+                  }
+                  { this.state.loading && !this.state.errors &&
+                    <Button variant="outline-success" disabled>
+                      <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                      Register
+                    </Button>
+                  }
+                  {this.state.errors &&
+                    <Button variant="outline-danger" disabled>Error</Button>
+                  }
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Modal.Footer>
       </Form>
     </Modal>

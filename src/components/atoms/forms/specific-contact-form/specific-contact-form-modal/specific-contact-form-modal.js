@@ -5,6 +5,7 @@ import axios from 'axios'
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
@@ -25,7 +26,9 @@ const SpecificContactFormModal = class extends Component {
       message_touched: false,
       loading: false,
       notificationShow: false,
-      sent: false
+      sent: false,
+      showErrorNotification: false,
+      errors: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -45,6 +48,14 @@ const SpecificContactFormModal = class extends Component {
 
   hideNotification = () => {
     this.setState({notificationShow: false})
+  }
+
+  showErrorNotification = () => {
+    this.setState({showErrorNotification: true})
+  }
+
+  hideErrorNotification = () => {
+    this.setState({showErrorNotification: false})
   }
 
   setEmail = (e) => {
@@ -141,8 +152,10 @@ const SpecificContactFormModal = class extends Component {
     .catch(error => {
       if(axios.isCancel(error)) {
         console.log(`Request canceled: ${error}`);
+        this.setState({errors: true, showErrorNotification: true});
       } else {
         console.log(error);
+        this.setState({errors: true, showErrorNotification: true});
       }
     })
   }
@@ -281,33 +294,54 @@ const SpecificContactFormModal = class extends Component {
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        { !this.state.loading && !this.state.sent
-          && (!this.state.firstname
-          || !this.state.lastname
-          || !this.state.email
-          || this.state.phone === 'errors'
-          || !this.state.message)
-          &&
-          <Button variant="outline-primary" disabled>Contact {this.props.sendto}</Button>
-        }
-        { !this.state.loading && !this.state.sent
-          && this.state.firstname
-          && this.state.lastname
-          && this.state.email
-          && this.state.phone !== 'errors'
-          && this.state.message
-          &&
-          <Button variant="outline-primary" onClick={this.postSpecificForm}>Contact {this.props.sendto}</Button>
-        }
-        { this.state.loading &&
-          <Button variant="outline-success" disabled>
-            <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-            Sending...
-          </Button>
-        }
-        { !this.state.loading && this.state.sent &&
-          <Button variant="outline-success" disabled>Message sent to {this.props.sendto}</Button>
-        }
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+                You are already enrolled in the email list.
+              </Alert>
+              <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
+                We are having problems with our servers right now.  Please try again later.  Sorry for the inconvenience.
+              </Alert>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <div className="d-flex justify-content-end">
+                { !this.state.errors && !this.state.loading && !this.state.sent
+                  && (!this.state.firstname
+                  || !this.state.lastname
+                  || !this.state.email
+                  || this.state.phone === 'errors'
+                  || !this.state.message)
+                  &&
+                  <Button variant="outline-primary" disabled>Contact {this.props.sendto}</Button>
+                }
+                { !this.state.errors && !this.state.loading && !this.state.sent
+                  && this.state.firstname
+                  && this.state.lastname
+                  && this.state.email
+                  && this.state.phone !== 'errors'
+                  && this.state.message
+                  &&
+                  <Button variant="outline-primary" onClick={this.postSpecificForm}>Contact {this.props.sendto}</Button>
+                }
+                { !this.state.errors && this.state.loading &&
+                  <Button variant="outline-success" disabled>
+                    <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Sending...
+                  </Button>
+                }
+                { !this.state.errors && !this.state.loading && this.state.sent &&
+                  <Button variant="outline-success" disabled>Message sent to {this.props.sendto}</Button>
+                }
+                { this.state.errors &&
+                  <Button variant="outline-danger" disabled>Error</Button>
+                }
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </Modal.Footer>
     </Modal>
     )
