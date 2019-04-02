@@ -9,8 +9,8 @@ media_folder: static/assets
 public_folder: assets
 
 publish_mode: editorial_workflow
-display_url: https://bmw-bscs.netlify.com
-logo_url: https://bmw-bscs.netlify.com/static/bscs_logo-4764abf3ed875294200baf166ee88a47.svg #Found in browser sources
+display_url: https://bscs.org
+logo_url: https://bscs.org/static/bscs_logo-4764abf3ed875294200baf166ee88a47.svg #Found in browser sources
 
 collections:
     - name: educator-resource-center

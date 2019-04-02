@@ -28,6 +28,7 @@ sidebarContacts:
   - contact:
       person: Cameron Yee
       infoat: false
+      text: ''
 page: educator-resource-center
 ---
 

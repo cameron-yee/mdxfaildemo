@@ -292,8 +292,8 @@ const MSSRegistrationFormModal = class extends Component {
 
     console.log(data)
     axios({
-      url: 'http://127.0.0.1:8888/post-mss-registration-form',
-      // url: 'https://pymail.bscs.org/post-mss-registration-form',
+      // url: 'http://127.0.0.1:8888/post-mss-registration-form',
+      url: 'https://pymail.bscs.org/post-mss-registration-form',
       method: 'post',
       data: data,
       cancelToken: this.cancelToken.token
