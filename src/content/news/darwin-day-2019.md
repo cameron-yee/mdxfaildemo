@@ -13,6 +13,7 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
+sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 sortOrder: 1
 page: news
