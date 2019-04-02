@@ -11,7 +11,8 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
-sidebarContactsText: Questions?
+sidebarContactsText: 'For more information, please contact Lauren Novo.'
+sidebarContactsTitle: Questions?
 page: news
 ---
 #### BSCS Science Learning to Partner with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley
