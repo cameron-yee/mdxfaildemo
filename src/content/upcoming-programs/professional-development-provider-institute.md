@@ -1,7 +1,7 @@
 ---
 date: 2019-03-08T21:58:54.877Z
 title: Professional Development Provider Institute
-type: Teacher Professional Learning
+type: Leadership Development
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/upcoming-programs/teacher-professional-learning/professional-development-provider-institute
 seoDescription: >-
