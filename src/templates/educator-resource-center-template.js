@@ -127,7 +127,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                                       {contact['contact']['text']}
                                     </Card.Text>
                                   }
-                                  <div class="d-flex justify-content-center">
+                                  <div className="d-flex justify-content-center">
                                     <div className="p-2">
                                       <SpecificContactForm
                                         sendto={contact['contact']['person']}

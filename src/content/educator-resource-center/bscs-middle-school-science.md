@@ -34,6 +34,10 @@ page: educator-resource-center
 
 import { Link } from 'gatsby'
 
+import Button from 'react-bootstrap/Button'
+
+import MSSRegistrationForm from 'components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch.js'
+
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students.
 
 BSCS Middle School Science is a standards- and inquiry-based program comprised of four units: Earth/Space Science, Life Science, Physical Science, and Science and Society. Designed for maximum flexibility, the units are grounded by the <Link to="/bscs-5e-instructional-model">BSCS 5E Instructional Model</Link> and can be adapted for various teaching styles and classroom settings.
@@ -43,6 +47,10 @@ The curriculum is available free online for teachers who agree to provide usabil
 <!-- <a class="btn btn-outline-secondary" href="https://bscs.org/mssciencepreview/" target="_blank" rel="noopener noreferrer">RECREATE FORM CAMERON&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 recreate this link and change the question asking about the “2014-2015 school year” to “for the upcoming school year” -->
+
+<MSSRegistrationForm>
+  <Button variant="outline-primary">Register</Button>
+</MSSRegistrationForm>
 
 \*The field test results demonstrated significant content gains across all four units.
 
