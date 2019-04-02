@@ -37,4 +37,4 @@ The Five Tools and Processes for Translating the NGSS are designed to help profe
 
 * develop a deeper understanding of NGSS and the Framework for K-12 Science Education;
 * learn how to design and plan three-dimensional, phenomena or problem-driven units of instruction;
-* and access facilitation guides and other resources to help you navigate the Five Tools model of professional development.
+* and access facilitation guides and other resources to help navigate the Five Tools model of professional development.
