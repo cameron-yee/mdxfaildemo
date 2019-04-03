@@ -13,6 +13,12 @@ image: /assets/woman-and-notes.jpg
 alt: >-
   Woman with curly brown hair and burgundy cardigan putting Post-it notes on
   wall.
+sidebarURLs:
+  - resource:
+      buttonText: Learn More
+      external: true
+      url: >-
+        https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss
 sidebarContacts:
   - contact:
       infoat: false
