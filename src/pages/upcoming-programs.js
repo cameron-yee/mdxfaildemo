@@ -190,7 +190,7 @@ const UpcomingProgramsPage = class extends Component {
               <Row style={{ marginBottom: '2rem' }}>
                 <Col>
                   <p>
-                    Are you a teacher who is looking to enhance your science content knowledge or instructional practices? Would you like a deeper understanding of the Next Generation Science Standards (NGSS)? Have you heard about our signature <Link to="/our-work/rd-programs/science-teachers-learning-from-lesson-analysis-stella">STeLLA</Link> approach and want to learn how to use high-leverage science teaching strategies through video-based lesson analysis?
+                    Are you a teacher who is looking to enhance your science content knowledge or instructional practices? Would you like a deeper understanding of the Next Generation Science Standards (NGSS)? Have you heard about our signature <Link to="/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis">STeLLA</Link> approach and want to learn how to use high-leverage science teaching strategies through video-based lesson analysis?
                   </p>
                   <p>
                     BSCS Science Learning offers a wide range of professional learning opportunities for teachers. See what’s currently available below. If we do not presently offer a relevant opportunity for you, please feel free to reach out about how you can <Link to="/connect/work-with-us/">work with us</Link> in the future.
@@ -559,12 +559,7 @@ const UpcomingProgramsPage = class extends Component {
                               >
                                 {edge.node.frontmatter.title}
                               </Card.Title>
-                              <Card.Text
-                                className="up-excerpt"
-                                style={{
-                                  marginBottom: '2rem'
-                                }}
-                              >
+                              <Card.Text className="up-excerpt">
                                 {edge.node.frontmatter.cardDescription}
                                 {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                               </Card.Text>
@@ -650,6 +645,7 @@ export const query = graphql`
           date(formatString: "MMMM DD, YYYY"),
           additionalTags,
           cardDescription,
+          # cardDescriptionStyles,
           image,
           seoCanonicalUrl,
           seoDescription,

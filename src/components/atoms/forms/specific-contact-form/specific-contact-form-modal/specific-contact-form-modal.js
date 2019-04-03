@@ -175,9 +175,6 @@ const SpecificContactFormModal = class extends Component {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-          Your message has been sent to {this.props.sendto}.
-        </Alert>
         {/* <Form onSubmit={(e) => this.postSpecificForm(e)}> */}
         <Form>
           <Row>
@@ -298,7 +295,7 @@ const SpecificContactFormModal = class extends Component {
           <Row>
             <Col xs={12}>
               <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-                You are already enrolled in the email list.
+                Your message has been sent to {this.props.sendto}.
               </Alert>
               <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
                 We are having problems with our servers right now.  Please try again later.  Sorry for the inconvenience.

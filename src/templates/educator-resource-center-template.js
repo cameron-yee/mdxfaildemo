@@ -78,7 +78,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                               {this.resource.sidebarText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarURLs &&
+                          {((this.resource.sidebarURLs && this.resource.sidebarURLs.length !== 0) || this.resource.sidebarText || this.resource.sidebarTitle) &&
                             this.resource.sidebarURLs.map((resource, index) => {
                               return (
                                 <React.Fragment key={`erc-sidebarurl-${index}`} className="justify-content-center">
@@ -116,7 +116,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                         </Card.Body>
                       </Card>
                     }
-                    {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
+                  {((this.resource.sidebarContacts && this.resource.sidebarContacts.length !== 0) || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
                       <Card>
                         <Card.Body>
                           { this.resource.sidebarContactsTitle &&

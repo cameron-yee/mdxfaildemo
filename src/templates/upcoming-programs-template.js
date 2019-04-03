@@ -7,6 +7,9 @@ import Layout from '../components/layout/layout';
 import PageTitle from '../components/layout/page-title/page-title'
 import SEO from '../components/seo'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
+import GeneralContactFormModal from '../components/atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
+import MSSRegistrationForm from '../components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -51,7 +54,7 @@ const UpcomingProgramsTemplate = class extends Component {
               }
               {(this.program.sidebarContacts || this.program.sidebarContactsText || this.program.sidebarContactsTitle || this.program.sidebarURLs || this.program.sidebarText) &&
                 <Col className="p-2" md={3}>
-                  {(this.program.sidebarURLs || this.program.sidebarText || this.program.sidebarTitle) &&
+                  {((this.program.sidebarURLs && this.program.sidebarURLs.length !== 0) || this.program.sidebarText || this.program.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}}>
                       <Card.Body>
                         { this.program.sidebarTitle &&
@@ -100,7 +103,7 @@ const UpcomingProgramsTemplate = class extends Component {
                       </Card.Body>
                     </Card>
                   }
-                  {(this.program.sidebarContacts || this.program.sidebarContactsText || this.program.sidebarContactsTitle) &&
+                  {((this.program.sidebarContacts && this.program.sidebarContacts.length !== 0) || this.program.sidebarContactsText || this.program.sidebarContactsTitle) &&
                     <Card>
                       <Card.Body>
                         { this.program.sidebarContactsTitle &&
@@ -122,17 +125,39 @@ const UpcomingProgramsTemplate = class extends Component {
                                 }
                                 <div class="d-flex justify-content-center">
                                   <div className="p-2">
-                                    <SpecificContactForm
-                                      sendto={contact['contact']['person']}
-                                      infoat={contact['contact']['infoat']}
-                                    >
-                                      <Button
-                                        size="sm"
-                                        variant="outline-primary"
+                                    {(!contact['contact']['formType'] || contact['contact']['formType'] === 'Specific') &&
+                                      <SpecificContactForm
+                                        sendto={contact['contact']['person']}
+                                        infoat={(contact['contact']['infoat']).toString()}
                                       >
-                                        Contact {contact['contact']['person']}
-                                      </Button>
-                                    </SpecificContactForm>
+                                        <Button
+                                          size="sm"
+                                          variant="outline-primary"
+                                          className="mb-3"
+                                        >
+                                          Contact {contact['contact']['person']}
+                                        </Button>
+                                      </SpecificContactForm>
+                                    }
+                                    {contact['contact']['formType'] === 'Contact Us' &&
+                                      <React.Fragment>
+                                        <GeneralContactFormButton launch={this.launchGeneral} size="sm">Contact Us</GeneralContactFormButton>
+                                        <GeneralContactFormModal
+                                          show={this.state.modalShowGeneral}
+                                          onHide={this.closeGeneral}
+                                        />
+                                      </React.Fragment>
+                                    }
+                                    {contact['contact']['formType'] === 'MSS Registration' &&
+                                      <MSSRegistrationForm>
+                                        <Button variant="outline-primary" size="sm" className="mb-3">Register</Button>
+                                      </MSSRegistrationForm>
+                                    }
+                                    {/* {contact['contact']['formType'] === 'MSS ViSTA' &&
+                                      <ViSTARegistrationForm>
+                                        <Button variant="outline-primary">Register</Button>
+                                      </ViSTARegistrationForm>
+                                    } */}
                                   </div>
                                 </div>
                               </React.Fragment>

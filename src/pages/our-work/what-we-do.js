@@ -92,7 +92,7 @@ const WhatWeDoPage = (props) => {
 
             <p>Support from the state level to the classroom level is needed to transform science education. That’s why we are committed to system-wide leadership development. We create and deliver research-driven programs that prepare schools, districts, and states to implement stronger systems and policies for science teaching and learning. </p>
 
-            <p>Our programs provide education leaders with <strong>high quality professional learning</strong> opportunities and support in selecting and implementing <strong>high quality instructional materials</strong>. As industry research indicates, both components are essential for effective science instruction.</p>
+            <p>Our programs provide education leaders with high quality professional learning opportunities and support in selecting and implementing high quality instructional materials. As industry research indicates, both components are essential for effective science instruction.</p>
           </Col>
           <Col lg={6} className="what-we-do-image-wrapper">
             <Img

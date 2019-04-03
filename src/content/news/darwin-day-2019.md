@@ -47,10 +47,10 @@ We appreciate your support as we continue working toward this future.
 <Container className="mt-5">
   <Row>
     <Col sm={6}>
-      <img src={dannySig} alt="Daniel C. Edelson signature" />
+      <img src={dannySig} alt="Daniel C. Edelson signature" style={{display: 'block', height: '65px'}} />
     </Col>
     <Col sm={6} className="d-none d-sm-block">
-      <img src={richSig} alt="Rich Cardullo signature" />
+        <img src={richSig} alt="Rich Cardullo signature"  style={{display: 'block', height: '65px'}} />
     </Col>
     <Col className="d-block d-sm-none">
       <p>Daniel C. Edelson<br />BSCS Executive Director</p>
@@ -61,7 +61,7 @@ We appreciate your support as we continue working toward this future.
       <p>Daniel C. Edelson<br />BSCS Executive Director</p>
     </Col>
     <Col className="d-block d-sm-none mt-3">
-      <img src={richSig} alt="Rich Cardullo signature" />
+      <img src={richSig} alt="Rich Cardullo signature" style={{display: 'block', height: '65px'}} />
     </Col>
     <Col sm={6}>
       <p>Rich Cardullo<br />Chair, BSCS Board of Directors</p>
