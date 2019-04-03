@@ -1,9 +1,9 @@
 ---
 date: 2019-03-15T16:26:13.794Z
 title: The Five Tools Institute in Arizona
-type: Teacher Professional Learning
+type: Leadership Development
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/the-five-tools-institute-in-arizona
+  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-leadership-development/the-five-tools-institute-in-arizona
 seoDescription: >-
   The Five Tools and Processes for Translating the NGSS are designed to help
   professional development leaders work with teachers on curriculum,
