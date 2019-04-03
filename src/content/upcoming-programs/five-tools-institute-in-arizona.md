@@ -1,18 +1,20 @@
 ---
 date: 2019-03-15T16:26:13.794Z
 title: The Five Tools Institute in Arizona
-type: Teacher Professional Learning
+type: Leadership Development
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-teacher-professional-learning/the-five-tools-institute-in-arizona
+  https://bmw-bscs.netlify.com/admin/#/collections/upcoming-leadership-development/the-five-tools-institute-in-arizona
 seoDescription: >-
   The Five Tools and Processes for Translating the NGSS are designed to help
   professional development leaders work with teachers on curriculum,
   instruction, and assessment as they achieve this vision. 
 seoLang: en-us
+sidebarTitle: ''
 image: /assets/woman-and-notes.jpg
 alt: >-
   Woman with curly brown hair and burgundy cardigan putting Post-it notes on
   wall.
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
@@ -38,3 +40,15 @@ The Five Tools and Processes for Translating the NGSS are designed to help profe
 * develop a deeper understanding of NGSS and the Framework for K-12 Science Education;
 * learn how to design and plan three-dimensional, phenomena or problem-driven units of instruction;
 * and access facilitation guides and other resources to help navigate the Five Tools model of professional development.
+
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.amnh.org/" target="_blank" rel="noopener noreferrer">
+    American Museum of Natural History&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www.wested.org/" target="_blank" rel="noopener noreferrer">
+    WestEd&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
