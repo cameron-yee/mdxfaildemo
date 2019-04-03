@@ -166,7 +166,6 @@ const LeadershipPage = class extends Component {
                         className="ld-image"
                         variant="top"
                         style={{
-                          minHeight: '354.19px',
                           backgroundColor: 'rgba(205, 205, 205, .5)'
                         }}
                         src={person.node.frontmatter.image}
@@ -235,8 +234,9 @@ const LeadershipPage = class extends Component {
                       color='rgb(41, 52, 118)'
                       showLoadingAnimation={true}
                       style={{
-                        width: '253px',
+                        // width: '253px',
                         height: '354.19px',
+                        width: '100%',
                         borderTopLeftRadius: '4px',
                         borderTopRightRadius: '4px'
                       }}

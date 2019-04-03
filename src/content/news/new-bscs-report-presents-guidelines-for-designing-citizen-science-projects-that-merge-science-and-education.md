@@ -20,8 +20,8 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
-sidebarContactsText: Questions?
-sidebarContactsTitle: ''
+sidebarContactsText: 'For more information, please contact Lauren Novo.'
+sidebarContactsTitle: Questions?
 additionalTags: ''
 page: news
 ---

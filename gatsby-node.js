@@ -157,7 +157,13 @@ exports.createPages = ({ graphql, actions }) => {
 
           // Create pages for each markdown file.
           result.data.allMdx.edges.forEach(({ node }) => {
-            const slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            let slug
+            // if (node.frontmatter.slug) {
+            //   slug = node.frontmatter.slug.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            // } else {
+            //   slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
+            // }
+            slug = node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()
             const nodeId = node.id
             createPage({
               path: `/our-work/rd-programs/${slug}/`,
