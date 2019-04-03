@@ -28,11 +28,11 @@ NSTA conferences offer the latest in science content, teaching strategy, and res
 <br />
 <br />
 
-<a href="https://www.nsta.org/conferences/pli/2019pli03.aspx" target="_blank" rel="noopener noreferrer">PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation&nbsp;<sup><i style="font-size: .85rem;" class="fas fa-external-link-alt"></i></sup></a>
+#### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
 NextGen TIME includes a suite of tools and processes designed to guide your deep dive into next generation science and to support you in the evaluation, selection, and implementation of new materials. The full process of NextGen TIME is often spread out over an extended period of time, but this professional learning experience will ground you in the core processes while helping you see through alignment claims.
 
-Wednesday, April 10, 9 a.m. - 4 p.m.
+<a href="https://www.nsta.org/conferences/pli/2019pli03.aspx" target="_blank" rel="noopener noreferrer">Wednesday, April 10, 9 a.m. - 4 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 <br />
