@@ -22,30 +22,22 @@ discipline:
 gradeLevel:
   - Middle
 sortOrder: 11
-sidebarContactsTitle: Questions?
+sidebarContactsTitle: Registration
 # sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
 sidebarContacts:
   - contact:
+      formType: MSS Registration
+      text: Register for BSCS Middle School Science.
+  - contact:
       person: Cameron Yee
       infoat: false
-      text: ''
+      text: 'Questions?'
 page: educator-resource-center
 ---
 
 import { Link } from 'gatsby'
 
 import Button from 'react-bootstrap/Button'
-
-import MSSRegistrationForm from 'components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch.js'
-
-**Register for BSCS Middle School Science**
-
-<MSSRegistrationForm>
-  <Button variant="outline-primary">Register</Button>
-</MSSRegistrationForm>
-
-<br />
-<hr />
 
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students.
 

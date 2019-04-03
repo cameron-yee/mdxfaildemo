@@ -10,6 +10,7 @@ const GeneralContactFormButton = class extends Component {
           id="submit-button"
           variant="outline-primary"
           onClick={this.props.launch}
+          size={this.props.size}
         >
           {this.props.children}
         </Button>
