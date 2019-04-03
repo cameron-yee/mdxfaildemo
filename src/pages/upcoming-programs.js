@@ -433,7 +433,7 @@ const UpcomingProgramsPage = class extends Component {
                                 <div className="d-flex">
                                   <div className="ml-auto align-self-end">
                                     <Link
-                                      to={`/upcoming-programs/teacher-professional-learning/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                      to={`/upcoming-programs/leadership-development/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                                     >
                                       <Button variant="outline-secondary">
                                         More Information
@@ -579,7 +579,7 @@ const UpcomingProgramsPage = class extends Component {
                                 <div className="d-flex">
                                   <div className="ml-auto align-self-end">
                                     <Link
-                                      to={`/upcoming-programs/teacher-professional-learning/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
+                                      to={`/upcoming-programs/field-test-opportunities/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
                                     >
                                       <Button variant="outline-secondary">
                                         More Information
