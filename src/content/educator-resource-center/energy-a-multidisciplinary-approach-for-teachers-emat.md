@@ -21,7 +21,7 @@ discipline:
 sidebarContactsText: Professional learning leaders across schools and districts can request their own version of EMAT, complete with a facilitation guide, by contacting Jeffrey Snowden.
 sidebarContacts:
   - contact:
-      person: Jeffrey Snowden
+      person: Jeffery Snowden
       infoat: false
 # sidebarURLs:
 #   - resource:
