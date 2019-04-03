@@ -9,17 +9,12 @@ seoDescription: >-
   professional development leaders work with teachers on curriculum,
   instruction, and assessment as they achieve this vision. 
 seoLang: en-us
-sidebarTitle: Five Tools and Processes for Translating the NGSS
+sidebarTitle: ''
 image: /assets/woman-and-notes.jpg
 alt: >-
   Woman with curly brown hair and burgundy cardigan putting Post-it notes on
   wall.
-sidebarURLs:
-  - resource:
-      buttonText: Learn More
-      external: true
-      url: >-
-        https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
