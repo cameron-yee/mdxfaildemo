@@ -62,7 +62,7 @@ Join us to learn about Five Tools that will help you and your colleagues use the
 
 **Using Tool 2 of the Five Tools and Process to Translate Performance Expectations into a Plan for Classroom Assessment**
 
-Saturday, April 13, 9:30 - 10:30 a.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=1648DB21-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 9:30 - 10:30 a.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
