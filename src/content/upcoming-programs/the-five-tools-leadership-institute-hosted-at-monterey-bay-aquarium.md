@@ -37,7 +37,7 @@ The Five Tools and Processes is the translation of science concepts, practices, 
 #### Details:
 
 * Dates: April 28 - May 3, 2019
-* Location: Monterey Bay Aquarium, 886 Cannery Row, Monterey, CA, 93940
+* Location: <a href="https://www.montereybayaquarium.org/" target="_blank" rel="noopener noreferrer">Monterey Bay Aquarium&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>, 886 Cannery Row, Monterey, CA, 93940
 * Cost: $1,000 per team plus $200 per person, minimum two-person team / maximum five-person team, lunch will be provided during meeting times, travel costs are not included in the registration fee
 
 **Goals and Outcomes**
