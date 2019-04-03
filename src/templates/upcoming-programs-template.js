@@ -58,11 +58,11 @@ const UpcomingProgramsTemplate = class extends Component {
                 <Col className="p-2" md={3}>
                   {((this.program.sidebarURLs && this.program.sidebarURLs.length !== 0) || this.program.sidebarText || this.program.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}}>
-                      {this.resource.sidebarImage && this.resource.sidebarAlt &&
+                      {this.program.sidebarImage && this.program.sidebarAlt &&
                         <Card.Img
                           variant="top"
-                          src={this.resource.sidebarImage}
-                          alt={this.resource.sidebarAlt}
+                          src={this.program.sidebarImage}
+                          alt={this.program.sidebarAlt}
                         />
                       }
                       <Card.Body>
@@ -114,11 +114,11 @@ const UpcomingProgramsTemplate = class extends Component {
                   }
                   {((this.program.sidebarContacts && this.program.sidebarContacts.length !== 0) || this.program.sidebarContactsText || this.program.sidebarContactsTitle) &&
                     <Card>
-                        {this.resource.sidebarContactsImage && this.resource.sidebarContactsAlt &&
+                        {this.program.sidebarContactsImage && this.program.sidebarContactsAlt &&
                           <Card.Img
                             variant="top"
-                            src={this.resource.sidebarContactsImage}
-                            alt={this.resource.sidebarContactsAlt}
+                            src={this.program.sidebarContactsImage}
+                            alt={this.program.sidebarContactsAlt}
                           />
                         }
                       <Card.Body>
