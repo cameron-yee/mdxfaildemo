@@ -10,7 +10,7 @@ image: /assets/nsta-conference.jpg
 alt: People walking in a conference center.
 sidebarURLs:
   - resource:
-      buttonText: Learn More
+      buttonText: NSTA Session Browser
       external: true
       url: >-
         https://s6.goeshow.com/nsta/national/2019/conference_program_sessions.cfm
