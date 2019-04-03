@@ -6,9 +6,9 @@ seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/upcoming-leadership-development/five-tools-monterey
 seoDescription: >-
   Join BSCS Science Learning for the Five Tools Leadership Insitute at the
-  Monterey Bay Aquarium 
+  Monterey Bay Aquarium
 seoLang: en-us
-cardDescription: ''
+cardDescription: 'At this Institute you will learn how to help teachers plan for instruction and classroom assessment based on the new science standards and Framework for K-12 Science Education.'
 sidebarText: ''
 sidebarTitle: Registration is open
 image: /assets/coffee-mug.jpg
