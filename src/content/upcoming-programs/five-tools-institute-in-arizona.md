@@ -9,6 +9,7 @@ seoDescription: >-
   professional development leaders work with teachers on curriculum,
   instruction, and assessment as they achieve this vision. 
 seoLang: en-us
+sidebarTitle: Five Tools and Processes for Translating the NGSS
 image: /assets/woman-and-notes.jpg
 alt: >-
   Woman with curly brown hair and burgundy cardigan putting Post-it notes on
