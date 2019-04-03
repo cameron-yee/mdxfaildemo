@@ -46,3 +46,16 @@ The Five Tools and Processes is the translation of science concepts, practices, 
 * develop a deeper understanding of NGSS and the Framework for K-12 Science Education;
 * learn how to design and plan three-dimensional, phenomena or problem-driven units of instruction; and
 * access facilitation guides and other resources to help you navigate the Five Tools model of professional development.
+
+
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.amnh.org/" target="_blank" rel="noopener noreferrer">
+    American Museum of Natural History&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www.wested.org/" target="_blank" rel="noopener noreferrer">
+    WestEd&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
