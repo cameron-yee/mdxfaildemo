@@ -26,13 +26,18 @@ sidebarContactsTitle: Registration
 # sidebarContactsText: Contact Cameron Yee to Register for BSCS Middle School Science.
 sidebarContacts:
   - contact:
+      formType: MSS Registration
+      text: Register for BSCS Middle School Science.
+  - contact:
       person: Cameron Yee
       infoat: false
-      text: Contact Cameron Yee to Register for BSCS Middle School Science.
+      text: 'Questions?'
 page: educator-resource-center
 ---
 
 import { Link } from 'gatsby'
+
+import Button from 'react-bootstrap/Button'
 
 Building upon the success of the BSCS Science: An Inquiry Approach high school program, BSCS Science Learning has developed and field tested* a multidisciplinary science program for middle school students.
 

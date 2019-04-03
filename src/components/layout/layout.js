@@ -63,7 +63,7 @@ const Layout = class extends Component {
           }
         `}
         render={data => (
-          <>
+          <React.Fragment>
             <Header launchGeneral={this.launchGeneral} launchJoinEmail={this.launchJoinEmail} location={this.props.location} />
             {this.props.children}
             <Footer launchGeneral={this.launchGeneral} launchJoinEmail={this.launchJoinEmail} location={this.props.location} />
@@ -75,7 +75,7 @@ const Layout = class extends Component {
               show={this.state.modalShowJoinEmail}
               onHide={this.closeJoinEmail}
             />
-          </>
+          </React.Fragment>
         )}
       />
     )

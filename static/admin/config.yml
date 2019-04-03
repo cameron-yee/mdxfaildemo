@@ -25,6 +25,7 @@ collections:
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
         - { name: cardDescription, label: Card Description, widget: string, required: false }
+        # - { name: cardDescriptionStyles, label: Card Description Styles, widget: select, multiple: true, options: ['Bold', 'Italicized'], required: false }
         - { name: type, label: Type, widget: select, options: ['Classroom Instruction', 'Professional Learning', 'District Planning', 'Citizen Science'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
@@ -56,8 +57,15 @@ collections:
               label: Contact
               widget: object
               fields:
+                - {
+                  name: formType,
+                  label: Form Type,
+                  widget: select,
+                  options: ['Contact Us', 'Specific', 'MSS Registration', 'ViSTA Registration'],
+                  default: 'Specific'
+                }
                 - { name: infoat, label: Send to Info, widget: boolean, default: false }
-                - { name: person, label: Person, widget: string }
+                - { name: person, label: Person, widget: string, required: false }
                 - { name: text, label: Text, widget: string, required: false }
           required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
@@ -260,6 +268,7 @@ collections:
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
         - { name: cardDescription, label: Card Description, widget: string, required: false }
+        # - { name: cardDescriptionStyles, label: Card Description Styles, widget: select, multiple: true, options: ['Bold', 'Italicized'], required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
         - { name: image, label: Image, widget: image }
@@ -293,7 +302,7 @@ collections:
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
-        - { name: page, label: Page, widget: hidden, default: upcoming-programs-teacher-professional-learning }
+        - { name: page, label: Page, widget: hidden, default: upcoming-programs }
 
     # - name: upcoming-teacher-leadership-development
     #   label: "Upcoming Programs: Leadership Development"

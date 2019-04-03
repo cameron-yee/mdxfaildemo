@@ -163,7 +163,7 @@ export default class Footer extends Component {
           </Row>
           <div className="d-none d-sm-flex">
             <div className="p-2 flex-grow-1">
-              <JoinEmailListFormButton  launch={this.props.launchJoinEmail} />
+              <JoinEmailListFormButton launch={this.props.launchJoinEmail} />
             </div>
             <div className="p-2 align-self-center">
               <a

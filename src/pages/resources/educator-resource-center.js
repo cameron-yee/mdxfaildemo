@@ -207,6 +207,29 @@ const EducatorResourceCenter = class extends Component {
                               {edge.node.frontmatter.cardDescription}
                               {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
                             </Card.Text>
+                            {/* <p className="card-text">
+                              {edge.node.frontmatter.cardDescription && !edge.node.frontmatter.cardDescriptionStyles &&
+                                edge.node.frontmatter.cardDescription
+                              }
+                              {edge.node.frontmatter.cardDescription
+                              && edge.node.frontmatter.cardDescriptionStyles
+                              && edge.node.frontmatter.cardDescriptionStyles.length === 1
+                              && edge.node.frontmatter.cardDescriptionStyles[0] === 'Italic' &&
+                                <span style={{fontStyle: 'italic'}}>{edge.node.frontmatter.cardDescription}</span>
+                              }
+                              {edge.node.frontmatter.cardDescription
+                              && edge.node.frontmatter.cardDescriptionStyles
+                              && edge.node.frontmatter.cardDescriptionStyles.length === 1
+                              && edge.node.frontmatter.cardDescriptionStyles[0] === 'Bold' &&
+                                <span style={{fontWeight: 'bold'}}>{edge.node.frontmatter.cardDescription}</span>
+                              }
+                              {edge.node.frontmatter.cardDescription
+                              && edge.node.frontmatter.cardDescriptionStyles
+                              && edge.node.frontmatter.cardDescriptionStyles.length === 2 &&
+                                <span style={{fontWeight: 'bold', fontStyle: 'italic'}}>{edge.node.frontmatter.cardDescription}</span>
+                              }
+                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
+                            </p> */}
                           </Card.Body>
                           <Card.Footer
                             style={{
@@ -266,6 +289,7 @@ export const educatorResourceQuery = graphql`
             alt,
             courseId,
             cardDescription,
+            # cardDescriptionStyles,
             date,
             discipline,
             gradeLevel,

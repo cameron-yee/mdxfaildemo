@@ -12,8 +12,8 @@ cardDescription: >-
   help middle school educators more effectively teach about food allergies.
   Lessons are aligned to the Next Generation Science Standards.
 type: Classroom Instruction
-image: /assets/yellow-flower.jpg
-alt: Close-up of yellow flower with pollen.
+image: /assets/peanut-allergies.jpg
+alt: Close-up image of peanuts with their outer shells.
 template: Image Right
 courseId: 0
 gradeLevel:

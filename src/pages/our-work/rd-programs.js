@@ -222,6 +222,8 @@ const RDPrograms = class extends Component {
                           </Card>
                         </Col>
                       )
+                    } else {
+                      return <></>
                     }
                   })
                 }
@@ -313,6 +315,10 @@ const RDPrograms = class extends Component {
                             </Card> */}
                           </Col>
                         </React.Fragment>
+                      )
+                    } else {
+                      return (
+                        <></>
                       )
                     }
                   })

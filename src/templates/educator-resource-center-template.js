@@ -7,6 +7,9 @@ import SEO from '../components/seo'
 import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 import Layout from '../components/layout/layout';
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
+import GeneralContactFormModal from '../components/atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
+import MSSRegistrationForm from '../components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -23,7 +26,13 @@ const EducatorResourceCenterTemplate = class extends Component {
     super(props)
     this.html = this.props.data.mdx.code.body
     this.resource = this.props.data.mdx.frontmatter
+    this.state = {
+      modalShowGeneral: false
+    }
   }
+
+  launchGeneral = () => { this.setState({modalShowGeneral: true}) }
+  closeGeneral = () => { this.setState({modalShowGeneral: false}) }
 
   render() {
     return (
@@ -69,7 +78,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                               {this.resource.sidebarText}
                             </Card.Text>
                           }
-                          { this.resource.sidebarURLs &&
+                          {((this.resource.sidebarURLs && this.resource.sidebarURLs.length !== 0) || this.resource.sidebarText || this.resource.sidebarTitle) &&
                             this.resource.sidebarURLs.map((resource, index) => {
                               return (
                                 <React.Fragment key={`erc-sidebarurl-${index}`} className="justify-content-center">
@@ -107,7 +116,7 @@ const EducatorResourceCenterTemplate = class extends Component {
                         </Card.Body>
                       </Card>
                     }
-                    {(this.resource.sidebarContacts || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
+                  {((this.resource.sidebarContacts && this.resource.sidebarContacts.length !== 0) || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
                       <Card>
                         <Card.Body>
                           { this.resource.sidebarContactsTitle &&
@@ -127,19 +136,41 @@ const EducatorResourceCenterTemplate = class extends Component {
                                       {contact['contact']['text']}
                                     </Card.Text>
                                   }
-                                  <div class="d-flex justify-content-center">
+                                  <div className="d-flex justify-content-center">
                                     <div className="p-2">
-                                      <SpecificContactForm
-                                        sendto={contact['contact']['person']}
-                                        infoat={contact['contact']['infoat']}
-                                      >
-                                        <Button
-                                          size="sm"
-                                          variant="outline-primary"
+                                      {(!contact['contact']['formType'] || contact['contact']['formType'] === 'Specific') &&
+                                        <SpecificContactForm
+                                          sendto={contact['contact']['person']}
+                                          infoat={(contact['contact']['infoat']).toString()}
                                         >
-                                          Contact {contact['contact']['person']}
-                                        </Button>
-                                      </SpecificContactForm>
+                                          <Button
+                                            size="sm"
+                                            variant="outline-primary"
+                                            className="mb-3"
+                                          >
+                                            Contact {contact['contact']['person']}
+                                          </Button>
+                                        </SpecificContactForm>
+                                      }
+                                      {contact['contact']['formType'] === 'Contact Us' &&
+                                        <React.Fragment>
+                                          <GeneralContactFormButton launch={this.launchGeneral} size="sm">Contact Us</GeneralContactFormButton>
+                                          <GeneralContactFormModal
+                                            show={this.state.modalShowGeneral}
+                                            onHide={this.closeGeneral}
+                                          />
+                                        </React.Fragment>
+                                      }
+                                      {contact['contact']['formType'] === 'MSS Registration' &&
+                                        <MSSRegistrationForm>
+                                          <Button variant="outline-primary" size="sm" className="mb-3">Register</Button>
+                                        </MSSRegistrationForm>
+                                      }
+                                      {/* {contact['contact']['formType'] === 'MSS ViSTA' &&
+                                        <ViSTARegistrationForm>
+                                          <Button variant="outline-primary">Register</Button>
+                                        </ViSTARegistrationForm>
+                                      } */}
                                     </div>
                                   </div>
                                 </React.Fragment>
@@ -186,6 +217,7 @@ export const query = graphql`
         seoLang,
         sidebarContacts {
           contact {
+            formType,
             infoat,
             person,
             text
