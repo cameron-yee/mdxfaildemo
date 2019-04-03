@@ -24,7 +24,7 @@ sidebarContactsTitle: Questions?
 sortOrder: 3
 page: upcoming-programs
 ---
-The Five Tools and Processes for Translating the NGSS are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision. At the heart of the Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence.
+<a href="https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss" target="_blank" rel="noopener noreferrer">The Five Tools and Processes for Translating the NGSS&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> are designed to help professional development leaders work with teachers on curriculum, instruction, and assessment as they achieve this vision. At the heart of the Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence.
 
 #### Dates
 
