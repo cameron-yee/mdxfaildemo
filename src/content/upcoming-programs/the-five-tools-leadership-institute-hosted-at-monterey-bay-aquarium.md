@@ -21,6 +21,12 @@ sidebarURLs:
       external: true
       url: >-
         https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
+  - resource:
+      buttonText: Learn More
+      external: true
+      text: Five Tools and Processes for Translating the NGSS
+      url: >-
+        https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss
 sidebarContacts:
   - contact:
       infoat: false
