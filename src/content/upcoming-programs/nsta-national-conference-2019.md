@@ -28,7 +28,7 @@ NSTA conferences offer the latest in science content, teaching strategy, and res
 <br />
 <br />
 
-#### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
+##### PLI-3: NextGen TIME: Transforming Implementation Through Materials Evaluation
 
 NextGen TIME includes a suite of tools and processes designed to guide your deep dive into next generation science and to support you in the evaluation, selection, and implementation of new materials. The full process of NextGen TIME is often spread out over an extended period of time, but this professional learning experience will ground you in the core processes while helping you see through alignment claims.
 
@@ -41,7 +41,7 @@ NextGen TIME includes a suite of tools and processes designed to guide your deep
 
 Join us to learn about NextGen TIME tools and processes to collaboratively select and support the implementation of instructional materials designed for next generation science.
 
-Friday, April 12, 3:30 - 4:30 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=50F7E21B-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Friday, April 12, 3:30 - 4:30 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br>
 </br>
@@ -50,34 +50,34 @@ Friday, April 12, 3:30 - 4:30 p.m.
 
 Join us to learn about Five Tools that will help you and your colleagues use the NGSS to plan for instruction and classroom assessment.
 
-Friday, April 12, 8 - 9 a.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=C307FA09-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Friday, April 12, 8 - 9 a.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 1 of the Five Tools and Process to Plan a NGSS-Designed Unit of Instruction**
 
-Saturday, April 13, 8 - 9 a.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=67F9E21B-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 8 - 9 a.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 2 of the Five Tools and Process to Translate Performance Expectations into a Plan for Classroom Assessment**
 
-Saturday, April 13, 9:30 - 10:30 a.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=1648DB21-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 9:30 - 10:30 a.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 3 of the Five Tools and Processes to Develop a Conceptual Flow Using the 5E Instructional Model**
 
-Saturday, April 13, 11 a.m. - 12 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=174BDB21-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 11 a.m. - 12 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 4 of the Five Tools and Processes to Design Learning Sequences Using the 5E Instructional Model**
 
-Saturday, April 13, 2 - 3 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=FF4ACE2D-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 2 - 3 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 5 of the Five Tools and Processes to Develop Performance Tasks from Evidence of Learning Specifications**
 
-Saturday, April 13, 3:30 p.m. - 4:30 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=344ECE2D-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 3:30 p.m. - 4:30 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
