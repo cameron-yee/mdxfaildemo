@@ -30,8 +30,7 @@ sidebarContactsTitle: Questions?
 sortOrder: 2
 page: upcoming-programs
 ---
-
-At this Institute you will learn how to help teachers plan for instruction and classroom assessment based on the new science standards and Framework for K-12 Science Education. Discover an effective pathway at the Five Tools Leadership Institute.
+At this Institute you will learn how to help teachers plan for instruction and classroom assessment based on the new science standards and _Framework for K-12 Science Education_. Discover an effective pathway at the Five Tools Leadership Institute.
 
 The Five Tools and Processes is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence.
 
@@ -46,7 +45,6 @@ The Five Tools and Processes is the translation of science concepts, practices, 
 * develop a deeper understanding of NGSS and the Framework for K-12 Science Education;
 * learn how to design and plan three-dimensional, phenomena or problem-driven units of instruction; and
 * access facilitation guides and other resources to help you navigate the Five Tools model of professional development.
-
 
 <div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
 
