@@ -48,13 +48,13 @@ const NewsTemplate = class extends Component {
             />
             <Row style={{marginBottom: '1rem'}}>
               {(this.resource.sidebarURLs || this.resource.sidebarText) &&
-                <Col className="order-2 order-lg-1">
+                <Col lg={8} xl={9} className="order-2 order-lg-1">
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                   <MDXRenderer>{this.html}</MDXRenderer>
                 </Col>
               }
               {(!this.resource.sidebarURLs && !this.resource.sidebarText) &&
-                <Col className="order-2 order-lg-1">
+                <Col lg={8} xl={9} className="order-2 order-lg-1">
                   <MDXRenderer>{this.html}</MDXRenderer>
                   {/* <MDXRenderer>{this.html}</MDXRenderer> */}
                 </Col>
@@ -64,6 +64,13 @@ const NewsTemplate = class extends Component {
                 <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                   {((this.resource.sidebarURLs && this.resource.sidebarURLs.length !== 0) || this.resource.sidebarText || this.resource.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}} className="mt-4 mt-md-0">
+                      {this.resource.sidebarImage && this.resource.sidebarAlt &&
+                        <Card.Img
+                          variant="top"
+                          src={this.resource.sidebarImage}
+                          alt={this.resource.sidebarAlt}
+                        />
+                      }
                       <Card.Body>
                         {this.resource.sidebarTitle &&
                           <Card.Title>{this.resource.sidebarTitle}</Card.Title>
@@ -113,6 +120,13 @@ const NewsTemplate = class extends Component {
                   }
                   {((this.resource.sidebarContacts && this.resource.sidebarContacts.length !== 0) || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
                       <Card>
+                        {this.resource.sidebarContactsImage && this.resource.sidebarContactsAlt &&
+                          <Card.Img
+                            variant="top"
+                            src={this.resource.sidebarContactsImage}
+                            alt={this.resource.sidebarContactsAlt}
+                          />
+                        }
                         <Card.Body>
                           {this.resource.sidebarContactsTitle &&
                             <Card.Title>{this.resource.sidebarContactsTitle}</Card.Title>
@@ -204,6 +218,8 @@ export const query = graphql`
         seoCanonicalUrl,
         seoDescription,
         seoLang,
+        sidebarAlt,
+        sidebarImage,
         sidebarText,
         sidebarTitle,
         sidebarURLs {
@@ -224,6 +240,8 @@ export const query = graphql`
         },
         sidebarContactsText,
         sidebarContactsTitle,
+        sidebarContactsAlt,
+        sidebarContactsImage,
         title,
       }
     }

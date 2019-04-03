@@ -58,6 +58,13 @@ const UpcomingProgramsTemplate = class extends Component {
                 <Col className="p-2" md={3}>
                   {((this.program.sidebarURLs && this.program.sidebarURLs.length !== 0) || this.program.sidebarText || this.program.sidebarTitle) &&
                     <Card style={{marginBottom: '1rem'}}>
+                      {this.resource.sidebarImage && this.resource.sidebarAlt &&
+                        <Card.Img
+                          variant="top"
+                          src={this.resource.sidebarImage}
+                          alt={this.resource.sidebarAlt}
+                        />
+                      }
                       <Card.Body>
                         { this.program.sidebarTitle &&
                           <Card.Title>{this.program.sidebarTitle}</Card.Title>
@@ -107,6 +114,13 @@ const UpcomingProgramsTemplate = class extends Component {
                   }
                   {((this.program.sidebarContacts && this.program.sidebarContacts.length !== 0) || this.program.sidebarContactsText || this.program.sidebarContactsTitle) &&
                     <Card>
+                        {this.resource.sidebarContactsImage && this.resource.sidebarContactsAlt &&
+                          <Card.Img
+                            variant="top"
+                            src={this.resource.sidebarContactsImage}
+                            alt={this.resource.sidebarContactsAlt}
+                          />
+                        }
                       <Card.Body>
                         { this.program.sidebarContactsTitle &&
                           <Card.Title>{this.program.sidebarContactsTitle}</Card.Title>
@@ -207,6 +221,8 @@ export const query = graphql`
         },
         sidebarContactsText,
         sidebarContactsTitle,
+        sidebarContactsAlt,
+        sidebarContactsImage,
         sidebarURLs {
           resource {
             buttonText,
@@ -215,6 +231,8 @@ export const query = graphql`
             url
           }
         },
+        sidebarAlt,
+        sidebarImage,
         sidebarText,
         sidebarTitle,
         title

@@ -36,6 +36,9 @@ collections:
         - { name: price, label: Price, widget: number, valueType: float, min: 0.0, max: 1000, required: false }
         - { name: programLength, label: Program Length, widget: select, options: ['Full Year', 'Modules'], required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
+        - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
         - name: sidebarURLs
           label: Sidebar URLs
           widget: list
@@ -70,6 +73,8 @@ collections:
           required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags, widget: list, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
@@ -88,6 +93,8 @@ collections:
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
         - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: reportDate, label: Report Date, widget: string }
+        - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
         - name: sidebarURLs
@@ -117,6 +124,8 @@ collections:
           required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
         - { name: customTitle, label: Custom Title, widget: boolean, default: false }
         - { name: additionalTags, label: Additional Tags, widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
@@ -139,6 +148,8 @@ collections:
         - { name: areas, label: Areas, widget: select, multiple: true, options: ['Instructional Materials Development', 'Teacher Professional Learning', 'Leadership Development', 'Research'] }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
+        - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
         - name: sidebarURLs
@@ -154,7 +165,6 @@ collections:
                 - { name: text, label: Text, widget: string, required: false }
                 - { name: url, label: URL, widget: string }
           required: false
-        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - name: sidebarContacts
           label: Sidebar Contact People
           widget: list
@@ -168,6 +178,9 @@ collections:
                 - { name: text, label: Text, widget: string, required: false }
           required: false
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
+        - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags, widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
@@ -185,6 +198,8 @@ collections:
         - { name: seoDescription, label: SEO Description, widget: string }
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
         - { name: cardDescription, label: Card Description, widget: string, required: false }
+        - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
         - name: sidebarURLs
@@ -213,6 +228,9 @@ collections:
           required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
+        - { name: image, label: Image, widget: image, required: false }
         - { name: additionalTags, label: Additional Tags, widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
@@ -271,6 +289,8 @@ collections:
         # - { name: cardDescriptionStyles, label: Card Description Styles, widget: select, multiple: true, options: ['Bold', 'Italicized'], required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
+        - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
         - { name: image, label: Image, widget: image }
         - { name: alt, label: Image Alt Text, widget: string }
         - name: sidebarURLs
@@ -299,6 +319,8 @@ collections:
           required: false
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
+        - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
         - { name: additionalTags, label: Additional Tags (optional), widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }

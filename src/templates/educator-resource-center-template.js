@@ -65,6 +65,13 @@ const EducatorResourceCenterTemplate = class extends Component {
                   <Col className="p-2 order-1 order-lg-2" lg={4} xl={3}>
                     {(this.resource.sidebarURLs || this.resource.sidebarText || this.resource.sidebarTitle) &&
                       <Card style={{marginBottom: '1rem'}}>
+                        {this.resource.sidebarImage && this.resource.sidebarAlt &&
+                          <Card.Img
+                            variant="top"
+                            src={this.resource.sidebarImage}
+                            alt={this.resource.sidebarAlt}
+                          />
+                        }
                         <Card.Body className="justify-content-xs-center">
                           { this.resource.sidebarTitle &&
                             <Card.Title>{this.resource.sidebarTitle}</Card.Title>
@@ -114,6 +121,13 @@ const EducatorResourceCenterTemplate = class extends Component {
                     }
                   {((this.resource.sidebarContacts && this.resource.sidebarContacts.length !== 0) || this.resource.sidebarContactsText || this.resource.sidebarContactsTitle) &&
                       <Card>
+                        {this.resource.sidebarContactsImage && this.resource.sidebarContactsAlt &&
+                          <Card.Img
+                            variant="top"
+                            src={this.resource.sidebarContactsImage}
+                            alt={this.resource.sidebarContactsAlt}
+                          />
+                        }
                         <Card.Body>
                           { this.resource.sidebarContactsTitle &&
                             <Card.Title>{this.resource.sidebarContactsTitle}</Card.Title>
@@ -222,6 +236,8 @@ export const query = graphql`
         },
         sidebarContactsText,
         sidebarContactsTitle,
+        sidebarContactsAlt,
+        sidebarContactsImage,
         sidebarURLs {
           resource {
             buttonText,
@@ -230,6 +246,8 @@ export const query = graphql`
             url
           }
         },
+        sidebarAlt,
+        sidebarImage,
         sidebarText,
         sidebarTitle,
         template,

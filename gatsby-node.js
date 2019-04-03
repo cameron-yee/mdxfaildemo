@@ -19,6 +19,7 @@
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
 
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
@@ -30,7 +31,49 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 const path = require("path")
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: '/humane-genetics',
+    toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
+
+  createRedirect({
+    fromPath: '/humane-genetics/',
+    toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
+
+  createRedirect({
+    fromPath: '/STeLLA',
+    toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
+
+  createRedirect({
+    fromPath: '/STeLLA/',
+    toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
+
+  createRedirect({
+    fromPath: '/stella',
+    toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
+
+  createRedirect({
+    fromPath: '/stella/',
+    toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
+    isPermanent: true,
+    redirectInBrowser: true
+  })
 
   const reportsPages = new Promise((resolve, reject) => {
     const markdownTemplate = path.resolve(`src/templates/reports-template.js`)
