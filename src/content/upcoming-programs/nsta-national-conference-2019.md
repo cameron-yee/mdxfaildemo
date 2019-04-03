@@ -74,10 +74,10 @@ Join us to learn about Five Tools that will help you and your colleagues use the
 
 **Using Tool 4 of the Five Tools and Processes to Design Learning Sequences Using the 5E Instructional Model**
 
-Saturday, April 13, 2 - 3 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=FF4ACE2D-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 2 - 3 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <br />
 
 **Using Tool 5 of the Five Tools and Processes to Develop Performance Tasks from Evidence of Learning Specifications**
 
-Saturday, April 13, 3:30 p.m. - 4:30 p.m.
+<a href="https://s6.goeshow.com/nsta/national/2019/profile.cfm?profile_name=session&master_key=344ECE2D-9112-E911-80D4-90E2BA4C0951&page_key=7BBD997B-DCFA-D26C-2407-1917BCB4FB96&xtemplate&userLGNKEY=0" target="_blank" rel="noopener noreferrer">Saturday, April 13, 3:30 p.m. - 4:30 p.m.&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
