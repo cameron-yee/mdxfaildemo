@@ -8,7 +8,6 @@ import PageTitle from '../components/layout/page-title/page-title'
 import SEO from '../components/seo'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
-import GeneralContactFormModal from '../components/atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import MSSRegistrationForm from '../components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch'
 
 import Button from 'react-bootstrap/Button'
@@ -24,6 +23,9 @@ const UpcomingProgramsTemplate = class extends Component {
     super(props)
     this.html = this.props.data.mdx.code.body
     this.program = this.props.data.mdx.frontmatter
+    this.state = {
+      launchGeneral: false,
+    }
   }
 
   render() {
@@ -141,11 +143,12 @@ const UpcomingProgramsTemplate = class extends Component {
                                     }
                                     {contact['contact']['formType'] === 'Contact Us' &&
                                       <React.Fragment>
-                                        <GeneralContactFormButton launch={this.launchGeneral} size="sm">Contact Us</GeneralContactFormButton>
-                                        <GeneralContactFormModal
-                                          show={this.state.modalShowGeneral}
-                                          onHide={this.closeGeneral}
-                                        />
+                                        <GeneralContactFormButton
+                                          launch={() => this.setState({launchGeneral: true})}
+                                          size="sm"
+                                        >
+                                          Contact Us
+                                        </GeneralContactFormButton>
                                       </React.Fragment>
                                     }
                                     {contact['contact']['formType'] === 'MSS Registration' &&

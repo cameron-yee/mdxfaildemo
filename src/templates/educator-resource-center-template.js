@@ -8,7 +8,6 @@ import BSCSBreadcrumb from '../components/layout/breadcrumb/breadcrumb';
 import Layout from '../components/layout/layout';
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
-import GeneralContactFormModal from '../components/atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import MSSRegistrationForm from '../components/atoms/forms/mss-registration-form/mss-registration-form-launch/mss-registration-form-launch'
 
 import Button from 'react-bootstrap/Button'
@@ -27,18 +26,15 @@ const EducatorResourceCenterTemplate = class extends Component {
     this.html = this.props.data.mdx.code.body
     this.resource = this.props.data.mdx.frontmatter
     this.state = {
-      modalShowGeneral: false
+      launchGeneral: false,
     }
   }
-
-  launchGeneral = () => { this.setState({modalShowGeneral: true}) }
-  closeGeneral = () => { this.setState({modalShowGeneral: false}) }
 
   render() {
     return (
       <React.Fragment>
         <SEO title={this.resource.title} canonical={this.resource.seoCanonicalUrl} description={this.resource.seoDescription} lang={this.resource.seoLang} />
-        <Layout location={this.props.location}>
+        <Layout location={this.props.location} launchGeneral={this.state.launchGeneral} closeGeneral={() => this.setState({launchGeneral: false})}>
           <Container>
             <BSCSBreadcrumb pathname={this.props.location.pathname} title={this.resource.title} />
               {this.resource.template === 'Image Right' &&
@@ -154,11 +150,12 @@ const EducatorResourceCenterTemplate = class extends Component {
                                       }
                                       {contact['contact']['formType'] === 'Contact Us' &&
                                         <React.Fragment>
-                                          <GeneralContactFormButton launch={this.launchGeneral} size="sm">Contact Us</GeneralContactFormButton>
-                                          <GeneralContactFormModal
-                                            show={this.state.modalShowGeneral}
-                                            onHide={this.closeGeneral}
-                                          />
+                                          <GeneralContactFormButton
+                                            launch={() => this.setState({launchGeneral: true})}
+                                            size="sm"
+                                          >
+                                            Contact Us
+                                          </GeneralContactFormButton>
                                         </React.Fragment>
                                       }
                                       {contact['contact']['formType'] === 'MSS Registration' &&
