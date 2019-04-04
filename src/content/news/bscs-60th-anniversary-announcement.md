@@ -45,6 +45,7 @@ On behalf of our board and staff, thank you for your steadfast friendship and su
 Sincerely,
 
 Daniel C. Edelson
+
 BSCS Executive Director
 
 
