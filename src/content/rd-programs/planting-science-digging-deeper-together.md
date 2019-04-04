@@ -11,12 +11,12 @@ areas:
   - Research
 image: /assets/rd-programs/white-board.svg
 alt: PLACEHOLDER
-sidebarContactsText: 'For more information, please contact Anne Westbrook.'
 sidebarContacts:
   - contact:
-      person: Anne Westbrook
       infoat: false
+      person: Anne Westbrook
 sidebarContactsTitle: Questions?
+sidebarContactsText: 'For more information, please contact Anne Westbrook.'
 sortOrder: 10
 page: rd-programs
 ---
@@ -34,7 +34,7 @@ Until now, the impact of bringing teachers and scientists together to learn, ref
   </div>
 </div>
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem' }}><p>This project is in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://www.botany.org" target="_blank" rel="noopener noreferrer">
