@@ -7,6 +7,7 @@ seoDescription: >-
   BSCS celebrates 60th anniversary in 2018 and changes name to BSCS Science
   Learning.
 seoLang: en-us
+cardDescription: BSCS announces new name for the organization.
 sidebarURLs:
   - resource:
       buttonText: Email Announcement
