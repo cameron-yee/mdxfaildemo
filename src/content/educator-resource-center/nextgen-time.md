@@ -50,3 +50,4 @@ NextGen TIME is a suite of tools and processes designed for professional develop
   <a className="p-2 mr-4" href="https://www.carnegie.org/" target="_blank" rel="noopener noreferrer">
     Carnegie Corporation of New York&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
   </a>
+</div>
