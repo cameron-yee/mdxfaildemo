@@ -1,6 +1,8 @@
 ---
 date: 2019-02-15T20:02:08.538Z
-title: Extending and Investigating the Impact of the High School Model-based Educational Resource (MBER)
+title: >-
+  Extending and Investigating the Impact of the High School Model-based
+  Educational Resource (MBER)
 seoCanonicalUrl: >-
   https://bscs.org/our-work/rd-programs/collaborative-research-extending-and-investigating-the-impact-of-of-the-high-school-model-based-educational-resource-mber
 seoDescription: >-
@@ -13,15 +15,15 @@ areas:
 image: /assets/rd-programs/mber.svg
 alt: MBER Icon
 sidebarTitle: ''
-sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
   - contact:
+      infoat: false
       person: Chris Wilson
-      infoat: false
   - contact:
-      person: Molly Stuhlsatz
       infoat: false
+      person: Molly Stuhlsatz
 sidebarContactsTitle: Questions?
+sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sortOrder: 7
 page: rd-programs
 ---
@@ -43,7 +45,7 @@ This study will also address a significant gap in the research on next generatio
 
 In addition to generating important research findings, the materials revised and studied in this project will be open source and freely available to teachers and schools, thereby maximizing the broader impacts of this work.
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project is in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://education.ucdavis.edu/faculty-profile/cindy-passmore" target="_blank" rel="noopener noreferrer">
