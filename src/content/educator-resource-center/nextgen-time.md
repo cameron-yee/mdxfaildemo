@@ -32,4 +32,21 @@ Historically, the selection process can be as simple as an individual leafing th
 
 NextGen TIME is a suite of tools and processes designed for professional development of leaders at the state, district, and school levels. Over the course of the NextGen TIME program, teams of educators are guided through the evaluation, selection, and planning for implementation of materials that will help teachers enact the vision of the Next Generation Science Standards (NGSS) in their classrooms. All program tools are freely available.
 
-_This resource was developed in collaboration with Achieve and the K-12 Alliance at WestEd. Funding was provided by the Carnegie Corporation of New York._
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project is in partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.achieve.org/" target="_blank" rel="noopener noreferrer">
+    Achieve&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www.wested.org/project/k-12-alliance/" target="_blank" rel="noopener noreferrer">
+    K-12 Alliance at WestEd&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project was funded by</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.carnegie.org/" target="_blank" rel="noopener noreferrer">
+    Carnegie Corporation of New York&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
