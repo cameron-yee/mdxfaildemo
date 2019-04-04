@@ -16,15 +16,15 @@ sidebarURLs:
       buttonText: Learn More Here
       external: true
       url: 'http://datanuggets.org/'
-sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sidebarContacts:
   - contact:
+      infoat: false
       person: Chris Wilson
-      infoat: false
   - contact:
-      person: Molly Stuhlsatz
       infoat: false
+      person: Molly Stuhlsatz
 sidebarContactsTitle: Questions?
+sidebarContactsText: 'For more information, please contact Chris Wilson or Molly Stuhlsatz.'
 sortOrder: 8
 page: rd-programs
 ---
@@ -34,7 +34,7 @@ Data Nuggets, a four-year research project between Michigan State University and
 
 From topics such as “Won’t you be my urchin” to “Sticky situations: big and small animals with sticky feet,” teachers get to pick and choose from numerous options that get their students to think like a scientist, while the scientists who write the curriculum have an opportunity to share their research findings with a new audience in science.
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project is in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://msu.edu/" target="_blank" rel="noopener noreferrer">
