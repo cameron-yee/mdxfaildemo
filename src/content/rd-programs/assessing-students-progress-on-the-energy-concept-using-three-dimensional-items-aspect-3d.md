@@ -25,12 +25,12 @@ sidebarURLs:
       external: true
       url: >-
         https://ies.ed.gov/ncer/projects/grant.asp?ProgID=12&grantid=1939&NameID=56
-sidebarContactsText: 'For more information, please contact Cari Herrmann Abell.'
 sidebarContacts:
   - contact:
-      person: Cari Herrmann Abell
       infoat: false
+      person: Cari Herrmann Abell
 sidebarContactsTitle: Questions?
+sidebarContactsText: 'For more information, please contact Cari Herrmann Abell.'
 sortOrder: 9
 page: rd-programs
 ---
@@ -43,7 +43,7 @@ As a result of this project, we will produce sets of NGSS-aligned assessments fo
 
 ***ASPECt-3D** builds on a previously funded IES project (R305A120138) focused mainly on assessing students’ understanding of science content. The researchers developed three vertically equated, multiple-choice instruments to assess students’ progress on the energy concept.
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project is in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2" href="https://www.aaas.org/" target="_blank" rel="noopener noreferrer">
