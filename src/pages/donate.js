@@ -48,7 +48,7 @@ const DonatePage = class extends Component {
                 <p className="mt-0 mb-0 ml-5">5415 Mark Dabling Blvd.</p>
                 <p className="mt-0 ml-5">Colorado Springs, CO 80918</p>
 
-                <p>Online payments will be accepted soon.</p>
+                <p>You may also call BSCS at 719-531-5550 to pay with a credit card over the phone. Online payments will be accepted soon.</p>
 
                 <p>Other ways to support BSCS:</p>
                 <ul>
