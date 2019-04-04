@@ -37,42 +37,42 @@ exports.createPages = ({ graphql, actions }) => {
     fromPath: '/humane-genetics',
     toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   createRedirect({
     fromPath: '/humane-genetics/',
     toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   createRedirect({
     fromPath: '/STeLLA',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   createRedirect({
     fromPath: '/STeLLA/',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   createRedirect({
     fromPath: '/stella',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   createRedirect({
     fromPath: '/stella/',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
     redirectInBrowser: true,
-    statusCode: 301
+    statusCode: 200
   })
 
   const reportsPages = new Promise((resolve, reject) => {
