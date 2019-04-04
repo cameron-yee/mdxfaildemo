@@ -43,12 +43,4 @@ On behalf of our board and staff, thank you for your steadfast friendship and su
 
 Sincerely,
  
-<img src={dannySig} alt="Daniel C. Edelson signature" style={{display: 'block', height: '65px'}} />
-    </Col>
-    <Col sm={6} className="d-none d-sm-block">
-        
-    </Col>
-    <Col className="d-block d-sm-none">
-      <p>Daniel C. Edelson<br />BSCS Executive Director</p>
-    </Col>
-  </Row>
+
