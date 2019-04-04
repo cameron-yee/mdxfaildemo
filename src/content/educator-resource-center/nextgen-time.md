@@ -44,7 +44,7 @@ NextGen TIME is a suite of tools and processes designed for professional develop
   </a>
 </div>
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project was funded by</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This resource was funded by</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://www.carnegie.org/" target="_blank" rel="noopener noreferrer">
