@@ -9,6 +9,8 @@ cardDescription: >-
   Darwin Day is a celebration to commemorate the birthday of Charles Darwin on
   February 12, 1809. The day is used to highlight Darwin's contributions to
   science and to promote science in general.
+sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
+sidebarImage: /assets/darwin-day-2019.jpg
 sidebarContacts:
   - contact:
       infoat: false
@@ -17,8 +19,6 @@ sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 sidebarContactsAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
 sidebarContactsImage: /assets/darwin-day-2019.jpg
-sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
-sidebarImage: /assets/darwin-day-2019.jpg
 sortOrder: 1
 page: news
 ---
@@ -30,7 +30,7 @@ import Row from 'react-bootstrap/Row'
 import dannySig from 'images/signatures/daniel-edelson-signature.svg'
 import richSig from 'images/signatures/rich-cardullo-signature.svg'
 
-Dear Friend,
+Dear Friends,
 
 Every year on Darwin Day, BSCS Science Learning celebrates the profound impact of Charles Darwin’s theory of evolution. Nearly 140 years after his death, Darwin’s contributions to science remain significant, and his name is recognizable around the world.
 

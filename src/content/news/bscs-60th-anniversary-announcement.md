@@ -3,10 +3,11 @@ date: 2018-03-14T15:45:40.892Z
 title: BSCS 60th Anniversary Announcement
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-60th-anniversary-announcement
-seoDescription: >-
+seoDescription: BSCS announces new name for the organization.
+seoLang: en-us
+cardDescription: >-
   BSCS celebrates 60th anniversary in 2018 and changes name to BSCS Science
   Learning.
-seoLang: en-us
 sidebarURLs:
   - resource:
       buttonText: Email Announcement
@@ -44,3 +45,9 @@ On behalf of our board and staff, thank you for your steadfast friendship and su
 Sincerely,
 
 Daniel C. Edelson
+
+BSCS Executive Director
+
+
+ 
+

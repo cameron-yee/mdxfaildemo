@@ -6,9 +6,13 @@ title: >-
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/new-bscs-report-presents-guidelines-for-designing-citizen-science-projects-that-merge-science-and-education
 seoDescription: >-
+  New report presents specific design strategies to achieve these outcomes,
+  together with examples of how they have been implemented in existing citizen
+  science projects.
+seoLang: en-us
+cardDescription: >-
   BSCS Science Learning has released a report that presents guidelines for
   designing citizen science projects with scientific and educational benefits.
-seoLang: en-us
 sidebarURLs:
   - resource:
       buttonText: Access Report

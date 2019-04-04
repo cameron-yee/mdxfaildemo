@@ -7,6 +7,11 @@ seoDescription: >-
   A new $2.8 million program is expected to benefit future secondary science
   teachers and students throughout Colorado. 
 seoLang: en-us
+cardDescription: >-
+  A federal grant was awarded to BSCS Science Learning and will fund a five-year
+  STeLLA CO2 project, starting this month in partnership with University of
+  Colorado, Boulder; University of Colorado, Colorado Springs; and University of
+  Northern Colorado, Greeley.
 sidebarContacts:
   - contact:
       infoat: false
