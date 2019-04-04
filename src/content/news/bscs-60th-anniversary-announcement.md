@@ -42,5 +42,10 @@ We are proud of what we have accomplished over the last 60 years. And we are exc
 On behalf of our board and staff, thank you for your steadfast friendship and support.
 
 Sincerely,
+
+Daniel C. Edelson
+Executive Director
+
+
  
 
