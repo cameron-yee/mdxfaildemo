@@ -12,15 +12,18 @@ cardDescription: >-
   vision of NGSS.
 type: District Planning
 image: /assets/teachers-in-classroom.jpg
-alt: Science teachers sitting at round tables in large classroom attentively listening to institute leader.
+alt: >-
+  Science teachers sitting at round tables in large classroom attentively
+  listening to institute leader.
 template: Image Left
 courseId: 0
-sortOrder: 5
 sidebarURLs:
   - resource:
       buttonText: Access Resource
       external: true
-      url: https://www.amnh.org/explore/curriculum-collections/five-tools-and-processes-for-ngss/
+      url: >-
+        https://www.amnh.org/explore/curriculum-collections/five-tools-and-processes-for-ngss/
+sortOrder: 5
 page: educator-resource-center
 ---
 Nineteen US states—representing nearly forty percent of students—have adopted the Next Generation Science Standards (NGSS). An additional 20 states have developed their own standards influenced by the Framework for K-12 Science Education. A district’s decision to introduce new science standards can be highly rewarding for teachers and students, especially when supported by an intentional process for planning and implementation.
@@ -29,4 +32,22 @@ BSCS Science Learning and its collaborators designed Five Tools and Processes to
 
 All Five Tools resources are freely available, and BSCS often hosts professional learning institutes to support district planning around NGSS.
 
-_This resource was developed by the American Museum of Natural History in collaboration with BSCS and the K-12 Alliance at WestEd. Funding was provided by the Carnegie Corporation of New York._
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This resource was developed in partnership with</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.amnh.org/" target="_blank" rel="noopener noreferrer">
+    American Museum of Natural History&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
+  <a className="p-2 ml-4" href="https://www.wested.org/project/k-12-alliance/" target="_blank" rel="noopener noreferrer">
+    K-12 Alliance at WestEd&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+</div>
+
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This resource was funded by</p></div>
+
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.carnegie.org/" target="_blank" rel="noopener noreferrer">
+    Carnegie Corporation of New York&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
+
