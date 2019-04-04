@@ -32,7 +32,7 @@ Historically, the selection process can be as simple as an individual leafing th
 
 NextGen TIME is a suite of tools and processes designed for professional development of leaders at the state, district, and school levels. Over the course of the NextGen TIME program, teams of educators are guided through the evaluation, selection, and planning for implementation of materials that will help teachers enact the vision of the Next Generation Science Standards (NGSS) in their classrooms. All program tools are freely available.
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project is in partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This resource was developed in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://www.achieve.org/" target="_blank" rel="noopener noreferrer">
@@ -44,7 +44,7 @@ NextGen TIME is a suite of tools and processes designed for professional develop
   </a>
 </div>
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This project was funded by</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem', marginTop: '3rem' }}><p>This resource was funded by</p></div>
 
 <div className="d-flex justify-content-md-center">
   <a className="p-2 mr-4" href="https://www.carnegie.org/" target="_blank" rel="noopener noreferrer">
