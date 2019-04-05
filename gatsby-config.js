@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `BSCS Science Learning – a 501(c)(3) organization`,
     description: `BSCS Science Learning is an independent nonprofit dedicated to transforming science education across the US through research-driven innovation.`,
-    author: `J. S. Nickerson`,
+    author: `BSCS Science Learning`,
+    siteUrl: `https://bscs.org`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -79,7 +80,8 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md']
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
     // `gatsby-plugin-transition-link`,
   ],
 }
