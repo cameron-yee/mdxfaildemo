@@ -81,9 +81,15 @@ module.exports = {
         extensions: ['.mdx', '.md']
       }
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://bscs.org',
+        sitemap: 'https://bscs.org/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     // `gatsby-plugin-transition-link`,
   ],
 }
-
-
