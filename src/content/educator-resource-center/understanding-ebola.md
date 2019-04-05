@@ -41,4 +41,4 @@ In alignment with the Next Generation Science Standards, the resource addresses 
   </div>
 </div>
 
-\*We will repurpose Mark’s interview on this page (https://bscs.org/ebola) as a newsletter feature and save it on the news page.
+
