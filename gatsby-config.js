@@ -82,7 +82,14 @@ module.exports = {
       }
     },
     `gatsby-plugin-sitemap`,
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://bscs.org',
+        sitemap: 'https://bscs.org/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     // `gatsby-plugin-transition-link`,
   ],
 }
