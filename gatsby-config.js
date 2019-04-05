@@ -81,9 +81,8 @@ module.exports = {
         extensions: ['.mdx', '.md']
       }
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     // `gatsby-plugin-transition-link`,
   ],
 }
-
-

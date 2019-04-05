@@ -274,7 +274,7 @@ const GeneralContactFormModal = class extends Component {
                 You are already enrolled in the email list.
               </Alert>
               <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
-                We are having problems with our servers right now.  Please try again later.  Sorry for the inconvenience.
+                We are having problems with our servers right now. Please try again later. Sorry for the inconvenience.
               </Alert>
             </Col>
           </Row>
