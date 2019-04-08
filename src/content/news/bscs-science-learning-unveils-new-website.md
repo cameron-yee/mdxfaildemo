@@ -8,11 +8,7 @@ seoLang: en-us
 cardDescription: >-
   BSCS launches a new website that reflects the organization’s 21st century
   brand identity.
-sidebarURLs:
-  - resource:
-      buttonText: Email Announcement
-      external: true
-      url: 'https://conta.cc/2Kl6bzh'
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
