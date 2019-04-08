@@ -27,6 +27,7 @@ sidebarContacts:
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 additionalTags: ''
+sortOrder: 4
 page: news
 ---
 
