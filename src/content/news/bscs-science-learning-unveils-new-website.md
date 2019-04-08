@@ -20,7 +20,7 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-image: /assets/male-student-in-classroom.jpg
+image: ''
 sortOrder: 1
 page: news
 ---
