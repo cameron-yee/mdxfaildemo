@@ -1,5 +1,5 @@
 ---
-date: 2019-04-08T16:44:38.526Z
+date: 2019-04-09T16:44:38.526Z
 title: BSCS Science Learning Unveils New Website
 seoCanonicalUrl: >-
   https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-science-learning-unveils-new-website
