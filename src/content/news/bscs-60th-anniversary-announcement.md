@@ -20,6 +20,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+sortOrder: 6
 page: news
 ---
 Dear Friends,
