@@ -271,7 +271,7 @@ const GeneralContactFormModal = class extends Component {
                 Your message has been received!
               </Alert>
               <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
-                We are having problems with our servers right now.  Please try again later.  Sorry for the inconvenience.
+                We are having problems with our servers right now. Please try again later. Sorry for the inconvenience.
               </Alert>
             </Col>
           </Row>

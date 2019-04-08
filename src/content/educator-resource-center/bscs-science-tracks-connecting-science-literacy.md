@@ -14,7 +14,8 @@ type: Classroom Instruction
 image: /assets/science-tracks.jpg
 alt: >-
   Front cover of the textbook "BSCS Science Tracks: Investigating Matter and
-  Energy in Ecosystems", with a picture of a mother sea otter and her pup.
+  Energy in Ecosystems, Student Edition", with a picture of a mother sea otter
+  and her pup.
 template: Image Right
 courseId: 0
 discipline:
@@ -36,7 +37,7 @@ BSCS Science Learning’s elementary program allows preK through grade 5 student
 
 BSCS recently revised two units to align with the Next Generation Science Standards. These units are: _Investigating Properties Student Guide_ and _Investigating Ecosystems Student Guide_. All units are available for purchase through the Kendall Hunt Publishing Company.
 
-\*BSCS Science Tracks: Connecting Science & Literacy NGSS-aligned units:
+BSCS Science Tracks: Connecting Science & Literacy NGSS-aligned units:
 
 * Investigating Properties Student Guide
 * Investigating Ecosystems Student Guide
