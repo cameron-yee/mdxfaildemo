@@ -17,7 +17,7 @@ sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
-      text: 'For more information, please contact Lauren Novo.'
+      text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 image: /assets/male-student-in-classroom.jpg
