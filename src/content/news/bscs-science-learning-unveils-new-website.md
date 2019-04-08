@@ -31,7 +31,7 @@ On behalf of BSCS and our Board of Directors, I am proud to introduce a new webs
 
 BSCS invites you to browse our new website and share any feedback on how we can continue to enhance our online presence. 
 
-Take a personalized tour.
+Take a personalized tour!
 
 Are you a new friend to BSCS? Learn [What We Do](https://bscs.org/our-work/what-we-do/). 
 
