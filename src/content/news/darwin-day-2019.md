@@ -11,12 +11,7 @@ cardDescription: >-
   science and to promote science in general.
 sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
 sidebarImage: /assets/darwin-day-2019.jpg
-sidebarURLs:
-  - resource:
-      buttonText: Email Announcement
-      external: true
-      text: ''
-      url: 'https://conta.cc/2DjZYfZ'
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
