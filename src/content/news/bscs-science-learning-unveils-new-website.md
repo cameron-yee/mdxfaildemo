@@ -34,15 +34,15 @@ BSCS invites you to browse our new website and share any feedback on how we can 
 
 Take a personalized tour!
 
-Are you a new friend to BSCS? Learn What We Do. 
+Are you a new friend to BSCS? Learn [What We Do](https://bscs.org/our-work/what-we-do/). 
 
-Are you curious about our current lines of research and development? Peruse our R&D Programs. 
+Are you curious about our current lines of research and development? Peruse our [R&D Programs](https://bscs.org/our-work/rd-programs/). 
 
-Could you use support with your classroom instruction or professional growth? Visit our Educator Resource Center. 
+Could you use support with your classroom instruction or professional growth? Visit our [Educator Resource Center](https://bscs.org/resources/educator-resource-center/). 
 
-Do you want to participate in a BSCS professional learning institute? Check out our Upcoming Programs. 
+Do you want to participate in a BSCS professional learning institute? Check out our [Upcoming Programs](https://bscs.org/upcoming-programs). 
 
-Ready to partner on an opportunity? We invite you to Work With Us. 
+Ready to partner on an opportunity? We invite you to [Work With Us](https://bscs.org/connect/work-with-us/). 
 
 Thank you for your continued support as BSCS strives to transform science teaching and learning through research-driven innovation.
 
