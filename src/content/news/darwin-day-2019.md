@@ -20,7 +20,7 @@ sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 sidebarContactsAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
 sidebarContactsImage: /assets/darwin-day-2019.jpg
-sortOrder: 1
+sortOrder: 3
 page: news
 ---
 
