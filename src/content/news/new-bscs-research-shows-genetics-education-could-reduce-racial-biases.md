@@ -11,7 +11,7 @@ cardDescription: >-
   BSCS Research Scientist Dr. Brian Donovan has found that learning accurate
   information about human genetic variation within and between US census races
   can reduce racial biases in adolescent and adult populations.
-sidebarText: 'Read the article here:'
+sidebarText: 'Read the paper here:'
 sidebarURLs:
   - resource:
       buttonText: Science Education
