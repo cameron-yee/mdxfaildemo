@@ -24,7 +24,7 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Brian Donovan.'
 sidebarContactsTitle: Questions?
-sortOrder: 1
+sortOrder: 2
 page: news
 ---
 **Dr. Brian Donovan’s latest findings published in Science Education** 
