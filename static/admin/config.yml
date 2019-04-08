@@ -231,7 +231,6 @@ collections:
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
         - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
         - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
-        - { name: image, label: Image, widget: image, required: false }
         - { name: additionalTags, label: Additional Tags, widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
