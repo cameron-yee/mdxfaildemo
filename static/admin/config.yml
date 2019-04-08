@@ -214,6 +214,7 @@ collections:
                 - { name: external, label: External, widget: boolean, default: true }
                 - { name: text, label: Text, widget: string, required: false }
                 - { name: url, label: URL, widget: string }
+          required: false
         - name: sidebarContacts
           label: Sidebar Contact People
           widget: list
@@ -305,6 +306,7 @@ collections:
                 - { name: external, label: External, widget: boolean, default: true }
                 - { name: text, label: Text, widget: string, required: false }
                 - { name: url, label: URL, widget: string }
+          required: false
         - name: sidebarContacts
           label: Sidebar Contact People
           widget: list
