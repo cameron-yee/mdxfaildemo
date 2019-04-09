@@ -41,8 +41,10 @@ FieldScope is freely available to educators, students, and community members who
 
 <div style={{ fontSize: "1.5rem", marginBottom: '2rem' }}><p>This resource is funded in part by</p></div>
 
-<div className="d-flex justify-content-center">
-  <img src={mooreLogo} alt="Gordan and Betty Moore Foundation" style="height: 85px;" />
+<div className="d-flex justify-content-md-center">
+  <a className="p-2 mr-4" href="https://www.moore.org/" target="_blank" rel="noopener noreferrer">
+    Gordon and Betty Moore Foundation&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup>
+  </a>
 </div>
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
