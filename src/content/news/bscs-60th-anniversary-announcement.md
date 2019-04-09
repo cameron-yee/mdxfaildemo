@@ -49,9 +49,7 @@ Sincerely,
 
 <img src={dannySig} alt="Daniel C. Edelson signature" style={{display: 'block', height: '65px'}} />
 
-Daniel C. Edelson
-
-BSCS Executive Director
+<p>Daniel C. Edelson<br />BSCS Executive Director</p>
 
 
  
