@@ -14,7 +14,7 @@ page: leadership
 ---
 ### _High School Biology & AP Biology Teacher_
 
-<a href="https://rmhs.d214.org/" target="_blank" rel="noopener noreferrer">Rolling Meadows High School&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
+<a href="http://www.oprfhs.org/#" target="_blank" rel="noopener noreferrer">Oak Park and River Forest High School&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
 
 **Stephen Traphagen**, M.S., M.Ed., is a biology and AP biology teacher at Oak Park and River Forest High School in Oak Park, Illinois, and a Senior Fellow with the Knowles Teacher initiative.
 
