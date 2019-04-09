@@ -16,8 +16,8 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-sidebarContactsImage: /assets/male-student-smiling.jpg
 sidebarContactsAlt: Image of a young male student smiling in class.
+sidebarContactsImage: /assets/male-student-smiling.jpg
 sortOrder: 1
 page: news
 ---
@@ -50,6 +50,4 @@ Sincerely,
 
 <img src={dannySig} alt="Daniel C. Edelson signature" style={{display: 'block', height: '65px'}} />
 
-Daniel C. Edelson
-
-BSCS Executive Director
+<p>Daniel C. Edelson<br />BSCS Executive Director</p>
