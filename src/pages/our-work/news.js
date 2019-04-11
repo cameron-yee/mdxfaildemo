@@ -99,7 +99,10 @@ const NewsPage = class extends Component {
                             // data-type={edge.node.frontmatter.type}
                           >
                             <h3>{edge.node.frontmatter.title}</h3>
-                            <p>{edge.node.excerpt}</p>
+                            <p>
+                              {edge.node.frontmatter.cardDescription}
+                              {!edge.node.frontmatter.cardDescription && edge.node.excerpt}
+                            </p>
                             <div className="d-flex align-content-center flex-wrap">
                               <p
                                 className="p-2"
@@ -158,6 +161,7 @@ export const newsQuery = graphql`
           frontmatter {
             additionalTags,
             date(formatString: "MMMM DD, YYYY"),
+            cardDescription,
             title,
             page
           }

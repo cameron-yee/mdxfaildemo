@@ -20,8 +20,11 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+sortOrder: 6
 page: news
 ---
+import dannySig from 'images/signatures/daniel-edelson-signature.svg'
+
 Dear Friends,
 
 For BSCS, 2018 is an especially exciting year—it marks the 60th anniversary of our storied organization.
@@ -44,9 +47,9 @@ On behalf of our board and staff, thank you for your steadfast friendship and su
 
 Sincerely,
 
-Daniel C. Edelson
+<img src={dannySig} alt="Daniel C. Edelson signature" style={{display: 'block', height: '65px'}} />
 
-BSCS Executive Director
+<p>Daniel C. Edelson<br />BSCS Executive Director</p>
 
 
  
