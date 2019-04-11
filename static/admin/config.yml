@@ -199,7 +199,7 @@ collections:
         - { name: seoLang, label: SEO Language, widget: string, default: "en-us", required: false }
         - { name: cardDescription, label: Card Description, widget: string, required: false }
         - { name: sidebarAlt, label: Sidebar Alt, widget: string, required: false }
-        - { name: sidebarImage, label: Sidebar Image, widget: string, required: false }
+        - { name: sidebarImage, label: Sidebar Image, widget: image, required: false }
         - { name: sidebarText, label: Sidebar Text, widget: string, required: false }
         - { name: sidebarTitle, label: Sidebar Title, widget: string, required: false }
         - name: sidebarURLs
@@ -230,7 +230,7 @@ collections:
         - { name: sidebarContactsText, label: Sidebar Contact Text, widget: string, required: false  }
         - { name: sidebarContactsTitle, label: Sidebar Contact Title, widget: string, required: false }
         - { name: sidebarContactsAlt, label: Sidebar Contact Alt, widget: string, required: false }
-        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: string, required: false }
+        - { name: sidebarContactsImage, label: Sidebar Contact Image, widget: image, required: false }
         - { name: additionalTags, label: Additional Tags, widget: string, required: false }
         - { name: sortOrder, label: Sort Order, widget: number, valueType: int, required: false }
         - { name: body, label: Body, widget: markdown }
