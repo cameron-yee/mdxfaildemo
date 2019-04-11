@@ -12,7 +12,6 @@ import 'typeface-lora'
 import './layout.scss'
 
 
-// const Layout = ({ children, location }) => {
 const Layout = class extends Component {
   constructor(props) {
     super(props)
