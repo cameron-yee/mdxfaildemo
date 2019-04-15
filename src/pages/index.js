@@ -21,7 +21,7 @@ import '../global-scss/index.scss'
 import cardImage from '../queries/images/card-image'
 
 // eslint-disable-next-line
-// import rowImage from '../queries/images/row-image'
+import rowImage from '../queries/images/row-image'
 
 
 const IndexPage = (props) => (
