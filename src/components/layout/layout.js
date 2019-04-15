@@ -63,9 +63,17 @@ const Layout = class extends Component {
         `}
         render={data => (
           <React.Fragment>
-            <Header launchGeneral={this.launchGeneral} launchJoinEmail={this.launchJoinEmail} location={this.props.location} />
+            <Header
+              launchGeneral={this.launchGeneral}
+              launchJoinEmail={this.launchJoinEmail}
+              location={this.props.location}
+            />
             {this.props.children}
-            <Footer launchGeneral={this.launchGeneral} launchJoinEmail={this.launchJoinEmail} location={this.props.location} />
+            <Footer
+              launchGeneral={this.launchGeneral}
+              launchJoinEmail={this.launchJoinEmail}
+              location={this.props.location}
+            />
             <GeneralContactFormModal
               show={this.state.modalShowGeneral}
               onHide={this.closeGeneral}

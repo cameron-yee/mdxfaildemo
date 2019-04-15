@@ -69,10 +69,8 @@ module.exports = {
         cookieDomain: "bscs.org",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
     // `gatsby-transformer-remark`,
+    `gatsby-background-image`,
     `gatsby-transformer-json`,
     `gatsby-plugin-netlify-cms`,
     {
@@ -90,6 +88,8 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    // `gatsby-plugin-transition-link`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    'gatsby-plugin-offline',
   ],
 }
