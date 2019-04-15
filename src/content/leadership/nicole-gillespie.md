@@ -1,15 +1,15 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Nicole Gillespie
+seoCanonicalUrl: 'https://bscs.org/about/leadership/nicole-gillespie'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Board Member
 template: Image Left
 image: /assets/bod_nicole_g_5x7.jpg
 alt: Nicole Gillespie headshot.
 additionalTags: BOD
-type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/nicole-gillespie
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Executive Director*
