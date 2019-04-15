@@ -1,8 +1,7 @@
 ---
 date: 2018-03-14T15:45:40.892Z
 title: BSCS 60th Anniversary Announcement
-seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-60th-anniversary-announcement
+seoCanonicalUrl: 'https://bscs.org/admin/#/collections/news/bscs-60th-anniversary-announcement'
 seoDescription: BSCS announces new name for the organization.
 seoLang: en-us
 cardDescription: >-
