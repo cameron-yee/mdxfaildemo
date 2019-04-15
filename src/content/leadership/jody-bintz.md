@@ -1,15 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Jody Bintz
+seoCanonicalUrl: 'https://bscs.org/about/leadership/jody-bintz'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Management
 template: Image Left
 image: /assets/jody_bintz_5x7.jpg
 alt: Jody Bintz headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/jody-bintz
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Associate Director for Strategic Partnerships & Professional Learning*
