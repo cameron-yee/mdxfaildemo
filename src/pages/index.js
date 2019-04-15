@@ -26,7 +26,10 @@ import cardImage from '../queries/images/card-image'
 
 const IndexPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      canonical="https://bscs.org/"
+    />
     <IndexJumbotron />
     {/* <Jumbotron className="jumbotron jumbotron-index" style={{ position: 'relative', overflow: 'hidden', background: 'transparent' }}>
       <div className="jumbotron-inside">
