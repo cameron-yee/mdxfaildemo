@@ -1,15 +1,15 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
+seoCanonicalUrl: 'https://bscs.org/about/leadership/hilda-borko'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Board Member
 template: Image Right
 image: /assets/bod_2018_hilda_b.jpg
 alt: Hilda Borko headshot.
 additionalTags: BOD
-type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/hilda-borko
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Professor*
