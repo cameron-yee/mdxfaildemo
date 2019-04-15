@@ -1,7 +1,7 @@
 ---
 date: 2019-02-12T20:12:07.266Z
 title: Celebrating Darwin Day 2019
-seoCanonicalUrl: 'https://bscs.org/admin/#/collections/news/celebrating-darwin-day-2019'
+seoCanonicalUrl: 'https://bscs.org/our-work/news/celebrating-darwin-day-2019'
 seoDescription: Celebrating Darwin Day 2019 stories.
 seoLang: en-us
 cardDescription: >-
