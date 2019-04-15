@@ -6,36 +6,13 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
-// import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
-// import ContactUsModal from '../../../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 
 import '../../header.scss'
 import './navigation.scss'
-
 import '../../../../../global-scss/index.scss'
 
+
 export default class DesktopNavigation extends Component {
-  //   constructor(props) {
-  //   super(props)
-
-  //   this.state = {
-  //     joinEmailListModalShow: false,
-  //     contactUsModalShow: false
-  //   }
-
-  //   this.launchJoinEmailList = this.launchJoinEmailList.bind(this)
-  //   this.closeJoinEmailList = this.closeJoinEmailList.bind(this)
-
-  //   this.launchContactUs = this.launchContactUs.bind(this)
-  //   this.closeContactUs = this.closeContactUs.bind(this)
-  // }
-
-  // launchJoinEmailList = () => { this.setState({joinEmailListModalShow: true}) }
-  // closeJoinEmailList = () => { this.setState({joinEmailListModalShow: false}) }
-
-  // launchContactUs = () => { this.setState({contactUsModalShow: true}) }
-  // closeContactUs = () => { this.setState({contactUsModalShow: false}) }
-
   render() {
     return (
       <StaticQuery query={
@@ -47,8 +24,6 @@ export default class DesktopNavigation extends Component {
                   title
                   footerOnly
                   iconClass
-                  # path
-                  # onClick
                   items {
                     itemTitle
                     iconClass
@@ -88,7 +63,7 @@ export default class DesktopNavigation extends Component {
                                 {
                                   edge.node.items.map((item, index) => {
                                     return(
-                                      <React.Fragment key={`item-${index}`}>   
+                                      <React.Fragment key={`item-${index}`}>
                                         {
                                           !item.onClick
                                           ?
@@ -141,7 +116,7 @@ export default class DesktopNavigation extends Component {
                             }
                             { !("items" in edge.node) && !edge.node.footerOnly &&
                               <Link
-                                className={this.props.location.pathname.includes(edge.node.path) ? "nav-link active" : "nav-link"} 
+                                className={this.props.location.pathname.includes(edge.node.path) ? "nav-link active" : "nav-link"}
                                 to={edge.node.path}
                               >
                                 {edge.node.title}
@@ -157,8 +132,6 @@ export default class DesktopNavigation extends Component {
                   </Nav>
                 </Navbar.Collapse>
               </Navbar>
-              {/* <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />
-              <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} /> */}
             </SpinDropdown>
           )
         }}

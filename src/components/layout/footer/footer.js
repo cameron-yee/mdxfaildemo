@@ -6,30 +6,13 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 
-// import JoinModal from '../../atoms/join-email-list/join-modal/join-modal'
 import JoinEmailListFormButton from '../../atoms/forms/join-email-form/join-email-list-form-button/join-email-list-form-button'
-// import ContactUsModal from '../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import GeneralContactFormButton from '../../atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
 
 import './footer.scss'
 
 
 export default class Footer extends Component {
-  //   constructor(props) {
-  //   super(props)
-
-  //   this.state = {
-  //     joinEmailListModalShow: false,
-  //     contactUsModalShow: false
-  //   }
-  // }
-
-  // launchJoinEmail = () => { this.props.launchJoinEmail }
-  // closeJoinEmail = () => { this.props.closeJoinEmail }
-
-  // launchGeneral = () => { this.props.launchGeneral }
-  // closeGeneral = () => { this.props.closeGeneral }
-
   render() {
     const navigation =
       (<StaticQuery query={graphql`
@@ -40,8 +23,6 @@ export default class Footer extends Component {
                 title
                 footerOnly
                 iconClass
-                # path
-                # onClick
                 items {
                   itemTitle
                   iconClass
@@ -127,7 +108,7 @@ export default class Footer extends Component {
         <Container fluid>
           <Row className="d-sm-none justify-content-center">
             <Col xs={12} className="p-2 m-auto text-center">
-              <JoinEmailListFormButton  launch={this.props.launchJoinEmail} />
+              <JoinEmailListFormButton launch={this.props.launchJoinEmail} />
             </Col>
             <Col xs={12} className="p-2 m-auto text-center">
               <div className="d-flex justify-content-center">
@@ -292,8 +273,6 @@ export default class Footer extends Component {
             </Container>
           </Row>
         </Container>
-        {/* <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} /> */}
-        {/* <ContactUsModal show={this.state.contactUsModalShow} onHide={this.closeContactUs} /> */}
       </footer>
     )
   }

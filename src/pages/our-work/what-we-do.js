@@ -175,16 +175,16 @@ export default props => (
 
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
+    image1: file(relativePath: { eq: "index/ipad-screen.jpg" }) {
       ...rowImage
     }
-    image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
+    image2: file(relativePath: { eq: "index/teacher-and-students.jpg" }) {
       ...rowImage
     }
-    image3: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
+    image3: file(relativePath: { eq: "index/young-girl.jpg" }) {
       ...rowImage
     }
-    image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
+    image4: file(relativePath: { eq: "index/young-boy.jpg" }) {
       ...rowImage
     }
   }

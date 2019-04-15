@@ -24,9 +24,7 @@ const DonatePage = class extends Component {
       <React.Fragment>
         <SEO
           title="Donate"
-          canonical="https://bmw-bscs.org/donate"
-          description="PLACEHOLDER DESC"
-          lang="en-us"
+          canonical="https://bscs.org/donate"
         />
         <Layout location={this.props.location}>
           <Container>
