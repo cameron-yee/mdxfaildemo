@@ -1,15 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Chris Wilson
+seoCanonicalUrl: 'https://bscs.org/about/leadership/chris-wilson'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Management
 template: Image Left
 image: /assets/chris_wilson_5x7.jpg
 alt: Chris Wilson headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/chris-wilson
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Senior Research Scientist*
