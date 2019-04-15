@@ -1,15 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Aleigh Raffelson
+seoCanonicalUrl: 'https://bscs.org/about/leadership/aleigh-raffelson'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Management
 template: Image Left
 image: /assets/aleigh_raffelson_5x7.jpg
 alt: Aleigh Raffelson headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/aleigh-raffelson
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Executive Office Manager & Assistant to the Executive Director*
