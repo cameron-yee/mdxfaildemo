@@ -1,7 +1,7 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: 'Stephen Traphagen, Vice Chair'
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/about/leadership/stephen-traphagen-vice-chair'
+seoCanonicalUrl: 'https://bscs.org/about/leadership/stephen-traphagen-vice-chair'
 seoDescription: Test SEO description.
 seoLang: en-us
 type: Board Member
