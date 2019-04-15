@@ -1,15 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Sue Kowalski
+seoCanonicalUrl: 'https://bscs.org/about/leadership/sue-kowalski'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Management
 template: Image Left
 image: /assets/sue_5x7.jpg
 alt: Sue Kowalski headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/sue-kowalski
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Division Director, Research*
