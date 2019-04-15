@@ -1,15 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Rob Smariga
+seoCanonicalUrl: 'https://bscs.org/about/leadership/rob-smariga'
+seoDescription: Test SEO description.
+seoLang: en-us
+type: Management
 template: Image Left
 image: /assets/smariga_5x7.jpg
 alt: Rob Smariga headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/rob-smariga
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Director of Operations and Finance*
