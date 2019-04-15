@@ -2,7 +2,7 @@
 date: 2018-04-16T16:15:23.614Z
 title: $3 Million Federal Grant to Impact Colorado Science Teacher Preparation
 seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation
+  https://bscs.org/admin/#/collections/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation
 seoDescription: >-
   A new $2.8 million program is expected to benefit future secondary science
   teachers and students throughout Colorado. 
