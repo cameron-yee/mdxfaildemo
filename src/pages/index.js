@@ -31,13 +31,6 @@ const IndexPage = (props) => (
       canonical="https://bscs.org/"
     />
     <IndexJumbotron />
-    {/* <Jumbotron className="jumbotron jumbotron-index" style={{ position: 'relative', overflow: 'hidden', background: 'transparent' }}>
-      <div className="jumbotron-inside">
-        <div className="jumbotronContent">
-          <h1 className="jumbotronHeading">BSCS MISSION:<br /> To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
-        </div>
-      </div>
-    </Jumbotron> */}
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col sm={6} lg={3} style={{ marginBottom: '1.5rem' }}>
@@ -203,22 +196,8 @@ export default props => (
   </Location>
 )
 
-// export const cardImage = graphql`
-//   fragment cardImage on File {
-//     childImageSharp {
-//       fluid(maxWidth: 500, quality: 100) {
-//         ...GatsbyImageSharpFluid_noBase64
-//       }
-//     }
-//   }
-// `
-
 export const query = graphql`
   query {
-    jumbotron: file(relativePath: { eq: "index/website_banner_2019_01.jpg" }) {
-      ...cardImage
-    }
-    # image1: file(relativePath: { eq: "index/ipad-screen.jpg" }) {
     image1: file(relativePath: { eq: "index/male-student.jpg" }) {
       ...cardImage
     }
