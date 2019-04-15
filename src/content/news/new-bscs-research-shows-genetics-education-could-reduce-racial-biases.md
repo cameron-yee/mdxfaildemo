@@ -2,7 +2,7 @@
 date: 2019-04-08T19:18:55.330Z
 title: New BSCS Research Shows Genetics Education Could Reduce Racial Biases
 seoCanonicalUrl: >-
-  https://bscs.org/admin/#/collections/news/new-bscs-research-shows-genetics-education-could-reduce-racial-biases
+  https://bscs.org/our-work/news/new-bscs-research-shows-genetics-education-could-reduce-racial-biases
 seoDescription: >-
   Published article in Science Education about BSCS research on genetics
   education and reducing racial biases.
