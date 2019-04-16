@@ -2,7 +2,9 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Aleigh Raffelson
 seoCanonicalUrl: 'https://bscs.org/about/leadership/aleigh-raffelson'
-seoDescription: Test SEO description.
+seoDescription: >-
+  Aleigh Raffelson is Executive Office Manager & Assistant to the Executive
+  Director.
 seoLang: en-us
 type: Management
 template: Image Left
