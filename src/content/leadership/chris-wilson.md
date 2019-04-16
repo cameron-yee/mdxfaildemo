@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Chris Wilson
 seoCanonicalUrl: 'https://bscs.org/about/leadership/chris-wilson'
-seoDescription: Chris Wilson is a Senior Research Scientist.
+seoDescription: Chris Wilson is the Senior Research Scientist.
 seoLang: en-us
 type: Management
 template: Image Left
