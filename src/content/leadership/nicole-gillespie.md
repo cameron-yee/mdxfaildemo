@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nicole Gillespie
 seoCanonicalUrl: 'https://bscs.org/about/leadership/nicole-gillespie'
-seoDescription: Test SEO description.
+seoDescription: Nicole Gillespie serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
