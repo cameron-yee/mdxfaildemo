@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Lauren Novo
 seoCanonicalUrl: 'https://bscs.org/about/leadership/lauren-novo'
-seoDescription: Test SEO description.
+seoDescription: Lauren Novo is the Director of Communications & Advancement.
 seoLang: en-us
 type: Management
 template: Image Left
