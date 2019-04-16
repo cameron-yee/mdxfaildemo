@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Hilda Borko
 seoCanonicalUrl: 'https://bscs.org/about/leadership/hilda-borko'
-seoDescription: Test SEO description.
+seoDescription: Hilda Borko serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Right
