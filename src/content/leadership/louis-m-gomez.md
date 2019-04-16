@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Louis M. Gomez
 seoCanonicalUrl: 'https://bscs.org/about/leadership/louis-m-gomez'
-seoDescription: Test SEO description.
+seoDescription: Louis M. Gomez serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
