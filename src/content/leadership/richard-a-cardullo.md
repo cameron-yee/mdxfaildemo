@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: 'Richard A. Cardullo, Chair'
 seoCanonicalUrl: 'https://bscs.org/about/leadership/richard-a-cardullo-chair'
-seoDescription: Test SEO description.
+seoDescription: Richard A. Cardullo serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
