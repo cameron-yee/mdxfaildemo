@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Sue Kowalski
 seoCanonicalUrl: 'https://bscs.org/about/leadership/sue-kowalski'
-seoDescription: Test SEO description.
+seoDescription: 'Sue Kowalski is the Division Director, Research.'
 seoLang: en-us
 type: Management
 template: Image Left
