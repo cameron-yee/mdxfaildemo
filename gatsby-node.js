@@ -34,12 +34,6 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
   createRedirect({
-    fromPath: 'https://bscsmw.netlify.com/',
-    toPath: 'https://bscs.org/',
-    isPermanent: true
-  })
-
-  createRedirect({
     fromPath: '/fivetools',
     toPath: '/resources/educator-resource-center/five-tools-and-processes-for-translating-the-ngss',
     isPermanent: true
