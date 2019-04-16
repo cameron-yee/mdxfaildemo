@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Lindsey Mohan
 seoCanonicalUrl: 'https://bscs.org/about/leadership/lindsey-mohan'
-seoDescription: Test SEO description.
+seoDescription: 'Lindsey Mohan is the Division Director, Instructional Materials.'
 seoLang: en-us
 type: Management
 template: Image Left
