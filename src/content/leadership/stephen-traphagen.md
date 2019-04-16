@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: 'Stephen Traphagen, Vice Chair'
 seoCanonicalUrl: 'https://bscs.org/about/leadership/stephen-traphagen-vice-chair'
-seoDescription: Test SEO description.
+seoDescription: Stephen Traphagen serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
