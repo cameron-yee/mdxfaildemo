@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Nathan Root
 seoCanonicalUrl: 'https://bscs.org/about/leadership/nathan-root'
-seoDescription: Test SEO description.
+seoDescription: Nathan Root serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
