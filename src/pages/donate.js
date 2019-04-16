@@ -23,7 +23,8 @@ const DonatePage = class extends Component {
     return (
       <React.Fragment>
         <SEO
-          title="Donate"
+          title="Donate to BSCS Science Learning"
+          description="Your contribution to BSCS makes an impact on science education."
           canonical="https://bscs.org/donate"
         />
         <Layout location={this.props.location}>
