@@ -34,45 +34,67 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
 
   createRedirect({
+    fromPath: '/fivetools',
+    toPath: '/resources/educator-resource-center/five-tools-and-processes-for-translating-the-ngss',
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
+  })
+
+  createRedirect({
+    fromPath: '/fivetools/',
+    toPath: '/resources/educator-resource-center/five-tools-and-processes-for-translating-the-ngss',
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
+  })
+
+  createRedirect({
     fromPath: '/humane-genetics',
     toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   createRedirect({
     fromPath: '/humane-genetics/',
     toPath: '/our-work/rd-programs/towards-a-more-humane-genetics-education',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   createRedirect({
     fromPath: '/STeLLA',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   createRedirect({
     fromPath: '/STeLLA/',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   createRedirect({
     fromPath: '/stella',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   createRedirect({
     fromPath: '/stella/',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
-    redirectInBrowser: true,
-    statusCode: 200
+    // redirectInBrowser: true,
+    // statusCode: 200
+    isPermanent: true
   })
 
   const reportsPages = new Promise((resolve, reject) => {
