@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: 'Daniel C. Edelson, Executive Director'
 seoCanonicalUrl: 'https://bscs.org/about/leadership/daniel-c-edelson-executive-director'
-seoDescription: Test SEO description.
+seoDescription: Daniel C. Edelson is the Executive Director.
 seoLang: en-us
 type: Management
 template: Image Left
