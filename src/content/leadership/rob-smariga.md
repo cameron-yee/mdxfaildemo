@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Rob Smariga
 seoCanonicalUrl: 'https://bscs.org/about/leadership/rob-smariga'
-seoDescription: Test SEO description.
+seoDescription: Rob Smariga serves on the Board of Directors.
 seoLang: en-us
 type: Management
 template: Image Left
