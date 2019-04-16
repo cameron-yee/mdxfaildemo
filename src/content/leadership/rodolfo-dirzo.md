@@ -2,7 +2,7 @@
 date: 2019-03-07T22:04:44.297Z
 fullName: Rodolfo Dirzo
 seoCanonicalUrl: 'https://bscs.org/about/leadership/rodolfo-dirzo'
-seoDescription: Test SEO description.
+seoDescription: Rodolfo Dirzo serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Right
