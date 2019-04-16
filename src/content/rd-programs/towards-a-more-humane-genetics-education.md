@@ -32,14 +32,10 @@ Racism is a serious problem in the United States. Research has shown that the bi
 3. Biologically-influenced abilities cannot change.
 
 Individuals often justify racism with these misconceptions by arguing that it is pointless to try and reduce social inequality, because race biologically determines ability<sup>(6)</sup>.
-<br />
-<br />
 
 #### Our Focus
 
 How can such beliefs be (un)learned through biology education?
-<br />
-<br />
 
 #### What We’ve Learned
 
@@ -57,8 +53,6 @@ At present, genetics education does very little to address how information about
 For a deeper dive into our line of research, review our <a href="https://media.bscs.org/human/research_statement.pdf" target="_blank" rel="noopener noreferrer">research statement&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>  and published papers below, or click <a href="https://vimeo.com/315526217">here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> to watch a video of the presentation, Towards a More Humane Genetics Education.
 
 Watch the American Association for the Advancement of Science (AAAS) 2019 briefing, Better Biology Instruction for a More Equitable Society, <a href="https://www.eurekalert.org/aaasnewsroom/2019/webcast/?b=10" target="_blank" rel="noopener noreferrer">here&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
-<br />
-<br />
 
 **Published** -
 
