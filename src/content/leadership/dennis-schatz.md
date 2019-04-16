@@ -2,7 +2,7 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Dennis Schatz
 seoCanonicalUrl: 'https://bscs.org/about/leadership/dennis-schatz'
-seoDescription: Test SEO description.
+seoDescription: Dennis Schatz serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left
