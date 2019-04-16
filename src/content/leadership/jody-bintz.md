@@ -2,7 +2,9 @@
 date: 2018-12-18T23:03:06.180Z
 fullName: Jody Bintz
 seoCanonicalUrl: 'https://bscs.org/about/leadership/jody-bintz'
-seoDescription: Test SEO description.
+seoDescription: >-
+  Jody Bintz is the Associate Director for Strategic Partnerships & Professional
+  Learning.
 seoLang: en-us
 type: Management
 template: Image Left
