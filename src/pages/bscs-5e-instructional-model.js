@@ -26,7 +26,11 @@ const BSCS5eInstructionalModelPage = class extends Component {
   render() {
     return (
         <Layout location={this.props.location} launchGeneral={this.state.launchGeneral} closeGeneral={() => this.setState({launchGeneral: false})}>
-          <SEO title="BSCS 5E Instructional Model" />
+          <SEO
+            title="Learn about BSCS's 5E Instructional Model"
+            description="The BSCS 5E's became the global standard for science curriculum development, and continues to inspire models today."
+            canonical="https://bscs.org/bscs-5e-instructional-model/"
+          />
           <Container>
             <PageTitle title="BSCS 5E Instructional Model" />
             <Row style={{ marginBottom: '2rem' }}>

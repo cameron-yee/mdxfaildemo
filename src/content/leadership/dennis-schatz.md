@@ -1,15 +1,15 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Dennis Schatz
+seoCanonicalUrl: 'https://bscs.org/about/leadership/dennis-schatz'
+seoDescription: Dennis Schatz serves on the Board of Directors.
+seoLang: en-us
+type: Board Member
 template: Image Left
 image: /assets/bod_dennis_s_5x7.jpg
 alt: Dennis Schatz headshot.
 additionalTags: BOD
-type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/dennis-schatz
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Senior Vice President for Strategic Programs*

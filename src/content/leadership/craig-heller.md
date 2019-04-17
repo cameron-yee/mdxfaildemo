@@ -1,8 +1,8 @@
 ---
 date: 2019-03-07T22:02:41.988Z
 fullName: H. Craig Heller
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/about/leadership/craig-heller'
-seoDescription: Test SEO description.
+seoCanonicalUrl: 'https://bscs.org/about/leadership/h-craig-heller'
+seoDescription: H. Craig Heller serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Left

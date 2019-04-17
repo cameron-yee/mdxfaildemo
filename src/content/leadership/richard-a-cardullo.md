@@ -1,16 +1,16 @@
 ---
 date: 2018-12-18T23:03:06.180Z
-fullName: Richard A. Cardullo, Chair
+fullName: 'Richard A. Cardullo, Chair'
+seoCanonicalUrl: 'https://bscs.org/about/leadership/richard-a-cardullo-chair'
+seoDescription: Richard A. Cardullo serves on the Board of Directors.
+seoLang: en-us
+type: Board Member
 template: Image Left
 image: /assets/bod_richard_c_5x7.jpg
 alt: Richard A. Cardullo headshot.
 additionalTags: BOD
-type: Board Member
-page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/richard-a-cardullo-vice-chair
-seoDescription: Test SEO description.
-seoLang: en-us
 sortOrder: 1
+page: leadership
 ---
 
 ### *Howard H Hays Chair, University Honors*

@@ -139,10 +139,10 @@ const WhatWeDoPage = (props) => {
           <Col xs={12} className="d-flex justify-content-center">
             <h3 className="p-2">Our Work in Action</h3>
           </Col>
-          <Col style={{padding: '0.5rem'}}>
+          <Col xs={12} md={6} style={{padding: '0.5rem'}}>
             <Link to="/our-work/rd-programs" style={{width: '100%'}}>
               <Button variant="outline-secondary" style={{width: '100%', minHeight: '6rem', height: '100%'}}>
-                <h3>R&amp;D Programs</h3>
+                <h4>R&amp;D Programs</h4>
                 <p>Sample of Current Projects</p>
               </Button>
             </Link>
@@ -150,7 +150,7 @@ const WhatWeDoPage = (props) => {
           <Col style={{padding: '0.5rem'}}>
             <Link to="/resources/educator-resource-center" style={{width: '100%'}}>
               <Button variant="outline-secondary" style={{width: '100%', minHeight: '6rem', height: '100%'}}>
-                <h3>Educator Resource Center</h3>
+                <h4>Educator Resource Center</h4>
                 <p>Available Programs &amp; Products</p>
               </Button>
             </Link>
@@ -175,16 +175,16 @@ export default props => (
 
 export const query = graphql`
   query {
-    image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
+    image1: file(relativePath: { eq: "index/ipad-screen.jpg" }) {
       ...rowImage
     }
-    image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
+    image2: file(relativePath: { eq: "index/teacher-and-students.jpg" }) {
       ...rowImage
     }
-    image3: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
+    image3: file(relativePath: { eq: "index/young-girl.jpg" }) {
       ...rowImage
     }
-    image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
+    image4: file(relativePath: { eq: "index/young-boy.jpg" }) {
       ...rowImage
     }
   }

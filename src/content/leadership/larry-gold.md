@@ -1,15 +1,15 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Larry Gold
+seoCanonicalUrl: 'https://bscs.org/about/leadership/larry-gold'
+seoDescription: Larry Gold serves on the Board of Directors.
+seoLang: en-us
+type: Board Member
 template: Image Left
 image: /assets/bod_larry_g_5x7_v3.jpg
 alt: Larry Gold headshot.
 additionalTags: BOD
-type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/larry-gold
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Professor, Molecular, Cellular, and Developmental Biology*

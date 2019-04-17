@@ -1,8 +1,8 @@
 ---
 date: 2019-03-07T21:57:56.128Z
 fullName: Philip Bell
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/about/leadership/philip-bell'
-seoDescription: Test SEO description.
+seoCanonicalUrl: 'https://bscs.org/about/leadership/philip-bell'
+seoDescription: Philip Bell serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Right

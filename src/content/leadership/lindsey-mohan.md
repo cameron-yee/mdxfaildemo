@@ -1,16 +1,14 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Lindsey Mohan
+seoCanonicalUrl: 'https://bscs.org/about/leadership/lindsey-mohan'
+seoDescription: 'Lindsey Mohan is the Division Director, Instructional Materials.'
+seoLang: en-us
+type: Management
 template: Image Left
-# image: /assets/koala.jpg
 image: /assets/lmohan_photo.jpg
 alt: Lindsey Mohan headshot.
-additionalTags:
-type: Management
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/lindsey-mohan
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *Research Scientist*

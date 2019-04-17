@@ -1,12 +1,12 @@
 ---
 date: 2019-03-07T22:04:44.297Z
 fullName: Rodolfo Dirzo
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/about/leadership/rodolfo-dirzo'
-seoDescription: Test SEO description.
+seoCanonicalUrl: 'https://bscs.org/about/leadership/rodolfo-dirzo'
+seoDescription: Rodolfo Dirzo serves on the Board of Directors.
 seoLang: en-us
 type: Board Member
 template: Image Right
-image: '/assets/bod_dirzo_low_quality.jpeg'
+image: /assets/bod_dirzo_low_quality.jpeg
 alt: Rodolfo Dirzo headshot
 additionalTags: BOD
 page: leadership

@@ -1,8 +1,7 @@
 ---
 date: 2019-04-09T16:44:38.526Z
 title: BSCS Science Learning Unveils New Website
-seoCanonicalUrl: >-
-  https://bmw-bscs.netlify.com/admin/#/collections/news/bscs-science-learning-unveils-new-website
+seoCanonicalUrl: 'https://bscs.org/our-work/news/bscs-science-learning-unveils-new-website'
 seoDescription: BSCS Science Learning creates and launches a brand new website in April 2019.
 seoLang: en-us
 cardDescription: >-
@@ -16,8 +15,8 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-sidebarContactsAlt: Image of a young male student smiling in class.
 sidebarContactsImage: /assets/male-student-smiling.jpg
+sidebarContactsAlt: Image of a young male student smiling in class.
 sortOrder: 1
 page: news
 ---

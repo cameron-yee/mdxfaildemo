@@ -6,12 +6,14 @@ import { Location } from '@reach/router'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+// import Jumbotron from 'react-bootstrap/Jumbotron'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
+
+import IndexJumbotron from '../components/page-sections/index/indexJumbotron'
 
 import '../global-scss/index.scss'
 
@@ -24,28 +26,11 @@ import rowImage from '../queries/images/row-image'
 
 const IndexPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="Home" />
-    <Jumbotron className="jumbotron jumbotron-index" style={{ position: 'relative', overflow: 'hidden', background: 'transparent' }}>
-      {/* <Img
-        fluid={props.data.jumbotron.childImageSharp.fluid}
-        style={{
-          position: 'absolute',
-          // top: '0px',
-          // left: '0px',
-          // width: '100%',
-          // height: '100%',
-          objectFit: 'cover',
-          objectPosition: 'center center',
-          opacity: '1',
-          transition: 'opacity 0.5s ease 0s'
-        }}
-      /> */}
-      <div className="jumbotron-inside">
-        <div className="jumbotronContent">
-          <h1 className="jumbotronHeading">BSCS MISSION:<br /> To Transform Science Teaching and Learning through Research-Driven Innovation.</h1>
-        </div>
-      </div>
-    </Jumbotron>
+    <SEO
+      title="Home"
+      canonical="https://bscs.org/"
+    />
+    <IndexJumbotron />
     <Container>
       <Row style={{ marginBottom: '2rem' }}>
         <Col sm={6} lg={3} style={{ marginBottom: '1.5rem' }}>
@@ -211,32 +196,18 @@ export default props => (
   </Location>
 )
 
-// export const cardImage = graphql`
-//   fragment cardImage on File {
-//     childImageSharp {
-//       fluid(maxWidth: 500, quality: 100) {
-//         ...GatsbyImageSharpFluid_noBase64
-//       }
-//     }
-//   }
-// `
-
 export const query = graphql`
   query {
-    jumbotron: file(relativePath: { eq: "homepage/website_banner_2019_01.jpg" }) {
+    image1: file(relativePath: { eq: "index/male-student.jpg" }) {
       ...cardImage
     }
-    # image1: file(relativePath: { eq: "homepage/ipad-screen.jpg" }) {
-    image1: file(relativePath: { eq: "homepage/male-student.jpg" }) {
+    image2: file(relativePath: { eq: "index/teacher-and-students.jpg" }) {
       ...cardImage
     }
-    image2: file(relativePath: { eq: "homepage/teacher-and-students.jpg" }) {
+    image3: file(relativePath: { eq: "index/young-girl.jpg" }) {
       ...cardImage
     }
-    image3: file(relativePath: { eq: "homepage/young-girl.jpg" }) {
-      ...cardImage
-    }
-    image4: file(relativePath: { eq: "homepage/young-boy.jpg" }) {
+    image4: file(relativePath: { eq: "index/young-boy.jpg" }) {
       ...cardImage
     }
     image5: file(relativePath: { eq: "astronaut-girl.jpg" }) {

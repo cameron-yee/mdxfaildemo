@@ -1,15 +1,15 @@
 ---
 date: 2018-12-18T23:03:06.180Z
 fullName: Alexandra Fuentes
+seoCanonicalUrl: 'https://bscs.org/about/leadership/alexandra-fuentes/'
+seoDescription: Alexandra Fuentes serves on the Board of Directors.
+seoLang: en-us
+type: Board Member
 template: Image Left
 image: /assets/bod_2018_alex_f.jpg
 alt: Alexandra Fuentes headshot.
 additionalTags: BOD
-type: Board Member
 page: leadership
-seoCanonicalUrl: https://bmw-bscs.netlify.com/about/leadership/alexandra-fuentes
-seoDescription: Test SEO description.
-seoLang: en-us
 ---
 
 ### *STEAM Integration Program Manager*
