@@ -53,8 +53,6 @@ The grant was awarded to BSCS by the National Science Foundation, who also funde
 
 \*STeLLA stands for Science Teachers Learning from Lesson Analysis.
 
-For more information or to schedule an interview, please contact: Lauren Novo
-
 **About BSCS Science Learning**
 
 BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. Over the last 60 years, BSCS has brought the experience of inquiry learning to millions of students and teachers. Today, BSCS conducts research on how to improve science teaching and learning, develops research-based instructional materials, delivers professional learning programs for educators, and conducts leadership development programs for schools and districts.
