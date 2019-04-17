@@ -55,7 +55,6 @@ The report is organized around a framework of 12 valued scientific and education
 
 <!-- <Link className="btn btn-outline-secondary mb-4" target="_blank" to="/resources/reports/designing-citizen-science-for-both-science-and-education-a-workshop-report/">Access Report</Link> -->
 
-For more information, please contact: <SpecificContactForm sendto="Lauren Novo">Lauren Novo</SpecificContactForm>
 
 **About BSCS Science Learning**
 
