@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import './accordion.scss'
 
 const Accordion = class extends Component {
   // constructor(props) {

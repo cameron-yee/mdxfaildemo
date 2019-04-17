@@ -13,8 +13,6 @@ import PageTitle from '../../components/layout/page-title/page-title'
 import SpecificContactForm from '../../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Accordion from '../../components/atoms/accordion/accordion'
 
-import './work-with-us.scss'
-
 
 const WorkWithUsPage = class extends Component {
   componentDidMount() {
