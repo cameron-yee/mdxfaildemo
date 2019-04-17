@@ -41,6 +41,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-placeholder": "^3.0.2",
+    "react-stripe-elements": "^2.0.3",
     "typeface-lora": "0.0.72",
     "typeface-open-sans": "0.0.54"
   },
