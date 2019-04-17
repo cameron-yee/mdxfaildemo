@@ -129,7 +129,14 @@ const SpecificContactFormModal = class extends Component {
     e.preventDefault()
     this.setState({loading: true})
 
-    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "sendto": this.props.sendto}
+    let page
+    try {
+      page = window.location.href
+    } catch(err) {
+      console.log(err)
+    }
+
+    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "sendto": this.props.sendto, "page": page}
 
     if(this.props.infoat) {
       data["infoat"] = this.props.infoat === "true"

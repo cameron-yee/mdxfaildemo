@@ -129,7 +129,14 @@ const GeneralContactFormModal = class extends Component {
     e.preventDefault()
     this.setState({loading: true})
 
-    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message}
+    let page
+    try {
+      page = window.location.href
+    } catch(err) {
+      console.log(err)
+    }
+
+    let data = {"email": this.state.email, "firstname": this.state.firstname, "lastname": this.state.lastname, "phone": this.state.phone, "message": this.state.message, "page": page}
 
     // console.log(data)
     axios({
