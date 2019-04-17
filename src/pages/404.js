@@ -23,7 +23,7 @@ const NotFoundPage = (props) => (
         <Col className="order-2 order-md-1">
           <h2>Oh deer, we had an accident.</h2>
           <p className="lead">The page you were looking for was moved or does not exist.</p>
-          <p className="lead">Lets get you back on track:</p>
+          <p className="lead">Let's get you back on track:</p>
           <Link to="/">
             <Button
               variant="outline-secondary"
