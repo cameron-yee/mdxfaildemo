@@ -37,7 +37,7 @@ At this Institute you will learn how to help teachers plan for instruction and c
 
 <a href="https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss" target="_blank" rel="noopener noreferrer">The Five Tools and Processes&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> is the translation of science concepts, practices, and performance expectations into multiple instructional sequences that form an NGSS unit. This is followed by a more in-depth plan for one instructional sequence and assessment task to provide evidence of student learning focused on performance expectations. These processes help teachers plan for conceptual coherence.
 
-#### Details:
+## Details:
 
 * Dates: April 28 - May 3, 2019
 * Location: <a href="https://www.montereybayaquarium.org/" target="_blank" rel="noopener noreferrer">Monterey Bay Aquarium&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>, 886 Cannery Row, Monterey, CA, 93940
