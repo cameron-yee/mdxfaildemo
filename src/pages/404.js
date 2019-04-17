@@ -39,7 +39,7 @@ const NotFoundPage = (props) => (
         <Col xs={10} md={6} className="order-1 order-md-2">
           <img
             src={fourOhFourImage}
-            className="img-fluid pl-md-4 mb-4 mb-md-0"
+            className="img-fluid rounded pl-md-4 mb-4 mb-md-0"
             alt="Injured deer on crutches hobbling away from the road."
           />
         </Col>
