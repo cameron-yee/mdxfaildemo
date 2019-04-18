@@ -20,15 +20,9 @@ page: news
 A journalist joined one of BSCS’s STeLLA professional learning sessions with high school biology teachers in Louisville, Kentucky. Check out the resulting TV segment:
 
 <div class="row justify-content-center" style="margin-bottom: 3rem; margin-top: 3rem;">
-
   <div class="col-10 col-xl-8">
-
-\    <div class='embed-container'>
-
-\    <iframe class="video-responsive" src="https://player.vimeo.com/video/331304857" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-\    </div>
-
+    <div class='embed-container'>
+      <iframe class="video-responsive" src="https://player.vimeo.com/video/331304857" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
   </div>
-
 </div>
