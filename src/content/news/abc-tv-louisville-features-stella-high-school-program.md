@@ -1,5 +1,5 @@
 ---
-date: 2019-04-18T21:01:56.626Z
+date: 2017-10-13T06:00:00.000Z
 title: ABC-TV Louisville Features STeLLA High School Program
 seoCanonicalUrl: >-
   https://bscs.org/our-work/news/abc-tv-louisville-features-stella-high-school-program
@@ -7,14 +7,15 @@ seoDescription: >-
   Local TV segment covers BSCS’s STeLLA professional learning program with high
   school teachers in Louisville, Kentucky.
 seoLang: en-us
+cardDescription: >-
+  Local TV segment covers BSCS’s STeLLA professional learning program with
+  educators in Jefferson County Public Schools, Kentucky.
 sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
-sidebarContactsText: >-
-  Local TV segment covers BSCS’s STeLLA professional learning program with
-  educators in Jefferson County Public Schools, Kentucky.
+sidebarContactsText: Questions?
 page: news
 ---
 A journalist joined one of BSCS’s STeLLA professional learning sessions with high school biology teachers in Louisville, Kentucky. Check out the resulting TV segment:
