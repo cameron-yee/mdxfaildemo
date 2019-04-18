@@ -12,7 +12,7 @@ import Row from 'react-bootstrap/Row'
 import '../../global-scss/index.scss'
 
 import { Elements, StripeProvider } from 'react-stripe-elements'
-import CardPaymentForm from '../../components/atoms/forms/card-payment-form/card-payment-form'
+import AddNewCreditCardForm from '../../components/atoms/forms/add-new-credit-card/add-new-credit-card-form'
 
 const PaymentPage = class extends Component {
   constructor(props) {
@@ -55,10 +55,10 @@ const PaymentPage = class extends Component {
             <Container>
               <PageTitle title="Payment" />
               <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
-                <Col md={4} className="p-2">
+                <Col md={6} className="p-2">
                   <StripeProvider stripe={this.state.stripe}>
                     <Elements>
-                      <CardPaymentForm />
+                      <AddNewCreditCardForm />
                     </Elements>
                   </StripeProvider>
                 </Col>
