@@ -16,6 +16,7 @@ sidebarContacts:
       infoat: false
       person: Lauren Novo
 sidebarContactsText: Questions?
+sortOrder: 8
 page: news
 ---
 A journalist joined one of BSCS’s STeLLA professional learning sessions with high school biology teachers in Louisville, Kentucky. Check out the resulting TV segment:
