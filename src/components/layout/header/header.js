@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -17,6 +17,7 @@ import './header.scss'
 import bscsLogo from '../../../images/bscs_logo.svg'
 
 import '../../../global-scss/index.scss'
+import SigninFormLaunchModal from '../../atoms/forms/signin-form/signin-form-launch-modal';
 
 
 export default class Header extends Component {
@@ -50,10 +51,12 @@ export default class Header extends Component {
             </div>
             {/* <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
-            </div>
-            <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
             </div> */}
+            <div className="p-2 align-self-center d-none d-sm-inline-block">
+              <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
+                <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+              </SigninFormLaunchModal>
+            </div>
           </div>
         </Container>
         <Container fluid>

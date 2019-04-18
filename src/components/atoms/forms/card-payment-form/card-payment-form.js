@@ -78,7 +78,9 @@ const CardPaymentForm = class extends Component {
               }
             }}
           />
-          <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay Now</Button>
+          <div className="d-flex justify-content-center">
+            <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay Now</Button>
+          </div>
         </div>
       )
     }

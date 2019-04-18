@@ -7,10 +7,10 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
-// import Modal from 'react-bootstrap/Modal'
+import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
 
-const LoginForm = class extends Component {
+const SigninForm = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -117,18 +117,6 @@ const LoginForm = class extends Component {
 
   render() {
     return (
-      // <Modal
-      //   {...this.props}
-      //   size="lg"
-      //   aria-labelledby="login-form"
-      //   centered
-      // >
-      // <Modal.Header closeButton>
-      //   <Modal.Title id="login-form">
-      //     Login Form
-      //   </Modal.Title>
-      // </Modal.Header>
-      // <Modal.Body>
       <React.Fragment>
         <Form>
           <Row>
@@ -169,13 +157,11 @@ const LoginForm = class extends Component {
             </Col>
           </Row>
         </Form>
-      {/* </Modal.Body>
-      <Modal.Footer> */}
         <Container>
           <Row>
             <Col xs={12}>
               <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-                Logged in!
+                Signed in!
               </Alert>
               <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
                 Unable to login.
@@ -189,7 +175,7 @@ const LoginForm = class extends Component {
                   && (!this.state.email
                   || !this.state.password)
                   &&
-                  <Button variant="outline-primary" disabled>Login</Button>
+                  <Button variant="outline-primary" disabled>Signed In</Button>
                 }
                 { !this.state.errors && !this.state.loading && !this.state.sent
                   && this.state.email
@@ -200,11 +186,11 @@ const LoginForm = class extends Component {
                 { !this.state.errors && this.state.loading &&
                   <Button variant="outline-success" disabled>
                     <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                    Logging in...
+                    Signing in...
                   </Button>
                 }
                 { !this.state.errors && !this.state.loading && this.state.sent &&
-                  <Button variant="outline-success" disabled>Logged In</Button>
+                  <Button variant="outline-success" disabled>Signed In</Button>
                 }
                 { this.state.errors &&
                   <Button variant="outline-danger" disabled>Error</Button>
@@ -218,4 +204,4 @@ const LoginForm = class extends Component {
   }
 }
 
-export default LoginForm
+export default SigninForm

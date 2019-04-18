@@ -9,9 +9,10 @@ import Layout from '../../components/layout/layout'
 import PageTitle from '../../components/layout/page-title/page-title'
 import Row from 'react-bootstrap/Row'
 
-import LoginForm from '../../components/atoms/forms/login-form/login-form'
+// import LoginForm from '../../components/atoms/forms/login-form/login-form'
 
 import '../../global-scss/index.scss'
+import LoginFormLaunchModal from '../../components/atoms/forms/signin-form/signin-form-launch-modal';
 
 const PaymentPage = class extends Component {
   render() {
@@ -27,7 +28,9 @@ const PaymentPage = class extends Component {
             <PageTitle title="Payment" />
             <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
               <Col className="p-2">
-                <LoginForm />
+                <LoginFormLaunchModal>
+                  <Button variant="outline-secondary">Login</Button>
+                </LoginFormLaunchModal>
               </Col>
             </Row>
           </Container>

@@ -6,6 +6,7 @@ import Header from './header/header'
 import Footer from './footer/footer'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
+import SigninFormModal from '../atoms/forms/signin-form/signin-form-modal'
 
 import 'typeface-open-sans'
 import 'typeface-lora'
@@ -17,7 +18,8 @@ const Layout = class extends Component {
     super(props)
     this.state = {
       modalShowGeneral: false,
-      modalShowJoinEmail: false
+      modalShowJoinEmail: false,
+      modalShowSignin: false
     }
   }
 
@@ -37,6 +39,14 @@ const Layout = class extends Component {
     }
   }
 
+  launchSignin = () => { this.setState({modalShowSignin: true}) }
+  closeSignin = () => {
+    this.setState({modalShowSignin: false})
+    if(this.props.closeSignin) {
+      this.props.closeSignin()
+    }
+  }
+
   componentDidUpdate(prevProps) {
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
       this.setState({modalShowGeneral: true})
@@ -44,6 +54,10 @@ const Layout = class extends Component {
 
     if(this.props.launchJoinEmail && prevProps.launchJoinEmail !== this.props.launchJoinEmail) {
       this.setState({modalShowJoinEmail: true})
+    }
+
+    if(this.props.launchSignin && prevProps.launchSignin !== this.props.launchSignin) {
+      this.setState({modalShowSignin: true})
     }
   }
 
@@ -66,6 +80,7 @@ const Layout = class extends Component {
             <Header
               launchGeneral={this.launchGeneral}
               launchJoinEmail={this.launchJoinEmail}
+              launchSignin={this.launchSignin}
               location={this.props.location}
             />
             {this.props.children}
@@ -81,6 +96,10 @@ const Layout = class extends Component {
             <JoinEmailFormModal
               show={this.state.modalShowJoinEmail}
               onHide={this.closeJoinEmail}
+            />
+            <SigninFormModal
+              show={this.state.modalShowSignin}
+              onHide={this.closeSignin}
             />
           </React.Fragment>
         )}
