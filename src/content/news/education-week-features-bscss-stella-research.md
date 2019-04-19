@@ -1,7 +1,7 @@
 ---
 date: 2018-08-16T06:00:00.000Z
 title: 'Education Week Features BSCS''s STeLLA Research '
-seoCanonicalUrl: 'https://bscs.org/admin/#/collections/news/new'
+seoCanonicalUrl: 'https://bscs.org/our-work/news/education-week-features-bscss-stella-research'
 seoDescription: >-
   Education Week covers BSCS's research on STeLLA teacher professional learning
   program 
