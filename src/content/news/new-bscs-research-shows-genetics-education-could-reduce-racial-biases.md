@@ -40,3 +40,5 @@ In previous RCTs, Donovan has found that when students learn about the prevalenc
 “My research shows that teaching about human genetic difference is not a socially neutral endeavor,” said Donovan. “There is a possibility that genetics education can increase or decrease racial biases. Hopefully these findings can help teachers navigate topics surrounding race and genetics in the classroom. These findings can help educators learn how to teach about genetic differences without increasing bias.”
 
 Learn more about the Humane Genetics [line of research](https://bscs.org/our-work/rd-programs/towards-a-more-humane-genetics-education/).
+
+- - -
