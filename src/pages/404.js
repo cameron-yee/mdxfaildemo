@@ -20,10 +20,10 @@ const NotFoundPage = (props) => (
     <Container>
       <PageTitle title="Page Not Found" />
       <Row className="justify-content-center justify-content-md-end" style={{ marginBottom: '4rem' }}>
-        <Col className="order-2 order-md-1">
+        <Col className="order-2 order-md-1 pr-md-4">
           <h2>Oh deer, we had an accident.</h2>
           <p className="lead">The page you were looking for was moved or does not exist.</p>
-          <p className="lead">Lets get you back on track:</p>
+          <p className="lead">Let's get you back on track:</p>
           <Link to="/">
             <Button
               variant="outline-secondary"
@@ -36,10 +36,10 @@ const NotFoundPage = (props) => (
             </Button>
           </Link>
         </Col>
-        <Col xs={10} md={6} className="order-1 order-md-2">
+        <Col xs={10} md={6} lg={5} className="order-1 order-md-2">
           <img
             src={fourOhFourImage}
-            className="img-fluid pl-md-4 mb-4 mb-md-0"
+            className="img-fluid rounded mb-4 mb-md-0"
             alt="Injured deer on crutches hobbling away from the road."
           />
         </Col>

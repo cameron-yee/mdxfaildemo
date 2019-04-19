@@ -21,7 +21,7 @@ sidebarContactsTitle: Questions?
 sortOrder: 5
 page: news
 ---
-#### BSCS Science Learning to Partner with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley
+## BSCS Science Learning to Partner with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley
 
 **FOR IMMEDIATE RELEASE** – **April 16, 2018** – A new $2.8 million program is expected to benefit future secondary science teachers and students throughout Colorado. The federal grant was awarded to BSCS Science Learning—an independent nonprofit dedicated to transforming science education through research-driven innovation—and will fund a five-year STeLLA CO2 project, starting this month in partnership with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley.
 
@@ -52,8 +52,6 @@ The grant was awarded to BSCS by the National Science Foundation, who also funde
 “As a Colorado-based nonprofit organization, BSCS is passionate about extending the impact of our STeLLA program and research in our own backyard,” said Edelson. “It is rewarding to see three major universities come together for the benefit of our state’s future science educators.”
 
 \*STeLLA stands for Science Teachers Learning from Lesson Analysis.
-
-For more information or to schedule an interview, please contact: Lauren Novo
 
 **About BSCS Science Learning**
 
