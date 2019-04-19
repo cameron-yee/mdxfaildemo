@@ -21,8 +21,8 @@ sidebarContacts:
       infoat: true
       person: 'Lauren Novo '
       text: ''
-sidebarContactsText: 'Questions? '
-sidebarContactsTitle: 'For more information, please contact Lauren Novo.'
+sidebarContactsText: 'For more information, please contact Lauren Novo.'
+sidebarContactsTitle: Questions?
 sortOrder: 5
 page: news
 ---
