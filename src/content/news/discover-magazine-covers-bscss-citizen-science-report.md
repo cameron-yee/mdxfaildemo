@@ -45,3 +45,5 @@ Along with publishing this report for broader use, BSCS plans to use information
 As the Designing Citizen Science report and database evolve, BSCS plans to evolve FieldScope to fit the design needs of project organizers.With sponsorship from the Pisces Foundation, BSCS created this report for current and future citizen science project leaders. Now they need your input, reactions, and ideas to apply these design strategies to fit a wider variety of projects and benefit georeferenced field studies. As BSCS and its collaborators develop more tools, be on the lookout for further ways to add to this repository of information!
 
 Read this article on Discover Magazine's "Citizen Science Salon" blog.
+
+- - -
