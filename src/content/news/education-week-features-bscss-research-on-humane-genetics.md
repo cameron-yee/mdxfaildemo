@@ -1,7 +1,7 @@
 ---
 date: 2019-03-27T06:00:00.000Z
 title: 'Education Week Features BSCS''s Research on Humane Genetics '
-seoCanonicalUrl: 'https://bmw-bscs.netlify.com/admin/#/collections/news/new'
+seoCanonicalUrl: 'https://bscs.org/our-work/news/education-week-features-bscss-stella-research'
 seoDescription: >-
   Education Week covers BSCS's research on how genetics education impacts the
   development of racial biases.
