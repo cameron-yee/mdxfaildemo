@@ -1,7 +1,8 @@
 ---
 date: 2018-10-07T16:35:20.250Z
 title: Discover Magazine Covers BSCS's Citizen Science Report
-seoCanonicalUrl: 'https://bscs.org/admin/#/collections/news/new'
+seoCanonicalUrl: >-
+  https://bscs.org/our-work/news/discover-magazine-covers-bscss-citizen-science-report
 seoDescription: 'BSCS''s citizen science report is featured on Discover Magazine blog. '
 seoLang: en-us
 cardDescription: >-
