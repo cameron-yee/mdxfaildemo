@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 
-import {CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe} from 'react-stripe-elements'
+import { CardElement, CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements'
 
 import axios from 'axios'
 
@@ -273,9 +273,10 @@ const AddNewCreditCardForm = class extends Component {
             </Row>
           </Form>
           <Row>
-            <Col md={6}><CardNumberElement style={this.style} className="border" /></Col>
+            <Col><CardElement /></Col>
+            {/* <Col md={6}><CardNumberElement style={this.style} className="border" /></Col>
             <Col md={3}><CardExpiryElement className="border" /></Col>
-            <Col md={3}><CardCVCElement className="border" /></Col>
+            <Col md={3}><CardCVCElement className="border" /></Col> */}
           </Row>
 
           <div className="d-flex justify-content-center">

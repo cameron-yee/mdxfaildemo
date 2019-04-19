@@ -19,7 +19,8 @@ const Layout = class extends Component {
     this.state = {
       modalShowGeneral: false,
       modalShowJoinEmail: false,
-      modalShowSignin: false
+      modalShowSignin: false,
+      signedIn: false
     }
   }
 
@@ -45,6 +46,10 @@ const Layout = class extends Component {
     if(this.props.closeSignin) {
       this.props.closeSignin()
     }
+  }
+
+  setSignedIn = () => {
+    this.setState({signedIn: true})
   }
 
   componentDidUpdate(prevProps) {
@@ -82,6 +87,7 @@ const Layout = class extends Component {
               launchJoinEmail={this.launchJoinEmail}
               launchSignin={this.launchSignin}
               location={this.props.location}
+              signedin={this.state.signedIn}
             />
             {this.props.children}
             <Footer
@@ -100,6 +106,7 @@ const Layout = class extends Component {
             <SigninFormModal
               show={this.state.modalShowSignin}
               onHide={this.closeSignin}
+              setsignedin={this.setSignedIn}
             />
           </React.Fragment>
         )}

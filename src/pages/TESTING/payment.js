@@ -14,15 +14,39 @@ import '../../global-scss/index.scss'
 import { Elements, StripeProvider } from 'react-stripe-elements'
 import AddNewCreditCardForm from '../../components/atoms/forms/add-new-credit-card/add-new-credit-card-form'
 
+import checkIfUserSignedIn from '../../utils/check-if-user-signed-in'
+import signout from '../../queries/bscsapi/signout'
+import axios from 'axios'
+
 const PaymentPage = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
       stripe: null
     }
+
+    this.cancelToken = axios.CancelToken.source()
   }
 
   componentDidMount() {
+    this.setStripeScript()
+    checkIfUserSignedIn(this.cancelToken)
+  }
+
+  componentWillUnmount() {
+    try {
+      this.cancelToken.cancel()
+    } catch(error) {
+      console.log(error);
+    }
+  }
+
+  logout = (e) => {
+    e.preventDefault()
+    signout(this.cancelToken)
+  }
+
+  setStripeScript = () => {
     try {
       const stripeJs = document.createElement('script');
       stripeJs.async = true;
@@ -41,33 +65,33 @@ const PaymentPage = class extends Component {
   }
 
   render() {
-    if(!this.state.stripe) {
-      return (<p>Loading</p>)
-    } else {
-      return (
-        <React.Fragment>
-          <SEO
-            title="Payment"
-            description=""
-            canonical="https://bscs.org/payment"
-          />
-          <Layout location={this.props.location}>
-            <Container>
-              <PageTitle title="Payment" />
-              <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
-                <Col md={6} className="p-2">
+    return (
+      <React.Fragment>
+        <SEO
+          title="Payment"
+          description=""
+          canonical="https://bscs.org/payment"
+        />
+        <Layout location={this.props.location}>
+          <Container>
+            <PageTitle title="Payment" />
+            <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
+              <Col md={6} className="p-2">
+                {!this.state.stripe && <p>Loading</p>}
+                { this.state.stripe &&
                   <StripeProvider stripe={this.state.stripe}>
                     <Elements>
                       <AddNewCreditCardForm />
                     </Elements>
                   </StripeProvider>
-                </Col>
-              </Row>
-            </Container>
-          </Layout>
-        </React.Fragment>
-      )
-    }
+                }
+              </Col>
+            </Row>
+            <Button onClick={this.logout}>Sign out</Button>
+          </Container>
+        </Layout>
+      </React.Fragment>
+    )
   }
 }
 

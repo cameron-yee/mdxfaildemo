@@ -65,7 +65,7 @@ const SigninFormModal = class extends Component {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <SigninForm />
+          <SigninForm setsignedin={this.props.setsignedin} />
         </Modal.Body>
         {/* <Modal.Footer>
         </Modal.Footer> */}

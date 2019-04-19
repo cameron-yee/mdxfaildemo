@@ -85,6 +85,7 @@ const SigninForm = class extends Component {
       url: 'http://127.0.0.1:4000',
       method: 'post',
       cancelToken: this.cancelToken.token,
+      withCredentials: true,
       data: {
         query: `
           mutation {
@@ -100,8 +101,9 @@ const SigninForm = class extends Component {
     })
     .then(response => {
       console.log(response);
-      if(response.status === 200) {
+      if(response.status === 200 && !response.data.errors) {
           this.setState({notificationShow: true, loading: false, sent: true});
+          this.props.setsignedin()
       }
     })
     .catch(error => {

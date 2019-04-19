@@ -19,6 +19,8 @@ import bscsLogo from '../../../images/bscs_logo.svg'
 import '../../../global-scss/index.scss'
 import SigninFormLaunchModal from '../../atoms/forms/signin-form/signin-form-launch-modal';
 
+import SignOut from '../../atoms/sign-out/sign-out'
+
 
 export default class Header extends Component {
     constructor(props) {
@@ -53,9 +55,16 @@ export default class Header extends Component {
               <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
             </div> */}
             <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
-                <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
-              </SigninFormLaunchModal>
+              {!this.props.signedin &&
+                <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
+                  <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                </SigninFormLaunchModal>
+              }
+              {this.props.signedin &&
+                <SignOut>
+                  <Button variant="outline-primary btn-sm" className="slide">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                </SignOut>
+              }
             </div>
           </div>
         </Container>
