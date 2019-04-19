@@ -27,8 +27,6 @@ sidebarContactsTitle: Questions?
 sortOrder: 2
 page: news
 ---
-**Dr. Brian Donovan’s latest findings published in Science Education** 
-
 A robust line of research at BSCS Science Learning shows that genetics education can affect the development of racial biases among adolescents, for better or worse. Most recently, BSCS Research Scientist Dr. Brian Donovan has found that learning accurate information about human genetic variation within and between US census races can reduce racial biases in adolescent and adult populations. 
 
 These findings are now published in Science Education.
