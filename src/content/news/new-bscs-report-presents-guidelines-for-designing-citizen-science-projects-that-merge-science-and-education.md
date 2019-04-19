@@ -65,3 +65,5 @@ BSCS is transforming the way organizations and community members engage in citiz
 **About The Pisces Foundation**
 
 The Pisces Foundation believes if we act now and boldly, we can quickly accelerate to a world where people and nature thrive together. Pisces mainstreams powerful new solutions to support innovators who know what it takes and are doing what’s necessary to have clean and abundant water, a safe climate, and kids with the environmental know-how to create a sustainable world. To learn more about Pisces’ work and collaborations visit <a href="https://piscesfoundation.org/" target="_blank" rel="noopener noreferrer">piscesfoundation.org&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>.
+
+- - -
