@@ -1,6 +1,6 @@
 ---
 date: 2019-03-08T21:58:54.877Z
-title: Professional Development Provider Institute 2
+title: 'Professional Development Provider Institute '
 type: Leadership Development
 seoCanonicalUrl: >-
   https://bscs.org/upcoming-programs/leadership-development/professional-development-provider-institute
