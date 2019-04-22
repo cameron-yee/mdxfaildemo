@@ -4,7 +4,7 @@ title: 'Education Week Features BSCS''s STeLLA Research '
 seoCanonicalUrl: 'https://bscs.org/our-work/news/education-week-features-bscss-stella-research'
 seoDescription: >-
   Education Week covers BSCS's research on STeLLA teacher professional learning
-  program 
+  program
 seoLang: en-us
 cardDescription: >-
   EdWeek explores BSCS's line of research on its STeLLA teacher professional
@@ -23,6 +23,7 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Coverage'
 sortOrder: 5
 page: news
 ---

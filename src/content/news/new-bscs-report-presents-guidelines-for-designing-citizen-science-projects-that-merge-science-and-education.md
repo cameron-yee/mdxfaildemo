@@ -26,6 +26,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Announcement'
 additionalTags: ''
 sortOrder: 4
 page: news

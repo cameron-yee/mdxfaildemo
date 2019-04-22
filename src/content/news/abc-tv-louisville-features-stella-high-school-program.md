@@ -16,6 +16,7 @@ sidebarContacts:
       infoat: false
       person: Lauren Novo
 sidebarContactsText: Questions?
+announcementOrCoverage: 'Coverage'
 sortOrder: 8
 page: news
 ---

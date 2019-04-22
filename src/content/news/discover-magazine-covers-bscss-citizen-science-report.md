@@ -8,7 +8,7 @@ seoLang: en-us
 cardDescription: >-
   SciStarter reporter features BSCS's "Designing Citizen Science for both
   Science and Education" Report on Discover Magazine's "Citizen Science Salon"
-  blog. 
+  blog.
 sidebarURLs:
   - resource:
       buttonText: 'Read Full Article '
@@ -21,6 +21,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Coverage'
 sortOrder: 5
 page: news
 ---

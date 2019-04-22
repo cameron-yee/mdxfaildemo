@@ -5,7 +5,7 @@ seoCanonicalUrl: >-
   https://bscs.org/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation
 seoDescription: >-
   A new $2.8 million program is expected to benefit future secondary science
-  teachers and students throughout Colorado. 
+  teachers and students throughout Colorado.
 seoLang: en-us
 cardDescription: >-
   A federal grant was awarded to BSCS Science Learning and will fund a five-year
@@ -18,6 +18,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Announcement'
 sortOrder: 5
 page: news
 ---

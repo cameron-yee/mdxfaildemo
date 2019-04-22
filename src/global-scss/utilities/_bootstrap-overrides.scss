@@ -4,7 +4,9 @@ $enable-responsive-font-sizes: true;
 
 $primary: rgb(41, 52, 118);
 $secondary: rgb(48, 135, 180);
-$purple: rgba(41, 52, 118, .9); 
+$purple: rgba(41, 52, 118, .9);
+$yellow:  #FAED26;
+// $yellow:  #ffff00;
 // $success: rgb(134,184,114);
 // $info: ;
 // $warning: rgb(222,147,124);
@@ -132,11 +134,11 @@ ol {
 
 // $blue:    #007bff !default;
 // $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+// $purple:  #6f42c1 !default;
 // $pink:    #e83e8c !default;
 // $red:     #dc3545 !default;
 // $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
+// $yellow:  rgb(255, 255, 0) !default;
 // $green:   #28a745 !default;
 // $teal:    #20c997 !default;
 // $cyan:    #17a2b8 !default;
