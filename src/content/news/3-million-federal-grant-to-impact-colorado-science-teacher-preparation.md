@@ -5,7 +5,7 @@ seoCanonicalUrl: >-
   https://bscs.org/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation
 seoDescription: >-
   A new $2.8 million program is expected to benefit future secondary science
-  teachers and students throughout Colorado. 
+  teachers and students throughout Colorado.
 seoLang: en-us
 cardDescription: >-
   A federal grant was awarded to BSCS Science Learning and will fund a five-year
@@ -18,6 +18,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Announcement'
 sortOrder: 5
 page: news
 ---
@@ -56,3 +57,5 @@ The grant was awarded to BSCS by the National Science Foundation, who also funde
 **About BSCS Science Learning**
 
 BSCS Science Learning is an independent nonprofit dedicated to transforming science education through research-driven innovation. Over the last 60 years, BSCS has brought the experience of inquiry learning to millions of students and teachers. Today, BSCS conducts research on how to improve science teaching and learning, develops research-based instructional materials, delivers professional learning programs for educators, and conducts leadership development programs for schools and districts.
+
+- - -

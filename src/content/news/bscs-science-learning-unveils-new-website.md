@@ -17,6 +17,7 @@ sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 sidebarContactsImage: /assets/male-student-smiling.jpg
 sidebarContactsAlt: Image of a young male student smiling in class.
+announcementOrCoverage: 'Announcement'
 sortOrder: 1
 page: news
 ---

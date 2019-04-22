@@ -9,7 +9,6 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
-// import CardColumns from 'react-bootstrap/CardColumns'
 import Row from 'react-bootstrap/Row'
 
 import PageTitle from '../../components/layout/page-title/page-title'
@@ -20,52 +19,15 @@ import FilterByRow from '../../components/molecules/filter-by/filter-by-row/filt
 import '../../global-scss/index.scss'
 import './rd-programs.scss'
 
-// import ReactPlaceholder from 'react-placeholder'
-// import 'react-placeholder/lib/reactPlaceholder.css'
-
-
 const RDPrograms = class extends Component {
   constructor(props) {
     super(props)
     this.programs = props.data.allMdx.edges
-    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]}
+    this.filter_items = {areas_of_work: ["Areas of Work", true, ["Instructional Materials Development", "Teacher Professional Learning","Leadership Development", "Research"]]} //{object_name: [category_name, multiple, list_of_filters]}
     this.state = {
-      // filter_hash: undefined,
       activeFilters: [],
-      // imagesLoaded: false
     }
-    // this.images_loaded = 0
   }
-
-  // componentDidMount() {
-  //   const rd_images = document.getElementsByClassName('rd-image')
-
-  //   for(let i = 0; i < rd_images.length; i++) {
-  //     if(rd_images[i].complete && this.images_loaded !== rd_images.length) {
-  //       this.loaded()
-  //     }
-  //   }
-
-  //   setTimeout(() => {
-  //     if(this.state.imagesLoaded !== true) {
-  //       this.setState({imagesLoaded: true})
-  //     }
-  //   },
-  //   3000)
-  // }
-
-  // loaded = () => {
-  //   const rd_images = document.getElementsByClassName('rd-image')
-  //   if(this.images_loaded < rd_images.length) {
-  //     this.images_loaded = this.images_loaded + 1
-  //   } else {
-  //     return
-  //   }
-
-  //   if(this.images_loaded === rd_images.length && this.state.imagesLoaded !== true) {
-  //     this.setState({imagesLoaded: true})
-  //   }
-  // }
 
   render() {
     return (
@@ -79,11 +41,7 @@ const RDPrograms = class extends Component {
           <section className="section">
             <Container>
               <PageTitle title="R&amp;D Programs"></PageTitle>
-              {/* <Row>
-                <ResourceCategories navigate={false} />
-              </Row> */}
-              {/* <hr /> */}
-              <p>Browse BSCS Science Learning's robust R&D Programs and active projects below.</p>
+              <p>Browse BSCS Science Learning's robust R&amp;D Programs and active projects below.</p>
             </Container>
           </section>
           <section className="section" style={{ padding: '.75rem 1.5rem' }}>
@@ -108,7 +66,6 @@ const RDPrograms = class extends Component {
               <hr />
             </Container>
           </section>
-          {/* <section className="section d-md-none" style={{ marginBottom: '4rem' }}> */}
           <section className="section" style={{ marginBottom: '4rem' }}>
             <Container>
               <Row style={{ marginBottom: '2rem', marginTop: '2rem' }}>
@@ -140,28 +97,8 @@ const RDPrograms = class extends Component {
                               borderColor: 'rgb(41, 52, 118)'
                             }}
                           >
-                            {/* <div className="d-flex flex-row justify-content-center">
-                              <div className="dot d-inline-flex mr-2"></div>
-                              <div className="dot d-inline-flex mr-2"></div>
-                              <div className="dot d-inline-flex"></div>
-                            </div> */}
-                            {/* <Card.Img
-                              variant="top"
-                              // className="p-0"
-                              src={edge.node.frontmatter.image}
-                              alt={edge.node.frontmatter.alt}
-                              // onLoad={this.loaded}
-                              style={{ padding: '1rem 7rem 0', width: '30%' }}
-                              className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2 p-0"
-                            /> */}
                             <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
                               <div className="d-flex align-items-center">
-                                {/* <img
-                                  className="p-0 mr-3"
-                                  src={edge.node.frontmatter.image}
-                                  alt={edge.node.frontmatter.alt}
-                                  style={{ padding: '1rem 7rem 0', width: '40px' }}
-                                /> */}
                                 <Card.Title>
                                   <h3 className="rd-h3">{edge.node.frontmatter.title}</h3>
                                 </Card.Title>
@@ -188,7 +125,6 @@ const RDPrograms = class extends Component {
                                           >
                                             {area}
                                           </span>
-                                          {/* <br /> */}
                                         </React.Fragment>
                                       )
                                     })
@@ -223,7 +159,7 @@ const RDPrograms = class extends Component {
                         </Col>
                       )
                     } else {
-                      return <></>
+                      return <React.Fragment></React.Fragment>
                     }
                   })
                 }
@@ -246,25 +182,6 @@ const RDPrograms = class extends Component {
                             xs={12}
                             id="parent"
                           >
-                            {/* <Card
-                              id={`resource-${index}`}
-                              data-filter={JSON.stringify(data_filter)}
-                              data-type={edge.node.frontmatter.type}
-                              className="h-100"
-                              style={{
-                                borderColor: 'rgb(41, 52, 118)'
-                              }}
-                            > */}
-                              {/* {index === 4 &&
-                                <React.Fragment>
-                                  <br />
-                                  <br />
-                                </React.Fragment>
-                              }
-                              {index !== 4 &&
-                                <hr />
-                              } */}
-                              {/* <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0"> */}
                                 <div
                                   id={`resource-${index}`}
                                   data-filter={JSON.stringify(data_filter)}
@@ -292,13 +209,11 @@ const RDPrograms = class extends Component {
                                             >
                                               {area}
                                             </span>
-                                            {/* <br /> */}
                                           </React.Fragment>
                                         )
                                       })
                                     }
                                   </div>
-                                  {/* <p>{edge.node.frontmatter.cardDescription}</p> */}
                                   <p className="mb-lg-0">{!edge.node.frontmatter.cardDescription && edge.node.excerpt}</p>
                                   <div className="d-flex">
                                     <div className="p-2 ml-auto button-wrapper">
@@ -311,14 +226,12 @@ const RDPrograms = class extends Component {
                                   </div>
                                 </div>
                                 <hr style={{ marginBottom: '3rem' }} />
-                              {/* </Card.Body>
-                            </Card> */}
                           </Col>
                         </React.Fragment>
                       )
                     } else {
                       return (
-                        <></>
+                        <React.Fragment></React.Fragment>
                       )
                     }
                   })
@@ -326,107 +239,6 @@ const RDPrograms = class extends Component {
               </Row>
             </Container>
           </section>
-          {/* <section className="section d-none d-md-block" style={{ marginBottom: '4rem' }}>
-            <Container>
-              <Row>
-                <CardColumns>
-                  {
-                    this.programs.map((edge, index) => {
-                      let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
-                      data_filter['excerpt'] = edge.node.excerpt
-                      return(
-                        <div key={`desktop-${edge.node.id}`}>
-                          <Card
-                            id={`mobile-resource-${index}`}
-                            data-filter={JSON.stringify(data_filter)}
-                            data-type={edge.node.frontmatter.type}
-                            style={{
-                              borderColor: 'rgb(41, 52, 118)',
-                              marginBottom: '1.25rem'
-                            }}
-                          >
-                            <Card.Img
-                              variant="top"
-                              src={edge.node.frontmatter.image}
-                              alt={edge.node.frontmatter.alt}
-                              // onLoad={this.loaded}
-                              style={{ padding: '1rem 4.5rem 0' }}
-                              className="mb-3 mb-sm-3 mb-md-2 mb-lg-0 mb-xl-3 mt-lg-2"
-                            />
-                            <div className="d-flex flex-row justify-content-center">
-                              <div className="dot d-inline-flex mr-2"></div>
-                              <div className="dot d-inline-flex mr-2"></div>
-                              <div className="dot d-inline-flex"></div>
-                            </div>
-                            <Card.Body className="mt-3 mt-md-3 mt-lg-3 mb-md-0 pt-0">
-                              <Card.Title
-                                style={{
-                                  marginBottom: '1rem'
-                                }}
-                              >
-                                {edge.node.frontmatter.title}
-                              </Card.Title>
-                              <div className="d-flex">
-                                <div className="mr-auto mb-3">
-                                  {
-                                    edge.node.frontmatter.areas.map((area, index) => {
-                                      const variants = {
-                                        "Teacher Professional Learning": "primary",
-                                        "Instructional Materials Development": "secondary",
-                                        "Research": "success",
-                                        "Leadership Development": "danger"
-                                      }
-                                      return(
-                                        <>
-                                          <span
-                                            key={`desktop-${edge.node.id}-area-${index}`}
-                                            className={`rd-pill badge badge-pill badge-${variants[area]}`}
-                                            style={{
-                                              marginRight: '.5rem',
-                                              fontSize: '.75rem',
-                                              fontWeight: '600'
-                                            }}
-                                          >
-                                            {area}
-                                          </span>
-                                        </>
-                                      )
-                                    })
-                                  }
-                                </div>
-                              </div>
-                              <Card.Text>
-                                {edge.node.excerpt}
-                              </Card.Text>
-                            </Card.Body>
-                            <Card.Footer
-                              style={{
-                                background: 'white',
-                                borderTop: 'none',
-                                marginBottom: '.5rem'
-                              }}
-                            >
-                              <div className="d-flex">
-                                <div className="ml-auto align-self-end">
-                                  <Link
-                                    to={`/our-work/rd-programs/${edge.node.frontmatter.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase()}`}
-                                  >
-                                    <Button variant="outline-secondary">
-                                      Read More
-                                    </Button>
-                                  </Link>
-                                </div>
-                              </div>
-                            </Card.Footer>
-                          </Card>
-                        </div>
-                      )
-                    })
-                  }
-                </CardColumns>
-              </Row>
-            </Container>
-          </section> */}
         </Layout>
       </React.Fragment>
     )

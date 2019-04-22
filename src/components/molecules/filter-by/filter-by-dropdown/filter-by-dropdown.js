@@ -8,17 +8,20 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 import './filter-by-dropdown.scss'
 
+/*
+*
+*
+* NOTE: Don't name filter by field "type".  "type" is specific to ERC categories.
+*
+*
+*/
 const FilterByDropdown = class extends Component {
   constructor(props) {
     super(props);
-    //Array of Arrays, [[elem_id, elem_json]]
     this.search_items = [];
   }
 
   componentDidMount = () => {
-    // if(this.props.activeFilters) {
-    //   this.setState({activeFilters: this.props.activeFilters})
-    // }
     if(document) {
       let searchable_elements = document.querySelectorAll('[data-filter]');
       for(let i = 0; i < searchable_elements.length; i++) {
@@ -62,14 +65,14 @@ const FilterByDropdown = class extends Component {
     const category_filters = ['Classroom Instruction','Professional Learning','District Planning','Citizen Science']
     for(let i = 0; i < category_filters.length; i++) {
       if(updated_filters.includes(category_filters[i])) {
-        activeCategoryFilter = category_filters[i] 
+        activeCategoryFilter = category_filters[i]
         break;
       }
     }
 
     //Loops through searchable elements in DOM
     for(let i = 0; i < this.search_items.length; i++) {
-      const resource_json = this.search_items[i][1] 
+      const resource_json = this.search_items[i][1]
       let elem = document.getElementById(this.search_items[i][0]);
       let show = false
 
@@ -79,7 +82,7 @@ const FilterByDropdown = class extends Component {
         && activeCategoryFilter
         && activeCategoryFilter !== resource_json['type']
       ) {
-        hideElement(elem) 
+        hideElement(elem)
       //If only a category filter exists since if length is 1 and activeCategory exists the updated_filters list must only be a category filter
       } else if(
         'type' in resource_json
@@ -161,24 +164,6 @@ const FilterByDropdown = class extends Component {
     }
   }
 
-    // if(this.props.activeFilters.includes(filter)) {
-    //   const updated_filters = removeFilter(filter)
-    //   const active_filters = this.checkIfFiltersActive(updated_filters)
-    //   if(active_filters) {
-    //     this.handleDisplay(updated_filters)
-    //   }
-    // } else {
-    //   const updated_filters = getUpdatedFilters() || []
-    //   const active_filters = this.checkIfFiltersActive(updated_filters)
-    //   if(active_filters) {
-    //     this.handleDisplay(updated_filters)
-    //   }
-    // }
-
-    // document.getElementById('filter-by-dropdown').focus()
-    // document.getElementById('filter-by-dropdown').blur()
-  // }
-
   renderFilterMenu = (items) => {
     let menu = []
     for(let key in items) {
@@ -200,7 +185,7 @@ const FilterByDropdown = class extends Component {
           >
             {items[key][2][i]}
           </Dropdown.Item>
-        
+
         category_item_elems.push(item)
       }
 
@@ -214,9 +199,7 @@ const FilterByDropdown = class extends Component {
     if(this.props.items) {
       return (
         <div id="filter">
-          {/* <Dropdown id="dropdown" style={{float: 'right'}}> */}
           <Dropdown id="dropdown" alignRight={true} drop={'down'}>
-            {/* <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>{this.state.selected}</Dropdown.Toggle> */}
             <Dropdown.Toggle variant="outline-primary" id="filter-by-dropdown" style={{width: '100%'}}>Filter by...</Dropdown.Toggle>
             <Dropdown.Menu id="dropdown-menu3" flip={false}>{this.renderFilterMenu(this.props.items)}</Dropdown.Menu>
           </Dropdown>

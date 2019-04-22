@@ -19,6 +19,7 @@ sidebarContacts:
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
+announcementOrCoverage: 'Announcement'
 sortOrder: 6
 page: news
 ---
@@ -51,5 +52,5 @@ Sincerely,
 <p>Daniel C. Edelson<br />BSCS Executive Director</p>
 
 
- 
+
 
