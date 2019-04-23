@@ -1,0 +1,32 @@
+@import '../../../global-scss/utilities/variables';
+
+.step {
+  background: #cdcdcd;
+  border-right: 1px solid $black;
+  color: $black;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+
+  &.step-0 {
+    border-top-left-radius: 4px;
+  }
+
+  &.step-2 {
+    border-top-right-radius: 4px;
+    border-right: none;
+  }
+
+  &.active {
+    background: $primary;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.done {
+  //   background: $primary;
+    cursor: pointer;
+  //   color: $white;
+  //   transition: all 0.3s ease-in-out;
+  }
+}

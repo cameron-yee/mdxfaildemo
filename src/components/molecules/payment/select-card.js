@@ -4,8 +4,9 @@ import Form from 'react-bootstrap/Form'
 
 import axios from 'axios'
 
-import getCustomerCards from '../../../queries/bscsapi/stripe/get-customer-cards'
+import retrieveStripeCustomerCards from '../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
 import { async } from 'q';
+import Spinner from 'react-bootstrap/Spinner'
 
 const SelectCard = class extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ const SelectCard = class extends Component {
   }
 
   getUserCards = async () => {
-    let cards = await getCustomerCards(this.cancelToken)
+    let cards = await retrieveStripeCustomerCards(this.cancelToken)
     console.log(cards)
     this.setState({cards: cards})
   }
@@ -34,7 +35,8 @@ const SelectCard = class extends Component {
     }
   }
 
-  getCardInfo = () => {
+  // getCardInfo = () => {
+  getCardId = () => {
     let cards = document.getElementsByName('customer-cards')
     for(let i = 0; i < cards.length; i++) {
       if(cards[i].checked) {
@@ -43,44 +45,61 @@ const SelectCard = class extends Component {
     }
   }
 
-  setCardInfo = (e) => {
+  // setCardInfo = (e) => {
+  setCardId = (e) => {
     e.preventDefault()
 
-    let card_info = this.getCardInfo()
-    console.log(card_info)
-    if(card_info !== 'new-card') {
-      let card_info_list = card_info.split(',')
-      console.log(card_info_list)
-      this.props.setCardInfo(card_info_list[0], card_info_list[1])
-    } else {
-      this.props.setCardInfo(card_info, card_info)
-    }
+    let card_id = this.getCardId()
+    // if(card_id !== 'new-card') {
+      // let card_info_list = card_info.split(',')
+      // console.log(card_info_list)
+      // this.props.setCardInfo(card_info_list[0], card_info_list[1])
+    this.props.setCardId(card_id)
+    // } else {
+    //   this.props.setCardInfo(card_info, card_info)
+    // }
   }
 
   render() {
     return (
       <React.Fragment>
         {!this.state.cards &&
-          <p>Loading</p>
+          <Spinner animation="grow" variant="primary" />
         }
         {this.state.cards &&
           <React.Fragment>
-            <Form onSubmit={(e) => this.setCardInfo(e)}>
+            <Form onSubmit={(e) => this.setCardId(e)}>
               <Form.Group>
                 {
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
-                    return(
-                      <React.Fragment key={`card-${index}`}>
-                        <Form.Check
-                          custom
-                          type="radio"
-                          id={`${card.id},${card.last4}`}
-                          label={`**** **** **** ${card.last4}`}
-                          // defaultChecked
-                          name="customer-cards"
-                        />
-                      </React.Fragment>
-                    )
+                    if(card.id === this.props.defaultCard) {
+                      return(
+                        <React.Fragment key={`card-${index}`}>
+                          <Form.Check
+                            custom
+                            inline="true"
+                            type="radio"
+                            id={`${card.id}`}
+                            label={`**** **** **** ${card.last4}`}
+                            defaultChecked
+                            name="customer-cards"
+                          />
+                          <span className="badge badge-pill badge-primary">DEFAULT</span>
+                        </React.Fragment>
+                      )
+                    } else {
+                      return(
+                        <React.Fragment key={`card-${index}`}>
+                          <Form.Check
+                            custom
+                            type="radio"
+                            id={`${card.id}`}
+                            label={`**** **** **** ${card.last4}`}
+                            name="customer-cards"
+                          />
+                        </React.Fragment>
+                      )
+                    }
                   })
                 }
                 <Form.Check
@@ -92,7 +111,9 @@ const SelectCard = class extends Component {
                   name="customer-cards"
                 />
               </Form.Group>
-              <Button variant="outline-primary" type="submit">Use this card.</Button>
+              <div className="d-flex justify-content-center">
+                <Button variant="outline-primary" type="submit">Use this card</Button>
+              </div>
             </Form>
           </React.Fragment>
         }

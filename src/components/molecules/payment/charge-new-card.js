@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
+import Spinner from 'react-bootstrap/Spinner'
 import Row from 'react-bootstrap/Row'
 
 import { CardElement, CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements'
@@ -32,7 +33,10 @@ const ChargeNewCard = class extends Component {
       state_touched: false,
       zipcode: undefined,
       zipcode_touched: false,
+      country: undefined,
+      country_touched: false,
       //
+      loading: false,
       errors: false,
       successfullyCharged: false
     }
@@ -67,16 +71,27 @@ const ChargeNewCard = class extends Component {
 
   submit = async (e) => {
     e.preventDefault()
-    let { token } = await this.props.stripe.createToken({name: "Name"})
+    let name = this.state.firstname + ' ' + this.state.lastname
+    // let { token } = await this.props.stripe.createToken({name: "Name"})
+    let { token } = await this.props.stripe.createToken({
+      name: name,
+      address_line1: this.state.address,
+      address_city: this.state.city,
+      address_state: this.state.state,
+      address_zip: this.state.zipcode,
+      address_country: this.state.country
+    })
+
+    this.setState({loading: true})
 
     createCustomerCard(this.props.cancelToken, token).then(response => {
       if(response.status === 200 && !response.data.errors) {
         createCharge(this.props.cancelToken, this.props.amount, response.data.data.createStripeCustomerCard.id, this.props.description).then(response => {
           if(response.status === 200 && !response.data.errors) {
-            this.setState({successfullyCharged: true})
+            this.setState({successfullyCharged: true, loading: false})
             console.log(response)
           } else {
-            this.setState({errors: true })
+            this.setState({errors: true, loading: false })
             console.log(response)
           }
         })
@@ -149,13 +164,24 @@ const ChargeNewCard = class extends Component {
 
   blurZipcode = (e) => {
     e.preventDefault()
-    this.setState({zipcode: true})
+    this.setState({zipcode_touched: true})
+  }
+
+  setCountry = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('cc-country-input');
+    input_elem.value === '' ? this.setState({country: undefined}) : this.setState({country: input_elem.value})
+  }
+
+  blurCountry = (e) => {
+    e.preventDefault()
+    this.setState({country_touched: true})
   }
 
   render() {
     return (
       <React.Fragment>
-        {!this.state.successfullyCharged && !this.state.errors &&
+        {!this.state.loading && !this.state.successfullyCharged && !this.state.errors &&
           <div className="checkout">
             <Form>
               <Row>
@@ -195,7 +221,7 @@ const ChargeNewCard = class extends Component {
                     </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
-                <Col xs={12}>
+                <Col xs={12} md={6}>
                   <Form.Group>
                     {/* <Form.Label>Address</Form.Label> */}
                     <Form.Control
@@ -231,7 +257,7 @@ const ChargeNewCard = class extends Component {
                     </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
-                <Col xs={12} md={3}>
+                <Col xs={12} md={4}>
                   <Form.Group>
                     {/* <Form.Label>State</Form.Label> */}
                     <Form.Control
@@ -249,7 +275,7 @@ const ChargeNewCard = class extends Component {
                     </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
-                <Col xs={12} md={3}>
+                <Col xs={12} md={4}>
                   <Form.Group>
                     {/* <Form.Label>Zipcode</Form.Label> */}
                     <Form.Control
@@ -267,6 +293,24 @@ const ChargeNewCard = class extends Component {
                     </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
+                <Col xs={12} md={4}>
+                  <Form.Group>
+                    {/* <Form.Label>Zipcode</Form.Label> */}
+                    <Form.Control
+                      className="form-control"
+                      id="cc-country-input"
+                      type="text"
+                      placeholder="Country"
+                      maxLength="50"
+                      onKeyUp={this.setCountry}
+                      onBlur={this.blurCountry}
+                      isInvalid={this.state.country_touched && (!this.state.country || this.state.country === '')}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Please enter country.
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                </Col>
               </Row>
             </Form>
             <Row>
@@ -276,16 +320,31 @@ const ChargeNewCard = class extends Component {
               <Col md={3}><CardCVCElement className="border" /></Col>
             </Row>
 
-            <div className="d-flex justify-content-center">
-              <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay {this.props.amount} cents</Button>
+            <div className="d-flex justify-content-center mt-3">
+              {!this.state.loading && !this.state.errors && !this.state.successfullyCharged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
+                <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
+              }
+              {!this.state.loading && !this.state.errors && !this.state.successfullyCharged && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
+                <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
+              }
             </div>
           </div>
         }
         {this.state.errors && !this.state.successfullyCharged &&
-          <p>Error during charge.</p>
+          <div className="d-flex justify-content-center">
+            <p>Error during charge.</p>
+          </div>
+        }
+        {this.state.loading &&
+          <div className="d-flex justify-content-center">
+            <p>Payment Processing</p>
+            <Spinner animation="grow" variant="primary" />
+          </div>
         }
         {!this.state.errors && this.state.successfullyCharged &&
-          <p>Charge Successful!</p>
+          <div className="d-flex justify-content-center">
+            <p>Charge Successful!</p>
+          </div>
         }
       </React.Fragment>
     )

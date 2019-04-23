@@ -32,8 +32,8 @@ const ChargeCard = class extends Component {
     return (
       <React.Fragment>
         {!this.state.errors && !this.state.successfullyCharged &&
-          <div className="d-flex justify-content-center flex-wrap">
-            <Button variant="outline-primary" onClick={(e) => this.handleCharge(e)}>Charge Card ending in {this.props.cardLast4}</Button>
+          <div className="d-flex justify-content-center flex-wrap mt-3">
+            <Button variant="outline-primary" onClick={(e) => this.handleCharge(e)}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
           </div>
         }
         {this.state.errors && !this.state.successfullyCharged &&

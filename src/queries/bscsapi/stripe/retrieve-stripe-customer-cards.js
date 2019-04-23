@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const getCustomerCards = (cancelToken) => {
+const retrieveStripeCustomerCards = (cancelToken) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -28,4 +28,4 @@ const getCustomerCards = (cancelToken) => {
   })
 }
 
-export default getCustomerCards
+export default retrieveStripeCustomerCards

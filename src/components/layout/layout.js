@@ -41,16 +41,15 @@ const Layout = class extends Component {
         amount: this.props.amount,
         description: this.props.description,
         product: this.props.product,
-        signedIn: this.checkSignInStatus()
       })
-    } else {
-      this.setState({signedIn: this.checkSignInStatus()})
     }
+
+    this.checkSignInStatus()
   }
 
   checkSignInStatus = async () => {
     let status = await checkIfUserSignedIn(this.cancelToken)
-    return status
+    this.setState({signedIn: status})
   }
 
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
