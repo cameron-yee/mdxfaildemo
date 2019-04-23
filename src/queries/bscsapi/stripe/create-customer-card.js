@@ -9,7 +9,7 @@ const createCustomerCard = (cancelToken, token) => {
     data: {
       query: `
         query {
-          createStripeCustomerCard(tokenId: "${token.id}") {
+          createStripeCustomerCard(tokenId: "${token}") {
             id
           }
         }

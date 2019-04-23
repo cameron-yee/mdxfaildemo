@@ -50,21 +50,16 @@ const SelectCard = class extends Component {
     e.preventDefault()
 
     let card_id = this.getCardId()
-    // if(card_id !== 'new-card') {
-      // let card_info_list = card_info.split(',')
-      // console.log(card_info_list)
-      // this.props.setCardInfo(card_info_list[0], card_info_list[1])
     this.props.setCardId(card_id)
-    // } else {
-    //   this.props.setCardInfo(card_info, card_info)
-    // }
   }
 
   render() {
     return (
       <React.Fragment>
         {!this.state.cards &&
-          <Spinner animation="grow" variant="primary" />
+          <div className="d-flex justify-content-center">
+            <Spinner animation="grow" variant="primary" />
+          </div>
         }
         {this.state.cards &&
           <React.Fragment>
@@ -72,6 +67,9 @@ const SelectCard = class extends Component {
               <Form.Group>
                 {
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
+                    console.log(this.props.defaultCard)
+                    console.log(index)
+                    console.log('hit')
                     if(card.id === this.props.defaultCard) {
                       return(
                         <React.Fragment key={`card-${index}`}>
@@ -80,7 +78,7 @@ const SelectCard = class extends Component {
                             inline="true"
                             type="radio"
                             id={`${card.id}`}
-                            label={`**** **** **** ${card.last4}`}
+                            label={`•••• •••• •••• ${card.last4}`}
                             defaultChecked
                             name="customer-cards"
                           />
@@ -94,7 +92,7 @@ const SelectCard = class extends Component {
                             custom
                             type="radio"
                             id={`${card.id}`}
-                            label={`**** **** **** ${card.last4}`}
+                            label={`•••• •••• •••• ${card.last4}`}
                             name="customer-cards"
                           />
                         </React.Fragment>
@@ -102,14 +100,25 @@ const SelectCard = class extends Component {
                     }
                   })
                 }
-                <Form.Check
-                  custom
-                  type="radio"
-                  id="new-card"
-                  label="New Card"
-                  // defaultChecked
-                  name="customer-cards"
-                />
+                {!this.props.defaultCard &&
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="new-card"
+                    label="New Card"
+                    defaultChecked
+                    name="customer-cards"
+                  />
+                }
+                {this.props.defaultCard &&
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="new-card"
+                    label="New Card"
+                    name="customer-cards"
+                  />
+                }
               </Form.Group>
               <div className="d-flex justify-content-center">
                 <Button variant="outline-primary" type="submit">Use this card</Button>

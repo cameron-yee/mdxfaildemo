@@ -42,8 +42,6 @@ const PaymentModal = class extends Component {
   }
 
   componentWillUpdate(prevProps) {
-    console.log('hit')
-    console.log(this.props.signedIn)
     if(this.props.signedIn && this.state.customerDefaultCard === null) {
       this.getCustomerDefaultCard(this.cancelToken)
     }
