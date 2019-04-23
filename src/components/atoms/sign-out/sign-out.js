@@ -18,6 +18,7 @@ class SignOut extends Component {
 
   handleSignout = () => {
     signout(this.cancelToken)
+    this.props.signOut()
   }
 
   render() {

@@ -103,7 +103,7 @@ const SigninForm = class extends Component {
       console.log(response);
       if(response.status === 200 && !response.data.errors) {
           this.setState({notificationShow: true, loading: false, sent: true});
-          this.props.setsignedin()
+          this.props.setSignedIn()
       }
     })
     .catch(error => {

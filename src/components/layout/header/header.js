@@ -61,7 +61,7 @@ export default class Header extends Component {
                 </SigninFormLaunchModal>
               }
               {this.props.signedin &&
-                <SignOut>
+                <SignOut signOut={this.props.signOut}>
                   <Button variant="outline-primary btn-sm" className="slide">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
                 </SignOut>
               }

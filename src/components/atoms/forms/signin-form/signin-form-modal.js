@@ -54,18 +54,20 @@ const SigninFormModal = class extends Component {
   render() {
     return (
       <Modal
-        {...this.props}
+        // {...this.props}
+        show={this.props.show}
+        onHide={this.props.onHide}
         size="lg"
-        aria-labelledby="login-form"
+        aria-labelledby="signin-form"
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title id="login-form">
+          <Modal.Title id="signin-form">
             Sign In
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <SigninForm setsignedin={this.props.setsignedin} />
+          <SigninForm setSignedIn={this.props.setSignedIn} />
         </Modal.Body>
         {/* <Modal.Footer>
         </Modal.Footer> */}

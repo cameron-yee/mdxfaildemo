@@ -7,21 +7,50 @@ import Footer from './footer/footer'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 import SigninFormModal from '../atoms/forms/signin-form/signin-form-modal'
+import PaymentModal from '../molecules/payment/payment-modal'
 
 import 'typeface-open-sans'
 import 'typeface-lora'
 import './layout.scss'
 
+import axios from 'axios'
+
+import checkIfUserSignedIn from '../../utils/check-if-user-signed-in'
 
 const Layout = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      amount: null,
+      description: null,
       modalShowGeneral: false,
       modalShowJoinEmail: false,
       modalShowSignin: false,
+      modalShowPayment: false,
+      product: null,
       signedIn: false
     }
+
+    //Need componentWillUnmount
+    this.cancelToken = axios.CancelToken.source()
+  }
+
+  componentDidMount() {
+    if(this.props.product && this.props.amount && this.props.description) {
+      this.setState({
+        amount: this.props.amount,
+        description: this.props.description,
+        product: this.props.product,
+        signedIn: this.checkSignInStatus()
+      })
+    } else {
+      this.setState({signedIn: this.checkSignInStatus()})
+    }
+  }
+
+  checkSignInStatus = async () => {
+    let status = await checkIfUserSignedIn(this.cancelToken)
+    return status
   }
 
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
@@ -48,8 +77,28 @@ const Layout = class extends Component {
     }
   }
 
-  setSignedIn = () => {
-    this.setState({signedIn: true})
+  launchPayment = () => { this.setState({modalShowPayment: true}) }
+  closePayment = () => {
+    this.setState({modalShowPayment: false})
+    if(this.props.closePayment) {
+      this.props.closePayment()
+    }
+  }
+
+  setPaymentProduct = (product) => {
+    this.setState({ product: product })
+  }
+
+  setPaymentAmount = (amount) => {
+    this.setState({ amount: amount })
+  }
+
+  setPaymentDescription = (description) => {
+    this.setState({ amount: description })
+  }
+
+  setSignedIn = (user_state) => {
+    this.setState({ signedIn: user_state })
   }
 
   componentDidUpdate(prevProps) {
@@ -63,6 +112,10 @@ const Layout = class extends Component {
 
     if(this.props.launchSignin && prevProps.launchSignin !== this.props.launchSignin) {
       this.setState({modalShowSignin: true})
+    }
+
+    if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
+      this.setState({modalShowPayment: true})
     }
   }
 
@@ -88,6 +141,7 @@ const Layout = class extends Component {
               launchSignin={this.launchSignin}
               location={this.props.location}
               signedin={this.state.signedIn}
+              signOut={() => this.setSignedIn(false)}
             />
             {this.props.children}
             <Footer
@@ -106,7 +160,16 @@ const Layout = class extends Component {
             <SigninFormModal
               show={this.state.modalShowSignin}
               onHide={this.closeSignin}
-              setsignedin={this.setSignedIn}
+              setSignedIn={() => this.setSignedIn(true)}
+            />
+            <PaymentModal
+              show={this.state.modalShowPayment}
+              onHide={this.closePayment}
+              setSignedIn={() => this.setSignedIn(true)}
+              signedIn={this.state.signedIn}
+              product={this.state.product}
+              amount={this.state.amount}
+              description={this.state.description}
             />
           </React.Fragment>
         )}
