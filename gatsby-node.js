@@ -78,8 +78,30 @@ exports.createPages = ({ graphql, actions }) => {
   createRedirect({
     fromPath: '/stella/',
     toPath: '/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis',
-    // redirectInBrowser: true,
-    // statusCode: 200
+    isPermanent: true
+  })
+
+  createRedirect({
+    fromPath: '/STeLLACO2',
+    toPath: '/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation',
+    isPermanent: true
+  })
+
+  createRedirect({
+    fromPath: '/STeLLACO2/',
+    toPath: '/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation',
+    isPermanent: true
+  })
+
+  createRedirect({
+    fromPath: '/stellaco2',
+    toPath: '/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation',
+    isPermanent: true
+  })
+
+  createRedirect({
+    fromPath: '/stellaco2/',
+    toPath: '/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation',
     isPermanent: true
   })
 

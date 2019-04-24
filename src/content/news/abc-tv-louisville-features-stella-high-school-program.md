@@ -25,7 +25,7 @@ A journalist joined one of BSCS’s [STeLLA](https://bscs.org/our-work/rd-progra
 <div class="row justify-content-center" style="margin-bottom: 3rem; margin-top: 3rem;">
   <div class="col-10 col-xl-8">
     <div class='embed-container'>
-      <iframe class="video-responsive" src="https://player.vimeo.com/video/331304857" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe class="video-responsive" src="https://player.vimeo.com/video/332249980" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
   </div>
 </div>

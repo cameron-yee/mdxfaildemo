@@ -197,7 +197,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>First name</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> First name</Form.Label>
                 <Form.Control
                   id="sc-first-name-input"
                   type="text"
@@ -214,7 +214,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Last name</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Last name</Form.Label>
                 <Form.Control
                   id="sc-last-name-input"
                   type="text"
@@ -231,7 +231,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Email</Form.Label>
                 <Form.Control
                   id="sc-email-input"
                   type="email"
@@ -264,7 +264,7 @@ const SpecificContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Message</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   id="sc-message-input"
