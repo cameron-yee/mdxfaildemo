@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const createCharge = (cancelToken, amount, source_id, description) => {
+const verifyCustomerBank = (cancelToken, bank_id, amount_one, amount_two) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -9,18 +9,16 @@ const createCharge = (cancelToken, amount, source_id, description) => {
     data: {
       query: `
         query {
-          createStripeCharge(amount: ${amount}, sourceId: "${source_id}", description: "${description}") {
+          verifyStripeCustomerBank(bankId: "${bank_id}", amountOne: ${amount_one}, amountTwo: ${amount_two}) {
             id
-            amount
-            description
-            customer
+            status
           }
         }
-        `
+      `
     }
   })
   .then(response => {
-    // console.log(response)
+    console.log(response)
     return response
   })
   .catch(error => {
@@ -28,4 +26,4 @@ const createCharge = (cancelToken, amount, source_id, description) => {
   })
 }
 
-export default createCharge
+export default verifyCustomerBank

@@ -12,8 +12,8 @@ import Row from 'react-bootstrap/Row'
 import CountryDropdown from './country-dropdown'
 import './charge-new-card.scss'
 
-import createCharge from '../../../queries/bscsapi/stripe/create-charge'
-import createCustomerCard from '../../../queries/bscsapi/stripe/create-customer-card';
+import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
+import createCustomerCard from '../../../../queries/bscsapi/stripe/create-customer-card';
 
 
 const ChargeNewCard = class extends Component {

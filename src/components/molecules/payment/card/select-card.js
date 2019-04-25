@@ -4,8 +4,7 @@ import Form from 'react-bootstrap/Form'
 
 import axios from 'axios'
 
-import retrieveStripeCustomerCards from '../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
-import { async } from 'q';
+import retrieveStripeCustomerCards from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
 import Spinner from 'react-bootstrap/Spinner'
 
 const SelectCard = class extends Component {

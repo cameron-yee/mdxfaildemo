@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 
-import createCharge from '../../../queries/bscsapi/stripe/create-charge'
+import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 
 
-const ChargeCard = class extends Component {
+const ChargeBank = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -19,7 +19,7 @@ const ChargeCard = class extends Component {
 
   handleCharge = (e) => {
     e.preventDefault()
-    createCharge(this.props.cancelToken, this.props.amount, this.props.cardId, this.props.description).then(response => {
+    createCharge(this.props.cancelToken, this.props.amount, this.props.bankId, this.props.description).then(response => {
       if(response.status === 200 && !response.data.errors) {
         this.setState({successfullyCharged: true})
       } else {
@@ -47,4 +47,4 @@ const ChargeCard = class extends Component {
   }
 }
 
-export default ChargeCard
+export default ChargeBank

@@ -11,6 +11,7 @@ const Stepper = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      number_of_steps: 3,
       steps: ["Select Payment", "Payment Info", "Pay"]
     }
   }
@@ -18,9 +19,9 @@ const Stepper = class extends Component {
   componentDidUpdate(prevProps) {
     if(prevProps.creditOrBank !== this.props.creditOrBank) {
       if(this.props.creditOrBank === 'Credit') {
-        this.setState({steps:  ["Select Payment", "Select Card", "Pay"]})
+        this.setState({steps: ["Select Payment", "Select Card", "Pay"], number_of_steps: 3})
       } else if(this.props.creditOrBank === 'Bank') {
-        this.setState({steps:  ["Select Payment", "Enter Bank Info", "Pay"]})
+        this.setState({steps: ["Select Payment", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 4})
       }
     }
   }
@@ -44,20 +45,38 @@ const Stepper = class extends Component {
             this.state.steps.map((words, i) => {
               if(i === this.props.stage) {
                 return (
-                  <Col key={`step-${i}`} xs={4} data-stepper={i} onClick={(e) => this.setStage(e)} className={`d-flex justify-content-center step active step-${i}`}>
-                    <div>{words}</div>
+                  <Col
+                    key={`step-${i}`}
+                    xs={12/this.state.number_of_steps}
+                    data-stepper={i}
+                    onClick={(e) => this.setStage(e)}
+                    className={`d-flex justify-content-center step active step-${i} steps-${this.state.number_of_steps}`}
+                  >
+                    <div className="d-flex align-items-center">{words}</div>
                   </Col>
                 )
               } else if(i < this.props.maxStage) {
                 return (
-                  <Col key={`step-${i}`} xs={4} data-stepper={i} onClick={(e) => this.setStage(e)} className={`d-flex justify-content-center step done step-${i}`}>
-                    <div><i className="far fa-check-square"></i>&nbsp;{words}</div>
+                  <Col
+                    key={`step-${i}`}
+                    xs={12/this.state.number_of_steps}
+                    data-stepper={i}
+                    onClick={(e) => this.setStage(e)}
+                    className={`d-flex justify-content-center step done step-${i} steps-${this.state.number_of_steps}`}
+                  >
+                    <div className="d-flex align-items-center"><i className="far fa-check-square"></i>&nbsp;{words}</div>
                   </Col>
                 )
               } else {
                 return (
-                  <Col key={`step-${i}`} xs={4} data-stepper={i} onClick={(e) => this.setStage(e)} className={`d-flex justify-content-center step step-${i}`}>
-                    <div>{words}</div>
+                  <Col
+                    key={`step-${i}`}
+                    xs={12/this.state.number_of_steps}
+                    data-stepper={i}
+                    onClick={(e) => this.setStage(e)}
+                    className={`d-flex justify-content-center step step-${i} steps-${this.state.number_of_steps}`}
+                  >
+                    <div className="d-flex align-items-center">{words}</div>
                   </Col>
                 )
               }

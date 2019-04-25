@@ -7,20 +7,24 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import Spinner from 'react-bootstrap/Spinner'
 
-import ChargeNewCard from '../../../components/molecules/payment/charge-new-card'
+import ChargeNewCard from './card/charge-new-card'
 import SigninForm from '../../../components/atoms/forms/signin-form/signin-form'
 
-import ChargeCard from './charge-card'
+import ChargeBank from './bank/charge-bank'
+import ChargeCard from './card/charge-card'
 import CreditOrBank from './credit-or-bank'
-import SelectCard from './select-card'
+import SelectCard from './card/select-card'
 import Stepper from './stepper'
 
 import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-stripe-customer'
+import CreateNewBank from './bank/create-new-bank';
+import VerifyBank from './bank/verify-bank';
 
 const PaymentModal = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      bankId: null,
       cardId: null,
       // cardLast4: null,
       creditOrBank: null,
@@ -28,6 +32,7 @@ const PaymentModal = class extends Component {
       maxStage: 0,
       stage: 0,
       stripe: null,
+      verified: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -41,7 +46,7 @@ const PaymentModal = class extends Component {
     }
   }
 
-  componentWillUpdate(prevProps) {
+  componentWillUpdate(prevProps, prevState) {
     if(this.props.signedIn && this.state.customerDefaultCard === null) {
       this.getCustomerDefaultCard(this.cancelToken)
     }
@@ -146,8 +151,17 @@ const PaymentModal = class extends Component {
           }
           { this.state.stage === 1 && this.state.stripe && this.state.creditOrBank === 'Bank' &&
             <React.Fragment>
-              <p>Bank Payments not created yet</p>
-              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Back</Button>
+              {/* <p>Bank Payments not created yet</p>
+              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Back</Button> */}
+              <StripeProvider stripe={this.state.stripe}>
+                <Elements>
+                  <CreateNewBank
+                    amount={this.props.amount}
+                    description={this.props.description}
+                    setBankId={(bank_id) => this.setState({bankId: bank_id, stage: 2, maxStage: 2})}
+                  />
+                </Elements>
+              </StripeProvider>
             </React.Fragment>
           }
           { this.state.stage === 1 && this.state.stripe && this.state.creditOrBank === 'Credit' &&
@@ -155,6 +169,12 @@ const PaymentModal = class extends Component {
               // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
               setCardId={(card_id) => this.setState({cardId: card_id, stage: 2, maxStage: 2})}
               defaultCard={this.state.customerDefaultCard}
+            />
+          }
+          { this.state.stage === 2 && this.state.stripe && this.state.creditOrBank === 'Bank' &&
+            <VerifyBank
+              bankId={this.state.bankId}
+              setVerified={(verified) => this.setState({verified: verified, stage: 3, maxStage: 3})}
             />
           }
           { this.state.stage === 2 && this.state.stripe && this.state.creditOrBank === 'Credit' && this.state.cardId !== 'new-card' &&
@@ -178,6 +198,19 @@ const PaymentModal = class extends Component {
                 />
               </Elements>
             </StripeProvider>
+          }
+          { this.state.stage === 3 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && !this.state.verified &&
+            <p>Card Not verified.</p>
+          }
+          { this.state.stage === 3 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && this.state.verified &&
+            <ChargeBank
+              amount={this.props.amount}
+              bankId={this.state.bankId}
+              description={this.props.description}
+              // cardLast4={this.state.cardLast4}
+              cancelToken={this.cancelToken}
+              cancelAxios={() => {this.cancelToken.cancel()}}
+            />
           }
         </Modal.Body>
         {/* <Modal.Footer>
