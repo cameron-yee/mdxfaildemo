@@ -11,6 +11,11 @@
     border-top-left-radius: 4px;
   }
 
+  &.steps-5 {
+    width: 20% !important;
+  }
+
+  &.step-4.steps-5,
   &.step-3.steps-4,
   &.step-2.steps-3 {
     border-top-right-radius: 4px;

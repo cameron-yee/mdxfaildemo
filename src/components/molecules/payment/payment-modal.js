@@ -14,6 +14,7 @@ import ChargeBank from './bank/charge-bank'
 import ChargeCard from './card/charge-card'
 import CreditOrBank from './credit-or-bank'
 import SelectCard from './card/select-card'
+import SelectBank from './bank/select-bank'
 import Stepper from './stepper'
 
 import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-stripe-customer'
@@ -28,6 +29,7 @@ const PaymentModal = class extends Component {
       cardId: null,
       // cardLast4: null,
       creditOrBank: null,
+      bankStatus: null,
       customerDefaultCard: null,
       maxStage: 0,
       stage: 0,
@@ -69,7 +71,19 @@ const PaymentModal = class extends Component {
   }
 
   setCreditOrBank = (credit_or_bank) => {
-    this.setState({creditOrBank: credit_or_bank, stage: 1, maxStage: 1})
+    this.setState({creditOrBank: credit_or_bank, bankStatus: null, stage: 1, maxStage: 1})
+  }
+
+  setBankInfo = (bank_id, bank_status) => {
+    console.log(bank_id)
+    console.log(bank_status)
+    if(bank_id === 'new-bank') {
+      this.setState({stage: 2, maxStage: 2, bankStatus: null})
+    } else if(bank_status === 'verified') {
+      this.setState({bankId: bank_id, bank_status, stage: 2, maxStage: 2, bankStatus: 'SavedBankVerified', verified: true})
+    } else if(bank_status !== 'verified') {
+      this.setState({bankId: bank_id, bank_status, stage: 2, maxStage: 2, bankStatus: 'SavedBankNotVerified'})
+    }
   }
 
   previous = (e) => {
@@ -127,6 +141,7 @@ const PaymentModal = class extends Component {
             maxStage={this.state.maxStage}
             signedIn={this.props.signedIn}
             creditOrBank={this.state.creditOrBank}
+            bankStatus={this.state.bankStatus}
           />
         {/* </Modal.Header> */}
         <Modal.Body>
@@ -150,19 +165,10 @@ const PaymentModal = class extends Component {
             <Spinner animation="grow" variant="primary" />
           }
           { this.state.stage === 1 && this.state.stripe && this.state.creditOrBank === 'Bank' &&
-            <React.Fragment>
-              {/* <p>Bank Payments not created yet</p>
-              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Back</Button> */}
-              <StripeProvider stripe={this.state.stripe}>
-                <Elements>
-                  <CreateNewBank
-                    amount={this.props.amount}
-                    description={this.props.description}
-                    setBankId={(bank_id) => this.setState({bankId: bank_id, stage: 2, maxStage: 2})}
-                  />
-                </Elements>
-              </StripeProvider>
-            </React.Fragment>
+            <SelectBank
+              // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
+              setBankInfo={(bank_id, bank_status) => this.setBankInfo(bank_id, bank_status)}
+            />
           }
           { this.state.stage === 1 && this.state.stripe && this.state.creditOrBank === 'Credit' &&
             <SelectCard
@@ -171,11 +177,20 @@ const PaymentModal = class extends Component {
               defaultCard={this.state.customerDefaultCard}
             />
           }
-          { this.state.stage === 2 && this.state.stripe && this.state.creditOrBank === 'Bank' &&
-            <VerifyBank
-              bankId={this.state.bankId}
-              setVerified={(verified) => this.setState({verified: verified, stage: 3, maxStage: 3})}
-            />
+          { this.state.stage === 2 && this.state.stripe && this.state.bankStatus === null && this.state.creditOrBank === 'Bank' &&
+            <React.Fragment>
+              {/* <p>Bank Payments not created yet</p>
+              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Back</Button> */}
+              <StripeProvider stripe={this.state.stripe}>
+                <Elements>
+                  <CreateNewBank
+                    amount={this.props.amount}
+                    description={this.props.description}
+                    setBankId={(bank_id) => this.setState({bankId: bank_id, stage: 3, maxStage: 3})}
+                  />
+                </Elements>
+              </StripeProvider>
+            </React.Fragment>
           }
           { this.state.stage === 2 && this.state.stripe && this.state.creditOrBank === 'Credit' && this.state.cardId !== 'new-card' &&
             <ChargeCard
@@ -199,10 +214,42 @@ const PaymentModal = class extends Component {
               </Elements>
             </StripeProvider>
           }
-          { this.state.stage === 3 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && !this.state.verified &&
-            <p>Card Not verified.</p>
+          { this.state.stage === 2 && this.state.stripe && this.state.bankStatus === 'SavedBankNotVerified' &&
+            <VerifyBank
+              bankId={this.state.bankId}
+              setVerified={(verified) => this.setState({verified: verified, stage: 3, maxStage: 3})}
+            />
           }
-          { this.state.stage === 3 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && this.state.verified &&
+          { this.state.stage === 2 && this.state.stripe && this.state.bankStatus === 'SavedBankVerified' && this.state.bankId && this.state.verified &&
+            <ChargeBank
+              amount={this.props.amount}
+              bankId={this.state.bankId}
+              description={this.props.description}
+              // cardLast4={this.state.cardLast4}
+              cancelToken={this.cancelToken}
+              cancelAxios={() => {this.cancelToken.cancel()}}
+            />
+          }
+          { this.state.stage === 3 && this.state.stripe && this.state.bankStatus === 'SavedBankNotVerified' && this.state.bankId && this.state.verified &&
+            <ChargeBank
+              amount={this.props.amount}
+              bankId={this.state.bankId}
+              description={this.props.description}
+              // cardLast4={this.state.cardLast4}
+              cancelToken={this.cancelToken}
+              cancelAxios={() => {this.cancelToken.cancel()}}
+            />
+          }
+          { this.state.stage === 3 && this.state.stripe && this.state.bankStatus === null &&
+            <VerifyBank
+              bankId={this.state.bankId}
+              setVerified={(verified) => this.setState({verified: verified, stage: 4, maxStage: 4})}
+            />
+          }
+          { this.state.stage === 4 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && !this.state.verified &&
+            <p>Unable to verify bank.</p>
+          }
+          { this.state.stage === 4 && this.state.stripe && this.state.creditOrBank === 'Bank' && this.state.bankId && this.state.verified &&
             <ChargeBank
               amount={this.props.amount}
               bankId={this.state.bankId}

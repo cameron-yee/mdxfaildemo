@@ -17,11 +17,17 @@ const Stepper = class extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.creditOrBank !== this.props.creditOrBank) {
+    if(prevProps.creditOrBank !== this.props.creditOrBank || prevProps.bankStatus !== this.props.bankStatus) {
       if(this.props.creditOrBank === 'Credit') {
         this.setState({steps: ["Select Payment", "Select Card", "Pay"], number_of_steps: 3})
       } else if(this.props.creditOrBank === 'Bank') {
-        this.setState({steps: ["Select Payment", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 4})
+        if(this.props.bankStatus === null) {
+          this.setState({steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 5})
+        } else if(this.props.bankStatus === 'SavedBankNotVerified') {
+          this.setState({steps: ["Select Payment", "Select Bank", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 4})
+        } else if(this.props.bankStatus === 'SavedBankVerified') {
+          this.setState({steps: ["Select Payment", "Select Bank", "Pay"], number_of_steps: 3})
+        }
       }
     }
   }
