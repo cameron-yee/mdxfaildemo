@@ -84,6 +84,8 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 <a href="http://www.browndailyherald.com/2014/02/24/researchers-urge-increased-environmental-science-education/" target="_blank" rel="noopener noreferrer">The Brown Daily Herald&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
+<a href="https://www.bostonglobe.com/ideas/2016/11/03/law-firm-bonuses-influenced-personal-politics/39GjiHF8pXQkWLR0vzCvdJ/story.html" target="_blank" rel="noopener noreferrer">Boston Globe&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 90%;">
