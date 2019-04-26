@@ -68,21 +68,21 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 **Media Mentions -**
 
-<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">Education Week&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">Education Week&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://www.learningandthebrain.com/blog/how-can-we-encourage-girls-to-pursue-stem-disciplines/" target="_blank" rel="noopener noreferrer">Learning & the Brain&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://www.learningandthebrain.com/blog/how-can-we-encourage-girls-to-pursue-stem-disciplines/" target="_blank" rel="noopener noreferrer">Learning & the Brain&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://www.independent.co.uk/news/science/school-racism-children-textbooks-race-prejudice-education-sickle-cell-africa-a8780296.html" target="_blank" rel="noopener noreferrer">Independent&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://www.independent.co.uk/news/science/school-racism-children-textbooks-race-prejudice-education-sickle-cell-africa-a8780296.html" target="_blank" rel="noopener noreferrer">Independent&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://www.theatlantic.com/science/archive/2018/09/teaching-race-high-school-biology-textbooks/570319/" target="_blank" rel="noopener noreferrer">The Atlantic&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://www.theatlantic.com/science/archive/2018/09/teaching-race-high-school-biology-textbooks/570319/" target="_blank" rel="noopener noreferrer">The Atlantic&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://www.abc.net.au/radionational/programs/scienceshow/how-racial-prejudice-can-easily-appear-in-classrooms/10928726" target="_blank" rel="noopener noreferrer">The ABC&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://www.abc.net.au/radionational/programs/scienceshow/how-racial-prejudice-can-easily-appear-in-classrooms/10928726" target="_blank" rel="noopener noreferrer">The ABC&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://abcmedia.akamaized.net/rn/podcast/2019/03/ssw_20190323_1205.mp3" target="_blank" rel="noopener noreferrer">The ABC Media&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://abcmedia.akamaized.net/rn/podcast/2019/03/ssw_20190323_1205.mp3" target="_blank" rel="noopener noreferrer">The ABC Media&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="https://www.dailymail.co.uk/health/article-6710147/Scientists-say-race-does-not-determine-health-doctors-say-fueling-racial-prejudice.html?fbclid=IwAR2KQWqynUd7r3ulSC0S8IfogqNceaMfYJWK8DUEyidj7nPeVhhpwLLKXys" target="_blank" rel="noopener noreferrer">Daily Mail&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="https://www.dailymail.co.uk/health/article-6710147/Scientists-say-race-does-not-determine-health-doctors-say-fueling-racial-prejudice.html?fbclid=IwAR2KQWqynUd7r3ulSC0S8IfogqNceaMfYJWK8DUEyidj7nPeVhhpwLLKXys" target="_blank" rel="noopener noreferrer">Daily Mail&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
-<a href="http://www.browndailyherald.com/2014/02/24/researchers-urge-increased-environmental-science-education/" target="_blank" rel="noopener noreferrer">The Brown Daily Herald&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a><br />
+<a href="http://www.browndailyherald.com/2014/02/24/researchers-urge-increased-environmental-science-education/" target="_blank" rel="noopener noreferrer">The Brown Daily Herald&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <a href="https://www.bostonglobe.com/ideas/2016/11/03/law-firm-bonuses-influenced-personal-politics/39GjiHF8pXQkWLR0vzCvdJ/story.html" target="_blank" rel="noopener noreferrer">Boston Globe&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
