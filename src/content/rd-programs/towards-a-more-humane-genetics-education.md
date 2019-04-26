@@ -66,7 +66,7 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 8. Donovan, B. M. (2014). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/tea.21138" target="_blank" rel="noopener noreferrer">Playing with fire? The impact of the hidden curriculum in school genetics on essentialist conceptions of race&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>. _Journal of Research in Science Teaching_, 51(4), 462–496.
 9. Donovan, B. M., Moreno Mateos, D., Osborne, J. F., & Bisaccio, D. J. (2014). <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001760" target="_blank" rel="noopener noreferrer">Revising the Economic Imperative for US STEM Education&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>. PLoS Biology, 12(1), e1001760.
 
-**Media Mentions**
+**Media Mentions -**
 
 <a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">Education Week&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
@@ -79,6 +79,8 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 <a href="https://www.abc.net.au/radionational/programs/scienceshow/how-racial-prejudice-can-easily-appear-in-classrooms/10928726" target="_blank" rel="noopener noreferrer">The ABC&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <a href="https://abcmedia.akamaized.net/rn/podcast/2019/03/ssw_20190323_1205.mp3" target="_blank" rel="noopener noreferrer">The ABC Media&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+
+<a href="https://www.dailymail.co.uk/health/article-6710147/Scientists-say-race-does-not-determine-health-doctors-say-fueling-racial-prejudice.html?fbclid=IwAR2KQWqynUd7r3ulSC0S8IfogqNceaMfYJWK8DUEyidj7nPeVhhpwLLKXys" target="_blank" rel="noopener noreferrer">Daily Mail&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
