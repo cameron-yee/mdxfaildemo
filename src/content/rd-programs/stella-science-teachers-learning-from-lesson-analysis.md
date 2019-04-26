@@ -32,6 +32,8 @@ page: rd-programs
 ---
 import 'global-scss/index.scss'
 
+import { Link } from 'gatsby'
+
 STeLLA is a nationally-recognized program for teacher professional learning—developed from a 16-year line of research at BSCS Science Learning.
 
 **The STeLLA Approach**
@@ -118,7 +120,7 @@ See our growing line of research at-a-glance:
       <div class="timeline-content">
         <h2>STeLLA CO<sup>2</sup></h2>
         <h4>2017</h4>
-        <p>BSCS is partnering with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley. This is the first STeLLA project designed to collaborate with university faculty and cooperating teachers educating preservice middle and high school science teachers. The program has the potential to impact one-third of all new secondary science educators certified in Colorado annually. Research is being conducted to develop a new understanding of the benefits and challenges associated with bringing STeLLA to this new context. And ultimately, research will explore STeLLA’s effectiveness on first-year practice outcomes for preservice secondary science teachers.</p>
+        <p>BSCS is partnering with University of Colorado, Boulder; University of Colorado, Colorado Springs; and University of Northern Colorado, Greeley. This is the first STeLLA project designed to collaborate with university faculty and cooperating teachers educating preservice middle and high school science teachers. The program has the potential to impact one-third of all new secondary science educators certified in Colorado annually. Research is being conducted to develop a new understanding of the benefits and challenges associated with bringing STeLLA to this new context. And ultimately, research will explore STeLLA’s effectiveness on first-year practice outcomes for preservice secondary science teachers. <Link to="/our-work/news/3-million-federal-grant-to-impact-colorado-science-teacher-preparation">Learn more here.</Link></p>
       </div>
     </div>
   </div>

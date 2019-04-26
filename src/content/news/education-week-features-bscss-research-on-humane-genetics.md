@@ -23,7 +23,7 @@ sidebarContacts:
       text: ''
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-announcementOrCoverage: 'Coverage'
+announcementOrCoverage: Coverage
 sortOrder: 3
 page: news
 ---
@@ -39,6 +39,5 @@ But that simplicity has a downside.
 
 In a series of studies, researchers led by Brian Donovan of BSCS Science Learning found that it leads students to overestimate how much human beings actually differ genetically Students whose biology classes associated specific diseases with race were significantly more likely to consider people of different races to be more genetically different, and to use genetics to explain differences in academic achievement between students of different races...
 
-Read the full article on edweek.org.
-
+Read the full article on <a href="http://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">edweek.org&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 - - -

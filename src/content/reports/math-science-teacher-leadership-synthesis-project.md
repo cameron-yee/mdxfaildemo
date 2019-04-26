@@ -56,7 +56,7 @@ import nsfLogo from 'images/project-logos/nsf-logo.svg'
 
 <br />
 
-The <strong>Developing math/science teacher leadership: A consensus approach to evaluating program quality</strong> project is funded by the National Science Foundation (ECR 1534698). The purpose of this synthesis project is to build consensus on the key attributes of high-quality math/science teacher leadership development programs. High quality teacher leadership programs are those that prepare and support teachers to positively impact math/science teaching and learning beyond their own classrooms. The three major objectives of the project are to:
+The purpose of this synthesis project is to build consensus on the key attributes of high-quality math/science teacher leadership development programs. High quality teacher leadership programs are those that prepare and support teachers to positively impact math/science teaching and learning beyond their own classrooms. The three major objectives of the project are to:
 
 <Card className="bg-light" style={{ marginBottom: "3rem" }}>
   <Card.Body>
@@ -123,52 +123,21 @@ The <strong>Developing math/science teacher leadership: A consensus approach to 
   </Card.Body>
 </Card>
 
-<div style={{ fontSize: '1.8rem', marginBottom: '3rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: '1.8rem', marginBottom: '3rem' }}><p>This project is in partnership with</p></div>
 
 <div className="d-flex justify-content-md-center">
-  <a className="p-2" href="http://www.edc.org" target="_blank" rel="noopener noreferrer">
-    <img
-      src={edcLogo}
-      alt="Education Development Center logo"
-      style={{
-        display: 'block',
-        height: '75px',
-        margin: '0 auto'
-      }}
-    />
-  </a>
-
-  <a className="p-2" href="https://knowlesteachers.org" target="_blank" rel="noopener noreferrer">
-    <img
-      src={kstfLogo}
-      alt="Knowles Teacher Initiative logo"
-      style={{
-        display: 'block',
-        height: '65px',
-        margin: '.15rem auto 0 auto'
-      }}
-    />
-  </a>
+  <a className="p-2" href="http://www.edc.org" target="_blank" rel="noopener noreferrer">EDC</a>
+  <a className="p-2" href="https://knowlesteachers.org" target="_blank" rel="noopener noreferrer">Knowles Teacher Initiative</a>
 </div>
 
 <br />
 <hr />
 <br />
 
-<div style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}><p>Evaluated by</p></div>
+<div style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}><p>This project was evaluated by</p></div>
 
 <div className="d-flex justify-content-md-center mb-3">
-  <a href="http://www.horizon-research.com" target="_blank" rel="noopener noreferrer">
-    <img
-      src={hriLogo}
-      alt="Horizon Research, Inc. logo"
-      style={{
-        display: 'block',
-        height: '112.5px',
-        margin: '0 auto'
-      }}
-    />
-  </a>
+  <a href="http://www.horizon-research.com" target="_blank" rel="noopener noreferrer">Horizon Research, Inc. (HRI)</a>
 </div>
 
 <hr style="margin-top: 3rem; margin-bottom: 3rem;" />

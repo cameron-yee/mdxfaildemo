@@ -181,7 +181,7 @@ const GeneralContactFormModal = class extends Component {
           <Row>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>First name</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> First name</Form.Label>
                 <Form.Control
                   className="form-control"
                   id="gc-first-name-input"
@@ -199,7 +199,7 @@ const GeneralContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Last name</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Last name</Form.Label>
                 <Form.Control
                   className="form-control"
                   id="gc-last-name-input"
@@ -217,7 +217,7 @@ const GeneralContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Email</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Email</Form.Label>
                 <Form.Control
                   className="form-control"
                   id="gc-email-input"
@@ -252,7 +252,7 @@ const GeneralContactFormModal = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label>Message</Form.Label>
+                <Form.Label><span style={{color: 'red'}}>*</span> Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   id="gc-message-input"

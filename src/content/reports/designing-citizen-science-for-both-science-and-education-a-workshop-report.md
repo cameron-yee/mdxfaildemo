@@ -61,7 +61,7 @@ Refer to our <Link to="/our-work/news/new-bscs-report-presents-guidelines-for-de
   </Card.Body>
 </Card>
 
-<div style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}><p>In partnership with</p></div>
+<div style={{ fontSize: "1.8rem", marginBottom: '1.5rem' }}><p>This workshop is in partnership with</p></div>
 
 <div className="d-flex justify-content-center">
   <div className="m-auto">
