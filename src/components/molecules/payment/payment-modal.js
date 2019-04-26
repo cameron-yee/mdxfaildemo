@@ -64,7 +64,12 @@ const PaymentModal = class extends Component {
 
   getCustomerDefaultCard = (cancelToken) => {
     retrieveStripeCustomer(cancelToken).then(response => {
-      if(response !== undefined && response.status === 200 && !response.data.errors) {
+      if(
+        response !== undefined &&
+        response.status === 200 &&
+        !response.data.errors &&
+        response.data.data.retrieveStripeCustomer !== null
+      ) {
         this.setState({customerDefaultCard: response.data.data.retrieveStripeCustomer.default_source})
       }
     })

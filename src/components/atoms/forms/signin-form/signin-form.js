@@ -7,8 +7,9 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
-import Modal from 'react-bootstrap/Modal'
 import Row from 'react-bootstrap/Row'
+
+import signin from '../../../../queries/bscsapi/signin'
 
 const SigninForm = class extends Component {
   constructor(props) {
@@ -70,51 +71,27 @@ const SigninForm = class extends Component {
     input_elem.value === '' ? this.setState({password: undefined}) : this.setState({password: input_elem.value})
   }
 
-  blurFirstName = (e) => {
-    e.preventDefault()
-    this.setState({password_touched: true})
-  }
-
-
-  login = (e) => {
+  handleSignin = (e) => {
     e.preventDefault()
     this.setState({loading: true})
 
-    axios({
-      // url: 'http://127.0.0.1:8888/post-contact-form',
-      url: 'http://127.0.0.1:4000',
-      method: 'post',
-      cancelToken: this.cancelToken.token,
-      withCredentials: true,
-      data: {
-        query: `
-          mutation {
-            login(email: "${this.state.email}", password: "${this.state.password}") {
-              user {
-                id,
-                email
-              }
-            }
-          }
-          `
-      }
-    })
-    .then(response => {
-      console.log(response);
-      if(response.status === 200 && !response.data.errors) {
-          this.setState({notificationShow: true, loading: false, sent: true});
-          this.props.setSignedIn()
-      }
-    })
-    .catch(error => {
-      if(axios.isCancel(error)) {
-        console.log(`Request canceled: ${error}`);
-        this.setState({errors: true, showErrorNotification: true});
-      } else {
-        console.log(error);
-        this.setState({errors: true, showErrorNotification: true});
-      }
-    })
+    signin(this.cancelToken, this.state.email, this.state.password)
+      .then(response => {
+        console.log(response);
+        if(response.status === 200 && !response.data.errors) {
+            this.setState({notificationShow: true, loading: false, sent: true});
+            this.props.setSignedIn()
+        }
+      })
+      .catch(error => {
+        if(axios.isCancel(error)) {
+          console.log(`Request canceled: ${error}`);
+          this.setState({errors: true, showErrorNotification: true});
+        } else {
+          console.log(error);
+          this.setState({errors: true, showErrorNotification: true});
+        }
+      })
   }
 
   render() {
@@ -177,13 +154,19 @@ const SigninForm = class extends Component {
                   && (!this.state.email
                   || !this.state.password)
                   &&
-                  <Button variant="outline-primary" disabled>Signed In</Button>
+                  <div className="d-flex">
+                    <Button className="m-2" variant="outline-primary" disabled>Sign In</Button>
+                    <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                  </div>
                 }
                 { !this.state.errors && !this.state.loading && !this.state.sent
                   && this.state.email
                   && this.state.password
                   &&
-                  <Button variant="outline-primary" onClick={this.login}>Login</Button>
+                  <div className="d-flex p-2">
+                    <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleSignin(e)}>Sign In</Button>
+                    <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                  </div>
                 }
                 { !this.state.errors && this.state.loading &&
                   <Button variant="outline-success" disabled>

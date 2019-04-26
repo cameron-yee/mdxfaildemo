@@ -16,15 +16,15 @@ class SignOut extends Component {
     }
   }
 
-  handleSignout = () => {
-    signout(this.cancelToken)
+  handleSignout = async (e) => {
+    await signout(this.cancelToken)
     this.props.signOut()
   }
 
   render() {
     return (
       <React.Fragment>
-        <span onClick={this.handleSignout}>{this.props.children}</span>
+        <span onClick={(e) => this.handleSignout(e)}>{this.props.children}</span>
       </React.Fragment>
     )
   }
