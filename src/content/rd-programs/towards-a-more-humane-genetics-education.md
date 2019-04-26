@@ -68,7 +68,7 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 **Media Mentions**
 
-<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">_Education Week_&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">Education Week&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <a href="https://www.learningandthebrain.com/blog/how-can-we-encourage-girls-to-pursue-stem-disciplines/" target="_blank" rel="noopener noreferrer">Learning & the Brain&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
