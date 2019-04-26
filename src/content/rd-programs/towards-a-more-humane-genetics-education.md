@@ -78,6 +78,8 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 <a href="https://www.abc.net.au/radionational/programs/scienceshow/how-racial-prejudice-can-easily-appear-in-classrooms/10928726" target="_blank" rel="noopener noreferrer">The ABC&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
+<a href="https://abcmedia.akamaized.net/rn/podcast/2019/03/ssw_20190323_1205.mp3" target="_blank" rel="noopener noreferrer">The ABC Media&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
   <div style="width: 90%;">
