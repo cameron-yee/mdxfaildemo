@@ -68,9 +68,13 @@ Watch the American Association for the Advancement of Science (AAAS) 2019 briefi
 
 **Media Mentions**
 
-<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">_Education Week_&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+<a href="https://blogs.edweek.org/edweek/inside-school-research/2019/03/preventing_racism_science_classes_.html" target="_blank" rel="noopener noreferrer">Education Week&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <a href="https://www.learningandthebrain.com/blog/how-can-we-encourage-girls-to-pursue-stem-disciplines/" target="_blank" rel="noopener noreferrer">Learning & the Brain&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+
+<a href="https://www.independent.co.uk/news/science/school-racism-children-textbooks-race-prejudice-education-sickle-cell-africa-a8780296.html" target="_blank" rel="noopener noreferrer">Independent&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
+
+<a href="https://www.theatlantic.com/science/archive/2018/09/teaching-race-high-school-biology-textbooks/570319/" target="_blank" rel="noopener noreferrer">The Atlantic&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a>
 
 <hr style="margin-top: 3rem; margin-bottom: 2rem;" />
 <div class="d-flex justify-content-center">
