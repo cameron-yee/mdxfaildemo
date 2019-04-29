@@ -25,9 +25,7 @@ sidebarContacts:
       person: Ashley Whitaker
 sidebarContactsText: 'For more information, please contact Ashley Whitaker.'
 sidebarContactsTitle: Questions?
-sidebarContactsAlt: >-
-  White coffee mug with the text "BSCS Science Learning" next to colored markers
-  and pens on a table
+sidebarContactsAlt: ''
 sidebarContactsImage: ''
 sortOrder: 2
 page: upcoming-programs
