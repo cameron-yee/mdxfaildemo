@@ -57,13 +57,16 @@ export default class Header extends Component {
             <div className="p-2 align-self-center d-none d-sm-inline-block">
               {!this.props.signedin &&
                 <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
-                  <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                  <Button variant="outline-primary btn-sm" className="slide m-2">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
                 </SigninFormLaunchModal>
               }
               {this.props.signedin &&
-                <SignOut signOut={this.props.signOut}>
-                  <Button variant="outline-primary btn-sm" className="slide">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
-                </SignOut>
+                <React.Fragment>
+                  <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
+                  <SignOut signOut={this.props.signOut}>
+                    <Button variant="outline-primary btn-sm" className="slide m-2">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                  </SignOut>
+                </React.Fragment>
               }
             </div>
           </div>

@@ -9,6 +9,7 @@ import Spinner from 'react-bootstrap/Spinner'
 
 import ChargeNewCard from './card/charge-new-card'
 import SigninForm from '../../../components/atoms/forms/signin-form/signin-form'
+import RegistrationForm from '../../../components/atoms/forms/signin-form/registration-form'
 
 import ChargeBank from './bank/charge-bank'
 import ChargeCard from './card/charge-card'
@@ -30,8 +31,9 @@ const PaymentModal = class extends Component {
       // cardLast4: null,
       creditOrBank: null,
       bankStatus: null,
-      customerDefaultCard: null,
+      customerDefaultCard: undefined,
       maxStage: 0,
+      register: false,
       stage: 0,
       stripe: null,
       verified: false
@@ -49,7 +51,7 @@ const PaymentModal = class extends Component {
   }
 
   componentWillUpdate(prevProps, prevState) {
-    if(this.props.signedIn && this.state.customerDefaultCard === null) {
+    if(prevProps.signedIn !== this.props.signedIn) {
       this.getCustomerDefaultCard(this.cancelToken)
     }
   }
@@ -67,10 +69,13 @@ const PaymentModal = class extends Component {
       if(
         response !== undefined &&
         response.status === 200 &&
-        !response.data.errors &&
-        response.data.data.retrieveStripeCustomer !== null
+        !response.data.errors
       ) {
-        this.setState({customerDefaultCard: response.data.data.retrieveStripeCustomer.default_source})
+        if(response.data.data.retrieveStripeCustomer !== null) {
+          this.setState({customerDefaultCard: response.data.data.retrieveStripeCustomer.default_source})
+        } else {
+          this.setState({customerDefaultCard: null})
+        }
       }
     })
   }
@@ -160,8 +165,11 @@ const PaymentModal = class extends Component {
               }
             </Modal.Title>
           </div>
-          {this.state.stage === 0 && !this.props.signedIn &&
-            <SigninForm setSignedIn={this.props.setSignedIn} />
+          {this.state.stage === 0 && !this.props.signedIn && !this.state.register &&
+            <SigninForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+          }
+          {this.state.stage === 0 && !this.props.signedIn && this.state.register &&
+            <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
           }
           {this.state.stage === 0 && this.props.signedIn &&
             <CreditOrBank setCreditOrBank={(credit_or_bank) => {this.setCreditOrBank(credit_or_bank)}} />
@@ -180,6 +188,7 @@ const PaymentModal = class extends Component {
               // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
               setCardId={(card_id) => this.setState({cardId: card_id, stage: 2, maxStage: 2})}
               defaultCard={this.state.customerDefaultCard}
+              allowNew={true}
             />
           }
           { this.state.stage === 2 && this.state.stripe && this.state.bankStatus === null && this.state.creditOrBank === 'Bank' &&

@@ -23,7 +23,11 @@ const SelectCard = class extends Component {
   getUserCards = async () => {
     let cards = await retrieveStripeCustomerCards(this.cancelToken)
     console.log(cards)
-    this.setState({cards: cards})
+    if(cards.data.data.retrieveStripeCustomerCards !== null) {
+      this.setState({cards: cards})
+    } else {
+      this.setState({cards: null})
+    }
   }
 
   componentWillUnmount() {
@@ -55,16 +59,16 @@ const SelectCard = class extends Component {
   render() {
     return (
       <React.Fragment>
-        {!this.state.cards &&
+        {!this.state.cards && this.state.cards !== null &&
           <div className="d-flex justify-content-center">
             <Spinner animation="grow" variant="primary" />
           </div>
         }
-        {this.state.cards &&
+        {(this.state.cards || this.state.cards === null) &&
           <React.Fragment>
             <Form onSubmit={(e) => this.setCardId(e)}>
               <Form.Group>
-                {
+                { this.state.cards !== null &&
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
                     console.log(this.props.defaultCard)
                     console.log(index)
@@ -99,7 +103,7 @@ const SelectCard = class extends Component {
                     }
                   })
                 }
-                {!this.props.defaultCard &&
+                {!this.props.defaultCard && this.props.allowNew &&
                   <Form.Check
                     custom
                     type="radio"
@@ -109,7 +113,7 @@ const SelectCard = class extends Component {
                     name="customer-cards"
                   />
                 }
-                {this.props.defaultCard &&
+                {this.props.defaultCard && this.props.allowNew &&
                   <Form.Check
                     custom
                     type="radio"

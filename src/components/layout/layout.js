@@ -48,8 +48,18 @@ const Layout = class extends Component {
   }
 
   checkSignInStatus = async () => {
-    let status = await checkIfUserSignedIn(this.cancelToken)
-    this.setState({signedIn: status})
+    let user_state = await checkIfUserSignedIn(this.cancelToken)
+    this.setState({signedIn: user_state})
+    if(this.props.setSignedIn) {
+      this.props.setSignedIn(user_state)
+    }
+  }
+
+  setSignedIn = (user_state) => {
+    this.setState({ signedIn: user_state })
+    if(this.props.setSignedIn) {
+      this.props.setSignedIn(user_state)
+    }
   }
 
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
@@ -96,10 +106,6 @@ const Layout = class extends Component {
     this.setState({ amount: description })
   }
 
-  setSignedIn = (user_state) => {
-    this.setState({ signedIn: user_state })
-  }
-
   componentDidUpdate(prevProps) {
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
       this.setState({modalShowGeneral: true})
@@ -116,6 +122,10 @@ const Layout = class extends Component {
     if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
       this.setState({modalShowPayment: true})
     }
+
+    // if(this.props.setSignedIn && prevProps.setSignedIn !== this.props.signedIn) {
+    //   this.setState({signedIn: true})
+    // }
   }
 
   render() {
