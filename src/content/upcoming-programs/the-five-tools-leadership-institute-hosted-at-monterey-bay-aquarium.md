@@ -13,23 +13,22 @@ cardDescription: >-
   classroom assessment based on the new science standards and Framework for K-12
   Science Education.
 sidebarText: ''
-sidebarTitle: Registration is open
+sidebarTitle: ''
 image: /assets/coffee-mug.jpg
 alt: >-
   White coffee mug with the text "BSCS Science Learning" next to colored markers
   and pens on a table
-sidebarURLs:
-  - resource:
-      buttonText: Sign up
-      external: true
-      url: >-
-        https://survey.constantcontact.com/survey/a07efvun049jp00q45h/a011mjt64a7l7/questions
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
       person: Ashley Whitaker
 sidebarContactsText: 'For more information, please contact Ashley Whitaker.'
 sidebarContactsTitle: Questions?
+sidebarContactsAlt: >-
+  White coffee mug with the text "BSCS Science Learning" next to colored markers
+  and pens on a table
+sidebarContactsImage: ''
 sortOrder: 2
 page: upcoming-programs
 ---
