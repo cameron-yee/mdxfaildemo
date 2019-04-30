@@ -15,30 +15,48 @@ import './charge-new-card.scss'
 import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createCustomerCard from '../../../../queries/bscsapi/stripe/create-customer-card';
 
+/* ChargeNewCard functions
+*
+* constructor(props) {...}
+* componentWillUnmount() {}
+* blurAddress = (e) => {...}
+* blurCity = (e) => {...}
+* blurCustomerState = (e) => {...}
+* blurFirstName = (e) => {...}
+* blurLastName = (e) => {...}
+* blurZipcode = (e) => {...}
+* createStripeToken = async () => {...}
+* setAddress = (e) => {...}
+* setCity = (e) => {...}
+* setCustomerState = (e) => {...}
+* setFirstName = (e) => {...}
+* setLastName = (e) => {...}
+* setZipcode = (e) => {...}
+* submit = async (e) => {...}
+*
+*/
 
 const ChargeNewCard = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      complete: false,
-      firstname: undefined,
-      firstname_touched: false,
-      lastname: undefined,
-      lastname_touched: false,
       address: undefined,
       address_touched: false,
       city: undefined,
       city_touched: false,
+      country: 'US',
+      firstname: undefined,
+      firstname_touched: false,
+      lastname: undefined,
+      lastname_touched: false,
       state: undefined,
       state_touched: false,
       zipcode: undefined,
       zipcode_touched: false,
-      country: 'US',
-      // country_touched: false,
-      //
-      loading: false,
+
       errors: false,
-      successfullyCharged: false
+      loading: false,
+      successfully_charged: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -61,12 +79,45 @@ const ChargeNewCard = class extends Component {
     }
   }
 
+//Lifecycle hooks
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
     } catch(error) {
       console.log(error);
     }
+  }
+//End lifecycle hooks
+
+//Custom functions
+  blurAddress = (e) => {
+    e.preventDefault()
+    this.setState({address_touched: true})
+  }
+
+  blurCity = (e) => {
+    e.preventDefault()
+    this.setState({city_touched: true})
+  }
+
+  blurCustomerState = (e) => {
+    e.preventDefault()
+    this.setState({state_touched: true})
+  }
+
+  blurFirstName = (e) => {
+    e.preventDefault()
+    this.setState({firstname_touched: true})
+  }
+
+  blurLastName = (e) => {
+    e.preventDefault()
+    this.setState({lastname_touched: true})
+  }
+
+  blurZipcode = (e) => {
+    e.preventDefault()
+    this.setState({zipcode_touched: true})
   }
 
   createStripeToken = async () => {
@@ -92,64 +143,10 @@ const ChargeNewCard = class extends Component {
     return token.token.id
   }
 
-  submit = async (e) => {
-    e.preventDefault()
-    let token_id = await this.createStripeToken()
-
-    this.setState({loading: true})
-
-    console.log(token_id)
-    createCustomerCard(this.props.cancelToken, token_id).then(response => {
-      if(response.status === 200 && !response.data.errors) {
-        createCharge(this.props.cancelToken, this.props.amount, response.data.data.createStripeCustomerCard.id, this.props.description).then(response => {
-          if(response.status === 200 && !response.data.errors) {
-            this.setState({successfullyCharged: true, loading: false})
-            console.log(response)
-          } else {
-            this.setState({errors: true, loading: false })
-            console.log(response)
-          }
-        })
-      } else {
-        this.setState({errors: true, loading: false })
-        console.log(response)
-      }
-    }).catch(error => {
-      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
-    })
-  }
-
-  setFirstName = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('cc-first-name-input');
-    input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
-  }
-
-  blurFirstName = (e) => {
-    e.preventDefault()
-    this.setState({firstname_touched: true})
-  }
-
-  setLastName = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('cc-last-name-input');
-    input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
-  }
-
-  blurLastName = (e) => {
-    e.preventDefault()
-    this.setState({lastname_touched: true})
-  }
-
   setAddress = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('cc-address-input');
     input_elem.value === '' ? this.setState({address: undefined}) : this.setState({address: input_elem.value})
-  }
-
-  blurAddress = (e) => {
-    e.preventDefault()
-    this.setState({address_touched: true})
   }
 
   setCity = (e) => {
@@ -158,20 +155,22 @@ const ChargeNewCard = class extends Component {
     input_elem.value === '' ? this.setState({city: undefined}) : this.setState({city: input_elem.value})
   }
 
-  blurCity = (e) => {
-    e.preventDefault()
-    this.setState({city_touched: true})
-  }
-
   setCustomerState = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('cc-state-input');
     input_elem.value === '' ? this.setState({state: undefined}) : this.setState({state: input_elem.value})
   }
 
-  blurState = (e) => {
+  setFirstName = (e) => {
     e.preventDefault()
-    this.setState({state_touched: true})
+    let input_elem = document.getElementById('cc-first-name-input');
+    input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
+  }
+
+  setLastName = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('cc-last-name-input');
+    input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
   }
 
   setZipcode = (e) => {
@@ -180,26 +179,36 @@ const ChargeNewCard = class extends Component {
     input_elem.value === '' ? this.setState({zipcode: undefined}) : this.setState({zipcode: input_elem.value})
   }
 
-  blurZipcode = (e) => {
+  submit = async (e) => {
+    let token_id
     e.preventDefault()
-    this.setState({zipcode_touched: true})
+
+    this.setState({loading: true})
+
+    token_id = await this.createStripeToken()
+
+    createCustomerCard(this.cancelToken, token_id).then(response => {
+      if(response.status === 200 && !response.data.errors) {
+        createCharge(this.cancelToken, this.props.amount, response.data.data.createStripeCustomerCard.id, this.props.description).then(response => {
+          if(response.status === 200 && !response.data.errors) {
+            this.setState({successfully_charged: true, loading: false})
+          } else {
+            this.setState({errors: true, loading: false })
+          }
+        })
+      } else {
+        this.setState({errors: true, loading: false })
+      }
+    }).catch(error => {
+      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+    })
   }
-
-  // setCountry = (e) => {
-  //   e.preventDefault()
-  //   let input_elem = document.getElementById('cc-country-input');
-  //   input_elem.value === '' ? this.setState({country: undefined}) : this.setState({country: input_elem.value})
-  // }
-
-  // blurCountry = (e) => {
-  //   e.preventDefault()
-  //   this.setState({country_touched: true})
-  // }
+//End custom functions
 
   render() {
     return (
       <React.Fragment>
-        {!this.state.loading && !this.state.successfullyCharged && !this.state.errors &&
+        {!this.state.loading && !this.state.successfully_charged && !this.state.errors &&
           <div className="checkout">
             <Form>
               <Row>
@@ -342,22 +351,22 @@ const ChargeNewCard = class extends Component {
             </Row>
 
             <div className="d-flex justify-content-center mt-3">
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyCharged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
+              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyCharged && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
+              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyCharged && this.state.firstname && this.state.lastname && this.state.country &&
+              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyCharged && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
+              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
             </div>
           </div>
         }
-        {this.state.errors && !this.state.successfullyCharged &&
+        {this.state.errors && !this.state.successfully_charged &&
           <div className="d-flex justify-content-center">
             <p>Error during charge.</p>
           </div>
@@ -368,7 +377,7 @@ const ChargeNewCard = class extends Component {
             <Spinner animation="grow" variant="primary" />
           </div>
         }
-        {!this.state.errors && this.state.successfullyCharged &&
+        {!this.state.errors && this.state.successfully_charged &&
           <div className="d-flex justify-content-center">
             <p>Charge Successful!</p>
           </div>

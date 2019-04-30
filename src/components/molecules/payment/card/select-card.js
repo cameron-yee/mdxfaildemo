@@ -1,33 +1,37 @@
 import React, { Component } from 'react'
-import Button from 'react-bootstrap/Button'
-import Form from 'react-bootstrap/Form'
 
 import axios from 'axios'
 
-import retrieveStripeCustomerCards from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
 import Spinner from 'react-bootstrap/Spinner'
+
+import retrieveStripeCustomerCards from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
+
+/* SelectCard functions
+*
+* constructor(props) {...}
+* componentDidMount() {...}
+* getUserCards = async () => {
+* getCardId = () => {...}
+* setCardId = (e) => {...}
+* render() {...}
+*
+*/
 
 const SelectCard = class extends Component {
   constructor(props) {
     super(props)
-    this.cancelToken = axios.CancelToken.source()
     this.state = {
       cards: null
     }
+
+    this.cancelToken = axios.CancelToken.source()
   }
 
+//Lifecycle hooks
   componentDidMount() {
     this.getUserCards()
-  }
-
-  getUserCards = async () => {
-    let cards = await retrieveStripeCustomerCards(this.cancelToken)
-    console.log(cards)
-    if(cards.data.data.retrieveStripeCustomerCards !== null) {
-      this.setState({cards: cards})
-    } else {
-      this.setState({cards: null})
-    }
   }
 
   componentWillUnmount() {
@@ -37,10 +41,25 @@ const SelectCard = class extends Component {
       console.log(error);
     }
   }
+//End lifecycle hooks
 
-  // getCardInfo = () => {
+//Custom functions
+  getUserCards = async () => {
+    let cards
+
+    cards = await retrieveStripeCustomerCards(this.cancelToken)
+    console.log(cards)
+    if(cards && cards.data.data.retrieveStripeCustomerCards !== null) {
+      this.setState({cards: cards})
+    } else {
+      this.setState({cards: null})
+    }
+  }
+
   getCardId = () => {
-    let cards = document.getElementsByName('customer-cards')
+    let cards
+
+    cards = document.getElementsByName('customer-cards');
     for(let i = 0; i < cards.length; i++) {
       if(cards[i].checked) {
         return cards[i].id
@@ -48,13 +67,15 @@ const SelectCard = class extends Component {
     }
   }
 
-  // setCardInfo = (e) => {
   setCardId = (e) => {
+    let card_id
+
     e.preventDefault()
 
-    let card_id = this.getCardId()
+    card_id = this.getCardId()
     this.props.setCardId(card_id)
   }
+//End custom functions
 
   render() {
     return (
@@ -70,7 +91,7 @@ const SelectCard = class extends Component {
               <Form.Group>
                 { this.state.cards !== null &&
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
-                    if(card.id === this.props.defaultCard) {
+                    if(card.id === this.props.default_card) {
                       return(
                         <React.Fragment key={`card-${index}`}>
                           <Form.Check
@@ -100,7 +121,7 @@ const SelectCard = class extends Component {
                     }
                   })
                 }
-                {!this.props.defaultCard && this.props.allowNew &&
+                {!this.props.default_card && this.props.allow_new &&
                   <Form.Check
                     custom
                     type="radio"
@@ -110,7 +131,7 @@ const SelectCard = class extends Component {
                     name="customer-cards"
                   />
                 }
-                {this.props.defaultCard && this.props.allowNew &&
+                {this.props.default_card && this.props.allow_new &&
                   <Form.Check
                     custom
                     type="radio"

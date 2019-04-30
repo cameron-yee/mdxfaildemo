@@ -55,12 +55,12 @@ export default class Header extends Component {
               <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
             </div> */}
             <div className="p-2 align-self-center d-none d-sm-inline-block">
-              {!this.props.signedin &&
+              {!this.props.signed_in &&
                 <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
                   <Button variant="outline-primary btn-sm" className="slide m-2">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
                 </SigninFormLaunchModal>
               }
-              {this.props.signedin &&
+              {this.props.signed_in &&
                 <React.Fragment>
                   <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
                   <SignOut signOut={this.props.signOut}>

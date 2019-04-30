@@ -42,7 +42,7 @@ const VerifyBank = class extends Component {
 
     this.setState({ loading: true})
 
-    verifyCustomerBank(this.cancelToken, this.props.bankId, (this.state.deposit_one_amount).toString(), (this.state.deposit_two_amount).toString()).then(response => {
+    verifyCustomerBank(this.cancelToken, this.props.bank_id, (this.state.deposit_one_amount).toString(), (this.state.deposit_two_amount).toString()).then(response => {
       if(response.status === 200 && !response.data.errors) {
         if(response.data.data.verifyStripeCustomerBank.status === 'verified') {
           this.setState({errors: false, loading: false, successfullyVerified: true })

@@ -9,16 +9,44 @@ import Spinner from 'react-bootstrap/Spinner'
 import Row from 'react-bootstrap/Row'
 
 import CountryDropdown from './country-dropdown'
-import './charge-new-card.scss'
 
 import updateCustomerCard from '../../../../queries/bscsapi/stripe/update-customer-card';
 
+import './charge-new-card.scss'
+
+/* UpdateCard functions
+*
+* constructor(props) {...}
+* componentWillUnmount() {...}
+* blurAddress = (e) => {...}
+* blurCity = (e) => {...}
+* blurCustomerState = (e) => {...}
+* blurExpMonth = (e) => {...}
+* blurExpYear = (e) => {...}
+* blurFirstName = (e) => {...}
+* blurLastName = (e) => {...}
+* blurZipcode = (e) => {...}
+* setAddress = (e) => {...}
+* setCity = (e) => {...}
+* setCustomerState = (e) => {...}
+* setExpMonth = (e) => {...}
+* setExpYear = (e) => {...}
+* setFirstName = (e) => {...}
+* setLastName = (e) => {...}
+* setZipcode = (e) => {...}
+* submit = async (e) => {...}
+*
+*/
 
 const UpdateCard = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      complete: false,
+      address: undefined,
+      address_touched: false,
+      city: undefined,
+      city_touched: false,
+      country: 'US',
       exp_month: undefined,
       exp_month_touched: false,
       exp_year: undefined,
@@ -27,42 +55,20 @@ const UpdateCard = class extends Component {
       firstname_touched: false,
       lastname: undefined,
       lastname_touched: false,
-      address: undefined,
-      address_touched: false,
-      city: undefined,
-      city_touched: false,
       state: undefined,
       state_touched: false,
       zipcode: undefined,
       zipcode_touched: false,
-      country: 'US',
-      // country_touched: false,
-      //
-      loading: false,
+
       errors: false,
-      successfullyUpdated: false
+      loading: false,
+      successfully_updated: false
     }
 
     this.cancelToken = axios.CancelToken.source()
-    this.style = {
-      base: {
-        color: "#7c8c8e",
-        fontWeight: 400,
-        // fontFamily: "Inter UI, Open Sans, Segoe UI, sans-serif",
-        fontFamily: "Open Sans, Adobe Blank, sans-serif",
-        fontSize: "1.2rem",
-        fontSmoothing: "antialiased",
-
-        "::placeholder": {
-          color: "#7c8c8e"
-        }
-      },
-      invalid: {
-        color: "#E25950"
-      }
-    }
   }
 
+//Lifecycle hooks
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
@@ -70,43 +76,32 @@ const UpdateCard = class extends Component {
       console.log(error);
     }
   }
+//End lifecycle hooks
 
-  submit = async (e) => {
+//Custom functions
+  blurAddress = (e) => {
     e.preventDefault()
-
-    this.setState({loading: true})
-
-    const name = this.state.firstname + ' ' + this.state.lastname
-
-    updateCustomerCard(
-      this.cancelToken,
-      this.props.cardId,
-      this.state.city,
-      this.state.country,
-      this.state.address,
-      this.state.state,
-      this.state.zipcode,
-      this.state.exp_month,
-      this.state.exp_year,
-      name
-    )
-      .then(response => {
-        if(response.status === 200 && !response.data.errors) {
-          this.setState({successfullyUpdated: true, loading: false})
-          console.log(response)
-        } else {
-          this.setState({errors: true, loading: false })
-          console.log(response)
-        }
-      }).catch(error => {
-        axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
-      })
+    this.setState({address_touched: true})
   }
 
-  setFirstName = (e) => {
+  blurCity = (e) => {
     e.preventDefault()
-    let input_elem = document.getElementById('uc-first-name-input');
-    input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
+    this.setState({city_touched: true})
+  }
+
+  blurCustomerState = (e) => {
+    e.preventDefault()
+    this.setState({state_touched: true})
+  }
+
+  blurExpMonth = (e) => {
+    e.preventDefault()
+    this.setState({exp_month_touched: true})
+  }
+
+  blurExpYear = (e) => {
+    e.preventDefault()
+    this.setState({exp_year_touched: true})
   }
 
   blurFirstName = (e) => {
@@ -114,15 +109,14 @@ const UpdateCard = class extends Component {
     this.setState({firstname_touched: true})
   }
 
-  setLastName = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('uc-last-name-input');
-    input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
-  }
-
   blurLastName = (e) => {
     e.preventDefault()
     this.setState({lastname_touched: true})
+  }
+
+  blurZipcode = (e) => {
+    e.preventDefault()
+    this.setState({zipcode_touched: true})
   }
 
   setAddress = (e) => {
@@ -131,42 +125,16 @@ const UpdateCard = class extends Component {
     input_elem.value === '' ? this.setState({address: undefined}) : this.setState({address: input_elem.value})
   }
 
-  blurAddress = (e) => {
-    e.preventDefault()
-    this.setState({address_touched: true})
-  }
-
   setCity = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('uc-city-input');
     input_elem.value === '' ? this.setState({city: undefined}) : this.setState({city: input_elem.value})
   }
 
-  blurCity = (e) => {
-    e.preventDefault()
-    this.setState({city_touched: true})
-  }
-
   setCustomerState = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('uc-state-input');
     input_elem.value === '' ? this.setState({state: undefined}) : this.setState({state: input_elem.value})
-  }
-
-  blurState = (e) => {
-    e.preventDefault()
-    this.setState({state_touched: true})
-  }
-
-  setZipcode = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('uc-zipcode-input');
-    input_elem.value === '' ? this.setState({zipcode: undefined}) : this.setState({zipcode: input_elem.value})
-  }
-
-  blurZipcode = (e) => {
-    e.preventDefault()
-    this.setState({zipcode_touched: true})
   }
 
   setExpMonth = (e) => {
@@ -179,26 +147,69 @@ const UpdateCard = class extends Component {
     this.setState({exp_month: input_elem_number})
   }
 
-  blurExpMonth = (e) => {
-    e.preventDefault()
-    this.setState({exp_month_touched: true})
-  }
-
   setExpYear = (e) => {
     e.preventDefault()
     let input_elem_number = parseInt(document.getElementById('uc-exp-year-input').value, 10);
     (isNaN(input_elem_number) || input_elem_number < 2019) ? this.setState({exp_year: undefined}) : this.setState({exp_year: input_elem_number})
   }
 
-  blurExpYear = (e) => {
+  setFirstName = (e) => {
     e.preventDefault()
-    this.setState({exp_year_touched: true})
+    let input_elem = document.getElementById('uc-first-name-input');
+    input_elem.value === '' ? this.setState({firstname: undefined}) : this.setState({firstname: input_elem.value})
   }
+
+  setLastName = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('uc-last-name-input');
+    input_elem.value === '' ? this.setState({lastname: undefined}) : this.setState({lastname: input_elem.value})
+  }
+
+  setZipcode = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('uc-zipcode-input');
+    input_elem.value === '' ? this.setState({zipcode: undefined}) : this.setState({zipcode: input_elem.value})
+  }
+
+  submit = async (e) => {
+    let name
+
+    e.preventDefault()
+
+    this.setState({loading: true})
+
+    name = this.state.firstname + ' ' + this.state.lastname
+
+    updateCustomerCard(
+      this.cancelToken,
+      this.props.card_id,
+      this.state.city,
+      this.state.country,
+      this.state.address,
+      this.state.state,
+      this.state.zipcode,
+      this.state.exp_month,
+      this.state.exp_year,
+      name
+    )
+      .then(response => {
+        if(response.status === 200 && !response.data.errors) {
+          this.setState({successfully_updated: true, loading: false})
+          console.log(response)
+        } else {
+          this.setState({errors: true, loading: false })
+          console.log(response)
+        }
+      }).catch(error => {
+        axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+      })
+  }
+//End custom functions
 
   render() {
     return (
       <React.Fragment>
-        {!this.state.loading && !this.state.successfullyUpdated && !this.state.errors &&
+        {!this.state.loading && !this.state.successfully_updated && !this.state.errors &&
           <div className="checkout">
             <p>Refill out card form to update card info.</p>
             <Form>
@@ -240,21 +251,6 @@ const UpdateCard = class extends Component {
                   </Form.Group>
                 </Col>
                 <Col xs={12}>
-                  {/* <Form.Group>
-                    <Form.Control
-                      className="form-control"
-                      id="uc-country-input"
-                      type="text"
-                      placeholder="Country"
-                      maxLength="50"
-                      onKeyUp={this.setCountry}
-                      onBlur={this.blurCountry}
-                      isInvalid={this.state.country_touched && (!this.state.country || this.state.country === '')}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please enter country.
-                    </Form.Control.Feedback>
-                  </Form.Group> */}
                   <CountryDropdown setCountry={(country_code) => this.setState({country: country_code})} />
                 </Col>
                 {this.state.country === 'US' &&
@@ -371,22 +367,22 @@ const UpdateCard = class extends Component {
               </Row>
             </Form>
             <div className="d-flex justify-content-center mt-3">
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyUpdated && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
+              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Update Card</Button>
               }
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyUpdated && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
+              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Update Card</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyUpdated && this.state.firstname && this.state.lastname && this.state.country &&
+              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && this.state.firstname && this.state.lastname && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Update Card</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfullyUpdated && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
+              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Update Card</Button>
               }
             </div>
           </div>
         }
-        {this.state.errors && !this.state.successfullyUpdated &&
+        {this.state.errors && !this.state.successfully_updated &&
           <div className="d-flex justify-content-center">
             <p>Error during update.</p>
           </div>
@@ -397,7 +393,7 @@ const UpdateCard = class extends Component {
             <Spinner animation="grow" variant="primary" />
           </div>
         }
-        {!this.state.errors && this.state.successfullyUpdated &&
+        {!this.state.errors && this.state.successfully_updated &&
           <div className="d-flex justify-content-center">
             <p>Card updated!</p>
           </div>

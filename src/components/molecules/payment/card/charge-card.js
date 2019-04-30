@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
 
+import axios from 'axios'
+
 import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 
+/* Charge Card functions
+*
+* constructor(props) {...}
+* componentWillUnmount() {...}
+* handleCharge = (e) => {...}
+* render() {...}
+*
+*/
 
 const ChargeCard = class extends Component {
   constructor(props) {
@@ -11,15 +21,21 @@ const ChargeCard = class extends Component {
       errors: false,
       successfullyCharged: false
     }
+
+    this.cancelToken = axios.CancelToken.source()
   }
 
   componentWillUnmount() {
-    this.props.cancelAxios()
+    try {
+      this.cancelToken.cancel()
+    } catch(error) {
+      console.log(error)
+    }
   }
 
   handleCharge = (e) => {
     e.preventDefault()
-    createCharge(this.props.cancelToken, this.props.amount, this.props.cardId, this.props.description).then(response => {
+    createCharge(this.cancelToken, this.props.amount, this.props.card_id, this.props.description).then(response => {
       if(response.status === 200 && !response.data.errors) {
         this.setState({successfullyCharged: true})
       } else {

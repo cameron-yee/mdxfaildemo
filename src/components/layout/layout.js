@@ -17,6 +17,29 @@ import axios from 'axios'
 
 import checkIfUserSignedIn from '../../utils/check-if-user-signed-in'
 
+//TODO: Reduce same functions into one function
+/* Layout functions
+*
+* constructor(props) {...}
+* componentDidMount() {...}
+* componentDidUpdate(prevProps) {...}
+* checkSignInStatus = async () => {...}
+* closeGeneral = () => {...}
+* closeJoinEmail = () => {...}
+* closePayment = () => {...}
+* closeSignin = () => {...}
+* launchGeneral = () => {...}
+* launchJoinEmail = () => {...}
+* launchPayment = () => {...}
+* launchSignin = () => {...}
+* setPaymentAmount = (amount) => {...}
+* setPaymentDescription = (description) => {...}
+* setPaymentProduct = (product) => {...}
+* setSignedIn = (user_state) => {...}
+* render() {...}
+*
+*/
+
 const Layout = class extends Component {
   constructor(props) {
     super(props)
@@ -28,7 +51,7 @@ const Layout = class extends Component {
       modalShowSignin: false,
       modalShowPayment: false,
       product: null,
-      signedIn: false
+      signed_in: false
     }
 
     //Need componentWillUnmount
@@ -47,65 +70,6 @@ const Layout = class extends Component {
     this.checkSignInStatus()
   }
 
-  checkSignInStatus = async () => {
-    let user_state = await checkIfUserSignedIn(this.cancelToken)
-    this.setState({signedIn: user_state})
-    if(this.props.setSignedIn) {
-      this.props.setSignedIn(user_state)
-    }
-  }
-
-  setSignedIn = (user_state) => {
-    this.setState({ signedIn: user_state })
-    if(this.props.setSignedIn) {
-      this.props.setSignedIn(user_state)
-    }
-  }
-
-  launchGeneral = () => { this.setState({modalShowGeneral: true}) }
-  closeGeneral = () => {
-    this.setState({modalShowGeneral: false})
-    if(this.props.closeGeneral) {
-      this.props.closeGeneral()
-    }
-  }
-
-  launchJoinEmail = () => { this.setState({modalShowJoinEmail: true}) }
-  closeJoinEmail = () => {
-    this.setState({modalShowJoinEmail: false})
-    if(this.props.closeJoinEmail) {
-      this.props.closeJoinEmail()
-    }
-  }
-
-  launchSignin = () => { this.setState({modalShowSignin: true}) }
-  closeSignin = () => {
-    this.setState({modalShowSignin: false})
-    if(this.props.closeSignin) {
-      this.props.closeSignin()
-    }
-  }
-
-  launchPayment = () => { this.setState({modalShowPayment: true}) }
-  closePayment = () => {
-    this.setState({modalShowPayment: false})
-    if(this.props.closePayment) {
-      this.props.closePayment()
-    }
-  }
-
-  setPaymentProduct = (product) => {
-    this.setState({ product: product })
-  }
-
-  setPaymentAmount = (amount) => {
-    this.setState({ amount: amount })
-  }
-
-  setPaymentDescription = (description) => {
-    this.setState({ amount: description })
-  }
-
   componentDidUpdate(prevProps) {
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
       this.setState({modalShowGeneral: true})
@@ -122,10 +86,66 @@ const Layout = class extends Component {
     if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
       this.setState({modalShowPayment: true})
     }
+  }
 
-    // if(this.props.setSignedIn && prevProps.setSignedIn !== this.props.signedIn) {
-    //   this.setState({signedIn: true})
-    // }
+  checkSignInStatus = async () => {
+    let user_state = await checkIfUserSignedIn(this.cancelToken)
+    this.setState({signed_in: user_state})
+    if(this.props.setSignedIn) {
+      this.props.setSignedIn(user_state)
+    }
+  }
+
+  closeGeneral = () => {
+    this.setState({modalShowGeneral: false})
+    if(this.props.closeGeneral) {
+      this.props.closeGeneral()
+    }
+  }
+
+  closeJoinEmail = () => {
+    this.setState({modalShowJoinEmail: false})
+    if(this.props.closeJoinEmail) {
+      this.props.closeJoinEmail()
+    }
+  }
+
+  closePayment = () => {
+    this.setState({modalShowPayment: false})
+    if(this.props.closePayment) {
+      this.props.closePayment()
+    }
+  }
+
+  closeSignin = () => {
+    this.setState({modalShowSignin: false})
+    if(this.props.closeSignin) {
+      this.props.closeSignin()
+    }
+  }
+
+  launchGeneral = () => { this.setState({modalShowGeneral: true}) }
+  launchJoinEmail = () => { this.setState({modalShowJoinEmail: true}) }
+  launchPayment = () => { this.setState({modalShowPayment: true}) }
+  launchSignin = () => { this.setState({modalShowSignin: true}) }
+
+  setPaymentAmount = (amount) => {
+    this.setState({ amount: amount })
+  }
+
+  setPaymentDescription = (description) => {
+    this.setState({ amount: description })
+  }
+
+  setPaymentProduct = (product) => {
+    this.setState({ product: product })
+  }
+
+  setSignedIn = (user_state) => {
+    this.setState({ signed_in: user_state })
+    if(this.props.setSignedIn) {
+      this.props.setSignedIn(user_state)
+    }
   }
 
   render() {
@@ -149,7 +169,7 @@ const Layout = class extends Component {
               launchJoinEmail={this.launchJoinEmail}
               launchSignin={this.launchSignin}
               location={this.props.location}
-              signedin={this.state.signedIn}
+              signed_in={this.state.signed_in}
               signOut={() => this.setSignedIn(false)}
             />
             {this.props.children}
@@ -175,7 +195,7 @@ const Layout = class extends Component {
               show={this.state.modalShowPayment}
               onHide={this.closePayment}
               setSignedIn={() => this.setSignedIn(true)}
-              signedIn={this.state.signedIn}
+              signed_in={this.state.signed_in}
               product={this.state.product}
               amount={this.state.amount}
               description={this.state.description}
