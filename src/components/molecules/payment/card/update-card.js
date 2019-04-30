@@ -172,7 +172,7 @@ const UpdateCard = class extends Component {
   setExpMonth = (e) => {
     e.preventDefault()
     let input_elem_number = parseInt(document.getElementById('uc-exp-month-input').value, 10);
-    (input_elem_number === NaN || input_elem_number > 12 || input_elem_number < 1)
+    (isNaN(input_elem_number) || input_elem_number > 12 || input_elem_number < 1)
     ?
     this.setState({exp_month: undefined})
     :
@@ -187,7 +187,7 @@ const UpdateCard = class extends Component {
   setExpYear = (e) => {
     e.preventDefault()
     let input_elem_number = parseInt(document.getElementById('uc-exp-year-input').value, 10);
-    (input_elem_number === NaN || input_elem_number < 2019) ? this.setState({exp_year: undefined}) : this.setState({exp_year: input_elem_number})
+    (isNaN(input_elem_number) || input_elem_number < 2019) ? this.setState({exp_year: undefined}) : this.setState({exp_year: input_elem_number})
   }
 
   blurExpYear = (e) => {

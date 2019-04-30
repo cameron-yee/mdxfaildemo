@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
-import { CardElement, CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements'
+import { CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements'
 
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'

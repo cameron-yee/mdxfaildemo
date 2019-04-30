@@ -70,9 +70,6 @@ const SelectCard = class extends Component {
               <Form.Group>
                 { this.state.cards !== null &&
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
-                    console.log(this.props.defaultCard)
-                    console.log(index)
-                    console.log('hit')
                     if(card.id === this.props.defaultCard) {
                       return(
                         <React.Fragment key={`card-${index}`}>
@@ -123,9 +120,16 @@ const SelectCard = class extends Component {
                   />
                 }
               </Form.Group>
-              <div className="d-flex justify-content-center">
-                <Button variant="outline-primary" type="submit">Use this card</Button>
-              </div>
+              {!this.props.delete &&
+                <div className="d-flex justify-content-center">
+                  <Button variant="outline-primary" type="submit">Use this card</Button>
+                </div>
+              }
+              {this.props.delete &&
+                <div className="d-flex justify-content-center">
+                  <Button variant="outline-primary" type="submit">Delete card</Button>
+                </div>
+              }
             </Form>
           </React.Fragment>
         }

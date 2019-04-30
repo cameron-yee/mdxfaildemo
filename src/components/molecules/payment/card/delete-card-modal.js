@@ -7,15 +7,15 @@ import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 
 import SelectCard from './select-card'
-import UpdateCard from './update-card'
-import SigninForm from '../../../../components/atoms/forms/signin-form/signin-form'
-import RegistrationForm from '../../../../components/atoms/forms/signin-form/registration-form'
+import DeleteCard from './delete-card'
+import SigninForm from '../../../atoms/forms/signin-form/signin-form'
+import RegistrationForm from '../../../atoms/forms/signin-form/registration-form'
 
 import retrieveStripeCustomer from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
 import '../stepper.scss'
 
-const UpdateCardModal = class extends Component {
+const DeleteCardModal = class extends Component {
   constructor(props) {
     super(props)
 
@@ -105,7 +105,7 @@ const UpdateCardModal = class extends Component {
         }
         {this.props.signedIn && this.state.stage === 2 &&
           <Col xs={12} className="step steps-1">
-            <div className="d-flex align-items-center">Update Card</div>
+            <div className="d-flex align-items-center">Delete Card</div>
           </Col>
         }
         {!this.props.signedIn &&
@@ -123,13 +123,14 @@ const UpdateCardModal = class extends Component {
           { this.state.stage === 1 && this.props.signedIn &&
             <SelectCard
               // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
-              setCardId={(card_id) => this.setState({cardId: card_id, stage: 2, maxStage: 2})}
-              defaultCard={this.state.customerDefaultCard}
               allowNew={false}
+              defaultCard={this.state.customerDefaultCard}
+              delete={true}
+              setCardId={(card_id) => this.setState({cardId: card_id, stage: 2, maxStage: 2})}
             />
           }
           { this.state.stage === 2 && this.props.signedIn &&
-            <UpdateCard cardId={this.state.cardId} />
+            <DeleteCard cardId={this.state.cardId} />
           }
         </Modal.Body>
         <Modal.Footer>
@@ -145,4 +146,4 @@ const UpdateCardModal = class extends Component {
   }
 }
 
-export default UpdateCardModal
+export default DeleteCardModal

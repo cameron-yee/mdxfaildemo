@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import axios from 'axios'
 
-import Alert from 'react-bootstrap/Alert'
-import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
 import SigninForm from './signin-form'

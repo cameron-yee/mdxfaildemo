@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
-import { CardElement, CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } from 'react-stripe-elements'
+import { injectStripe } from 'react-stripe-elements'
 
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
@@ -11,7 +11,6 @@ import Row from 'react-bootstrap/Row'
 
 import AccountHolderTypeDropdown from './account-holder-type-dropdown'
 
-import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createCustomerBank from '../../../../queries/bscsapi/stripe/create-customer-bank';
 
 

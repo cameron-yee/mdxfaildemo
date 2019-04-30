@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Elements, StripeProvider } from 'react-stripe-elements'
 
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import Spinner from 'react-bootstrap/Spinner'
 
