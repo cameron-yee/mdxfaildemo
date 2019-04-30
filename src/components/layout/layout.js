@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header/header'
 import Footer from './footer/footer'
+import DonateModal from '../molecules/payment/donate-modal'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 import SigninFormModal from '../atoms/forms/signin-form/signin-form-modal'
@@ -24,10 +25,12 @@ import checkIfUserSignedIn from '../../utils/check-if-user-signed-in'
 * componentDidMount() {...}
 * componentDidUpdate(prevProps) {...}
 * checkSignInStatus = async () => {...}
+* closeDonate = () => {...}
 * closeGeneral = () => {...}
 * closeJoinEmail = () => {...}
 * closePayment = () => {...}
 * closeSignin = () => {...}
+* launchDonate = () => {...}
 * launchGeneral = () => {...}
 * launchJoinEmail = () => {...}
 * launchPayment = () => {...}
@@ -46,6 +49,7 @@ const Layout = class extends Component {
     this.state = {
       amount: null,
       description: null,
+      modalShowDonate: false,
       modalShowGeneral: false,
       modalShowJoinEmail: false,
       modalShowSignin: false,
@@ -71,6 +75,10 @@ const Layout = class extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    if(this.props.launchDonate && prevProps.launchDonate !== this.props.launchDonate) {
+      this.setState({modalShowDonate: true})
+    }
+
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
       this.setState({modalShowGeneral: true})
     }
@@ -93,6 +101,13 @@ const Layout = class extends Component {
     this.setState({signed_in: user_state})
     if(this.props.setSignedIn) {
       this.props.setSignedIn(user_state)
+    }
+  }
+
+  closeDonate = () => {
+    this.setState({modalShowDonate: false})
+    if(this.props.closeDonate) {
+      this.props.closeDonate()
     }
   }
 
@@ -124,6 +139,7 @@ const Layout = class extends Component {
     }
   }
 
+  launchDonate = () => { this.setState({modalShowDonate: true}) }
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
   launchJoinEmail = () => { this.setState({modalShowJoinEmail: true}) }
   launchPayment = () => { this.setState({modalShowPayment: true}) }
@@ -177,6 +193,12 @@ const Layout = class extends Component {
               launchGeneral={this.launchGeneral}
               launchJoinEmail={this.launchJoinEmail}
               location={this.props.location}
+            />
+            <DonateModal
+              show={this.state.modalShowDonate}
+              onHide={this.closeDonate}
+              setSignedIn={() => this.setSignedIn(true)}
+              signed_in={this.state.signed_in}
             />
             <GeneralContactFormModal
               show={this.state.modalShowGeneral}

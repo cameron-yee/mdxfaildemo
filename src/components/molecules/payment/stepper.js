@@ -8,38 +8,12 @@ import './stepper.scss'
 
 /* Stepper functions
 *
-* constructor(props) {...}
-* componentDidUpdate(prevProps) {...}
 * setStage = (e) => {...}
 * render() {...}
 *
 */
 
 const Stepper = class extends Component {
-  // constructor(props) {
-    // super(props)
-    // this.state = {
-      // number_of_steps: 3,
-      // steps: ["Select Payment", "Payment Info", "Pay"]
-    // }
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   if(prevProps.creditOrBank !== this.props.credit_or_bank || prevProps.bankStatus !== this.props.bank_status) {
-  //     if(this.props.credit_or_bank === 'Credit') {
-  //       this.setState({steps: ["Select Payment", "Select Card", "Pay"], number_of_steps: 3})
-  //     } else if(this.props.credit_or_bank === 'Bank') {
-  //       if(this.props.bank_status === null) {
-  //         this.setState({steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 5})
-  //       } else if(this.props.bank_status === 'SavedBankNotVerified') {
-  //         this.setState({steps: ["Select Payment", "Select Bank", "Verify Bank Micro Transactions", "Pay"], number_of_steps: 4})
-  //       } else if(this.props.bank_status === 'SavedBankVerified') {
-  //         this.setState({steps: ["Select Payment", "Select Bank", "Pay"], number_of_steps: 3})
-  //       }
-  //     }
-  //   }
-  // }
-
   setStage = (e) => {
     e.preventDefault()
 

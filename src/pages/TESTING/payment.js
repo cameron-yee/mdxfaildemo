@@ -1,24 +1,27 @@
 import React, { Component } from 'react'
 import SEO from '../../components/seo'
 
+import axios from 'axios'
+
 import Button from 'react-bootstrap/Button'
-// import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Layout from '../../components/layout/layout'
-import PageTitle from '../../components/layout/page-title/page-title'
 import Row from 'react-bootstrap/Row'
 
-import '../../global-scss/index.scss'
+import Layout from '../../components/layout/layout'
+import PageTitle from '../../components/layout/page-title/page-title'
 
-import axios from 'axios'
+import LaunchDonateModal from '../../components/molecules/payment/launch-donate-modal';
 import LaunchPaymentModal from '../../components/molecules/payment/launch-payment-modal';
+
+import '../../global-scss/index.scss'
 
 const PaymentPage = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
       launchPayment: false,
+      launchDonate: false
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -33,12 +36,14 @@ const PaymentPage = class extends Component {
           canonical="https://bscs.org/payment"
         />
         <Layout
-          location={this.props.location}
-          launchPayment={this.state.launchPayment}
-          closePayment={() => this.setState({launchPayment: false})}
-          product="Test Product"
           amount={2000}
+          closeDonate={() => this.setState({launchDonate: false})}
+          closePayment={() => this.setState({launchPayment: false})}
           description="Test charge payment."
+          launchDonate={this.state.launchDonate}
+          launchPayment={this.state.launchPayment}
+          location={this.props.location}
+          product="Test Product"
         >
           <Container>
             <PageTitle title="Payment" />
@@ -47,6 +52,11 @@ const PaymentPage = class extends Component {
                 <LaunchPaymentModal launchPayment={() => this.setState({launchPayment: true})}>
                   <Button variant="outline-primary">Pay Now</Button>
                 </LaunchPaymentModal>
+              </Col>
+              <Col md={6} className="p-2">
+                <LaunchDonateModal launchDonate={() => this.setState({launchDonate: true})}>
+                  <Button variant="outline-primary">Donate</Button>
+                </LaunchDonateModal>
               </Col>
             </Row>
           </Container>

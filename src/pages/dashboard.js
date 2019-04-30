@@ -19,31 +19,31 @@ const Dashboard = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      signedIn: undefined,
-      showDeleteCardModal: false,
-      showUpdateCardModal: false,
+      signed_in: undefined,
+      show_delete_card_modal: false,
+      show_update_card_modal: false,
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevState.signedIn)
-    console.log(this.state.signedIn)
-    if(this.state.signedIn !== prevState.signedIn && !this.state.signedIn) {
+    console.log(prevState.signed_in)
+    console.log(this.state.signed_in)
+    if(this.state.signed_in !== prevState.signed_in && !this.state.signed_in) {
       navigate('/')
     }
   }
 
-  launchDeleteCardModal = () => { this.setState({showDeleteCardModal: true}) }
+  launchDeleteCardModal = () => { this.setState({show_delete_card_modal: true}) }
   closeDeleteCardModal = () => {
-    this.setState({showDeleteCardModal: false})
+    this.setState({show_delete_card_modal: false})
     if(this.props.closePayment) {
       this.props.closePayment()
     }
   }
 
-  launchUpdateCardModal = () => { this.setState({showUpdateCardModal: true}) }
+  launchUpdateCardModal = () => { this.setState({show_update_card_modal: true}) }
   closeUpdateCardModal = () => {
-    this.setState({showUpdateCardModal: false})
+    this.setState({show_update_card_modal: false})
     if(this.props.closePayment) {
       this.props.closePayment()
     }
@@ -57,7 +57,7 @@ const Dashboard = class extends Component {
           description=""
           canonical="https://bscs.org/dashboard"
         />
-        <Layout location={this.props.location} setSignedIn={(state) => this.setState({signedIn: state})}>
+        <Layout location={this.props.location} setSignedIn={(state) => this.setState({signed_in: state})}>
           <Container>
             <PageTitle title="Dashboard" />
             <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
@@ -65,13 +65,13 @@ const Dashboard = class extends Component {
                 <LaunchUpdateCardModal launchUpdateCard={this.launchUpdateCardModal}>
                   <Button variant="outline-primary">Update Payment Card</Button>
                 </LaunchUpdateCardModal>
-                <UpdateCardModal show={this.state.showUpdateCardModal} onHide={this.closeUpdateCardModal} signedIn={this.state.signedIn} />
+                <UpdateCardModal show={this.state.show_update_card_modal} onHide={this.closeUpdateCardModal} signed_in={this.state.signed_in} />
               </Col>
               <Col className="p-2">
                 <LaunchDeleteCardModal launchDeleteCard={this.launchDeleteCardModal}>
                   <Button variant="outline-primary">Delete Payment Card</Button>
                 </LaunchDeleteCardModal>
-                <DeleteCardModal show={this.state.showDeleteCardModal} onHide={this.closeDeleteCardModal} signedIn={this.state.signedIn} />
+                <DeleteCardModal show={this.state.show_delete_card_modal} onHide={this.closeDeleteCardModal} signed_in={this.state.signed_in} />
               </Col>
             </Row>
           </Container>

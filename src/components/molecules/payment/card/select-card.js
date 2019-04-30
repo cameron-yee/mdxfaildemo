@@ -140,13 +140,16 @@ const SelectCard = class extends Component {
                     name="customer-cards"
                   />
                 }
+                {( !this.state.cards || this.state.cards.data.data.retrieveStripeCustomerCards.data.length === 0) && !this.props.allow_new &&
+                  <p>No saved cards.</p>
+                }
               </Form.Group>
-              {!this.props.delete &&
+              {!this.props.delete && this.state.cards && (this.state.cards.data.data.retrieveStripeCustomerCards.data.length !== 0 || this.props.allow_new) &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" type="submit">Use this card</Button>
                 </div>
               }
-              {this.props.delete &&
+              {this.props.delete && this.state.cards && this.state.cards.data.data.retrieveStripeCustomerCards.data.length !== 0 &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" type="submit">Delete card</Button>
                 </div>

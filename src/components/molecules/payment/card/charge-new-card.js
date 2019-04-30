@@ -6,14 +6,17 @@ import { CardNumberElement, CardExpiryElement, CardCVCElement, injectStripe } fr
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
-import Spinner from 'react-bootstrap/Spinner'
 import Row from 'react-bootstrap/Row'
+import Spinner from 'react-bootstrap/Spinner'
 
 import CountryDropdown from './country-dropdown'
-import './charge-new-card.scss'
+import DonationFrequencyDropdown from '../donation/donation-frequency-dropdown'
 
 import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createCustomerCard from '../../../../queries/bscsapi/stripe/create-customer-card';
+import createDonationSubscription from '../../../../queries/bscsapi/stripe/create-donation-subscription';
+
+import './charge-new-card.scss'
 
 /* ChargeNewCard functions
 *
@@ -22,13 +25,16 @@ import createCustomerCard from '../../../../queries/bscsapi/stripe/create-custom
 * blurAddress = (e) => {...}
 * blurCity = (e) => {...}
 * blurCustomerState = (e) => {...}
+* blurDonateAmount = (e) => {...}
 * blurFirstName = (e) => {...}
 * blurLastName = (e) => {...}
 * blurZipcode = (e) => {...}
 * createStripeToken = async () => {...}
+* handleDonation = async (e) => {...}
 * setAddress = (e) => {...}
 * setCity = (e) => {...}
 * setCustomerState = (e) => {...}
+* setDonateAmount = (e) => {...}
 * setFirstName = (e) => {...}
 * setLastName = (e) => {...}
 * setZipcode = (e) => {...}
@@ -45,6 +51,8 @@ const ChargeNewCard = class extends Component {
       city: undefined,
       city_touched: false,
       country: 'US',
+      donate_amount: 0,
+      donate_amount_touched: false,
       firstname: undefined,
       firstname_touched: false,
       lastname: undefined,
@@ -55,6 +63,7 @@ const ChargeNewCard = class extends Component {
       zipcode_touched: false,
 
       errors: false,
+      frequency: 'Monthly',
       loading: false,
       successfully_charged: false
     }
@@ -105,6 +114,11 @@ const ChargeNewCard = class extends Component {
     this.setState({state_touched: true})
   }
 
+  blurDonateAmount = (e) => {
+    e.preventDefault()
+    this.setState({donate_amount_touched: true})
+  }
+
   blurFirstName = (e) => {
     e.preventDefault()
     this.setState({firstname_touched: true})
@@ -143,6 +157,32 @@ const ChargeNewCard = class extends Component {
     return token.token.id
   }
 
+  handleDonation = async (e) => {
+    let token_id
+    e.preventDefault()
+
+    this.setState({loading: true})
+
+    token_id = await this.createStripeToken()
+
+    e.preventDefault()
+    createCustomerCard(this.cancelToken, token_id).then(response => {
+      if(response.status === 200 && !response.data.errors) {
+        createDonationSubscription(this.cancelToken, this.state.donate_amount*100, response.data.data.createStripeCustomerCard.id, this.state.frequency).then(response => {
+          if(response.status === 200 && !response.data.errors) {
+            this.setState({successfully_charged: true})
+          } else {
+            this.setState({errors: true })
+          }
+        })
+      } else {
+        this.setState({errors: true, loading: false })
+      }
+    }).catch(error => {
+      axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
+    })
+  }
+
   setAddress = (e) => {
     e.preventDefault()
     let input_elem = document.getElementById('cc-address-input');
@@ -159,6 +199,19 @@ const ChargeNewCard = class extends Component {
     e.preventDefault()
     let input_elem = document.getElementById('cc-state-input');
     input_elem.value === '' ? this.setState({state: undefined}) : this.setState({state: input_elem.value})
+  }
+
+  setDonateAmount = (e) => {
+    let input_elem_number
+    e.preventDefault()
+
+    input_elem_number = parseInt(document.getElementById('donate-amount-input').value, 10);
+
+    (isNaN(input_elem_number) || input_elem_number > 20000 || input_elem_number < 1)
+    ?
+    this.setState({donate_amount: 0})
+    :
+    this.setState({donate_amount: input_elem_number})
   }
 
   setFirstName = (e) => {
@@ -351,17 +404,36 @@ const ChargeNewCard = class extends Component {
             </Row>
 
             <div className="d-flex justify-content-center mt-3">
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
+              {!this.props.donate && this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
+              {!this.props.donate && this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.country &&
+              {!this.props.donate && this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
-              {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
+              {!this.props.donate && this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
                 <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
+              }
+              {this.props.donate && !this.state.errors && !this.state.successfully_charged &&
+                <div className="d-flex justify-content-center flex-wrap mt-3">
+                  <Form.Control
+                    id="donate-amount-input"
+                    type="number"
+                    min="0"
+                    step="1"
+                    placeholder="Donation amount"
+                    onKeyUp={this.setDonateAmount}
+                    onBlur={this.blurDonateAmount}
+                    isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid amount.
+                  </Form.Control.Feedback>
+                  <Button variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
+                  <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
+                </div>
               }
             </div>
           </div>

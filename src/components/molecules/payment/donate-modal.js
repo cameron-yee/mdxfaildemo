@@ -8,8 +8,8 @@ import Modal from 'react-bootstrap/Modal'
 import Spinner from 'react-bootstrap/Spinner'
 
 import ChargeNewCard from './card/charge-new-card'
-import RegistrationForm from '../../../components/atoms/forms/signin-form/registration-form'
-import SigninForm from '../../../components/atoms/forms/signin-form/signin-form'
+import RegistrationForm from '../../atoms/forms/signin-form/registration-form'
+import SigninForm from '../../atoms/forms/signin-form/signin-form'
 
 import ChargeBank from './bank/charge-bank'
 import ChargeCard from './card/charge-card'
@@ -22,7 +22,7 @@ import VerifyBank from './bank/verify-bank';
 
 import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
-/* PaymentModal functions
+/* DonationModal functions
 *
 * constructor(props) {...}
 * componentDidMount() {...}
@@ -38,16 +38,16 @@ import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-str
 *
 */
 
-const PaymentModal = class extends Component {
+const DonateModal = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
       bank_id: null,
       card_id: null,
-      // cardLast4: null,
       credit_or_bank: null,
       bank_status: null,
       customer_default_card: undefined,
+      frequency: undefined,
       max_stage: 0,
       number_of_steps: 1,
       register: false,
@@ -66,7 +66,7 @@ const PaymentModal = class extends Component {
     console.log(this.props.signed_in)
     if(this.props.signed_in) {
       this.getCustomerDefaultCard(this.cancelToken)
-      this.setState({steps: ["Select Payment Type", "Info", "Pay"], number_of_steps: 3})
+      this.setState({steps: ["Select Payment", "Select Card", "Pay"], number_of_steps: 3})
     }
   }
 
@@ -287,17 +287,19 @@ const PaymentModal = class extends Component {
           }
           { this.state.stage === 2 && this.state.stripe && this.state.credit_or_bank === 'Credit' && this.state.card_id !== 'new-card' &&
             <ChargeCard
-              amount={this.props.amount}
+              // amount={this.props.amount}
               card_id={this.state.card_id}
               description={this.props.description}
+              donate={true}
             />
           }
           { this.state.stage === 2 && this.state.stripe && this.state.credit_or_bank === 'Credit' && this.state.card_id === 'new-card' &&
             <StripeProvider stripe={this.state.stripe}>
               <Elements>
                 <ChargeNewCard
-                  amount={this.props.amount}
+                  // amount={this.props.amount}
                   description={this.props.description}
+                  donate={true}
                 />
               </Elements>
             </StripeProvider>
@@ -310,16 +312,18 @@ const PaymentModal = class extends Component {
           }
           { this.state.stage === 2 && this.state.stripe && this.state.bank_status === 'SavedBankVerified' && this.state.bank_id && this.state.verified &&
             <ChargeBank
-              amount={this.props.amount}
+              // amount={this.props.amount}
               bank_id={this.state.bank_id}
               description={this.props.description}
+              donate={true}
             />
           }
           { this.state.stage === 3 && this.state.stripe && this.state.bank_status === 'SavedBankNotVerified' && this.state.bank_id && this.state.verified &&
             <ChargeBank
-              amount={this.props.amount}
+              // amount={this.props.amount}
               bank_id={this.state.bank_id}
               description={this.props.description}
+              donate={true}
             />
           }
           { this.state.stage === 3 && this.state.stripe && this.state.bank_status === null &&
@@ -333,9 +337,10 @@ const PaymentModal = class extends Component {
           }
           { this.state.stage === 4 && this.state.stripe && this.state.credit_or_bank === 'Bank' && this.state.bank_id && this.state.verified &&
             <ChargeBank
-              amount={this.props.amount}
+              // amount={this.props.amount}
               bank_id={this.state.bank_id}
               description={this.props.description}
+              donate={true}
             />
           }
         </Modal.Body>
@@ -352,5 +357,6 @@ const PaymentModal = class extends Component {
   }
 }
 
-export default PaymentModal
+export default DonateModal
+
 

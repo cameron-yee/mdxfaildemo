@@ -9,7 +9,7 @@ const createDonationSubscription = (cancelToken, amount, source_id, frequency) =
     data: {
       query: `
         query {
-          createStripeDonationSubscription(amount: ${amount}, defaultSource: "${source_id}", description: "${description}") {
+          createStripeDonationSubscription(amount: ${amount}, defaultSource: "${source_id}", quantity: "${frequency}") {
             id
           }
         }
