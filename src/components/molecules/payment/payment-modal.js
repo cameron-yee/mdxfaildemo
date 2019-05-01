@@ -185,11 +185,11 @@ const PaymentModal = class extends Component {
 
   setStripeScript = () => {
     try {
-      const stripeJs = document.createElement('script');
-      stripeJs.async = true;
-      stripeJs.id = "stripe-js"
-      stripeJs.src = 'https://js.stripe.com/v3/';
-      document.getElementsByTagName('head')[0].appendChild(stripeJs)
+      // const stripeJs = document.createElement('script');
+      // stripeJs.async = true;
+      // stripeJs.id = "stripe-js"
+      // stripeJs.src = 'https://js.stripe.com/v3/';
+      // document.getElementsByTagName('head')[0].appendChild(stripeJs)
       // The setTimeout lets us pretend that Stripe.js took a long time to load
       // Take it out of your production code!
       setTimeout(() => {

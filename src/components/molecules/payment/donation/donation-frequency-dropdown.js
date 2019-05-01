@@ -22,7 +22,7 @@ const DonationFrequencyDropdown = class extends Component {
 
   render() {
     return (
-      <Dropdown id="dropdown" alignRight={true} drop={'down'} className="mb-3">
+      <Dropdown id="dropdown" alignRight={true} drop={'down'} className="m-3">
         <Dropdown.Toggle
           variant="outline-primary"
           id="account-holder-type-dropdown"

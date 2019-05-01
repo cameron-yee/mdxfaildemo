@@ -70,13 +70,24 @@ const ChargeCard = class extends Component {
 
     this.setState({loading: true})
 
-    createDonationSubscription(this.cancelToken, this.state.donate_amount*100, this.props.card_id, this.state.frequency).then(response => {
-      if(response.status === 200 && !response.data.errors) {
-        this.setState({successfully_charged: true, loading: false})
-      } else {
-        this.setState({errors: true, loading: false })
-      }
-    })
+    if(this.state.frequency === 'Monthly' || this.state.frequency === 'Yearly') {
+      createDonationSubscription(this.cancelToken, this.state.donate_amount, this.state.frequency, this.props.card_id).then(response => {
+        if(response.status === 200 && !response.data.errors) {
+          this.setState({successfully_charged: true, loading: false})
+        } else {
+          this.setState({errors: true, loading: false })
+        }
+      })
+    } else if(this.state.frequency === 'Once') {
+      const donation_description = 'BSCS Science Learning one time donation'
+      createCharge(this.cancelToken, this.state.donate_amount*100, this.props.card_id, donation_description).then(response => {
+        if(response.status === 200 && !response.data.errors) {
+          this.setState({successfully_charged: true, loading: false})
+        } else {
+          this.setState({errors: true, loading: false })
+        }
+      })
+    }
   }
 
   setDonateAmount = (e) => {
@@ -104,6 +115,7 @@ const ChargeCard = class extends Component {
           <div className="d-flex justify-content-center flex-wrap mt-3">
             <Form.Control
               id="donate-amount-input"
+              className="w-100 mb-3"
               type="number"
               step="1"
               min="0"
@@ -115,7 +127,7 @@ const ChargeCard = class extends Component {
             <Form.Control.Feedback type="invalid">
               Please provide a valid amount.
             </Form.Control.Feedback>
-            <Button variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
+            <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
             <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
           </div>
         }

@@ -71,11 +71,12 @@ const ChargeNewCard = class extends Component {
     this.cancelToken = axios.CancelToken.source()
     this.style = {
       base: {
-        color: "#7c8c8e",
+        color: "#495057",
         fontWeight: 400,
         // fontFamily: "Inter UI, Open Sans, Segoe UI, sans-serif",
         fontFamily: "Open Sans, Adobe Blank, sans-serif",
-        fontSize: "1.2rem",
+        // fontSize: "1.2rem",
+        fontSize: "19.2px",
         fontSmoothing: "antialiased",
 
         "::placeholder": {
@@ -161,20 +162,30 @@ const ChargeNewCard = class extends Component {
     let token_id
     e.preventDefault()
 
-    this.setState({loading: true})
-
     token_id = await this.createStripeToken()
 
-    e.preventDefault()
+    this.setState({loading: true})
+
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
-        createDonationSubscription(this.cancelToken, this.state.donate_amount*100, response.data.data.createStripeCustomerCard.id, this.state.frequency).then(response => {
-          if(response.status === 200 && !response.data.errors) {
-            this.setState({successfully_charged: true})
-          } else {
-            this.setState({errors: true })
-          }
-        })
+        if(this.state.frequency === 'Monthly' || this.state.frequency === 'Yearly') {
+          createDonationSubscription(this.cancelToken, this.state.donate_amount, this.state.frequency, response.data.data.createStripeCustomerCard.id).then(response => {
+            if(response.status === 200 && !response.data.errors && response.data.data.createStripeCustomerDonationSubscription.status === 'active') {
+              this.setState({successfully_charged: true, loading: false})
+            } else {
+              this.setState({errors: true, loading: false })
+            }
+          })
+        } else if(this.state.frequency === 'Once') {
+          const donation_description = 'BSCS Science Learning one time donation'
+          createCharge(this.cancelToken, this.state.donate_amount*100, response.data.data.createStripeCustomerCard.id, donation_description).then(response => {
+            if(response.status === 200 && !response.data.errors) {
+              this.setState({successfully_charged: true, loading: false})
+            } else {
+              this.setState({errors: true, loading: false })
+            }
+          })
+        }
       } else {
         this.setState({errors: true, loading: false })
       }
@@ -239,6 +250,8 @@ const ChargeNewCard = class extends Component {
     this.setState({loading: true})
 
     token_id = await this.createStripeToken()
+
+    console.log(token_id)
 
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
@@ -399,11 +412,11 @@ const ChargeNewCard = class extends Component {
             <Row>
               {/* <Col><CardElement /></Col> */}
               <Col md={6}><CardNumberElement style={this.style} className="border" /></Col>
-              <Col md={3}><CardExpiryElement className="border" /></Col>
-              <Col md={3}><CardCVCElement className="border" /></Col>
+              <Col md={3}><CardExpiryElement style={this.style} className="border" /></Col>
+              <Col md={3}><CardCVCElement style={this.style} className="border" /></Col>
             </Row>
 
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center mt-3 flex-wrap">
               {!this.props.donate && this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_charged && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
                 <Button onClick={this.submit} style={{marginTop: '1rem'}}>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
@@ -417,23 +430,28 @@ const ChargeNewCard = class extends Component {
                 <Button style={{marginTop: '1rem'}} disabled>Pay ${(this.props.amount/100).toFixed(2)}</Button>
               }
               {this.props.donate && !this.state.errors && !this.state.successfully_charged &&
-                <div className="d-flex justify-content-center flex-wrap mt-3">
-                  <Form.Control
-                    id="donate-amount-input"
-                    type="number"
-                    min="0"
-                    step="1"
-                    placeholder="Donation amount"
-                    onKeyUp={this.setDonateAmount}
-                    onBlur={this.blurDonateAmount}
-                    isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a valid amount.
-                  </Form.Control.Feedback>
-                  <Button variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
-                  <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
-                </div>
+                <React.Fragment>
+                  {/* <div className="d-flex justify-content-center flex-wrap mt-3"> */}
+                    <Form.Control
+                      id="donate-amount-input"
+                      className="w-100 mb-3"
+                      type="number"
+                      min="0"
+                      step="1"
+                      placeholder="Donation amount"
+                      onKeyUp={this.setDonateAmount}
+                      onBlur={this.blurDonateAmount}
+                      isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Please provide a valid amount.
+                    </Form.Control.Feedback>
+                  {/* </div> */}
+                  {/* <div className="d-flex justify-content-center flex-wrap mt-3"> */}
+                    <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
+                    <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
+                  {/* </div> */}
+                </React.Fragment>
               }
             </div>
           </div>

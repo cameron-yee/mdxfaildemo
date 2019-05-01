@@ -28,7 +28,7 @@ import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-str
 * componentDidMount() {...}
 * componentWillUnmount() {...}
 * componentWillUpdate(prevProps) {...}
-* getCustomerDefaultCard = (cancelToken) => {...}
+* getCustomerDefaultCard = () => {...}
 * next = (e) => {...}
 * previous = (e) => {...}
 * setBankInfo = (bank_id, bank_status) => {...}
@@ -66,7 +66,7 @@ const DonateModal = class extends Component {
     console.log(this.props.signed_in)
     if(this.props.signed_in) {
       this.getCustomerDefaultCard(this.cancelToken)
-      this.setState({steps: ["Select Payment", "Select Card", "Pay"], number_of_steps: 3})
+      this.setState({steps: ["Select Payment", "Info", "Donate"], number_of_steps: 3})
     }
   }
 
@@ -83,7 +83,7 @@ const DonateModal = class extends Component {
       this.getCustomerDefaultCard(this.cancelToken)
 
       if(!this.props.signed_in) {
-        this.setState({steps: ["Select Payment Type", "Info", "Pay"], number_of_steps: 3})
+        this.setState({steps: ["Select Payment Type", "Info", "Donate"], number_of_steps: 3})
       } else {
         this.setState({steps: ["Sign In or Register"], number_of_steps: 1})
       }
@@ -92,8 +92,8 @@ const DonateModal = class extends Component {
 //End lifecycle hooks
 
 //Custom functions
-  getCustomerDefaultCard = (cancelToken) => {
-    retrieveStripeCustomer(cancelToken).then(response => {
+  getCustomerDefaultCard = () => {
+    retrieveStripeCustomer(this.cancelToken).then(response => {
       if(
         response !== undefined &&
         response.status === 200 &&
@@ -137,7 +137,7 @@ const DonateModal = class extends Component {
         max_stage: 2,
         number_of_steps: 5,
         stage: 2,
-        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"]
+        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Donate"]
       })
     } else if(bank_status === 'verified') {
       this.setState({
@@ -169,7 +169,7 @@ const DonateModal = class extends Component {
         max_stage: 1,
         number_of_steps: 3,
         stage: 1,
-        steps: ["Select Payment", "Select Card", "Pay"]
+        steps: ["Select Payment", "Select Card", "Donate"]
       })
     } else if(credit_or_bank === 'Bank') {
       this.setState({
@@ -178,20 +178,20 @@ const DonateModal = class extends Component {
         max_stage: 1,
         number_of_steps: 5,
         stage: 1,
-        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"]
+        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Donate"]
       })
     }
   }
 
   setStripeScript = () => {
     try {
-      const stripeJs = document.createElement('script');
-      stripeJs.async = true;
-      stripeJs.id = "stripe-js"
-      stripeJs.src = 'https://js.stripe.com/v3/';
-      document.getElementsByTagName('head')[0].appendChild(stripeJs)
-      // The setTimeout lets us pretend that Stripe.js took a long time to load
-      // Take it out of your production code!
+  //     const stripeJs = document.createElement('script');
+  //     stripeJs.async = true;
+  //     stripeJs.id = "stripe-js"
+  //     stripeJs.src = 'https://js.stripe.com/v3/';
+  //     document.getElementsByTagName('head')[0].appendChild(stripeJs)
+  //     // The setTimeout lets us pretend that Stripe.js took a long time to load
+  //     // Take it out of your production code!
       setTimeout(() => {
         this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')})
       }, 500)
@@ -255,7 +255,7 @@ const DonateModal = class extends Component {
                   max_stage: 2,
                   number_of_steps: 3,
                   stage: 2,
-                  steps: ["Select Payment", "Select Card", "Pay"]
+                  steps: ["Select Payment", "Select Card", "Donate"]
                 })
               }}
               default_card={this.state.customer_default_card}
@@ -276,7 +276,7 @@ const DonateModal = class extends Component {
                         bank_id: bank_id,
                         max_stage: 3,
                         number_of_steps: 5,
-                        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Pay"],
+                        steps: ["Select Payment", "Select Bank", "Enter Bank Info", "Verify Bank Micro Transactions", "Donate"],
                         stage: 3
                       })
                     }}

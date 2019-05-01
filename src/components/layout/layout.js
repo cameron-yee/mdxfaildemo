@@ -63,6 +63,7 @@ const Layout = class extends Component {
   }
 
   componentDidMount() {
+    this.setStripeScript()
     if(this.props.product && this.props.amount && this.props.description) {
       this.setState({
         amount: this.props.amount,
@@ -161,6 +162,18 @@ const Layout = class extends Component {
     this.setState({ signed_in: user_state })
     if(this.props.setSignedIn) {
       this.props.setSignedIn(user_state)
+    }
+  }
+
+  setStripeScript = () => {
+    try {
+      const stripeJs = document.createElement('script');
+      stripeJs.async = true;
+      stripeJs.id = "stripe-js"
+      stripeJs.src = 'https://js.stripe.com/v3/';
+      document.getElementsByTagName('head')[0].appendChild(stripeJs)
+    } catch(error) {
+      console.log(error)
     }
   }
 
