@@ -12,15 +12,15 @@ import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createDonationSubscription from '../../../../queries/bscsapi/stripe/create-donation-subscription';
 
 /* Charge Card functions
-*
-* constructor(props) {...}
-* componentWillUnmount() {...}
-* blurDonateAmount = (e) => {...}
-* handleCharge = (e) => {...}
-* handleDonation = (e) => {...}
-* setDonateAmount = (e) => {...}
-* render() {...}
-*
+  *
+  * constructor(props) {...}
+  * componentWillUnmount() {...}
+  * blurDonateAmount = (e) => {...}
+  * handleCharge = (e) => {...}
+  * handleDonation = (e) => {...}
+  * setDonateAmount = (e) => {...}
+  * render() {...}
+  *
 */
 
 const ChargeCard = class extends Component {

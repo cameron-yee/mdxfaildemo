@@ -19,27 +19,27 @@ import createDonationSubscription from '../../../../queries/bscsapi/stripe/creat
 import './charge-new-card.scss'
 
 /* ChargeNewCard functions
-*
-* constructor(props) {...}
-* componentWillUnmount() {}
-* blurAddress = (e) => {...}
-* blurCity = (e) => {...}
-* blurCustomerState = (e) => {...}
-* blurDonateAmount = (e) => {...}
-* blurFirstName = (e) => {...}
-* blurLastName = (e) => {...}
-* blurZipcode = (e) => {...}
-* createStripeToken = async () => {...}
-* handleDonation = async (e) => {...}
-* setAddress = (e) => {...}
-* setCity = (e) => {...}
-* setCustomerState = (e) => {...}
-* setDonateAmount = (e) => {...}
-* setFirstName = (e) => {...}
-* setLastName = (e) => {...}
-* setZipcode = (e) => {...}
-* submit = async (e) => {...}
-*
+  *
+  * constructor(props) {...}
+  * componentWillUnmount() {}
+  * blurAddress = (e) => {...}
+  * blurCity = (e) => {...}
+  * blurCustomerState = (e) => {...}
+  * blurDonateAmount = (e) => {...}
+  * blurFirstName = (e) => {...}
+  * blurLastName = (e) => {...}
+  * blurZipcode = (e) => {...}
+  * createStripeToken = async () => {...}
+  * handleDonation = async (e) => {...}
+  * setAddress = (e) => {...}
+  * setCity = (e) => {...}
+  * setCustomerState = (e) => {...}
+  * setDonateAmount = (e) => {...}
+  * setFirstName = (e) => {...}
+  * setLastName = (e) => {...}
+  * setZipcode = (e) => {...}
+  * submit = async (e) => {...}
+  *
 */
 
 const ChargeNewCard = class extends Component {

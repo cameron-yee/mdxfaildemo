@@ -23,19 +23,19 @@ import VerifyBank from './bank/verify-bank';
 import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
 /* PaymentModal functions
-*
-* constructor(props) {...}
-* componentDidMount() {...}
-* componentWillUnmount() {...}
-* componentWillUpdate(prevProps) {...}
-* getCustomerDefaultCard = (cancelToken) => {...}
-* next = (e) => {...}
-* previous = (e) => {...}
-* setBankInfo = (bank_id, bank_status) => {...}
-* setCreditOrBank = (credit_or_bank) => {...}
-* setStripeScript = () => {...}
-* render() {...}
-*
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * componentWillUnmount() {...}
+  * componentWillUpdate(prevProps) {...}
+  * getCustomerDefaultCard = (cancelToken) => {...}
+  * next = (e) => {...}
+  * previous = (e) => {...}
+  * setBankInfo = (bank_id, bank_status) => {...}
+  * setCreditOrBank = (credit_or_bank) => {...}
+  * setStripeScript = () => {...}
+  * render() {...}
+  *
 */
 
 const PaymentModal = class extends Component {
@@ -63,7 +63,6 @@ const PaymentModal = class extends Component {
 //Lifecycle hooks
   componentDidMount() {
     this.setStripeScript()
-    console.log(this.props.signed_in)
     if(this.props.signed_in) {
       this.getCustomerDefaultCard(this.cancelToken)
       this.setState({steps: ["Select Payment Type", "Info", "Pay"], number_of_steps: 3})

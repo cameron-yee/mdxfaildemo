@@ -9,14 +9,14 @@ import Spinner from 'react-bootstrap/Spinner'
 import retrieveStripeCustomerCards from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
 
 /* SelectCard functions
-*
-* constructor(props) {...}
-* componentDidMount() {...}
-* getUserCards = async () => {
-* getCardId = () => {...}
-* setCardId = (e) => {...}
-* render() {...}
-*
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * getUserCards = async () => {
+  * getCardId = () => {...}
+  * setCardId = (e) => {...}
+  * render() {...}
+  *
 */
 
 const SelectCard = class extends Component {

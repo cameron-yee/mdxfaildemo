@@ -20,27 +20,27 @@ import checkIfUserSignedIn from '../../utils/check-if-user-signed-in'
 
 //TODO: Reduce same functions into one function
 /* Layout functions
-*
-* constructor(props) {...}
-* componentDidMount() {...}
-* componentDidUpdate(prevProps) {...}
-* checkSignInStatus = async () => {...}
-* closeDonate = () => {...}
-* closeGeneral = () => {...}
-* closeJoinEmail = () => {...}
-* closePayment = () => {...}
-* closeSignin = () => {...}
-* launchDonate = () => {...}
-* launchGeneral = () => {...}
-* launchJoinEmail = () => {...}
-* launchPayment = () => {...}
-* launchSignin = () => {...}
-* setPaymentAmount = (amount) => {...}
-* setPaymentDescription = (description) => {...}
-* setPaymentProduct = (product) => {...}
-* setSignedIn = (user_state) => {...}
-* render() {...}
-*
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * componentDidUpdate(prevProps) {...}
+  * checkSignInStatus = async () => {...}
+  * closeDonate = () => {...}
+  * closeGeneral = () => {...}
+  * closeJoinEmail = () => {...}
+  * closePayment = () => {...}
+  * closeSignin = () => {...}
+  * launchDonate = () => {...}
+  * launchGeneral = () => {...}
+  * launchJoinEmail = () => {...}
+  * launchPayment = () => {...}
+  * launchSignin = () => {...}
+  * setPaymentAmount = (amount) => {...}
+  * setPaymentDescription = (description) => {...}
+  * setPaymentProduct = (product) => {...}
+  * setSignedIn = (user_state) => {...}
+  * render() {...}
+  *
 */
 
 const Layout = class extends Component {

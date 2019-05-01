@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const retrieveStripeCustomer = (cancelToken) => {
+const retrieveStripeCustomerCard = (cancelToken, card_id) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -9,15 +9,17 @@ const retrieveStripeCustomer = (cancelToken) => {
     data: {
       query: `
         query {
-          retrieveStripeCustomer {
+          retrieveStripeCustomerCard(cardId: "${card_id}") {
             id
-            default_source
+            brand
+            last4
           }
         }
         `
     }
   })
   .then(response => {
+    console.log(response)
     return response
   })
   .catch(error => {
@@ -25,4 +27,4 @@ const retrieveStripeCustomer = (cancelToken) => {
   })
 }
 
-export default retrieveStripeCustomer
+export default retrieveStripeCustomerCard
