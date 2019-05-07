@@ -175,7 +175,7 @@ const RDPrograms = class extends Component {
                   this.programs.map((edge, index) => {
                   let data_filter = JSON.parse(JSON.stringify(edge.node.frontmatter))
                   data_filter['excerpt'] = edge.node.excerpt
-                    if(edge.node.frontmatter.sortOrder > 5) {
+                    if(edge.node.frontmatter.sortOrder >= 5) {
                       return(
                         <React.Fragment key={edge.node.id}>
                           <Col
