@@ -11,6 +11,7 @@ const retrieveStripeCustomerDonationSubscriptions = (cancelToken) => {
         query {
           retrieveStripeCustomerDonationSubscriptions {
             data {
+              id
               default_source
               items {
                 data {

@@ -5,11 +5,9 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
 
-import deleteCustomerCard from '../../../../queries/bscsapi/stripe/delete-customer-card';
+import deleteCustomerBank from '../../../../queries/bscsapi/stripe/delete-customer-bank';
 
-// import './charge-new-card.scss'
-
-/* DeleteCard functions
+/* DeleteBank functions
 *
 * constructor(props) {...}
 * componentWillUnmount() {...}
@@ -18,7 +16,7 @@ import deleteCustomerCard from '../../../../queries/bscsapi/stripe/delete-custom
 *
 */
 
-const DeleteCard = class extends Component {
+const DeleteBank = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -43,9 +41,9 @@ const DeleteCard = class extends Component {
 
     this.setState({loading: true})
 
-    deleteCustomerCard(
+    deleteCustomerBank(
       this.cancelToken,
-      this.props.card_id,
+      this.props.bank_id,
     )
       .then(response => {
         if(response.status === 200 && !response.data.errors) {
@@ -65,28 +63,28 @@ const DeleteCard = class extends Component {
       <React.Fragment>
         {!this.state.loading && !this.state.successfully_deleted && !this.state.errors &&
           <div className="checkout">
-            <p>Are you sure you want to delete this card?</p>
+            <p>Are you sure you want to delete this bank account?</p>
             <div className="d-flex justify-content-center mt-3">
               {!this.state.loading && !this.state.errors && !this.state.successfully_deleted &&
-                <Button variant="danger" onClick={(e) => this.handleDelete(e)} style={{marginTop: '1rem'}}>Delete Card</Button>
+                <Button variant="danger" onClick={(e) => this.handleDelete(e)} style={{marginTop: '1rem'}}>Delete Bank Account</Button>
               }
             </div>
           </div>
         }
         {this.state.errors && !this.state.successfully_deleted &&
           <div className="d-flex justify-content-center">
-            <p>Error. Card could not be deleted.</p>
+            <p>Error. Bank account could not be deleted.</p>
           </div>
         }
         {this.state.loading &&
           <div className="d-flex justify-content-center">
-            <p>Deleting Card</p>
+            <p>Deleting Bank account</p>
             <Spinner animation="grow" variant="primary" />
           </div>
         }
         {!this.state.errors && this.state.successfully_deleted &&
           <div className="d-flex justify-content-center">
-            <p>Card successfully deleted.</p>
+            <p>Bank account successfully deleted.</p>
           </div>
         }
       </React.Fragment>
@@ -94,4 +92,4 @@ const DeleteCard = class extends Component {
   }
 }
 
-export default DeleteCard
+export default DeleteBank

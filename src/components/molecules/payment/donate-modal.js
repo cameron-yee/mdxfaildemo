@@ -15,8 +15,8 @@ import ChargeBank from './bank/charge-bank'
 import ChargeCard from './card/charge-card'
 import CreateNewBank from './bank/create-new-bank';
 import CreditOrBank from './credit-or-bank'
-import SelectCard from './card/select-card'
 import SelectBank from './bank/select-bank'
+import SelectCard from './card/select-card'
 import Stepper from './stepper'
 import VerifyBank from './bank/verify-bank';
 
@@ -184,13 +184,6 @@ const DonateModal = class extends Component {
 
   setStripeScript = () => {
     try {
-  //     const stripeJs = document.createElement('script');
-  //     stripeJs.async = true;
-  //     stripeJs.id = "stripe-js"
-  //     stripeJs.src = 'https://js.stripe.com/v3/';
-  //     document.getElementsByTagName('head')[0].appendChild(stripeJs)
-  //     // The setTimeout lets us pretend that Stripe.js took a long time to load
-  //     // Take it out of your production code!
       setTimeout(() => {
         this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')})
       }, 500)

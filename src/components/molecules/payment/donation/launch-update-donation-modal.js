@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-const LaunchUpdateCardModal = class extends Component {
+const LaunchUpdateDonationModal = class extends Component {
   render() {
     return (
       <React.Fragment>
         <span
           variant="outline-primary"
-          onClick={this.props.launchUpdateCard}
+          onClick={this.props.launchUpdateDonation}
           className={this.props.childrenclass}
         >
           {this.props.children}
@@ -16,5 +16,5 @@ const LaunchUpdateCardModal = class extends Component {
   }
 }
 
-export default LaunchUpdateCardModal
+export default LaunchUpdateDonationModal
 

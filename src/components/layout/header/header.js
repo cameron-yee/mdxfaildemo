@@ -21,6 +21,14 @@ import SigninFormLaunchModal from '../../atoms/forms/signin-form/signin-form-lau
 
 import SignOut from '../../atoms/sign-out/sign-out'
 
+/* Header functions
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * launch = () => {...}
+  * close = () => {...}
+  *
+*/
 
 export default class Header extends Component {
     constructor(props) {
@@ -28,6 +36,18 @@ export default class Header extends Component {
 
     this.state = {
       modalShow: false,
+      on_dashboard: false
+    }
+  }
+
+  //Don't want to show dashboard navigation button if on dashboard page already
+  componentDidMount() {
+    try {
+      if(window.location.pathname === '/dashboard') {
+        this.setState({on_dashboard: true})
+      }
+    } catch(error) {
+      console.log(error)
     }
   }
 
@@ -62,7 +82,9 @@ export default class Header extends Component {
               }
               {this.props.signed_in &&
                 <React.Fragment>
-                  <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
+                  { !this.state.on_dashboard &&
+                    <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
+                  }
                   <SignOut signOut={this.props.signOut}>
                     <Button variant="outline-primary btn-sm" className="slide m-2">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
                   </SignOut>

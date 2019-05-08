@@ -13,10 +13,14 @@ import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 
+import DeleteBankModal from '../components/molecules/payment/bank/delete-bank-modal'
 import DeleteCardModal from '../components/molecules/payment/card/delete-card-modal'
+import LaunchDeleteBankModal from '../components/molecules/payment/bank/launch-delete-bank-modal'
 import LaunchDeleteCardModal from '../components/molecules/payment/card/launch-delete-card-modal'
 import LaunchUpdateCardModal from '../components/molecules/payment/card/launch-update-card-modal'
+import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
 import UpdateCardModal from '../components/molecules/payment/card/update-card-modal'
+import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
 
 import retrieveStripeCustomerDonationSubscriptions from '../queries/bscsapi/stripe/retrieve-stripe-customer-donation-subscriptions'
 // import retrieveStripeCustomerCard from '../queries/bscsapi/stripe/retrieve-stripe-customer-card'
@@ -40,8 +44,10 @@ const Dashboard = class extends Component {
     super(props)
     this.state = {
       signed_in: undefined,
+      show_delete_bank_modal: false,
       show_delete_card_modal: false,
       show_update_card_modal: false,
+      show_update_donation_modal: false,
       subscriptions: []
     }
 
@@ -69,15 +75,36 @@ const Dashboard = class extends Component {
 //End lifecycle hooks
 
 //Custom functions
-  closeDeleteCardModal = () => {
-    this.setState({show_delete_card_modal: false})
-    if(this.props.closePayment) {
-      this.props.closePayment()
-    }
-  }
+  // closeDeleteBankModal = () => {
+  //   this.setState({show_delete_bank_modal: false})
+  //   if(this.props.closePayment) {
+  //     this.props.closePayment()
+  //   }
+  // }
 
-  closeUpdateCardModal = () => {
-    this.setState({show_update_card_modal: false})
+  // closeDeleteCardModal = () => {
+  //   this.setState({show_delete_card_modal: false})
+  //   if(this.props.closePayment) {
+  //     this.props.closePayment()
+  //   }
+  // }
+
+  // closeUpdateCardModal = () => {
+  //   this.setState({show_update_card_modal: false})
+  //   if(this.props.closePayment) {
+  //     this.props.closePayment()
+  //   }
+  // }
+
+  // closeUpdateDonationModal = () => {
+  //   this.setState({show_update_donation_modal: false})
+  //   if(this.props.closePayment) {
+  //     this.props.closePayment()
+  //   }
+  // }
+
+  closeModal = (crud, type) => {
+    this.setState({[`show_${crud}_${type}_modal`]: false})
     if(this.props.closePayment) {
       this.props.closePayment()
     }
@@ -93,20 +120,11 @@ const Dashboard = class extends Component {
       this.setState({subscriptions: null})
     }
   }
-  // getUserRecurringDonations = () => {
-  //   let subscriptions
 
-  //   subscriptions = await retrieveStripeCustomerDonationSubscriptions(this.cancelToken)
-  //   console.log(subscriptions)
-  //   if(subscriptions && subscriptions.data.data.retrieveStripeCustomerDonationSubscriptions !== null) {
-  //     this.setState({subscriptions: subscriptions.data.data.retrieveStripeCustomerDonationSubscriptions})
-  //   } else {
-  //     this.setState({subscriptions: null})
-  //   }
-  // }
-
+  launchDeleteBankModal = () => { this.setState({show_delete_bank_modal: true}) }
   launchDeleteCardModal = () => { this.setState({show_delete_card_modal: true}) }
   launchUpdateCardModal = () => { this.setState({show_update_card_modal: true}) }
+  launchUpdateDonationModal = () => { this.setState({show_update_donation_modal: true}) }
 //End custom functions
 
   render() {
@@ -179,11 +197,55 @@ const Dashboard = class extends Component {
                 <LaunchUpdateCardModal launchUpdateCard={this.launchUpdateCardModal}>
                   <Button className="h-100 m-3" variant="outline-secondary">Update Payment Card</Button>
                 </LaunchUpdateCardModal>
-                <UpdateCardModal show={this.state.show_update_card_modal} onHide={this.closeUpdateCardModal} signed_in={this.state.signed_in} />
+                <UpdateCardModal
+                  show={this.state.show_update_card_modal}
+                  onHide={() => this.closeModal('update', 'card')}
+                  signed_in={this.state.signed_in}
+                />
                 <LaunchDeleteCardModal launchDeleteCard={this.launchDeleteCardModal}>
                   <Button className="h-100 m-3" variant="outline-secondary">Delete Payment Card</Button>
                 </LaunchDeleteCardModal>
-                <DeleteCardModal show={this.state.show_delete_card_modal} onHide={this.closeDeleteCardModal} signed_in={this.state.signed_in} />
+                <DeleteCardModal
+                  show={this.state.show_delete_card_modal}
+                  onHide={() => this.closeModal('delete', 'card')}
+                  signed_in={this.state.signed_in}
+                />
+              </Col>
+            </Row>
+            <hr />
+            <h2>Bank Settings</h2>
+            <Row style={{marginBottom: '3rem', height: '100px'}} className="d-flex flex-wrap-reverse">
+              <Col className="p-2 h-100">
+                {/* <LaunchUpdateCardModal launchUpdateCard={this.launchUpdateCardModal}>
+                  <Button className="h-100 m-3" variant="outline-secondary">Update Payment Card</Button>
+                </LaunchUpdateCardModal>
+                <UpdateCardModal show={this.state.show_update_card_modal} onHide={this.closeUpdateCardModal} signed_in={this.state.signed_in} /> */}
+                <LaunchDeleteBankModal launchDeleteBank={this.launchDeleteBankModal}>
+                  <Button className="h-100 m-3" variant="outline-secondary">Delete Payment Bank Account</Button>
+                </LaunchDeleteBankModal>
+                <DeleteBankModal
+                  show={this.state.show_delete_bank_modal}
+                  onHide={() => this.closeModal('delete', 'bank')}
+                  signed_in={this.state.signed_in}
+                />
+              </Col>
+            </Row>
+            <hr />
+            <h2>Donation Settings</h2>
+            <Row style={{marginBottom: '3rem', height: '100px'}} className="d-flex flex-wrap-reverse">
+              <Col className="p-2 h-100">
+                <LaunchUpdateDonationModal launchUpdateDonation={this.launchUpdateDonationModal}>
+                  <Button className="h-100 m-3" variant="outline-secondary">Update Donation</Button>
+                </LaunchUpdateDonationModal>
+                <UpdateDonationModal
+                  show={this.state.show_update_donation_modal}
+                  onHide={() => this.closeModal('update', 'donation')}
+                  signed_in={this.state.signed_in}
+                />
+                {/* <LaunchDeleteBankModal launchDeleteBank={this.launchDeleteBankModal}>
+                  <Button className="h-100 m-3" variant="outline-secondary">Delete Payment Bank Account</Button>
+                </LaunchDeleteBankModal>
+                <DeleteBankModal show={this.state.show_delete_bank_modal} onHide={this.closeDeleteBankModal} signed_in={this.state.signed_in} /> */}
               </Col>
             </Row>
           </Container>

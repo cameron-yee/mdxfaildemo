@@ -32,6 +32,7 @@ const NewDonationSubscription = class extends Component {
     }
   }
 
+  //DOESN'T WORK.  SEE ChargeCard or ChargeNewCard
   submit = (e) => {
     e.preventDefault()
     createDonationSubscription(this.cancelToken, this.props.amount, this.props.source_id).then(response => {

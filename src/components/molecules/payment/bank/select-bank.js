@@ -70,7 +70,7 @@ const SelectBank = class extends Component {
                   this.state.banks.data.data.retrieveStripeCustomerBanks.data.map((bank, index) => {
                     if(index === 0) {
                       return(
-                        <React.Fragment key={`card-${index}`}>
+                        <React.Fragment key={`bank-${index}`}>
                           <Form.Check
                             custom
                             type="radio"
@@ -84,7 +84,7 @@ const SelectBank = class extends Component {
                       )
                     } else {
                       return(
-                        <React.Fragment key={`card-${index}`}>
+                        <React.Fragment key={`bank-${index}`}>
                           <Form.Check
                             custom
                             type="radio"
@@ -97,17 +97,26 @@ const SelectBank = class extends Component {
                     }
                   })
                 }
-                <Form.Check
-                  custom
-                  type="radio"
-                  id="new-bank"
-                  label="New Bank Account"
-                  name="customer-banks"
-                />
+                {this.props.allow_new &&
+                  <Form.Check
+                    custom
+                    type="radio"
+                    id="new-bank"
+                    label="New Bank Account"
+                    name="customer-banks"
+                  />
+                }
               </Form.Group>
-              <div className="d-flex justify-content-center">
-                <Button variant="outline-primary" type="submit">Use this bank</Button>
-              </div>
+              {this.props.delete &&
+                <div className="d-flex justify-content-center">
+                  <Button variant="outline-primary" type="submit">Delete this bank account.</Button>
+                </div>
+              }
+              {!this.props.delete &&
+                <div className="d-flex justify-content-center">
+                  <Button variant="outline-primary" type="submit">Use this bank</Button>
+                </div>
+              }
             </Form>
           </React.Fragment>
         }

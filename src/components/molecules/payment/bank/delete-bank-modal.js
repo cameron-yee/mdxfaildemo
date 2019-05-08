@@ -6,17 +6,17 @@ import Button from 'react-bootstrap/Button'
 // import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 
-import RegistrationForm from '../../../../components/atoms/forms/signin-form/registration-form'
-import SelectCard from './select-card'
-import SigninForm from '../../../../components/atoms/forms/signin-form/signin-form'
+import DeleteBank from './delete-bank'
+import RegistrationForm from '../../../atoms/forms/signin-form/registration-form'
+import SelectBank from './select-bank'
+import SigninForm from '../../../atoms/forms/signin-form/signin-form'
 import Stepper from '../stepper'
-import UpdateCard from './update-card'
 
 import retrieveStripeCustomer from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
 import '../stepper.scss'
 
-/* UpdateCardModal functions
+/* DeleteBankModal functions
 *
 * constructor(props) {...}
 * componentDidMount() {...}
@@ -29,13 +29,13 @@ import '../stepper.scss'
 *
 */
 
-const UpdateCardModal = class extends Component {
+const DeleteBankModal = class extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      cardId: undefined,
-      customer_default_card: undefined,
+      bank_id: undefined,
+      //customer_default_card: undefined,
       customer_stripe_id: undefined,
       max_stage: 0,
       register: false,
@@ -49,13 +49,13 @@ const UpdateCardModal = class extends Component {
 //Lifecycle hooks
   componentDidMount() {
     if(this.props.signed_in) {
-      this.getCustomerInfo()
+      this.getCustomerInfo(this.cancelToken)
     }
   }
 
   componentWillUpdate(prevProps) {
     if(prevProps.signed_in !== this.props.signed_in) {
-      this.getCustomerInfo()
+      this.getCustomerInfo(this.cancelToken)
     }
   }
 
@@ -69,8 +69,8 @@ const UpdateCardModal = class extends Component {
 //End lifecycle hooks
 
 //Custom functions
-  getCustomerInfo = () => {
-    retrieveStripeCustomer(this.cancelToken).then(response => {
+  getCustomerInfo = (cancelToken) => {
+    retrieveStripeCustomer(cancelToken).then(response => {
       if(
         response !== undefined &&
         response.status === 200 &&
@@ -123,7 +123,7 @@ const UpdateCardModal = class extends Component {
           setMaxStage={(max_stage) => this.setState({max_stage})}
           signed_in={this.props.signed_in}
           stage={this.state.stage}
-          steps={["Select Card", "Update Card"]}
+          steps={["Select Bank", "Delete Bank account"]}
         />
         <Modal.Body>
           {this.state.stage === 0 && !this.props.signed_in && !this.state.register &&
@@ -133,22 +133,21 @@ const UpdateCardModal = class extends Component {
             <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
           }
           { this.state.stage === 0 && this.props.signed_in &&
-            <SelectCard
-              // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
-              setCardId={(card_id) => this.setState({cardId: card_id, stage: 1, maxStage: 1})}
-              default_card={this.state.customer_default_card}
+            <SelectBank
               allow_new={false}
+              delete={true}
+              setBankInfo={(bank_id, bank_status) => this.setState({bank_id: bank_id, stage: 1, max_stage: 1})}
             />
           }
           { this.state.stage === 1 && this.props.signed_in &&
-            <UpdateCard card_id={this.state.card_id} />
+            <DeleteBank bank_id={this.state.bank_id} />
           }
         </Modal.Body>
         <Modal.Footer>
             {this.state.stage > 0 &&
               <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
             }
-            {this.state.stage < 1 && this.state.maxStage > this.state.stage &&
+            {this.state.stage < 1 && this.state.max_stage > this.state.stage &&
               <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
             }
         </Modal.Footer>
@@ -157,4 +156,4 @@ const UpdateCardModal = class extends Component {
   }
 }
 
-export default UpdateCardModal
+export default DeleteBankModal
