@@ -139,9 +139,9 @@ const UpdateDonationModal = class extends Component {
       this.setState({
         bank_id: bank_id,
         bank_status: 'SavedBankVerified',
-        max_stage: 4,
+        max_stage: 3,
         number_of_steps: 4,
-        stage: 4,
+        stage: 3,
         steps: ["Select Donation", "Card or Bank", "Select Bank", "Update Donation"],
         verified: true
       })
@@ -149,9 +149,9 @@ const UpdateDonationModal = class extends Component {
       this.setState({
         bank_id: bank_id,
         bank_status: 'SavedBankNotVerified',
-        max_stage: 4,
+        max_stage: 3,
         number_of_steps: 5,
-        stage: 4,
+        stage: 3,
         steps: ["Select Donation", "Card or Bank", "Select Bank", "Verify Bank Micro Transactions", "Update Donation"]
       })
     }

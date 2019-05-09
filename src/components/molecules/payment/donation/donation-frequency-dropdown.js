@@ -25,7 +25,7 @@ const DonationFrequencyDropdown = class extends Component {
       <Dropdown id="dropdown" alignRight={true} drop={'down'} className="m-3">
         <Dropdown.Toggle
           variant="outline-primary"
-          id="account-holder-type-dropdown"
+          id="donation-frequency-dropdown"
           style={{width: '100%'}}
         >
           {/* <span id="country-text" style={{fontSize: '.75rem'}}>United States of America</span> */}

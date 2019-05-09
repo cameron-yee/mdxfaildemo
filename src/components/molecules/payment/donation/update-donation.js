@@ -9,6 +9,7 @@ import Spinner from 'react-bootstrap/Spinner'
 import Row from 'react-bootstrap/Row'
 
 import DonationFrequencyDropdown from './donation-frequency-dropdown'
+import DonationSelectFundDropdown from './donation-select-fund-dropdown'
 
 import updateCustomerDonationSubscription from '../../../../queries/bscsapi/stripe/update-customer-donation-subscription';
 
@@ -45,6 +46,7 @@ const UpdateDonation = class extends Component {
       donate_amount: 1,
       donate_amount_touched: false,
       frequency: 'Monthly',
+      fund: 'Annual',
 
       errors: false,
       loading: false,
@@ -118,30 +120,41 @@ const UpdateDonation = class extends Component {
             <p>Update donation info</p>
             <Form>
               {!this.state.errors && !this.state.successfully_charged &&
-                <div className="d-flex justify-content-center flex-wrap mt-3">
-                  <Form.Control
-                    id="ud-donate-amount-input"
-                    className="w-100 mb-3"
-                    type="number"
-                    step="1"
-                    min="1"
-                    placeholder="Donation amount"
-                    onKeyUp={this.setDonateAmount}
-                    onBlur={this.blurDonateAmount}
-                    isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
-                  />
-                  <Form.Control.Feedback type="invalid">
-                    Please provide a valid amount.
-                  </Form.Control.Feedback>
-                  <Button
-                    className="m-3"
-                    variant="outline-primary"
-                    onClick={(e) => this.handleDonation(e)}
-                  >
-                    Donate ${(this.state.donate_amount).toFixed(2)}
-                  </Button>
-                  <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
-                </div>
+                <React.Fragment>
+                  <div className="d-flex justify-content-center flex-wrap mt-3">
+                    <Form.Control
+                      id="ud-donate-amount-input"
+                      className="w-100 mb-3"
+                      type="number"
+                      step="1"
+                      min="1"
+                      placeholder="Donation amount"
+                      onKeyUp={this.setDonateAmount}
+                      onBlur={this.blurDonateAmount}
+                      isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Please provide a valid amount.
+                    </Form.Control.Feedback>
+                  </div>
+                  <p>Choose from one of three funds to support:</p>
+                  <ul>
+                    <li><strong>Annual Fund:</strong> supports current priorities and the mission of BSCS</li>
+                    <li><strong>Endowment Fund:</strong> provides BSCS with a stable source of income to sustain key programs over the long-term</li>
+                    <li><strong>Susan Loucks-Horsley Memorial Fund:</strong> supports staff development for BSCS employees as a tribute to the memory of Susan Loucks-Horsley</li>
+                  </ul>
+                  <div className="d-flex justify-content-center flex-wrap mt-3">
+                    <Button
+                      className="m-3"
+                      variant="outline-primary"
+                      onClick={(e) => this.handleDonation(e)}
+                    >
+                      Donate ${(this.state.donate_amount).toFixed(2)}
+                    </Button>
+                    <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
+                    <DonationSelectFundDropdown setFund={(fund) => this.setState({fund: fund})} />
+                  </div>
+                </React.Fragment>
               }
             </Form>
             <div className="d-flex justify-content-center mt-3">
