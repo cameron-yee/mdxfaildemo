@@ -15,9 +15,11 @@ import Row from 'react-bootstrap/Row'
 
 import DeleteBankModal from '../components/molecules/payment/bank/delete-bank-modal'
 import DeleteCardModal from '../components/molecules/payment/card/delete-card-modal'
+import DeleteDonationSubscriptionModal from '../components/molecules/payment/donation/delete-donation-subscription-modal'
 import LaunchDeleteBankModal from '../components/molecules/payment/bank/launch-delete-bank-modal'
 import LaunchDeleteCardModal from '../components/molecules/payment/card/launch-delete-card-modal'
 import LaunchUpdateCardModal from '../components/molecules/payment/card/launch-update-card-modal'
+import LaunchDeleteDonationSubscriptionModal from '../components/molecules/payment/donation/launch-delete-donation-subscription-modal'
 import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
 import UpdateCardModal from '../components/molecules/payment/card/update-card-modal'
 import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
@@ -31,10 +33,12 @@ import retrieveStripeCustomerDonationSubscriptions from '../queries/bscsapi/stri
   * componentDidMount() {...}
   * componentDidUpdate(prevProps, prevState) {...}
   * componentWillUnmount() {...}
-  * closeDeleteCardModal = () => {...}
-  * closeUpdateCardModal = () => {...}
+  * closeModal = () => {...}
+  * launchDeleteBankModal = () => {...}
   * launchDeleteCardModal = () => {...}
+  * launchDeleteDonationSubscriptionModal = () => {...}
   * launchUpdateCardModal = () => {...}
+  * launchUpdateDonationModal = () => {...}
   * render() {...}
   *
 */
@@ -46,6 +50,7 @@ const Dashboard = class extends Component {
       signed_in: undefined,
       show_delete_bank_modal: false,
       show_delete_card_modal: false,
+      show_delete_donation_subscription_modal: false,
       show_update_card_modal: false,
       show_update_donation_modal: false,
       subscriptions: []
@@ -75,34 +80,6 @@ const Dashboard = class extends Component {
 //End lifecycle hooks
 
 //Custom functions
-  // closeDeleteBankModal = () => {
-  //   this.setState({show_delete_bank_modal: false})
-  //   if(this.props.closePayment) {
-  //     this.props.closePayment()
-  //   }
-  // }
-
-  // closeDeleteCardModal = () => {
-  //   this.setState({show_delete_card_modal: false})
-  //   if(this.props.closePayment) {
-  //     this.props.closePayment()
-  //   }
-  // }
-
-  // closeUpdateCardModal = () => {
-  //   this.setState({show_update_card_modal: false})
-  //   if(this.props.closePayment) {
-  //     this.props.closePayment()
-  //   }
-  // }
-
-  // closeUpdateDonationModal = () => {
-  //   this.setState({show_update_donation_modal: false})
-  //   if(this.props.closePayment) {
-  //     this.props.closePayment()
-  //   }
-  // }
-
   closeModal = (crud, type) => {
     this.setState({[`show_${crud}_${type}_modal`]: false})
     if(this.props.closePayment) {
@@ -123,6 +100,7 @@ const Dashboard = class extends Component {
 
   launchDeleteBankModal = () => { this.setState({show_delete_bank_modal: true}) }
   launchDeleteCardModal = () => { this.setState({show_delete_card_modal: true}) }
+  launchDeleteDonationSubscriptionModal = () => { this.setState({show_delete_donation_subscription_modal: true}) }
   launchUpdateCardModal = () => { this.setState({show_update_card_modal: true}) }
   launchUpdateDonationModal = () => { this.setState({show_update_donation_modal: true}) }
 //End custom functions
@@ -242,10 +220,14 @@ const Dashboard = class extends Component {
                   onHide={() => this.closeModal('update', 'donation')}
                   signed_in={this.state.signed_in}
                 />
-                {/* <LaunchDeleteBankModal launchDeleteBank={this.launchDeleteBankModal}>
-                  <Button className="h-100 m-3" variant="outline-secondary">Delete Payment Bank Account</Button>
-                </LaunchDeleteBankModal>
-                <DeleteBankModal show={this.state.show_delete_bank_modal} onHide={this.closeDeleteBankModal} signed_in={this.state.signed_in} /> */}
+                <LaunchDeleteDonationSubscriptionModal launchDeleteDonationSubscription={this.launchDeleteDonationSubscriptionModal}>
+                  <Button className="h-100 m-3" variant="outline-secondary">Delete Donation</Button>
+                </LaunchDeleteDonationSubscriptionModal>
+                <DeleteDonationSubscriptionModal
+                  show={this.state.show_delete_donation_subscription_modal}
+                  onHide={() => this.closeModal('delete', 'donation_subscription')}
+                  signed_in={this.state.signed_in}
+                />
               </Col>
             </Row>
           </Container>

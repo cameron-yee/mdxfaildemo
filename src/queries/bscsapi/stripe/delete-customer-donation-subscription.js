@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const createDonationSubscription = (cancelToken, amount, frequency, fund_code, source_id) => {
+const deleteCustomerDonationSubscription = (cancelToken, subscriptionId) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -9,21 +9,19 @@ const createDonationSubscription = (cancelToken, amount, frequency, fund_code, s
     data: {
       query: `
         query {
-          createStripeCustomerDonationSubscription(
-            amount: ${amount},
-            frequency: "${frequency}",
-            fundCode: "${fund_code}",
-            sourceId: "${source_id}"
+          deleteStripeCustomerDonationSubscription(
+            subscriptionId: "${subscriptionId}",
           ) {
             id
+            object
             status
           }
         }
-        `
+      `
     }
   })
   .then(response => {
-    // console.log(response)
+    console.log(response)
     return response
   })
   .catch(error => {
@@ -31,4 +29,4 @@ const createDonationSubscription = (cancelToken, amount, frequency, fund_code, s
   })
 }
 
-export default createDonationSubscription
+export default deleteCustomerDonationSubscription

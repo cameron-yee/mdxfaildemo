@@ -145,7 +145,7 @@ const SelectDonation = class extends Component {
               }
               {this.props.delete && this.state.donations && this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 &&
                 <div className="d-flex justify-content-center">
-                  <Button variant="outline-primary" type="submit">Delete donation</Button>
+                  <Button variant="outline-primary" type="submit">Cancel donation</Button>
                 </div>
               }
             </Form>

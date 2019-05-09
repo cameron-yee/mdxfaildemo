@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner'
 
 import DonationFrequencyDropdown from '../donation/donation-frequency-dropdown'
+import DonationSelectFundDropdown from '../donation/donation-select-fund-dropdown'
 
 import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createDonationSubscription from '../../../../queries/bscsapi/stripe/create-donation-subscription';
@@ -31,6 +32,7 @@ const ChargeCard = class extends Component {
       donate_amount: 0,
       donate_amount_touched: false,
       frequency: 'Monthly',
+      fund_code: 'af',
       loading: false,
       successfully_charged: false
     }
@@ -71,7 +73,13 @@ const ChargeCard = class extends Component {
     this.setState({loading: true})
 
     if(this.state.frequency === 'Monthly' || this.state.frequency === 'Yearly') {
-      createDonationSubscription(this.cancelToken, this.state.donate_amount, this.state.frequency, this.props.card_id).then(response => {
+      createDonationSubscription(
+        this.cancelToken,
+        this.state.donate_amount,
+        this.state.frequency,
+        this.state.fund_code,
+        this.props.card_id
+      ).then(response => {
         if(response.status === 200 && !response.data.errors) {
           this.setState({successfully_charged: true, loading: false})
         } else {
@@ -79,7 +87,7 @@ const ChargeCard = class extends Component {
         }
       })
     } else if(this.state.frequency === 'Once') {
-      const donation_description = 'BSCS Science Learning one time donation'
+      const donation_description = `BSCS Science Learning one time donation for the ${this.state.fund}`
       createCharge(this.cancelToken, this.state.donate_amount*100, this.props.card_id, donation_description).then(response => {
         if(response.status === 200 && !response.data.errors) {
           this.setState({successfully_charged: true, loading: false})
@@ -112,24 +120,35 @@ const ChargeCard = class extends Component {
           </div>
         }
         {!this.state.errors && !this.state.successfully_charged && this.props.donate &&
-          <div className="d-flex justify-content-center flex-wrap mt-3">
-            <Form.Control
-              id="donate-amount-input"
-              className="w-100 mb-3"
-              type="number"
-              step="1"
-              min="0"
-              placeholder="Donation amount"
-              onKeyUp={this.setDonateAmount}
-              onBlur={this.blurDonateAmount}
-              isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
-            />
-            <Form.Control.Feedback type="invalid">
-              Please provide a valid amount.
-            </Form.Control.Feedback>
-            <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
-            <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
-          </div>
+          <React.Fragment>
+            <div className="d-flex justify-content-center flex-wrap mt-3">
+              <Form.Control
+                id="donate-amount-input"
+                className="w-100 mb-3"
+                type="number"
+                step="1"
+                min="0"
+                placeholder="Donation amount"
+                onKeyUp={this.setDonateAmount}
+                onBlur={this.blurDonateAmount}
+                isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
+              />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid amount.
+              </Form.Control.Feedback>
+            </div>
+            <p>Choose from one of three funds to support:</p>
+            <ul>
+              <li><strong>Annual Fund:</strong> supports current priorities and the mission of BSCS</li>
+              <li><strong>Endowment Fund:</strong> provides BSCS with a stable source of income to sustain key programs over the long-term</li>
+              <li><strong>Susan Loucks-Horsley Memorial Fund:</strong> supports staff development for BSCS employees as a tribute to the memory of Susan Loucks-Horsley</li>
+            </ul>
+            <div className="d-flex justify-content-center flex-wrap mt-3">
+              <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
+              <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
+              <DonationSelectFundDropdown setFund={(fund, fund_code) => this.setState({fund: fund, fund_code: fund_code})} />
+            </div>
+          </React.Fragment>
         }
         {this.state.loading &&
           <div className="d-flex justify-content-center">

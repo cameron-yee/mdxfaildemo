@@ -46,7 +46,7 @@ const UpdateDonation = class extends Component {
       donate_amount: 1,
       donate_amount_touched: false,
       frequency: 'Monthly',
-      fund: 'Annual',
+      fund_code: 'af',
 
       errors: false,
       loading: false,
@@ -93,8 +93,8 @@ const UpdateDonation = class extends Component {
     updateCustomerDonationSubscription(
       this.cancelToken,
       this.state.donate_amount,
-      `${this.state.frequency.toLowerCase()}-donation`,
-      // this.state.type,
+      `${this.state.frequency.toLowerCase()}-donation-${this.state.fund_code}`,
+      // this.state.fund,
       this.props.source_id,
       this.props.donation_id
     )
@@ -151,8 +151,8 @@ const UpdateDonation = class extends Component {
                     >
                       Donate ${(this.state.donate_amount).toFixed(2)}
                     </Button>
-                    <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
-                    <DonationSelectFundDropdown setFund={(fund) => this.setState({fund: fund})} />
+                    <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} only_recurring={true} />
+                    <DonationSelectFundDropdown setFund={(fund, fund_code) => this.setState({fund_code: fund_code})} />
                   </div>
                 </React.Fragment>
               }

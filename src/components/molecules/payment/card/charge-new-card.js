@@ -11,6 +11,7 @@ import Spinner from 'react-bootstrap/Spinner'
 
 import CountryDropdown from './country-dropdown'
 import DonationFrequencyDropdown from '../donation/donation-frequency-dropdown'
+import DonationSelectFundDropdown from '../donation/donation-select-fund-dropdown'
 
 import createCharge from '../../../../queries/bscsapi/stripe/create-charge'
 import createCustomerCard from '../../../../queries/bscsapi/stripe/create-customer-card';
@@ -64,6 +65,8 @@ const ChargeNewCard = class extends Component {
 
       errors: false,
       frequency: 'Monthly',
+      fund: 'Annual Fund',
+      fund_code: 'af',
       loading: false,
       successfully_charged: false
     }
@@ -169,7 +172,13 @@ const ChargeNewCard = class extends Component {
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
         if(this.state.frequency === 'Monthly' || this.state.frequency === 'Yearly') {
-          createDonationSubscription(this.cancelToken, this.state.donate_amount, this.state.frequency, response.data.data.createStripeCustomerCard.id).then(response => {
+          createDonationSubscription(
+            this.cancelToken,
+            this.state.donate_amount,
+            this.state.frequency,
+            this.state.fund_code,
+            response.data.data.createStripeCustomerCard.id
+          ).then(response => {
             if(response.status === 200 && !response.data.errors && response.data.data.createStripeCustomerDonationSubscription.status === 'active') {
               this.setState({successfully_charged: true, loading: false})
             } else {
@@ -177,7 +186,7 @@ const ChargeNewCard = class extends Component {
             }
           })
         } else if(this.state.frequency === 'Once') {
-          const donation_description = 'BSCS Science Learning one time donation'
+          const donation_description = `BSCS Science Learning one time donation for the ${this.state.fund}`
           createCharge(this.cancelToken, this.state.donate_amount*100, response.data.data.createStripeCustomerCard.id, donation_description).then(response => {
             if(response.status === 200 && !response.data.errors) {
               this.setState({successfully_charged: true, loading: false})
@@ -315,21 +324,6 @@ const ChargeNewCard = class extends Component {
                   </Form.Group>
                 </Col>
                 <Col xs={12}>
-                  {/* <Form.Group>
-                    <Form.Control
-                      className="form-control"
-                      id="cc-country-input"
-                      type="text"
-                      placeholder="Country"
-                      maxLength="50"
-                      onKeyUp={this.setCountry}
-                      onBlur={this.blurCountry}
-                      isInvalid={this.state.country_touched && (!this.state.country || this.state.country === '')}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please enter country.
-                    </Form.Control.Feedback>
-                  </Form.Group> */}
                   <CountryDropdown setCountry={(country_code) => this.setState({country: country_code})} />
                 </Col>
                 {this.state.country === 'US' &&
@@ -431,26 +425,29 @@ const ChargeNewCard = class extends Component {
               }
               {this.props.donate && !this.state.errors && !this.state.successfully_charged &&
                 <React.Fragment>
-                  {/* <div className="d-flex justify-content-center flex-wrap mt-3"> */}
-                    <Form.Control
-                      id="donate-amount-input"
-                      className="w-100 mb-3"
-                      type="number"
-                      min="0"
-                      step="1"
-                      placeholder="Donation amount"
-                      onKeyUp={this.setDonateAmount}
-                      onBlur={this.blurDonateAmount}
-                      isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Please provide a valid amount.
-                    </Form.Control.Feedback>
-                  {/* </div> */}
-                  {/* <div className="d-flex justify-content-center flex-wrap mt-3"> */}
-                    <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
-                    <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
-                  {/* </div> */}
+                  <Form.Control
+                    id="donate-amount-input"
+                    className="w-100 mb-3"
+                    type="number"
+                    min="0"
+                    step="1"
+                    placeholder="Donation amount"
+                    onKeyUp={this.setDonateAmount}
+                    onBlur={this.blurDonateAmount}
+                    isInvalid={this.state.donate_amount_touched && (!this.state.donate_amount || this.state.donate_amount === 0)}
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please provide a valid amount.
+                  </Form.Control.Feedback>
+                  <p>Choose from one of three funds to support:</p>
+                  <ul>
+                    <li><strong>Annual Fund:</strong> supports current priorities and the mission of BSCS</li>
+                    <li><strong>Endowment Fund:</strong> provides BSCS with a stable source of income to sustain key programs over the long-term</li>
+                    <li><strong>Susan Loucks-Horsley Memorial Fund:</strong> supports staff development for BSCS employees as a tribute to the memory of Susan Loucks-Horsley</li>
+                  </ul>
+                  <Button className="m-3" variant="outline-primary" onClick={(e) => this.handleDonation(e)}>Donate ${(this.state.donate_amount).toFixed(2)}</Button>
+                  <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} />
+                  <DonationSelectFundDropdown setFund={(fund, fund_code) => this.setState({fund: fund, fund_code: fund_code})} />
                 </React.Fragment>
               }
             </div>

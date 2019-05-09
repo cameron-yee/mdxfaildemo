@@ -32,9 +32,11 @@ const DonationFrequencyDropdown = class extends Component {
           <span id="donation-frequency-text">Monthly</span>
         </Dropdown.Toggle>
         <Dropdown.Menu id="dropdown-menu3" flip={false} style={{overflow: 'scroll'}}>
-          <Dropdown.Item onClick={(e) => this.handleSelection(e, 'Once')} >
-            Once
-          </Dropdown.Item>
+          {!this.props.only_recurring &&
+            <Dropdown.Item onClick={(e) => this.handleSelection(e, 'Once')} >
+              Once
+            </Dropdown.Item>
+          }
           <Dropdown.Item onClick={(e) => this.handleSelection(e, 'Monthly')} >
             Monthly
           </Dropdown.Item>

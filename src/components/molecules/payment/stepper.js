@@ -18,8 +18,6 @@ const Stepper = class extends Component {
     e.preventDefault()
 
     let step = e.target.getAttribute('data-stepper') || e.target.parentNode.getAttribute('data-stepper')
-    console.log(step)
-    console.log(this.props.max_stage)
     if(step <= this.props.max_stage) {
       this.props.setStage(parseInt(step))
     }

@@ -22,7 +22,6 @@ const SelectBank = class extends Component {
 
   getUserBanks = async () => {
     let banks = await retrieveStripeCustomerBanks(this.cancelToken)
-    console.log(banks)
     this.setState({banks: banks})
   }
 

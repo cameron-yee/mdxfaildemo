@@ -128,8 +128,6 @@ const DonateModal = class extends Component {
   }
 
   setBankInfo = (bank_id, bank_status) => {
-    console.log(bank_id)
-    console.log(bank_status)
     if(bank_id === 'new-bank') {
       this.setState({
         bank_status: null,
@@ -237,6 +235,7 @@ const DonateModal = class extends Component {
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Bank' &&
             <SelectBank
               setBankInfo={(bank_id, bank_status) => this.setBankInfo(bank_id, bank_status)}
+              allow_new={true}
             />
           }
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Credit' &&
