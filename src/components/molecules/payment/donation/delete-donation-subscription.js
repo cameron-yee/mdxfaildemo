@@ -48,7 +48,11 @@ const DeleteDonationSubscription = class extends Component {
       this.props.donation_id,
     )
       .then(response => {
-        if(response.status === 200 && !response.data.errors) {
+        if(
+          response.status === 200 &&
+          !response.data.errors &&
+          response.data.data.deleteStripeCustomerDonationSubscription.status === 'canceled'
+        ) {
           this.setState({successfully_deleted: true, loading: false})
           console.log(response)
         } else {
