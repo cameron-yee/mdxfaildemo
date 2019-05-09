@@ -10,6 +10,7 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 
 import signin from '../../../../queries/bscsapi/signin'
+import { Link } from 'gatsby';
 
 const SigninForm = class extends Component {
   constructor(props) {
@@ -22,12 +23,23 @@ const SigninForm = class extends Component {
 
       loading: false,
       notificationShow: false,
+      on_dashboard: true,
       sent: false,
       showErrorNotification: false,
       errors: false
     }
 
     this.cancelToken = axios.CancelToken.source()
+  }
+
+  componentDidMount() {
+    try {
+      if(window.location.pathname === '/dashboard') {
+        this.setState({on_dashboard: true})
+      }
+    } catch(error) {
+      console.log(error)
+    }
   }
 
   componentWillUnmount() {
@@ -169,16 +181,21 @@ const SigninForm = class extends Component {
                   </div>
                 }
                 { !this.state.errors && this.state.loading &&
-                  <Button variant="outline-success" disabled>
+                  <Button className="m-2" variant="outline-success" disabled>
                     <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
                     Signing in...
                   </Button>
                 }
                 { !this.state.errors && !this.state.loading && this.state.sent &&
-                  <Button variant="outline-success" disabled>Signed In</Button>
+                  <React.Fragment>
+                    {!this.state.on_dashboard &&
+                      <Link to="/dashboard" className="m-2"><Button variant="outline-primary">Go to Dashboard</Button></Link>
+                    }
+                    <Button className="m-2" variant="outline-success" disabled>Signed In</Button>
+                  </React.Fragment>
                 }
                 { this.state.errors &&
-                  <Button variant="outline-danger" disabled>Error</Button>
+                  <Button className="m-2" variant="outline-danger" disabled>Error</Button>
                 }
               </div>
             </Col>

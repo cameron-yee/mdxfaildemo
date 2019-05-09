@@ -50,7 +50,14 @@ const Stepper = class extends Component {
                     onClick={(e) => this.setStage(e)}
                     className={`d-flex justify-content-center step done step-${i} steps-${this.props.number_of_steps}`}
                   >
-                    <div className="d-flex align-items-center"><i className="far fa-check-square"></i>&nbsp;{words}</div>
+                    {!this.props.no_checks &&
+                      <div className="d-flex align-items-center">
+                        <i className="far fa-check-square"></i>&nbsp;{words}
+                      </div>
+                    }
+                    {this.props.no_checks &&
+                      <div className="d-flex align-items-center">{words}</div>
+                    }
                   </Col>
                 )
               } else {

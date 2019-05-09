@@ -129,7 +129,7 @@ const Dashboard = class extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {
+                    { this.state.subscriptions &&
                       this.state.subscriptions.map((subscription, index) => {
                         // let last4
                         let type = /^[^_]+/.exec(subscription.default_source)

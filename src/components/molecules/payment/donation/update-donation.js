@@ -3,10 +3,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import Button from 'react-bootstrap/Button'
-import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Spinner from 'react-bootstrap/Spinner'
-import Row from 'react-bootstrap/Row'
 
 import DonationFrequencyDropdown from './donation-frequency-dropdown'
 import DonationSelectFundDropdown from './donation-select-fund-dropdown'

@@ -4,8 +4,9 @@ import axios from 'axios'
 
 import Modal from 'react-bootstrap/Modal'
 
-import SigninForm from './signin-form'
 import RegistrationForm from './registration-form'
+import SigninForm from './signin-form'
+import Stepper from '../../../molecules/payment/stepper'
 
 const SigninFormModal = class extends Component {
   constructor(props) {
@@ -13,10 +14,12 @@ const SigninFormModal = class extends Component {
     this.state = {
       errors: false,
       loading: false,
+      max_stage: 1,
       notificationShow: false,
       register: false,
       sent: false,
-      showErrorNotification: false
+      showErrorNotification: false,
+      stage: 0
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -56,22 +59,30 @@ const SigninFormModal = class extends Component {
         aria-labelledby="signin-form"
         centered
       >
-        <Modal.Header closeButton>
-          <Modal.Title id="signin-form">
-            {!this.state.register &&
-              <span>Sign In</span>
-            }
-            {this.state.register &&
-              <span>Register</span>
-            }
-          </Modal.Title>
-        </Modal.Header>
+        <Stepper
+          setStage={(stage) => this.setState({stage: stage})}
+          setMaxStage={(max_stage) => this.setState({max_stage})}
+          stage={this.state.stage}
+          max_stage={this.state.max_stage}
+          number_of_steps={2}
+          signed_in={this.props.signed_in}
+          steps={["Sign in", "Register"]}
+          no_checks={true}
+          // credit_or_bank={this.state.credit_or_bank}
+          // bank_status={this.state.bank_status}
+        />
         <Modal.Body>
-          {!this.state.register &&
-            <SigninForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+          {(!this.state.register || this.state.stage === 0) &&
+            <SigninForm
+              setSignedIn={this.props.setSignedIn}
+              register={(state) => this.setState({register: state, stage: 1})}
+            />
           }
-          {this.state.register &&
-            <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+          {(this.state.register || this.state.stage === 1) &&
+            <RegistrationForm
+              setSignedIn={this.props.setSignedIn}
+              register={(state) => this.setState({register: state, stage: 0})}
+            />
           }
         </Modal.Body>
         {/* <Modal.Footer>

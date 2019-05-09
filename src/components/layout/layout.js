@@ -58,10 +58,10 @@ const Layout = class extends Component {
       signed_in: false
     }
 
-    //Need componentWillUnmount
     this.cancelToken = axios.CancelToken.source()
   }
 
+//Lifecycle hooks
   componentDidMount() {
     this.setStripeScript()
     if(this.props.product && this.props.amount && this.props.description) {
@@ -73,6 +73,14 @@ const Layout = class extends Component {
     }
 
     this.checkSignInStatus()
+  }
+
+  componentWillUnmount() {
+    try {
+      this.cancelToken.cancel()
+    } catch(error) {
+      console.log(error)
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -96,7 +104,9 @@ const Layout = class extends Component {
       this.setState({modalShowPayment: true})
     }
   }
+//End lifecycle hooks
 
+//Custom functions
   checkSignInStatus = async () => {
     let user_state = await checkIfUserSignedIn(this.cancelToken)
     this.setState({signed_in: user_state})
@@ -176,6 +186,7 @@ const Layout = class extends Component {
       console.log(error)
     }
   }
+//End custom functions
 
   render() {
     return (
@@ -208,9 +219,9 @@ const Layout = class extends Component {
               location={this.props.location}
             />
             <DonateModal
-              show={this.state.modalShowDonate}
               onHide={this.closeDonate}
               setSignedIn={() => this.setSignedIn(true)}
+              show={this.state.modalShowDonate}
               signed_in={this.state.signed_in}
             />
             <GeneralContactFormModal
@@ -218,22 +229,23 @@ const Layout = class extends Component {
               onHide={this.closeGeneral}
             />
             <JoinEmailFormModal
-              show={this.state.modalShowJoinEmail}
               onHide={this.closeJoinEmail}
+              show={this.state.modalShowJoinEmail}
             />
             <SigninFormModal
               show={this.state.modalShowSignin}
               onHide={this.closeSignin}
               setSignedIn={() => this.setSignedIn(true)}
+              signed_in={this.state.signed_in}
             />
             <PaymentModal
-              show={this.state.modalShowPayment}
-              onHide={this.closePayment}
-              setSignedIn={() => this.setSignedIn(true)}
-              signed_in={this.state.signed_in}
-              product={this.state.product}
               amount={this.state.amount}
               description={this.state.description}
+              onHide={this.closePayment}
+              product={this.state.product}
+              setSignedIn={() => this.setSignedIn(true)}
+              show={this.state.modalShowPayment}
+              signed_in={this.state.signed_in}
             />
           </React.Fragment>
         )}
