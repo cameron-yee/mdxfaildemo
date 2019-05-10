@@ -28,7 +28,7 @@ Are you planning to adopt new science instructional materials for your districts
 
 Discover an effective pathway through this process at the NextGen TIME Leadership Institute. NextGen TIME is a suite of tools and processes for curriculum-based professional learning that supports educators to evaluate, select, and implement instructional materials designed for next generation science.
 
-## Why Participate?
+## Why participate?
 
 During this immersive experience, you will:
 
