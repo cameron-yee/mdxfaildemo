@@ -31,7 +31,7 @@ How can you help teachers plan for instruction and classroom assessment based on
 
 Discover an effective pathway at the Five Tools Leadership Institute. The Five Tools and Processes support teachers in translating science concepts, practices, and performance expectations into a plan for next generation science-aligned units of instruction.
 
-## Why Participate?
+## Why participate?
 
 During this immersive experience, you will:
 
