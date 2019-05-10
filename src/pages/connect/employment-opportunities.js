@@ -69,6 +69,12 @@ const EmploymentOpportunitiesPage = (props) => {
             <a href="https://media.bscs.org/bscsmw/employment-opportunities/science_educator_instructional_materials_development.pdf" target="_blank" rel="noopener noreferrer">Click here to read the full job description and how to apply.</a>
           </Col>
         </Row>
+        <hr />
+        <Row style={{ marginBottom: '2rem', marginTop: '2rem' }} className="d-flex flex-wrap">
+          <Col xs={12}>
+            <p>BSCS Science Learning is committed to recruitment of a diverse staff. We are an equal opportunity employer. All applicants will receive consideration for employment without regard to age, race, sex, color, religion, national origin, disability (physical and/or mental), sexual orientation, gender identity or expression, veteran status, military obligations, marital status, pregnancy, genetic information, or any status protected by federal, state, or local law.</p>
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

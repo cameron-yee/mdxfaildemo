@@ -43,10 +43,11 @@ const StrategicInitiativesPage = class extends Component {
             <Col>
               <Img
                 className="mb-3 rounded"
-                fluid={this.props.data.threeGirlsInClassroom.childImageSharp.fluid}
-                alt="NEED ALT"
+                fluid={this.props.data.highSchoolGirlsInLab.childImageSharp.fluid}
+                alt="Two high school girls in science lab."
                 backgroundColor='rgba(205, 205, 205, 1)'
               />
+              <p className="mb-5" style={{fontSize: '10pt'}}>Courtesy of Allison Shelley/The Verbatim Agency for American Education: Images of Teachers and Students in Action.</p>
               <p>Following a strategic planning process in 2016, BSCS Science Learning is pursuing three long-term, strategic initiatives.</p>
               <p><strong>21st Century High School Biology.</strong> We are launching an effort to reconceive high school biology to meet the needs of our students and society throughout the 21st century. As we convene scientists, educators, curriculum writers, community members, and advisors, we are exploring foundational questions, beginning with this one: What knowledge and skills in the life sciences will all students need for their lives and careers in the next 10-20 years?</p>
 
@@ -57,13 +58,14 @@ const StrategicInitiativesPage = class extends Component {
           </Row>
           <Row style={{ marginBottom: '2rem' }} className="d-none d-lg-block">
             <div style={{width: '100%'}}>
-              <div style={{width: "40%", float: 'right'}}>
+              <div className="ml-3 mb-3" style={{width: "40%", float: 'right'}}>
                 <Img
-                  className="ml-3 mb-3 rounded"
-                  fluid={this.props.data.threeGirlsInClassroom.childImageSharp.fluid}
-                  alt="NEED ALT"
+                  className="rounded"
+                  fluid={this.props.data.highSchoolGirlsInLab.childImageSharp.fluid}
+                  alt="Two high school girls in science lab."
                   backgroundColor='rgba(205, 205, 205, 1)'
                 />
+                <p style={{fontSize: '10pt'}}>Courtesy of Allison Shelley/The Verbatim Agency for American Education: Images of Teachers and Students in Action.</p>
               </div>
               <p>Following a strategic planning process in 2016, BSCS Science Learning is pursuing three long-term, strategic initiatives.</p>
               <p><strong>21st Century High School Biology.</strong> We are launching an effort to reconceive high school biology to meet the needs of our students and society throughout the 21st century. As we convene scientists, educators, curriculum writers, community members, and advisors, we are exploring foundational questions, beginning with this one: What knowledge and skills in the life sciences will all students need for their lives and careers in the next 10-20 years?</p>
@@ -87,7 +89,7 @@ export default props => (
 
 export const query = graphql`
   query {
-    threeGirlsInClassroom: file(relativePath: { eq: "strategic-initiatives/three-girls-in-classroom.jpg" }) {
+    highSchoolGirlsInLab: file(relativePath: { eq: "strategic-initiatives/high-school-girls-in-lab.jpg" }) {
       ...rowImage
     }
   }
