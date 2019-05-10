@@ -47,6 +47,6 @@ During this immersive experience, you will:
 * Science consultants
 * University faculty
 
-## Details
+### Details
 
 Details vary for each institute. Currently, there are no Five Tools Leadership Institutes available for registration. Join our E-mail list to stay informed on upcoming programs.
