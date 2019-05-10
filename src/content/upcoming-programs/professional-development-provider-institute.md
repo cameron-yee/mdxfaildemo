@@ -1,6 +1,6 @@
 ---
 date: 2019-03-08T21:58:54.877Z
-title: 'Professional Development Provider Institute'
+title: Professional Development Provider Institute
 type: Leadership Development
 seoCanonicalUrl: >-
   https://bscs.org/upcoming-programs/leadership-development/professional-development-provider-institute
@@ -27,7 +27,7 @@ sidebarContacts:
       person: Ashley Whitaker
 sidebarContactsText: 'For more information, please contact Ashley Whitaker.'
 sidebarContactsTitle: Questions?
-sortOrder: 4
+sortOrder: 1
 page: upcoming-programs
 ---
 Join us for a Professional Development (PD) Provider Institute 2 in Colorado Springs, CO. The Institute is a 4-day experience designed to support you as a PD leader by deepening your knowledge, increasing your confidence, and enhancing your abilities to support the implementation of the Next Generation Science Standards. This Institute will focus on Science and Engineering Practices 4, 6, and 7: Analyzing and Interpreting Data, Constructing Explanations, and Engaging in Argument from Evidence.
