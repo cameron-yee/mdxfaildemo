@@ -43,8 +43,8 @@ const StrategicInitiativesPage = class extends Component {
             <Col>
               <Img
                 className="mb-3 rounded"
-                fluid={this.props.data.highSchoolGirlsInLab.childImageSharp.fluid}
-                alt="Two high school girls in science lab."
+                fluid={this.props.data.girlsWithTeacher.childImageSharp.fluid}
+                alt="Two girls and teacher in chemistry class."
                 backgroundColor='rgba(205, 205, 205, 1)'
               />
               <p className="mb-5" style={{fontSize: '10pt'}}>Courtesy of Allison Shelley/The Verbatim Agency for American Education: Images of Teachers and Students in Action.</p>
@@ -61,8 +61,8 @@ const StrategicInitiativesPage = class extends Component {
               <div className="ml-3 mb-3" style={{width: "40%", float: 'right'}}>
                 <Img
                   className="rounded"
-                  fluid={this.props.data.highSchoolGirlsInLab.childImageSharp.fluid}
-                  alt="Two high school girls in science lab."
+                  fluid={this.props.data.girlsWithTeacher.childImageSharp.fluid}
+                  alt="Two girls and teacher in chemistry class."
                   backgroundColor='rgba(205, 205, 205, 1)'
                 />
                 <p style={{fontSize: '10pt'}}>Courtesy of Allison Shelley/The Verbatim Agency for American Education: Images of Teachers and Students in Action.</p>
@@ -89,7 +89,7 @@ export default props => (
 
 export const query = graphql`
   query {
-    highSchoolGirlsInLab: file(relativePath: { eq: "strategic-initiatives/high-school-girls-in-lab.jpg" }) {
+    girlsWithTeacher: file(relativePath: { eq: "strategic-initiatives/girls-with-teacher.jpg" }) {
       ...rowImage
     }
   }
