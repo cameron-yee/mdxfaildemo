@@ -97,9 +97,6 @@ Refer to our <Link to="/our-work/news/new-bscs-report-presents-guidelines-for-de
 </div>
 
 <hr />
+<br />
 
-<div className="d-flex my-5">
-  <div className="justify-content-center">
-    <p className="text-center">This work was supported by a grant from the Pisces Foundation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the Pisces Foundation.</p>
-  </div>
-</div>
+*This work was supported by a grant from the Pisces Foundation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the Pisces Foundation.*
