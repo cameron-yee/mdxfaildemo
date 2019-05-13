@@ -9,7 +9,7 @@ cardDescription: >-
   February 12, 1809. The day is used to highlight Darwin's contributions to
   science and to promote science in general.
 sidebarImage: ''
-sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
+sidebarAlt: ''
 sidebarURLs: []
 sidebarContacts:
   - contact:
@@ -18,6 +18,7 @@ sidebarContacts:
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
 sidebarContactsImage: /assets/darwin-day-2019.jpg
+sidebarContactsAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
 announcementOrCoverage: Announcement
 sortOrder: 3
 page: news
