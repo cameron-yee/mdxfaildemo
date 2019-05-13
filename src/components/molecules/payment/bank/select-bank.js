@@ -67,7 +67,7 @@ const SelectBank = class extends Component {
               <Form.Group>
                 {
                   this.state.banks.data.data.retrieveStripeCustomerBanks.data.map((bank, index) => {
-                    if(index === 0) {
+                    if(this.props.selected_bank && this.props.selected_bank === bank.id || (!this.props.selected_bank && index === 0)) {
                       return(
                         <React.Fragment key={`bank-${index}`}>
                           <Form.Check

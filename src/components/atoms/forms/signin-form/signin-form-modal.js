@@ -60,7 +60,13 @@ const SigninFormModal = class extends Component {
         centered
       >
         <Stepper
-          setStage={(stage) => this.setState({stage: stage})}
+          setStage={(stage) => {
+            stage === 0
+            ?
+            this.setState({stage: stage, register: false})
+            :
+            this.setState({stage: stage, register: true})
+          }}
           setMaxStage={(max_stage) => this.setState({max_stage})}
           stage={this.state.stage}
           max_stage={this.state.max_stage}
@@ -75,13 +81,13 @@ const SigninFormModal = class extends Component {
           {(!this.state.register || this.state.stage === 0) &&
             <SigninForm
               setSignedIn={this.props.setSignedIn}
-              register={(state) => this.setState({register: state, stage: 1})}
+              // register={(state) => this.setState({register: state, stage: 1})}
             />
           }
           {(this.state.register || this.state.stage === 1) &&
             <RegistrationForm
               setSignedIn={this.props.setSignedIn}
-              register={(state) => this.setState({register: state, stage: 0})}
+              // register={(state) => this.setState({register: state, stage: 0})}
             />
           }
         </Modal.Body>

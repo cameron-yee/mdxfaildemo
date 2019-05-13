@@ -115,18 +115,35 @@ const SelectDonation = class extends Component {
                       next_payment_year = current.getFullYear() + 1
                     }
 
-                    return(
-                      <React.Fragment key={`donation-${index}`}>
-                        <Form.Check
-                          custom
-                          type="radio"
-                          id={`${donation.id}`}
-                          label={`${type} Donation for $${amount}. Next scheduled payment: ${next_payment_month}/${next_payment_day}/${next_payment_year}`}
-                          name="customer-donations"
-                          onClick={() => this.setState({donation_selected: true})}
-                        />
-                      </React.Fragment>
-                    )
+                    if(this.props.selected_donation && this.props.selected_donation === donation.id) {
+                      return(
+                        <React.Fragment key={`donation-${index}`}>
+                          <Form.Check
+                            custom
+                            type="radio"
+                            id={`${donation.id}`}
+                            label={`${type} Donation for $${amount}. Next scheduled payment: ${next_payment_month}/${next_payment_day}/${next_payment_year}`}
+                            name="customer-donations"
+                            defaultChecked
+                            onClick={() => this.setState({donation_selected: true})}
+                          />
+                        </React.Fragment>
+                      )
+                    } else {
+                      return(
+                        <React.Fragment key={`donation-${index}`}>
+                          <Form.Check
+                            custom
+                            type="radio"
+                            id={`${donation.id}`}
+                            label={`${type} Donation for $${amount}. Next scheduled payment: ${next_payment_month}/${next_payment_day}/${next_payment_year}`}
+                            name="customer-donations"
+                            onClick={() => this.setState({donation_selected: true})}
+                          />
+                        </React.Fragment>
+                      )
+
+                    }
                   })
                 }
                 {( !this.state.donations || this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length === 0) && !this.props.allow_new &&
@@ -143,9 +160,14 @@ const SelectDonation = class extends Component {
                   <Button variant="outline-primary" disabled>Update this donation.</Button>
                 </div>
               }
-              {this.props.delete && this.state.donations && this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 &&
+              {this.props.delete && this.state.donations && this.state.donation_selected && this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" type="submit">Cancel donation</Button>
+                </div>
+              }
+              {this.props.delete && this.state.donations && !this.state.donation_selected && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
+                <div className="d-flex justify-content-center">
+                  <Button variant="outline-primary" disabled>Cancel donation.</Button>
                 </div>
               }
             </Form>

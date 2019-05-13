@@ -91,7 +91,7 @@ const SelectCard = class extends Component {
               <Form.Group>
                 { this.state.cards !== null &&
                   this.state.cards.data.data.retrieveStripeCustomerCards.data.map((card, index) => {
-                    if(card.id === this.props.default_card) {
+                    if(card.id === this.props.default_card && !this.props.selected_card) {
                       return(
                         <React.Fragment key={`card-${index}`}>
                           <Form.Check
@@ -104,6 +104,33 @@ const SelectCard = class extends Component {
                             name="customer-cards"
                           />
                           <span className="badge badge-pill badge-primary">DEFAULT</span>
+                        </React.Fragment>
+                      )
+                    } else if(card.id === this.props.default_card && this.props.selected_card) {
+                      return(
+                        <React.Fragment key={`card-${index}`}>
+                          <Form.Check
+                            custom
+                            inline="true"
+                            type="radio"
+                            id={`${card.id}`}
+                            label={`•••• •••• •••• ${card.last4}`}
+                            name="customer-cards"
+                          />
+                          <span className="badge badge-pill badge-primary">DEFAULT</span>
+                        </React.Fragment>
+                      )
+                    } else if(this.props.selected_card && this.props.selected_card === card.id) {
+                      return(
+                        <React.Fragment key={`card-${index}`}>
+                          <Form.Check
+                            custom
+                            type="radio"
+                            id={`${card.id}`}
+                            label={`•••• •••• •••• ${card.last4}`}
+                            defaultChecked
+                            name="customer-cards"
+                          />
                         </React.Fragment>
                       )
                     } else {

@@ -219,7 +219,10 @@ const UpdateDonationModal = class extends Component {
             <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
           }
           { this.state.stage === 0 && this.props.signed_in &&
-            <SelectDonation setDonationId={(donation_id) => this.setState({donation_id: donation_id, stage: 1, max_stage: 1})} />
+            <SelectDonation
+              setDonationId={(donation_id) => this.setState({donation_id: donation_id, stage: 1, max_stage: 1})}
+              selected_donation={this.state.donation_id}
+            />
           }
           {this.state.stage === 1 && this.props.signed_in &&
             <CreditOrBank setCreditOrBank={(credit_or_bank) => {this.setCreditOrBank(credit_or_bank)}} />
@@ -235,6 +238,8 @@ const UpdateDonationModal = class extends Component {
           }
           { this.state.stage === 2 && this.state.stripe && this.state.credit_or_bank === 'Credit' &&
             <SelectCard
+              allow_new={true}
+              default_card={this.state.customer_default_card}
               setCardId={(card_id) => {
                 if(card_id === 'new-card') {
                   this.setState({
@@ -254,8 +259,7 @@ const UpdateDonationModal = class extends Component {
                   })
                 }
               }}
-              default_card={this.state.customer_default_card}
-              allow_new={true}
+              selected_card={this.state.card_id}
             />
           }
           { this.state.stage === 3 && this.state.stripe && this.state.card_id === 'new-card' && this.state.credit_or_bank === 'Credit' &&

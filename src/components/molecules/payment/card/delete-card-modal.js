@@ -86,24 +86,24 @@ const DeleteCardModal = class extends Component {
     })
   }
 
-  next = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage < 2 && this.state.max_stage > current_stage) {
-      let new_stage = ++current_stage
-      console.log(new_stage)
-      this.setState({stage: new_stage})
-    }
-  }
+  // next = (e) => {
+  //   e.preventDefault()
+  //   let current_stage = this.state.stage
+  //   if(current_stage < 2 && this.state.max_stage > current_stage) {
+  //     let new_stage = ++current_stage
+  //     console.log(new_stage)
+  //     this.setState({stage: new_stage})
+  //   }
+  // }
 
-  previous = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage !== 1) {
-      let new_stage = --current_stage
-      this.setState({stage: new_stage})
-    }
-  }
+  // previous = (e) => {
+  //   e.preventDefault()
+  //   let current_stage = this.state.stage
+  //   if(current_stage !== 1) {
+  //     let new_stage = --current_stage
+  //     this.setState({stage: new_stage})
+  //   }
+  // }
 //End custom functions
 
   render() {
@@ -134,10 +134,10 @@ const DeleteCardModal = class extends Component {
           }
           { this.state.stage === 0 && this.props.signed_in &&
             <SelectCard
-              // setCardInfo={(card_id, card_last4) => this.setState({card_id: card_id, cardLast4: card_last4, stage: 2, max_stage: 2})}
               allow_new={false}
               default_card={this.state.customer_default_card}
               delete={true}
+              selected_card={this.state.card_id}
               setCardId={(card_id) => this.setState({card_id: card_id, stage: 1, max_stage: 1})}
             />
           }
@@ -145,14 +145,14 @@ const DeleteCardModal = class extends Component {
             <DeleteCard card_id={this.state.card_id} />
           }
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
             {this.state.stage > 0 &&
               <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
             }
             {this.state.stage < 1 && this.state.max_stage > this.state.stage &&
               <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
             }
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     )
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
 import axios from 'axios'
 
@@ -10,7 +11,23 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 
 import signin from '../../../../queries/bscsapi/signin'
-import { Link } from 'gatsby';
+
+/* SigninForm functions
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * componentWillUnmount() {...}
+  * showNotification = () => {...}
+  * hideNotification = () => {...}
+  * showErrorNotification = () => {...}
+  * hideErrorNotification = () => {...}
+  * setEmail = (e) => {...}
+  * blurEmail = (e) => {...}
+  * setPassword = (e) => {...}
+  * handleSignin = (e) => {...}
+  * render() {...}
+  *
+*/
 
 const SigninForm = class extends Component {
   constructor(props) {
@@ -23,7 +40,7 @@ const SigninForm = class extends Component {
 
       loading: false,
       notificationShow: false,
-      on_dashboard: true,
+      on_dashboard: false,
       sent: false,
       showErrorNotification: false,
       errors: false
@@ -168,7 +185,7 @@ const SigninForm = class extends Component {
                   &&
                   <div className="d-flex">
                     <Button className="m-2" variant="outline-primary" disabled>Sign In</Button>
-                    <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button> */}
                   </div>
                 }
                 { !this.state.errors && !this.state.loading && !this.state.sent
@@ -177,7 +194,7 @@ const SigninForm = class extends Component {
                   &&
                   <div className="d-flex p-2">
                     <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleSignin(e)}>Sign In</Button>
-                    <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button> */}
                   </div>
                 }
                 { !this.state.errors && this.state.loading &&

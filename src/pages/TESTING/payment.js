@@ -43,7 +43,7 @@ const PaymentPage = class extends Component {
           launchDonate={this.state.launchDonate}
           launchPayment={this.state.launchPayment}
           location={this.props.location}
-          product="Test Product"
+          product="OpenSciEd Kit"
         >
           <Container>
             <PageTitle title="Payment" />

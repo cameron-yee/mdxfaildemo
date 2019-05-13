@@ -244,6 +244,7 @@ const PaymentModal = class extends Component {
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Bank' &&
             <SelectBank
               setBankInfo={(bank_id, bank_status) => this.setBankInfo(bank_id, bank_status)}
+              selected_bank={this.state.bank_id}
             />
           }
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Credit' &&
@@ -257,6 +258,7 @@ const PaymentModal = class extends Component {
                   steps: ["Select Payment", "Select Card", "Pay"]
                 })
               }}
+              selected_card={this.state.card_id}
               default_card={this.state.customer_default_card}
               allow_new={true}
             />

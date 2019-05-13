@@ -34,9 +34,9 @@ const UpdateCardModal = class extends Component {
     super(props)
 
     this.state = {
-      cardId: undefined,
-      customer_default_card: undefined,
-      customer_stripe_id: undefined,
+      card_id: null,
+      customer_default_card: null,
+      customer_stripe_id: null,
       max_stage: 0,
       register: false,
       stage: 0,
@@ -86,24 +86,24 @@ const UpdateCardModal = class extends Component {
     })
   }
 
-  next = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage < 2 && this.state.max_stage > current_stage) {
-      let new_stage = ++current_stage
-      console.log(new_stage)
-      this.setState({stage: new_stage})
-    }
-  }
+  // next = (e) => {
+  //   e.preventDefault()
+  //   let current_stage = this.state.stage
+  //   if(current_stage < 2 && this.state.max_stage > current_stage) {
+  //     let new_stage = ++current_stage
+  //     console.log(new_stage)
+  //     this.setState({stage: new_stage})
+  //   }
+  // }
 
-  previous = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage !== 1) {
-      let new_stage = --current_stage
-      this.setState({stage: new_stage})
-    }
-  }
+  // previous = (e) => {
+  //   e.preventDefault()
+  //   let current_stage = this.state.stage
+  //   if(current_stage !== 1) {
+  //     let new_stage = --current_stage
+  //     this.setState({stage: new_stage})
+  //   }
+  // }
 //End custom functions
 
   render() {
@@ -134,24 +134,24 @@ const UpdateCardModal = class extends Component {
           }
           { this.state.stage === 0 && this.props.signed_in &&
             <SelectCard
-              // setCardInfo={(card_id, card_last4) => this.setState({cardId: card_id, cardLast4: card_last4, stage: 2, maxStage: 2})}
-              setCardId={(card_id) => this.setState({cardId: card_id, stage: 1, maxStage: 1})}
-              default_card={this.state.customer_default_card}
               allow_new={false}
+              default_card={this.state.customer_default_card}
+              selected_card={this.state.card_id}
+              setCardId={(card_id) => this.setState({card_id: card_id, stage: 1, max_stage: 1})}
             />
           }
           { this.state.stage === 1 && this.props.signed_in &&
             <UpdateCard card_id={this.state.card_id} />
           }
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
             {this.state.stage > 0 &&
               <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
             }
-            {this.state.stage < 1 && this.state.maxStage > this.state.stage &&
+            {this.state.stage < 1 && this.state.max_stage > this.state.stage &&
               <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
             }
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     )
   }

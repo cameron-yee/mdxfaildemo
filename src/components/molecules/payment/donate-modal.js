@@ -240,6 +240,8 @@ const DonateModal = class extends Component {
           }
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Credit' &&
             <SelectCard
+              allow_new={true}
+              default_card={this.state.customer_default_card}
               setCardId={(card_id) => {
                 this.setState({
                   card_id: card_id,
@@ -249,8 +251,7 @@ const DonateModal = class extends Component {
                   steps: ["Select Payment", "Select Card", "Donate"]
                 })
               }}
-              default_card={this.state.customer_default_card}
-              allow_new={true}
+              selected_card={this.state.card_id}
             />
           }
           { this.state.stage === 2 && this.state.stripe && this.state.bank_status === null && this.state.credit_or_bank === 'Bank' &&
