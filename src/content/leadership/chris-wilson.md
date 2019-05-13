@@ -21,4 +21,4 @@ Prior to joining BSCS, Chris was a visiting assistant professor in the Center fo
 
 <p style="margin-bottom: 2rem;">He holds a B.S. in Zoology from the University of Liverpool in England, an M.S. in Zoology specializing in Evolutionary Biology and a Ph.D. in Zoology specializing in Informal Science Education in Zoos from Michigan State University.</p>
 
-<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/chris_wilson_vitae_may_2015.pdf" target="_blank" rel="noopener noreferrer">Read Chris Wilson's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
+<a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/management/chris_wilson_vitae_may_2015.pdf" target="_blank" rel="noopener noreferrer">Read Chris Wilson's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
