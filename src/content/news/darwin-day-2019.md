@@ -15,7 +15,7 @@ sidebarURLs:
       buttonText: DONATE NOW
       external: false
       text: Support the work we do by making a generous donation!
-      url: 'https://bscs.org/donate/'
+      url: 'https://bscs.org/donate'
 sidebarContacts:
   - contact:
       infoat: false
