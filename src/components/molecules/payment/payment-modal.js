@@ -17,6 +17,7 @@ import CreateNewBank from './bank/create-new-bank';
 import CreditOrBank from './credit-or-bank'
 import SelectCard from './card/select-card'
 import SelectBank from './bank/select-bank'
+import SpecificContactForm from '../../atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Stepper from './stepper'
 import VerifyBank from './bank/verify-bank';
 
@@ -340,14 +341,20 @@ const PaymentModal = class extends Component {
             />
           }
         </Modal.Body>
-        {/* <Modal.Footer>
-            {this.state.stage > 0 &&
+        <Modal.Footer>
+            <SpecificContactForm
+              sendto="Alyssa Markle"
+              infoat="false"
+            >
+              Purchase order form?
+            </SpecificContactForm>
+            {/* {this.state.stage > 0 &&
               <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
             }
             {this.state.stage < 2 && this.state.maxStage > this.state.stage &&
               <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
-            }
-        </Modal.Footer> */}
+            } */}
+        </Modal.Footer>
       </Modal>
     )
   }

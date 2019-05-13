@@ -103,6 +103,10 @@ const Layout = class extends Component {
     if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
       this.setState({modalShowPayment: true})
     }
+
+    if(this.props.signed_in && prevProps.signed_in !== this.props.signed_in) {
+      this.setState({signed_in: this.props.signed_in})
+    }
   }
 //End lifecycle hooks
 

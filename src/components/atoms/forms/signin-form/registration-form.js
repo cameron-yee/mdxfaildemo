@@ -392,7 +392,9 @@ const RegistrationForm = class extends Component {
                   || !this.state.password)
                   &&
                   <div className="d-flex p-2">
-                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button> */}
+                    {this.props.register &&
+                      <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
+                    }
                     <Button className="m-2" variant="outline-primary" disabled>Register</Button>
                   </div>
                 }
@@ -401,7 +403,9 @@ const RegistrationForm = class extends Component {
                   && this.state.password
                   &&
                   <div className="d-flex p-2">
-                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button> */}
+                    {this.props.register &&
+                      <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
+                    }
                     <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleRegister(e)}>Register</Button>
                   </div>
                 }

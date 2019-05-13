@@ -6,7 +6,10 @@ const CreditOrBank = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <Alert variant="warning"><i className="fas fa-exclamation-triangle"></i>&nbsp;Listicle iPhone chicharrones umami before they sold out freegan art party tilde hammock glossier. Readymade brunch retro raclette mumblecore. Wolf tilde paleo synth. Hot chicken dreamcatcher readymade vape. Cornhole master cleanse poke echo park pop-up tacos before they sold out man braid twee distillery tote bag. Cold-pressed knausgaard live-edge chillwave gentrify humblebrag. Schlitz polaroid disrupt twee DIY bespoke.</Alert>
+        {/* <Alert variant="warning"><i className="fas fa-exclamation-triangle"></i>&nbsp;Love the work we do? Then make your donation go further! Setting up gifts through your checking account maximizes your donation to the fullest by avoiding the transaction and processing fees often associated with credit cards. As an independent nonprofit, we appreciate your generosity and support!</Alert> */}
+        {this.props.encourage_ach &&
+          <p>Love the work we do? Then make your donation go further! Setting up gifts through your checking account maximizes your donation to the fullest by avoiding the transaction and processing fees often associated with credit cards. As an independent nonprofit, we appreciate your generosity and support!</p>
+        }
         <div className="d-flex justify-content-center flex-wrap">
           <Button className="m-2" variant="outline-primary" onClick={() => this.props.setCreditOrBank('Credit')}>Credit</Button>
           <Button className="m-2" variant="outline-primary" onClick={() => this.props.setCreditOrBank('Bank')}>Bank</Button>

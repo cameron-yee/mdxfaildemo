@@ -2,7 +2,7 @@
 
 .step {
   background: #cdcdcd;
-  border-right: 1px solid $black;
+  border-right: 1px solid $primary;
   color: $black;
   padding: 1rem;
   // transition: all 0.3s ease-in-out;
@@ -31,13 +31,16 @@
     background: $primary;
     cursor: pointer;
     color: $white;
-    // transition: all 0.3s ease-in-out;
   }
 
   &.done {
-  //   background: $primary;
     cursor: pointer;
-  //   color: $white;
-  //   transition: all 0.3s ease-in-out;
+    // background: #3087b4;
+    background: $secondary;
+    color: $white;
+
+    &:hover {
+      background: darken($secondary, 10%);
+    }
   }
 }

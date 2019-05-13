@@ -227,7 +227,10 @@ const DonateModal = class extends Component {
             <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
           }
           {this.state.stage === 0 && this.props.signed_in &&
-            <CreditOrBank setCreditOrBank={(credit_or_bank) => {this.setCreditOrBank(credit_or_bank)}} />
+            <CreditOrBank
+              encourage_ach={true}
+              setCreditOrBank={(credit_or_bank) => {this.setCreditOrBank(credit_or_bank)}}
+            />
           }
           {this.state.stage === 1 && !this.state.stripe &&
             <Spinner animation="grow" variant="primary" />

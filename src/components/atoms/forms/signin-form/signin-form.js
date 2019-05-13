@@ -185,7 +185,9 @@ const SigninForm = class extends Component {
                   &&
                   <div className="d-flex">
                     <Button className="m-2" variant="outline-primary" disabled>Sign In</Button>
-                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button> */}
+                    {this.props.register &&
+                      <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                    }
                   </div>
                 }
                 { !this.state.errors && !this.state.loading && !this.state.sent
@@ -194,7 +196,9 @@ const SigninForm = class extends Component {
                   &&
                   <div className="d-flex p-2">
                     <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleSignin(e)}>Sign In</Button>
-                    {/* <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button> */}
+                    {this.props.register &&
+                      <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(true)}>Register</Button>
+                    }
                   </div>
                 }
                 { !this.state.errors && this.state.loading &&
