@@ -12,17 +12,17 @@ sidebarImage: /assets/darwin-day-2019.jpg
 sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
 sidebarURLs:
   - resource:
-      buttonText: Email Announcement
-      external: true
-      text: ''
-      url: 'https://conta.cc/2DjZYfZ'
+      buttonText: DONATE NOW
+      external: false
+      text: Support the work we do by making a generous donation!
+      url: 'https://bscs.org/donate/'
 sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-announcementOrCoverage: 'Announcement'
+announcementOrCoverage: Announcement
 sortOrder: 3
 page: news
 ---
