@@ -21,7 +21,7 @@ sidebarURLs:
   - resource:
       buttonText: Register
       external: true
-      text: To self-register for the EMAT materials click here
+      text: 'To self-register for the EMAT materials, click the button below.'
       url: 'https://bscs.sarus.io/'
 sidebarContacts:
   - contact:
