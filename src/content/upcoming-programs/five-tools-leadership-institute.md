@@ -3,7 +3,7 @@ date: 2019-05-10T16:27:38.075Z
 title: Five Tools Leadership Institute
 type: Leadership Development
 seoCanonicalUrl: >-
-  https://bscs.org/admin/#/collections/upcoming-programs/new/five-tools-leadership-institute
+  https://bscs.org/upcoming-programs/leadership-development/five-tools-leadership-institute
 seoDescription: Five Tools Leadership Institute offered by BSCS Science Learning.
 seoLang: en-us
 cardDescription: >-
