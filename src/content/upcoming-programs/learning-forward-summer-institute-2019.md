@@ -9,14 +9,14 @@ seoLang: en-us
 cardDescription: >-
   Join us for Utilizing STeLLA to Analyze Teaching and Learning and Advance
   Equity and Excellence in Science, July 19-20, 2019.
-sidebarTitle: Learning Forward Summer Institute
+sidebarTitle: Registration is open
 image: /assets/coffee-mug.jpg
 alt: BSCS Science Learning coffee mug and markers.
 sidebarURLs:
   - resource:
-      buttonText: Learn More
+      buttonText: Sign up now
       external: true
-      text: 'Find out more about this Institute, sessions, and how to register.'
+      text: ''
       url: 'https://institutes.learningforward.org/sessions/'
 sidebarContacts:
   - contact:
