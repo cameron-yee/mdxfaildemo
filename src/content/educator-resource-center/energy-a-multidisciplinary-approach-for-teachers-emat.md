@@ -17,6 +17,12 @@ template: Image Right
 courseId: ''
 discipline:
   - Earth Sciences
+sidebarURLs:
+  - resource:
+      buttonText: Register
+      external: true
+      text: To self-register for the EMAT materials click here
+      url: 'https://bscs.sarus.io/'
 sidebarContacts:
   - contact:
       formType: Specific
