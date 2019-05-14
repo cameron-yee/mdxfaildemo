@@ -23,6 +23,8 @@ import VerifyBank from './bank/verify-bank';
 
 import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
+import '../../../global-scss/index.scss'
+
 /* PaymentModal functions
   *
   * constructor(props) {...}
@@ -244,6 +246,7 @@ const PaymentModal = class extends Component {
           }
           { this.state.stage === 1 && this.state.stripe && this.state.credit_or_bank === 'Bank' &&
             <SelectBank
+              allow_new={true}
               setBankInfo={(bank_id, bank_status) => this.setBankInfo(bank_id, bank_status)}
               selected_bank={this.state.bank_id}
             />

@@ -23,7 +23,7 @@ const SelectDonation = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      donations: null,
+      donations: undefined,
       donation_selected: false
     }
 
@@ -146,26 +146,26 @@ const SelectDonation = class extends Component {
                     }
                   })
                 }
-                {( !this.state.donations || this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length === 0) && !this.props.allow_new &&
+                {this.state.donations === null && !this.props.allow_new &&
                   <p>No saved donations.</p>
                 }
               </Form.Group>
-              {!this.props.delete && this.state.donations && this.state.donation_selected && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
+              {!this.props.delete && this.state.donations && (this.state.donation_selected || this.props.selected_donation) && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" type="submit">Update this donation.</Button>
                 </div>
               }
-              {!this.props.delete && this.state.donations && !this.state.donation_selected && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
+              {!this.props.delete && this.state.donations && !this.state.donation_selected && !this.props.selected_donation && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" disabled>Update this donation.</Button>
                 </div>
               }
-              {this.props.delete && this.state.donations && this.state.donation_selected && this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 &&
+              {this.props.delete && this.state.donations && (this.state.donation_selected || this.props.selected_donation) && this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" type="submit">Cancel donation</Button>
                 </div>
               }
-              {this.props.delete && this.state.donations && !this.state.donation_selected && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
+              {this.props.delete && this.state.donations && !this.state.donation_selected && !this.props.selected_donation && (this.state.donations.data.data.retrieveStripeCustomerDonationSubscriptions.data.length !== 0 || this.props.allow_new) &&
                 <div className="d-flex justify-content-center">
                   <Button variant="outline-primary" disabled>Cancel donation.</Button>
                 </div>

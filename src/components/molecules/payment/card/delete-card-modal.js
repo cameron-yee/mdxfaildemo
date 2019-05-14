@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 import axios from 'axios'
 
-import Button from 'react-bootstrap/Button'
-// import Col from 'react-bootstrap/Col'
 import Modal from 'react-bootstrap/Modal'
 
 import DeleteCard from './delete-card'

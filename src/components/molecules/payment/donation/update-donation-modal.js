@@ -23,6 +23,7 @@ import VerifyBank from '../bank/verify-bank';
 import retrieveStripeCustomer from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer'
 
 import '../stepper.scss'
+import '../../../../global-scss/index.scss'
 
 /* UpdateDonationModal functions
 *

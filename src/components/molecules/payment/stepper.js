@@ -15,12 +15,25 @@ import './stepper.scss'
 
 const Stepper = class extends Component {
   setStage = (e) => {
+    let step
     e.preventDefault()
 
-    let step = e.target.getAttribute('data-stepper') || e.target.parentNode.getAttribute('data-stepper')
+    step =
+      e.target.getAttribute('data-stepper') ||
+      e.target.parentNode.getAttribute('data-stepper') ||
+      e.target.parentNode.parentNode.getAttribute('data-stepper')
+
     if(step <= this.props.max_stage) {
+      console.log(step)
       this.props.setStage(parseInt(step))
     }
+    // } else {
+    //   console.log('h')
+    //   if(index <= this.props.max_stage) {
+    //     console.log(index)
+    //     this.props.setStage(index)
+    //   }
+    // }
   }
 
   render() {
@@ -51,8 +64,15 @@ const Stepper = class extends Component {
                     className={`d-flex justify-content-center step done step-${i} steps-${this.props.number_of_steps}`}
                   >
                     {!this.props.no_checks &&
-                      <div className="d-flex align-items-center">
-                        <i className="far fa-check-square"></i>&nbsp;{words}
+                      <div
+                        className="d-flex align-items-center"
+                      >
+                        <i
+                          onClick={(e) => {this.setStage(e)}}
+                          className="far fa-check-square"
+                          style={{padding: '10px'}}
+                        ></i>
+                        {words}
                       </div>
                     }
                     {this.props.no_checks &&

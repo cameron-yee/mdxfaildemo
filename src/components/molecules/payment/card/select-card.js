@@ -23,7 +23,7 @@ const SelectCard = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cards: null
+      cards: undefined
     }
 
     this.cancelToken = axios.CancelToken.source()
@@ -167,7 +167,7 @@ const SelectCard = class extends Component {
                     name="customer-cards"
                   />
                 }
-                {( !this.state.cards || this.state.cards.data.data.retrieveStripeCustomerCards.data.length === 0) && !this.props.allow_new &&
+                {(this.state.cards === null || this.state.cards.data.data.retrieveStripeCustomerCards.data.length === 0) && !this.props.allow_new &&
                   <p>No saved cards.</p>
                 }
               </Form.Group>
