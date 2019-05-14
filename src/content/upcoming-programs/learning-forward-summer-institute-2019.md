@@ -30,7 +30,7 @@ page: upcoming-programs
 
 Each year, schools and districts make decisions about the use of curriculum and instructional materials. However, often the system, which includes professional learning structures to ensure effective implementation, is disjointed and lacks coherence. As a result, education initiatives  may not necessarily lead to the results intended for students, and often exacerbate issues of equity and access to high-quality teaching and learning.
 
-Schools and school systems prioritize equity and excellence when they ensure all students have access to both effective teaching and meaningful classroom resources aligned to rigorous student standards. Learning Forward’s Institutes will help educators strengthen their capacity to reach all students by building coherent connections among college- and career-ready standards, high-quality instructional materials, assessment practices, and standards-based professional learning.
+Schools and school systems prioritize equity and excellence when they ensure all students have access to both effective teaching and meaningful classroom resources aligned to rigorous student standards. <a href="https://institutes.learningforward.org/overview/">Learning Foward's Institutes&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> will help educators strengthen their capacity to reach all students by building coherent connections among college- and career-ready standards, high-quality instructional materials, assessment practices, and standards-based professional learning.
 
 ### Utilizing STeLLA to Analyze Teaching and Learning and Advance Equity and Excellence in Science
 
