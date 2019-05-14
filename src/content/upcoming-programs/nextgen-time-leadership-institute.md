@@ -3,7 +3,7 @@ date: 2019-05-10T16:43:23.764Z
 title: NextGen TIME Leadership Institute
 type: Leadership Development
 seoCanonicalUrl: >-
-  https://bscs.org/admin/#/collections/upcoming-programs/nextgen-time-leadership-institute
+  https://bscs.org/upcoming-programs/leadership-development/nextgen-time-leadership-institute
 seoDescription: >-
   NextGen TIME Leadership Institute supports educators to evaluate, select, and
   implement instructional materials designed for next generation science.
