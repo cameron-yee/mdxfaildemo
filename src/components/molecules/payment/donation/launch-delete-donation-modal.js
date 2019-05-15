@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-const LaunchDeleteDonationSubscriptionModal = class extends Component {
+const LaunchDeleteDonationModal = class extends Component {
   render() {
     return (
       <React.Fragment>
         <span
           variant="outline-primary"
-          onClick={this.props.launchDeleteDonationSubscription}
+          onClick={this.props.launchDeleteDonation}
           className={this.props.childrenclass}
         >
           {this.props.children}
@@ -16,5 +16,5 @@ const LaunchDeleteDonationSubscriptionModal = class extends Component {
   }
 }
 
-export default LaunchDeleteDonationSubscriptionModal
+export default LaunchDeleteDonationModal
 

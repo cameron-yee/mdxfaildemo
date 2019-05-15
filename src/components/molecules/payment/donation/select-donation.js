@@ -126,6 +126,7 @@ const SelectDonation = class extends Component {
                             name="customer-donations"
                             defaultChecked
                             onClick={() => this.setState({donation_selected: true})}
+                            style={{color: '#637375'}}
                           />
                         </React.Fragment>
                       )
@@ -139,6 +140,7 @@ const SelectDonation = class extends Component {
                             label={`${type} Donation for $${amount}. Next scheduled payment: ${next_payment_month}/${next_payment_day}/${next_payment_year}`}
                             name="customer-donations"
                             onClick={() => this.setState({donation_selected: true})}
+                            style={{color: '#7c8c8e'}}
                           />
                         </React.Fragment>
                       )

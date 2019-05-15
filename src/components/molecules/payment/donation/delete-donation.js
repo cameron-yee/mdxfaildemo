@@ -9,7 +9,7 @@ import deleteCustomerDonationSubscription from '../../../../queries/bscsapi/stri
 
 // import './charge-new-card.scss'
 
-/* DeleteDonationSubscription functions
+/* DeleteDonation functions
 *
 * constructor(props) {...}
 * componentWillUnmount() {...}
@@ -18,7 +18,7 @@ import deleteCustomerDonationSubscription from '../../../../queries/bscsapi/stri
 *
 */
 
-const DeleteDonationSubscription = class extends Component {
+const DeleteDonation = class extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -98,4 +98,4 @@ const DeleteDonationSubscription = class extends Component {
   }
 }
 
-export default DeleteDonationSubscription
+export default DeleteDonation

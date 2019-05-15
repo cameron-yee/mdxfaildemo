@@ -1,0 +1,7 @@
+@import '../global-scss/utilities/variables.scss';
+
+.dashboard-menu-link {
+  &:hover {
+    color: blue;
+  }
+}

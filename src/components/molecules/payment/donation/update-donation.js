@@ -142,13 +142,6 @@ const UpdateDonation = class extends Component {
                     <li><strong>Susan Loucks-Horsley Memorial Fund:</strong> supports staff development for BSCS employees as a tribute to the memory of Susan Loucks-Horsley</li>
                   </ul>
                   <div className="d-flex justify-content-center flex-wrap mt-3">
-                    <Button
-                      className="m-3"
-                      variant="outline-primary"
-                      onClick={(e) => this.handleDonation(e)}
-                    >
-                      Donate ${(this.state.donate_amount).toFixed(2)}
-                    </Button>
                     <DonationFrequencyDropdown setFrequency={(frequency) => {this.setState({frequency: frequency})}} only_recurring={true} />
                     <DonationSelectFundDropdown setFund={(fund, fund_code) => this.setState({fund_code: fund_code})} />
                   </div>

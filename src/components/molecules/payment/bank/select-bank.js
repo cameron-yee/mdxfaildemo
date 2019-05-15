@@ -74,7 +74,7 @@ const SelectBank = class extends Component {
                             custom
                             type="radio"
                             id={`${bank.id},${bank.status}`}
-                            label={`${bank.bank_name}: •••• ${bank.last4}`}
+                            label={`${bank.bank_name}: ••••••••${bank.last4}`}
                             defaultChecked
                             name="customer-banks"
                           />
