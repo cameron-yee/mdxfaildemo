@@ -6,6 +6,19 @@ $primary: rgb(41, 52, 118);
 $secondary: rgb(48, 135, 180);
 $purple: rgba(41, 52, 118, .9);
 $yellow:  #FAED26;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1500px
+);
+
+$container-max-widths: (
+  xl: 90vw
+);
+
 // $yellow:  #ffff00;
 // $success: rgb(134,184,114);
 // $info: ;
@@ -122,8 +135,6 @@ ol {
     column-count: 3;
   }
 }
-
-
 // .active > a {
 //   color: $primary;
 // }

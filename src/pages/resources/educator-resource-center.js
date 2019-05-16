@@ -138,6 +138,7 @@ const EducatorResourceCenter = class extends Component {
                       <Col
                         md={6}
                         lg={4}
+                        xl={3}
                         className="rrc-card-col"
                         key={`resource-${index}`}
                       >

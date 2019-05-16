@@ -215,6 +215,7 @@ const UpcomingProgramsPage = class extends Component {
                     if(edge.node.frontmatter.type === 'Teacher Professional Learning') {
                       return(
                         <Col
+                          md={6}
                           lg={4}
                           key={`up-${index}`}
                           className="up-card-col"
@@ -361,6 +362,7 @@ const UpcomingProgramsPage = class extends Component {
                     if(edge.node.frontmatter.type === "Leadership Development") {
                       return(
                         <Col
+                          md={6}
                           lg={4}
                           key={`up-${index}`}
                           className="up-card-col"
@@ -509,6 +511,7 @@ const UpcomingProgramsPage = class extends Component {
                     if(edge.node.frontmatter.type === "Field-Test Opportunities") {
                       return(
                         <Col
+                          md={6}
                           lg={4}
                           key={`up-${index}`}
                           className="up-card-col"

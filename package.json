@@ -41,6 +41,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-placeholder": "^3.0.2",
+    "react-scrollspy": "^3.4.0",
     "react-stripe-elements": "^2.0.3",
     "tar": "^4.4.2",
     "typeface-lora": "0.0.72",
