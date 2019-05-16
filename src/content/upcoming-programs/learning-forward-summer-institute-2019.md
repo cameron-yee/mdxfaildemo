@@ -31,18 +31,18 @@ page: upcoming-programs
 
 Each year, schools and districts make decisions about the use of curriculum and instructional materials. However, often the system, which includes professional learning structures to ensure effective implementation, is disjointed and lacks coherence. As a result, education initiatives  may not necessarily lead to the results intended for students, and often exacerbate issues of equity and access to high-quality teaching and learning.
 
-Schools and school systems prioritize equity and excellence when they ensure all students have access to both effective teaching and meaningful classroom resources aligned to rigorous student standards. <a href="https://institutes.learningforward.org/overview/">Learning Foward's Institutes&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> will help educators strengthen their capacity to reach all students by building coherent connections among college- and career-ready standards, high-quality instructional materials, assessment practices, and standards-based professional learning.
+Schools and school systems prioritize equity and excellence when they ensure all students have access to both effective teaching and meaningful classroom resources aligned to rigorous student standards. Learning Foward's Institutes will help educators strengthen their capacity to reach all students by building coherent connections among college- and career-ready standards, high-quality instructional materials, assessment practices, and standards-based professional learning.
 
 ### Utilizing STeLLA to Analyze Teaching and Learning and Advance Equity and Excellence in Science
 
 **Day 2 & 3: Friday and Saturday, July 19-20, 2019, 
 8:30 am to 4 pm ET**
 
-[STeLLA](https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis) is a videocase-based analysis-of-practice professional learning program focused on helping teachers adopt a student thinking lens and science content storyline lens approach to science teaching and learning. The STeLLA program focuses teacher learning on the STeLLA Conceptual Framework and its high-leverage teaching practices using combinations of content enrichment and lesson analysis.
+STeLLA is a videocase-based analysis-of-practice professional learning program focused on helping teachers adopt a student thinking lens and science content storyline lens approach to science teaching and learning. The STeLLA program focuses teacher learning on the STeLLA Conceptual Framework and its high-leverage teaching practices using combinations of content enrichment and lesson analysis.
 
 #### During this two-day session, participants will:
 
-* Gain a deeper understanding of key aspects of BSCS Science Learning’s Science Teachers Learning from Lesson Analysis (STeLLA) Program
+* Gain a deeper understanding of key aspects of BSCS Science Learning’s Science Teachers Learning from Lesson Analysis ([STeLLA](https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis)) Program
 * Engage in common science learning experience based on a STeLLA arc of lessons.
 * Analyze classroom video and assessment and practice using selected strategies.
 
