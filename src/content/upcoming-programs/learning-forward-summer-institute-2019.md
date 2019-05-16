@@ -38,11 +38,11 @@ Schools and school systems prioritize equity and excellence when they ensure all
 **Day 2 & 3: Friday and Saturday, July 19-20, 2019, 
 8:30 am to 4 pm ET**
 
-[STeLLA](https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis) is a videocase-based analysis-of-practice professional learning program focused on helping teachers adopt a student thinking lens and science content storyline lens approach to science teaching and learning. The STeLLA program focuses teacher learning on the STeLLA Conceptual Framework and its high-leverage teaching practices using combinations of content enrichment and lesson analysis.
+STeLLA is a videocase-based analysis-of-practice professional learning program focused on helping teachers adopt a student thinking lens and science content storyline lens approach to science teaching and learning. The STeLLA program focuses teacher learning on the STeLLA Conceptual Framework and its high-leverage teaching practices using combinations of content enrichment and lesson analysis.
 
 #### During this two-day session, participants will:
 
-* Gain a deeper understanding of key aspects of BSCS Science Learning’s Science Teachers Learning from Lesson Analysis (STeLLA) Program
+* Gain a deeper understanding of key aspects of BSCS Science Learning’s Science Teachers Learning from Lesson Analysis ([STeLLA](https://bscs.org/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis)) Program
 * Engage in common science learning experience based on a STeLLA arc of lessons.
 * Analyze classroom video and assessment and practice using selected strategies.
 
