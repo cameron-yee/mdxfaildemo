@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const register = (cancelToken, address, city, email, firstname, lastname, password, phone, state, zipcode) => {
+const updateUserInfo = (cancelToken, address, city, email, first_name, last_name, password, phone, state, zip_code) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -10,24 +10,24 @@ const register = (cancelToken, address, city, email, firstname, lastname, passwo
       //Not doing "${...}" because of null values.  Set this in state.
       query: `
         mutation {
-          register(
-            address1: ${address}
-            city: ${city}
-            email: ${email}
-            firstName: ${firstname}
-            lastName: ${lastname}
-            password: ${password}
-            phoneNumber: ${phone}
-            state: ${state}
-            zipCode: ${zipcode}
+          updateMe(
+            address1: ${address},
+            city: ${city},
+            email: ${email},
+            firstName: ${first_name},
+            lastName: ${last_name},
+            password: ${password},
+            phoneNumber: ${phone},
+            state: ${state},
+            zipCode: ${zip_code}
           ) {
             user {
               address1
               city
               email
               firstName
+              id
               lastName
-              password
               state
               stripeId
               zipCode
@@ -38,6 +38,7 @@ const register = (cancelToken, address, city, email, firstname, lastname, passwo
     }
   })
   .then(response => {
+    // console.log(response)
     return response
   })
   .catch(error => {
@@ -45,4 +46,4 @@ const register = (cancelToken, address, city, email, firstname, lastname, passwo
   })
 }
 
-export default register
+export default updateUserInfo

@@ -10,6 +10,8 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 
 import register from '../../../../queries/bscsapi/register'
+import getUserInfo from '../../../../queries/bscsapi/get-user-info';
+import updateUserInfo from '../../../../queries/bscsapi/update-user-info';
 
 const RegistrationForm = class extends Component {
   constructor(props) {
@@ -44,6 +46,13 @@ const RegistrationForm = class extends Component {
     this.cancelToken = axios.CancelToken.source()
   }
 
+//Lifecycle hooks
+  componentDidMount() {
+    if(this.props.update) {
+      this.setUserAccountInfo()
+    }
+  }
+
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
@@ -51,128 +60,18 @@ const RegistrationForm = class extends Component {
       console.log(error)
     }
   }
+//End lifecycle hooks
 
-  showNotification = () => {
-    this.setState({notificationShow: true})
-  }
-
-  hideNotification = () => {
-    this.setState({notificationShow: false})
-  }
-
-  showErrorNotification = () => {
-    this.setState({showErrorNotification: true})
-  }
-
-  hideErrorNotification = () => {
-    this.setState({showErrorNotification: false})
-  }
-
-  setEmail = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-email-input');
-    /[\w]+[@][\w]+[.][\w]+/.test(input_elem.value) === false ? this.setState({email: undefined}) : this.setState({email: `"${input_elem.value}"`})
-  }
-
+//Custom functions
   blurEmail = (e) => {
     e.preventDefault()
     this.setState({email_touched: true})
-  }
-
-  setPassword = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-password-input');
-    input_elem.value === '' ? this.setState({password: null}) : this.setState({password: `"${input_elem.value}"`})
-  }
-
-  setFirstName = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-first-name-input');
-    input_elem.value === '' ? this.setState({firstname: null}) : this.setState({firstname: `"${input_elem.value}"`})
-  }
-
-  // blurFirstName = (e) => {
-  //   e.preventDefault()
-  //   this.setState({firstname_touched: true})
-  // }
-
-  setLastName = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-last-name-input');
-    input_elem.value === '' ? this.setState({lastname: null}) : this.setState({lastname: `"${input_elem.value}"`})
-  }
-
-  // blurLastName = (e) => {
-  //   e.preventDefault()
-  //   this.setState({lastname_touched: true})
-  // }
-
-  setPhone = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-phone-input');
-    (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
-    ||
-    (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
-    ||
-    // eslint-disable-next-line
-    (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
-    &&
-    (input_elem.value !== (undefined || null || ''))) //Phone # may be omitted
-    ?
-    this.setState({phone: 'errors'})
-    :
-    this.setState({phone: `"${input_elem.value}"`})
   }
 
   blurPhone = (e) => {
     e.preventDefault()
     this.setState({phone_touched: true})
   }
-
-  setAddress = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-address-input');
-    input_elem.value === '' ? this.setState({address: null}) : this.setState({address: `"${input_elem.value}"`})
-  }
-
-  // blurAddress = (e) => {
-  //   e.preventDefault()
-  //   this.setState({address_touched: true})
-  // }
-
-  setCity = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-city-input');
-    input_elem.value === '' ? this.setState({city: null}) : this.setState({city: `"${input_elem.value}"`})
-  }
-
-  // blurCity = (e) => {
-  //   e.preventDefault()
-  //   this.setState({city_touched: true})
-  // }
-
-  setCustomerState = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-state-input');
-    input_elem.value === '' ? this.setState({state: null}) : this.setState({state: `"${input_elem.value}"`})
-  }
-
-  // blurState = (e) => {
-  //   e.preventDefault()
-  //   this.setState({state_touched: true})
-  // }
-
-  setZipcode = (e) => {
-    e.preventDefault()
-    let input_elem = document.getElementById('rf-zipcode-input');
-    input_elem.value === '' ? this.setState({zipcode: null}) : this.setState({zipcode: `"${input_elem.value}"`})
-  }
-
-  // blurZipcode = (e) => {
-  //   e.preventDefault()
-  //   this.setState({zipcode_touched: true})
-  // }
-
 
   handleRegister = (e) => {
     e.preventDefault()
@@ -208,6 +107,193 @@ const RegistrationForm = class extends Component {
       })
   }
 
+  handleUpdate = (e) => {
+    e.preventDefault()
+    this.setState({loading: true})
+
+    updateUserInfo(
+      this.cancelToken,
+      this.state.address,
+      this.state.city,
+      this.state.email,
+      this.state.firstname,
+      this.state.lastname,
+      this.state.password,
+      this.state.phone,
+      this.state.state,
+      this.state.zipcode
+    )
+      .then(response => {
+        console.log(response);
+        if(response.status === 200 && !response.data.errors) {
+            this.setState({notificationShow: true, loading: false, sent: true});
+            // this.props.setSignedIn()
+        }
+      })
+      .catch(error => {
+        if(axios.isCancel(error)) {
+          console.log(`Request canceled: ${error}`);
+          this.setState({errors: true, showErrorNotification: true});
+        } else {
+          console.log(error);
+          this.setState({errors: true, showErrorNotification: true});
+        }
+      })
+
+  }
+
+  hideErrorNotification = () => {
+    this.setState({showErrorNotification: false})
+  }
+
+  hideNotification = () => {
+    this.setState({notificationShow: false})
+  }
+
+  showErrorNotification = () => {
+    this.setState({showErrorNotification: true})
+  }
+
+  showNotification = () => {
+    this.setState({notificationShow: true})
+  }
+
+  setAddress = (e=null, address=null) => {
+    let input_elem = document.getElementById('rf-address-input');
+
+    if(e && !address) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({address: null}) : this.setState({address: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = address
+      this.setState({address: address})
+    }
+  }
+
+  setCity = (e=null, city=null) => {
+    let input_elem = document.getElementById('rf-city-input');
+
+    if(e && !city) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({city: null}) : this.setState({city: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = city
+      this.setState({city: city})
+    }
+  }
+
+  setCustomerState = (e=null, state=null) => {
+    let input_elem = document.getElementById('rf-state-input');
+
+    if(e && !state) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({state: null}) : this.setState({state: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = state
+      this.setState({state: state})
+    }
+  }
+
+  setEmail = (e=null, email=null) => {
+    let input_elem = document.getElementById('rf-email-input');
+
+    if(e && !email) {
+      e.preventDefault();
+      /[\w]+[@][\w]+[.][\w]+/.test(input_elem.value) === false
+      ?
+      this.setState({email: undefined})
+      :
+      this.setState({email: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = email
+      this.setState({email: `"${email}"`})
+    }
+  }
+
+  setFirstName = (e=null, firstname=null) => {
+    let input_elem = document.getElementById('rf-first-name-input');
+
+    if(e && !firstname) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({firstname: null}) : this.setState({firstname: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = firstname
+      this.setState({firstname: `"${firstname}"`})
+    }
+  }
+
+  setLastName = (e=null, lastname=null) => {
+    let input_elem = document.getElementById('rf-last-name-input');
+
+    if(e && !lastname) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({lastname: null}) : this.setState({lastname: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = lastname
+      this.setState({lastname: `"${lastname}"`})
+    }
+  }
+
+  setPassword = (e) => {
+    e.preventDefault()
+    let input_elem = document.getElementById('rf-password-input');
+    input_elem.value === '' ? this.setState({password: null}) : this.setState({password: `"${input_elem.value}"`})
+  }
+
+  setPhone = (e=null, phone=null) => {
+    let input_elem = document.getElementById('rf-phone-input');
+
+    if(e && !phone) {
+      console.log(e)
+      e.preventDefault();
+      (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
+      ||
+      (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
+      ||
+      // eslint-disable-next-line
+      (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+      &&
+      (input_elem.value !== (undefined || null || ''))) //Phone # may be omitted
+      ?
+      this.setState({phone: 'errors'})
+      :
+      this.setState({phone: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = phone
+      this.setState({phone: `"${phone}"`})
+    }
+  }
+
+  setUserAccountInfo = () => {
+    getUserInfo(this.cancelToken)
+      .then(response => {
+        if(response && !response.data.data.errors) {
+          console.log(response)
+          this.setAddress(null, response.data.data.me.address1)
+          this.setCity(null, response.data.data.me.city)
+          this.setCustomerState(null, response.data.data.me.state)
+          this.setEmail(null, response.data.data.me.email)
+          this.setFirstName(null, response.data.data.me.firstName)
+          this.setLastName(null, response.data.data.me.lastName)
+          this.setPhone(null, response.data.data.me.phoneNumber)
+          this.setZipcode(null, response.data.data.me.zipCode)
+        }
+      })
+  }
+
+  setZipcode = (e=null, zipcode=null) => {
+    let input_elem = document.getElementById('rf-zipcode-input');
+
+    if(e && !zipcode) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({zipcode: null}) : this.setState({zipcode: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = zipcode
+      this.setState({phone: `"${zipcode}"`})
+    }
+  }
+//End custom functions
+
   render() {
     return (
       <React.Fragment>
@@ -232,7 +318,12 @@ const RegistrationForm = class extends Component {
             </Col>
             <Col xs={12}>
               <Form.Group>
-                <Form.Label><span style={{color: 'red'}}>*</span> Password</Form.Label>
+                {!this.props.update &&
+                  <Form.Label><span style={{color: 'red'}}>*</span> Password</Form.Label>
+                }
+                {this.props.update &&
+                  <Form.Label><span style={{color: 'red'}}>*</span> Password (Re-enter password for no change)</Form.Label>
+                }
                 <Form.Control
                   className="form-control"
                   id="rf-password-input"
@@ -376,12 +467,26 @@ const RegistrationForm = class extends Component {
         <Container>
           <Row>
             <Col xs={12}>
-              <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
-                Registered!
-              </Alert>
-              <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
-                Unable to register.
-              </Alert>
+              {!this.props.update &&
+                <React.Fragment>
+                  <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+                    Registered!
+                  </Alert>
+                  <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
+                    Unable to register.
+                  </Alert>
+                </React.Fragment>
+              }
+              {this.props.update &&
+                <React.Fragment>
+                  <Alert show={this.state.notificationShow} onClose={this.hideNotification} dismissible variant="success">
+                    Saved!
+                  </Alert>
+                  <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
+                    Unable to update user information.
+                  </Alert>
+                </React.Fragment>
+              }
             </Col>
           </Row>
           <Row>
@@ -392,10 +497,15 @@ const RegistrationForm = class extends Component {
                   || !this.state.password)
                   &&
                   <div className="d-flex p-2">
-                    {this.props.register &&
+                    {this.props.register && !this.props.update &&
                       <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
                     }
-                    <Button className="m-2" variant="outline-primary" disabled>Register</Button>
+                    {!this.props.update &&
+                      <Button className="m-2" variant="outline-primary" disabled>Register</Button>
+                    }
+                    {this.props.update &&
+                      <Button className="m-2" variant="outline-primary" disabled>Save</Button>
+                    }
                   </div>
                 }
                 { !this.state.errors && !this.state.loading && !this.state.sent
@@ -403,20 +513,33 @@ const RegistrationForm = class extends Component {
                   && this.state.password
                   &&
                   <div className="d-flex p-2">
-                    {this.props.register &&
+                    {this.props.register && !this.props.update &&
                       <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
                     }
-                    <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleRegister(e)}>Register</Button>
+                    {!this.props.update &&
+                      <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleRegister(e)}>Register</Button>
+                    }
+                    {this.props.update &&
+                      <Button className="m-2" variant="outline-primary" onClick={(e) => this.handleUpdate(e)}>Save</Button>
+                    }
                   </div>
                 }
                 { !this.state.errors && this.state.loading &&
                   <Button variant="outline-success" disabled>
                     <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                    Registering...
+                    {!this.props.update &&
+                      <React.Fragment>Registering...</React.Fragment>
+                    }
+                    {this.props.update &&
+                      <React.Fragment>Saving...</React.Fragment>
+                    }
                   </Button>
                 }
-                { !this.state.errors && !this.state.loading && this.state.sent &&
+                { !this.state.errors && !this.state.loading && this.state.sent && !this.props.update &&
                   <Button variant="outline-success" disabled>Registered</Button>
+                }
+                { !this.state.errors && !this.state.loading && this.state.sent && this.props.update &&
+                  <Button variant="outline-success" disabled>Saved</Button>
                 }
                 { this.state.errors &&
                   <Button variant="outline-danger" disabled>Error</Button>

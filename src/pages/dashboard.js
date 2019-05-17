@@ -27,7 +27,6 @@ import retrieveStripeCustomerCharges from '../queries/bscsapi/stripe/retrieve-st
 import retrieveStripeCustomerDonationSubscriptions from '../queries/bscsapi/stripe/retrieve-stripe-customer-donation-subscriptions'
 
 import './dashboard.scss'
-import { element } from 'prop-types';
 // import retrieveStripeCustomerCard from '../queries/bscsapi/stripe/retrieve-stripe-customer-card'
 
 /* Dashboard functions
@@ -103,8 +102,24 @@ const Dashboard = class extends Component {
     this.setState({show_delete_donation_modal: false})
   }
 
+  closeSideMenu = (e) => {
+    e.preventDefault()
+    document.getElementById('expanded-side-menu').setAttribute('data-state', 'closed')
+    document.getElementById('closed-side-menu').setAttribute('data-state', 'expanded')
+    document.getElementById('dashboard-content').classList.add('col-lg-11')
+    document.getElementById('dashboard-content').classList.remove('col-lg-10')
+  }
+
   closeUpdateDonationModal = () => {
     this.setState({show_update_donation_modal: false})
+  }
+
+  expandSideMenu = (e) => {
+    e.preventDefault()
+    document.getElementById('expanded-side-menu').setAttribute('data-state', 'expanded')
+    document.getElementById('closed-side-menu').setAttribute('data-state', 'closed')
+    document.getElementById('dashboard-content').classList.add('col-lg-10')
+    document.getElementById('dashboard-content').classList.remove('col-lg-11')
   }
 
   getCustomerDefaultSource = (cancelToken) => {
@@ -166,22 +181,6 @@ const Dashboard = class extends Component {
     e.preventDefault()
     this.setState({show_update_donation_modal: true, donation_id: subscription_id})
   }
-
-  closeSideMenu = (e) => {
-    e.preventDefault()
-    document.getElementById('expanded-side-menu').setAttribute('data-state', 'closed')
-    document.getElementById('closed-side-menu').setAttribute('data-state', 'expanded')
-    document.getElementById('dashboard-content').classList.add('col-lg-11')
-    document.getElementById('dashboard-content').classList.remove('col-lg-10')
-  }
-
-  expandSideMenu = (e) => {
-    e.preventDefault()
-    document.getElementById('expanded-side-menu').setAttribute('data-state', 'expanded')
-    document.getElementById('closed-side-menu').setAttribute('data-state', 'closed')
-    document.getElementById('dashboard-content').classList.add('col-lg-10')
-    document.getElementById('dashboard-content').classList.remove('col-lg-11')
-  }
 //End custom functions
 
   render() {
@@ -195,6 +194,9 @@ const Dashboard = class extends Component {
         <Layout location={this.props.location} setSignedIn={(state) => this.setState({signed_in: state})} signed_in={this.state.signed_in}>
           <Container>
             <Row>
+{/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* Sidemenu
+///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
               <Col id="expanded-side-menu" data-state="expanded" lg={2} className="d-none d-lg-block">
                 <table id="side-menu-nav">
                   <thead>
@@ -206,17 +208,31 @@ const Dashboard = class extends Component {
                     </tr>
                   </thead>
                   <Scrollspy
-                    items={['donations', 'previous-purchases', 'payment-methods']}
+                    items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
                     className="d-none d-lg-block h-100"
                     currentClassName="active"
                     componentTag="tbody"
                   >
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action first"
+                      onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+                    >
+                      <td><i className="fas fa-user-cog mr-3"></i></td>
+                      <td>Account</td>
+                    </tr>
+                    <tr
+                      className="dashboard-menu-link list-group-item list-group-item-action"
                       onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
                     >
                       <td><i className="fas fa-donate mr-3"></i></td>
                       <td>Donations</td>
+                    </tr>
+                    <tr
+                      className="dashboard-menu-link list-group-item list-group-item-action"
+                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                    >
+                      <td><i className="fas fa-credit-card mr-3"></i></td>
+                      <td>Payment Methods</td>
                     </tr>
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action"
@@ -227,10 +243,10 @@ const Dashboard = class extends Component {
                     </tr>
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                      onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
                     >
-                      <td><i className="fas fa-credit-card mr-3"></i></td>
-                      <td>Payment Methods</td>
+                      <td><i className="fas fa-clock mr-3"></i></td>
+                      <td>Upcoming Events</td>
                     </tr>
                   </Scrollspy>
                 </table>
@@ -246,16 +262,28 @@ const Dashboard = class extends Component {
                     </tr>
                   </thead>
                   <Scrollspy
-                    items={['donations', 'previous-purchases', 'payment-methods']}
+                    items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
                     className="d-none d-lg-block h-100"
                     currentClassName="active"
                     componentTag="tbody"
                   >
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action first"
+                      onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+                    >
+                      <td><i className="fas fa-user-cog"></i></td>
+                    </tr>
+                    <tr
+                      className="dashboard-menu-link list-group-item list-group-item-action"
                       onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
                     >
                       <td><i className="fas fa-donate"></i></td>
+                    </tr>
+                    <tr
+                      className="dashboard-menu-link list-group-item list-group-item-action"
+                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                    >
+                      <td><i className="fas fa-credit-card"></i></td>
                     </tr>
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action"
@@ -265,13 +293,16 @@ const Dashboard = class extends Component {
                     </tr>
                     <tr
                       className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                      onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
                     >
-                      <td><i className="fas fa-credit-card"></i></td>
+                      <td><i className="fas fa-clock"></i></td>
                     </tr>
                   </Scrollspy>
                 </table>
               </Col>
+{/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* Dashboard Content
+///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
               <Col id="dashboard-content" xs={12} lg={10} className="pl-2">
                 <Container className="pl-5">
                   <PageTitle title="Dashboard" />
@@ -293,7 +324,16 @@ const Dashboard = class extends Component {
                   }
                   {this.state.signed_in &&
                     <React.Fragment>
-                      <section id="donations" className="mb-5" >
+                      <section id="account" className="mb-5" >
+                        <h2>Account</h2>
+                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
+                          <Col className="p-2">
+                            <RegistrationForm update={true} />
+                          </Col>
+                        </Row>
+                      </section>
+                      <hr />
+                      <section id="donations" className="my-5" >
                         <h2>Donations</h2>
                         <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
                           <Col className="p-2">
@@ -371,6 +411,26 @@ const Dashboard = class extends Component {
                         />
                       </section>
                       <hr />
+                      <section id="payment-methods" className="my-5" >
+                        <h2>Payment Methods</h2>
+                        <Row style={{marginBottom: '3rem'}} className="d-flex flex-wrap-reverse">
+                          <Col className="p-2 ml-3" xs={12} md={5}>
+                            <SelectCardOrBank
+                              default_source={this.state.customer_default_source}
+                              selected_source={this.state.selected_source}
+                              setSelectedSource={(source_id, action_type) => this.launchActionModal(source_id, action_type)}
+                              dashboard={true}
+                            />
+                            <ActionModal
+                              show={this.state.show_action_modal}
+                              onHide={this.closeActionModal}
+                              action={this.state.action_type}
+                              source_id={this.state.selected_source}
+                            />
+                          </Col>
+                        </Row>
+                      </section>
+                      <hr />
                       <section id="previous-purchases" className="my-5" >
                         <h2>Previous Purchases</h2>
                         <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
@@ -404,25 +464,14 @@ const Dashboard = class extends Component {
                         </Row>
                       </section>
                       <hr />
-                      <section id="payment-methods" className="mt-5" >
-                        <h2>Payment Methods</h2>
-                        <Row style={{marginBottom: '3rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2 ml-3" xs={12} md={5}>
-                            <SelectCardOrBank
-                              default_source={this.state.customer_default_source}
-                              selected_source={this.state.selected_source}
-                              setSelectedSource={(source_id, action_type) => this.launchActionModal(source_id, action_type)}
-                              dashboard={true}
-                            />
-                            <ActionModal
-                              show={this.state.show_action_modal}
-                              onHide={this.closeActionModal}
-                              action={this.state.action_type}
-                              source_id={this.state.selected_source}
-                            />
+                      <section id="upcoming-events" className="mt-5" >
+                        <h2>Upcoming Events</h2>
+                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
+                          <Col className="p-2">
                           </Col>
                         </Row>
                       </section>
+                      <hr />
                     </React.Fragment>
                   }
                 </Container>
@@ -430,36 +479,59 @@ const Dashboard = class extends Component {
             </Row>
           </Container>
         </Layout>
-        <div style={{height: '116px'}} className="d-block d-md-none bg-light"></div>
-        {/* <div style={{height: '88px'}} className="d-none d-sm-block d-lg-none"></div> */}
-        <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom" fluid>
+{/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* Bottom menu
+///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <div style={{height: '200px'}} className="d-block d-md-none bg-light"></div>
+        <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom p-0" fluid>
           <Scrollspy
-            items={['donations', 'previous-purchases', 'payment-methods']}
+            items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
             currentClassName="active"
             componentTag="div"
-            className="row"
-            style={{height: '116px'}}
+            // className="row"
+            className="d-flex justify-content-center"
+            // style={{height: '116px'}}
+            style={{height: '100%'}}
           >
             <div
-              className="bottom-menu-link col-4 p-3 text-center h-100"
+              // xs={2}
+              className="bottom-menu-link p-2 text-center flex-fill"
+              onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+              style={{fontSize: '1rem'}}
+            >
+              <i className="fas fa-user-cog"></i><br />Account
+            </div>
+            <div
+              // xs={2}
+              className="bottom-menu-link p-2 text-center flex-fill"
               onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
+              style={{fontSize: '1rem'}}
             >
               <i className="fas fa-donate"></i><br />Donations
- {/* Donations */}
             </div>
             <div
-              className="bottom-menu-link col-4 p-3 text-center h-100"
-              onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-            >
-              <i className="fas fa-store"></i><br />Previous Purchases
- {/* Previous Purchases */}
-            </div>
-            <div
-              className="bottom-menu-link col-4 p-3 text-center h-100"
+              // xs={2}
+              className="bottom-menu-link p-2 text-center flex-fill"
               onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+              style={{fontSize: '1rem'}}
             >
               <i className="fas fa-credit-card"></i><br />Payment Methods
- {/* Payment Methods */}
+            </div>
+            <div
+              // xs={2}
+              className="bottom-menu-link p-2 text-center flex-fill"
+              onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
+              style={{fontSize: '1rem'}}
+            >
+              <i className="fas fa-store"></i><br />Previous Purchases
+            </div>
+            <div
+              // xs={2}
+              className="bottom-menu-link p-2 text-center flex-fill"
+              onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
+              style={{fontSize: '1rem'}}
+            >
+              <i className="fas fa-clock"></i><br />Upcoming Events
             </div>
           </Scrollspy>
         </Container>

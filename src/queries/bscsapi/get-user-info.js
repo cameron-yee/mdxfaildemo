@@ -10,14 +10,15 @@ const getUserInfo = (cancelToken) => {
       query: `
         query {
           me {
-            id,
-            firstName,
-            lastName,
-            email,
-            stripeId,
-            address1,
-            city,
-            state,
+            address1
+            city
+            email
+            firstName
+            id
+            lastName
+            phoneNumber
+            state
+            stripeId
             zipCode
           }
         }
