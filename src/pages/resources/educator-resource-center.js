@@ -287,7 +287,7 @@ export const educatorResourceQuery = graphql`
           frontmatter {
             additionalTags,
             alt,
-            courseId,
+            # courseId,
             cardDescription,
             # cardDescriptionStyles,
             date,
