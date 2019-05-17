@@ -25,6 +25,7 @@ import UpdateDonationModal from '../components/molecules/payment/donation/update
 import retrieveStripeCustomer from '../queries/bscsapi/stripe/retrieve-stripe-customer'
 import retrieveStripeCustomerCharges from '../queries/bscsapi/stripe/retrieve-stripe-customer-charges'
 import retrieveStripeCustomerDonationSubscriptions from '../queries/bscsapi/stripe/retrieve-stripe-customer-donation-subscriptions'
+import retrieveStripeCustomerOrders from '../queries/bscsapi/stripe/retrieve-stripe-customer-orders'
 
 import './dashboard.scss'
 // import retrieveStripeCustomerCard from '../queries/bscsapi/stripe/retrieve-stripe-customer-card'
@@ -80,6 +81,7 @@ const Dashboard = class extends Component {
       this.getCustomerDefaultSource(this.cancelToken)
       this.getUserCharges()
       this.getUserRecurringDonations()
+      retrieveStripeCustomerOrders(this.cancelToken).then(response => console.log(response))
     }
 
   }
@@ -197,132 +199,143 @@ const Dashboard = class extends Component {
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 * Sidemenu
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <Col id="expanded-side-menu" data-state="expanded" lg={2} className="d-none d-lg-block">
-                <table id="side-menu-nav">
-                  <thead>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action toggle d-flex"
-                      onClick={(e) => this.closeSideMenu(e)}
-                    >
-                      <td><i className="fas fa-angle-double-left close-arrow"></i></td>
-                    </tr>
-                  </thead>
-                  <Scrollspy
-                    items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
-                    className="d-none d-lg-block h-100"
-                    currentClassName="active"
-                    componentTag="tbody"
-                  >
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action first"
-                      onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-user-cog mr-3"></i></td>
-                      <td>Account</td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-donate mr-3"></i></td>
-                      <td>Donations</td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-credit-card mr-3"></i></td>
-                      <td>Payment Methods</td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-store mr-3"></i></td>
-                      <td>Previous Purchases</td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-clock mr-3"></i></td>
-                      <td>Upcoming Events</td>
-                    </tr>
-                  </Scrollspy>
-                </table>
-              </Col>
-              <Col id="closed-side-menu" lg={1} data-state="closed" className="d-none d-lg-block">
-                <table id="side-menu-nav">
-                  <thead>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action toggle"
-                      onClick={(e) => this.expandSideMenu(e)}
-                    >
-                      <td><i className="fas fa-angle-double-right"></i></td>
-                    </tr>
-                  </thead>
-                  <Scrollspy
-                    items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
-                    className="d-none d-lg-block h-100"
-                    currentClassName="active"
-                    componentTag="tbody"
-                  >
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action first"
-                      onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-user-cog"></i></td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-donate"></i></td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-credit-card"></i></td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-store"></i></td>
-                    </tr>
-                    <tr
-                      className="dashboard-menu-link list-group-item list-group-item-action"
-                      onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-                    >
-                      <td><i className="fas fa-clock"></i></td>
-                    </tr>
-                  </Scrollspy>
-                </table>
-              </Col>
+              {this.state.signed_in &&
+                <React.Fragment>
+                  <Col id="expanded-side-menu" data-state="expanded" lg={2} className="d-none d-lg-block">
+                    <table id="side-menu-nav">
+                      <thead>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action toggle d-flex"
+                          onClick={(e) => this.closeSideMenu(e)}
+                        >
+                          <td><i className="fas fa-angle-double-left close-arrow"></i></td>
+                        </tr>
+                      </thead>
+                      <Scrollspy
+                        items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
+                        className="d-none d-lg-block h-100"
+                        currentClassName="active"
+                        componentTag="tbody"
+                      >
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action first"
+                          onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-user-cog mr-3"></i></td>
+                          <td>Account</td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-donate mr-3"></i></td>
+                          <td>Donations</td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-credit-card mr-3"></i></td>
+                          <td>Payment Methods</td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-store mr-3"></i></td>
+                          <td>Previous Purchases</td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-clock mr-3"></i></td>
+                          <td>Upcoming Events</td>
+                        </tr>
+                      </Scrollspy>
+                    </table>
+                  </Col>
+                  <Col id="closed-side-menu" lg={1} data-state="closed" className="d-none d-lg-block">
+                    <table id="side-menu-nav">
+                      <thead>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action toggle"
+                          onClick={(e) => this.expandSideMenu(e)}
+                        >
+                          <td><i className="fas fa-angle-double-right"></i></td>
+                        </tr>
+                      </thead>
+                      <Scrollspy
+                        items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
+                        className="d-none d-lg-block h-100"
+                        currentClassName="active"
+                        componentTag="tbody"
+                      >
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action first"
+                          onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-user-cog"></i></td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-donate"></i></td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-credit-card"></i></td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-store"></i></td>
+                        </tr>
+                        <tr
+                          className="dashboard-menu-link list-group-item list-group-item-action"
+                          onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
+                        >
+                          <td><i className="fas fa-clock"></i></td>
+                        </tr>
+                      </Scrollspy>
+                    </table>
+                  </Col>
+                </React.Fragment>
+              }
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 * Dashboard Content
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-              <Col id="dashboard-content" xs={12} lg={10} className="pl-2">
-                <Container className="pl-5">
-                  <PageTitle title="Dashboard" />
-                  {!this.state.signed_in && !this.state.register &&
-                    <Col xs={12} md={{span: 6, offset: 3}}>
-                      <SigninForm
-                        register={(state) => this.setState({register: state})}
-                        setSignedIn={() => this.setState({signed_in: true})}
-                      />
-                    </Col>
-                  }
-                  {!this.state.signed_in && this.state.register &&
-                    <Col xs={12} md={{span: 6, offset: 3}}>
-                      <RegistrationForm
-                        register={(state) => this.setState({register: state})}
-                        setSignedIn={() => this.setState({signed_in: true})}
-                      />
-                    </Col>
-                  }
-                  {this.state.signed_in &&
+              {!this.state.signed_in &&
+                <Col id="dashboard-content" xs={12}>
+                  <Container className="pl-5">
+                    <PageTitle title="Dashboard" />
+                    {!this.state.signed_in && !this.state.register &&
+                      <Col xs={12} md={{span: 6, offset: 3}}>
+                        <SigninForm
+                          register={(state) => this.setState({register: state})}
+                          setSignedIn={() => this.setState({signed_in: true})}
+                        />
+                      </Col>
+                    }
+                    {!this.state.signed_in && this.state.register &&
+                      <Col xs={12} md={{span: 6, offset: 3}}>
+                        <RegistrationForm
+                          register={(state) => this.setState({register: state})}
+                          setSignedIn={() => this.setState({signed_in: true})}
+                        />
+                      </Col>
+                    }
+                  </Container>
+                </Col>
+              }
+              {this.state.signed_in &&
+                <Col id="dashboard-content" xs={12} lg={10} className="pl-2">
+                  <Container className="pl-5">
+                    <PageTitle title="Dashboard" />
                     <React.Fragment>
                       <section id="account" className="mb-5" >
                         <h2>Account</h2>
@@ -473,9 +486,9 @@ const Dashboard = class extends Component {
                       </section>
                       <hr />
                     </React.Fragment>
-                  }
-                </Container>
-              </Col>
+                  </Container>
+                </Col>
+              }
             </Row>
           </Container>
         </Layout>
@@ -483,58 +496,60 @@ const Dashboard = class extends Component {
 * Bottom menu
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div style={{height: '200px'}} className="d-block d-md-none bg-light"></div>
-        <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom p-0" fluid>
-          <Scrollspy
-            items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
-            currentClassName="active"
-            componentTag="div"
-            // className="row"
-            className="d-flex justify-content-center"
-            // style={{height: '116px'}}
-            style={{height: '100%'}}
-          >
-            <div
-              // xs={2}
-              className="bottom-menu-link p-2 text-center flex-fill"
-              onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-              style={{fontSize: '1rem'}}
+        {this.state.signed_in &&
+          <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom p-0" fluid>
+            <Scrollspy
+              items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
+              currentClassName="active"
+              componentTag="div"
+              // className="row"
+              className="d-flex justify-content-center"
+              // style={{height: '116px'}}
+              style={{height: '100%'}}
             >
-              <i className="fas fa-user-cog"></i><br />Account
-            </div>
-            <div
-              // xs={2}
-              className="bottom-menu-link p-2 text-center flex-fill"
-              onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-              style={{fontSize: '1rem'}}
-            >
-              <i className="fas fa-donate"></i><br />Donations
-            </div>
-            <div
-              // xs={2}
-              className="bottom-menu-link p-2 text-center flex-fill"
-              onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-              style={{fontSize: '1rem'}}
-            >
-              <i className="fas fa-credit-card"></i><br />Payment Methods
-            </div>
-            <div
-              // xs={2}
-              className="bottom-menu-link p-2 text-center flex-fill"
-              onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-              style={{fontSize: '1rem'}}
-            >
-              <i className="fas fa-store"></i><br />Previous Purchases
-            </div>
-            <div
-              // xs={2}
-              className="bottom-menu-link p-2 text-center flex-fill"
-              onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-              style={{fontSize: '1rem'}}
-            >
-              <i className="fas fa-clock"></i><br />Upcoming Events
-            </div>
-          </Scrollspy>
-        </Container>
+              <div
+                // xs={2}
+                className="bottom-menu-link p-2 text-center flex-fill"
+                onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
+                style={{fontSize: '1rem'}}
+              >
+                <i className="fas fa-user-cog"></i><br />Account
+              </div>
+              <div
+                // xs={2}
+                className="bottom-menu-link p-2 text-center flex-fill"
+                onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
+                style={{fontSize: '1rem'}}
+              >
+                <i className="fas fa-donate"></i><br />Donations
+              </div>
+              <div
+                // xs={2}
+                className="bottom-menu-link p-2 text-center flex-fill"
+                onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
+                style={{fontSize: '1rem'}}
+              >
+                <i className="fas fa-credit-card"></i><br />Payment Methods
+              </div>
+              <div
+                // xs={2}
+                className="bottom-menu-link p-2 text-center flex-fill"
+                onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
+                style={{fontSize: '1rem'}}
+              >
+                <i className="fas fa-store"></i><br />Previous Purchases
+              </div>
+              <div
+                // xs={2}
+                className="bottom-menu-link p-2 text-center flex-fill"
+                onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
+                style={{fontSize: '1rem'}}
+              >
+                <i className="fas fa-clock"></i><br />Upcoming Events
+              </div>
+            </Scrollspy>
+          </Container>
+        }
       </React.Fragment>
     )
   }
