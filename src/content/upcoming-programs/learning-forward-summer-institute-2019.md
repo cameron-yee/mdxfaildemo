@@ -3,7 +3,7 @@ date: 2019-05-14T18:48:23.490Z
 title: Learning Forward Summer Institute 2019
 type: Teacher Professional Learning
 seoCanonicalUrl: >-
-  https://bscs.org/admin/#/collections/upcoming-programs/learning-forward-summer-institute-2019
+  https://bscs.org/upcoming-programs/teacher-professional-learning/learning-forward-summer-institute-2019
 seoDescription: Join us at the Learning Forward Summer Institute in July 2019.
 seoLang: en-us
 cardDescription: >-
