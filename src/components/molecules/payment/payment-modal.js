@@ -160,7 +160,7 @@ const PaymentModal = class extends Component {
           } */}
           {this.state.stage === 0 && this.props.signed_in &&
             <SelectCardOrBank
-              default_card={this.state.customer_default_card}
+              default_source={this.state.customer_default_card}
               allow_new={true}
               selected_source={this.state.selected_source}
               setSelectedSource={(source_id) => this.setState({selected_source: source_id, stage: 1, max_stage: 1})}

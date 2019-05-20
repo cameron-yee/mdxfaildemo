@@ -8,6 +8,7 @@ import DonateModal from '../molecules/payment/donate-modal'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 import SigninFormModal from '../atoms/forms/signin-form/signin-form-modal'
+import OrderModal from '../molecules/payment/order-modal'
 import PaymentModal from '../molecules/payment/payment-modal'
 
 import 'typeface-open-sans'
@@ -53,6 +54,7 @@ const Layout = class extends Component {
       modalShowGeneral: false,
       modalShowJoinEmail: false,
       modalShowSignin: false,
+      modalShowOrder: false,
       modalShowPayment: false,
       product: null,
       signed_in: false
@@ -100,6 +102,10 @@ const Layout = class extends Component {
       this.setState({modalShowSignin: true})
     }
 
+    if(this.props.launchOrder && prevProps.launchOrder !== this.props.launchOrder) {
+      this.setState({modalShowOrder: true})
+    }
+
     if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
       this.setState({modalShowPayment: true})
     }
@@ -140,6 +146,13 @@ const Layout = class extends Component {
     }
   }
 
+  closeOrder = () => {
+    this.setState({modalShowOrder: false})
+    if(this.props.closeOrder) {
+      this.props.closeOrder()
+    }
+  }
+
   closePayment = () => {
     this.setState({modalShowPayment: false})
     if(this.props.closePayment) {
@@ -157,6 +170,7 @@ const Layout = class extends Component {
   launchDonate = () => { this.setState({modalShowDonate: true}) }
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
   launchJoinEmail = () => { this.setState({modalShowJoinEmail: true}) }
+  launchOrder = () => { this.setState({modalShowOrder: true}) }
   launchPayment = () => { this.setState({modalShowPayment: true}) }
   launchSignin = () => { this.setState({modalShowSignin: true}) }
 
@@ -193,6 +207,10 @@ const Layout = class extends Component {
 //End custom functions
 
   render() {
+    // const children_with_props = React.Children.map(this.props.children, child => {
+    //   React.cloneElement(child, { signed_in: this.state.signed_in})
+    // })
+
     return (
       <StaticQuery
         query={graphql`
@@ -249,6 +267,17 @@ const Layout = class extends Component {
               product={this.state.product}
               setSignedIn={() => this.setSignedIn(true)}
               show={this.state.modalShowPayment}
+              signed_in={this.state.signed_in}
+            />
+            <OrderModal
+              // amount={this.state.amount}
+              // description={this.state.description}
+              onHide={this.closeOrder}
+              product={this.props.product}
+              setSignedIn={() => this.setSignedIn(true)}
+              show={this.state.modalShowOrder}
+              sku={this.props.sku}
+              metadata={this.props.metadata}
               signed_in={this.state.signed_in}
             />
           </React.Fragment>

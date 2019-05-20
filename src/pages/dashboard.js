@@ -3,11 +3,13 @@ import SEO from '../components/seo'
 
 import axios from 'axios'
 import Scrollspy from 'react-scrollspy'
+import ReactPlaceholder from 'react-placeholder'
 
 import Layout from '../components/layout/layout'
 import PageTitle from '../components/layout/page-title/page-title'
 
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
@@ -21,6 +23,7 @@ import RegistrationForm from '../components/atoms/forms/signin-form/registration
 import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
 import SigninForm from '../components/atoms/forms/signin-form/signin-form'
 import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
+import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 
 import retrieveStripeCustomer from '../queries/bscsapi/stripe/retrieve-stripe-customer'
 import retrieveStripeCustomerCharges from '../queries/bscsapi/stripe/retrieve-stripe-customer-charges'
@@ -53,6 +56,7 @@ const Dashboard = class extends Component {
       action_type: undefined,
       customer_default_source: undefined,
       donation_id: undefined,
+      orders: undefined,
       register: false,
       selected_source: undefined,
       show_action_modal: false,
@@ -81,7 +85,10 @@ const Dashboard = class extends Component {
       this.getCustomerDefaultSource(this.cancelToken)
       this.getUserCharges()
       this.getUserRecurringDonations()
-      retrieveStripeCustomerOrders(this.cancelToken).then(response => console.log(response))
+      retrieveStripeCustomerOrders(this.cancelToken).then(response => {
+        console.log(response)
+        this.setState({orders: response.data.data.retrieveStripeCustomerOrders.data})
+      })
     }
 
   }
@@ -479,12 +486,61 @@ const Dashboard = class extends Component {
                       <hr />
                       <section id="upcoming-events" className="mt-5" >
                         <h2>Upcoming Events</h2>
-                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2">
-                          </Col>
+                        <Row style={{marginBottom: '1rem'}}>
+                          {this.state.orders &&
+                            this.state.orders.map((order, index) => {
+                              if(order.metadata.date && order.metadata.type === 'Workshop') {
+                                let workshop = new Date(order.metadata.date)
+                                let now = new Date()
+
+                                //if workshop is within 1 month, show it under upcoming
+                                if(workshop >= now && workshop < now.setMonth(now.getMonth() + 1)) {
+                                  return (
+                                    <Col xs={12} md={4} key={`workshop-${index}`} className="pb-3">
+                                      <Card className="h-100">
+                                        <Card.Img
+                                          className="erc-card-img"
+                                          variant="top"
+                                          src={order.metadata.image}
+                                          alt={order.metadata.alt}
+                                          // onLoad={this.loaded}
+                                          // style={{display: 'none'}}
+                                        />
+                                        <Card.Body>
+                                          <Card.Title
+                                            style={{
+                                              marginBottom: '1.5rem'
+                                            }}
+                                          >
+                                            {order.metadata.title}
+                                          </Card.Title>
+                                          <p><strong><em>{order.metadata.date}</em></strong></p>
+                                          <p>{order.metadata.description}</p>
+                                        </Card.Body>
+                                        <Card.Footer
+                                          style={{
+                                            background: 'white',
+                                            borderTop: 'none',
+                                            marginBottom: '.5rem',
+                                          }}
+                                        >
+                                          <div className="d-flex">
+                                            <div className="ml-auto align-self-end">
+                                              <SpecificContactForm sendto={order.metadata.contact}>
+                                                <Button variant="outline-primary">Contact {order.metadata.contact}</Button>
+                                              </SpecificContactForm>
+                                            </div>
+                                          </div>
+                                        </Card.Footer>
+                                      </Card>
+                                    </Col>
+                                  )
+                                }
+                              }
+                            })
+                          }
                         </Row>
                       </section>
-                      <hr />
                     </React.Fragment>
                   </Container>
                 </Col>

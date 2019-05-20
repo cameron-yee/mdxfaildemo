@@ -19,8 +19,13 @@ const retrieveStripeCustomerOrders = (cancelToken) => {
                 parent
               }
               metadata {
+                alt
                 contact
                 date
+                description
+                image
+                title
+                type
               }
             }
           }

@@ -146,6 +146,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="dashboard-customer-payment-methods"
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -157,6 +158,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="customer-payment-methods"
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -178,6 +180,7 @@ const SelectCardOrBank = class extends Component {
                               id={`dashboard-${source.id}`}
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="dashboard-customer-payment-methods"
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -188,6 +191,7 @@ const SelectCardOrBank = class extends Component {
                               id={`${source.id}`}
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="customer-payment-methods"
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -208,6 +212,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="dashboard-customer-payment-methods"
+                              style={{color: '#7c8c8e'}}
                               type="radio"
                             />
                           }
@@ -218,6 +223,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="customer-payment-methods"
+                              style={{color: '#7c8c8e'}}
                               type="radio"
                             />
                           }
@@ -269,7 +275,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="dashboard-customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -281,7 +287,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`${source.bank_name}: ••••••••${source.last4}`}
                               name="customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -365,7 +371,7 @@ const SelectCardOrBank = class extends Component {
                               id={`dashboard-${source.id}`}
                               label={`•••• •••• •••• ${source.last4}`}
                               name="dashboard-customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -376,7 +382,7 @@ const SelectCardOrBank = class extends Component {
                               id={`${source.id}`}
                               label={`•••• •••• •••• ${source.last4}`}
                               name="customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -424,7 +430,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`•••• •••• •••• ${source.last4}`}
                               name="dashboard-customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
@@ -436,7 +442,7 @@ const SelectCardOrBank = class extends Component {
                               inline="true"
                               label={`•••• •••• •••• ${source.last4}`}
                               name="customer-payment-methods"
-                              style={{color: '#7c8c8e'}}
+                              style={{color: '#637375'}}
                               type="radio"
                             />
                           }
