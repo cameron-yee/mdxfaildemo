@@ -217,7 +217,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY"),
         additionalTags,
         alt,
-        courseId,
+        # courseId,
         discipline,
         gradeLevel,
         image,

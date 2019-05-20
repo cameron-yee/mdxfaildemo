@@ -8,21 +8,18 @@ cardDescription: >-
   Darwin Day is a celebration to commemorate the birthday of Charles Darwin on
   February 12, 1809. The day is used to highlight Darwin's contributions to
   science and to promote science in general.
-sidebarImage: /assets/darwin-day-2019.jpg
-sidebarAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
-sidebarURLs:
-  - resource:
-      buttonText: Email Announcement
-      external: true
-      text: ''
-      url: 'https://conta.cc/2DjZYfZ'
+sidebarImage: ''
+sidebarAlt: ''
+sidebarURLs: []
 sidebarContacts:
   - contact:
       infoat: false
       person: Lauren Novo
 sidebarContactsText: 'For more information, please contact Lauren Novo.'
 sidebarContactsTitle: Questions?
-announcementOrCoverage: 'Announcement'
+sidebarContactsImage: /assets/darwin-day-2019.jpg
+sidebarContactsAlt: Silhouette of Charles Darwin's head filled with a mosaic of other scientists.
+announcementOrCoverage: Announcement
 sortOrder: 3
 page: news
 ---
