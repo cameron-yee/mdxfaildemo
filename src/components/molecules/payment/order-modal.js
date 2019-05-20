@@ -40,7 +40,7 @@ const OrderModal = class extends Component {
     super(props)
     this.state = {
       selected_source: null,
-      customer_default_card: undefined,
+      customer_default_source: undefined,
       max_stage: 0,
       number_of_steps: 1,
       register: false,
@@ -59,7 +59,7 @@ const OrderModal = class extends Component {
   componentDidMount() {
     this.setStripeScript()
     if(this.props.signed_in) {
-      this.getCustomerDefaultCard()
+      this.getCustomerDefaultSource()
       this.getSkuInformation()
       this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
     }
@@ -80,7 +80,7 @@ const OrderModal = class extends Component {
 
     if(prevProps.signed_in !== this.props.signed_in) {
       if(this.props.signed_in) {
-        this.getCustomerDefaultCard()
+        this.getCustomerDefaultSource()
         this.getSkuInformation()
         this.setState({steps: ["Payment Method", "Place Order"], number_of_steps: 2})
       } else {
@@ -108,7 +108,7 @@ const OrderModal = class extends Component {
     })
   }
 
-  getCustomerDefaultCard = () => {
+  getCustomerDefaultSource = () => {
     retrieveStripeCustomer(this.cancelToken).then(response => {
       if(
         response !== undefined &&
@@ -116,9 +116,9 @@ const OrderModal = class extends Component {
         !response.data.errors
       ) {
         if(response.data.data.retrieveStripeCustomer !== null) {
-          this.setState({customer_default_card: response.data.data.retrieveStripeCustomer.default_source})
+          this.setState({customer_default_source: response.data.data.retrieveStripeCustomer.default_source})
         } else {
-          this.setState({customer_default_card: null})
+          this.setState({customer_default_source: null})
         }
       }
     })
@@ -174,7 +174,7 @@ const OrderModal = class extends Component {
             }
             {this.state.stage === 0 && this.props.signed_in &&
               <SelectCardOrBank
-                default_source={this.state.customer_default_card}
+                default_source={this.state.customer_default_source}
                 allow_new={true}
                 selected_source={this.state.selected_source}
                 setSelectedSource={(source_id) => this.setState({selected_source: source_id, stage: 1, max_stage: 1})}

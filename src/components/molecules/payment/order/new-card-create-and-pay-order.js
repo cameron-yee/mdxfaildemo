@@ -193,7 +193,7 @@ const NewCardCreateAndPayOrder = class extends Component {
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
         createAndPayOrder(this.cancelToken, this.props.source_id, this.props.sku, this.props.metadata).then(response => {
-          if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder.charge) {
+          if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
             this.setState({successfully_charged: true, loading: false})
           } else {
             this.setState({errors: true, loading: false })
