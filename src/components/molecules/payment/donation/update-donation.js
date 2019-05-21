@@ -150,10 +150,22 @@ const UpdateDonation = class extends Component {
             </Form>
             <div className="d-flex justify-content-center mt-3">
               {!this.state.loading && !this.state.errors && !this.state.successfully_updated && this.state.donate_amount &&
-                <Button onClick={this.submit} style={{marginTop: '1rem'}}>Update Donation</Button>
+                <Button
+                  onClick={this.submit}
+                  style={{marginTop: '1rem'}}
+                  variant="outline-primary"
+                >
+                  Update Donation
+                </Button>
               }
               {!this.state.loading && !this.state.errors && !this.state.successfully_updated && !this.state.donate_amount &&
-                <Button style={{marginTop: '1rem'}} disabled>Update Donation</Button>
+                <Button
+                  style={{marginTop: '1rem'}}
+                  disabled
+                  variant="outline-primary"
+                >
+                  Update Donation
+                </Button>
               }
             </div>
           </div>

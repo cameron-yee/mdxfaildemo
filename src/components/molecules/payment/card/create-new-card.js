@@ -337,10 +337,16 @@ const CreateNewCard = class extends Component {
 
             <div className="d-flex justify-content-center mt-3 flex-wrap">
               {!this.state.loading && !this.state.errors && !this.state.successfully_created && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
-                <Button onClick={this.handleCreation} style={{marginTop: '1rem'}}>Save new card</Button>
+                <Button
+                  variant="outline-primary"
+                  onClick={this.handleCreation}
+                  style={{marginTop: '1rem'}}
+                >
+                  Save new card
+                </Button>
               }
               {!this.state.loading && !this.state.errors && !this.state.successfully_created && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
-                <Button style={{marginTop: '1rem'}} disabled>Save new card</Button>
+                <Button variant="outline-primary" style={{marginTop: '1rem'}} disabled>Save new card</Button>
               }
             </div>
           </div>

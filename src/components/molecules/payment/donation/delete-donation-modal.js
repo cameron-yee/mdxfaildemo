@@ -34,7 +34,7 @@ const DeleteDonationModal = class extends Component {
       >
         <Modal.Header closeButton style={{background: '#e6e6e6'}}>
           <Modal.Title id="delete-donation-modal-title">
-              <span>Delete Donation</span>
+              <span>Cancel Donation</span>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

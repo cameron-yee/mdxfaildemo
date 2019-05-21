@@ -60,7 +60,11 @@ const PaymentModal = class extends Component {
     this.setStripeScript()
     if(this.props.signed_in) {
       this.getCustomerDefaultSource(this.cancelToken)
-      this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
+      if(!this.props.donate) {
+        this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
+      } else {
+        this.setState({steps: ["Payment Method", "Donate"], number_of_steps: 2})
+      }
     }
   }
 
@@ -72,11 +76,11 @@ const PaymentModal = class extends Component {
     }
   }
 
-  componentWillUpdate(prevProps) {
+  componentDidUpdate(prevProps) {
     if(prevProps.signed_in !== this.props.signed_in) {
       this.getCustomerDefaultSource(this.cancelToken)
 
-      if(!this.props.signed_in) {
+      if(this.props.signed_in) {
         if(!this.props.donate) {
           this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
         } else {

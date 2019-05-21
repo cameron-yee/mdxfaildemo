@@ -247,10 +247,22 @@ const CreateNewBank = class extends Component {
             </Form>
             <div className="d-flex justify-content-center mt-3">
               {!this.state.loading && !this.state.errors && !this.state.successfullyCreated && this.state.firstname && this.state.lastname && this.state.routing_number && this.state.account_number &&
-                <Button onClick={(e) => this.submit(e)} style={{marginTop: '1rem'}}>Add Bank</Button>
+                <Button
+                  onClick={(e) => this.submit(e)}
+                  style={{marginTop: '1rem'}}
+                  variant="outline-primary"
+                >
+                  Add Bank
+                </Button>
               }
               {!this.state.loading && !this.state.errors && !this.state.successfullyCreated && (!this.state.firstname || !this.state.lastname ||  !this.state.routing_number || !this.state.account_number) &&
-                <Button style={{marginTop: '1rem'}} disabled>Add Bank</Button>
+                <Button
+                  style={{marginTop: '1rem'}}
+                  disabled
+                  variant="outline-primary"
+                >
+                  Add Bank
+                </Button>
               }
             </div>
           </div>

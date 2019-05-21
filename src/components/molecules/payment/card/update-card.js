@@ -368,16 +368,40 @@ const UpdateCard = class extends Component {
             </Form>
             <div className="d-flex justify-content-center mt-3">
               {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && this.state.firstname && this.state.lastname && this.state.address && this.state.state &&this.state.zipcode && this.state.country &&
-                <Button onClick={this.submit} style={{marginTop: '1rem'}}>Update Card</Button>
+                <Button
+                  onClick={this.submit}
+                  style={{marginTop: '1rem'}}
+                  variant="outline-primary"
+                >
+                  Update Card
+                </Button>
               }
               {this.state.country === 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && (!this.state.firstname || !this.state.lastname || !this.state.address || !this.state.state ||!this.state.zipcode || !this.state.country) &&
-                <Button style={{marginTop: '1rem'}} disabled>Update Card</Button>
+                <Button
+                  style={{marginTop: '1rem'}}
+                  disabled
+                  variant="outline-primary"
+                >
+                  Update Card
+                </Button>
               }
               {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && this.state.firstname && this.state.lastname && this.state.country &&
-                <Button onClick={this.submit} style={{marginTop: '1rem'}}>Update Card</Button>
+                <Button
+                  onClick={this.submit}
+                  style={{marginTop: '1rem'}}
+                  variant="outline-primary"
+                >
+                  Update Card
+                </Button>
               }
               {this.state.country !== 'US' && !this.state.loading && !this.state.errors && !this.state.successfully_updated && (!this.state.firstname || !this.state.lastname || !this.state.country) &&
-                <Button style={{marginTop: '1rem'}} disabled>Update Card</Button>
+                <Button
+                  style={{marginTop: '1rem'}}
+                  disabled
+                  variant="outline-primary"
+                >
+                  Update Card
+                </Button>
               }
             </div>
           </div>

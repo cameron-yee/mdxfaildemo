@@ -372,10 +372,10 @@ const Dashboard = class extends Component {
                                 <tr>
                                   <th>Amount</th>
                                   <th>Description</th>
-                                  <th>Payment Type</th>
+                                  <th>Payment Method</th>
                                   <th>Next scheduled payment</th>
                                   <th>Update Donation</th>
-                                  <th>Delete Donation</th>
+                                  <th>Cancel Donation</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -417,7 +417,7 @@ const Dashboard = class extends Component {
                                         </td>
                                         <td>
                                           <LaunchDeleteDonationModal launchDeleteDonation={this.launchDeleteDonationModal}>
-                                            <Button data-donation-id={subscription.id} variant="outline-primary">Delete</Button>
+                                            <Button data-donation-id={subscription.id} variant="outline-primary">Cancel</Button>
                                           </LaunchDeleteDonationModal>
                                         </td>
                                       </tr>
@@ -432,7 +432,7 @@ const Dashboard = class extends Component {
                               launchPayment={(donate) => this.setState({launch_payment: true, donate: donate})}
                               donate={true}
                             >
-                              <Button variant="outline-primary">Create new donation</Button>
+                              <Button variant="outline-primary">New Donation</Button>
                             </LaunchPaymentModal>
                           </Col>
                         </Row>

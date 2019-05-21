@@ -171,10 +171,22 @@ const VerifyBank = class extends Component {
             </Form>
             <div className="d-flex justify-content-center mt-3">
               {!this.state.loading && !this.state.errors && !this.state.successfullyVerified && this.state.deposit_one_amount && this.state.deposit_two_amount &&
-                <Button onClick={(e) => this.verify(e)} style={{marginTop: '1rem'}}>Verify Bank Account</Button>
+                <Button
+                  onClick={(e) => this.verify(e)}
+                  style={{marginTop: '1rem'}}
+                  variant="outline-primary"
+                >
+                  Verify Bank Account
+                </Button>
               }
               {!this.state.loading && !this.state.errors && !this.state.successfullyVerified && (!this.state.deposit_one_amount || !this.state.deposit_two_amount) &&
-                <Button style={{marginTop: '1rem'}} disabled>Verify Bank Account</Button>
+                <Button
+                  style={{marginTop: '1rem'}}
+                  disabled
+                  variant="outline-primary"
+                >
+                  Verify Bank Account
+                </Button>
               }
             </div>
           </div>
