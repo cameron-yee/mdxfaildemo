@@ -10,14 +10,18 @@ image: /assets/sue_5x7.jpg
 alt: Sue Kowalski headshot.
 page: leadership
 ---
+### _Division Director, Research_
 
-### *Division Director, Research*
-### *Senior Research Scientist*
+### _Senior Research Scientist_
 
-**Dr. Sue Kowalski** joined BSCS as a Science Educator in May 2007. She is currently the PI for an NSF-funded research and development project, designing and studying an online professional development course for teachers. In collaboration with Oregon Public Broadcasting, the National Renewable Energy Lab, the Great Lakes Bioenergy Research Center, the National Teachers Enhancement Network of Montana State University, and RMC Research Corporation, we are developing an online course to enhance teachers’ content knowledge and practice associated with fundamental energy concepts. Sue is also a lead researcher on an NSF-funded project to establish power analysis parameters for science education research proposals.
+**Dr. Sue Kowalski** joined BSCS as a Science Educator in May 2007. She is currently the Principal Investigator (PI) for two NSF-funded research and development projects: A Medical Mystery and STeLLA Online.
+
+A Medical Mystery involves designing and studying an 8th grade body systems unit aligned with the NGSS. In collaboration with Oregon Public Broadcasting, BSCS is developing digital curriculum materials and a fully online teacher professional development (PD) course to accompany the unit. BSCS is also conducting a quasi-experiment to examine the impact of the curriculum and PD on teacher and student outcomes.
+
+The goal of the STeLLA Online is to translate the highly successful STeLLA professional learning program into a fully online format. BSCS is iteratively designing, testing, and revising mini-modules in phase 1, while phase 2 will involve the use of a quasi-experiment to compare the efficacy of the online format to the face-to-face format.
 
 Sue taught high school science for 10 years in Bloomington, MN. While in Bloomington, she taught a sheltered physical science course for English Language Learners, general and AP physics, and all levels of physical science. Sue was also an active member of her teachers’ union, serving on the contract negotiations team for six years. She has presented papers at the National Association for Research in Science Teaching (NARST) conferences, and at the American Educational Research Association (AERA) conferences. Her primary research interests relate to teaching science for both excellence and equity.
 
-<p style="margin-bottom: 2rem;">Sue received a B.A. in Physics from Colorado College, and an M.A. and Ph.D. in the department of curriculum and instruction of science education at the University of Minnesota, Twin Cities. Her dissertation examined the intersection of race and gender in high school physics’ group work conversations. Her hobbies include keeping up with her two small children, gardening, canning, running, biking, swimming, choral singing, and reading.</p>
+Sue received a BA in Physics from Colorado College, and an MA and PhD in Curriculum and Instruction, Science Education at the University of Minnesota, Twin Cities. Her dissertation examined the intersection of race and gender in high school physics group work conversations. Her hobbies include keeping up with her two small children, hiking, camping, running, biking, fishing, and reading.
 
 <a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/sue_kowalski_vitae.pdf" target="_blank" rel="noopener noreferrer">Read Sue Kowalski's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
