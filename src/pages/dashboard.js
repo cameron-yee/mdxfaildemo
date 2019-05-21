@@ -3,7 +3,7 @@ import SEO from '../components/seo'
 
 import axios from 'axios'
 import Scrollspy from 'react-scrollspy'
-import ReactPlaceholder from 'react-placeholder'
+// import ReactPlaceholder from 'react-placeholder'
 
 import Layout from '../components/layout/layout'
 import PageTitle from '../components/layout/page-title/page-title'
@@ -17,6 +17,7 @@ import Row from 'react-bootstrap/Row'
 
 import ActionModal from '../components/molecules/payment/action-modal'
 import DeleteDonationModal from '../components/molecules/payment/donation/delete-donation-modal'
+import LaunchPaymentModal from '../components/molecules/payment/launch-payment-modal'
 import LaunchDeleteDonationModal from '../components/molecules/payment/donation/launch-delete-donation-modal'
 import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
 import RegistrationForm from '../components/atoms/forms/signin-form/registration-form'
@@ -55,7 +56,9 @@ const Dashboard = class extends Component {
     this.state = {
       action_type: undefined,
       customer_default_source: undefined,
+      donate: false,
       donation_id: undefined,
+      launch_payment: false,
       orders: undefined,
       register: false,
       selected_source: undefined,
@@ -200,7 +203,14 @@ const Dashboard = class extends Component {
           description=""
           canonical="https://bscs.org/dashboard"
         />
-        <Layout location={this.props.location} setSignedIn={(state) => this.setState({signed_in: state})} signed_in={this.state.signed_in}>
+        <Layout
+          closePayment={() => this.setState({launch_payment: false})}
+          donate={this.state.donate}
+          launchPayment={this.state.launch_payment}
+          location={this.props.location}
+          setSignedIn={(state) => this.setState({signed_in: state})}
+          signed_in={this.state.signed_in}
+        >
           <Container>
             <Row>
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -355,7 +365,7 @@ const Dashboard = class extends Component {
                       <hr />
                       <section id="donations" className="my-5" >
                         <h2>Donations</h2>
-                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
+                        <Row style={{marginBottom: '1rem'}} className="d-flex">
                           <Col className="p-2">
                             <Table striped bordered hover responsive>
                               <thead>
@@ -417,6 +427,14 @@ const Dashboard = class extends Component {
                               </tbody>
                             </Table>
                           </Col>
+                          <Col xs={12} className="d-flex justify-content-center">
+                            <LaunchPaymentModal
+                              launchPayment={(donate) => this.setState({launch_payment: true, donate: donate})}
+                              donate={true}
+                            >
+                              <Button variant="outline-primary">Create new donation</Button>
+                            </LaunchPaymentModal>
+                          </Col>
                         </Row>
                         <UpdateDonationModal
                           onHide={this.closeUpdateDonationModal}
@@ -434,7 +452,7 @@ const Dashboard = class extends Component {
                       <section id="payment-methods" className="my-5" >
                         <h2>Payment Methods</h2>
                         <Row style={{marginBottom: '3rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2 ml-3" xs={12} md={5}>
+                          <Col className="p-2 ml-3" xs={12} md={8}>
                             <SelectCardOrBank
                               default_source={this.state.customer_default_source}
                               selected_source={this.state.selected_source}
@@ -488,6 +506,7 @@ const Dashboard = class extends Component {
                         <h2>Upcoming Events</h2>
                         <Row style={{marginBottom: '1rem'}}>
                           {this.state.orders &&
+                            // eslint-disable-next-line
                             this.state.orders.map((order, index) => {
                               if(order.metadata.date && order.metadata.type === 'Workshop') {
                                 let workshop = new Date(order.metadata.date)
@@ -496,7 +515,7 @@ const Dashboard = class extends Component {
                                 //if workshop is within 1 month, show it under upcoming
                                 if(workshop >= now && workshop < now.setMonth(now.getMonth() + 1)) {
                                   return (
-                                    <Col xs={12} md={4} key={`workshop-${index}`} className="pb-3">
+                                    <Col xs={12} md={6} xl={4} key={`workshop-${index}`} className="pb-3">
                                       <Card className="h-100">
                                         <Card.Img
                                           className="erc-card-img"
@@ -555,7 +574,7 @@ const Dashboard = class extends Component {
         {this.state.signed_in &&
           <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom p-0" fluid>
             <Scrollspy
-              items={['account', 'donations', 'previous-purchases', 'payment-methods', 'upcoming-events']}
+              items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
               currentClassName="active"
               componentTag="div"
               // className="row"

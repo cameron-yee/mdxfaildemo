@@ -90,13 +90,13 @@ const UpdateDonationModal = class extends Component {
     })
   }
 
-
-
   setStripeScript = () => {
     try {
-      setTimeout(() => {
+      if('Stripe' in window) {
         this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')})
-      }, 500)
+      } else {
+        setTimeout(this.setStripeScript, 200)
+      }
     } catch(error) {
       console.log(error)
     }

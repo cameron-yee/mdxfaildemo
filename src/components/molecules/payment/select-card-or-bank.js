@@ -13,9 +13,11 @@ import retrieveStripeCustomerCards from '../../../queries/bscsapi/stripe/retriev
   *
   * constructor(props) {...}
   * componentDidMount() {...}
+  * getUserBanks = async () => {
   * getUserCards = async () => {
   * getCardId = () => {...}
-  * setCardId = (e) => {...}
+  * setUserPaymentMethods = async () => {...}
+  * setPaymentMethodId = (e) => {...}
   * render() {...}
   *
 */
@@ -295,6 +297,36 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      "bank_name" in source &&
+                      !this.props.selected_source &&
+                      this.props.default_source !== source.id
+                    ) {
+                      return(
+                        <React.Fragment key={`source-${index}`}>
+                          {this.props.dashboard &&
+                            <Form.Check
+                              custom
+                              id={`dashboard-${source.id}`}
+                              label={`${source.bank_name}: ••••••••${source.last4}`}
+                              name="dashboard-customer-payment-methods"
+                              style={{color: '#7c8c8e'}}
+                              type="radio"
+                            />
+                          }
+                          {!this.props.dashboard &&
+                            <Form.Check
+                              custom
+                              id={`${source.id}`}
+                              label={`${source.bank_name}: ••••••••${source.last4}`}
+                              name="customer-payment-methods"
+                              style={{color: '#7c8c8e'}}
+                              type="radio"
+                            />
+                          }
+                        </React.Fragment>
+                      )
+                    } else if(
+                      this.props.selected_source &&
                       source.id === this.props.selected_source &&
                       this.props.default_source === source.id
                     ) {
@@ -328,6 +360,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      this.props.selected_source &&
                       source.id !== this.props.selected_source &&
                       this.props.default_source === source.id
                     ) {
@@ -359,6 +392,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      this.props.selected_source &&
                       source.id === this.props.selected_source &&
                       this.props.default_source !== source.id
                     ) {
@@ -449,6 +483,8 @@ const SelectCardOrBank = class extends Component {
                             <span className="badge badge-pill badge-primary">DEFAULT</span>
                         </React.Fragment>
                       )
+                    } else {
+                      return (<></>)
                     }
                   })
                 }
@@ -514,9 +550,12 @@ const SelectCardOrBank = class extends Component {
                 </div>
               }
               {this.props.dashboard && this.state.payment_methods && this.state.payment_methods.length !== 0 && !this.props.allow_new &&
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center flex-wrap">
                   <Button data-action-type="update" className="m-3" variant="outline-primary" type="submit">Update</Button>
                   <Button data-action-type="delete" className="m-3" variant="outline-primary" type="submit">Delete</Button>
+                  <Button data-action-type="verify" className="m-3" variant="outline-primary" type="submit">Verify Bank</Button>
+                  <Button data-action-type="new-bank" className="m-3" variant="outline-primary" type="submit">New Bank</Button>
+                  <Button data-action-type="new-card" className="m-3" variant="outline-primary" type="submit">New Card</Button>
                 </div>
               }
             </Form>

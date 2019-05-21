@@ -159,9 +159,9 @@ const CreateNewCard = class extends Component {
 
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
-        this.props.setCardId(response.data.data.createStripeCustomerCard.id)
+        this.setState({errors: false, loading: false, successfully_created: true })
       } else {
-        this.setState({errors: true, loading: false })
+        this.setState({errors: true, loading: false, successfully_created: false  })
       }
     }).catch(error => {
       axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)

@@ -83,25 +83,6 @@ const DeleteBankModal = class extends Component {
       }
     })
   }
-
-  // next = (e) => {
-  //   e.preventDefault()
-  //   let current_stage = this.state.stage
-  //   if(current_stage < 2 && this.state.max_stage > current_stage) {
-  //     let new_stage = ++current_stage
-  //     console.log(new_stage)
-  //     this.setState({stage: new_stage})
-  //   }
-  // }
-
-  // previous = (e) => {
-  //   e.preventDefault()
-  //   let current_stage = this.state.stage
-  //   if(current_stage !== 1) {
-  //     let new_stage = --current_stage
-  //     this.setState({stage: new_stage})
-  //   }
-  // }
 //End custom functions
 
   render() {

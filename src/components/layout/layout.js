@@ -50,6 +50,7 @@ const Layout = class extends Component {
     this.state = {
       amount: null,
       description: null,
+      donate: false,
       modalShowDonate: false,
       modalShowGeneral: false,
       modalShowJoinEmail: false,
@@ -65,7 +66,9 @@ const Layout = class extends Component {
 
 //Lifecycle hooks
   componentDidMount() {
-    this.setStripeScript()
+    //Only for development.  Stripe script is set in <head> in during Netlify build
+    setTimeout(this.setStripeScript, 1000)
+
     if(this.props.product && this.props.amount && this.props.description) {
       this.setState({
         amount: this.props.amount,
@@ -86,28 +89,32 @@ const Layout = class extends Component {
   }
 
   componentDidUpdate(prevProps) {
+    if(this.props.donate && prevProps.donate !== this.props.donate) {
+      this.setState({donate: this.props.donate})
+    }
+
     if(this.props.launchDonate && prevProps.launchDonate !== this.props.launchDonate) {
-      this.setState({modalShowDonate: true})
+      this.setState({modalShowDonate: this.props.launchDonate})
     }
 
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
-      this.setState({modalShowGeneral: true})
+      this.setState({modalShowGeneral: this.props.launchGeneral})
     }
 
     if(this.props.launchJoinEmail && prevProps.launchJoinEmail !== this.props.launchJoinEmail) {
-      this.setState({modalShowJoinEmail: true})
+      this.setState({modalShowJoinEmail: this.props.launchJoinEmail})
     }
 
     if(this.props.launchSignin && prevProps.launchSignin !== this.props.launchSignin) {
-      this.setState({modalShowSignin: true})
+      this.setState({modalShowSignin: this.props.launchSignin})
     }
 
     if(this.props.launchOrder && prevProps.launchOrder !== this.props.launchOrder) {
-      this.setState({modalShowOrder: true})
+      this.setState({modalShowOrder: this.props.launchOrder})
     }
 
     if(this.props.launchPayment && prevProps.launchPayment !== this.props.launchPayment) {
-      this.setState({modalShowPayment: true})
+      this.setState({modalShowPayment: this.props.launchPayment})
     }
 
     if(this.props.signed_in && prevProps.signed_in !== this.props.signed_in) {
@@ -195,11 +202,13 @@ const Layout = class extends Component {
 
   setStripeScript = () => {
     try {
-      const stripeJs = document.createElement('script');
-      stripeJs.async = true;
-      stripeJs.id = "stripe-js"
-      stripeJs.src = 'https://js.stripe.com/v3/';
-      document.getElementsByTagName('head')[0].appendChild(stripeJs)
+      if(('Stripe' in window) === false) {
+        const stripeJs = document.createElement('script');
+        stripeJs.async = true;
+        stripeJs.id = "stripe-js"
+        stripeJs.src = 'https://js.stripe.com/v3/';
+        document.getElementsByTagName('head')[0].appendChild(stripeJs)
+      }
     } catch(error) {
       console.log(error)
     }
@@ -268,6 +277,7 @@ const Layout = class extends Component {
               setSignedIn={() => this.setSignedIn(true)}
               show={this.state.modalShowPayment}
               signed_in={this.state.signed_in}
+              donate={this.state.donate}
             />
             <OrderModal
               // amount={this.state.amount}

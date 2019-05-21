@@ -29,8 +29,6 @@ import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-str
   * componentWillUnmount() {...}
   * componentWillUpdate(prevProps) {...}
   * getCustomerDefaultCard = () => {...}
-  * next = (e) => {...}
-  * previous = (e) => {...}
   * setBankInfo = (bank_id, bank_status) => {...}
   * setCreditOrBank = (credit_or_bank) => {...}
   * setStripeScript = () => {...}
@@ -38,6 +36,9 @@ import retrieveStripeCustomer from '../../../queries/bscsapi/stripe/retrieve-str
   *
 */
 
+//
+// DEPRECATED.  USE PAYMENT MODAL INSTEAD WITH DONATE PROPS.
+//
 const DonateModal = class extends Component {
   constructor(props) {
     super(props)
@@ -46,7 +47,7 @@ const DonateModal = class extends Component {
       card_id: null,
       credit_or_bank: null,
       bank_status: null,
-      customer_default_card: undefined,
+      customer_default_source: undefined,
       frequency: undefined,
       max_stage: 0,
       number_of_steps: 1,
@@ -64,7 +65,7 @@ const DonateModal = class extends Component {
   componentDidMount() {
     this.setStripeScript()
     if(this.props.signed_in) {
-      this.getCustomerDefaultCard(this.cancelToken)
+      this.getCustomerDefaultSource(this.cancelToken)
       this.setState({steps: ["Select Payment", "Info", "Donate"], number_of_steps: 3})
     }
   }
@@ -79,7 +80,7 @@ const DonateModal = class extends Component {
 
   componentWillUpdate(prevProps) {
     if(prevProps.signed_in !== this.props.signed_in) {
-      this.getCustomerDefaultCard(this.cancelToken)
+      this.getCustomerDefaultSource(this.cancelToken)
 
       if(!this.props.signed_in) {
         this.setState({steps: ["Select Payment Type", "Info", "Donate"], number_of_steps: 3})
@@ -91,7 +92,7 @@ const DonateModal = class extends Component {
 //End lifecycle hooks
 
 //Custom functions
-  getCustomerDefaultCard = () => {
+  getCustomerDefaultSource = () => {
     retrieveStripeCustomer(this.cancelToken).then(response => {
       if(
         response !== undefined &&
@@ -99,32 +100,12 @@ const DonateModal = class extends Component {
         !response.data.errors
       ) {
         if(response.data.data.retrieveStripeCustomer !== null) {
-          this.setState({customer_default_card: response.data.data.retrieveStripeCustomer.default_source})
+          this.setState({customer_default_source: response.data.data.retrieveStripeCustomer.default_source})
         } else {
-          this.setState({customer_default_card: null})
+          this.setState({customer_default_source: null})
         }
       }
     })
-  }
-
-  next = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage < this.state.number_of_steps && this.state.max_stage > current_stage) {
-      let new_stage = ++current_stage
-      console.log(new_stage)
-      this.setState({stage: new_stage})
-    }
-  }
-
-  previous = (e) => {
-    e.preventDefault()
-    let current_stage = this.state.stage
-    if(current_stage !== 0) {
-      let new_stage = --current_stage
-      console.log(new_stage)
-      this.setState({stage: new_stage})
-    }
   }
 
   setBankInfo = (bank_id, bank_status) => {
@@ -182,9 +163,11 @@ const DonateModal = class extends Component {
 
   setStripeScript = () => {
     try {
-      setTimeout(() => {
+      if('Stripe' in window) {
         this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')})
-      }, 500)
+      } else {
+        setTimeout(this.setStripeScript, 200)
+      }
     } catch(error) {
       console.log(error)
     }
@@ -339,14 +322,6 @@ const DonateModal = class extends Component {
             />
           }
         </Modal.Body>
-        {/* <Modal.Footer>
-            {this.state.stage > 0 &&
-              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
-            }
-            {this.state.stage < 2 && this.state.maxStage > this.state.stage &&
-              <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
-            }
-        </Modal.Footer> */}
       </Modal>
     )
   }

@@ -1,9 +1,6 @@
 import axios from 'axios'
 
-const createAndPayOrder = (cancelToken, source_id, sku, metadata) => {
-  // eslint-disable-next-line
-  let formatted_metadata = JSON.stringify(metadata).replace(/\"([^(\")"]+)\":/g,"$1:")
-
+const retrieveStripeCustomerBank = (cancelToken, bank_id) => {
   return axios({
     url: "http://127.0.0.1:4000",
     method: "post",
@@ -12,13 +9,11 @@ const createAndPayOrder = (cancelToken, source_id, sku, metadata) => {
     data: {
       query: `
         query {
-          createAndPayStripeCustomerOrder(
-            sourceId: "${source_id}",
-            sku: "${sku}",
-            metadata: ${formatted_metadata},
-          ) {
+          retrieveStripeCustomerBank(bankId: "${bank_id}") {
+            bank_name
             id
-            charge
+            last4
+            status
           }
         }
         `
@@ -33,4 +28,4 @@ const createAndPayOrder = (cancelToken, source_id, sku, metadata) => {
   })
 }
 
-export default createAndPayOrder
+export default retrieveStripeCustomerBank

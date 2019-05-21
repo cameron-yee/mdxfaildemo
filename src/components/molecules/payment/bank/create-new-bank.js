@@ -87,8 +87,6 @@ const CreateNewBank = class extends Component {
     let token, token_id
 
     token = await this.createStripeToken()
-    console.log(token)
-    console.log(token.token.id)
     token_id = token.token.id
 
     this.setState({loading: true})
@@ -97,7 +95,7 @@ const CreateNewBank = class extends Component {
     createCustomerBank(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
         this.setState({errors: false, loading: false, successfullyCreated: true })
-        this.props.setBankId(response.data.data.createStripeCustomerBank.id)
+        // this.props.setBankId(response.data.data.createStripeCustomerBank.id)
       } else {
         this.setState({errors: true, loading: false, successfullyCreated: false })
         console.log(response)

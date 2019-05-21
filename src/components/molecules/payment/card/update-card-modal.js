@@ -83,25 +83,6 @@ const UpdateCardModal = class extends Component {
       }
     })
   }
-
-  // next = (e) => {
-  //   e.preventDefault()
-  //   let current_stage = this.state.stage
-  //   if(current_stage < 2 && this.state.max_stage > current_stage) {
-  //     let new_stage = ++current_stage
-  //     console.log(new_stage)
-  //     this.setState({stage: new_stage})
-  //   }
-  // }
-
-  // previous = (e) => {
-  //   e.preventDefault()
-  //   let current_stage = this.state.stage
-  //   if(current_stage !== 1) {
-  //     let new_stage = --current_stage
-  //     this.setState({stage: new_stage})
-  //   }
-  // }
 //End custom functions
 
   render() {
@@ -142,14 +123,6 @@ const UpdateCardModal = class extends Component {
             <UpdateCard card_id={this.state.card_id} />
           }
         </Modal.Body>
-        {/* <Modal.Footer>
-            {this.state.stage > 0 &&
-              <Button variant="outline-primary" onClick={(e) => this.previous(e)}>Previous</Button>
-            }
-            {this.state.stage < 1 && this.state.max_stage > this.state.stage &&
-              <Button variant="outline-primary" onClick={(e) => this.next(e)}>Next</Button>
-            }
-        </Modal.Footer> */}
       </Modal>
     )
   }

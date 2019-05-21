@@ -10,6 +10,19 @@ import Row from 'react-bootstrap/Row'
 
 import verifyCustomerBank from '../../../../queries/bscsapi/stripe/verify-customer-bank'
 
+import retrieveStripeCustomerBank from '../../../../queries/bscsapi/stripe/retrieve-stripe-customer-bank'
+
+/* VerifyBank functions
+*
+* constructor(props) {...}
+* componentDidMount() {...}
+* componentWillUnmount() {...}
+* checkBankStatus = async () => {...}
+* verify = async (e) => {...}
+* render() {...}
+*
+*/
+
 const VerifyBank = class extends Component {
   constructor(props) {
     super(props)
@@ -29,6 +42,10 @@ const VerifyBank = class extends Component {
     this.cancelToken = axios.CancelToken.source()
   }
 
+  componentDidMount() {
+    this.checkBankStatus()
+  }
+
   componentWillUnmount() {
     try {
       this.cancelToken.cancel()
@@ -37,19 +54,39 @@ const VerifyBank = class extends Component {
     }
   }
 
-  verify = (e) => {
+  checkBankStatus = async () => {
+    let status
+
+    this.setState({ loading: true })
+
+    await retrieveStripeCustomerBank(this.cancelToken, this.props.bank_id).then(response => {
+      if(response && !response.data.errors) {
+        status = response.data.data.retrieveStripeCustomerBank.status
+      }
+    })
+
+    if(status === 'verified') {
+      this.setState({loading: false, successfullyVerified: true })
+    } else if(status === 'verification_failed' || status === 'errored') {
+      this.setState({errors: true, loading: false, successfullyVerified: false })
+    } else {
+      this.setState({loading: false})
+    }
+  }
+
+  verify = async (e) => {
     e.preventDefault()
 
-    this.setState({ loading: true})
+    this.setState({ loading: true })
 
     verifyCustomerBank(this.cancelToken, this.props.bank_id, (this.state.deposit_one_amount).toString(), (this.state.deposit_two_amount).toString()).then(response => {
       if(response.status === 200 && !response.data.errors) {
         if(response.data.data.verifyStripeCustomerBank.status === 'verified') {
           this.setState({errors: false, loading: false, successfullyVerified: true })
-          this.props.setVerified(true)
+          // this.props.setVerified(true)
         } else {
           this.setState({errors: false, loading: false, successfullyVerified: false })
-          this.props.setVerified(false)
+          // this.props.setVerified(false)
         }
       } else {
         this.setState({errors: true, loading: false, successfullyVerified: false })
