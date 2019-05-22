@@ -95,20 +95,20 @@ const SelectCardOrBank = class extends Component {
 
     e.preventDefault()
 
-    if(this.props.dashboard) {
+    if (this.props.dashboard) {
       action_type = document.activeElement.getAttribute('data-action-type')
       payment_methods = document.getElementsByName('dashboard-customer-payment-methods');
     } else {
       payment_methods = document.getElementsByName('customer-payment-methods');
     }
 
-    for(let i = 0; i < payment_methods.length; i++) {
-      if(payment_methods[i].checked) {
+    for (let i = 0; i < payment_methods.length; i++) {
+      if (payment_methods[i].checked) {
         this.setState({selected_payment_method: payment_methods[i].id})
 
-        if(this.props.setSelectedSource && this.props.dashboard) {
+        if (this.props.setSelectedSource && this.props.dashboard) {
           this.props.setSelectedSource((payment_methods[i].id).replace('dashboard-', ''), action_type)
-        } else if(this.props.setSelectedSource && !this.props.dashboard) {
+        } else if (this.props.setSelectedSource && !this.props.dashboard) {
           this.props.setSelectedSource(payment_methods[i].id)
         }
         break

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import SEO from '../components/seo'
 
 import axios from 'axios'
-import Scrollspy from 'react-scrollspy'
+// import Scrollspy from 'react-scrollspy'
 // import ReactPlaceholder from 'react-placeholder'
 
 import Layout from '../components/layout/layout'
@@ -16,6 +16,8 @@ import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 
 import ActionModal from '../components/molecules/payment/action-modal'
+import DashboardBottomMenu from '../components/layout/dashboard-menus/dashboard-bottom-menu'
+import DashboardSideMenu from '../components/layout/dashboard-menus/dashboard-side-menu'
 import DeleteDonationModal from '../components/molecules/payment/donation/delete-donation-modal'
 import LaunchPaymentModal from '../components/molecules/payment/launch-payment-modal'
 import LaunchDeleteDonationModal from '../components/molecules/payment/donation/launch-delete-donation-modal'
@@ -27,9 +29,12 @@ import UpdateDonationModal from '../components/molecules/payment/donation/update
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 
 import retrieveStripeCustomer from '../queries/bscsapi/stripe/retrieve-stripe-customer'
+import retrieveStripeCustomerBanks from '../queries/bscsapi/stripe/retrieve-stripe-customer-banks'
 import retrieveStripeCustomerCharges from '../queries/bscsapi/stripe/retrieve-stripe-customer-charges'
+import retrieveStripeCustomerCards from '../queries/bscsapi/stripe/retrieve-stripe-customer-cards'
 import retrieveStripeCustomerDonationSubscriptions from '../queries/bscsapi/stripe/retrieve-stripe-customer-donation-subscriptions'
 import retrieveStripeCustomerOrders from '../queries/bscsapi/stripe/retrieve-stripe-customer-orders'
+import updateCustomerDefaultSource from '../queries/bscsapi/stripe/update-customer-default-source'
 
 import './dashboard.scss'
 // import retrieveStripeCustomerCard from '../queries/bscsapi/stripe/retrieve-stripe-customer-card'
@@ -40,12 +45,18 @@ import './dashboard.scss'
   * componentDidMount() {...}
   * componentDidUpdate(prevProps, prevState) {...}
   * componentWillUnmount() {...}
-  * closeModal = () => {...}
-  * launchDeleteBankModal = () => {...}
-  * launchDeleteCardModal = () => {...}
-  * launchDeleteDonationSubscriptionModal = () => {...}
-  * launchUpdateCardModal = () => {...}
+  * closeActionModal = () => {...}
+  * closeDeleteDonationModal = () => {...}
+  * collapseSideMenu = () => {...}
+  * closeUpdateDonationModal = () => {...}
+  * expandSideMenu = () => {...}
+  * getCustomerDefaultSource = (cancelToken) => {...}
+  * getUserCharges = async () => {...}
+  * getUserRecurringDonations = async () => {...}
+  * launchActionModal = () => {...}
+  * launchDeleteDonationModal = () => {...}
   * launchUpdateDonationModal = () => {...}
+  * toggleSideMenu = (state) => {...}
   * render() {...}
   *
 */
@@ -60,8 +71,10 @@ const Dashboard = class extends Component {
       donation_id: undefined,
       launch_payment: false,
       orders: undefined,
+      payment_methods: [],
       register: false,
       selected_source: undefined,
+      set_default_loading: false,
       show_action_modal: false,
       show_delete_donation_modal: false,
       show_update_donation_modal: false,
@@ -86,6 +99,7 @@ const Dashboard = class extends Component {
 
     if(prevState.signed_in !== this.state.signed_in && this.state.signed_in) {
       this.getCustomerDefaultSource(this.cancelToken)
+      this.setUserPaymentMethods()
       this.getUserCharges()
       this.getUserRecurringDonations()
       retrieveStripeCustomerOrders(this.cancelToken).then(response => {
@@ -114,24 +128,16 @@ const Dashboard = class extends Component {
     this.setState({show_delete_donation_modal: false})
   }
 
-  closeSideMenu = (e) => {
-    e.preventDefault()
-    document.getElementById('expanded-side-menu').setAttribute('data-state', 'closed')
-    document.getElementById('closed-side-menu').setAttribute('data-state', 'expanded')
-    document.getElementById('dashboard-content').classList.add('col-lg-11')
-    document.getElementById('dashboard-content').classList.remove('col-lg-10')
+  collapseSideMenu = () => {
+    document.getElementById('dashboard-content').setAttribute('data-state', 'content-expanded')
   }
 
   closeUpdateDonationModal = () => {
     this.setState({show_update_donation_modal: false})
   }
 
-  expandSideMenu = (e) => {
-    e.preventDefault()
-    document.getElementById('expanded-side-menu').setAttribute('data-state', 'expanded')
-    document.getElementById('closed-side-menu').setAttribute('data-state', 'closed')
-    document.getElementById('dashboard-content').classList.add('col-lg-10')
-    document.getElementById('dashboard-content').classList.remove('col-lg-11')
+  expandSideMenu = () => {
+    document.getElementById('dashboard-content').setAttribute('data-state', 'content-collapsed')
   }
 
   getCustomerDefaultSource = (cancelToken) => {
@@ -149,6 +155,30 @@ const Dashboard = class extends Component {
         }
       }
     })
+  }
+
+  getUserBanks = async () => {
+    let banks
+
+    banks = await retrieveStripeCustomerBanks(this.cancelToken)
+
+    if(banks && !banks.data.data.retrieveStripeCustomerBanks.data.errors) {
+      return banks.data.data.retrieveStripeCustomerBanks.data
+    } else {
+      return null
+    }
+  }
+
+  getUserCards = async () => {
+    let cards
+
+    cards = await retrieveStripeCustomerCards(this.cancelToken)
+
+    if(cards && !cards.data.data.retrieveStripeCustomerCards.data.errors) {
+      return cards.data.data.retrieveStripeCustomerCards.data
+    } else {
+      return null
+    }
   }
 
   getUserCharges = async () => {
@@ -174,7 +204,19 @@ const Dashboard = class extends Component {
     }
   }
 
-  launchActionModal = (source_id, action_type) => {this.setState({selected_source: source_id, action_type: action_type, show_action_modal: true})}
+  // handlePaymentAction = (action_type, source_id=null) => {
+  //   if(!source_id) {
+  //     this.setState({action_type: action_type, source_id: source_id})
+  //     this.launchActionModal(source_id,)
+  //   }
+
+  // }
+
+  launchActionModal = (e, source_id, action_type) => {
+    e.preventDefault()
+
+    this.setState({selected_source: source_id, action_type: action_type, show_action_modal: true})
+  }
 
   launchDeleteDonationModal = (e) => {
     let subscription_id
@@ -192,6 +234,49 @@ const Dashboard = class extends Component {
 
     e.preventDefault()
     this.setState({show_update_donation_modal: true, donation_id: subscription_id})
+  }
+
+  setUserPaymentMethods = async () => {
+    let cards, banks, payment_methods
+
+    banks = await this.getUserBanks()
+    cards = await this.getUserCards()
+
+    payment_methods = []
+
+    if(banks !== null && cards !== null) {
+      payment_methods.push(...banks, ...cards)
+      console.log(payment_methods)
+      this.setState({payment_methods: payment_methods})
+    } else {
+      this.setState({errors: true})
+    }
+
+    console.log(payment_methods)
+  }
+
+  toggleSideMenu = (state) => {
+    if (state === 'expand') {
+      this.expandSideMenu()
+    } else if (state === 'collapse') {
+      this.collapseSideMenu()
+    }
+  }
+
+  updateCustomerDefaultSource = async (e, source_id) => {
+    let response, new_default_source
+
+    this.setState({set_default_loading: true})
+
+    e.preventDefault()
+
+    response = await updateCustomerDefaultSource(this.cancelToken, source_id)
+
+    if(response && response.data.data.updateStripeCustomerDefaultSource.default_source) {
+      new_default_source = response.data.data.updateStripeCustomerDefaultSource.default_source
+      this.setState({customer_default_source: new_default_source, set_default_loading: false})
+    }
+    //TODO: set error alert above table if this fails
   }
 //End custom functions
 
@@ -218,109 +303,11 @@ const Dashboard = class extends Component {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
               {this.state.signed_in &&
                 <React.Fragment>
-                  <Col id="expanded-side-menu" data-state="expanded" lg={2} className="d-none d-lg-block">
-                    <table id="side-menu-nav">
-                      <thead>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action toggle d-flex"
-                          onClick={(e) => this.closeSideMenu(e)}
-                        >
-                          <td><i className="fas fa-angle-double-left close-arrow"></i></td>
-                        </tr>
-                      </thead>
-                      <Scrollspy
-                        items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
-                        className="d-none d-lg-block h-100"
-                        currentClassName="active"
-                        componentTag="tbody"
-                      >
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action first"
-                          onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-user-cog mr-3"></i></td>
-                          <td>Account</td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-donate mr-3"></i></td>
-                          <td>Donations</td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-credit-card mr-3"></i></td>
-                          <td>Payment Methods</td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-store mr-3"></i></td>
-                          <td>Previous Purchases</td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-clock mr-3"></i></td>
-                          <td>Upcoming Events</td>
-                        </tr>
-                      </Scrollspy>
-                    </table>
-                  </Col>
-                  <Col id="closed-side-menu" lg={1} data-state="closed" className="d-none d-lg-block">
-                    <table id="side-menu-nav">
-                      <thead>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action toggle"
-                          onClick={(e) => this.expandSideMenu(e)}
-                        >
-                          <td><i className="fas fa-angle-double-right"></i></td>
-                        </tr>
-                      </thead>
-                      <Scrollspy
-                        items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
-                        className="d-none d-lg-block h-100"
-                        currentClassName="active"
-                        componentTag="tbody"
-                      >
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action first"
-                          onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-user-cog"></i></td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-donate"></i></td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-credit-card"></i></td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-store"></i></td>
-                        </tr>
-                        <tr
-                          className="dashboard-menu-link list-group-item list-group-item-action"
-                          onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-                        >
-                          <td><i className="fas fa-clock"></i></td>
-                        </tr>
-                      </Scrollspy>
-                    </table>
-                  </Col>
+                  <DashboardSideMenu
+                    id="side-menu"
+                    items={[['account', 'fa-user-cog'], ['donations', 'fa-donate'], ['payment-methods', 'fa-credit-card'], ['previous-purchases', 'fa-store'], ['upcoming-events', 'fa-clock']]}
+                    toggleSideMenu={(state) => {this.toggleSideMenu(state)}}
+                  />
                 </React.Fragment>
               }
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -350,23 +337,46 @@ const Dashboard = class extends Component {
                 </Col>
               }
               {this.state.signed_in &&
-                <Col id="dashboard-content" xs={12} lg={10} className="pl-2">
+                <Col id="dashboard-content" xs={12} data-state="content-collapsed" className="pl-2">
                   <Container className="pl-5">
                     <PageTitle title="Dashboard" />
                     <React.Fragment>
                       <section id="account" className="mb-5" >
                         <h2>Account</h2>
-                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2">
-                            <RegistrationForm update={true} />
+                        <Row style={{marginBottom: '1rem'}}>
+                          <Col>
+                            <div
+                              className="p-3"
+                              style={{border: '1px solid #cdcdcd', borderRadius: '4px'}}
+                            >
+                              <RegistrationForm update={true} />
+                            </div>
                           </Col>
                         </Row>
                       </section>
-                      <hr />
+                      {/* <Row>
+                        <Col> */}
+                          <hr />
+                        {/* </Col>
+                      </Row> */}
                       <section id="donations" className="my-5" >
-                        <h2>Donations</h2>
-                        <Row style={{marginBottom: '1rem'}} className="d-flex">
-                          <Col className="p-2">
+                        <Row style={{marginBottom: '1rem'}}>
+                          <Col xs={12} className="mb-2">
+                            <h2>Donations</h2>
+                            <LaunchPaymentModal
+                              launchPayment={(donate) => this.setState({launch_payment: true, donate: donate})}
+                              donate={true}
+                            >
+                              <Button
+                                variant="success"
+                                size="sm"
+                                // style={{width: '200px', minHeight: '6rem', height: '100%'}}
+                              >
+                                <i className="fa fa-donate"></i>&nbsp;New Donation
+                              </Button>
+                            </LaunchPaymentModal>
+                          </Col>
+                          <Col xs={12}>
                             <Table striped bordered hover responsive>
                               <thead>
                                 <tr>
@@ -410,14 +420,14 @@ const Dashboard = class extends Component {
                                         <td>{subscription.items.data[0].plan.nickname}</td>
                                         <td>{type}</td>
                                         <td>{next_payment_month}/{next_payment_day}/{next_payment_year}</td>
-                                        <td>
+                                        <td align="center">
                                           <LaunchUpdateDonationModal launchUpdateDonation={this.launchUpdateDonationModal}>
-                                            <Button data-donation-id={subscription.id} variant="outline-primary">Update</Button>
+                                            <Button data-donation-id={subscription.id} variant="outline-primary" size="sm">Update</Button>
                                           </LaunchUpdateDonationModal>
                                         </td>
-                                        <td>
+                                        <td align="center">
                                           <LaunchDeleteDonationModal launchDeleteDonation={this.launchDeleteDonationModal}>
-                                            <Button data-donation-id={subscription.id} variant="outline-primary">Cancel</Button>
+                                            <Button data-donation-id={subscription.id} variant="outline-primary" size="sm">Cancel</Button>
                                           </LaunchDeleteDonationModal>
                                         </td>
                                       </tr>
@@ -426,14 +436,6 @@ const Dashboard = class extends Component {
                                 }
                               </tbody>
                             </Table>
-                          </Col>
-                          <Col xs={12} className="d-flex justify-content-center">
-                            <LaunchPaymentModal
-                              launchPayment={(donate) => this.setState({launch_payment: true, donate: donate})}
-                              donate={true}
-                            >
-                              <Button variant="outline-primary">New Donation</Button>
-                            </LaunchPaymentModal>
                           </Col>
                         </Row>
                         <UpdateDonationModal
@@ -451,28 +453,132 @@ const Dashboard = class extends Component {
                       <hr />
                       <section id="payment-methods" className="my-5" >
                         <h2>Payment Methods</h2>
-                        <Row style={{marginBottom: '3rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2 ml-3" xs={12} md={8}>
+                        {/* <Row style={{marginBottom: '3rem'}} className="d-flex flex-wrap-reverse"> */}
+                          {/* <Col className="p-2 ml-3" xs={12} md={8}>
                             <SelectCardOrBank
                               default_source={this.state.customer_default_source}
                               selected_source={this.state.selected_source}
                               setSelectedSource={(source_id, action_type) => this.launchActionModal(source_id, action_type)}
                               dashboard={true}
-                            />
-                            <ActionModal
-                              show={this.state.show_action_modal}
-                              onHide={this.closeActionModal}
-                              action={this.state.action_type}
-                              source_id={this.state.selected_source}
-                            />
+                            /> */}
+                        <Row style={{marginBottom: '1rem'}}>
+                          <Col xs={12} className="mb-2">
+                            <Button
+                              onClick={(e) => {this.launchActionModal(e, 'none', 'new-bank')}}
+                              data-action-type="new-bank"
+                              className="mr-3"
+                              variant="outline-primary"
+                              type="submit"
+                              // style={{height: '100px'}}
+                              // style={{width: '200px', minHeight: '6rem', height: '100%'}}
+                              size="sm"
+                            >
+                              <i className="fa fa-university"></i>&nbsp;New Bank
+                            </Button>
+                            <Button
+                              onClick={(e) => {this.launchActionModal(e, 'none', 'new-card')}}
+                              data-action-type="new-card"
+                              variant="outline-primary"
+                              type="submit"
+                              // style={{width: '200px', minHeight: '6rem', height: '100%'}}
+                              size="sm"
+                            >
+                              <i className="fa fa-credit-card"></i>&nbsp;New Card
+                            </Button>
+                          </Col>
+                          <Col xs={12}>
+                            <Table striped bordered hover responsive>
+                              <thead>
+                                <tr>
+                                  <th>Payment Method</th>
+                                  <th>Default</th>
+                                  <th colSpan={3}>Actions</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {this.state.payment_methods.map((source, index) => {
+                                  return (
+                                    <tr key={`payment-method-${index}`}>
+                                      {source.id.includes('ba_') &&
+                                        <td>{source.bank_name}: ••••••••{source.last4}</td>
+                                      }
+                                      {source.id.includes('card') &&
+                                        <td>•••• •••• •••• {source.last4}</td>
+                                      }
+                                      <td align="center" style={{ verticalAlign: 'middle' }}>
+                                        {source.id === this.state.customer_default_source &&
+                                          <span className="badge badge-pill badge-primary">DEFAULT</span>
+                                        }
+                                        {source.id !== this.state.customer_default_source &&
+                                          <React.Fragment>
+                                          {this.state.set_default_loading &&
+                                            <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                          }
+                                          {!this.state.set_default_loading &&
+                                            <Button
+                                              className="m-3"
+                                              onClick={(e) => {this.updateCustomerDefaultSource(e, source.id)}}
+                                              size="sm"
+                                              variant="outline-primary"
+                                            >
+                                              Set as DEFAULT
+                                            </Button>
+                                          }
+                                          </React.Fragment>}
+                                      </td>
+                                      <td align="center">
+                                        {source.id.includes('card_') &&
+                                          <Button
+                                            className="m-3"
+                                            onClick={(e) => {this.launchActionModal(e, source.id, 'update')}}
+                                            size="sm"
+                                            variant="outline-primary"
+                                          >
+                                            Update
+                                          </Button>
+                                        }
+                                      </td>
+                                      <td align="center">
+                                        <Button
+                                          className="m-3"
+                                          onClick={(e) => {this.launchActionModal(e, source.id, 'delete')}}
+                                          size="sm"
+                                          variant="outline-primary"
+                                        >
+                                          Delete
+                                        </Button>
+                                      </td>
+                                      <td align="center">
+                                        {source.id.includes('ba_') &&
+                                          <Button
+                                            className="m-3"
+                                            onClick={(e) => {this.launchActionModal(e, source.id, 'verify')}}
+                                            size="sm"
+                                            variant="outline-primary"
+                                          >
+                                            Verify Bank
+                                          </Button>
+                                        }
+                                      </td>
+                                    </tr>
+                                  )
+                                })}
+                              </tbody>
+                            </Table>
                           </Col>
                         </Row>
+                        <ActionModal
+                          show={this.state.show_action_modal}
+                          onHide={this.closeActionModal}
+                          action={this.state.action_type}
+                          source_id={this.state.selected_source}
+                        />
                       </section>
                       <hr />
                       <section id="previous-purchases" className="my-5" >
                         <h2>Previous Purchases</h2>
-                        <Row style={{marginBottom: '1rem'}} className="d-flex flex-wrap-reverse">
-                          <Col className="p-2">
+                        <Row style={{marginBottom: '1rem'}}>
+                          <Col>
                             <Table striped bordered hover>
                               <thead>
                                 <tr>
@@ -572,58 +678,9 @@ const Dashboard = class extends Component {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div style={{height: '200px'}} className="d-block d-md-none bg-light"></div>
         {this.state.signed_in &&
-          <Container id="side-menu-bottom" className="d-block d-lg-none fixed-bottom p-0" fluid>
-            <Scrollspy
-              items={['account', 'donations', 'payment-methods', 'previous-purchases', 'upcoming-events']}
-              currentClassName="active"
-              componentTag="div"
-              // className="row"
-              className="d-flex justify-content-center"
-              // style={{height: '116px'}}
-              style={{height: '100%'}}
-            >
-              <div
-                // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
-                onClick={(e) => document.getElementById('account').scrollIntoView({behavior: "smooth", block: "start"})}
-                style={{fontSize: '1rem'}}
-              >
-                <i className="fas fa-user-cog"></i><br />Account
-              </div>
-              <div
-                // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
-                onClick={(e) => document.getElementById('donations').scrollIntoView({behavior: "smooth", block: "start"})}
-                style={{fontSize: '1rem'}}
-              >
-                <i className="fas fa-donate"></i><br />Donations
-              </div>
-              <div
-                // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
-                onClick={(e) => document.getElementById('payment-methods').scrollIntoView({behavior: "smooth", block: "start"})}
-                style={{fontSize: '1rem'}}
-              >
-                <i className="fas fa-credit-card"></i><br />Payment Methods
-              </div>
-              <div
-                // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
-                onClick={(e) => document.getElementById('previous-purchases').scrollIntoView({behavior: "smooth", block: "start"})}
-                style={{fontSize: '1rem'}}
-              >
-                <i className="fas fa-store"></i><br />Previous Purchases
-              </div>
-              <div
-                // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
-                onClick={(e) => document.getElementById('upcoming-events').scrollIntoView({behavior: "smooth", block: "start"})}
-                style={{fontSize: '1rem'}}
-              >
-                <i className="fas fa-clock"></i><br />Upcoming Events
-              </div>
-            </Scrollspy>
-          </Container>
+          <DashboardBottomMenu
+            items={[['account', 'fa-user-cog'], ['donations', 'fa-donate'], ['payment-methods', 'fa-credit-card'], ['previous-purchases', 'fa-store'], ['upcoming-events', 'fa-clock']]}
+          />
         }
       </React.Fragment>
     )

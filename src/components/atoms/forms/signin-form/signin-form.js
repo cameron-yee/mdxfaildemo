@@ -41,7 +41,7 @@ const SigninForm = class extends Component {
       loading: false,
       notificationShow: false,
       on_dashboard: false,
-      sent: false,
+      submitted: false,
       showErrorNotification: false,
       errors: false
     }
@@ -107,18 +107,20 @@ const SigninForm = class extends Component {
     signin(this.cancelToken, this.state.email, this.state.password)
       .then(response => {
         console.log(response);
-        if(response.status === 200 && !response.data.errors) {
-            this.setState({notificationShow: true, loading: false, sent: true});
+        if (response.status === 200 && !response.data.errors) {
+            this.setState({notificationShow: true, loading: false, submitted: true, showErrorNotification: false});
             this.props.setSignedIn()
+        } else if (response.status === 200 && response.data.errors) {
+            this.setState({errors: false, loading: false, showErrorNotification: true});
         }
       })
       .catch(error => {
         if(axios.isCancel(error)) {
           console.log(`Request canceled: ${error}`);
-          this.setState({errors: true, showErrorNotification: true});
+          this.setState({errors: true, loading: false, showErrorNotification: true});
         } else {
           console.log(error);
-          this.setState({errors: true, showErrorNotification: true});
+          this.setState({errors: true, loading: false, showErrorNotification: true});
         }
       })
   }
@@ -172,14 +174,14 @@ const SigninForm = class extends Component {
                 Signed in!
               </Alert>
               <Alert show={this.state.showErrorNotification} onClose={this.hideErrorNotification} dismissible variant="danger">
-                Unable to login.
+                No user account found with email/password.
               </Alert>
             </Col>
           </Row>
           <Row>
             <Col xs={12}>
               <div className="d-flex justify-content-end">
-                { !this.state.errors && !this.state.loading && !this.state.sent
+                { !this.state.errors && !this.state.loading && !this.state.submitted
                   && (!this.state.email
                   || !this.state.password)
                   &&
@@ -190,7 +192,7 @@ const SigninForm = class extends Component {
                     }
                   </div>
                 }
-                { !this.state.errors && !this.state.loading && !this.state.sent
+                { !this.state.errors && !this.state.loading && !this.state.submitted
                   && this.state.email
                   && this.state.password
                   &&
@@ -207,7 +209,7 @@ const SigninForm = class extends Component {
                     Signing in...
                   </Button>
                 }
-                { !this.state.errors && !this.state.loading && this.state.sent &&
+                { !this.state.errors && !this.state.loading && this.state.submitted &&
                   <React.Fragment>
                     {!this.state.on_dashboard &&
                       <Link to="/dashboard" className="m-2"><Button variant="outline-primary">Go to Dashboard</Button></Link>
