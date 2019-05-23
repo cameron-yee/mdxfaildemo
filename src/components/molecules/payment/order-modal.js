@@ -93,7 +93,6 @@ const OrderModal = class extends Component {
 //Custom functions
   getSkuInformation = () => {
     retrieveSkuInformation(this.cancelToken, this.props.sku).then(response => {
-      console.log(response)
       if(
         response !== undefined &&
         response.status === 200 &&

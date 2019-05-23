@@ -13,6 +13,7 @@ const retrieveStripeCustomerDonationSubscriptions = (cancelToken) => {
             data {
               id
               default_source
+              cancel_at_period_end
               items {
                 data {
                   created

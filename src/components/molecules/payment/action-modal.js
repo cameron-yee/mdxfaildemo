@@ -88,7 +88,10 @@ const ActionModal = class extends Component {
               />
             }
             {this.props.source_id.includes('ba_') && this.props.action === 'verify' &&
-              <VerifyBank bank_id={this.props.source_id} />
+              <VerifyBank
+                bank_id={this.props.source_id}
+                refreshPaymentMethods={this.props.refreshPaymentMethods}
+              />
             }
             {this.props.source_id.includes('card_') && this.props.action === 'verify' &&
               <p>Please select a bank account to verify.</p>
@@ -96,14 +99,18 @@ const ActionModal = class extends Component {
             {this.props.action === 'new-bank' &&
               <StripeProvider stripe={this.state.stripe}>
                 <Elements>
-                  <CreateNewBank />
+                  <CreateNewBank
+                    refreshPaymentMethods={this.props.refreshPaymentMethods}
+                  />
                 </Elements>
               </StripeProvider>
             }
             {this.props.action === 'new-card' &&
               <StripeProvider stripe={this.state.stripe}>
                 <Elements>
-                  <CreateNewCard />
+                  <CreateNewCard
+                    refreshPaymentMethods={this.props.refreshPaymentMethods}
+                  />
                 </Elements>
               </StripeProvider>
             }

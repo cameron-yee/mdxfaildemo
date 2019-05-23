@@ -160,6 +160,7 @@ const CreateNewCard = class extends Component {
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
         this.setState({errors: false, loading: false, successfully_created: true })
+        this.props.refreshPaymentMethods()
       } else {
         this.setState({errors: true, loading: false, successfully_created: false  })
       }

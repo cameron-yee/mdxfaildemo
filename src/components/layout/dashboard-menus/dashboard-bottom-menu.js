@@ -26,7 +26,7 @@ const DashboardBottomMenu = class extends Component {
           style={{height: '100%'}}
         >
           {this.props.items.map((item, index) => {
-            const item_title = item[0].charAt(0).toUpperCase() + item[0].slice(1)
+            const item_title = item[0].charAt(0).toUpperCase() + item[0].slice(1).replace('-', ' ')
             return (
               <div
                 // xs={2}

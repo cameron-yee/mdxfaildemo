@@ -79,7 +79,7 @@ const DashboardSideMenu = class extends Component {
                 class_name = "dashboard-menu-link list-group-item list-group-item-action"
               }
 
-              item_title = item[0].charAt(0).toUpperCase() + item[0].slice(1)
+              item_title = item[0].charAt(0).toUpperCase() + item[0].slice(1).replace('-', ' ')
 
               return (
               <tr

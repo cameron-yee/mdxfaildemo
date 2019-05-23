@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import axios from 'axios'
 
+import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Spinner from 'react-bootstrap/Spinner'
@@ -128,7 +129,8 @@ const SelectCardOrBank = class extends Component {
         }
         {(this.state.payment_methods || this.state.payment_methods === null) &&
           <React.Fragment>
-            <Form onSubmit={(e) => this.setPaymentMethodId(e)}>
+            <Alert variant="warning">Love the work we do? Then make your donation go further! Setting up gifts through your checking account maximizes your donation to the fullest by avoiding the transaction and processing fees often associated with credit cards. As an independent nonprofit, we appreciate your generosity and support!</Alert>
+            <Form onSubmit={(e) => this.setPaymentMethodId(e)} className="mb-4">
               <Form.Group>
                 { this.state.payment_methods !== null &&
                   this.state.payment_methods.map((source, index) => {
@@ -169,6 +171,7 @@ const SelectCardOrBank = class extends Component {
                       )
                     } else if(
                       "bank_name" in source &&
+                      source.status === 'verified' &&
                       this.props.selected_source &&
                       source.id === this.props.selected_source &&
                       this.props.default_source !== source.id
@@ -201,6 +204,7 @@ const SelectCardOrBank = class extends Component {
                       )
                     } else if(
                       "bank_name" in source &&
+                      source.status === 'verified' &&
                       this.props.selected_source &&
                       source.id !== this.props.selected_source &&
                       this.props.default_source === source.id
@@ -234,6 +238,7 @@ const SelectCardOrBank = class extends Component {
                       )
                     } else if(
                       "bank_name" in source &&
+                      source.status === 'verified' &&
                       this.props.selected_source &&
                       source.id !== this.props.selected_source &&
                       this.props.default_source !== source.id
@@ -264,6 +269,7 @@ const SelectCardOrBank = class extends Component {
                       )
                     } else if(
                       "bank_name" in source &&
+                      source.status === 'verified' &&
                       !this.props.selected_source &&
                       this.props.default_source === source.id
                     ) {
@@ -298,6 +304,7 @@ const SelectCardOrBank = class extends Component {
                       )
                     } else if(
                       "bank_name" in source &&
+                      source.status === 'verified' &&
                       !this.props.selected_source &&
                       this.props.default_source !== source.id
                     ) {
@@ -326,6 +333,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      source.id.includes('card_') &&
                       this.props.selected_source &&
                       source.id === this.props.selected_source &&
                       this.props.default_source === source.id
@@ -360,6 +368,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      source.id.includes('card_') &&
                       this.props.selected_source &&
                       source.id !== this.props.selected_source &&
                       this.props.default_source === source.id
@@ -392,6 +401,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      source.id.includes('card_') &&
                       this.props.selected_source &&
                       source.id === this.props.selected_source &&
                       this.props.default_source !== source.id
@@ -423,6 +433,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      source.id.includes('card_') &&
                       source.id !== this.props.selected_source &&
                       this.props.default_source !== source.id
                     ) {
@@ -451,6 +462,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else if(
+                      source.id.includes('card_') &&
                       !this.props.selected_source &&
                       this.props.default_source === source.id
                     ) {
@@ -559,6 +571,8 @@ const SelectCardOrBank = class extends Component {
                 </div>
               }
             </Form>
+            <hr />
+            <p className="mt-4">Note: Bank accounts must be verified before they can be used.  Go to the Payment Methods section of the Dashboard to verify a bank account.</p>
           </React.Fragment>
         }
       </React.Fragment>

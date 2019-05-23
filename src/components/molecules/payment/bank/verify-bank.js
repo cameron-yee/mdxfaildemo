@@ -67,10 +67,13 @@ const VerifyBank = class extends Component {
 
     if(status === 'verified') {
       this.setState({loading: false, successfullyVerified: true })
+      this.props.refreshPaymentMethods()
     } else if(status === 'verification_failed' || status === 'errored') {
       this.setState({errors: true, loading: false, successfullyVerified: false })
+      this.props.refreshPaymentMethods()
     } else {
       this.setState({loading: false})
+      this.props.refreshPaymentMethods()
     }
   }
 
@@ -83,14 +86,15 @@ const VerifyBank = class extends Component {
       if(response.status === 200 && !response.data.errors) {
         if(response.data.data.verifyStripeCustomerBank.status === 'verified') {
           this.setState({errors: false, loading: false, successfullyVerified: true })
-          // this.props.setVerified(true)
+          this.props.refreshPaymentMethods()
         } else {
           this.setState({errors: false, loading: false, successfullyVerified: false })
-          // this.props.setVerified(false)
+          this.props.refreshPaymentMethods()
         }
       } else {
         this.setState({errors: true, loading: false, successfullyVerified: false })
         console.log(response)
+        this.props.refreshPaymentMethods()
       }
     }).catch(error => {
       axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)

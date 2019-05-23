@@ -95,7 +95,7 @@ const CreateNewBank = class extends Component {
     createCustomerBank(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
         this.setState({errors: false, loading: false, successfullyCreated: true })
-        // this.props.setBankId(response.data.data.createStripeCustomerBank.id)
+        this.props.refreshPaymentMethods()
       } else {
         this.setState({errors: true, loading: false, successfullyCreated: false })
         console.log(response)

@@ -21,8 +21,10 @@ import DashboardSideMenu from '../components/layout/dashboard-menus/dashboard-si
 import DeleteDonationModal from '../components/molecules/payment/donation/delete-donation-modal'
 import LaunchPaymentModal from '../components/molecules/payment/launch-payment-modal'
 import LaunchDeleteDonationModal from '../components/molecules/payment/donation/launch-delete-donation-modal'
+import LaunchRestartDonationModal from '../components/molecules/payment/donation/launch-restart-donation-modal'
 import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
 import RegistrationForm from '../components/atoms/forms/signin-form/registration-form'
+import RestartDonationModal from '../components/molecules/payment/donation/restart-donation-modal'
 // import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
 import SigninForm from '../components/atoms/forms/signin-form/signin-form'
 import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
@@ -77,6 +79,7 @@ const Dashboard = class extends Component {
       set_default_loading: false,
       show_action_modal: false,
       show_delete_donation_modal: false,
+      show_restart_donation_modal: false,
       show_update_donation_modal: false,
       signed_in: undefined,
       subscriptions: [],
@@ -103,7 +106,6 @@ const Dashboard = class extends Component {
       this.getUserCharges()
       this.getUserRecurringDonations()
       retrieveStripeCustomerOrders(this.cancelToken).then(response => {
-        console.log(response)
         this.setState({orders: response.data.data.retrieveStripeCustomerOrders.data})
       })
     }
@@ -128,12 +130,16 @@ const Dashboard = class extends Component {
     this.setState({show_delete_donation_modal: false})
   }
 
-  collapseSideMenu = () => {
-    document.getElementById('dashboard-content').setAttribute('data-state', 'content-expanded')
+  closeRestartDonationModal = () => {
+    this.setState({show_restart_donation_modal: false})
   }
 
   closeUpdateDonationModal = () => {
     this.setState({show_update_donation_modal: false})
+  }
+
+  collapseSideMenu = () => {
+    document.getElementById('dashboard-content').setAttribute('data-state', 'content-expanded')
   }
 
   expandSideMenu = () => {
@@ -142,7 +148,6 @@ const Dashboard = class extends Component {
 
   getCustomerDefaultSource = (cancelToken) => {
     retrieveStripeCustomer(cancelToken).then(response => {
-      console.log(response)
       if(
         response !== undefined &&
         response.status === 200 &&
@@ -204,14 +209,6 @@ const Dashboard = class extends Component {
     }
   }
 
-  // handlePaymentAction = (action_type, source_id=null) => {
-  //   if(!source_id) {
-  //     this.setState({action_type: action_type, source_id: source_id})
-  //     this.launchActionModal(source_id,)
-  //   }
-
-  // }
-
   launchActionModal = (e, source_id, action_type) => {
     e.preventDefault()
 
@@ -225,6 +222,15 @@ const Dashboard = class extends Component {
 
     e.preventDefault()
     this.setState({show_delete_donation_modal: true, donation_id: subscription_id})
+  }
+
+  launchRestartDonationModal = (e) => {
+    let subscription_id
+
+    subscription_id = e.target.getAttribute('data-donation-id')
+
+    e.preventDefault()
+    this.setState({show_restart_donation_modal: true, donation_id: subscription_id})
   }
 
   launchUpdateDonationModal = (e) => {
@@ -246,13 +252,10 @@ const Dashboard = class extends Component {
 
     if(banks !== null && cards !== null) {
       payment_methods.push(...banks, ...cards)
-      console.log(payment_methods)
       this.setState({payment_methods: payment_methods})
     } else {
       this.setState({errors: true})
     }
-
-    console.log(payment_methods)
   }
 
   toggleSideMenu = (state) => {
@@ -364,7 +367,7 @@ const Dashboard = class extends Component {
                               donate={true}
                             >
                               <Button
-                                variant="success"
+                                variant="outline-success"
                                 size="sm"
                                 // style={{width: '200px', minHeight: '6rem', height: '100%'}}
                               >
@@ -409,7 +412,6 @@ const Dashboard = class extends Component {
                                       next_payment_year = current.getFullYear() + 1
                                     }
 
-
                                     return(
                                       <tr key={`sub-row-${index}`}>
                                         <td>${subscription.items.data[0].quantity}</td>
@@ -430,17 +432,35 @@ const Dashboard = class extends Component {
                                           </LaunchUpdateDonationModal>
                                         </td>
                                         <td align="center">
-                                          <LaunchDeleteDonationModal
-                                            launchDeleteDonation={this.launchDeleteDonationModal}
-                                          >
-                                            <Button
-                                              data-donation-id={subscription.id}
-                                              variant="outline-primary"
-                                              size="sm"
+                                          {!subscription.cancel_at_period_end &&
+                                            <LaunchDeleteDonationModal
+                                              launchDeleteDonation={this.launchDeleteDonationModal}
                                             >
-                                              Cancel
-                                            </Button>
-                                          </LaunchDeleteDonationModal>
+                                              <Button
+                                                data-donation-id={subscription.id}
+                                                variant="outline-primary"
+                                                size="sm"
+                                              >
+                                                Cancel
+                                              </Button>
+                                            </LaunchDeleteDonationModal>
+                                          }
+                                          {subscription.cancel_at_period_end &&
+                                            <div className="d-flex flex-wrap justify-content-center text-left">
+                                              <span className="mb-2">Donation will cancel at end of period.</span>
+                                              <LaunchRestartDonationModal
+                                                launchRestartDonation={this.launchRestartDonationModal}
+                                              >
+                                                <Button
+                                                  data-donation-id={subscription.id}
+                                                  variant="outline-primary"
+                                                  size="sm"
+                                                >
+                                                  Restart
+                                                </Button>
+                                              </LaunchRestartDonationModal>
+                                            </div>
+                                          }
                                         </td>
                                       </tr>
                                     )
@@ -462,6 +482,12 @@ const Dashboard = class extends Component {
                           onHide={this.closeDeleteDonationModal}
                           refreshDonations={this.getUserRecurringDonations}
                           show={this.state.show_delete_donation_modal}
+                        />
+                        <RestartDonationModal
+                          donation_id={this.state.donation_id}
+                          onHide={this.closeRestartDonationModal}
+                          refreshDonations={this.getUserRecurringDonations}
+                          show={this.state.show_restart_donation_modal}
                         />
                       </section>
                       <hr />
@@ -506,7 +532,7 @@ const Dashboard = class extends Component {
                                 <tr>
                                   <th>Payment Method</th>
                                   <th>Default</th>
-                                  <th colSpan={3}>Actions</th>
+                                  <th colSpan={2}>Actions</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -514,7 +540,39 @@ const Dashboard = class extends Component {
                                   return (
                                     <tr key={`payment-method-${index}`}>
                                       {source.id.includes('ba_') &&
-                                        <td>{source.bank_name}: ••••••••{source.last4}</td>
+                                        <td>
+                                          <span>{source.bank_name}: ••••••••{source.last4}</span>
+                                          {/* <br /> */}
+                                          {(source.status === 'new' || source.status === 'validated') &&
+                                            <Button
+                                              className="m-3"
+                                              onClick={(e) => {this.launchActionModal(e, source.id, 'verify')}}
+                                              size="sm"
+                                              variant="outline-primary"
+                                            >
+                                              Verify Bank
+                                            </Button>
+                                          }
+                                          {(source.status === 'verification_failed' || source.status === 'errored') &&
+                                            <Button
+                                              className="m-3"
+                                              size="sm"
+                                              variant="warning"
+                                            >
+                                              Bank error.
+                                            </Button>
+                                          }
+                                          {source.status === 'verified' &&
+                                            <Button
+                                              className="m-3"
+                                              size="sm"
+                                              variant="outline-success"
+                                              disabled
+                                            >
+                                              Bank verified
+                                            </Button>
+                                          }
+                                        </td>
                                       }
                                       {source.id.includes('card') &&
                                         <td>•••• •••• •••• {source.last4}</td>
@@ -561,18 +619,6 @@ const Dashboard = class extends Component {
                                         >
                                           Delete
                                         </Button>
-                                      </td>
-                                      <td align="center">
-                                        {source.id.includes('ba_') &&
-                                          <Button
-                                            className="m-3"
-                                            onClick={(e) => {this.launchActionModal(e, source.id, 'verify')}}
-                                            size="sm"
-                                            variant="outline-primary"
-                                          >
-                                            Verify Bank
-                                          </Button>
-                                        }
                                       </td>
                                     </tr>
                                   )
