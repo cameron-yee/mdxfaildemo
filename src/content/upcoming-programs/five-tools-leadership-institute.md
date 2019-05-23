@@ -29,7 +29,7 @@ page: upcoming-programs
 ---
 How can you help teachers plan for instruction and classroom assessment based on the new science standards and Framework for K-12 Science Education?
 
-Discover an effective pathway at the Five Tools Leadership Institute. The Five Tools and Processes support teachers in translating science concepts, practices, and performance expectations into a plan for next generation science-aligned units of instruction.
+Discover an effective pathway at the Five Tools Leadership Institute. The <a href="https://www.amnh.org/learn-teach/curriculum-collections/five-tools-and-processes-for-ngss" target="_blank" rel="noopener noreferrer">Five Tools and Processes&nbsp;<sup><i style="font-size: .65rem;" class="fas fa-external-link-alt"></i></sup></a> support teachers in translating science concepts, practices, and performance expectations into a plan for next generation science-aligned units of instruction.
 
 ## Why participate?
 
