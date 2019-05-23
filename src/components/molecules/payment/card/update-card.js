@@ -195,6 +195,7 @@ const UpdateCard = class extends Component {
       .then(response => {
         if(response.status === 200 && !response.data.errors) {
           this.setState({successfully_updated: true, loading: false})
+          this.props.refreshPaymentMethods()
           console.log(response)
         } else {
           this.setState({errors: true, loading: false })

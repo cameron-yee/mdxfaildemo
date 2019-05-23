@@ -54,10 +54,9 @@ const DeleteDonation = class extends Component {
           response.data.data.deleteStripeCustomerDonationSubscription.status === 'canceled'
         ) {
           this.setState({successfully_deleted: true, loading: false})
-          console.log(response)
+          this.props.refreshDonations()
         } else {
           this.setState({errors: true, loading: false })
-          console.log(response)
         }
       }).catch(error => {
         axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)

@@ -38,7 +38,10 @@ const DeleteDonationModal = class extends Component {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <DeleteDonation donation_id={this.props.donation_id} />
+          <DeleteDonation
+            donation_id={this.props.donation_id}
+            refreshDonations={this.props.refreshDonations}
+            />
         </Modal.Body>
       </Modal>
     )

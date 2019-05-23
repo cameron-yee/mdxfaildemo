@@ -50,10 +50,9 @@ const DeleteCard = class extends Component {
       .then(response => {
         if(response.status === 200 && !response.data.errors) {
           this.setState({successfully_deleted: true, loading: false})
-          console.log(response)
+          this.props.refreshPaymentMethods()
         } else {
           this.setState({errors: true, loading: false })
-          console.log(response)
         }
       }).catch(error => {
         axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)

@@ -166,10 +166,18 @@ const UpdateDonationModal = class extends Component {
             </React.Fragment>
           }
           { this.state.stage === 1 && this.state.selected_source !== 'new-card' &&
-            <UpdateDonation donation_id={this.props.donation_id} source_id={this.state.selected_source}  />
+            <UpdateDonation
+              donation_id={this.props.donation_id}
+              refreshDonations={this.props.refreshDonations}
+              source_id={this.state.selected_source}
+            />
           }
           { this.state.stage === 2 &&
-            <UpdateDonation donation_id={this.props.donation_id} source_id={this.state.selected_source} />
+            <UpdateDonation
+              donation_id={this.props.donation_id}
+              refreshDonations={this.props.refreshDonations}
+              source_id={this.state.selected_source}
+            />
           }
         </Modal.Body>
       </Modal>

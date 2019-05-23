@@ -23,7 +23,7 @@ import LaunchPaymentModal from '../components/molecules/payment/launch-payment-m
 import LaunchDeleteDonationModal from '../components/molecules/payment/donation/launch-delete-donation-modal'
 import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
 import RegistrationForm from '../components/atoms/forms/signin-form/registration-form'
-import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
+// import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
 import SigninForm from '../components/atoms/forms/signin-form/signin-form'
 import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
@@ -354,11 +354,7 @@ const Dashboard = class extends Component {
                           </Col>
                         </Row>
                       </section>
-                      {/* <Row>
-                        <Col> */}
-                          <hr />
-                        {/* </Col>
-                      </Row> */}
+                      <hr />
                       <section id="donations" className="my-5" >
                         <Row style={{marginBottom: '1rem'}}>
                           <Col xs={12} className="mb-2">
@@ -421,13 +417,29 @@ const Dashboard = class extends Component {
                                         <td>{type}</td>
                                         <td>{next_payment_month}/{next_payment_day}/{next_payment_year}</td>
                                         <td align="center">
-                                          <LaunchUpdateDonationModal launchUpdateDonation={this.launchUpdateDonationModal}>
-                                            <Button data-donation-id={subscription.id} variant="outline-primary" size="sm">Update</Button>
+                                          <LaunchUpdateDonationModal
+                                            launchUpdateDonation={this.launchUpdateDonationModal}
+                                           >
+                                            <Button
+                                              data-donation-id={subscription.id}
+                                              variant="outline-primary"
+                                              size="sm"
+                                            >
+                                              Update
+                                            </Button>
                                           </LaunchUpdateDonationModal>
                                         </td>
                                         <td align="center">
-                                          <LaunchDeleteDonationModal launchDeleteDonation={this.launchDeleteDonationModal}>
-                                            <Button data-donation-id={subscription.id} variant="outline-primary" size="sm">Cancel</Button>
+                                          <LaunchDeleteDonationModal
+                                            launchDeleteDonation={this.launchDeleteDonationModal}
+                                          >
+                                            <Button
+                                              data-donation-id={subscription.id}
+                                              variant="outline-primary"
+                                              size="sm"
+                                            >
+                                              Cancel
+                                            </Button>
                                           </LaunchDeleteDonationModal>
                                         </td>
                                       </tr>
@@ -439,15 +451,17 @@ const Dashboard = class extends Component {
                           </Col>
                         </Row>
                         <UpdateDonationModal
-                          onHide={this.closeUpdateDonationModal}
-                          show={this.state.show_update_donation_modal}
-                          donation_id={this.state.donation_id}
                           customer_default_source={this.state.customer_default_source}
+                          donation_id={this.state.donation_id}
+                          onHide={this.closeUpdateDonationModal}
+                          refreshDonations={this.getUserRecurringDonations}
+                          show={this.state.show_update_donation_modal}
                         />
                         <DeleteDonationModal
-                          onHide={this.closeDeleteDonationModal}
-                          show={this.state.show_delete_donation_modal}
                           donation_id={this.state.donation_id}
+                          onHide={this.closeDeleteDonationModal}
+                          refreshDonations={this.getUserRecurringDonations}
+                          show={this.state.show_delete_donation_modal}
                         />
                       </section>
                       <hr />
@@ -571,6 +585,7 @@ const Dashboard = class extends Component {
                           show={this.state.show_action_modal}
                           onHide={this.closeActionModal}
                           action={this.state.action_type}
+                          refreshPaymentMethods={this.setUserPaymentMethods}
                           source_id={this.state.selected_source}
                         />
                       </section>

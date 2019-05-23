@@ -67,16 +67,25 @@ const ActionModal = class extends Component {
           </Modal.Header>
           <Modal.Body>
             {this.props.source_id.includes('card_') && this.props.action === 'update' &&
-              <UpdateCard card_id={this.props.source_id} />
+              <UpdateCard
+                card_id={this.props.source_id}
+                refreshPaymentMethods={this.props.refreshPaymentMethods}
+              />
             }
             {this.props.source_id.includes('card_') && this.props.action === 'delete' &&
-              <DeleteCard card_id={this.props.source_id} />
+              <DeleteCard
+                card_id={this.props.source_id}
+                refreshPaymentMethods={this.props.refreshPaymentMethods}
+              />
             }
             {this.props.source_id.includes('ba_') && this.props.action === 'update' &&
               <p>Bank account info cannot be updated due to the verification process. Please delete the bank account and create a new bank account instead.</p>
             }
             {this.props.source_id.includes('ba_') && this.props.action === 'delete' &&
-              <DeleteBank bank_id={this.props.source_id} />
+              <DeleteBank
+                bank_id={this.props.source_id}
+                refreshPaymentMethods={this.props.refreshPaymentMethods}
+              />
             }
             {this.props.source_id.includes('ba_') && this.props.action === 'verify' &&
               <VerifyBank bank_id={this.props.source_id} />

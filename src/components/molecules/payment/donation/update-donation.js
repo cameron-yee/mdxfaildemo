@@ -92,17 +92,15 @@ const UpdateDonation = class extends Component {
       this.cancelToken,
       this.state.donate_amount,
       `${this.state.frequency.toLowerCase()}-donation-${this.state.fund_code}`,
-      // this.state.fund,
       this.props.source_id,
       this.props.donation_id
     )
       .then(response => {
         if(response.status === 200 && !response.data.errors) {
           this.setState({successfully_updated: true, loading: false})
-          console.log(response)
+          this.props.refreshDonations()
         } else {
           this.setState({errors: true, loading: false })
-          console.log(response)
         }
       }).catch(error => {
         axios.isCancel(error) ? console.log(`Request canceled: ${error}`) : console.log(error)
