@@ -496,7 +496,7 @@ const SelectCardOrBank = class extends Component {
                         </React.Fragment>
                       )
                     } else {
-                      return (<></>)
+                      return (<React.Fragment key={`source-${index}`}></React.Fragment>)
                     }
                   })
                 }

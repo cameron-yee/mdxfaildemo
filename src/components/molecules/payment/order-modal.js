@@ -13,6 +13,7 @@ import SigninForm from '../../atoms/forms/signin-form/signin-form'
 import CreateAndPayOrder from './order/create-and-pay-order'
 import NewCardCreateAndPayOrder from './order/new-card-create-and-pay-order'
 import SelectCardOrBank from './select-card-or-bank'
+import ShippingForm from '../../atoms/forms/shipping-form/shipping-form'
 import SpecificContactForm from '../../atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Stepper from './stepper'
 
@@ -82,7 +83,11 @@ const OrderModal = class extends Component {
       if(this.props.signed_in) {
         this.getCustomerDefaultSource()
         this.getSkuInformation()
-        this.setState({steps: ["Payment Method", "Place Order"], number_of_steps: 2})
+        if(this.props.ship) {
+          this.setState({steps: ["Payment Method", "Shipping", "Place Order"], number_of_steps: 3})
+        } else {
+          this.setState({steps: ["Payment Method", "Place Order"], number_of_steps: 2})
+        }
       } else {
         this.setState({steps: ["Sign In or Register"], number_of_steps: 1})
       }
@@ -160,12 +165,12 @@ const OrderModal = class extends Component {
           signed_in={this.props.signed_in}
           steps={this.state.steps}
         />
-        {this.state.sku_quantity === 0 &&
+        {this.state.sku_quantity && this.state.sku_quantity === 0 &&
           <Modal.Body>
             <p>Out of Stock. Contact ____ for more information.</p>
           </Modal.Body>
         }
-        {this.state.sku_quantity > 0 &&
+        {(!this.state.sku_quantity || this.state.sku_quantity > 0) &&
           <Modal.Body>
             {this.state.stage === 0 && !this.props.signed_in && !this.state.register &&
               <SigninForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
@@ -184,7 +189,33 @@ const OrderModal = class extends Component {
             {this.state.stage === 0 && !this.state.stripe &&
               <Spinner animation="grow" variant="primary" />
             }
-            { this.state.stage === 1 && this.state.stripe && this.state.selected_source !== 'new-card' &&
+            {this.props.ship && this.state.stage === 1 &&
+              <ShippingForm
+                setShipping={(shipping) => this.setState({shipping: shipping, stage: 2, max_stage: 2})}
+              />
+            }
+            {this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source !== 'new-card' &&
+              <CreateAndPayOrder
+                metadata={this.props.metadata}
+                price={this.state.sku_price}
+                sku={this.props.sku}
+                source_id={this.state.selected_source}
+                shipping={this.state.shipping}
+              />
+            }
+            {this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source === 'new-card' &&
+              <StripeProvider stripe={this.state.stripe}>
+                <Elements>
+                  <NewCardCreateAndPayOrder
+                    metadata={this.props.metadata}
+                    price={this.state.sku_price}
+                    sku={this.props.sku}
+                    shipping={this.state.shipping}
+                  />
+                </Elements>
+              </StripeProvider>
+            }
+            {!this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source !== 'new-card' &&
               <CreateAndPayOrder
                 metadata={this.props.metadata}
                 price={this.state.sku_price}
@@ -192,7 +223,7 @@ const OrderModal = class extends Component {
                 source_id={this.state.selected_source}
               />
             }
-            { this.state.stage === 1 && this.state.stripe && this.state.selected_source === 'new-card' &&
+            {!this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source === 'new-card' &&
               <StripeProvider stripe={this.state.stripe}>
                 <Elements>
                   <NewCardCreateAndPayOrder

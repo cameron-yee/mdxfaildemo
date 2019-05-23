@@ -117,6 +117,10 @@ const Layout = class extends Component {
       this.setState({modalShowPayment: this.props.launchPayment})
     }
 
+    if(this.props.ship && prevProps.ship !== this.props.ship) {
+      this.setState({signed_in: this.props.ship})
+    }
+
     if(this.props.signed_in && prevProps.signed_in !== this.props.signed_in) {
       this.setState({signed_in: this.props.signed_in})
     }
@@ -289,6 +293,7 @@ const Layout = class extends Component {
               sku={this.props.sku}
               metadata={this.props.metadata}
               signed_in={this.state.signed_in}
+              ship={this.props.ship}
             />
           </React.Fragment>
         )}

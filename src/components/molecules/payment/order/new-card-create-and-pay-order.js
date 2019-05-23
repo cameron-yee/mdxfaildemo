@@ -192,13 +192,34 @@ const NewCardCreateAndPayOrder = class extends Component {
 
     createCustomerCard(this.cancelToken, token_id).then(response => {
       if(response.status === 200 && !response.data.errors) {
-        createAndPayOrder(this.cancelToken, this.props.source_id, this.props.sku, this.props.metadata).then(response => {
-          if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
-            this.setState({successfully_charged: true, loading: false})
-          } else {
-            this.setState({errors: true, loading: false })
-          }
-        })
+        if(!this.props.shipping) {
+          createAndPayOrder(
+            this.cancelToken,
+            response.data.data.createStripeCustomerCard.id,
+            this.props.sku,
+            this.props.metadata
+          ).then(response => {
+            if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
+              this.setState({successfully_charged: true, loading: false})
+            } else {
+              this.setState({errors: true, loading: false })
+            }
+          })
+        } else {
+          createAndPayOrder(
+            this.cancelToken,
+            response.data.data.createStripeCustomerCard.id,
+            this.props.sku,
+            this.props.metadata,
+            this.props.shipping
+          ).then(response => {
+            if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
+              this.setState({successfully_charged: true, loading: false})
+            } else {
+              this.setState({errors: true, loading: false })
+            }
+          })
+        }
       } else {
         this.setState({errors: true, loading: false })
       }
@@ -211,7 +232,7 @@ const NewCardCreateAndPayOrder = class extends Component {
   render() {
     return (
       <React.Fragment>
-        {!this.state.loading && !this.state.successfully_charged && !this.state.errors &&
+        {!this.state.successfully_charged && !this.state.errors &&
           <div className="checkout">
             <Form>
               <Row>

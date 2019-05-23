@@ -41,13 +41,23 @@ const CreateAndPayOrder = class extends Component {
 
     this.setState({loading: true})
 
-    createAndPayOrder(this.cancelToken, this.props.source_id, this.props.sku, this.props.metadata).then(response => {
-      if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
-        this.setState({successfully_charged: true, loading: false})
-      } else {
-        this.setState({errors: true, loading: false })
-      }
-    })
+    if(!this.props.shipping) {
+      createAndPayOrder(this.cancelToken, this.props.source_id, this.props.sku, this.props.metadata).then(response => {
+        if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
+          this.setState({successfully_charged: true, loading: false})
+        } else {
+          this.setState({errors: true, loading: false })
+        }
+      })
+    } else {
+      createAndPayOrder(this.cancelToken, this.props.source_id, this.props.sku, this.props.metadata, this.props.shipping).then(response => {
+        if(response.status === 200 && !response.data.errors && response.data.data.createAndPayStripeCustomerOrder !== null && response.data.data.createAndPayStripeCustomerOrder.charge) {
+          this.setState({successfully_charged: true, loading: false})
+        } else {
+          this.setState({errors: true, loading: false })
+        }
+      })
+    }
   }
 
   render() {
