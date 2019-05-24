@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const updateCustomerCard = (cancelToken, cardId, address_city, address_country, address_line1, address_state, address_zip, exp_month, exp_year, name) => {
   return axios({
-    url: "http://127.0.0.1:4000",
+    url: "https://bmwapi.bscs.org", //http://127.0.0.1:4000
     method: "post",
     cancelToken: cancelToken.token,
     withCredentials: true, //Must include this to send cookies

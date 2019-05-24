@@ -48,7 +48,10 @@ const KitsPage = class extends Component {
           ship={this.state.ship}
         >
           <Container>
-            <PageTitle title="OpenSciEd Kits" />
+            <PageTitle
+              title="OpenSciEd Kits"
+              replace={["open-sci-ed", "OpenSciEd"]}
+            />
             <Row style={{marginBottom: '1rem'}} className="d-flex">
               <Col xs={12} md={4} className="p-2">
                 <Card className="h-100">

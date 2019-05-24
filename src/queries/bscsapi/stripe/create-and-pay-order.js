@@ -6,7 +6,7 @@ const createAndPayOrder = (cancelToken, source_id, sku, metadata, shipping=null)
 
   if(!shipping) {
     return axios({
-      url: "http://127.0.0.1:4000",
+      url: "https://bmwapi.bscs.org", //http://127.0.0.1:4000
       method: "post",
       cancelToken: cancelToken.token,
       withCredentials: true, //Must include this to send cookies
@@ -34,7 +34,7 @@ const createAndPayOrder = (cancelToken, source_id, sku, metadata, shipping=null)
     })
   } else {
     return axios({
-      url: "http://127.0.0.1:4000",
+      url: "https://bmwapi.bscs.org", //http://127.0.0.1:4000
       method: "post",
       cancelToken: cancelToken.token,
       withCredentials: true, //Must include this to send cookies

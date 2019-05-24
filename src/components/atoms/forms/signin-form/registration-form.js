@@ -36,7 +36,6 @@ const RegistrationForm = class extends Component {
       zipcode: null,
       // zipcode_touched: false,
 
-      changed: false,
       loading: false,
       notificationShow: false,
       sent: false,
@@ -162,10 +161,17 @@ const RegistrationForm = class extends Component {
 
     if(e && !address) {
       e.preventDefault()
-      input_elem.value === '' ? this.setState({address: null}) : this.setState({address: `"${input_elem.value}"`, changed: true})
+      input_elem.value === '' ? this.setState({address: null}) : this.setState({address: `"${input_elem.value}"`})
     } else {
       input_elem.value = address
-      this.setState({address: address})
+      this.setState({address: `"${address}"`})
+      // this.setState(prevState => {
+      //   if(prevState.all_set < 7) {
+      //     return {address: `"${address}"`, all_set: prevState.all_set + 1}
+      //   } else {
+      //     return {address: `"${address}"`}
+      //   }
+      // })
     }
   }
 
@@ -174,10 +180,10 @@ const RegistrationForm = class extends Component {
 
     if(e && !city) {
       e.preventDefault()
-      input_elem.value === '' ? this.setState({city: null}) : this.setState({city: `"${input_elem.value}"`, changed: true})
+      input_elem.value === '' ? this.setState({city: null}) : this.setState({city: `"${input_elem.value}"`})
     } else {
       input_elem.value = city
-      this.setState({city: city})
+      this.setState({city: `"${city}"`})
     }
   }
 
@@ -186,10 +192,10 @@ const RegistrationForm = class extends Component {
 
     if(e && !state) {
       e.preventDefault()
-      input_elem.value === '' ? this.setState({state: null}) : this.setState({state: `"${input_elem.value}"`, changed: true})
+      input_elem.value === '' ? this.setState({state: null}) : this.setState({state: `"${input_elem.value}"`})
     } else {
       input_elem.value = state
-      this.setState({state: state})
+      this.setState({state: `"${state}"`})
     }
   }
 
@@ -202,7 +208,7 @@ const RegistrationForm = class extends Component {
       ?
       this.setState({email: undefined})
       :
-      this.setState({email: `"${input_elem.value}"`, changed: true})
+      this.setState({email: `"${input_elem.value}"`})
     } else {
       input_elem.value = email
       this.setState({email: `"${email}"`})
@@ -214,7 +220,7 @@ const RegistrationForm = class extends Component {
 
     if(e && !firstname) {
       e.preventDefault()
-      input_elem.value === '' ? this.setState({firstname: null}) : this.setState({firstname: `"${input_elem.value}"`, changed: true})
+      input_elem.value === '' ? this.setState({firstname: null}) : this.setState({firstname: `"${input_elem.value}"`})
     } else {
       input_elem.value = firstname
       this.setState({firstname: `"${firstname}"`})
@@ -226,17 +232,23 @@ const RegistrationForm = class extends Component {
 
     if(e && !lastname) {
       e.preventDefault()
-      input_elem.value === '' ? this.setState({lastname: null}) : this.setState({lastname: `"${input_elem.value}"`, changed: true})
+      input_elem.value === '' ? this.setState({lastname: null}) : this.setState({lastname: `"${input_elem.value}"`})
     } else {
       input_elem.value = lastname
       this.setState({lastname: `"${lastname}"`})
     }
   }
 
-  setPassword = (e) => {
-    e.preventDefault()
+  setPassword = (e=null, password=null) => {
     let input_elem = document.getElementById('rf-password-input');
-    input_elem.value === '' ? this.setState({password: null}) : this.setState({password: `"${input_elem.value}"`, changed: true})
+
+    if (e && !password) {
+      e.preventDefault()
+      input_elem.value === '' ? this.setState({password: null}) : this.setState({password: `"${input_elem.value}"`})
+    } else {
+      input_elem.value = password
+      this.setState({password: `"${password}"`})
+    }
   }
 
   setPhone = (e=null, phone=null) => {
@@ -245,18 +257,17 @@ const RegistrationForm = class extends Component {
     if(e && !phone) {
       console.log(e)
       e.preventDefault();
-      (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
-      ||
-      (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
-      ||
-      // eslint-disable-next-line
-      (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
-      &&
-      (input_elem.value !== (undefined || null || ''))) //Phone # may be omitted
-      ?
-      this.setState({phone: 'errors'})
-      :
-      this.setState({phone: `"${input_elem.value}"`, changed: true})
+      if (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
+        ||
+        (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
+        ||
+        // eslint-disable-next-line
+        (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+        (input_elem.value !== (undefined || null || ''))) { //Phone # may be omitted
+          this.setState({phone: 'errors'})
+      } else {
+        this.setState({phone: `"${input_elem.value}"`})
+      }
     } else {
       input_elem.value = phone
       this.setState({phone: `"${phone}"`})
@@ -264,19 +275,20 @@ const RegistrationForm = class extends Component {
   }
 
   setUserAccountInfo = () => {
+    this.setState({account_loading: true})
+
     getUserInfo(this.cancelToken)
       .then(response => {
         if(response && !response.data.data.errors) {
           this.setAddress(null, response.data.data.me.address1)
           this.setCity(null, response.data.data.me.city)
           this.setCustomerState(null, response.data.data.me.state)
-          this.setEmail(null, response.data.data.me.email)
+          // this.setEmail(null, response.data.data.me.email)
           this.setFirstName(null, response.data.data.me.firstName)
           this.setLastName(null, response.data.data.me.lastName)
+          // this.setPassword(null, '')
           this.setPhone(null, response.data.data.me.phoneNumber)
           this.setZipcode(null, response.data.data.me.zipCode)
-
-          this.setState({changed: false})
         }
       })
   }
@@ -289,7 +301,7 @@ const RegistrationForm = class extends Component {
       input_elem.value === '' ? this.setState({zipcode: null}) : this.setState({zipcode: `"${input_elem.value}"`})
     } else {
       input_elem.value = zipcode
-      this.setState({phone: `"${zipcode}"`})
+      this.setState({zipcode: `"${zipcode}"`})
     }
   }
 //End custom functions
@@ -493,9 +505,10 @@ const RegistrationForm = class extends Component {
             <Col xs={12}>
               <div className="d-flex justify-content-end">
                 { !this.state.errors && !this.state.loading && !this.state.sent
-                  && (!this.state.email
-                  || !this.state.password ||
-                  !this.state.changed)
+                  &&
+                  (!this.state.email
+                  || !this.state.password
+                  || this.state.phone === 'errors')
                   &&
                   <div className="d-flex p-2">
                     {this.props.register && !this.props.update &&
@@ -512,7 +525,7 @@ const RegistrationForm = class extends Component {
                 { !this.state.errors && !this.state.loading && !this.state.sent
                   && this.state.email
                   && this.state.password
-                  && this.state.changed
+                  && this.state.phone !== 'errors'
                   &&
                   <div className="d-flex p-2">
                     {this.props.register && !this.props.update &&
