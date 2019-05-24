@@ -30,7 +30,7 @@ page: upcoming-programs
 ---
 Are you planning to adopt new science instructional materials for your districts and schools? If so, you know the adoption of instructional materials is a costly investment with long-term impacts. This decision-making process is critically important because instructional materials can either support or inhibit improvements in teaching and learning.
 
-Discover an effective pathway through this process at the NextGen TIME Leadership Institute. NextGen TIME is a suite of tools and processes for curriculum-based professional learning that supports educators to evaluate, select, and implement instructional materials designed for next generation science.
+Discover an effective pathway through this process at the NextGen TIME Leadership Institute. [NextGen TIME](https://bscs.org/resources/educator-resource-center/nextgen-time) is a suite of tools and processes for curriculum-based professional learning that supports educators to evaluate, select, and implement instructional materials designed for next generation science.
 
 ## Why participate?
 
