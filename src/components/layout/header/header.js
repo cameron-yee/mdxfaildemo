@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -17,7 +17,18 @@ import './header.scss'
 import bscsLogo from '../../../images/bscs_logo.svg'
 
 import '../../../global-scss/index.scss'
+import SigninFormLaunchModal from '../../atoms/forms/signin-form/signin-form-launch-modal';
 
+import SignOut from '../../atoms/sign-out/sign-out'
+
+/* Header functions
+  *
+  * constructor(props) {...}
+  * componentDidMount() {...}
+  * launch = () => {...}
+  * close = () => {...}
+  *
+*/
 
 export default class Header extends Component {
     constructor(props) {
@@ -25,6 +36,18 @@ export default class Header extends Component {
 
     this.state = {
       modalShow: false,
+      on_dashboard: false
+    }
+  }
+
+  //Don't want to show dashboard navigation button if on dashboard page already
+  componentDidMount() {
+    try {
+      if(window.location.pathname === '/dashboard') {
+        this.setState({on_dashboard: true})
+      }
+    } catch(error) {
+      console.log(error)
     }
   }
 
@@ -50,10 +73,24 @@ export default class Header extends Component {
             </div>
             {/* <div className="p-2 align-self-center d-none d-sm-inline-block">
               <Link to="/donate"><Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button></Link>
-            </div>
-            <div className="p-2 align-self-center d-none d-sm-inline-block">
-              <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
             </div> */}
+            <div className="p-2 align-self-center d-none d-sm-inline-block">
+              {!this.props.signed_in &&
+                <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
+                  <Button variant="outline-primary btn-sm" className="slide m-2">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                </SigninFormLaunchModal>
+              }
+              {this.props.signed_in &&
+                <React.Fragment>
+                  { !this.state.on_dashboard &&
+                    <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
+                  }
+                  <SignOut signOut={this.props.signOut}>
+                    <Button variant="outline-primary btn-sm" className="slide m-2">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                  </SignOut>
+                </React.Fragment>
+              }
+            </div>
           </div>
         </Container>
         <Container fluid>

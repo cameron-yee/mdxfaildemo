@@ -68,7 +68,7 @@ const DonatePage = class extends Component {
                         <Card.Text style={{fontSize: '1rem'}}>
                           For more information:
                         </Card.Text>
-                        <div class="d-flex justify-content-center">
+                        <div className="d-flex justify-content-center">
                             {/* <a className="p-2" href={this.resource.sidebarURL} target="_blank" rel="noopener noreferrer">
                               <Button size="sm" variant="outline-secondary"></Button>
                             </a> */}

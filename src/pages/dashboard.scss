@@ -1,0 +1,13 @@
+@media (min-width: 992px) {
+  div[data-state="content-expanded"] {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    transition: all .3s ease-in-out;
+  }
+
+  div[data-state="content-collapsed"] {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    transition: all .3s ease-in-out;
+  }
+}
