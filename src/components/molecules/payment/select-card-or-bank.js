@@ -84,7 +84,6 @@ const SelectCardOrBank = class extends Component {
 
     if(banks !== null && cards !== null) {
       payment_methods.push(...banks, ...cards)
-      console.log(payment_methods)
       this.setState({payment_methods: payment_methods})
     } else {
       this.setState({errors: true})

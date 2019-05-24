@@ -263,6 +263,8 @@ const RegistrationForm = class extends Component {
         ||
         // eslint-disable-next-line
         (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
+        //This next line seems wrong to me
+        // eslint-disable-next-line
         (input_elem.value !== (undefined || null || ''))) { //Phone # may be omitted
           this.setState({phone: 'errors'})
       } else {

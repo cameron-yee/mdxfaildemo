@@ -640,7 +640,7 @@ const Dashboard = class extends Component {
                         <h2>Previous Purchases</h2>
                         <Row style={{marginBottom: '1rem'}}>
                           <Col>
-                            <Table striped bordered hover>
+                            <Table striped bordered hover responsive>
                               <thead>
                                 <tr>
                                   <th>Amount</th>
@@ -737,7 +737,8 @@ const Dashboard = class extends Component {
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 * Bottom menu
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div style={{height: '200px'}} className="d-block d-md-none bg-light"></div>
+        <div style={{height: '8rem'}} className="d-block d-sm-none bg-light"></div>
+        <div style={{height: '6rem'}} className="d-none d-sm-block d-lg-none bg-light"></div>
         {this.state.signed_in &&
           <DashboardBottomMenu
             items={[['account', 'fa-user-cog'], ['donations', 'fa-donate'], ['payment-methods', 'fa-credit-card'], ['previous-purchases', 'fa-store'], ['upcoming-events', 'fa-clock']]}
