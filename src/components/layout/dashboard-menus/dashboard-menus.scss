@@ -84,6 +84,19 @@ td[data-state="title-column-collapsed"] {
   border-top-right-radius: 0 !important;
 }
 
+@media (max-width: 576px) {
+  .flex-basis {
+    > div {
+      flex-basis: 33% !important;
+    }
+
+    > div.flex-menu-item-3,
+    > div.flex-menu-item-4 {
+      flex-basis: 50% !important;
+    }
+  }
+
+}
 // .close-arrow {
 //   margin-left: 8rem;
 //   transition: all .3s ease-in-out;

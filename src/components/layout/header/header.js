@@ -119,9 +119,13 @@ export default class Header extends Component {
             <Col>
               <hr className="d-sm-none" style={{ marginBottom: '0', marginTop: '3.5rem' }} />
               <MobileNavigation
-                location={this.props.location}
                 launchGeneral={this.props.launchGeneral}
                 launchJoinEmail={this.props.launchJoinEmail}
+                launchSignin={this.props.launchSignin}
+                location={this.props.location}
+                on_dashboard={this.state.on_dashboard}
+                signOut={this.props.signOut}
+                signed_in={this.props.signed_in}
               />
             </Col>
           </Row>

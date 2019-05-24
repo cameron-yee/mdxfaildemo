@@ -21,7 +21,7 @@ const DashboardBottomMenu = class extends Component {
           currentClassName="active"
           componentTag="div"
           // className="row"
-          className="d-flex justify-content-center"
+          className="d-flex justify-content-center flex-wrap flex-sm-nowrap flex-basis"
           // style={{height: '116px'}}
           style={{height: '100%'}}
         >
@@ -30,7 +30,7 @@ const DashboardBottomMenu = class extends Component {
             return (
               <div
                 // xs={2}
-                className="bottom-menu-link p-2 text-center flex-fill"
+                className={`bottom-menu-link p-2 text-center flex-fill flex-menu-item-${index}`}
                 key={`bottom-menu-${index}`}
                 onClick={(e) => document.getElementById(`${item[0]}`).scrollIntoView({behavior: "smooth", block: "start"})}
                 style={{fontSize: '1rem'}}
