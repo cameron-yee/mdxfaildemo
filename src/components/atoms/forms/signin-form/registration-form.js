@@ -513,6 +513,7 @@ const RegistrationForm = class extends Component {
                   || this.state.phone === 'errors')
                   &&
                   <div className="d-flex p-2">
+                    {/* For non-modal signin or register */}
                     {this.props.register && !this.props.update &&
                       <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
                     }
@@ -530,6 +531,7 @@ const RegistrationForm = class extends Component {
                   && this.state.phone !== 'errors'
                   &&
                   <div className="d-flex p-2">
+                    {/* For non-modal signin or register */}
                     {this.props.register && !this.props.update &&
                       <Button className="m-2" variant="outline-primary" onClick={() => this.props.register(false)}>Sign In</Button>
                     }

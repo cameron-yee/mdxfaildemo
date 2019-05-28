@@ -737,7 +737,7 @@ const Dashboard = class extends Component {
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 * Bottom menu
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div style={{height: '8rem'}} className="d-block d-sm-none bg-light"></div>
+        <div style={{height: '10rem'}} className="d-block d-sm-none bg-light"></div>
         <div style={{height: '6rem'}} className="d-none d-sm-block d-lg-none bg-light"></div>
         {this.state.signed_in &&
           <DashboardBottomMenu

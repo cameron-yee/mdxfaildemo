@@ -72,27 +72,17 @@ const SigninFormModal = class extends Component {
           max_stage={this.state.max_stage}
           number_of_steps={2}
           signed_in={this.props.signed_in}
-          steps={["Sign in", "Register"]}
+          steps={[["Sign in", "fa-sign-in-alt"], ["Register", "fa-user-plus"]]}
           no_checks={true}
-          // credit_or_bank={this.state.credit_or_bank}
-          // bank_status={this.state.bank_status}
         />
         <Modal.Body>
           {(!this.state.register || this.state.stage === 0) &&
-            <SigninForm
-              setSignedIn={this.props.setSignedIn}
-              // register={(state) => this.setState({register: state, stage: 1})}
-            />
+            <SigninForm setSignedIn={this.props.setSignedIn} />
           }
           {(this.state.register || this.state.stage === 1) &&
-            <RegistrationForm
-              setSignedIn={this.props.setSignedIn}
-              // register={(state) => this.setState({register: state, stage: 0})}
-            />
+            <RegistrationForm setSignedIn={this.props.setSignedIn} />
           }
         </Modal.Body>
-        {/* <Modal.Footer>
-        </Modal.Footer> */}
       </Modal>
     )
   }

@@ -294,6 +294,7 @@ const Layout = class extends Component {
               metadata={this.props.metadata}
               signed_in={this.state.signed_in}
               ship={this.props.ship}
+              purchase_order_form={this.props.purchase_order_form}
             />
           </React.Fragment>
         )}

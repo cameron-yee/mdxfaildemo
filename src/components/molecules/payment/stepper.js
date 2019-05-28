@@ -42,42 +42,55 @@ const Stepper = class extends Component {
         <Row>
           {
             this.props.steps.map((words, i) => {
-              if(i === this.props.stage) {
+              if(i <= this.props.max_stage) {
                 return (
                   <Col
                     key={`step-${i}`}
                     xs={12/this.props.number_of_steps}
                     data-stepper={i}
                     onClick={(e) => this.setStage(e)}
-                    className={`d-flex justify-content-center step active step-${i} steps-${this.props.number_of_steps}`}
+                    className={
+                      i === this.props.stage
+                      ?
+                      `d-flex justify-content-center step active step-${i} steps-${this.props.number_of_steps}`
+                      :
+                      `d-flex justify-content-center step done step-${i} steps-${this.props.number_of_steps}`
+                    }
                   >
-                    <div className="d-flex align-items-center">{words}</div>
-                  </Col>
-                )
-              } else if(i < this.props.max_stage) {
-                return (
-                  <Col
-                    key={`step-${i}`}
-                    xs={12/this.props.number_of_steps}
-                    data-stepper={i}
-                    onClick={(e) => this.setStage(e)}
-                    className={`d-flex justify-content-center step done step-${i} steps-${this.props.number_of_steps}`}
-                  >
-                    {!this.props.no_checks &&
+                    {/* {!this.props.no_checks && */}
                       <div
                         className="d-flex align-items-center"
                       >
                         <i
                           onClick={(e) => {this.setStage(e)}}
-                          className="far fa-check-square"
+                          className={
+                            (Array.isArray(this.props.steps[i]) && this.props.steps[i].length > 1)
+                            ?
+                            `fa ${this.props.steps[i][1]}`
+                            :
+                            ""
+                            // "far fa-check-square"
+                          }
                           style={{padding: '10px'}}
                         ></i>
-                        {words}
+                        {(Array.isArray(words) && this.props.steps[i].length > 1)
+                          ?
+                          words[0]
+                          :
+                          words
+                        }
                       </div>
-                    }
-                    {this.props.no_checks &&
-                      <div className="d-flex align-items-center">{words}</div>
-                    }
+                    {/* } */}
+                    {/* {this.props.no_checks &&
+                      <div className="d-flex align-items-center">
+                        {(Array.isArray(words) && this.props.steps[i].length > 1)
+                          ?
+                          words[0]
+                          :
+                          words
+                        }
+                      </div>
+                    } */}
                   </Col>
                 )
               } else {
@@ -89,7 +102,26 @@ const Stepper = class extends Component {
                     onClick={(e) => this.setStage(e)}
                     className={`d-flex justify-content-center step step-${i} steps-${this.props.number_of_steps}`}
                   >
-                    <div className="d-flex align-items-center">{words}</div>
+                    <div className="d-flex align-items-center">
+                      <i
+                        onClick={(e) => {this.setStage(e)}}
+                        className={
+                          (Array.isArray(this.props.steps[i]) && this.props.steps[i].length > 1)
+                          ?
+                          `fa ${this.props.steps[i][1]}`
+                          :
+                          ""
+                          // "far fa-check-square"
+                        }
+                        style={{padding: '10px'}}
+                      ></i>
+                      {(Array.isArray(words) && this.props.steps[i].length > 1)
+                        ?
+                        words[0]
+                        :
+                        words
+                      }
+                    </div>
                   </Col>
                 )
               }
