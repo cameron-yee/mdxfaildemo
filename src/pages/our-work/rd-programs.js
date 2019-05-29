@@ -159,7 +159,7 @@ const RDPrograms = class extends Component {
                         </Col>
                       )
                     } else {
-                      return <React.Fragment></React.Fragment>
+                      return <React.Fragment key={`not-featured-${edge.node.id}`}></React.Fragment>
                     }
                   })
                 }
@@ -231,7 +231,7 @@ const RDPrograms = class extends Component {
                       )
                     } else {
                       return (
-                        <React.Fragment></React.Fragment>
+                        <React.Fragment key={`featured-${edge.node.id}`}></React.Fragment>
                       )
                     }
                   })

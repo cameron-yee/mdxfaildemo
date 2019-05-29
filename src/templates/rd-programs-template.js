@@ -33,7 +33,7 @@ const RDProgramsTemplate = class extends Component {
     return (
       <React.Fragment>
         <SEO
-          title={this.resource.seoTitle}
+          title={this.resource.title}
           canonical={this.resource.seoCanonicalUrl}
           description={this.resource.seoDescription}
           lang={this.resource.seoLang}

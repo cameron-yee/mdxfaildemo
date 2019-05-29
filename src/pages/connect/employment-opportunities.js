@@ -30,7 +30,7 @@ const EmploymentOpportunitiesPage = (props) => {
               Interested in joining our team at BSCS Science Learning? Browse employment opportunities posted below!
             </p>
             <p>
-              BSCS offers a flexible and inclusive work environment, with a strong commitment to the professional growth of all staff. Our office is in Colorado Springs, the #3 city in US News &amp; World Report’s 2019 Best Places to Live. Located along the Front Range of the Rockies one hour south of Denver, Colorado Springs is known for a mild climate, a vibrant arts community, and year-round outdoor recreation.
+              BSCS offers a flexible and inclusive work environment, with a strong commitment to the professional growth of all staff. Our office is in Colorado Springs, the #1 city in US News &amp; World Report's 2019 Most Desirable Places to Live. Located along the Front Range of the Rockies one hour south of Denver, Colorado Springs is known for a mild climate, a vibrant arts community, and year-round outdoor recreation.
             </p>
             <p>
               Not seeing a job opening that aligns with your qualifications? If you're a science educator or science education researcher interested in working with us, please contact BSCS Careers.
