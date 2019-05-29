@@ -42,15 +42,16 @@ const KitsPage = class extends Component {
           closeOrder={() => this.setState({launchOrder: false})}
           launchOrder={this.state.launchOrder}
           location={this.props.location}
-          product={this.state.product}
-          sku={this.state.sku}
           metadata={this.state.metadata}
+          product={this.state.product}
+          purchase_order_form="Alyssa Markle"
           ship={this.state.ship}
+          sku={this.state.sku}
         >
           <Container>
             <PageTitle
               title="OpenSciEd Kits"
-              replace={["open-sci-ed", "OpenSciEd"]}
+              replace={["openscied", "OpenSciEd"]}
             />
             <Row style={{marginBottom: '1rem'}} className="d-flex">
               <Col xs={12} md={4} className="p-2">
@@ -64,9 +65,6 @@ const KitsPage = class extends Component {
                       Kit63A
                     </Card.Title>
                     <p>6.1 <strong>Specialized</strong> Equipment and Supplies Kit for OpenSciEd 6.1 <strong>Light: Why do we sometimes see different things when looking at the same object?</strong></p>
-                    {/* <p>Kit Price: $303.60</p>
-                    <p>Shipping Cost: $60</p>
-                    <p className="mb-0">Total: $363.60</p> */}
                   </Card.Body>
                   <Card.Footer
                     style={{
@@ -162,9 +160,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $230.57</p>
+                        <p>Kit Price: $237.06</p>
                         <p>Shipping Cost: $80</p>
-                        <p><strong>Total: $310.57</strong></p>
+                        <p><strong>Total: $317.06</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
@@ -204,9 +202,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $567.75</p>
+                        <p>Kit Price: $568.24</p>
                         <p>Shipping Cost: $100</p>
-                        <p><strong>Total: $667.75</strong></p>
+                        <p><strong>Total: $668.24</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
@@ -246,9 +244,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $471.63</p>
+                        <p>Kit Price: $491.59</p>
                         <p>Shipping Cost: $60</p>
-                        <p><strong>Total: $531.63</strong></p>
+                        <p><strong>Total: $551.59</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
@@ -288,9 +286,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $671.21</p>
+                        <p>Kit Price: $695.92</p>
                         <p>Shipping Cost: $80</p>
-                        <p><strong>Total: $751.21</strong></p>
+                        <p><strong>Total: $775.92</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal

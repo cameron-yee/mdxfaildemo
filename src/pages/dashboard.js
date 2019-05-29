@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import SEO from '../components/seo'
 
 import axios from 'axios'
-// import Scrollspy from 'react-scrollspy'
 // import ReactPlaceholder from 'react-placeholder'
-
-import Layout from '../components/layout/layout'
-import PageTitle from '../components/layout/page-title/page-title'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -15,20 +11,22 @@ import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
 import Row from 'react-bootstrap/Row'
 
+// import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
 import ActionModal from '../components/molecules/payment/action-modal'
 import DashboardBottomMenu from '../components/layout/dashboard-menus/dashboard-bottom-menu'
 import DashboardSideMenu from '../components/layout/dashboard-menus/dashboard-side-menu'
 import DeleteDonationModal from '../components/molecules/payment/donation/delete-donation-modal'
-import LaunchPaymentModal from '../components/molecules/payment/launch-payment-modal'
 import LaunchDeleteDonationModal from '../components/molecules/payment/donation/launch-delete-donation-modal'
+import LaunchPaymentModal from '../components/molecules/payment/launch-payment-modal'
 import LaunchRestartDonationModal from '../components/molecules/payment/donation/launch-restart-donation-modal'
 import LaunchUpdateDonationModal from '../components/molecules/payment/donation/launch-update-donation-modal'
+import Layout from '../components/layout/layout'
+import PageTitle from '../components/layout/page-title/page-title'
 import RegistrationForm from '../components/atoms/forms/signin-form/registration-form'
 import RestartDonationModal from '../components/molecules/payment/donation/restart-donation-modal'
-// import SelectCardOrBank from '../components/molecules/payment/select-card-or-bank'
 import SigninForm from '../components/atoms/forms/signin-form/signin-form'
-import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
 import SpecificContactForm from '../components/atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
+import UpdateDonationModal from '../components/molecules/payment/donation/update-donation-modal'
 
 import retrieveStripeCustomer from '../queries/bscsapi/stripe/retrieve-stripe-customer'
 import retrieveStripeCustomerBanks from '../queries/bscsapi/stripe/retrieve-stripe-customer-banks'
@@ -418,7 +416,7 @@ const Dashboard = class extends Component {
                                         <td>{subscription.items.data[0].plan.nickname}</td>
                                         <td>{type}</td>
                                         <td>{next_payment_month}/{next_payment_day}/{next_payment_year}</td>
-                                        <td align="center">
+                                        <td align="center" style={{verticalAlign: 'middle'}}>
                                           <LaunchUpdateDonationModal
                                             launchUpdateDonation={this.launchUpdateDonationModal}
                                            >
@@ -431,7 +429,7 @@ const Dashboard = class extends Component {
                                             </Button>
                                           </LaunchUpdateDonationModal>
                                         </td>
-                                        <td align="center">
+                                        <td align="center" style={{verticalAlign: 'middle'}}>
                                           {!subscription.cancel_at_period_end &&
                                             <LaunchDeleteDonationModal
                                               launchDeleteDonation={this.launchDeleteDonationModal}
@@ -542,10 +540,9 @@ const Dashboard = class extends Component {
                                       {source.id.includes('ba_') &&
                                         <td>
                                           <span>{source.bank_name}: ••••••••{source.last4}</span>
-                                          {/* <br /> */}
                                           {(source.status === 'new' || source.status === 'validated') &&
                                             <Button
-                                              className="m-3"
+                                              className="mx-3"
                                               onClick={(e) => {this.launchActionModal(e, source.id, 'verify')}}
                                               size="sm"
                                               variant="outline-primary"
@@ -555,7 +552,7 @@ const Dashboard = class extends Component {
                                           }
                                           {(source.status === 'verification_failed' || source.status === 'errored') &&
                                             <Button
-                                              className="m-3"
+                                              className="mx-3"
                                               size="sm"
                                               variant="warning"
                                             >
@@ -564,7 +561,7 @@ const Dashboard = class extends Component {
                                           }
                                           {source.status === 'verified' &&
                                             <Button
-                                              className="m-3"
+                                              className="mx-3"
                                               size="sm"
                                               variant="outline-success"
                                               disabled
@@ -575,9 +572,11 @@ const Dashboard = class extends Component {
                                         </td>
                                       }
                                       {source.id.includes('card') &&
-                                        <td>•••• •••• •••• {source.last4}</td>
+                                        <td>
+                                          <span>•••• •••• •••• {source.last4}</span>
+                                        </td>
                                       }
-                                      <td align="center" style={{ verticalAlign: 'middle' }}>
+                                      <td align="center" style={{verticalAlign: 'middle'}}>
                                         {source.id === this.state.customer_default_source &&
                                           <span className="badge badge-pill badge-primary">DEFAULT</span>
                                         }
@@ -588,7 +587,6 @@ const Dashboard = class extends Component {
                                           }
                                           {!this.state.set_default_loading &&
                                             <Button
-                                              className="m-3"
                                               onClick={(e) => {this.updateCustomerDefaultSource(e, source.id)}}
                                               size="sm"
                                               variant="outline-primary"
@@ -598,10 +596,9 @@ const Dashboard = class extends Component {
                                           }
                                           </React.Fragment>}
                                       </td>
-                                      <td align="center">
+                                      <td align="center" style={{verticalAlign: 'middle'}}>
                                         {source.id.includes('card_') &&
                                           <Button
-                                            className="m-3"
                                             onClick={(e) => {this.launchActionModal(e, source.id, 'update')}}
                                             size="sm"
                                             variant="outline-primary"
@@ -610,9 +607,8 @@ const Dashboard = class extends Component {
                                           </Button>
                                         }
                                       </td>
-                                      <td align="center">
+                                      <td align="center" style={{verticalAlign: 'middle'}}>
                                         <Button
-                                          className="m-3"
                                           onClick={(e) => {this.launchActionModal(e, source.id, 'delete')}}
                                           size="sm"
                                           variant="outline-primary"
@@ -737,8 +733,8 @@ const Dashboard = class extends Component {
 {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 * Bottom menu
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div style={{height: '8rem'}} className="d-block d-sm-none bg-light"></div>
-        <div style={{height: '6rem'}} className="d-none d-sm-block d-lg-none bg-light"></div>
+        {/* <div style={{height: '10rem'}} className="d-block d-sm-none bg-light"></div> */}
+        <div style={{height: '6rem'}} className="d-block d-lg-none bg-light"></div>
         {this.state.signed_in &&
           <DashboardBottomMenu
             items={[['account', 'fa-user-cog'], ['donations', 'fa-donate'], ['payment-methods', 'fa-credit-card'], ['previous-purchases', 'fa-store'], ['upcoming-events', 'fa-clock']]}

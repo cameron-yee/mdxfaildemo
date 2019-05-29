@@ -42,7 +42,7 @@ const UpdateDonationModal = class extends Component {
       number_of_steps: 2,
       source_id: undefined,
       stage: 0,
-      steps: ["Payment Method", "Update Donation"],
+      steps: [["Payment Method", "fa-credit-card"], ["Update Donation", "fa-check-circle"]],
       stripe: null
     }
 
@@ -142,7 +142,7 @@ const UpdateDonationModal = class extends Component {
                     stage: 1,
                     max_stage: 1,
                     number_of_steps: 3,
-                    steps: ["Payment Method", "Card Information", "Update Donation"]
+                    steps: [["Payment Method", "fa-credit-card"], ["Card Information", "fa-credit-card"], ["Update Donation", "fa-check-circle"]]
                   })
                 } else {
                   this.setState({
@@ -150,7 +150,7 @@ const UpdateDonationModal = class extends Component {
                     stage: 1,
                     max_stage: 1,
                     number_of_steps: 2,
-                    steps: ["Payment Method", "Update Donation"]
+                    steps: [["Payment Method", "fa-credit-card"], ["Update Donation", "fa-check-circle"]]
                   })
                 }
               }}

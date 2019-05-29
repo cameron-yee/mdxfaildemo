@@ -20,9 +20,8 @@ const DashboardBottomMenu = class extends Component {
           items={scrollspy_items}
           currentClassName="active"
           componentTag="div"
-          // className="row"
-          className="d-flex justify-content-center flex-wrap flex-sm-nowrap flex-basis"
-          // style={{height: '116px'}}
+          // className="d-flex justify-content-center flex-wrap flex-sm-nowrap flex-basis"
+          className="d-flex justify-content-center"
           style={{height: '100%'}}
         >
           {this.props.items.map((item, index) => {
@@ -35,7 +34,9 @@ const DashboardBottomMenu = class extends Component {
                 onClick={(e) => document.getElementById(`${item[0]}`).scrollIntoView({behavior: "smooth", block: "start"})}
                 style={{fontSize: '1rem'}}
               >
-                <i className={`fas ${item[1]}`}></i><br />{item_title}
+                <i className={`fas ${item[1]}`}></i>
+                <br />
+                <span className="d-none d-sm-block bm-span">{item_title}</span>
               </div>
             )
           })}

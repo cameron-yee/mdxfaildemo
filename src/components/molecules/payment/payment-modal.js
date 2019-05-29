@@ -44,11 +44,11 @@ const PaymentModal = class extends Component {
       payment_method: null,
       bank_status: null,
       customer_default_source: undefined,
-      max_stage: 0,
-      number_of_steps: 1,
+      max_stage: 1,
+      number_of_steps: 2,
       register: false,
       stage: 0,
-      steps: ["Sign In or Register"],
+      steps:[["Sign in", "fa-sign-in-alt"], ["Register", "fa-user-plus"]],
       stripe: null,
     }
 
@@ -61,9 +61,17 @@ const PaymentModal = class extends Component {
     if(this.props.signed_in) {
       this.getCustomerDefaultSource(this.cancelToken)
       if(!this.props.donate) {
-        this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
+        this.setState({
+          steps: [["Payment Method", "fa-credit-card"], ["Pay", "fa-check-circle"]],
+          max_stage: 0,
+          number_of_steps: 2
+        })
       } else {
-        this.setState({steps: ["Payment Method", "Donate"], number_of_steps: 2})
+        this.setState({
+          steps: [["Payment Method", "fa-credit-card"], ["Donate", "fa-donate"]],
+          max_stage: 0,
+          number_of_steps: 2
+        })
       }
     }
   }
@@ -82,12 +90,24 @@ const PaymentModal = class extends Component {
 
       if(this.props.signed_in) {
         if(!this.props.donate) {
-          this.setState({steps: ["Payment Method", "Pay"], number_of_steps: 2})
+          this.setState({
+            steps: [["Payment Method", "fa-credit-card"], ["Pay", "fa-check-circle"]],
+            max_stage: 0,
+            number_of_steps: 2
+          })
         } else {
-          this.setState({steps: ["Payment Method", "Donate"], number_of_steps: 2})
+          this.setState({
+            steps: [["Payment Method", "fa-credit-card"], ["Donate", "fa-donate"]],
+            max_stage: 0,
+            number_of_steps: 2
+          })
         }
       } else {
-        this.setState({steps: ["Sign In or Register"], number_of_steps: 1})
+        this.setState({
+          steps:[["Sign in", "fa-sign-in-alt"], ["Register", "fa-user-plus"]],
+          max_stage: 1,
+          number_of_steps: 2
+        })
       }
     }
   }
@@ -131,16 +151,18 @@ const PaymentModal = class extends Component {
         size="lg"
         aria-labelledby="signin-form"
       >
-        <Modal.Header closeButton style={{background: '#e6e6e6'}}>
-          <Modal.Title id="signin-form">
-            {this.props.signed_in && !this.props.donate &&
-              <span>{this.props.product} Payment</span>
-            }
-            {this.props.signed_in && this.props.donate &&
-              <span>New Donation</span>
-            }
-          </Modal.Title>
-        </Modal.Header>
+        {this.props.signed_in &&
+          <Modal.Header closeButton style={{background: '#e6e6e6'}}>
+            <Modal.Title id="signin-form">
+              {this.props.signed_in && !this.props.donate &&
+                <span>{this.props.product} Payment</span>
+              }
+              {this.props.signed_in && this.props.donate &&
+                <span>New Donation</span>
+              }
+            </Modal.Title>
+          </Modal.Header>
+        }
         <Stepper
           setStage={(stage) => this.setState({stage: stage})}
           setMaxStage={(max_stage) => this.setState({max_stage})}
@@ -152,10 +174,10 @@ const PaymentModal = class extends Component {
         />
         <Modal.Body>
           {this.state.stage === 0 && !this.props.signed_in && !this.state.register &&
-            <SigninForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+            <SigninForm setSignedIn={this.props.setSignedIn} />
           }
           {this.state.stage === 0 && !this.props.signed_in && this.state.register &&
-            <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+            <RegistrationForm setSignedIn={this.props.setSignedIn} />
           }
           {this.state.stage === 0 && this.props.signed_in &&
             <SelectCardOrBank
@@ -165,10 +187,10 @@ const PaymentModal = class extends Component {
               setSelectedSource={(source_id) => this.setState({selected_source: source_id, stage: 1, max_stage: 1})}
             />
           }
-          {this.state.stage === 0 && !this.state.stripe &&
+          {this.state.stage === 0 && this.props.signed_in && !this.state.stripe &&
             <Spinner animation="grow" variant="primary" />
           }
-          { this.state.stage === 1 && this.state.stripe && this.state.selected_source.includes('card_') &&
+          {this.state.stage === 1 && this.props.signed_in && this.state.stripe && this.state.selected_source.includes('card_') &&
             <ChargeCard
               amount={this.props.amount}
               card_id={this.state.selected_source}
@@ -176,7 +198,7 @@ const PaymentModal = class extends Component {
               donate={this.props.donate}
             />
           }
-          { this.state.stage === 1 && this.state.stripe && this.state.selected_source === 'new-card' &&
+          { this.state.stage === 1 && this.props.signed_in && this.state.stripe && this.state.selected_source === 'new-card' &&
             <StripeProvider stripe={this.state.stripe}>
               <Elements>
                 <ChargeNewCard
@@ -187,7 +209,7 @@ const PaymentModal = class extends Component {
               </Elements>
             </StripeProvider>
           }
-          { this.state.stage === 1 && this.state.stripe && this.state.selected_source.includes('ba_') &&
+          { this.state.stage === 1 && this.props.signed_in && this.state.stripe && this.state.selected_source.includes('ba_') &&
             <ChargeBank
               amount={this.props.amount}
               bank_id={this.state.selected_source}
@@ -196,10 +218,10 @@ const PaymentModal = class extends Component {
             />
           }
         </Modal.Body>
-        {!this.props.donate &&
+        {this.props.signed_in && this.props.purchase_order_form &&
           <Modal.Footer>
               <SpecificContactForm
-                sendto="Alyssa Markle"
+                sendto={this.props.purchase_order_form}
                 infoat="false"
               >
                 Purchase order form?

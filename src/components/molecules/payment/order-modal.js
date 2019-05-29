@@ -42,11 +42,11 @@ const OrderModal = class extends Component {
     this.state = {
       selected_source: null,
       customer_default_source: undefined,
-      max_stage: 0,
-      number_of_steps: 1,
+      max_stage: 1,
+      number_of_steps: 2,
       register: false,
       stage: 0,
-      steps: ["Sign In or Register"],
+      steps:[["Sign in", "fa-sign-in-alt"], ["Register", "fa-user-plus"]],
       stripe: null,
       sku_image: undefined,
       sku_price: undefined,
@@ -84,12 +84,24 @@ const OrderModal = class extends Component {
         this.getCustomerDefaultSource()
         this.getSkuInformation()
         if(this.props.ship) {
-          this.setState({steps: ["Payment Method", "Shipping", "Place Order"], number_of_steps: 3})
+          this.setState({
+            steps: [["Payment Method", "fa-credit-card"], ["Shipping", "fa-shipping-fast"], ["Place Order", "fa-check-circle"]],
+            max_stage: 0,
+            number_of_steps: 3
+          })
         } else {
-          this.setState({steps: ["Payment Method", "Place Order"], number_of_steps: 2})
+          this.setState({
+            steps: [["Payment Method", "fa-credit-card"], ["Place Order", "fa-check-circle"]],
+            max_stage: 0,
+            number_of_steps: 2
+          })
         }
       } else {
-        this.setState({steps: ["Sign In or Register"], number_of_steps: 1})
+        this.setState({
+          steps:[["Sign in", "fa-sign-in-alt"], ["Register", "fa-user-plus"]],
+          max_stage: 1,
+          number_of_steps: 2
+        })
       }
     }
   }
@@ -154,13 +166,23 @@ const OrderModal = class extends Component {
             {this.props.signed_in &&
               <span>Order {this.props.product}</span>
             }
+            {!this.props.signed_in &&
+              <span>Sign In or Register</span>
+            }
           </Modal.Title>
         </Modal.Header>
         <Stepper
-          setStage={(stage) => this.setState({stage: stage})}
+          setStage={(stage) => {
+            stage === 0
+            ?
+            this.setState({stage: stage, register: false})
+            :
+            this.setState({stage: stage, register: true})
+          }}
           setMaxStage={(max_stage) => this.setState({max_stage})}
           stage={this.state.stage}
           max_stage={this.state.max_stage}
+          no_checks={true}
           number_of_steps={this.state.number_of_steps}
           signed_in={this.props.signed_in}
           steps={this.state.steps}
@@ -172,11 +194,11 @@ const OrderModal = class extends Component {
         }
         {(!this.state.sku_quantity || this.state.sku_quantity > 0) &&
           <Modal.Body>
-            {this.state.stage === 0 && !this.props.signed_in && !this.state.register &&
-              <SigninForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+            {this.state.stage === 0 && !this.props.signed_in &&
+              <SigninForm setSignedIn={this.props.setSignedIn} />
             }
-            {this.state.stage === 0 && !this.props.signed_in && this.state.register &&
-              <RegistrationForm setSignedIn={this.props.setSignedIn} register={(state) => this.setState({register: state})} />
+            {this.state.stage === 1 && !this.props.signed_in &&
+              <RegistrationForm setSignedIn={this.props.setSignedIn} />
             }
             {this.state.stage === 0 && this.props.signed_in &&
               <SelectCardOrBank
@@ -189,12 +211,12 @@ const OrderModal = class extends Component {
             {this.state.stage === 0 && !this.state.stripe &&
               <Spinner animation="grow" variant="primary" />
             }
-            {this.props.ship && this.state.stage === 1 &&
+            {this.props.signed_in && this.props.ship && this.state.stage === 1 &&
               <ShippingForm
                 setShipping={(shipping) => this.setState({shipping: shipping, stage: 2, max_stage: 2})}
               />
             }
-            {this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source !== 'new-card' &&
+            {this.props.signed_in && this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source !== 'new-card' &&
               <CreateAndPayOrder
                 metadata={this.props.metadata}
                 price={this.state.sku_price}
@@ -203,7 +225,7 @@ const OrderModal = class extends Component {
                 shipping={this.state.shipping}
               />
             }
-            {this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source === 'new-card' &&
+            {this.props.signed_in && this.props.ship && this.state.stage === 2 && this.state.stripe && this.state.selected_source === 'new-card' &&
               <StripeProvider stripe={this.state.stripe}>
                 <Elements>
                   <NewCardCreateAndPayOrder
@@ -215,7 +237,7 @@ const OrderModal = class extends Component {
                 </Elements>
               </StripeProvider>
             }
-            {!this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source !== 'new-card' &&
+            {this.props.signed_in && !this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source !== 'new-card' &&
               <CreateAndPayOrder
                 metadata={this.props.metadata}
                 price={this.state.sku_price}
@@ -223,7 +245,7 @@ const OrderModal = class extends Component {
                 source_id={this.state.selected_source}
               />
             }
-            {!this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source === 'new-card' &&
+            {this.props.signed_in && !this.props.ship && this.state.stage === 1 && this.state.stripe && this.state.selected_source === 'new-card' &&
               <StripeProvider stripe={this.state.stripe}>
                 <Elements>
                   <NewCardCreateAndPayOrder
@@ -236,14 +258,16 @@ const OrderModal = class extends Component {
             }
           </Modal.Body>
         }
-        <Modal.Footer>
-            <SpecificContactForm
-              sendto="Alyssa Markle"
-              infoat="false"
-            >
-              Purchase order form?
-            </SpecificContactForm>
-        </Modal.Footer>
+        {this.props.signed_in && this.props.purchase_order_form &&
+          <Modal.Footer>
+              <SpecificContactForm
+                sendto={this.props.purchase_order_form}
+                infoat="false"
+              >
+                Purchase order form?
+              </SpecificContactForm>
+          </Modal.Footer>
+        }
       </Modal>
     )
   }
