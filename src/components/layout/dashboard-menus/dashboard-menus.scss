@@ -84,6 +84,11 @@ td[data-state="title-column-collapsed"] {
   border-top-right-radius: 0 !important;
 }
 
+// @media (max-width: )
+.bm-span {
+  color: $white;
+}
+
 @media (max-width: 576px) {
   .flex-basis {
     > div {

@@ -65,9 +65,6 @@ const KitsPage = class extends Component {
                       Kit63A
                     </Card.Title>
                     <p>6.1 <strong>Specialized</strong> Equipment and Supplies Kit for OpenSciEd 6.1 <strong>Light: Why do we sometimes see different things when looking at the same object?</strong></p>
-                    {/* <p>Kit Price: $303.60</p>
-                    <p>Shipping Cost: $60</p>
-                    <p className="mb-0">Total: $363.60</p> */}
                   </Card.Body>
                   <Card.Footer
                     style={{
@@ -163,9 +160,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $234.96</p>
+                        <p>Kit Price: $237.06</p>
                         <p>Shipping Cost: $80</p>
-                        <p><strong>Total: $314.96</strong></p>
+                        <p><strong>Total: $317.06</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
@@ -205,9 +202,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $566.14</p>
+                        <p>Kit Price: $568.24</p>
                         <p>Shipping Cost: $100</p>
-                        <p><strong>Total: $666.14</strong></p>
+                        <p><strong>Total: $668.24</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
