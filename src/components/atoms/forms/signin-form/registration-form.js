@@ -257,14 +257,15 @@ const RegistrationForm = class extends Component {
     if(e && !phone) {
       console.log(e)
       e.preventDefault();
-      if (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) //None of these characters are in the phone #
+      if (((/[A-Za-z~!#@$%^&*{}|?<>`=\s]+/.test(input_elem.value) === true) /* None of these characters are in the phone # */
         ||
-        (/\d{2,}/.test(input_elem.value) === false) //There are at least 2 digits in a row at some point
+        (/\d{2,}/.test(input_elem.value) === false) /* There are at least 2 digits in a row at some point */
         ||
-        // eslint-disable-next-line
+        /* eslint-disable-next-line */
         (/^[^-][\d\(\)\-\+]{7,}[^-+]$/.test(input_elem.value) === false)) //The input is at least 7 characters long. Can't start with '-', can't end with '-' or '+'
-        //This next line seems wrong to me
-        // eslint-disable-next-line
+        /* This next line seems wrong to me */
+        /* eslint-disable-next-line */
+        &&
         (input_elem.value !== (undefined || null || ''))) { //Phone # may be omitted
           this.setState({phone: 'errors'})
       } else {
