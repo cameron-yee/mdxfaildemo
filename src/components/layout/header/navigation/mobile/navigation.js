@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 
+import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 // import Button from 'react-bootstrap/Button'
 
 import SpinDropdown from '../../../../atoms/spin-dropdown/spin-dropdown'
+import SigninFormLaunchModal from '../../../../atoms/forms/signin-form/signin-form-launch-modal'
+import SignOut from '../../../../atoms/sign-out/sign-out'
+
 // import JoinModal from '../../../../atoms/join-email-list/join-modal/join-modal'
 // import ContactUsModal from '../../../../atoms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 
@@ -158,14 +162,31 @@ export default class MobileNavigation extends Component {
                       })
                     }
                   </Nav>
-                  {/* <div className="d-flex">
-                    <div className="p-2 align-self-center ml-auto d-sm-none">
+                  <div className="d-flex justify-content-end">
+                    {/* <div className="p-2 align-self-center ml-auto d-sm-none">
                       <Button variant="outline-primary btn-sm"><i className="fas fa-donate"></i>&nbsp; Donate</Button>
+                    </div> */}
+                    <div className="p-2 d-sm-none">
+                      {/* <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button> */}
+                      {!this.props.signed_in &&
+                        <SigninFormLaunchModal launchSignin={this.props.launchSignin}>
+                          <Button variant="outline-primary btn-sm" className="slide m-2">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                        </SigninFormLaunchModal>
+                      }
                     </div>
-                    <div className="p-2 align-self-center d-sm-none">
-                      <Button variant="outline-primary btn-sm" className="slide">Sign In&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                    <div className="p-2 d-sm-none">
+                      {this.props.signed_in &&
+                        <React.Fragment>
+                          { !this.props.on_dashboard &&
+                            <Link to="/dashboard"><Button variant="outline-primary btn-sm" className="slide m-2">Dashboard</Button></Link>
+                          }
+                          <SignOut signOut={this.props.signOut}>
+                            <Button variant="outline-primary btn-sm" className="slide m-2">Sign Out&nbsp; <i className="fas fa-sign-in-alt"></i></Button>
+                          </SignOut>
+                        </React.Fragment>
+                      }
                     </div>
-                  </div> */}
+                  </div>
                 </Navbar.Collapse>
               </Navbar>
               {/* <JoinModal show={this.state.joinEmailListModalShow} onHide={this.closeJoinEmailList} />

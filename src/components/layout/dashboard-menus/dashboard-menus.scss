@@ -1,0 +1,113 @@
+@import '../../../global-scss/utilities/variables.scss';
+
+.dashboard-menu-link {
+  // color: 'gray';
+  cursor: pointer;
+  // transition: all .3s ease-in-out;
+
+  // &:hover {
+  //   margin-left: 1rem;
+  //   transition: all .3s ease-in-out;
+  // }
+}
+
+#side-menu-bottom {
+//   position: absolute;
+//   bottom: 0px;
+  color: $white;
+  background: $primary;
+}
+
+#side-menu-nav {
+  padding-top: 1.75rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.bottom-menu-link {
+  cursor: pointer;
+
+  &.active {
+    background: $secondary;
+  }
+}
+
+@media (min-width: 992px) {
+  div[data-state="menu-expanded"] {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    transition: all .3s ease-in-out;
+  }
+
+  div[data-state="menu-collapsed"] {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    transition: all .3s ease-in-out;
+  }
+}
+
+td[data-state="title-column-expanded"] {
+  // display: table-cell;
+  // visibility: visible;
+  opacity: 1;
+  // max-width: 100%;
+  max-width: 100px;
+  // // width: 100%;
+  transition-property: max-width, opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, .2s;
+}
+
+td[data-state="title-column-collapsed"] {
+  // display: none;
+  // visibility: hidden;
+  opacity: 0;
+  max-width: 0;
+  // width: 0;
+  transition: max-width .3s ease-in-out;
+  // transition-delay: .2s;
+}
+
+#dashboard-side-menu {
+  margin-top: 8rem;
+}
+
+.toggle {
+  background: #cdcdcd !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.first {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+// @media (max-width: )
+.bm-span {
+  color: $white;
+}
+
+@media (max-width: 576px) {
+  .flex-basis {
+    > div {
+      flex-basis: 33% !important;
+    }
+
+    > div.flex-menu-item-3,
+    > div.flex-menu-item-4 {
+      flex-basis: 50% !important;
+    }
+  }
+
+}
+// .close-arrow {
+//   margin-left: 8rem;
+//   transition: all .3s ease-in-out;
+
+//   &:hover {
+//     margin-left: 0;
+//     transition: all .3s ease-in-out;
+//   }
+// }

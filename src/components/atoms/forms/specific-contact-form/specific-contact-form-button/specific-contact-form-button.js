@@ -24,7 +24,13 @@ const SpecificContactFormButton = class extends Component {
       <React.Fragment>
         <span variant="outline-primary" onClick={this.launch} className={this.props.childrenclass}>{this.props.children}</span>
         {/* <SpecificContactFormModal show={this.state.modalShow} onHide={this.close} sendto={this.props.sendto} allowfiles={this.props.allowfiles} /> */}
-        <SpecificContactFormModal show={this.state.modalShow} onHide={this.close} sendto={this.props.sendto} infoat={this.props.infoat} />
+        <SpecificContactFormModal
+          forgot_password={this.props.forgot_password}
+          show={this.state.modalShow}
+          onHide={this.close}
+          sendto={this.props.sendto}
+          infoat={this.props.infoat}
+        />
       </React.Fragment>
     )
   }

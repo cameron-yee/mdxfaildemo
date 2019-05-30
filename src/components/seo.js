@@ -246,6 +246,7 @@ const SEO = ({ description, lang, title, canonical, jsonLd }) => {
           >
             {/* inline script elements */}
             <script type="application/ld+json">{`${jsonLdString}`}</script>
+            {/* <script id="stripe-js" src="https://js.stripe.com/v3/" async></script> */}
           </Helmet>
         )
       }}

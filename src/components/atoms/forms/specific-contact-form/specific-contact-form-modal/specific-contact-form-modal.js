@@ -142,6 +142,10 @@ const SpecificContactFormModal = class extends Component {
       data["infoat"] = this.props.infoat === "true"
     }
 
+    if(this.props.forgot_password) {
+      data["message"] = `Forgot password. New password: ${this.state.message}`
+    }
+
     console.log(data)
     axios({
       // url: 'http://127.0.0.1:8888/post-specific-form',
@@ -183,6 +187,9 @@ const SpecificContactFormModal = class extends Component {
       </Modal.Header>
       <Modal.Body>
         {/* <Form onSubmit={(e) => this.postSpecificForm(e)}> */}
+        {this.props.forgot_password &&
+          <p>Fill out this form with the password that you want for your account and we'll reset it for you.  You will receive an email once your password is reset.</p>
+        }
         <Form>
           <Row>
             <Col xs={12}>
