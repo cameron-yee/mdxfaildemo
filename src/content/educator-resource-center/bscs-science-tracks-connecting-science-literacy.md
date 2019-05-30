@@ -36,8 +36,3 @@ Children are naturally inquisitive. That is one of the many reasons why it is im
 BSCS Science Learning’s elementary program allows preK through grade 5 students to interact like scientists, participating in inquiry-based activities while also developing important reading, writing, and critical-thinking skills. BSCS Science Tracks: Connecting Science & Literacy offers four modules—life science, earth & space science, physical science, and science & technology—for each grade level.
 
 BSCS recently revised two units to align with the Next Generation Science Standards. These units are: _Investigating Properties Student Guide_ and _Investigating Ecosystems Student Guide_. All units are available for purchase through the Kendall Hunt Publishing Company.
-
-BSCS Science Tracks: Connecting Science & Literacy NGSS-aligned units:
-
-* Investigating Properties Student Guide
-* Investigating Ecosystems Student Guide
