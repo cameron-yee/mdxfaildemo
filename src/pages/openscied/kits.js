@@ -81,7 +81,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7cYj4pmYKy7yr"
+                          // sku="sku_F7cYj4pmYKy7yr" //TESTING
+                          sku="sku_F9wmrM4y2HCMHX" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
@@ -124,7 +125,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7caVuMuka8uvY"
+                          // sku="sku_F7caVuMuka8uvY" //TESTING
+                          sku="sku_F9woo0mIXQljTl" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
@@ -166,7 +168,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7cciWpb9oWPrd"
+                          // sku="sku_F7cciWpb9oWPrd" //TESTING
+                          sku="sku_F9wo1oHSIUtojT" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
@@ -208,7 +211,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7cde8knFxNHWn"
+                          // sku="sku_F7cde8knFxNHWn" //TESTING
+                          sku="sku_F9wpP1f22rl9Fe" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
@@ -250,7 +254,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7ceA8XBoUzyMp"
+                          // sku="sku_F7ceA8XBoUzyMp" //TESTING
+                          sku="sku_F9wqec6eUx6Jii" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
@@ -292,7 +297,8 @@ const KitsPage = class extends Component {
                       </div>
                       <div>
                         <LaunchOrderModal
-                          sku="sku_F7cfuqZbKVk8we"
+                          // sku="sku_F7cfuqZbKVk8we" //TESTING
+                          sku="sku_F9wryVs1WAaEaX" //LIVE
                           launchOrder={(sku) => this.setState({
                             launchOrder: true,
                             sku: sku,
