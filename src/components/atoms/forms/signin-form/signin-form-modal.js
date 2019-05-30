@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal'
 
 import RegistrationForm from './registration-form'
 import SigninForm from './signin-form'
+import SpecificContactForm from '../../../atoms/forms/specific-contact-form/specific-contact-form-button/specific-contact-form-button'
 import Stepper from '../../../molecules/payment/stepper'
 
 const SigninFormModal = class extends Component {
@@ -83,6 +84,15 @@ const SigninFormModal = class extends Component {
             <RegistrationForm setSignedIn={this.props.setSignedIn} />
           }
         </Modal.Body>
+        <Modal.Footer>
+          <SpecificContactForm
+            forgot_password={true}
+            sendto="Cameron Yee"
+            infoat="false"
+          >
+            Forgot password?
+          </SpecificContactForm>
+        </Modal.Footer>
       </Modal>
     )
   }

@@ -14,7 +14,6 @@ type: Professional Learning
 image: /assets/windmills.jpg
 alt: Five white windmills on a snowy hill with a blue sky and white clouds.
 template: Image Right
-courseId: ''
 discipline:
   - Earth Sciences
 sidebarURLs:

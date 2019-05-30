@@ -571,7 +571,7 @@ const SelectCardOrBank = class extends Component {
               }
             </Form>
             <hr />
-            <p className="mt-4">Note: Bank accounts must be verified before they can be used.  Go to the Payment Methods section of the Dashboard to verify a bank account.</p>
+            <p className="mt-4">Note: Bank accounts must be verified before they can be used.  Go to the Payment Methods section of the Dashboard to create or verify a bank account.</p>
           </React.Fragment>
         }
       </React.Fragment>
