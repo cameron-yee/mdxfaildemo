@@ -133,7 +133,8 @@ const PaymentModal = class extends Component {
   setStripeScript = () => {
     try {
       if('Stripe' in window) {
-        this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')})
+        // this.setState({stripe: window.Stripe('pk_test_TbAwjfiPhymqoFVFe7ciXbZE')}) //TESTING
+        this.setState({stripe: window.Stripe('pk_live_HDeMFcHo2Gc2UM9Plqoku55j')}) //LIVE
       } else {
         setTimeout(this.setStripeScript, 200)
       }

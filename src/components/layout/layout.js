@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header/header'
 import Footer from './footer/footer'
-import DonateModal from '../molecules/payment/donate-modal'
 import GeneralContactFormModal from '../atoms/forms/general-contact-form/general-contact-form-modal/general-contact-form-modal'
 import JoinEmailFormModal from '../atoms/forms/join-email-form/join-email-form-modal/join-email-form-modal'
 import SigninFormModal from '../atoms/forms/signin-form/signin-form-modal'
@@ -93,10 +92,6 @@ const Layout = class extends Component {
       this.setState({donate: this.props.donate})
     }
 
-    if(this.props.launchDonate && prevProps.launchDonate !== this.props.launchDonate) {
-      this.setState({modalShowDonate: this.props.launchDonate})
-    }
-
     if(this.props.launchGeneral && prevProps.launchGeneral !== this.props.launchGeneral) {
       this.setState({modalShowGeneral: this.props.launchGeneral})
     }
@@ -136,13 +131,6 @@ const Layout = class extends Component {
     }
   }
 
-  closeDonate = () => {
-    this.setState({modalShowDonate: false})
-    if(this.props.closeDonate) {
-      this.props.closeDonate()
-    }
-  }
-
   closeGeneral = () => {
     this.setState({modalShowGeneral: false})
     if(this.props.closeGeneral) {
@@ -178,7 +166,6 @@ const Layout = class extends Component {
     }
   }
 
-  launchDonate = () => { this.setState({modalShowDonate: true}) }
   launchGeneral = () => { this.setState({modalShowGeneral: true}) }
   launchJoinEmail = () => { this.setState({modalShowJoinEmail: true}) }
   launchOrder = () => { this.setState({modalShowOrder: true}) }
@@ -252,12 +239,6 @@ const Layout = class extends Component {
               launchGeneral={this.launchGeneral}
               launchJoinEmail={this.launchJoinEmail}
               location={this.props.location}
-            />
-            <DonateModal
-              onHide={this.closeDonate}
-              setSignedIn={() => this.setSignedIn(true)}
-              show={this.state.modalShowDonate}
-              signed_in={this.state.signed_in}
             />
             <GeneralContactFormModal
               show={this.state.modalShowGeneral}
