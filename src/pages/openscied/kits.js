@@ -162,9 +162,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $237.06</p>
+                        <p>Kit Price: $212.06</p>
                         <p>Shipping Cost: $80</p>
-                        <p><strong>Total: $317.06</strong></p>
+                        <p><strong>Total: $292.06</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
@@ -205,9 +205,9 @@ const KitsPage = class extends Component {
                   >
                     <div className="d-flex justify-content-end flex-wrap">
                       <div className="text-right w-100">
-                        <p>Kit Price: $568.24</p>
+                        <p>Kit Price: $543.24</p>
                         <p>Shipping Cost: $100</p>
-                        <p><strong>Total: $668.24</strong></p>
+                        <p><strong>Total: $643.24</strong></p>
                       </div>
                       <div>
                         <LaunchOrderModal
