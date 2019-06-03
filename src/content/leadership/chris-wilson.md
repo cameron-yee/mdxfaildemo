@@ -10,15 +10,14 @@ image: /assets/chris_wilson_5x7.jpg
 alt: Chris Wilson headshot.
 page: leadership
 ---
+### _Senior Research Scientist_
 
-### *Senior Research Scientist*
+**Christopher Wilson**, PhD is Director of the Research Division and a Senior Research Scientist at BSCS Science Learning. He joined BSCS in 2007 from the Center for Curriculum Materials in Science in the College of Education at Michigan State University, where he received his PhD in science education. He also has a Master’s degree in Evolutionary Biology from MSU, and a BS in Zoology from the University of Liverpool in England.
 
-**Dr. Chris Wilson** joined BSCS as a Research Specialist in July 2007 and is currently a Senior Science Educator. His ongoing research interests include the development and application of learning progressions in grades K–16 science education; patterns in reasoning with scientific models of systems across grades K–12 students, undergraduate science majors, secondary science teachers, and university science faculty; the development of pedagogical content knowledge in preservice science teachers; reform in undergraduate science education; environmental science education; and decision making with respect to socio-scientific issues.
+His current research focuses on the assessment of teacher and student learning in science education, the impact of lesson analysis based professional development on teacher and student outcomes, the application of automated scoring techniques to the measurement of teacher PCK and student argumentation, and the development and impact of three-dimensional curriculum materials.
 
-Chris has worked on numerous professional development projects, addressing issues from science teachers’ content knowledge, problem-based learning, and mentoring preservice interns. He has taught undergraduate ecology, evolution, genetics and introductory biology courses, as well as science methods courses for secondary preservice science teachers.
+Christopher is currently PI on several current NSF educational research grants, including STeLLA High School (#1503280), Argulex (#1561150), PCKlex (#1437173), and MBER (#1813538). Christopher has published his research in leading journals including the Journal for Research in Science Teaching, the American Educational Research Journal, and the Journal for Research on Educational Effectiveness. He is an active member of the National Association for Research on Science Teaching (NARST), and serves on the editorial board for the Journal for Research on Science Teaching.
 
-Prior to joining BSCS, Chris was a visiting assistant professor in the Center for Curriculum Materials in Science in the College of Education at Michigan State University. In that position, his research focused on model-based reasoning in undergraduate biology education, and the development of grades K–12 learning progressions toward environmental science literacy.
-
-<p style="margin-bottom: 2rem;">He holds a B.S. in Zoology from the University of Liverpool in England, an M.S. in Zoology specializing in Evolutionary Biology and a Ph.D. in Zoology specializing in Informal Science Education in Zoos from Michigan State University.</p>
+Originally from England, Christopher enjoys following Liverpool Football Club, catching up on EastEnders, and arguing about Brexit.
 
 <a class="btn btn-outline-secondary" href="https://media.bscs.org/bscsmw/leadership/management/management/chris_wilson_vitae_may_2015.pdf" target="_blank" rel="noopener noreferrer">Read Chris Wilson's vitae&nbsp;<sup><i style="font-size: .65rem" class="fas fa-external-link-alt"></i></sup></a>
