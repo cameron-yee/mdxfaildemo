@@ -105,7 +105,7 @@ const panels = [
       <>
         <h3>Our Capabilities</h3>
         <ul>
-          <li>Deliver proven-effective STeLLA (hyperlink) teacher professional learning program
+          <li>Deliver proven-effective <Link to="/our-work/rd-programs/stella-science-teachers-learning-from-lesson-analysis">STeLLA</Link> teacher professional learning program
             <ul>
               <li>Support teachers in using high-leverage science teaching strategies through video-based lesson analysis</li>
               <li>Work closely with teachers over the course of one school year</li>
