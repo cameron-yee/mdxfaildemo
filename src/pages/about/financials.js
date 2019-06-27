@@ -83,10 +83,16 @@ const FinancialsPage = class extends Component {
               <Table responsive striped hover>
                 <tbody>
                   <tr>
+                    <td><a href="https://media.bscs.org/bscsmw/financials/audits/bscs_science_learning_2018_133_audit_report.pdf" target="_blank" rel="noopener noreferrer">BSCS Science Learning 2018 133 Audit Report&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://media.bscs.org/bscsmw/financials/audits/bscs_science_learning_2018_financial_statements.pdf" target="_blank" rel="noopener noreferrer">BSCS Science Learning 2018 Financial Statements&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
+                  </tr>
+                  <tr>
                     <td><a href="https://media.bscs.org/bscsmw/financials/audits/bscs_2017_133_audit_report.pdf" target="_blank" rel="noopener noreferrer">BSCS 2017 133 Audit Report&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
                   </tr>
                   <tr>
-                    <td><a href="https://media.bscs.org/bscsmw/financials/audits/audit_report_and_financial_statements.pdf" target="_blank" rel="noopener noreferrer">BSCS 2017 Financial Statements&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
+                    <td><a href="https://media.bscs.org/bscsmw/financials/audits/bscs_2017_financial_statements.pdf" target="_blank" rel="noopener noreferrer">BSCS 2017 Financial Statements&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
                   </tr>
                   <tr>
                     <td><a href="https://media.bscs.org/bscsmw/financials/audits/bscs_bod_conflict_of_interest_and_confidentiality_statement.pdf" target="_blank" rel="noopener noreferrer">BSCS BoD Conflict of Interest and Confidentiality Statement&nbsp;<sup><i style={{fontSize: '.65rem'}} className="fas fa-external-link-alt"></i></sup></a></td>
