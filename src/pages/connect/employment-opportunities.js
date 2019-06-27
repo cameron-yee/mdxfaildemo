@@ -52,6 +52,17 @@ const EmploymentOpportunitiesPage = (props) => {
         <hr />
         <Row style={{ marginBottom: '2rem', marginTop: '2rem' }} className="d-flex flex-wrap">
           <Col xs={12}>
+            <p><strong>Position Title:</strong> Project Coordinator</p>
+            <p><strong>Reports To:</strong> Project Leads, Division Directors</p>
+            <p><strong>Date:</strong> 6/27/19</p>
+            <p><strong>FLSA Status:</strong> Non-Exempt</p>
+            <p>BSCS Science Learning has an immediate opening for a full-time Project Coordinator with expertise in administrative, logistical, and communications support. We seek a creative, motivated individual who shares our mission of improving science teaching and learning through research-driven innovation.</p>
+            <a href="https://media.bscs.org/bscsmw/employment-opportunities/project_coordinator_june_2019.pdf" target="_blank" rel="noopener noreferrer">Click here to read the full job description and how to apply.</a>
+          </Col>
+          <Col xs={12}>
+            <hr />
+          </Col>
+          <Col xs={12}>
             <p><strong>Position Title:</strong> Senior Science Educator and Division Director, Professional Learning</p>
             <p><strong>Reports To:</strong> Associate Director for Strategic Partnerships and Professional Learning</p>
             <p><strong>Date:</strong> 4/19/19</p>
@@ -59,15 +70,14 @@ const EmploymentOpportunitiesPage = (props) => {
             <p>BSCS Science Learning has an opening for a Senior Science Educator and Division Director (Professional Learning) with expertise in professional learning and leadership development. We seek a creative, motivated individual who shares our mission of improving science teaching and learning through research-driven innovation.</p>
             <a href="https://media.bscs.org/bscsmw/employment-opportunities/senior_science_educator_and_division_director_professional_learning.pdf" target="_blank" rel="noopener noreferrer">Click here to read the full job description and how to apply.</a>
           </Col>
-          <Col xs={12}>
-            <hr />
+          {/* <Col xs={12}>
             <p><strong>Position Title:</strong> Science Educator, Instructional Materials Development</p>
             <p><strong>Reports To:</strong> Division Director, Instructional Materials Development</p>
             <p><strong>Date:</strong> 4/19/19</p>
             <p><strong>FLSA Status:</strong> Exempt</p>
             <p>BSCS Science Learning (BSCS) has an immediate opening for a Science Educator with expertise in instructional materials development. We seek a creative, motivated individual who shares our mission of improving science teaching and learning through research-driven innovation.</p>
             <a href="https://media.bscs.org/bscsmw/employment-opportunities/science_educator_instructional_materials_development.pdf" target="_blank" rel="noopener noreferrer">Click here to read the full job description and how to apply.</a>
-          </Col>
+          </Col> */}
         </Row>
         <hr />
         <Row style={{ marginBottom: '2rem', marginTop: '2rem' }} className="d-flex flex-wrap">
