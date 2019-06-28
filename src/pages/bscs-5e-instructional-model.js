@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { Location } from '@reach/router'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import SEO from '../components/seo'
 import GeneralContactFormButton from '../components/atoms/forms/general-contact-form/general-contact-form-button/general-contact-form-button'
@@ -12,8 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
-// eslint-disable-next-line
-import rowImage from '../queries/images/row-image'
+import fiveesLogo from 'images/5e_emblem.svg'
 
 const BSCS5eInstructionalModelPage = class extends Component {
   constructor(props) {
@@ -44,10 +40,15 @@ const BSCS5eInstructionalModelPage = class extends Component {
                 <p>Don't miss this fascinating conversation between former BSCS Executive Director Janet Carlson and former Senior Science Educator Nancy Landes, who took part in that 5E retreat.</p>
               </Col>
               <Col xs={12} md={5}>
-                <Img
-                  fluid={this.props.data.fiveELogo.childImageSharp.fluid}
-                  alt="5Es. Developed by BSCS in 1987."
-                  backgroundColor='rgb(41, 52, 118)'
+                <img
+                  src={fiveesLogo}
+                  alt="The 5Es were developed by BSCS in 1987."
+                  // style={{
+                  //   marginTop: ".5rem",
+                  //   width: "120px",
+                  //   minWidth: "90px"
+                  // }}
+                  className="img-fluid"
                 />
               </Col>
             </Row>
@@ -59,7 +60,6 @@ const BSCS5eInstructionalModelPage = class extends Component {
                   <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 2): How the 5Es Evolved Over Time" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/c242mIDLgUE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                   <iframe title="BSCS On Topic: The BSCS 5E Instructional Model (Part 3): Why the 5Es Remain Relevant Today" className="p-2" width="622" height="350" src="https://www.youtube.com/embed/G4J4Am8vLrY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-{/* width="930" height="523"  */}
                 </div>
               </Col>
             </Row>
@@ -119,16 +119,4 @@ const BSCS5eInstructionalModelPage = class extends Component {
   }
 }
 
-export default props => (
-  <Location>
-    {locationProps => <BSCS5eInstructionalModelPage {...locationProps} {...props} />}
-  </Location>
-)
-
-export const query = graphql`
-  query {
-    fiveELogo: file(relativePath: { eq: "5e_emblem_transparent.png" }) {
-      ...rowImage
-    }
-  }
-`
+export default BSCS5eInstructionalModelPage

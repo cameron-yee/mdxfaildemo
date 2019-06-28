@@ -16,9 +16,13 @@ additionalTags: null
 import BSCSBreadcrumb from 'components/layout/breadcrumb/breadcrumb'
 
 import { Link } from 'gatsby'
-import Button from 'react-bootstrap/Button'
 
-import fiveesLogo from 'images/5e_emblem_transparent.png'
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+
+import fiveesLogo from 'images/5e_emblem.svg'
 
 <BSCSBreadcrumb pathname="/resources/reports/the-bscs-5e-instructional-model-origins-and-effectiveness" />
 
