@@ -59,9 +59,9 @@ const EmploymentOpportunitiesPage = (props) => {
             <p>BSCS Science Learning has an immediate opening for a full-time Project Coordinator with expertise in administrative, logistical, and communications support. We seek a creative, motivated individual who shares our mission of improving science teaching and learning through research-driven innovation.</p>
             <a href="https://media.bscs.org/bscsmw/employment-opportunities/project_coordinator_june_2019.pdf" target="_blank" rel="noopener noreferrer">Click here to read the full job description and how to apply.</a>
           </Col>
-          <Col xs={12}>
+          {/* <Col xs={12}>
             <hr />
-          </Col>
+          </Col> */}
           {/* <Col xs={12}>
             <p><strong>Position Title:</strong> Senior Science Educator and Division Director, Professional Learning</p>
             <p><strong>Reports To:</strong> Associate Director for Strategic Partnerships and Professional Learning</p>
