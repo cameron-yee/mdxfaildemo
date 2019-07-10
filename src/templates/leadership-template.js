@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -14,7 +14,7 @@ import '../global-scss/index.scss'
 const LeadershipTemplate = class extends Component {
   constructor(props) {
     super(props)
-    this.html = this.props.data.mdx.code.body
+    this.html = this.props.data.mdx.body
     this.person = this.props.data.mdx.frontmatter
   }
 
@@ -62,9 +62,7 @@ export default props => (
 export const query = graphql`
   query($nodeId: String!) {
     mdx(id: {eq: $nodeId}) {
-      code {
-        body
-      }
+      body
       frontmatter {
         date(formatString: "MMMM DD, YYYY"),
         seoCanonicalUrl,

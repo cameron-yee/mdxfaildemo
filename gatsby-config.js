@@ -66,7 +66,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-netlify-cms`,
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md']
       }
