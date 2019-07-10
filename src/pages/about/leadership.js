@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
-import { Link } from 'gatsby';
-import { Location } from '@reach/router'
-import SEO from '../../components/seo'
+import { Link, graphql } from 'gatsby'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -127,7 +124,6 @@ const LeadershipPage = class extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Leadership" />
         <Container>
           <PageTitle
             title="Meet the BSCS leadership"
@@ -294,11 +290,7 @@ const LeadershipPage = class extends Component {
   }
 }
 
-export default props => (
-  <Location>
-    {locationProps => <LeadershipPage {...locationProps} {...props} />}
-  </Location>
-)
+export default LeadershipPage
 
 export const leadershipQuery = graphql`
   query leadershipQuery {

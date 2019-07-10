@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { graphql } from 'gatsby'
 import { Location } from '@reach/router'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
-import SEO from '../components/seo'
 
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
@@ -22,7 +21,6 @@ const LeadershipTemplate = class extends Component {
   render() {
     return (
       <React.Fragment>
-        <SEO title={this.person.fullName} canonical={this.person.seoCanonicalUrl} description={this.person.seoDescription} lang={this.person.seoLang} />
         <Layout location={this.props.location}>
           <Container>
             <PageTitle title={this.person.fullName} />
@@ -76,7 +74,6 @@ export const query = graphql`
         fullName
         type,
         alt,
-        areas,
         image,
         template,
         title,

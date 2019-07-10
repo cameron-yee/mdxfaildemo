@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 import Layout from '../components/layout/layout'
-import SEO from '../components/seo'
 import PageTitle from '../components/layout/page-title/page-title'
 
 import fourOhFourImage from '../images/404/f0ccce9d-711f-42e2-a861-9265c67f7811_rw_1200.gif'
@@ -16,7 +15,6 @@ import fourOhFourImage from '../images/404/f0ccce9d-711f-42e2-a861-9265c67f7811_
 
 const NotFoundPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="404: Not found" />
     <Container>
       <PageTitle title="Page Not Found" />
       <Row className="justify-content-center justify-content-md-end" style={{ marginBottom: '4rem' }}>
