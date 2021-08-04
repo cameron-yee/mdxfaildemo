@@ -42,7 +42,7 @@
     "react-placeholder": "^3.0.2",
     "react-scrollspy": "^3.4.0",
     "react-stripe-elements": "^3.0.0",
-    "tar": "^4.4.10",
+    "tar": "^4.4.15",
     "typeface-lora": "0.0.72",
     "typeface-open-sans": "0.0.54"
   },
